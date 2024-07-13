@@ -158,3 +158,57 @@ footer {
         font-size: 0.7em; /* Riduce leggermente la dimensione del testo per le informazioni sui giocatori */
     }
 }
+
+/* Contenitore delle schede */
+.team-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px;
+}
+
+/* Scheda */
+.team-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Intestazioni e informazioni */
+.team-card-header {
+    font-size: 1.5em;
+    margin-bottom: 8px;
+}
+
+.team-card-body {
+    font-size: 1em;
+}
+
+.team-card .bold {
+    font-weight: bold;
+}
+
+.team-card .player-info {
+    font-size: 0.9em;
+    margin-bottom: 4px;
+}
+
+/* Stili specifici per mobile */
+@media screen and (max-width: 768px) {
+    .team-card-header {
+        font-size: 1.2em;
+    }
+
+    .team-card-body {
+        font-size: 0.9em;
+    }
+
+    .team-card .player-info {
+        font-size: 0.8em;
+    }
+}
