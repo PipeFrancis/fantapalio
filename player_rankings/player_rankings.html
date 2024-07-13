@@ -12,11 +12,29 @@
     </header>
     <main>
         <p>Pagina della classifica dei giocatori.</p>
+        <div class="table-container">
+            <table id="playerTable" border="1">
+                <thead>
+                    <tr>
+                        <th>Posizione</th>
+                        <th>Nome</th>
+                        <th>Prezzo</th>
+                        <th>Totale</th>
+                        <th>G1</th>
+                        <th>G2</th>
+                        <th>G3</th>
+                        <th>Semifinale</th>
+                        <th>Tiro da 3</th>
+                        <th>Finale</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Le righe verranno aggiunte dinamicamente con JavaScript -->
+                </tbody>
+            </table>
+        </div>
     </main>
-    <!--
-    <footer>
-        <p>Creato da [Il Tuo Nome]</p>
-    </footer>
-    -->
+
+    <script src="player_rankings.js"></script>
 </body>
 </html>
