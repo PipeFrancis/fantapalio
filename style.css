@@ -83,3 +83,6 @@ footer {
     padding: 8px; /* Padding per le celle */
     text-align: center; /* Testo centrato nelle celle */
 }
+.bold-row {
+    font-weight: bold;
+}

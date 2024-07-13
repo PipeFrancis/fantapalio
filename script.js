@@ -76,6 +76,10 @@ document.addEventListener("DOMContentLoaded", function() {
         appendCell(totalRow, selectedTeam.tot_td3);
         appendCell(totalRow, selectedTeam.tot_final);
         appendCell(totalRow, selectedTeam.tot_team);
+
+        // Aggiungi la classe CSS per rendere la riga in grassetto
+        totalRow.classList.add('bold-row');
+        
         tableBody.appendChild(totalRow);
     });
 
