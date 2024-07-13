@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <p>Semifinale: ${selectedTeam.tot_semi}</p>
             <p>Tiro da 3: ${selectedTeam.tot_td3}</p>
             <p>Finale: ${selectedTeam.tot_final}</p>
-            <p class="total">Totale: ${selectedTeam.tot_team}</p>
+            <p class="total">Totale: <span class="totalpointsindex">${selectedTeam.tot_team}</span></p>
         `;
         totalCard.classList.add('bold-card');
         teamCardsContainer.appendChild(totalCard);
