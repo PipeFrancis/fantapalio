@@ -570,12 +570,12 @@
     DevinChiarcos.final = 0.0;
     ValentinoCigainero.final = 0.0;
     MicheleDeAnna.final = 0.0;
-    DavideParon.final = 0.0;
-    AlessioFurlan.final = 0.0;
-    MichaelMargarit.final = 0.0;
-    SebastianoTonizzo.final = 0.0;
+    DavideParon.final = 6;
+    AlessioFurlan.final = 1;
+    MichaelMargarit.final = 9;
+    SebastianoTonizzo.final = 0.4;
 
-    DanieleGanzit.final = 0.0;
+    DanieleGanzit.final = 5;
     GiacomoSilvestri.final = 0.0;
     VittorioGri.final = 0.0;
     VittorioBasso.final = 0.0;
