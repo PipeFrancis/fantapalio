@@ -1,45 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@300&display=swap" rel="stylesheet">
-        <link href="style.css" rel="stylesheet">
-        <title>HNB</title>
-        <link rel="icon" href="HNBlogo.png">
-    </head>
-    <body>
-        <div class="heading">
-            <h1>HIDDEN NUMBER BATTLE!</h1>
-            <p>
-            Si comincia con un numero base, player 1 lo moltiplicherà per il suo numero nascosto e inserirà il risultato.
-            Moltiplica il numero nascosto del tuo avversario per il tuo nuovo numero nascosto, fai attenzione al tempo limitato.
-            Il primo giocatore a esaurire il tempo a disposizione perde.
-            Premi Enter per cominciare, e Enter o Spazio per inserire il numero digitato.
-            <br>Regole:
-            Non inserire 0;
-            Non inserire lo stesso numero che ha appena inserito il tuo avversario.
-            </p>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>FantaPalio dei Rioni</title>
+</head>
+<body>
+    <header>
+        <h1>FantaPalio dei Rioni</h1>
+    </header>
+    <main>
+        <p>Questa è una semplice pagina web di esempio.</p>
+        <div class="button-container">
+            <a href="registration/registration.html"><button class="rectangle-button">Registra una squadra</button></a>
+            <a href="rules/rules.html"><button class="rectangle-button">Regolamento</button></a>
+            <a href="boxscores/boxscores.html"><button class="rectangle-button">Tabellini statistiche</button></a>
+            <a href="team_rankings/team_rankings.html"><button class="rectangle-button">Classifica squadre</button></a>
+            <a href="player_rankings/player_rankings.html"><button class="rectangle-button">Classifica giocatori</button></a>
         </div>
-        <div class="timerArea">
-            <div class="t1Area">
-                <span id="timer1" class="countdown"></span>
-            </div>
-            <div class="t2Area">
-                <span id="timer2" class="countdown"></span>
-            </div>
-        </div>
-        <div class="gameData">
-            <div class="numberLog">
-            </div>
-            <div class="inputNumberArea">
-                <span id="inputNumber" class="countdown"></span>
-            </div>
-        </div>
-        
-        <script src="script.js"></script>
-    </body>
+        <p>Dettaglio squadra:</p>
+        <select id="teamDetails" class="dropdown">
+            <!-- Le opzioni verranno caricate da JavaScript -->
+        </select>
+        <p>fine pagina</p>
+    </main>
+    <!--
+    <footer>
+        <p>Creato da [Il Tuo Nome]</p>
+    </footer>
+    -->
+    <script type="module" src="data.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
 </html>

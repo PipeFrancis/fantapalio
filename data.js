@@ -1,0 +1,1971 @@
+    // data.js
+
+    // Definizione del tipo player_type
+    const player_type = {
+        name: "Nome Giocatore",
+        team: "Nome Squadra",
+        g1: 0.0,
+        g2: 0.0,
+        g3: 0.0,
+        semi: 0.0,
+        td3: 0.0,
+        final: 0.0,
+        tot: 0.0,
+        cost: 0
+    };
+
+
+    // Definizione del tipo rione_type
+    const rione_type = {
+        name: "Nome Rione",
+        final_points: 0
+    };
+
+    // Definizione del tipo fantateam_type
+    const fantateam_type = {
+        team_index: 0,
+        name: "Nome Fantasquadra",
+        p1: { ...player_type }, // Esempio di inclusione di player_type come attributo di fantateam_type
+        p2: { ...player_type },
+        p3: { ...player_type },
+        p4: { ...player_type },
+        p5: { ...player_type },
+        rione: { ...rione_type }, // Esempio di inclusione di rione_type come attributo di fantateam_type
+        total_cost : 0,
+        tot_g1: 0.0,
+        tot_g2: 0.0,
+        tot_g3: 0.0,
+        tot_semi: 0.0,
+        tot_td3: 0.0,
+        tot_final: 0.0,
+        tot_team: 0.0,
+    };
+
+    //definizione players
+    // Team WEST
+    const MassimilianoMoretti = { ...player_type, team: "WEST", name: "Massimiliano Moretti", cost: 11 };
+    const AndreaMoretti = { ...player_type, team: "WEST", name: "Andrea Moretti", cost: 4 };
+    const LarryTrevisan = { ...player_type, team: "WEST", name: "Larry Trevisan", cost: 6 };
+    const AlessandroCostantini = { ...player_type, team: "WEST", name: "Alessandro Costantini", cost: 7 };
+    const MatteoMargarit = { ...player_type, team: "WEST", name: "Matteo Margarit", cost: 7 };
+    const MauroCuridori = { ...player_type, team: "WEST", name: "Mauro Curidori", cost: 5 };
+    const ChristianZanet = { ...player_type, team: "WEST", name: "Christian Zanet", cost: 6 };
+    const GiacomoPiacentini = { ...player_type, team: "WEST", name: "Giacomo Piacentini", cost: 5 };
+    const GiovanniDalFarra = { ...player_type, team: "WEST", name: "Giovanni dal Farra", cost: 4 };
+    const MiracleObichukwu = { ...player_type, team: "WEST", name: "Miracle Obichukwu", cost: 4 };
+    const LucaDellaLonga = { ...player_type, team: "WEST", name: "Luca della Longa", cost: 4 };
+    const AlessandroRojatti = { ...player_type, team: "WEST", name: "Alessandro Rojatti", cost: 4 };
+    const MicheleGorasso = { ...player_type, team: "WEST", name: "Michele Gorasso", cost: 5 };
+    const GiacomoFerigo = { ...player_type, team: "WEST", name: "Giacomo Ferigo", cost: 4 };
+    const UmbertoNobile = { ...player_type, team: "WEST", name: "Umberto Nobile", cost: 7 };
+    const DevinChiarcos = { ...player_type, team: "WEST", name: "Devin Chiarcos", cost: 4 };
+    const ValentinoCigainero = { ...player_type, team: "WEST", name: "Valentino Cigainero", cost: 5 };
+    const MicheleDeAnna = { ...player_type, team: "WEST", name: "Michele de Anna", cost: 6 };
+    const DavideParon = { ...player_type, team: "WEST", name: "Davide Paron", cost: 4 };
+    const AlessioFurlan = { ...player_type, team: "WEST", name: "Alessio Furlan", cost: 4 };
+    const MichaelMargarit = { ...player_type, team: "WEST", name: "Michael Margarit", cost: 4 };
+    const SebastianoTonizzo = { ...player_type, team: "WEST", name: "Sebastiano Tonizzo", cost: 4 };
+
+    // Team NORD
+    const DanieleGanzit = { ...player_type, team: "NORD", name: "Daniele Ganzit", cost: 5 };
+    const GiacomoSilvestri = { ...player_type, team: "NORD", name: "Giacomo Silvestri", cost: 5 };
+    const VittorioGri = { ...player_type, team: "NORD", name: "Vittorio Gri", cost: 5 };
+    const VittorioBasso = { ...player_type, team: "NORD", name: "Vittorio Basso", cost: 4 };
+    const AlessandroRizzi = { ...player_type, team: "NORD", name: "Alessandro Rizzi", cost: 7 };
+    const MassimoBaldassi = { ...player_type, team: "NORD", name: "Massimo Baldassi", cost: 4 };
+    const GabrieleMiani = { ...player_type, team: "NORD", name: "Gabriele Miani", cost: 14 };
+    const MarcoMarchetti = { ...player_type, team: "NORD", name: "Marco Marchetti", cost: 4 };
+    const MarcoLombardo = { ...player_type, team: "NORD", name: "Marco Lombardo", cost: 7 };
+    const MicheleVendrame = { ...player_type, team: "NORD", name: "Michele Vendrame", cost: 4 };
+    const LorenzoSchinella = { ...player_type, team: "NORD", name: "Lorenzo Schinella", cost: 4 };
+    const GioeleTudini = { ...player_type, team: "NORD", name: "Gioele Tudini", cost: 4 };
+    const FilippoPasquon = { ...player_type, team: "NORD", name: "Filippo Pasquon", cost: 5 };
+    const TommasoMartello = { ...player_type, team: "NORD", name: "Tommaso Martello", cost: 6 };
+    const MarcoRizzi = { ...player_type, team: "NORD", name: "Marco Rizzi", cost: 4 };
+    const DavidGaspardo = { ...player_type, team: "NORD", name: "David Gaspardo", cost: 9 };
+    const AntonioGri = { ...player_type, team: "NORD", name: "Antonio Gri", cost: 4 };
+    const RiccardoSchinella = { ...player_type, team: "NORD", name: "Riccardo Schinella", cost: 4 };
+
+    // Team SUD
+    const SimoneMartinelli = { ...player_type, team: "SUD", name: "Simone Martinelli", cost: 4 };
+    const MatteoSpagnolo = { ...player_type, team: "SUD", name: "Matteo Spagnolo", cost: 4 };
+    const DavideFaurlin = { ...player_type, team: "SUD", name: "Davide Faurlin", cost: 4 };
+    const GiovanniTonizzo = { ...player_type, team: "SUD", name: "Giovanni Tonizzo", cost: 5 };
+    const AlessandroSant = { ...player_type, team: "SUD", name: "Alessandro Sant", cost: 8 };
+    const MatteoBazzaro = { ...player_type, team: "SUD", name: "Matteo Bazzaro", cost: 4 };
+    const AlessandroSantin = { ...player_type, team: "SUD", name: "Alessandro Santin", cost: 4 };
+    const AlessandroGalassi = { ...player_type, team: "SUD", name: "Alessandro Galassi", cost: 5 };
+    const PietroSoramel = { ...player_type, team: "SUD", name: "Pietro Soramel", cost: 6 };
+    const FilippoAgnoluzzi = { ...player_type, team: "SUD", name: "Filippo Agnoluzzi", cost: 4 };
+    const EmanueleDaneluzzi = { ...player_type, team: "SUD", name: "Emanuele Daneluzzi", cost: 5 };
+    const LucaSoramel = { ...player_type, team: "SUD", name: "Luca Soramel", cost: 5 };
+    const PaoloZorzi = { ...player_type, team: "SUD", name: "Paolo Zorzi", cost: 4 };
+    const ChristianFedrizzi = { ...player_type, team: "SUD", name: "Christian Fedrizzi", cost: 4 };
+    const FilippoSappa = { ...player_type, team: "SUD", name: "Filippo Sappa", cost: 8 };
+    const GiovanniZanin = { ...player_type, team: "SUD", name: "Giovanni Zanin", cost: 9 };
+    const EnricoSant = { ...player_type, team: "SUD", name: "Enrico Sant", cost: 5 };
+    const StefanoPolano = { ...player_type, team: "SUD", name: "Stefano Polano", cost: 5 };
+
+    // Team EST
+    const MarcoPolo = { ...player_type, team: "EST", name: "Marco Polo", cost: 4 };
+    const MarcoSerrao = { ...player_type, team: "EST", name: "Marco Serrao", cost: 7 };
+    const WilliamIob = { ...player_type, team: "EST", name: "William Iob", cost: 7 };
+    const DavideBroggi = { ...player_type, team: "EST", name: "Davide Broggi", cost: 4 };
+    const AlexMicottis = { ...player_type, team: "EST", name: "Alex Micottis", cost: 4 };
+    const MassimilianoRossi = { ...player_type, team: "EST", name: "Massimiliano Rossi", cost: 4 };
+    const MassimoMasotti = { ...player_type, team: "EST", name: "Massimo Masotti", cost: 4 };
+    const EugenioDeTina = { ...player_type, team: "EST", name: "Eugenio De Tina", cost: 5 };
+    const LucaAnedda = { ...player_type, team: "EST", name: "Luca Anedda", cost: 4 };
+    const DenisVanin = { ...player_type, team: "EST", name: "Denis Vanin", cost: 4 };
+    const ThomasBaracetti = { ...player_type, team: "EST", name: "Thomas Baracetti", cost: 4 };
+    const LucaGemo = { ...player_type, team: "EST", name: "Luca Gemo", cost: 4 };
+    const DiegoNata = { ...player_type, team: "EST", name: "Diego Nata", cost: 9 };
+    const MattiaRoiatti = { ...player_type, team: "EST", name: "Mattia Roiatti", cost: 4 };
+    const EdoardoPicogna = { ...player_type, team: "EST", name: "Edoardo Picogna", cost: 4 };
+    const MauroPerina = { ...player_type, team: "EST", name: "Mauro Perina", cost: 4 };
+    const LorenzoMoro = { ...player_type, team: "EST", name: "Lorenzo Moro", cost: 5 };
+    const GionaTell = { ...player_type, team: "EST", name: "Giona Tell", cost: 5 };
+    const IacopoPivetta = { ...player_type, team: "EST", name: "Iacopo Pivetta", cost: 6 };
+    const MattiaMasotti = { ...player_type, team: "EST", name: "Mattia Masotti", cost: 6 };
+
+
+
+    // Definizione Rioni
+    const NORD = { ...rione_type, name: "NORD", final_points: 0 };
+    const SUD  = { ...rione_type, name: "SUD", final_points: 0 };
+    const EST  = { ...rione_type, name: "EST", final_points: 0 };
+    const WEST = { ...rione_type, name: "WEST", final_points: 0 };
+
+
+    //QUI SARANNO DA DARE TUTTI I PUNTEGGI DI TUTTI I GIOCATORI IN TUTTE LE GIORNATE
+
+
+
+
+    //
+
+    // Definizione team
+    const ft1 = {
+        ...fantateam_type,
+        team_index: 1,
+        name: "CesoloilNordAP",
+        rione: { ...NORD },
+        p1: { ...DiegoNata },
+        p2: { ...LucaAnedda },
+        p3: { ...FilippoPasquon },
+        p4: { ...AlessandroRizzi },
+        p5: { ...GiacomoPiacentini },
+    };
+    ft1.total_cost = ft1.p1.cost + ft1.p2.cost + ft1.p3.cost + ft1.p4.cost + ft1.p5.cost;
+    ft1.tot_g1 = ft1.p1.g1 + ft1.p2.g1 + ft1.p3.g1 + ft1.p4.g1 + ft1.p5.g1;
+    ft1.tot_g2 = ft1.p1.g2 + ft1.p2.g2 + ft1.p3.g2 + ft1.p4.g2 + ft1.p5.g2;
+    ft1.tot_g3 = ft1.p1.g3 + ft1.p2.g3 + ft1.p3.g3 + ft1.p4.g3 + ft1.p5.g3;
+    ft1.tot_semi = ft1.p1.semi + ft1.p2.semi + ft1.p3.semi + ft1.p4.semi + ft1.p5.semi;
+    ft1.tot_td3 = ft1.p1.td3 + ft1.p2.td3 + ft1.p3.td3 + ft1.p4.td3 + ft1.p5.td3;
+    ft1.tot_final = ft1.p1.final + ft1.p2.final + ft1.p3.final + ft1.p4.final + ft1.p5.final;
+    ft1.tot_team = ft1.p1.tot + ft1.p2.tot + ft1.p3.tot + ft1.p4.tot + ft1.p5.tot;
+    const ft2 = {
+        ...fantateam_type,
+        team_index: 2,
+        name: "Pangri",
+        rione: { ...EST },
+        p1: { ...MarcoRizzi },
+        p2: { ...AlessioFurlan },
+        p3: { ...UmbertoNobile },
+        p4: { ...MassimilianoMoretti },
+        p5: { ...MarcoPolo },
+    };
+    ft2.total_cost = ft2.p1.cost + ft2.p2.cost + ft2.p3.cost + ft2.p4.cost + ft2.p5.cost;
+    ft2.tot_g1 = ft2.p1.g1 + ft2.p2.g1 + ft2.p3.g1 + ft2.p4.g1 + ft2.p5.g1;
+    ft2.tot_g2 = ft2.p1.g2 + ft2.p2.g2 + ft2.p3.g2 + ft2.p4.g2 + ft2.p5.g2;
+    ft2.tot_g3 = ft2.p1.g3 + ft2.p2.g3 + ft2.p3.g3 + ft2.p4.g3 + ft2.p5.g3;
+    ft2.tot_semi = ft2.p1.semi + ft2.p2.semi + ft2.p3.semi + ft2.p4.semi + ft2.p5.semi;
+    ft2.tot_td3 = ft2.p1.td3 + ft2.p2.td3 + ft2.p3.td3 + ft2.p4.td3 + ft2.p5.td3;
+    ft2.tot_final = ft2.p1.final + ft2.p2.final + ft2.p3.final + ft2.p4.final + ft2.p5.final;
+    ft2.tot_team = ft2.p1.tot + ft2.p2.tot + ft2.p3.tot + ft2.p4.tot + ft2.p5.tot;
+    const ft3 = {
+        ...fantateam_type,
+        team_index: 3,
+        name: "Massive Crash",
+        rione: { ...EST },
+        p1: { ...LucaSoramel },
+        p2: { ...AlessandroSant },
+        p3: { ...PietroSoramel },
+        p4: { ...AlessandroRizzi },
+        p5: { ...AndreaMoretti },
+    };
+    ft3.total_cost = ft3.p1.cost + ft3.p2.cost + ft3.p3.cost + ft3.p4.cost + ft3.p5.cost;
+    ft3.tot_g1 = ft3.p1.g1 + ft3.p2.g1 + ft3.p3.g1 + ft3.p4.g1 + ft3.p5.g1;
+    ft3.tot_g2 = ft3.p1.g2 + ft3.p2.g2 + ft3.p3.g2 + ft3.p4.g2 + ft3.p5.g2;
+    ft3.tot_g3 = ft3.p1.g3 + ft3.p2.g3 + ft3.p3.g3 + ft3.p4.g3 + ft3.p5.g3;
+    ft3.tot_semi = ft3.p1.semi + ft3.p2.semi + ft3.p3.semi + ft3.p4.semi + ft3.p5.semi;
+    ft3.tot_td3 = ft3.p1.td3 + ft3.p2.td3 + ft3.p3.td3 + ft3.p4.td3 + ft3.p5.td3;
+    ft3.tot_final = ft3.p1.final + ft3.p2.final + ft3.p3.final + ft3.p4.final + ft3.p5.final;
+    ft3.tot_team = ft3.p1.tot + ft3.p2.tot + ft3.p3.tot + ft3.p4.tot + ft3.p5.tot;
+    const ft4 = {
+        ...fantateam_type,
+        team_index: 4,
+        name: "pausa giacomone",
+        rione: { ...SUD },
+        p1: { ...ChristianFedrizzi },
+        p2: { ...VittorioGri },
+        p3: { ...MatteoSpagnolo },
+        p4: { ...PaoloZorzi },
+        p5: { ...DavidGaspardo },
+    };
+    ft4.total_cost = ft4.p1.cost + ft4.p2.cost + ft4.p3.cost + ft4.p4.cost + ft4.p5.cost;
+    ft4.tot_g1 = ft4.p1.g1 + ft4.p2.g1 + ft4.p3.g1 + ft4.p4.g1 + ft4.p5.g1;
+    ft4.tot_g2 = ft4.p1.g2 + ft4.p2.g2 + ft4.p3.g2 + ft4.p4.g2 + ft4.p5.g2;
+    ft4.tot_g3 = ft4.p1.g3 + ft4.p2.g3 + ft4.p3.g3 + ft4.p4.g3 + ft4.p5.g3;
+    ft4.tot_semi = ft4.p1.semi + ft4.p2.semi + ft4.p3.semi + ft4.p4.semi + ft4.p5.semi;
+    ft4.tot_td3 = ft4.p1.td3 + ft4.p2.td3 + ft4.p3.td3 + ft4.p4.td3 + ft4.p5.td3;
+    ft4.tot_final = ft4.p1.final + ft4.p2.final + ft4.p3.final + ft4.p4.final + ft4.p5.final;
+    ft4.tot_team = ft4.p1.tot + ft4.p2.tot + ft4.p3.tot + ft4.p4.tot + ft4.p5.tot;
+    const ft5 = {
+        ...fantateam_type,
+        team_index: 5,
+        name: "🦀",
+        rione: { ...WEST },
+        p1: { ...PietroSoramel },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...AlessioFurlan },
+        p4: { ...LucaSoramel },
+        p5: { ...MarcoRizzi },
+    };
+    ft5.total_cost = ft5.p1.cost + ft5.p2.cost + ft5.p3.cost + ft5.p4.cost + ft5.p5.cost;
+    ft5.tot_g1 = ft5.p1.g1 + ft5.p2.g1 + ft5.p3.g1 + ft5.p4.g1 + ft5.p5.g1;
+    ft5.tot_g2 = ft5.p1.g2 + ft5.p2.g2 + ft5.p3.g2 + ft5.p4.g2 + ft5.p5.g2;
+    ft5.tot_g3 = ft5.p1.g3 + ft5.p2.g3 + ft5.p3.g3 + ft5.p4.g3 + ft5.p5.g3;
+    ft5.tot_semi = ft5.p1.semi + ft5.p2.semi + ft5.p3.semi + ft5.p4.semi + ft5.p5.semi;
+    ft5.tot_td3 = ft5.p1.td3 + ft5.p2.td3 + ft5.p3.td3 + ft5.p4.td3 + ft5.p5.td3;
+    ft5.tot_final = ft5.p1.final + ft5.p2.final + ft5.p3.final + ft5.p4.final + ft5.p5.final;
+    ft5.tot_team = ft5.p1.tot + ft5.p2.tot + ft5.p3.tot + ft5.p4.tot + ft5.p5.tot;
+    const ft6 = {
+        ...fantateam_type,
+        team_index: 6,
+        name: "Ta qifsha pidhin",
+        rione: { ...EST },
+        p1: { ...GionaTell },
+        p2: { ...AlessandroSantin },
+        p3: { ...MassimilianoMoretti },
+        p4: { ...MassimoBaldassi },
+        p5: { ...LarryTrevisan },
+    };
+    ft6.total_cost = ft6.p1.cost + ft6.p2.cost + ft6.p3.cost + ft6.p4.cost + ft6.p5.cost;
+    ft6.tot_g1 = ft6.p1.g1 + ft6.p2.g1 + ft6.p3.g1 + ft6.p4.g1 + ft6.p5.g1;
+    ft6.tot_g2 = ft6.p1.g2 + ft6.p2.g2 + ft6.p3.g2 + ft6.p4.g2 + ft6.p5.g2;
+    ft6.tot_g3 = ft6.p1.g3 + ft6.p2.g3 + ft6.p3.g3 + ft6.p4.g3 + ft6.p5.g3;
+    ft6.tot_semi = ft6.p1.semi + ft6.p2.semi + ft6.p3.semi + ft6.p4.semi + ft6.p5.semi;
+    ft6.tot_td3 = ft6.p1.td3 + ft6.p2.td3 + ft6.p3.td3 + ft6.p4.td3 + ft6.p5.td3;
+    ft6.tot_final = ft6.p1.final + ft6.p2.final + ft6.p3.final + ft6.p4.final + ft6.p5.final;
+    ft6.tot_team = ft6.p1.tot + ft6.p2.tot + ft6.p3.tot + ft6.p4.tot + ft6.p5.tot;
+    const ft7 = {
+        ...fantateam_type,
+        team_index: 7,
+        name: "A tutta birra",
+        rione: { ...NORD },
+        p1: { ...MarcoRizzi },
+        p2: { ...LucaSoramel },
+        p3: { ...EugenioDeTina },
+        p4: { ...MassimilianoMoretti },
+        p5: { ...EnricoSant },
+    };
+    ft7.total_cost = ft7.p1.cost + ft7.p2.cost + ft7.p3.cost + ft7.p4.cost + ft7.p5.cost;
+    ft7.tot_g1 = ft7.p1.g1 + ft7.p2.g1 + ft7.p3.g1 + ft7.p4.g1 + ft7.p5.g1;
+    ft7.tot_g2 = ft7.p1.g2 + ft7.p2.g2 + ft7.p3.g2 + ft7.p4.g2 + ft7.p5.g2;
+    ft7.tot_g3 = ft7.p1.g3 + ft7.p2.g3 + ft7.p3.g3 + ft7.p4.g3 + ft7.p5.g3;
+    ft7.tot_semi = ft7.p1.semi + ft7.p2.semi + ft7.p3.semi + ft7.p4.semi + ft7.p5.semi;
+    ft7.tot_td3 = ft7.p1.td3 + ft7.p2.td3 + ft7.p3.td3 + ft7.p4.td3 + ft7.p5.td3;
+    ft7.tot_final = ft7.p1.final + ft7.p2.final + ft7.p3.final + ft7.p4.final + ft7.p5.final;
+    ft7.tot_team = ft7.p1.tot + ft7.p2.tot + ft7.p3.tot + ft7.p4.tot + ft7.p5.tot;
+    const ft8 = {
+        ...fantateam_type,
+        team_index: 8,
+        name: "Leggende",
+        rione: { ...NORD },
+        p1: { ...LarryTrevisan },
+        p2: { ...DanieleGanzit },
+        p3: { ...MarcoPolo },
+        p4: { ...MarcoSerrao },
+        p5: { ...AlessandroSant },
+    };
+    ft8.total_cost = ft8.p1.cost + ft8.p2.cost + ft8.p3.cost + ft8.p4.cost + ft8.p5.cost;
+    ft8.tot_g1 = ft8.p1.g1 + ft8.p2.g1 + ft8.p3.g1 + ft8.p4.g1 + ft8.p5.g1;
+    ft8.tot_g2 = ft8.p1.g2 + ft8.p2.g2 + ft8.p3.g2 + ft8.p4.g2 + ft8.p5.g2;
+    ft8.tot_g3 = ft8.p1.g3 + ft8.p2.g3 + ft8.p3.g3 + ft8.p4.g3 + ft8.p5.g3;
+    ft8.tot_semi = ft8.p1.semi + ft8.p2.semi + ft8.p3.semi + ft8.p4.semi + ft8.p5.semi;
+    ft8.tot_td3 = ft8.p1.td3 + ft8.p2.td3 + ft8.p3.td3 + ft8.p4.td3 + ft8.p5.td3;
+    ft8.tot_final = ft8.p1.final + ft8.p2.final + ft8.p3.final + ft8.p4.final + ft8.p5.final;
+    ft8.tot_team = ft8.p1.tot + ft8.p2.tot + ft8.p3.tot + ft8.p4.tot + ft8.p5.tot;
+    const ft9 = {
+        ...fantateam_type,
+        team_index: 9,
+        name: "sustovich",
+        rione: { ...WEST },
+        p1: { ...MiracleObichukwu },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...LucaSoramel },
+        p4: { ...AndreaMoretti },
+        p5: { ...PietroSoramel },
+    };
+    ft9.total_cost = ft9.p1.cost + ft9.p2.cost + ft9.p3.cost + ft9.p4.cost + ft9.p5.cost;
+    ft9.tot_g1 = ft9.p1.g1 + ft9.p2.g1 + ft9.p3.g1 + ft9.p4.g1 + ft9.p5.g1;
+    ft9.tot_g2 = ft9.p1.g2 + ft9.p2.g2 + ft9.p3.g2 + ft9.p4.g2 + ft9.p5.g2;
+    ft9.tot_g3 = ft9.p1.g3 + ft9.p2.g3 + ft9.p3.g3 + ft9.p4.g3 + ft9.p5.g3;
+    ft9.tot_semi = ft9.p1.semi + ft9.p2.semi + ft9.p3.semi + ft9.p4.semi + ft9.p5.semi;
+    ft9.tot_td3 = ft9.p1.td3 + ft9.p2.td3 + ft9.p3.td3 + ft9.p4.td3 + ft9.p5.td3;
+    ft9.tot_final = ft9.p1.final + ft9.p2.final + ft9.p3.final + ft9.p4.final + ft9.p5.final;
+    ft9.tot_team = ft9.p1.tot + ft9.p2.tot + ft9.p3.tot + ft9.p4.tot + ft9.p5.tot;
+    const ft10 = {
+        ...fantateam_type,
+        team_index: 10,
+        name: "TheFinalCut95",
+        rione: { ...WEST },
+        p1: { ...AlessandroSant },
+        p2: { ...LucaSoramel },
+        p3: { ...DanieleGanzit },
+        p4: { ...UmbertoNobile },
+        p5: { ...EnricoSant },
+    };
+    ft10.total_cost = ft10.p1.cost + ft10.p2.cost + ft10.p3.cost + ft10.p4.cost + ft10.p5.cost;
+    ft10.tot_g1 = ft10.p1.g1 + ft10.p2.g1 + ft10.p3.g1 + ft10.p4.g1 + ft10.p5.g1;
+    ft10.tot_g2 = ft10.p1.g2 + ft10.p2.g2 + ft10.p3.g2 + ft10.p4.g2 + ft10.p5.g2;
+    ft10.tot_g3 = ft10.p1.g3 + ft10.p2.g3 + ft10.p3.g3 + ft10.p4.g3 + ft10.p5.g3;
+    ft10.tot_semi = ft10.p1.semi + ft10.p2.semi + ft10.p3.semi + ft10.p4.semi + ft10.p5.semi;
+    ft10.tot_td3 = ft10.p1.td3 + ft10.p2.td3 + ft10.p3.td3 + ft10.p4.td3 + ft10.p5.td3;
+    ft10.tot_final = ft10.p1.final + ft10.p2.final + ft10.p3.final + ft10.p4.final + ft10.p5.final;
+    ft10.tot_team = ft10.p1.tot + ft10.p2.tot + ft10.p3.tot + ft10.p4.tot + ft10.p5.tot;
+    const ft11 = {
+        ...fantateam_type,
+        team_index: 11,
+        name: "stirati",
+        rione: { ...NORD },
+        p1: { ...UmbertoNobile },
+        p2: { ...AlessandroSant },
+        p3: { ...FilippoPasquon },
+        p4: { ...MiracleObichukwu },
+        p5: { ...LarryTrevisan },
+    };
+    ft11.total_cost = ft11.p1.cost + ft11.p2.cost + ft11.p3.cost + ft11.p4.cost + ft11.p5.cost;
+    ft11.tot_g1 = ft11.p1.g1 + ft11.p2.g1 + ft11.p3.g1 + ft11.p4.g1 + ft11.p5.g1;
+    ft11.tot_g2 = ft11.p1.g2 + ft11.p2.g2 + ft11.p3.g2 + ft11.p4.g2 + ft11.p5.g2;
+    ft11.tot_g3 = ft11.p1.g3 + ft11.p2.g3 + ft11.p3.g3 + ft11.p4.g3 + ft11.p5.g3;
+    ft11.tot_semi = ft11.p1.semi + ft11.p2.semi + ft11.p3.semi + ft11.p4.semi + ft11.p5.semi;
+    ft11.tot_td3 = ft11.p1.td3 + ft11.p2.td3 + ft11.p3.td3 + ft11.p4.td3 + ft11.p5.td3;
+    ft11.tot_final = ft11.p1.final + ft11.p2.final + ft11.p3.final + ft11.p4.final + ft11.p5.final;
+    ft11.tot_team = ft11.p1.tot + ft11.p2.tot + ft11.p3.tot + ft11.p4.tot + ft11.p5.tot;
+    const ft12 = {
+        ...fantateam_type,
+        team_index: 12,
+        name: "Ghisangeles Clippers II",
+        rione: { ...EST },
+        p1: { ...MattiaMasotti },
+        p2: { ...ChristianZanet },
+        p3: { ...FilippoPasquon },
+        p4: { ...DavidGaspardo },
+        p5: { ...MassimilianoRossi },
+    };
+    ft12.total_cost = ft12.p1.cost + ft12.p2.cost + ft12.p3.cost + ft12.p4.cost + ft12.p5.cost;
+    ft12.tot_g1 = ft12.p1.g1 + ft12.p2.g1 + ft12.p3.g1 + ft12.p4.g1 + ft12.p5.g1;
+    ft12.tot_g2 = ft12.p1.g2 + ft12.p2.g2 + ft12.p3.g2 + ft12.p4.g2 + ft12.p5.g2;
+    ft12.tot_g3 = ft12.p1.g3 + ft12.p2.g3 + ft12.p3.g3 + ft12.p4.g3 + ft12.p5.g3;
+    ft12.tot_semi = ft12.p1.semi + ft12.p2.semi + ft12.p3.semi + ft12.p4.semi + ft12.p5.semi;
+    ft12.tot_td3 = ft12.p1.td3 + ft12.p2.td3 + ft12.p3.td3 + ft12.p4.td3 + ft12.p5.td3;
+    ft12.tot_final = ft12.p1.final + ft12.p2.final + ft12.p3.final + ft12.p4.final + ft12.p5.final;
+    ft12.tot_team = ft12.p1.tot + ft12.p2.tot + ft12.p3.tot + ft12.p4.tot + ft12.p5.tot;
+    const ft13 = {
+        ...fantateam_type,
+        team_index: 13,
+        name: "Nipponici",
+        rione: { ...EST },
+        p1: { ...AndreaMoretti },
+        p2: { ...MattiaRoiatti },
+        p3: { ...DiegoNata },
+        p4: { ...AlessandroRizzi },
+        p5: { ...PietroSoramel },
+    };
+    ft13.total_cost = ft13.p1.cost + ft13.p2.cost + ft13.p3.cost + ft13.p4.cost + ft13.p5.cost;
+    ft13.tot_g1 = ft13.p1.g1 + ft13.p2.g1 + ft13.p3.g1 + ft13.p4.g1 + ft13.p5.g1;
+    ft13.tot_g2 = ft13.p1.g2 + ft13.p2.g2 + ft13.p3.g2 + ft13.p4.g2 + ft13.p5.g2;
+    ft13.tot_g3 = ft13.p1.g3 + ft13.p2.g3 + ft13.p3.g3 + ft13.p4.g3 + ft13.p5.g3;
+    ft13.tot_semi = ft13.p1.semi + ft13.p2.semi + ft13.p3.semi + ft13.p4.semi + ft13.p5.semi;
+    ft13.tot_td3 = ft13.p1.td3 + ft13.p2.td3 + ft13.p3.td3 + ft13.p4.td3 + ft13.p5.td3;
+    ft13.tot_final = ft13.p1.final + ft13.p2.final + ft13.p3.final + ft13.p4.final + ft13.p5.final;
+    ft13.tot_team = ft13.p1.tot + ft13.p2.tot + ft13.p3.tot + ft13.p4.tot + ft13.p5.tot;
+    const ft14 = {
+        ...fantateam_type,
+        team_index: 14,
+        name: "NORDmania",
+        rione: { ...NORD },
+        p1: { ...GioeleTudini },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...FilippoPasquon },
+        p4: { ...MatteoSpagnolo },
+        p5: { ...MattiaMasotti },
+    };
+    ft14.total_cost = ft14.p1.cost + ft14.p2.cost + ft14.p3.cost + ft14.p4.cost + ft14.p5.cost;
+    ft14.tot_g1 = ft14.p1.g1 + ft14.p2.g1 + ft14.p3.g1 + ft14.p4.g1 + ft14.p5.g1;
+    ft14.tot_g2 = ft14.p1.g2 + ft14.p2.g2 + ft14.p3.g2 + ft14.p4.g2 + ft14.p5.g2;
+    ft14.tot_g3 = ft14.p1.g3 + ft14.p2.g3 + ft14.p3.g3 + ft14.p4.g3 + ft14.p5.g3;
+    ft14.tot_semi = ft14.p1.semi + ft14.p2.semi + ft14.p3.semi + ft14.p4.semi + ft14.p5.semi;
+    ft14.tot_td3 = ft14.p1.td3 + ft14.p2.td3 + ft14.p3.td3 + ft14.p4.td3 + ft14.p5.td3;
+    ft14.tot_final = ft14.p1.final + ft14.p2.final + ft14.p3.final + ft14.p4.final + ft14.p5.final;
+    ft14.tot_team = ft14.p1.tot + ft14.p2.tot + ft14.p3.tot + ft14.p4.tot + ft14.p5.tot;
+    const ft15 = {
+        ...fantateam_type,
+        team_index: 15,
+        name: "Utopia (:",
+        rione: { ...WEST },
+        p1: { ...AndreaMoretti },
+        p2: { ...AlessandroRojatti },
+        p3: { ...MarcoRizzi },
+        p4: { ...MassimilianoMoretti },
+        p5: { ...AlessandroRizzi },
+    };
+    ft15.total_cost = ft15.p1.cost + ft15.p2.cost + ft15.p3.cost + ft15.p4.cost + ft15.p5.cost;
+    ft15.tot_g1 = ft15.p1.g1 + ft15.p2.g1 + ft15.p3.g1 + ft15.p4.g1 + ft15.p5.g1;
+    ft15.tot_g2 = ft15.p1.g2 + ft15.p2.g2 + ft15.p3.g2 + ft15.p4.g2 + ft15.p5.g2;
+    ft15.tot_g3 = ft15.p1.g3 + ft15.p2.g3 + ft15.p3.g3 + ft15.p4.g3 + ft15.p5.g3;
+    ft15.tot_semi = ft15.p1.semi + ft15.p2.semi + ft15.p3.semi + ft15.p4.semi + ft15.p5.semi;
+    ft15.tot_td3 = ft15.p1.td3 + ft15.p2.td3 + ft15.p3.td3 + ft15.p4.td3 + ft15.p5.td3;
+    ft15.tot_final = ft15.p1.final + ft15.p2.final + ft15.p3.final + ft15.p4.final + ft15.p5.final;
+    ft15.tot_team = ft15.p1.tot + ft15.p2.tot + ft15.p3.tot + ft15.p4.tot + ft15.p5.tot;
+    const ft16 = {
+        ...fantateam_type,
+        team_index: 16,
+        name: "Robur Nazionale",
+        rione: { ...WEST },
+        p1: { ...AlessandroRizzi },
+        p2: { ...MattiaMasotti },
+        p3: { ...MarcoSerrao },
+        p4: { ...MicheleDeAnna },
+        p5: { ...MiracleObichukwu },
+    };
+    ft16.total_cost = ft16.p1.cost + ft16.p2.cost + ft16.p3.cost + ft16.p4.cost + ft16.p5.cost;
+    ft16.tot_g1 = ft16.p1.g1 + ft16.p2.g1 + ft16.p3.g1 + ft16.p4.g1 + ft16.p5.g1;
+    ft16.tot_g2 = ft16.p1.g2 + ft16.p2.g2 + ft16.p3.g2 + ft16.p4.g2 + ft16.p5.g2;
+    ft16.tot_g3 = ft16.p1.g3 + ft16.p2.g3 + ft16.p3.g3 + ft16.p4.g3 + ft16.p5.g3;
+    ft16.tot_semi = ft16.p1.semi + ft16.p2.semi + ft16.p3.semi + ft16.p4.semi + ft16.p5.semi;
+    ft16.tot_td3 = ft16.p1.td3 + ft16.p2.td3 + ft16.p3.td3 + ft16.p4.td3 + ft16.p5.td3;
+    ft16.tot_final = ft16.p1.final + ft16.p2.final + ft16.p3.final + ft16.p4.final + ft16.p5.final;
+    ft16.tot_team = ft16.p1.tot + ft16.p2.tot + ft16.p3.tot + ft16.p4.tot + ft16.p5.tot;
+    const ft17 = {
+        ...fantateam_type,
+        team_index: 17,
+        name: "SEBA CENGA",
+        rione: { ...WEST },
+        p1: { ...LucaDellaLonga },
+        p2: { ...DiegoNata },
+        p3: { ...AndreaMoretti },
+        p4: { ...UmbertoNobile },
+        p5: { ...DavideFaurlin },
+    };
+    ft17.total_cost = ft17.p1.cost + ft17.p2.cost + ft17.p3.cost + ft17.p4.cost + ft17.p5.cost;
+    ft17.tot_g1 = ft17.p1.g1 + ft17.p2.g1 + ft17.p3.g1 + ft17.p4.g1 + ft17.p5.g1;
+    ft17.tot_g2 = ft17.p1.g2 + ft17.p2.g2 + ft17.p3.g2 + ft17.p4.g2 + ft17.p5.g2;
+    ft17.tot_g3 = ft17.p1.g3 + ft17.p2.g3 + ft17.p3.g3 + ft17.p4.g3 + ft17.p5.g3;
+    ft17.tot_semi = ft17.p1.semi + ft17.p2.semi + ft17.p3.semi + ft17.p4.semi + ft17.p5.semi;
+    ft17.tot_td3 = ft17.p1.td3 + ft17.p2.td3 + ft17.p3.td3 + ft17.p4.td3 + ft17.p5.td3;
+    ft17.tot_final = ft17.p1.final + ft17.p2.final + ft17.p3.final + ft17.p4.final + ft17.p5.final;
+    ft17.tot_team = ft17.p1.tot + ft17.p2.tot + ft17.p3.tot + ft17.p4.tot + ft17.p5.tot;
+    const ft18 = {
+        ...fantateam_type,
+        team_index: 18,
+        name: "PSYCHO P",
+        rione: { ...NORD },
+        p1: { ...MarcoLombardo },
+        p2: { ...MarcoSerrao },
+        p3: { ...FilippoPasquon },
+        p4: { ...AlessandroCostantini },
+        p5: { ...VittorioBasso },
+    };
+    ft18.total_cost = ft18.p1.cost + ft18.p2.cost + ft18.p3.cost + ft18.p4.cost + ft18.p5.cost;
+    ft18.tot_g1 = ft18.p1.g1 + ft18.p2.g1 + ft18.p3.g1 + ft18.p4.g1 + ft18.p5.g1;
+    ft18.tot_g2 = ft18.p1.g2 + ft18.p2.g2 + ft18.p3.g2 + ft18.p4.g2 + ft18.p5.g2;
+    ft18.tot_g3 = ft18.p1.g3 + ft18.p2.g3 + ft18.p3.g3 + ft18.p4.g3 + ft18.p5.g3;
+    ft18.tot_semi = ft18.p1.semi + ft18.p2.semi + ft18.p3.semi + ft18.p4.semi + ft18.p5.semi;
+    ft18.tot_td3 = ft18.p1.td3 + ft18.p2.td3 + ft18.p3.td3 + ft18.p4.td3 + ft18.p5.td3;
+    ft18.tot_final = ft18.p1.final + ft18.p2.final + ft18.p3.final + ft18.p4.final + ft18.p5.final;
+    ft18.tot_team = ft18.p1.tot + ft18.p2.tot + ft18.p3.tot + ft18.p4.tot + ft18.p5.tot;
+    const ft19 = {
+        ...fantateam_type,
+        team_index: 19,
+        name: "Vitellonseeee",
+        rione: { ...SUD },
+        p1: { ...AlessandroSantin },
+        p2: { ...MattiaMasotti },
+        p3: { ...AlessandroSant },
+        p4: { ...GiacomoPiacentini },
+        p5: { ...AlessandroCostantini },
+    };
+    ft19.total_cost = ft19.p1.cost + ft19.p2.cost + ft19.p3.cost + ft19.p4.cost + ft19.p5.cost;
+    ft19.tot_g1 = ft19.p1.g1 + ft19.p2.g1 + ft19.p3.g1 + ft19.p4.g1 + ft19.p5.g1;
+    ft19.tot_g2 = ft19.p1.g2 + ft19.p2.g2 + ft19.p3.g2 + ft19.p4.g2 + ft19.p5.g2;
+    ft19.tot_g3 = ft19.p1.g3 + ft19.p2.g3 + ft19.p3.g3 + ft19.p4.g3 + ft19.p5.g3;
+    ft19.tot_semi = ft19.p1.semi + ft19.p2.semi + ft19.p3.semi + ft19.p4.semi + ft19.p5.semi;
+    ft19.tot_td3 = ft19.p1.td3 + ft19.p2.td3 + ft19.p3.td3 + ft19.p4.td3 + ft19.p5.td3;
+    ft19.tot_final = ft19.p1.final + ft19.p2.final + ft19.p3.final + ft19.p4.final + ft19.p5.final;
+    ft19.tot_team = ft19.p1.tot + ft19.p2.tot + ft19.p3.tot + ft19.p4.tot + ft19.p5.tot;
+    const ft20 = {
+        ...fantateam_type,
+        team_index: 20,
+        name: "Bitchass",
+        rione: { ...WEST },
+        p1: { ...MarcoRizzi },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...LucaAnedda },
+        p4: { ...LucaSoramel },
+        p5: { ...MattiaRoiatti },
+    };
+    ft20.total_cost = ft20.p1.cost + ft20.p2.cost + ft20.p3.cost + ft20.p4.cost + ft20.p5.cost;
+    ft20.tot_g1 = ft20.p1.g1 + ft20.p2.g1 + ft20.p3.g1 + ft20.p4.g1 + ft20.p5.g1;
+    ft20.tot_g2 = ft20.p1.g2 + ft20.p2.g2 + ft20.p3.g2 + ft20.p4.g2 + ft20.p5.g2;
+    ft20.tot_g3 = ft20.p1.g3 + ft20.p2.g3 + ft20.p3.g3 + ft20.p4.g3 + ft20.p5.g3;
+    ft20.tot_semi = ft20.p1.semi + ft20.p2.semi + ft20.p3.semi + ft20.p4.semi + ft20.p5.semi;
+    ft20.tot_td3 = ft20.p1.td3 + ft20.p2.td3 + ft20.p3.td3 + ft20.p4.td3 + ft20.p5.td3;
+    ft20.tot_final = ft20.p1.final + ft20.p2.final + ft20.p3.final + ft20.p4.final + ft20.p5.final;
+    ft20.tot_team = ft20.p1.tot + ft20.p2.tot + ft20.p3.tot + ft20.p4.tot + ft20.p5.tot;
+    const ft21 = {
+        ...fantateam_type,
+        team_index: 21,
+        name: "La Foca per una Codroipo Libera",
+        rione: { ...NORD },
+        p1: { ...IacopoPivetta },
+        p2: { ...LarryTrevisan },
+        p3: { ...MiracleObichukwu },
+        p4: { ...ValentinoCigainero },
+        p5: { ...MarcoPolo },
+    };
+    ft21.total_cost = ft21.p1.cost + ft21.p2.cost + ft21.p3.cost + ft21.p4.cost + ft21.p5.cost;
+    ft21.tot_g1 = ft21.p1.g1 + ft21.p2.g1 + ft21.p3.g1 + ft21.p4.g1 + ft21.p5.g1;
+    ft21.tot_g2 = ft21.p1.g2 + ft21.p2.g2 + ft21.p3.g2 + ft21.p4.g2 + ft21.p5.g2;
+    ft21.tot_g3 = ft21.p1.g3 + ft21.p2.g3 + ft21.p3.g3 + ft21.p4.g3 + ft21.p5.g3;
+    ft21.tot_semi = ft21.p1.semi + ft21.p2.semi + ft21.p3.semi + ft21.p4.semi + ft21.p5.semi;
+    ft21.tot_td3 = ft21.p1.td3 + ft21.p2.td3 + ft21.p3.td3 + ft21.p4.td3 + ft21.p5.td3;
+    ft21.tot_final = ft21.p1.final + ft21.p2.final + ft21.p3.final + ft21.p4.final + ft21.p5.final;
+    ft21.tot_team = ft21.p1.tot + ft21.p2.tot + ft21.p3.tot + ft21.p4.tot + ft21.p5.tot;
+    const ft22 = {
+        ...fantateam_type,
+        team_index: 22,
+        name: "fantadario",
+        rione: { ...WEST },
+        p1: { ...LarryTrevisan },
+        p2: { ...FilippoPasquon },
+        p3: { ...AlessandroSant },
+        p4: { ...AlessandroGalassi },
+        p5: { ...MattiaMasotti },
+    };
+    ft22.total_cost = ft22.p1.cost + ft22.p2.cost + ft22.p3.cost + ft22.p4.cost + ft22.p5.cost;
+    ft22.tot_g1 = ft22.p1.g1 + ft22.p2.g1 + ft22.p3.g1 + ft22.p4.g1 + ft22.p5.g1;
+    ft22.tot_g2 = ft22.p1.g2 + ft22.p2.g2 + ft22.p3.g2 + ft22.p4.g2 + ft22.p5.g2;
+    ft22.tot_g3 = ft22.p1.g3 + ft22.p2.g3 + ft22.p3.g3 + ft22.p4.g3 + ft22.p5.g3;
+    ft22.tot_semi = ft22.p1.semi + ft22.p2.semi + ft22.p3.semi + ft22.p4.semi + ft22.p5.semi;
+    ft22.tot_td3 = ft22.p1.td3 + ft22.p2.td3 + ft22.p3.td3 + ft22.p4.td3 + ft22.p5.td3;
+    ft22.tot_final = ft22.p1.final + ft22.p2.final + ft22.p3.final + ft22.p4.final + ft22.p5.final;
+    ft22.tot_team = ft22.p1.tot + ft22.p2.tot + ft22.p3.tot + ft22.p4.tot + ft22.p5.tot;
+    const ft23 = {
+        ...fantateam_type,
+        team_index: 23,
+        name: "Zanzibar",
+        rione: { ...WEST },
+        p1: { ...LarryTrevisan },
+        p2: { ...ChristianZanet },
+        p3: { ...FilippoPasquon },
+        p4: { ...MattiaMasotti },
+        p5: { ...AlessandroRizzi },
+    };
+    ft23.total_cost = ft23.p1.cost + ft23.p2.cost + ft23.p3.cost + ft23.p4.cost + ft23.p5.cost;
+    ft23.tot_g1 = ft23.p1.g1 + ft23.p2.g1 + ft23.p3.g1 + ft23.p4.g1 + ft23.p5.g1;
+    ft23.tot_g2 = ft23.p1.g2 + ft23.p2.g2 + ft23.p3.g2 + ft23.p4.g2 + ft23.p5.g2;
+    ft23.tot_g3 = ft23.p1.g3 + ft23.p2.g3 + ft23.p3.g3 + ft23.p4.g3 + ft23.p5.g3;
+    ft23.tot_semi = ft23.p1.semi + ft23.p2.semi + ft23.p3.semi + ft23.p4.semi + ft23.p5.semi;
+    ft23.tot_td3 = ft23.p1.td3 + ft23.p2.td3 + ft23.p3.td3 + ft23.p4.td3 + ft23.p5.td3;
+    ft23.tot_final = ft23.p1.final + ft23.p2.final + ft23.p3.final + ft23.p4.final + ft23.p5.final;
+    ft23.tot_team = ft23.p1.tot + ft23.p2.tot + ft23.p3.tot + ft23.p4.tot + ft23.p5.tot;
+    const ft24 = {
+        ...fantateam_type,
+        team_index: 24,
+        name: "ISTANBULKEBAB GLOBETROTTERS",
+        rione: { ...SUD },
+        p1: { ...ValentinoCigainero },
+        p2: { ...MicheleDeAnna },
+        p3: { ...MattiaRoiatti },
+        p4: { ...LucaAnedda },
+        p5: { ...GiacomoSilvestri },
+    };
+    ft24.total_cost = ft24.p1.cost + ft24.p2.cost + ft24.p3.cost + ft24.p4.cost + ft24.p5.cost;
+    ft24.tot_g1 = ft24.p1.g1 + ft24.p2.g1 + ft24.p3.g1 + ft24.p4.g1 + ft24.p5.g1;
+    ft24.tot_g2 = ft24.p1.g2 + ft24.p2.g2 + ft24.p3.g2 + ft24.p4.g2 + ft24.p5.g2;
+    ft24.tot_g3 = ft24.p1.g3 + ft24.p2.g3 + ft24.p3.g3 + ft24.p4.g3 + ft24.p5.g3;
+    ft24.tot_semi = ft24.p1.semi + ft24.p2.semi + ft24.p3.semi + ft24.p4.semi + ft24.p5.semi;
+    ft24.tot_td3 = ft24.p1.td3 + ft24.p2.td3 + ft24.p3.td3 + ft24.p4.td3 + ft24.p5.td3;
+    ft24.tot_final = ft24.p1.final + ft24.p2.final + ft24.p3.final + ft24.p4.final + ft24.p5.final;
+    ft24.tot_team = ft24.p1.tot + ft24.p2.tot + ft24.p3.tot + ft24.p4.tot + ft24.p5.tot;
+    const ft25 = {
+        ...fantateam_type,
+        team_index: 25,
+        name: "Golden shower",
+        rione: { ...WEST },
+        p1: { ...MattiaMasotti },
+        p2: { ...AlessandroRizzi },
+        p3: { ...MatteoMargarit },
+        p4: { ...PietroSoramel },
+        p5: { ...MattiaRoiatti },
+    };
+    ft25.total_cost = ft25.p1.cost + ft25.p2.cost + ft25.p3.cost + ft25.p4.cost + ft25.p5.cost;
+    ft25.tot_g1 = ft25.p1.g1 + ft25.p2.g1 + ft25.p3.g1 + ft25.p4.g1 + ft25.p5.g1;
+    ft25.tot_g2 = ft25.p1.g2 + ft25.p2.g2 + ft25.p3.g2 + ft25.p4.g2 + ft25.p5.g2;
+    ft25.tot_g3 = ft25.p1.g3 + ft25.p2.g3 + ft25.p3.g3 + ft25.p4.g3 + ft25.p5.g3;
+    ft25.tot_semi = ft25.p1.semi + ft25.p2.semi + ft25.p3.semi + ft25.p4.semi + ft25.p5.semi;
+    ft25.tot_td3 = ft25.p1.td3 + ft25.p2.td3 + ft25.p3.td3 + ft25.p4.td3 + ft25.p5.td3;
+    ft25.tot_final = ft25.p1.final + ft25.p2.final + ft25.p3.final + ft25.p4.final + ft25.p5.final;
+    ft25.tot_team = ft25.p1.tot + ft25.p2.tot + ft25.p3.tot + ft25.p4.tot + ft25.p5.tot;
+    const ft26 = {
+        ...fantateam_type,
+        team_index: 26,
+        name: "DD",
+        rione: { ...WEST },
+        p1: { ...MassimoMasotti },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...AlessandroRizzi },
+        p4: { ...AntonioGri },
+        p5: { ...MatteoBazzaro },
+    };
+    ft26.total_cost = ft26.p1.cost + ft26.p2.cost + ft26.p3.cost + ft26.p4.cost + ft26.p5.cost;
+    ft26.tot_g1 = ft26.p1.g1 + ft26.p2.g1 + ft26.p3.g1 + ft26.p4.g1 + ft26.p5.g1;
+    ft26.tot_g2 = ft26.p1.g2 + ft26.p2.g2 + ft26.p3.g2 + ft26.p4.g2 + ft26.p5.g2;
+    ft26.tot_g3 = ft26.p1.g3 + ft26.p2.g3 + ft26.p3.g3 + ft26.p4.g3 + ft26.p5.g3;
+    ft26.tot_semi = ft26.p1.semi + ft26.p2.semi + ft26.p3.semi + ft26.p4.semi + ft26.p5.semi;
+    ft26.tot_td3 = ft26.p1.td3 + ft26.p2.td3 + ft26.p3.td3 + ft26.p4.td3 + ft26.p5.td3;
+    ft26.tot_final = ft26.p1.final + ft26.p2.final + ft26.p3.final + ft26.p4.final + ft26.p5.final;
+    ft26.tot_team = ft26.p1.tot + ft26.p2.tot + ft26.p3.tot + ft26.p4.tot + ft26.p5.tot;
+    const ft27 = {
+        ...fantateam_type,
+        team_index: 27,
+        name: "zioperone",
+        rione: { ...NORD },
+        p1: { ...LorenzoMoro },
+        p2: { ...DavidGaspardo },
+        p3: { ...FilippoPasquon },
+        p4: { ...VittorioBasso },
+        p5: { ...WilliamIob },
+    };
+    ft27.total_cost = ft27.p1.cost + ft27.p2.cost + ft27.p3.cost + ft27.p4.cost + ft27.p5.cost;
+    ft27.tot_g1 = ft27.p1.g1 + ft27.p2.g1 + ft27.p3.g1 + ft27.p4.g1 + ft27.p5.g1;
+    ft27.tot_g2 = ft27.p1.g2 + ft27.p2.g2 + ft27.p3.g2 + ft27.p4.g2 + ft27.p5.g2;
+    ft27.tot_g3 = ft27.p1.g3 + ft27.p2.g3 + ft27.p3.g3 + ft27.p4.g3 + ft27.p5.g3;
+    ft27.tot_semi = ft27.p1.semi + ft27.p2.semi + ft27.p3.semi + ft27.p4.semi + ft27.p5.semi;
+    ft27.tot_td3 = ft27.p1.td3 + ft27.p2.td3 + ft27.p3.td3 + ft27.p4.td3 + ft27.p5.td3;
+    ft27.tot_final = ft27.p1.final + ft27.p2.final + ft27.p3.final + ft27.p4.final + ft27.p5.final;
+    ft27.tot_team = ft27.p1.tot + ft27.p2.tot + ft27.p3.tot + ft27.p4.tot + ft27.p5.tot;
+    const ft28 = {
+        ...fantateam_type,
+        team_index: 28,
+        name: "Baskettone",
+        rione: { ...NORD },
+        p1: { ...MattiaRoiatti },
+        p2: { ...GabrieleMiani },
+        p3: { ...MauroPerina },
+        p4: { ...MarcoMarchetti },
+        p5: { ...MassimoMasotti },
+    };
+    ft28.total_cost = ft28.p1.cost + ft28.p2.cost + ft28.p3.cost + ft28.p4.cost + ft28.p5.cost;
+    ft28.tot_g1 = ft28.p1.g1 + ft28.p2.g1 + ft28.p3.g1 + ft28.p4.g1 + ft28.p5.g1;
+    ft28.tot_g2 = ft28.p1.g2 + ft28.p2.g2 + ft28.p3.g2 + ft28.p4.g2 + ft28.p5.g2;
+    ft28.tot_g3 = ft28.p1.g3 + ft28.p2.g3 + ft28.p3.g3 + ft28.p4.g3 + ft28.p5.g3;
+    ft28.tot_semi = ft28.p1.semi + ft28.p2.semi + ft28.p3.semi + ft28.p4.semi + ft28.p5.semi;
+    ft28.tot_td3 = ft28.p1.td3 + ft28.p2.td3 + ft28.p3.td3 + ft28.p4.td3 + ft28.p5.td3;
+    ft28.tot_final = ft28.p1.final + ft28.p2.final + ft28.p3.final + ft28.p4.final + ft28.p5.final;
+    ft28.tot_team = ft28.p1.tot + ft28.p2.tot + ft28.p3.tot + ft28.p4.tot + ft28.p5.tot;
+    const ft29 = {
+        ...fantateam_type,
+        team_index: 29,
+        name: "Penelope's Team",
+        rione: { ...SUD },
+        p1: { ...GiovanniTonizzo },
+        p2: { ...AlessandroSant },
+        p3: { ...MarcoPolo },
+        p4: { ...LucaSoramel },
+        p5: { ...FilippoSappa },
+    };
+    ft29.total_cost = ft29.p1.cost + ft29.p2.cost + ft29.p3.cost + ft29.p4.cost + ft29.p5.cost;
+    ft29.tot_g1 = ft29.p1.g1 + ft29.p2.g1 + ft29.p3.g1 + ft29.p4.g1 + ft29.p5.g1;
+    ft29.tot_g2 = ft29.p1.g2 + ft29.p2.g2 + ft29.p3.g2 + ft29.p4.g2 + ft29.p5.g2;
+    ft29.tot_g3 = ft29.p1.g3 + ft29.p2.g3 + ft29.p3.g3 + ft29.p4.g3 + ft29.p5.g3;
+    ft29.tot_semi = ft29.p1.semi + ft29.p2.semi + ft29.p3.semi + ft29.p4.semi + ft29.p5.semi;
+    ft29.tot_td3 = ft29.p1.td3 + ft29.p2.td3 + ft29.p3.td3 + ft29.p4.td3 + ft29.p5.td3;
+    ft29.tot_final = ft29.p1.final + ft29.p2.final + ft29.p3.final + ft29.p4.final + ft29.p5.final;
+    ft29.tot_team = ft29.p1.tot + ft29.p2.tot + ft29.p3.tot + ft29.p4.tot + ft29.p5.tot;
+    const ft30 = {
+        ...fantateam_type,
+        team_index: 30,
+        name: "qwerty",
+        rione: { ...EST },
+        p1: { ...GionaTell },
+        p2: { ...LorenzoMoro },
+        p3: { ...SimoneMartinelli },
+        p4: { ...MauroPerina },
+        p5: { ...EdoardoPicogna },
+    };
+    ft30.total_cost = ft30.p1.cost + ft30.p2.cost + ft30.p3.cost + ft30.p4.cost + ft30.p5.cost;
+    ft30.tot_g1 = ft30.p1.g1 + ft30.p2.g1 + ft30.p3.g1 + ft30.p4.g1 + ft30.p5.g1;
+    ft30.tot_g2 = ft30.p1.g2 + ft30.p2.g2 + ft30.p3.g2 + ft30.p4.g2 + ft30.p5.g2;
+    ft30.tot_g3 = ft30.p1.g3 + ft30.p2.g3 + ft30.p3.g3 + ft30.p4.g3 + ft30.p5.g3;
+    ft30.tot_semi = ft30.p1.semi + ft30.p2.semi + ft30.p3.semi + ft30.p4.semi + ft30.p5.semi;
+    ft30.tot_td3 = ft30.p1.td3 + ft30.p2.td3 + ft30.p3.td3 + ft30.p4.td3 + ft30.p5.td3;
+    ft30.tot_final = ft30.p1.final + ft30.p2.final + ft30.p3.final + ft30.p4.final + ft30.p5.final;
+    ft30.tot_team = ft30.p1.tot + ft30.p2.tot + ft30.p3.tot + ft30.p4.tot + ft30.p5.tot;
+    const ft31 = {
+        ...fantateam_type,
+        team_index: 31,
+        name: "dunk",
+        rione: { ...WEST },
+        p1: { ...LucaSoramel },
+        p2: { ...PaoloZorzi },
+        p3: { ...ChristianFedrizzi },
+        p4: { ...EmanueleDaneluzzi },
+        p5: { ...FilippoAgnoluzzi },
+    };
+    ft31.total_cost = ft31.p1.cost + ft31.p2.cost + ft31.p3.cost + ft31.p4.cost + ft31.p5.cost;
+    ft31.tot_g1 = ft31.p1.g1 + ft31.p2.g1 + ft31.p3.g1 + ft31.p4.g1 + ft31.p5.g1;
+    ft31.tot_g2 = ft31.p1.g2 + ft31.p2.g2 + ft31.p3.g2 + ft31.p4.g2 + ft31.p5.g2;
+    ft31.tot_g3 = ft31.p1.g3 + ft31.p2.g3 + ft31.p3.g3 + ft31.p4.g3 + ft31.p5.g3;
+    ft31.tot_semi = ft31.p1.semi + ft31.p2.semi + ft31.p3.semi + ft31.p4.semi + ft31.p5.semi;
+    ft31.tot_td3 = ft31.p1.td3 + ft31.p2.td3 + ft31.p3.td3 + ft31.p4.td3 + ft31.p5.td3;
+    ft31.tot_final = ft31.p1.final + ft31.p2.final + ft31.p3.final + ft31.p4.final + ft31.p5.final;
+    ft31.tot_team = ft31.p1.tot + ft31.p2.tot + ft31.p3.tot + ft31.p4.tot + ft31.p5.tot;
+    const ft32 = {
+        ...fantateam_type,
+        team_index: 32,
+        name: "I belli",
+        rione: { ...NORD },
+        p1: { ...LucaAnedda },
+        p2: { ...AlessandroRizzi },
+        p3: { ...PietroSoramel },
+        p4: { ...GiovanniTonizzo },
+        p5: { ...AlessandroCostantini },
+    };
+    ft32.total_cost = ft32.p1.cost + ft32.p2.cost + ft32.p3.cost + ft32.p4.cost + ft32.p5.cost;
+    ft32.tot_g1 = ft32.p1.g1 + ft32.p2.g1 + ft32.p3.g1 + ft32.p4.g1 + ft32.p5.g1;
+    ft32.tot_g2 = ft32.p1.g2 + ft32.p2.g2 + ft32.p3.g2 + ft32.p4.g2 + ft32.p5.g2;
+    ft32.tot_g3 = ft32.p1.g3 + ft32.p2.g3 + ft32.p3.g3 + ft32.p4.g3 + ft32.p5.g3;
+    ft32.tot_semi = ft32.p1.semi + ft32.p2.semi + ft32.p3.semi + ft32.p4.semi + ft32.p5.semi;
+    ft32.tot_td3 = ft32.p1.td3 + ft32.p2.td3 + ft32.p3.td3 + ft32.p4.td3 + ft32.p5.td3;
+    ft32.tot_final = ft32.p1.final + ft32.p2.final + ft32.p3.final + ft32.p4.final + ft32.p5.final;
+    ft32.tot_team = ft32.p1.tot + ft32.p2.tot + ft32.p3.tot + ft32.p4.tot + ft32.p5.tot;
+    const ft33 = {
+        ...fantateam_type,
+        team_index: 33,
+        name: "asdfg",
+        rione: { ...WEST },
+        p1: { ...MassimilianoRossi },
+        p2: { ...MassimoMasotti },
+        p3: { ...EugenioDeTina },
+        p4: { ...DenisVanin },
+        p5: { ...LucaAnedda },
+    };
+    ft33.total_cost = ft33.p1.cost + ft33.p2.cost + ft33.p3.cost + ft33.p4.cost + ft33.p5.cost;
+    ft33.tot_g1 = ft33.p1.g1 + ft33.p2.g1 + ft33.p3.g1 + ft33.p4.g1 + ft33.p5.g1;
+    ft33.tot_g2 = ft33.p1.g2 + ft33.p2.g2 + ft33.p3.g2 + ft33.p4.g2 + ft33.p5.g2;
+    ft33.tot_g3 = ft33.p1.g3 + ft33.p2.g3 + ft33.p3.g3 + ft33.p4.g3 + ft33.p5.g3;
+    ft33.tot_semi = ft33.p1.semi + ft33.p2.semi + ft33.p3.semi + ft33.p4.semi + ft33.p5.semi;
+    ft33.tot_td3 = ft33.p1.td3 + ft33.p2.td3 + ft33.p3.td3 + ft33.p4.td3 + ft33.p5.td3;
+    ft33.tot_final = ft33.p1.final + ft33.p2.final + ft33.p3.final + ft33.p4.final + ft33.p5.final;
+    ft33.tot_team = ft33.p1.tot + ft33.p2.tot + ft33.p3.tot + ft33.p4.tot + ft33.p5.tot;
+    const ft34 = {
+        ...fantateam_type,
+        team_index: 34,
+        name: "Wpalio",
+        rione: { ...SUD },
+        p1: { ...StefanoPolano },
+        p2: { ...DavidGaspardo },
+        p3: { ...ThomasBaracetti },
+        p4: { ...AlessandroGalassi },
+        p5: { ...EmanueleDaneluzzi },
+    };
+    ft34.total_cost = ft34.p1.cost + ft34.p2.cost + ft34.p3.cost + ft34.p4.cost + ft34.p5.cost;
+    ft34.tot_g1 = ft34.p1.g1 + ft34.p2.g1 + ft34.p3.g1 + ft34.p4.g1 + ft34.p5.g1;
+    ft34.tot_g2 = ft34.p1.g2 + ft34.p2.g2 + ft34.p3.g2 + ft34.p4.g2 + ft34.p5.g2;
+    ft34.tot_g3 = ft34.p1.g3 + ft34.p2.g3 + ft34.p3.g3 + ft34.p4.g3 + ft34.p5.g3;
+    ft34.tot_semi = ft34.p1.semi + ft34.p2.semi + ft34.p3.semi + ft34.p4.semi + ft34.p5.semi;
+    ft34.tot_td3 = ft34.p1.td3 + ft34.p2.td3 + ft34.p3.td3 + ft34.p4.td3 + ft34.p5.td3;
+    ft34.tot_final = ft34.p1.final + ft34.p2.final + ft34.p3.final + ft34.p4.final + ft34.p5.final;
+    ft34.tot_team = ft34.p1.tot + ft34.p2.tot + ft34.p3.tot + ft34.p4.tot + ft34.p5.tot;
+    const ft35 = {
+        ...fantateam_type,
+        team_index: 35,
+        name: "Carichi",
+        rione: { ...NORD },
+        p1: { ...MiracleObichukwu },
+        p2: { ...AlessandroCostantini },
+        p3: { ...MatteoMargarit },
+        p4: { ...GiacomoPiacentini },
+        p5: { ...ChristianZanet },
+    };
+    ft35.total_cost = ft35.p1.cost + ft35.p2.cost + ft35.p3.cost + ft35.p4.cost + ft35.p5.cost;
+    ft35.tot_g1 = ft35.p1.g1 + ft35.p2.g1 + ft35.p3.g1 + ft35.p4.g1 + ft35.p5.g1;
+    ft35.tot_g2 = ft35.p1.g2 + ft35.p2.g2 + ft35.p3.g2 + ft35.p4.g2 + ft35.p5.g2;
+    ft35.tot_g3 = ft35.p1.g3 + ft35.p2.g3 + ft35.p3.g3 + ft35.p4.g3 + ft35.p5.g3;
+    ft35.tot_semi = ft35.p1.semi + ft35.p2.semi + ft35.p3.semi + ft35.p4.semi + ft35.p5.semi;
+    ft35.tot_td3 = ft35.p1.td3 + ft35.p2.td3 + ft35.p3.td3 + ft35.p4.td3 + ft35.p5.td3;
+    ft35.tot_final = ft35.p1.final + ft35.p2.final + ft35.p3.final + ft35.p4.final + ft35.p5.final;
+    ft35.tot_team = ft35.p1.tot + ft35.p2.tot + ft35.p3.tot + ft35.p4.tot + ft35.p5.tot;
+    const ft36 = {
+        ...fantateam_type,
+        team_index: 36,
+        name: "giorgina",
+        rione: { ...EST },
+        p1: { ...MarcoRizzi },
+        p2: { ...ValentinoCigainero },
+        p3: { ...MattiaRoiatti },
+        p4: { ...LucaAnedda },
+        p5: { ...GiacomoSilvestri },
+    };
+    ft36.total_cost = ft36.p1.cost + ft36.p2.cost + ft36.p3.cost + ft36.p4.cost + ft36.p5.cost;
+    ft36.tot_g1 = ft36.p1.g1 + ft36.p2.g1 + ft36.p3.g1 + ft36.p4.g1 + ft36.p5.g1;
+    ft36.tot_g2 = ft36.p1.g2 + ft36.p2.g2 + ft36.p3.g2 + ft36.p4.g2 + ft36.p5.g2;
+    ft36.tot_g3 = ft36.p1.g3 + ft36.p2.g3 + ft36.p3.g3 + ft36.p4.g3 + ft36.p5.g3;
+    ft36.tot_semi = ft36.p1.semi + ft36.p2.semi + ft36.p3.semi + ft36.p4.semi + ft36.p5.semi;
+    ft36.tot_td3 = ft36.p1.td3 + ft36.p2.td3 + ft36.p3.td3 + ft36.p4.td3 + ft36.p5.td3;
+    ft36.tot_final = ft36.p1.final + ft36.p2.final + ft36.p3.final + ft36.p4.final + ft36.p5.final;
+    ft36.tot_team = ft36.p1.tot + ft36.p2.tot + ft36.p3.tot + ft36.p4.tot + ft36.p5.tot;
+    const ft37 = {
+        ...fantateam_type,
+        team_index: 37,
+        name: "La Betty",
+        rione: { ...WEST },
+        p1: { ...EmanueleDaneluzzi },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...PietroSoramel },
+        p4: { ...EdoardoPicogna },
+        p5: { ...MiracleObichukwu },
+    };
+    ft37.total_cost = ft37.p1.cost + ft37.p2.cost + ft37.p3.cost + ft37.p4.cost + ft37.p5.cost;
+    ft37.tot_g1 = ft37.p1.g1 + ft37.p2.g1 + ft37.p3.g1 + ft37.p4.g1 + ft37.p5.g1;
+    ft37.tot_g2 = ft37.p1.g2 + ft37.p2.g2 + ft37.p3.g2 + ft37.p4.g2 + ft37.p5.g2;
+    ft37.tot_g3 = ft37.p1.g3 + ft37.p2.g3 + ft37.p3.g3 + ft37.p4.g3 + ft37.p5.g3;
+    ft37.tot_semi = ft37.p1.semi + ft37.p2.semi + ft37.p3.semi + ft37.p4.semi + ft37.p5.semi;
+    ft37.tot_td3 = ft37.p1.td3 + ft37.p2.td3 + ft37.p3.td3 + ft37.p4.td3 + ft37.p5.td3;
+    ft37.tot_final = ft37.p1.final + ft37.p2.final + ft37.p3.final + ft37.p4.final + ft37.p5.final;
+    ft37.tot_team = ft37.p1.tot + ft37.p2.tot + ft37.p3.tot + ft37.p4.tot + ft37.p5.tot;
+    const ft38 = {
+        ...fantateam_type,
+        team_index: 38,
+        name: "PAMPA MENTALITY",
+        rione: { ...SUD },
+        p1: { ...FilippoPasquon },
+        p2: { ...MattiaMasotti },
+        p3: { ...ChristianZanet },
+        p4: { ...MiracleObichukwu },
+        p5: { ...DiegoNata },
+    };
+    ft38.total_cost = ft38.p1.cost + ft38.p2.cost + ft38.p3.cost + ft38.p4.cost + ft38.p5.cost;
+    ft38.tot_g1 = ft38.p1.g1 + ft38.p2.g1 + ft38.p3.g1 + ft38.p4.g1 + ft38.p5.g1;
+    ft38.tot_g2 = ft38.p1.g2 + ft38.p2.g2 + ft38.p3.g2 + ft38.p4.g2 + ft38.p5.g2;
+    ft38.tot_g3 = ft38.p1.g3 + ft38.p2.g3 + ft38.p3.g3 + ft38.p4.g3 + ft38.p5.g3;
+    ft38.tot_semi = ft38.p1.semi + ft38.p2.semi + ft38.p3.semi + ft38.p4.semi + ft38.p5.semi;
+    ft38.tot_td3 = ft38.p1.td3 + ft38.p2.td3 + ft38.p3.td3 + ft38.p4.td3 + ft38.p5.td3;
+    ft38.tot_final = ft38.p1.final + ft38.p2.final + ft38.p3.final + ft38.p4.final + ft38.p5.final;
+    ft38.tot_team = ft38.p1.tot + ft38.p2.tot + ft38.p3.tot + ft38.p4.tot + ft38.p5.tot;
+    const ft39 = {
+        ...fantateam_type,
+        team_index: 39,
+        name: "Prime time players",
+        rione: { ...WEST },
+        p1: { ...LarryTrevisan },
+        p2: { ...MarcoSerrao },
+        p3: { ...UmbertoNobile },
+        p4: { ...FilippoPasquon },
+        p5: { ...LorenzoMoro },
+    };
+    ft39.total_cost = ft39.p1.cost + ft39.p2.cost + ft39.p3.cost + ft39.p4.cost + ft39.p5.cost;
+    ft39.tot_g1 = ft39.p1.g1 + ft39.p2.g1 + ft39.p3.g1 + ft39.p4.g1 + ft39.p5.g1;
+    ft39.tot_g2 = ft39.p1.g2 + ft39.p2.g2 + ft39.p3.g2 + ft39.p4.g2 + ft39.p5.g2;
+    ft39.tot_g3 = ft39.p1.g3 + ft39.p2.g3 + ft39.p3.g3 + ft39.p4.g3 + ft39.p5.g3;
+    ft39.tot_semi = ft39.p1.semi + ft39.p2.semi + ft39.p3.semi + ft39.p4.semi + ft39.p5.semi;
+    ft39.tot_td3 = ft39.p1.td3 + ft39.p2.td3 + ft39.p3.td3 + ft39.p4.td3 + ft39.p5.td3;
+    ft39.tot_final = ft39.p1.final + ft39.p2.final + ft39.p3.final + ft39.p4.final + ft39.p5.final;
+    ft39.tot_team = ft39.p1.tot + ft39.p2.tot + ft39.p3.tot + ft39.p4.tot + ft39.p5.tot;
+    const ft40 = {
+        ...fantateam_type,
+        team_index: 40,
+        name: "Rione Muscletto",
+        rione: { ...NORD },
+        p1: { ...GioeleTudini },
+        p2: { ...FilippoSappa },
+        p3: { ...LarryTrevisan },
+        p4: { ...AlessandroSant },
+        p5: { ...AlessandroRojatti },
+    };
+    ft40.total_cost = ft40.p1.cost + ft40.p2.cost + ft40.p3.cost + ft40.p4.cost + ft40.p5.cost;
+    ft40.tot_g1 = ft40.p1.g1 + ft40.p2.g1 + ft40.p3.g1 + ft40.p4.g1 + ft40.p5.g1;
+    ft40.tot_g2 = ft40.p1.g2 + ft40.p2.g2 + ft40.p3.g2 + ft40.p4.g2 + ft40.p5.g2;
+    ft40.tot_g3 = ft40.p1.g3 + ft40.p2.g3 + ft40.p3.g3 + ft40.p4.g3 + ft40.p5.g3;
+    ft40.tot_semi = ft40.p1.semi + ft40.p2.semi + ft40.p3.semi + ft40.p4.semi + ft40.p5.semi;
+    ft40.tot_td3 = ft40.p1.td3 + ft40.p2.td3 + ft40.p3.td3 + ft40.p4.td3 + ft40.p5.td3;
+    ft40.tot_final = ft40.p1.final + ft40.p2.final + ft40.p3.final + ft40.p4.final + ft40.p5.final;
+    ft40.tot_team = ft40.p1.tot + ft40.p2.tot + ft40.p3.tot + ft40.p4.tot + ft40.p5.tot;
+    const ft41 = {
+        ...fantateam_type,
+        team_index: 41,
+        name: "Oklahoma city tinder",
+        rione: { ...WEST },
+        p1: { ...DevinChiarcos },
+        p2: { ...MattiaRoiatti },
+        p3: { ...MattiaMasotti },
+        p4: { ...FilippoPasquon },
+        p5: { ...MassimilianoMoretti },
+    };
+    ft41.total_cost = ft41.p1.cost + ft41.p2.cost + ft41.p3.cost + ft41.p4.cost + ft41.p5.cost;
+    ft41.tot_g1 = ft41.p1.g1 + ft41.p2.g1 + ft41.p3.g1 + ft41.p4.g1 + ft41.p5.g1;
+    ft41.tot_g2 = ft41.p1.g2 + ft41.p2.g2 + ft41.p3.g2 + ft41.p4.g2 + ft41.p5.g2;
+    ft41.tot_g3 = ft41.p1.g3 + ft41.p2.g3 + ft41.p3.g3 + ft41.p4.g3 + ft41.p5.g3;
+    ft41.tot_semi = ft41.p1.semi + ft41.p2.semi + ft41.p3.semi + ft41.p4.semi + ft41.p5.semi;
+    ft41.tot_td3 = ft41.p1.td3 + ft41.p2.td3 + ft41.p3.td3 + ft41.p4.td3 + ft41.p5.td3;
+    ft41.tot_final = ft41.p1.final + ft41.p2.final + ft41.p3.final + ft41.p4.final + ft41.p5.final;
+    ft41.tot_team = ft41.p1.tot + ft41.p2.tot + ft41.p3.tot + ft41.p4.tot + ft41.p5.tot;
+    const ft42 = {
+        ...fantateam_type,
+        team_index: 42,
+        name: "FMB united",
+        rione: { ...EST },
+        p1: { ...AlessandroRojatti },
+        p2: { ...GabrieleMiani },
+        p3: { ...MarcoRizzi },
+        p4: { ...MattiaRoiatti },
+        p5: { ...LucaAnedda },
+    };
+    ft42.total_cost = ft42.p1.cost + ft42.p2.cost + ft42.p3.cost + ft42.p4.cost + ft42.p5.cost;
+    ft42.tot_g1 = ft42.p1.g1 + ft42.p2.g1 + ft42.p3.g1 + ft42.p4.g1 + ft42.p5.g1;
+    ft42.tot_g2 = ft42.p1.g2 + ft42.p2.g2 + ft42.p3.g2 + ft42.p4.g2 + ft42.p5.g2;
+    ft42.tot_g3 = ft42.p1.g3 + ft42.p2.g3 + ft42.p3.g3 + ft42.p4.g3 + ft42.p5.g3;
+    ft42.tot_semi = ft42.p1.semi + ft42.p2.semi + ft42.p3.semi + ft42.p4.semi + ft42.p5.semi;
+    ft42.tot_td3 = ft42.p1.td3 + ft42.p2.td3 + ft42.p3.td3 + ft42.p4.td3 + ft42.p5.td3;
+    ft42.tot_final = ft42.p1.final + ft42.p2.final + ft42.p3.final + ft42.p4.final + ft42.p5.final;
+    ft42.tot_team = ft42.p1.tot + ft42.p2.tot + ft42.p3.tot + ft42.p4.tot + ft42.p5.tot;
+    const ft43 = {
+        ...fantateam_type,
+        team_index: 43,
+        name: "giulia",
+        rione: { ...EST },
+        p1: { ...AlessandroRizzi },
+        p2: { ...MarcoRizzi },
+        p3: { ...LucaAnedda },
+        p4: { ...MattiaRoiatti },
+        p5: { ...EmanueleDaneluzzi },
+    };
+    ft43.total_cost = ft43.p1.cost + ft43.p2.cost + ft43.p3.cost + ft43.p4.cost + ft43.p5.cost;
+    ft43.tot_g1 = ft43.p1.g1 + ft43.p2.g1 + ft43.p3.g1 + ft43.p4.g1 + ft43.p5.g1;
+    ft43.tot_g2 = ft43.p1.g2 + ft43.p2.g2 + ft43.p3.g2 + ft43.p4.g2 + ft43.p5.g2;
+    ft43.tot_g3 = ft43.p1.g3 + ft43.p2.g3 + ft43.p3.g3 + ft43.p4.g3 + ft43.p5.g3;
+    ft43.tot_semi = ft43.p1.semi + ft43.p2.semi + ft43.p3.semi + ft43.p4.semi + ft43.p5.semi;
+    ft43.tot_td3 = ft43.p1.td3 + ft43.p2.td3 + ft43.p3.td3 + ft43.p4.td3 + ft43.p5.td3;
+    ft43.tot_final = ft43.p1.final + ft43.p2.final + ft43.p3.final + ft43.p4.final + ft43.p5.final;
+    ft43.tot_team = ft43.p1.tot + ft43.p2.tot + ft43.p3.tot + ft43.p4.tot + ft43.p5.tot;
+    const ft44 = {
+        ...fantateam_type,
+        team_index: 44,
+        name: "Flacko the sheriff",
+        rione: { ...WEST },
+        p1: { ...MicheleVendrame },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...MattiaRoiatti },
+        p4: { ...PietroSoramel },
+        p5: { ...ValentinoCigainero },
+    };
+    ft44.total_cost = ft44.p1.cost + ft44.p2.cost + ft44.p3.cost + ft44.p4.cost + ft44.p5.cost;
+    ft44.tot_g1 = ft44.p1.g1 + ft44.p2.g1 + ft44.p3.g1 + ft44.p4.g1 + ft44.p5.g1;
+    ft44.tot_g2 = ft44.p1.g2 + ft44.p2.g2 + ft44.p3.g2 + ft44.p4.g2 + ft44.p5.g2;
+    ft44.tot_g3 = ft44.p1.g3 + ft44.p2.g3 + ft44.p3.g3 + ft44.p4.g3 + ft44.p5.g3;
+    ft44.tot_semi = ft44.p1.semi + ft44.p2.semi + ft44.p3.semi + ft44.p4.semi + ft44.p5.semi;
+    ft44.tot_td3 = ft44.p1.td3 + ft44.p2.td3 + ft44.p3.td3 + ft44.p4.td3 + ft44.p5.td3;
+    ft44.tot_final = ft44.p1.final + ft44.p2.final + ft44.p3.final + ft44.p4.final + ft44.p5.final;
+    ft44.tot_team = ft44.p1.tot + ft44.p2.tot + ft44.p3.tot + ft44.p4.tot + ft44.p5.tot;
+    const ft45 = {
+        ...fantateam_type,
+        team_index: 45,
+        name: "Visca",
+        rione: { ...NORD },
+        p1: { ...GiacomoSilvestri },
+        p2: { ...LarryTrevisan },
+        p3: { ...ChristianZanet },
+        p4: { ...MicheleDeAnna },
+        p5: { ...AlessandroRizzi },
+    };
+    ft45.total_cost = ft45.p1.cost + ft45.p2.cost + ft45.p3.cost + ft45.p4.cost + ft45.p5.cost;
+    ft45.tot_g1 = ft45.p1.g1 + ft45.p2.g1 + ft45.p3.g1 + ft45.p4.g1 + ft45.p5.g1;
+    ft45.tot_g2 = ft45.p1.g2 + ft45.p2.g2 + ft45.p3.g2 + ft45.p4.g2 + ft45.p5.g2;
+    ft45.tot_g3 = ft45.p1.g3 + ft45.p2.g3 + ft45.p3.g3 + ft45.p4.g3 + ft45.p5.g3;
+    ft45.tot_semi = ft45.p1.semi + ft45.p2.semi + ft45.p3.semi + ft45.p4.semi + ft45.p5.semi;
+    ft45.tot_td3 = ft45.p1.td3 + ft45.p2.td3 + ft45.p3.td3 + ft45.p4.td3 + ft45.p5.td3;
+    ft45.tot_final = ft45.p1.final + ft45.p2.final + ft45.p3.final + ft45.p4.final + ft45.p5.final;
+    ft45.tot_team = ft45.p1.tot + ft45.p2.tot + ft45.p3.tot + ft45.p4.tot + ft45.p5.tot;
+    const ft46 = {
+        ...fantateam_type,
+        team_index: 46,
+        name: "emosbobna",
+        rione: { ...NORD },
+        p1: { ...DevinChiarcos },
+        p2: { ...MarcoLombardo },
+        p3: { ...GiovanniZanin },
+        p4: { ...MattiaRoiatti },
+        p5: { ...PietroSoramel },
+    };
+    ft46.total_cost = ft46.p1.cost + ft46.p2.cost + ft46.p3.cost + ft46.p4.cost + ft46.p5.cost;
+    ft46.tot_g1 = ft46.p1.g1 + ft46.p2.g1 + ft46.p3.g1 + ft46.p4.g1 + ft46.p5.g1;
+    ft46.tot_g2 = ft46.p1.g2 + ft46.p2.g2 + ft46.p3.g2 + ft46.p4.g2 + ft46.p5.g2;
+    ft46.tot_g3 = ft46.p1.g3 + ft46.p2.g3 + ft46.p3.g3 + ft46.p4.g3 + ft46.p5.g3;
+    ft46.tot_semi = ft46.p1.semi + ft46.p2.semi + ft46.p3.semi + ft46.p4.semi + ft46.p5.semi;
+    ft46.tot_td3 = ft46.p1.td3 + ft46.p2.td3 + ft46.p3.td3 + ft46.p4.td3 + ft46.p5.td3;
+    ft46.tot_final = ft46.p1.final + ft46.p2.final + ft46.p3.final + ft46.p4.final + ft46.p5.final;
+    ft46.tot_team = ft46.p1.tot + ft46.p2.tot + ft46.p3.tot + ft46.p4.tot + ft46.p5.tot;
+    const ft47 = {
+        ...fantateam_type,
+        team_index: 47,
+        name: "Groviscrazia",
+        rione: { ...WEST },
+        p1: { ...PietroSoramel },
+        p2: { ...LucaSoramel },
+        p3: { ...MiracleObichukwu },
+        p4: { ...MicheleVendrame },
+        p5: { ...MassimilianoMoretti },
+    };
+    ft47.total_cost = ft47.p1.cost + ft47.p2.cost + ft47.p3.cost + ft47.p4.cost + ft47.p5.cost;
+    ft47.tot_g1 = ft47.p1.g1 + ft47.p2.g1 + ft47.p3.g1 + ft47.p4.g1 + ft47.p5.g1;
+    ft47.tot_g2 = ft47.p1.g2 + ft47.p2.g2 + ft47.p3.g2 + ft47.p4.g2 + ft47.p5.g2;
+    ft47.tot_g3 = ft47.p1.g3 + ft47.p2.g3 + ft47.p3.g3 + ft47.p4.g3 + ft47.p5.g3;
+    ft47.tot_semi = ft47.p1.semi + ft47.p2.semi + ft47.p3.semi + ft47.p4.semi + ft47.p5.semi;
+    ft47.tot_td3 = ft47.p1.td3 + ft47.p2.td3 + ft47.p3.td3 + ft47.p4.td3 + ft47.p5.td3;
+    ft47.tot_final = ft47.p1.final + ft47.p2.final + ft47.p3.final + ft47.p4.final + ft47.p5.final;
+    ft47.tot_team = ft47.p1.tot + ft47.p2.tot + ft47.p3.tot + ft47.p4.tot + ft47.p5.tot;
+    const ft48 = {
+        ...fantateam_type,
+        team_index: 48,
+        name: "Betta Zul",
+        rione: { ...EST },
+        p1: { ...MattiaMasotti },
+        p2: { ...LucaDellaLonga },
+        p3: { ...MarcoSerrao },
+        p4: { ...FilippoSappa },
+        p5: { ...EnricoSant },
+    };
+    ft48.total_cost = ft48.p1.cost + ft48.p2.cost + ft48.p3.cost + ft48.p4.cost + ft48.p5.cost;
+    ft48.tot_g1 = ft48.p1.g1 + ft48.p2.g1 + ft48.p3.g1 + ft48.p4.g1 + ft48.p5.g1;
+    ft48.tot_g2 = ft48.p1.g2 + ft48.p2.g2 + ft48.p3.g2 + ft48.p4.g2 + ft48.p5.g2;
+    ft48.tot_g3 = ft48.p1.g3 + ft48.p2.g3 + ft48.p3.g3 + ft48.p4.g3 + ft48.p5.g3;
+    ft48.tot_semi = ft48.p1.semi + ft48.p2.semi + ft48.p3.semi + ft48.p4.semi + ft48.p5.semi;
+    ft48.tot_td3 = ft48.p1.td3 + ft48.p2.td3 + ft48.p3.td3 + ft48.p4.td3 + ft48.p5.td3;
+    ft48.tot_final = ft48.p1.final + ft48.p2.final + ft48.p3.final + ft48.p4.final + ft48.p5.final;
+    ft48.tot_team = ft48.p1.tot + ft48.p2.tot + ft48.p3.tot + ft48.p4.tot + ft48.p5.tot;
+    const ft49 = {
+        ...fantateam_type,
+        team_index: 49,
+        name: "Team Canaja",
+        rione: { ...NORD },
+        p1: { ...MarcoLombardo },
+        p2: { ...DiegoNata },
+        p3: { ...DanieleGanzit },
+        p4: { ...EnricoSant },
+        p5: { ...AlessioFurlan },
+    };
+    ft49.total_cost = ft49.p1.cost + ft49.p2.cost + ft49.p3.cost + ft49.p4.cost + ft49.p5.cost;
+    ft49.tot_g1 = ft49.p1.g1 + ft49.p2.g1 + ft49.p3.g1 + ft49.p4.g1 + ft49.p5.g1;
+    ft49.tot_g2 = ft49.p1.g2 + ft49.p2.g2 + ft49.p3.g2 + ft49.p4.g2 + ft49.p5.g2;
+    ft49.tot_g3 = ft49.p1.g3 + ft49.p2.g3 + ft49.p3.g3 + ft49.p4.g3 + ft49.p5.g3;
+    ft49.tot_semi = ft49.p1.semi + ft49.p2.semi + ft49.p3.semi + ft49.p4.semi + ft49.p5.semi;
+    ft49.tot_td3 = ft49.p1.td3 + ft49.p2.td3 + ft49.p3.td3 + ft49.p4.td3 + ft49.p5.td3;
+    ft49.tot_final = ft49.p1.final + ft49.p2.final + ft49.p3.final + ft49.p4.final + ft49.p5.final;
+    ft49.tot_team = ft49.p1.tot + ft49.p2.tot + ft49.p3.tot + ft49.p4.tot + ft49.p5.tot;
+    const ft50 = {
+        ...fantateam_type,
+        team_index: 50,
+        name: "ivan",
+        rione: { ...NORD },
+        p1: { ...FilippoPasquon },
+        p2: { ...MiracleObichukwu },
+        p3: { ...AlessandroGalassi },
+        p4: { ...PietroSoramel },
+        p5: { ...AlessandroRizzi },
+    };
+    ft50.total_cost = ft50.p1.cost + ft50.p2.cost + ft50.p3.cost + ft50.p4.cost + ft50.p5.cost;
+    ft50.tot_g1 = ft50.p1.g1 + ft50.p2.g1 + ft50.p3.g1 + ft50.p4.g1 + ft50.p5.g1;
+    ft50.tot_g2 = ft50.p1.g2 + ft50.p2.g2 + ft50.p3.g2 + ft50.p4.g2 + ft50.p5.g2;
+    ft50.tot_g3 = ft50.p1.g3 + ft50.p2.g3 + ft50.p3.g3 + ft50.p4.g3 + ft50.p5.g3;
+    ft50.tot_semi = ft50.p1.semi + ft50.p2.semi + ft50.p3.semi + ft50.p4.semi + ft50.p5.semi;
+    ft50.tot_td3 = ft50.p1.td3 + ft50.p2.td3 + ft50.p3.td3 + ft50.p4.td3 + ft50.p5.td3;
+    ft50.tot_final = ft50.p1.final + ft50.p2.final + ft50.p3.final + ft50.p4.final + ft50.p5.final;
+    ft50.tot_team = ft50.p1.tot + ft50.p2.tot + ft50.p3.tot + ft50.p4.tot + ft50.p5.tot;
+    const ft51 = {
+        ...fantateam_type,
+        team_index: 51,
+        name: "Matte",
+        rione: { ...WEST },
+        p1: { ...GiacomoSilvestri },
+        p2: { ...MarcoSerrao },
+        p3: { ...LucaGemo },
+        p4: { ...FilippoSappa },
+        p5: { ...LarryTrevisan },
+    };
+    ft51.total_cost = ft51.p1.cost + ft51.p2.cost + ft51.p3.cost + ft51.p4.cost + ft51.p5.cost;
+    ft51.tot_g1 = ft51.p1.g1 + ft51.p2.g1 + ft51.p3.g1 + ft51.p4.g1 + ft51.p5.g1;
+    ft51.tot_g2 = ft51.p1.g2 + ft51.p2.g2 + ft51.p3.g2 + ft51.p4.g2 + ft51.p5.g2;
+    ft51.tot_g3 = ft51.p1.g3 + ft51.p2.g3 + ft51.p3.g3 + ft51.p4.g3 + ft51.p5.g3;
+    ft51.tot_semi = ft51.p1.semi + ft51.p2.semi + ft51.p3.semi + ft51.p4.semi + ft51.p5.semi;
+    ft51.tot_td3 = ft51.p1.td3 + ft51.p2.td3 + ft51.p3.td3 + ft51.p4.td3 + ft51.p5.td3;
+    ft51.tot_final = ft51.p1.final + ft51.p2.final + ft51.p3.final + ft51.p4.final + ft51.p5.final;
+    ft51.tot_team = ft51.p1.tot + ft51.p2.tot + ft51.p3.tot + ft51.p4.tot + ft51.p5.tot;
+    const ft52 = {
+        ...fantateam_type,
+        team_index: 52,
+        name: "Uoff",
+        rione: { ...SUD },
+        p1: { ...MassimilianoMoretti },
+        p2: { ...MarcoRizzi },
+        p3: { ...LucaAnedda },
+        p4: { ...MattiaRoiatti },
+        p5: { ...AlessandroRizzi },
+    };
+    ft52.total_cost = ft52.p1.cost + ft52.p2.cost + ft52.p3.cost + ft52.p4.cost + ft52.p5.cost;
+    ft52.tot_g1 = ft52.p1.g1 + ft52.p2.g1 + ft52.p3.g1 + ft52.p4.g1 + ft52.p5.g1;
+    ft52.tot_g2 = ft52.p1.g2 + ft52.p2.g2 + ft52.p3.g2 + ft52.p4.g2 + ft52.p5.g2;
+    ft52.tot_g3 = ft52.p1.g3 + ft52.p2.g3 + ft52.p3.g3 + ft52.p4.g3 + ft52.p5.g3;
+    ft52.tot_semi = ft52.p1.semi + ft52.p2.semi + ft52.p3.semi + ft52.p4.semi + ft52.p5.semi;
+    ft52.tot_td3 = ft52.p1.td3 + ft52.p2.td3 + ft52.p3.td3 + ft52.p4.td3 + ft52.p5.td3;
+    ft52.tot_final = ft52.p1.final + ft52.p2.final + ft52.p3.final + ft52.p4.final + ft52.p5.final;
+    ft52.tot_team = ft52.p1.tot + ft52.p2.tot + ft52.p3.tot + ft52.p4.tot + ft52.p5.tot;
+    const ft53 = {
+        ...fantateam_type,
+        team_index: 53,
+        name: "Azzzzz",
+        rione: { ...EST },
+        p1: { ...GiovanniTonizzo },
+        p2: { ...ChristianZanet },
+        p3: { ...MicheleDeAnna },
+        p4: { ...MattiaRoiatti },
+        p5: { ...AlessandroCostantini },
+    };
+    ft53.total_cost = ft53.p1.cost + ft53.p2.cost + ft53.p3.cost + ft53.p4.cost + ft53.p5.cost;
+    ft53.tot_g1 = ft53.p1.g1 + ft53.p2.g1 + ft53.p3.g1 + ft53.p4.g1 + ft53.p5.g1;
+    ft53.tot_g2 = ft53.p1.g2 + ft53.p2.g2 + ft53.p3.g2 + ft53.p4.g2 + ft53.p5.g2;
+    ft53.tot_g3 = ft53.p1.g3 + ft53.p2.g3 + ft53.p3.g3 + ft53.p4.g3 + ft53.p5.g3;
+    ft53.tot_semi = ft53.p1.semi + ft53.p2.semi + ft53.p3.semi + ft53.p4.semi + ft53.p5.semi;
+    ft53.tot_td3 = ft53.p1.td3 + ft53.p2.td3 + ft53.p3.td3 + ft53.p4.td3 + ft53.p5.td3;
+    ft53.tot_final = ft53.p1.final + ft53.p2.final + ft53.p3.final + ft53.p4.final + ft53.p5.final;
+    ft53.tot_team = ft53.p1.tot + ft53.p2.tot + ft53.p3.tot + ft53.p4.tot + ft53.p5.tot;
+    const ft54 = {
+        ...fantateam_type,
+        team_index: 54,
+        name: "Super chicche",
+        rione: { ...WEST },
+        p1: { ...LucaSoramel },
+        p2: { ...GiovanniTonizzo },
+        p3: { ...MarcoRizzi },
+        p4: { ...MassimilianoMoretti },
+        p5: { ...VittorioGri },
+    };
+    ft54.total_cost = ft54.p1.cost + ft54.p2.cost + ft54.p3.cost + ft54.p4.cost + ft54.p5.cost;
+    ft54.tot_g1 = ft54.p1.g1 + ft54.p2.g1 + ft54.p3.g1 + ft54.p4.g1 + ft54.p5.g1;
+    ft54.tot_g2 = ft54.p1.g2 + ft54.p2.g2 + ft54.p3.g2 + ft54.p4.g2 + ft54.p5.g2;
+    ft54.tot_g3 = ft54.p1.g3 + ft54.p2.g3 + ft54.p3.g3 + ft54.p4.g3 + ft54.p5.g3;
+    ft54.tot_semi = ft54.p1.semi + ft54.p2.semi + ft54.p3.semi + ft54.p4.semi + ft54.p5.semi;
+    ft54.tot_td3 = ft54.p1.td3 + ft54.p2.td3 + ft54.p3.td3 + ft54.p4.td3 + ft54.p5.td3;
+    ft54.tot_final = ft54.p1.final + ft54.p2.final + ft54.p3.final + ft54.p4.final + ft54.p5.final;
+    ft54.tot_team = ft54.p1.tot + ft54.p2.tot + ft54.p3.tot + ft54.p4.tot + ft54.p5.tot;
+    const ft55 = {
+        ...fantateam_type,
+        team_index: 55,
+        name: "Burritos Picantes",
+        rione: { ...EST },
+        p1: { ...EdoardoPicogna },
+        p2: { ...WilliamIob },
+        p3: { ...FilippoSappa },
+        p4: { ...UmbertoNobile },
+        p5: { ...MatteoSpagnolo },
+    };
+    ft55.total_cost = ft55.p1.cost + ft55.p2.cost + ft55.p3.cost + ft55.p4.cost + ft55.p5.cost;
+    ft55.tot_g1 = ft55.p1.g1 + ft55.p2.g1 + ft55.p3.g1 + ft55.p4.g1 + ft55.p5.g1;
+    ft55.tot_g2 = ft55.p1.g2 + ft55.p2.g2 + ft55.p3.g2 + ft55.p4.g2 + ft55.p5.g2;
+    ft55.tot_g3 = ft55.p1.g3 + ft55.p2.g3 + ft55.p3.g3 + ft55.p4.g3 + ft55.p5.g3;
+    ft55.tot_semi = ft55.p1.semi + ft55.p2.semi + ft55.p3.semi + ft55.p4.semi + ft55.p5.semi;
+    ft55.tot_td3 = ft55.p1.td3 + ft55.p2.td3 + ft55.p3.td3 + ft55.p4.td3 + ft55.p5.td3;
+    ft55.tot_final = ft55.p1.final + ft55.p2.final + ft55.p3.final + ft55.p4.final + ft55.p5.final;
+    ft55.tot_team = ft55.p1.tot + ft55.p2.tot + ft55.p3.tot + ft55.p4.tot + ft55.p5.tot;
+    const ft56 = {
+        ...fantateam_type,
+        team_index: 56,
+        name: "Machico",
+        rione: { ...NORD },
+        p1: { ...AndreaMoretti },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...GiovanniTonizzo },
+        p4: { ...LucaAnedda },
+        p5: { ...PietroSoramel },
+    };
+    ft56.total_cost = ft56.p1.cost + ft56.p2.cost + ft56.p3.cost + ft56.p4.cost + ft56.p5.cost;
+    ft56.tot_g1 = ft56.p1.g1 + ft56.p2.g1 + ft56.p3.g1 + ft56.p4.g1 + ft56.p5.g1;
+    ft56.tot_g2 = ft56.p1.g2 + ft56.p2.g2 + ft56.p3.g2 + ft56.p4.g2 + ft56.p5.g2;
+    ft56.tot_g3 = ft56.p1.g3 + ft56.p2.g3 + ft56.p3.g3 + ft56.p4.g3 + ft56.p5.g3;
+    ft56.tot_semi = ft56.p1.semi + ft56.p2.semi + ft56.p3.semi + ft56.p4.semi + ft56.p5.semi;
+    ft56.tot_td3 = ft56.p1.td3 + ft56.p2.td3 + ft56.p3.td3 + ft56.p4.td3 + ft56.p5.td3;
+    ft56.tot_final = ft56.p1.final + ft56.p2.final + ft56.p3.final + ft56.p4.final + ft56.p5.final;
+    ft56.tot_team = ft56.p1.tot + ft56.p2.tot + ft56.p3.tot + ft56.p4.tot + ft56.p5.tot;
+    const ft57 = {
+        ...fantateam_type,
+        team_index: 57,
+        name: "Unavoltaerofortealchiosco!",
+        rione: { ...WEST },
+        p1: { ...UmbertoNobile },
+        p2: { ...MarcoSerrao },
+        p3: { ...AlessandroRizzi },
+        p4: { ...GiacomoPiacentini },
+        p5: { ...MassimilianoRossi },
+    };
+    ft57.total_cost = ft57.p1.cost + ft57.p2.cost + ft57.p3.cost + ft57.p4.cost + ft57.p5.cost;
+    ft57.tot_g1 = ft57.p1.g1 + ft57.p2.g1 + ft57.p3.g1 + ft57.p4.g1 + ft57.p5.g1;
+    ft57.tot_g2 = ft57.p1.g2 + ft57.p2.g2 + ft57.p3.g2 + ft57.p4.g2 + ft57.p5.g2;
+    ft57.tot_g3 = ft57.p1.g3 + ft57.p2.g3 + ft57.p3.g3 + ft57.p4.g3 + ft57.p5.g3;
+    ft57.tot_semi = ft57.p1.semi + ft57.p2.semi + ft57.p3.semi + ft57.p4.semi + ft57.p5.semi;
+    ft57.tot_td3 = ft57.p1.td3 + ft57.p2.td3 + ft57.p3.td3 + ft57.p4.td3 + ft57.p5.td3;
+    ft57.tot_final = ft57.p1.final + ft57.p2.final + ft57.p3.final + ft57.p4.final + ft57.p5.final;
+    ft57.tot_team = ft57.p1.tot + ft57.p2.tot + ft57.p3.tot + ft57.p4.tot + ft57.p5.tot;
+    const ft58 = {
+        ...fantateam_type,
+        team_index: 58,
+        name: "I miracoli",
+        rione: { ...WEST },
+        p1: { ...AlessandroSant },
+        p2: { ...AlessandroRizzi },
+        p3: { ...GiacomoPiacentini },
+        p4: { ...MattiaMasotti },
+        p5: { ...DevinChiarcos },
+    };
+    ft58.total_cost = ft58.p1.cost + ft58.p2.cost + ft58.p3.cost + ft58.p4.cost + ft58.p5.cost;
+    ft58.tot_g1 = ft58.p1.g1 + ft58.p2.g1 + ft58.p3.g1 + ft58.p4.g1 + ft58.p5.g1;
+    ft58.tot_g2 = ft58.p1.g2 + ft58.p2.g2 + ft58.p3.g2 + ft58.p4.g2 + ft58.p5.g2;
+    ft58.tot_g3 = ft58.p1.g3 + ft58.p2.g3 + ft58.p3.g3 + ft58.p4.g3 + ft58.p5.g3;
+    ft58.tot_semi = ft58.p1.semi + ft58.p2.semi + ft58.p3.semi + ft58.p4.semi + ft58.p5.semi;
+    ft58.tot_td3 = ft58.p1.td3 + ft58.p2.td3 + ft58.p3.td3 + ft58.p4.td3 + ft58.p5.td3;
+    ft58.tot_final = ft58.p1.final + ft58.p2.final + ft58.p3.final + ft58.p4.final + ft58.p5.final;
+    ft58.tot_team = ft58.p1.tot + ft58.p2.tot + ft58.p3.tot + ft58.p4.tot + ft58.p5.tot;
+    const ft59 = {
+        ...fantateam_type,
+        team_index: 59,
+        name: "SimoVinny",
+        rione: { ...SUD },
+        p1: { ...ValentinoCigainero },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...DavideFaurlin },
+        p4: { ...MattiaMasotti },
+        p5: { ...MarcoRizzi },
+    };
+    ft59.total_cost = ft59.p1.cost + ft59.p2.cost + ft59.p3.cost + ft59.p4.cost + ft59.p5.cost;
+    ft59.tot_g1 = ft59.p1.g1 + ft59.p2.g1 + ft59.p3.g1 + ft59.p4.g1 + ft59.p5.g1;
+    ft59.tot_g2 = ft59.p1.g2 + ft59.p2.g2 + ft59.p3.g2 + ft59.p4.g2 + ft59.p5.g2;
+    ft59.tot_g3 = ft59.p1.g3 + ft59.p2.g3 + ft59.p3.g3 + ft59.p4.g3 + ft59.p5.g3;
+    ft59.tot_semi = ft59.p1.semi + ft59.p2.semi + ft59.p3.semi + ft59.p4.semi + ft59.p5.semi;
+    ft59.tot_td3 = ft59.p1.td3 + ft59.p2.td3 + ft59.p3.td3 + ft59.p4.td3 + ft59.p5.td3;
+    ft59.tot_final = ft59.p1.final + ft59.p2.final + ft59.p3.final + ft59.p4.final + ft59.p5.final;
+    ft59.tot_team = ft59.p1.tot + ft59.p2.tot + ft59.p3.tot + ft59.p4.tot + ft59.p5.tot;
+    const ft60 = {
+        ...fantateam_type,
+        team_index: 60,
+        name: "TheFinalCut95!",
+        rione: { ...WEST },
+        p1: { ...AlessandroSant },
+        p2: { ...LucaSoramel },
+        p3: { ...DanieleGanzit },
+        p4: { ...UmbertoNobile },
+        p5: { ...EnricoSant },
+    };
+    ft60.total_cost = ft60.p1.cost + ft60.p2.cost + ft60.p3.cost + ft60.p4.cost + ft60.p5.cost;
+    ft60.tot_g1 = ft60.p1.g1 + ft60.p2.g1 + ft60.p3.g1 + ft60.p4.g1 + ft60.p5.g1;
+    ft60.tot_g2 = ft60.p1.g2 + ft60.p2.g2 + ft60.p3.g2 + ft60.p4.g2 + ft60.p5.g2;
+    ft60.tot_g3 = ft60.p1.g3 + ft60.p2.g3 + ft60.p3.g3 + ft60.p4.g3 + ft60.p5.g3;
+    ft60.tot_semi = ft60.p1.semi + ft60.p2.semi + ft60.p3.semi + ft60.p4.semi + ft60.p5.semi;
+    ft60.tot_td3 = ft60.p1.td3 + ft60.p2.td3 + ft60.p3.td3 + ft60.p4.td3 + ft60.p5.td3;
+    ft60.tot_final = ft60.p1.final + ft60.p2.final + ft60.p3.final + ft60.p4.final + ft60.p5.final;
+    ft60.tot_team = ft60.p1.tot + ft60.p2.tot + ft60.p3.tot + ft60.p4.tot + ft60.p5.tot;
+    const ft61 = {
+        ...fantateam_type,
+        team_index: 61,
+        name: "Ratflingbanana",
+        rione: { ...SUD },
+        p1: { ...DavideBroggi },
+        p2: { ...MattiaMasotti },
+        p3: { ...GiacomoSilvestri },
+        p4: { ...ChristianZanet },
+        p5: { ...DavidGaspardo },
+    };
+    ft61.total_cost = ft61.p1.cost + ft61.p2.cost + ft61.p3.cost + ft61.p4.cost + ft61.p5.cost;
+    ft61.tot_g1 = ft61.p1.g1 + ft61.p2.g1 + ft61.p3.g1 + ft61.p4.g1 + ft61.p5.g1;
+    ft61.tot_g2 = ft61.p1.g2 + ft61.p2.g2 + ft61.p3.g2 + ft61.p4.g2 + ft61.p5.g2;
+    ft61.tot_g3 = ft61.p1.g3 + ft61.p2.g3 + ft61.p3.g3 + ft61.p4.g3 + ft61.p5.g3;
+    ft61.tot_semi = ft61.p1.semi + ft61.p2.semi + ft61.p3.semi + ft61.p4.semi + ft61.p5.semi;
+    ft61.tot_td3 = ft61.p1.td3 + ft61.p2.td3 + ft61.p3.td3 + ft61.p4.td3 + ft61.p5.td3;
+    ft61.tot_final = ft61.p1.final + ft61.p2.final + ft61.p3.final + ft61.p4.final + ft61.p5.final;
+    ft61.tot_team = ft61.p1.tot + ft61.p2.tot + ft61.p3.tot + ft61.p4.tot + ft61.p5.tot;
+    const ft62 = {
+        ...fantateam_type,
+        team_index: 62,
+        name: "Verità per GR",
+        rione: { ...NORD },
+        p1: { ...MattiaRoiatti },
+        p2: { ...LucaAnedda },
+        p3: { ...MassimilianoMoretti },
+        p4: { ...MarcoRizzi },
+        p5: { ...FilippoPasquon },
+    };
+    ft62.total_cost = ft62.p1.cost + ft62.p2.cost + ft62.p3.cost + ft62.p4.cost + ft62.p5.cost;
+    ft62.tot_g1 = ft62.p1.g1 + ft62.p2.g1 + ft62.p3.g1 + ft62.p4.g1 + ft62.p5.g1;
+    ft62.tot_g2 = ft62.p1.g2 + ft62.p2.g2 + ft62.p3.g2 + ft62.p4.g2 + ft62.p5.g2;
+    ft62.tot_g3 = ft62.p1.g3 + ft62.p2.g3 + ft62.p3.g3 + ft62.p4.g3 + ft62.p5.g3;
+    ft62.tot_semi = ft62.p1.semi + ft62.p2.semi + ft62.p3.semi + ft62.p4.semi + ft62.p5.semi;
+    ft62.tot_td3 = ft62.p1.td3 + ft62.p2.td3 + ft62.p3.td3 + ft62.p4.td3 + ft62.p5.td3;
+    ft62.tot_final = ft62.p1.final + ft62.p2.final + ft62.p3.final + ft62.p4.final + ft62.p5.final;
+    ft62.tot_team = ft62.p1.tot + ft62.p2.tot + ft62.p3.tot + ft62.p4.tot + ft62.p5.tot;
+    const ft63 = {
+        ...fantateam_type,
+        team_index: 63,
+        name: "Armata Rossa",
+        rione: { ...NORD },
+        p1: { ...MarcoRizzi },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...UmbertoNobile },
+        p4: { ...MassimilianoRossi },
+        p5: { ...LucaAnedda },
+    };
+    ft63.total_cost = ft63.p1.cost + ft63.p2.cost + ft63.p3.cost + ft63.p4.cost + ft63.p5.cost;
+    ft63.tot_g1 = ft63.p1.g1 + ft63.p2.g1 + ft63.p3.g1 + ft63.p4.g1 + ft63.p5.g1;
+    ft63.tot_g2 = ft63.p1.g2 + ft63.p2.g2 + ft63.p3.g2 + ft63.p4.g2 + ft63.p5.g2;
+    ft63.tot_g3 = ft63.p1.g3 + ft63.p2.g3 + ft63.p3.g3 + ft63.p4.g3 + ft63.p5.g3;
+    ft63.tot_semi = ft63.p1.semi + ft63.p2.semi + ft63.p3.semi + ft63.p4.semi + ft63.p5.semi;
+    ft63.tot_td3 = ft63.p1.td3 + ft63.p2.td3 + ft63.p3.td3 + ft63.p4.td3 + ft63.p5.td3;
+    ft63.tot_final = ft63.p1.final + ft63.p2.final + ft63.p3.final + ft63.p4.final + ft63.p5.final;
+    ft63.tot_team = ft63.p1.tot + ft63.p2.tot + ft63.p3.tot + ft63.p4.tot + ft63.p5.tot;
+    const ft64 = {
+        ...fantateam_type,
+        team_index: 64,
+        name: "Samu veni",
+        rione: { ...SUD },
+        p1: { ...MiracleObichukwu },
+        p2: { ...AlessandroRizzi },
+        p3: { ...DavidGaspardo },
+        p4: { ...GioeleTudini },
+        p5: { ...MicheleDeAnna },
+    };
+    ft64.total_cost = ft64.p1.cost + ft64.p2.cost + ft64.p3.cost + ft64.p4.cost + ft64.p5.cost;
+    ft64.tot_g1 = ft64.p1.g1 + ft64.p2.g1 + ft64.p3.g1 + ft64.p4.g1 + ft64.p5.g1;
+    ft64.tot_g2 = ft64.p1.g2 + ft64.p2.g2 + ft64.p3.g2 + ft64.p4.g2 + ft64.p5.g2;
+    ft64.tot_g3 = ft64.p1.g3 + ft64.p2.g3 + ft64.p3.g3 + ft64.p4.g3 + ft64.p5.g3;
+    ft64.tot_semi = ft64.p1.semi + ft64.p2.semi + ft64.p3.semi + ft64.p4.semi + ft64.p5.semi;
+    ft64.tot_td3 = ft64.p1.td3 + ft64.p2.td3 + ft64.p3.td3 + ft64.p4.td3 + ft64.p5.td3;
+    ft64.tot_final = ft64.p1.final + ft64.p2.final + ft64.p3.final + ft64.p4.final + ft64.p5.final;
+    ft64.tot_team = ft64.p1.tot + ft64.p2.tot + ft64.p3.tot + ft64.p4.tot + ft64.p5.tot;
+    const ft65 = {
+        ...fantateam_type,
+        team_index: 65,
+        name: "NonCapiscoNienteDiBasket",
+        rione: { ...SUD },
+        p1: { ...StefanoPolano },
+        p2: { ...GiovanniZanin },
+        p3: { ...MatteoMargarit },
+        p4: { ...MassimilianoRossi },
+        p5: { ...DanieleGanzit },
+    };
+    ft65.total_cost = ft65.p1.cost + ft65.p2.cost + ft65.p3.cost + ft65.p4.cost + ft65.p5.cost;
+    ft65.tot_g1 = ft65.p1.g1 + ft65.p2.g1 + ft65.p3.g1 + ft65.p4.g1 + ft65.p5.g1;
+    ft65.tot_g2 = ft65.p1.g2 + ft65.p2.g2 + ft65.p3.g2 + ft65.p4.g2 + ft65.p5.g2;
+    ft65.tot_g3 = ft65.p1.g3 + ft65.p2.g3 + ft65.p3.g3 + ft65.p4.g3 + ft65.p5.g3;
+    ft65.tot_semi = ft65.p1.semi + ft65.p2.semi + ft65.p3.semi + ft65.p4.semi + ft65.p5.semi;
+    ft65.tot_td3 = ft65.p1.td3 + ft65.p2.td3 + ft65.p3.td3 + ft65.p4.td3 + ft65.p5.td3;
+    ft65.tot_final = ft65.p1.final + ft65.p2.final + ft65.p3.final + ft65.p4.final + ft65.p5.final;
+    ft65.tot_team = ft65.p1.tot + ft65.p2.tot + ft65.p3.tot + ft65.p4.tot + ft65.p5.tot;
+    const ft66 = {
+        ...fantateam_type,
+        team_index: 66,
+        name: "Alto Moro",
+        rione: { ...SUD },
+        p1: { ...ChristianZanet },
+        p2: { ...MicheleDeAnna },
+        p3: { ...UmbertoNobile },
+        p4: { ...FilippoPasquon },
+        p5: { ...MattiaMasotti },
+    };
+    ft66.total_cost = ft66.p1.cost + ft66.p2.cost + ft66.p3.cost + ft66.p4.cost + ft66.p5.cost;
+    ft66.tot_g1 = ft66.p1.g1 + ft66.p2.g1 + ft66.p3.g1 + ft66.p4.g1 + ft66.p5.g1;
+    ft66.tot_g2 = ft66.p1.g2 + ft66.p2.g2 + ft66.p3.g2 + ft66.p4.g2 + ft66.p5.g2;
+    ft66.tot_g3 = ft66.p1.g3 + ft66.p2.g3 + ft66.p3.g3 + ft66.p4.g3 + ft66.p5.g3;
+    ft66.tot_semi = ft66.p1.semi + ft66.p2.semi + ft66.p3.semi + ft66.p4.semi + ft66.p5.semi;
+    ft66.tot_td3 = ft66.p1.td3 + ft66.p2.td3 + ft66.p3.td3 + ft66.p4.td3 + ft66.p5.td3;
+    ft66.tot_final = ft66.p1.final + ft66.p2.final + ft66.p3.final + ft66.p4.final + ft66.p5.final;
+    ft66.tot_team = ft66.p1.tot + ft66.p2.tot + ft66.p3.tot + ft66.p4.tot + ft66.p5.tot;
+    const ft67 = {
+        ...fantateam_type,
+        team_index: 67,
+        name: "Gate 2 Aeroporto Malpensa-Silvio Berlusconi Milano✈️",
+        rione: { ...EST },
+        p1: { ...DavidGaspardo },
+        p2: { ...FilippoPasquon },
+        p3: { ...MarcoPolo },
+        p4: { ...MattiaMasotti },
+        p5: { ...LucaGemo },
+    };
+    ft67.total_cost = ft67.p1.cost + ft67.p2.cost + ft67.p3.cost + ft67.p4.cost + ft67.p5.cost;
+    ft67.tot_g1 = ft67.p1.g1 + ft67.p2.g1 + ft67.p3.g1 + ft67.p4.g1 + ft67.p5.g1;
+    ft67.tot_g2 = ft67.p1.g2 + ft67.p2.g2 + ft67.p3.g2 + ft67.p4.g2 + ft67.p5.g2;
+    ft67.tot_g3 = ft67.p1.g3 + ft67.p2.g3 + ft67.p3.g3 + ft67.p4.g3 + ft67.p5.g3;
+    ft67.tot_semi = ft67.p1.semi + ft67.p2.semi + ft67.p3.semi + ft67.p4.semi + ft67.p5.semi;
+    ft67.tot_td3 = ft67.p1.td3 + ft67.p2.td3 + ft67.p3.td3 + ft67.p4.td3 + ft67.p5.td3;
+    ft67.tot_final = ft67.p1.final + ft67.p2.final + ft67.p3.final + ft67.p4.final + ft67.p5.final;
+    ft67.tot_team = ft67.p1.tot + ft67.p2.tot + ft67.p3.tot + ft67.p4.tot + ft67.p5.tot;
+    const ft68 = {
+        ...fantateam_type,
+        team_index: 68,
+        name: "Estateam",
+        rione: { ...EST },
+        p1: { ...SimoneMartinelli },
+        p2: { ...UmbertoNobile },
+        p3: { ...MattiaMasotti },
+        p4: { ...FilippoSappa },
+        p5: { ...FilippoPasquon },
+    };
+    ft68.total_cost = ft68.p1.cost + ft68.p2.cost + ft68.p3.cost + ft68.p4.cost + ft68.p5.cost;
+    ft68.tot_g1 = ft68.p1.g1 + ft68.p2.g1 + ft68.p3.g1 + ft68.p4.g1 + ft68.p5.g1;
+    ft68.tot_g2 = ft68.p1.g2 + ft68.p2.g2 + ft68.p3.g2 + ft68.p4.g2 + ft68.p5.g2;
+    ft68.tot_g3 = ft68.p1.g3 + ft68.p2.g3 + ft68.p3.g3 + ft68.p4.g3 + ft68.p5.g3;
+    ft68.tot_semi = ft68.p1.semi + ft68.p2.semi + ft68.p3.semi + ft68.p4.semi + ft68.p5.semi;
+    ft68.tot_td3 = ft68.p1.td3 + ft68.p2.td3 + ft68.p3.td3 + ft68.p4.td3 + ft68.p5.td3;
+    ft68.tot_final = ft68.p1.final + ft68.p2.final + ft68.p3.final + ft68.p4.final + ft68.p5.final;
+    ft68.tot_team = ft68.p1.tot + ft68.p2.tot + ft68.p3.tot + ft68.p4.tot + ft68.p5.tot;
+    const ft69 = {
+        ...fantateam_type,
+        team_index: 69,
+        name: "Arrosto & tiro",
+        rione: { ...EST },
+        p1: { ...IacopoPivetta },
+        p2: { ...WilliamIob },
+        p3: { ...DenisVanin },
+        p4: { ...DanieleGanzit },
+        p5: { ...MarcoSerrao },
+    };
+    ft69.total_cost = ft69.p1.cost + ft69.p2.cost + ft69.p3.cost + ft69.p4.cost + ft69.p5.cost;
+    ft69.tot_g1 = ft69.p1.g1 + ft69.p2.g1 + ft69.p3.g1 + ft69.p4.g1 + ft69.p5.g1;
+    ft69.tot_g2 = ft69.p1.g2 + ft69.p2.g2 + ft69.p3.g2 + ft69.p4.g2 + ft69.p5.g2;
+    ft69.tot_g3 = ft69.p1.g3 + ft69.p2.g3 + ft69.p3.g3 + ft69.p4.g3 + ft69.p5.g3;
+    ft69.tot_semi = ft69.p1.semi + ft69.p2.semi + ft69.p3.semi + ft69.p4.semi + ft69.p5.semi;
+    ft69.tot_td3 = ft69.p1.td3 + ft69.p2.td3 + ft69.p3.td3 + ft69.p4.td3 + ft69.p5.td3;
+    ft69.tot_final = ft69.p1.final + ft69.p2.final + ft69.p3.final + ft69.p4.final + ft69.p5.final;
+    ft69.tot_team = ft69.p1.tot + ft69.p2.tot + ft69.p3.tot + ft69.p4.tot + ft69.p5.tot;
+    const ft70 = {
+        ...fantateam_type,
+        team_index: 70,
+        name: "Nordes",
+        rione: { ...NORD },
+        p1: { ...DiegoNata },
+        p2: { ...FilippoPasquon },
+        p3: { ...UmbertoNobile },
+        p4: { ...LucaAnedda },
+        p5: { ...DevinChiarcos },
+    };
+    ft70.total_cost = ft70.p1.cost + ft70.p2.cost + ft70.p3.cost + ft70.p4.cost + ft70.p5.cost;
+    ft70.tot_g1 = ft70.p1.g1 + ft70.p2.g1 + ft70.p3.g1 + ft70.p4.g1 + ft70.p5.g1;
+    ft70.tot_g2 = ft70.p1.g2 + ft70.p2.g2 + ft70.p3.g2 + ft70.p4.g2 + ft70.p5.g2;
+    ft70.tot_g3 = ft70.p1.g3 + ft70.p2.g3 + ft70.p3.g3 + ft70.p4.g3 + ft70.p5.g3;
+    ft70.tot_semi = ft70.p1.semi + ft70.p2.semi + ft70.p3.semi + ft70.p4.semi + ft70.p5.semi;
+    ft70.tot_td3 = ft70.p1.td3 + ft70.p2.td3 + ft70.p3.td3 + ft70.p4.td3 + ft70.p5.td3;
+    ft70.tot_final = ft70.p1.final + ft70.p2.final + ft70.p3.final + ft70.p4.final + ft70.p5.final;
+    ft70.tot_team = ft70.p1.tot + ft70.p2.tot + ft70.p3.tot + ft70.p4.tot + ft70.p5.tot;
+    const ft71 = {
+        ...fantateam_type,
+        team_index: 71,
+        name: "gigiovena",
+        rione: { ...NORD },
+        p1: { ...GiovanniTonizzo },
+        p2: { ...PietroSoramel },
+        p3: { ...AlessandroRizzi },
+        p4: { ...MarcoSerrao },
+        p5: { ...VittorioGri },
+    };
+    ft71.total_cost = ft71.p1.cost + ft71.p2.cost + ft71.p3.cost + ft71.p4.cost + ft71.p5.cost;
+    ft71.tot_g1 = ft71.p1.g1 + ft71.p2.g1 + ft71.p3.g1 + ft71.p4.g1 + ft71.p5.g1;
+    ft71.tot_g2 = ft71.p1.g2 + ft71.p2.g2 + ft71.p3.g2 + ft71.p4.g2 + ft71.p5.g2;
+    ft71.tot_g3 = ft71.p1.g3 + ft71.p2.g3 + ft71.p3.g3 + ft71.p4.g3 + ft71.p5.g3;
+    ft71.tot_semi = ft71.p1.semi + ft71.p2.semi + ft71.p3.semi + ft71.p4.semi + ft71.p5.semi;
+    ft71.tot_td3 = ft71.p1.td3 + ft71.p2.td3 + ft71.p3.td3 + ft71.p4.td3 + ft71.p5.td3;
+    ft71.tot_final = ft71.p1.final + ft71.p2.final + ft71.p3.final + ft71.p4.final + ft71.p5.final;
+    ft71.tot_team = ft71.p1.tot + ft71.p2.tot + ft71.p3.tot + ft71.p4.tot + ft71.p5.tot;
+    const ft72 = {
+        ...fantateam_type,
+        team_index: 72,
+        name: "Michael Scott's Tots",
+        rione: { ...NORD },
+        p1: { ...DavidGaspardo },
+        p2: { ...MiracleObichukwu },
+        p3: { ...AlessioFurlan },
+        p4: { ...DiegoNata },
+        p5: { ...MarcoPolo },
+    };
+    ft72.total_cost = ft72.p1.cost + ft72.p2.cost + ft72.p3.cost + ft72.p4.cost + ft72.p5.cost;
+    ft72.tot_g1 = ft72.p1.g1 + ft72.p2.g1 + ft72.p3.g1 + ft72.p4.g1 + ft72.p5.g1;
+    ft72.tot_g2 = ft72.p1.g2 + ft72.p2.g2 + ft72.p3.g2 + ft72.p4.g2 + ft72.p5.g2;
+    ft72.tot_g3 = ft72.p1.g3 + ft72.p2.g3 + ft72.p3.g3 + ft72.p4.g3 + ft72.p5.g3;
+    ft72.tot_semi = ft72.p1.semi + ft72.p2.semi + ft72.p3.semi + ft72.p4.semi + ft72.p5.semi;
+    ft72.tot_td3 = ft72.p1.td3 + ft72.p2.td3 + ft72.p3.td3 + ft72.p4.td3 + ft72.p5.td3;
+    ft72.tot_final = ft72.p1.final + ft72.p2.final + ft72.p3.final + ft72.p4.final + ft72.p5.final;
+    ft72.tot_team = ft72.p1.tot + ft72.p2.tot + ft72.p3.tot + ft72.p4.tot + ft72.p5.tot;
+    const ft73 = {
+        ...fantateam_type,
+        team_index: 73,
+        name: "West4ever",
+        rione: { ...WEST },
+        p1: { ...LucaSoramel },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...AndreaMoretti },
+        p4: { ...EnricoSant },
+        p5: { ...StefanoPolano },
+    };
+    ft73.total_cost = ft73.p1.cost + ft73.p2.cost + ft73.p3.cost + ft73.p4.cost + ft73.p5.cost;
+    ft73.tot_g1 = ft73.p1.g1 + ft73.p2.g1 + ft73.p3.g1 + ft73.p4.g1 + ft73.p5.g1;
+    ft73.tot_g2 = ft73.p1.g2 + ft73.p2.g2 + ft73.p3.g2 + ft73.p4.g2 + ft73.p5.g2;
+    ft73.tot_g3 = ft73.p1.g3 + ft73.p2.g3 + ft73.p3.g3 + ft73.p4.g3 + ft73.p5.g3;
+    ft73.tot_semi = ft73.p1.semi + ft73.p2.semi + ft73.p3.semi + ft73.p4.semi + ft73.p5.semi;
+    ft73.tot_td3 = ft73.p1.td3 + ft73.p2.td3 + ft73.p3.td3 + ft73.p4.td3 + ft73.p5.td3;
+    ft73.tot_final = ft73.p1.final + ft73.p2.final + ft73.p3.final + ft73.p4.final + ft73.p5.final;
+    ft73.tot_team = ft73.p1.tot + ft73.p2.tot + ft73.p3.tot + ft73.p4.tot + ft73.p5.tot;
+    const ft74 = {
+        ...fantateam_type,
+        team_index: 74,
+        name: "Ringhio",
+        rione: { ...WEST },
+        p1: { ...LucaSoramel },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...LarryTrevisan },
+        p4: { ...AlessandroRojatti },
+        p5: { ...GiacomoFerigo },
+    };
+    ft74.total_cost = ft74.p1.cost + ft74.p2.cost + ft74.p3.cost + ft74.p4.cost + ft74.p5.cost;
+    ft74.tot_g1 = ft74.p1.g1 + ft74.p2.g1 + ft74.p3.g1 + ft74.p4.g1 + ft74.p5.g1;
+    ft74.tot_g2 = ft74.p1.g2 + ft74.p2.g2 + ft74.p3.g2 + ft74.p4.g2 + ft74.p5.g2;
+    ft74.tot_g3 = ft74.p1.g3 + ft74.p2.g3 + ft74.p3.g3 + ft74.p4.g3 + ft74.p5.g3;
+    ft74.tot_semi = ft74.p1.semi + ft74.p2.semi + ft74.p3.semi + ft74.p4.semi + ft74.p5.semi;
+    ft74.tot_td3 = ft74.p1.td3 + ft74.p2.td3 + ft74.p3.td3 + ft74.p4.td3 + ft74.p5.td3;
+    ft74.tot_final = ft74.p1.final + ft74.p2.final + ft74.p3.final + ft74.p4.final + ft74.p5.final;
+    ft74.tot_team = ft74.p1.tot + ft74.p2.tot + ft74.p3.tot + ft74.p4.tot + ft74.p5.tot;
+    const ft75 = {
+        ...fantateam_type,
+        team_index: 75,
+        name: "Samu Masotti",
+        rione: { ...EST },
+        p1: { ...DevinChiarcos },
+        p2: { ...AlessandroCostantini },
+        p3: { ...VittorioBasso },
+        p4: { ...FilippoPasquon },
+        p5: { ...DavideBroggi },
+    };
+    ft75.total_cost = ft75.p1.cost + ft75.p2.cost + ft75.p3.cost + ft75.p4.cost + ft75.p5.cost;
+    ft75.tot_g1 = ft75.p1.g1 + ft75.p2.g1 + ft75.p3.g1 + ft75.p4.g1 + ft75.p5.g1;
+    ft75.tot_g2 = ft75.p1.g2 + ft75.p2.g2 + ft75.p3.g2 + ft75.p4.g2 + ft75.p5.g2;
+    ft75.tot_g3 = ft75.p1.g3 + ft75.p2.g3 + ft75.p3.g3 + ft75.p4.g3 + ft75.p5.g3;
+    ft75.tot_semi = ft75.p1.semi + ft75.p2.semi + ft75.p3.semi + ft75.p4.semi + ft75.p5.semi;
+    ft75.tot_td3 = ft75.p1.td3 + ft75.p2.td3 + ft75.p3.td3 + ft75.p4.td3 + ft75.p5.td3;
+    ft75.tot_final = ft75.p1.final + ft75.p2.final + ft75.p3.final + ft75.p4.final + ft75.p5.final;
+    ft75.tot_team = ft75.p1.tot + ft75.p2.tot + ft75.p3.tot + ft75.p4.tot + ft75.p5.tot;
+    const ft76 = {
+        ...fantateam_type,
+        team_index: 76,
+        name: "Gabrindri",
+        rione: { ...EST },
+        p1: { ...LucaSoramel },
+        p2: { ...AlessioFurlan },
+        p3: { ...FilippoPasquon },
+        p4: { ...DiegoNata },
+        p5: { ...MattiaMasotti },
+    };
+    ft76.total_cost = ft76.p1.cost + ft76.p2.cost + ft76.p3.cost + ft76.p4.cost + ft76.p5.cost;
+    ft76.tot_g1 = ft76.p1.g1 + ft76.p2.g1 + ft76.p3.g1 + ft76.p4.g1 + ft76.p5.g1;
+    ft76.tot_g2 = ft76.p1.g2 + ft76.p2.g2 + ft76.p3.g2 + ft76.p4.g2 + ft76.p5.g2;
+    ft76.tot_g3 = ft76.p1.g3 + ft76.p2.g3 + ft76.p3.g3 + ft76.p4.g3 + ft76.p5.g3;
+    ft76.tot_semi = ft76.p1.semi + ft76.p2.semi + ft76.p3.semi + ft76.p4.semi + ft76.p5.semi;
+    ft76.tot_td3 = ft76.p1.td3 + ft76.p2.td3 + ft76.p3.td3 + ft76.p4.td3 + ft76.p5.td3;
+    ft76.tot_final = ft76.p1.final + ft76.p2.final + ft76.p3.final + ft76.p4.final + ft76.p5.final;
+    ft76.tot_team = ft76.p1.tot + ft76.p2.tot + ft76.p3.tot + ft76.p4.tot + ft76.p5.tot;
+    const ft77 = {
+        ...fantateam_type,
+        team_index: 77,
+        name: "Le bimbe di maso",
+        rione: { ...EST },
+        p1: { ...MassimilianoMoretti },
+        p2: { ...MiracleObichukwu },
+        p3: { ...DenisVanin },
+        p4: { ...MassimoMasotti },
+        p5: { ...MattiaMasotti },
+    };
+    ft77.total_cost = ft77.p1.cost + ft77.p2.cost + ft77.p3.cost + ft77.p4.cost + ft77.p5.cost;
+    ft77.tot_g1 = ft77.p1.g1 + ft77.p2.g1 + ft77.p3.g1 + ft77.p4.g1 + ft77.p5.g1;
+    ft77.tot_g2 = ft77.p1.g2 + ft77.p2.g2 + ft77.p3.g2 + ft77.p4.g2 + ft77.p5.g2;
+    ft77.tot_g3 = ft77.p1.g3 + ft77.p2.g3 + ft77.p3.g3 + ft77.p4.g3 + ft77.p5.g3;
+    ft77.tot_semi = ft77.p1.semi + ft77.p2.semi + ft77.p3.semi + ft77.p4.semi + ft77.p5.semi;
+    ft77.tot_td3 = ft77.p1.td3 + ft77.p2.td3 + ft77.p3.td3 + ft77.p4.td3 + ft77.p5.td3;
+    ft77.tot_final = ft77.p1.final + ft77.p2.final + ft77.p3.final + ft77.p4.final + ft77.p5.final;
+    ft77.tot_team = ft77.p1.tot + ft77.p2.tot + ft77.p3.tot + ft77.p4.tot + ft77.p5.tot;
+    const ft78 = {
+        ...fantateam_type,
+        team_index: 78,
+        name: "Mau",
+        rione: { ...WEST },
+        p1: { ...EnricoSant },
+        p2: { ...MauroCuridori },
+        p3: { ...GiacomoSilvestri },
+        p4: { ...FilippoSappa },
+        p5: { ...AlessandroRizzi },
+    };
+    ft78.total_cost = ft78.p1.cost + ft78.p2.cost + ft78.p3.cost + ft78.p4.cost + ft78.p5.cost;
+    ft78.tot_g1 = ft78.p1.g1 + ft78.p2.g1 + ft78.p3.g1 + ft78.p4.g1 + ft78.p5.g1;
+    ft78.tot_g2 = ft78.p1.g2 + ft78.p2.g2 + ft78.p3.g2 + ft78.p4.g2 + ft78.p5.g2;
+    ft78.tot_g3 = ft78.p1.g3 + ft78.p2.g3 + ft78.p3.g3 + ft78.p4.g3 + ft78.p5.g3;
+    ft78.tot_semi = ft78.p1.semi + ft78.p2.semi + ft78.p3.semi + ft78.p4.semi + ft78.p5.semi;
+    ft78.tot_td3 = ft78.p1.td3 + ft78.p2.td3 + ft78.p3.td3 + ft78.p4.td3 + ft78.p5.td3;
+    ft78.tot_final = ft78.p1.final + ft78.p2.final + ft78.p3.final + ft78.p4.final + ft78.p5.final;
+    ft78.tot_team = ft78.p1.tot + ft78.p2.tot + ft78.p3.tot + ft78.p4.tot + ft78.p5.tot;
+    const ft79 = {
+        ...fantateam_type,
+        team_index: 79,
+        name: "West riformulato",
+        rione: { ...WEST },
+        p1: { ...VittorioGri },
+        p2: { ...ChristianZanet },
+        p3: { ...MauroPerina },
+        p4: { ...MattiaRoiatti },
+        p5: { ...AlessandroRizzi },
+    };
+    ft79.total_cost = ft79.p1.cost + ft79.p2.cost + ft79.p3.cost + ft79.p4.cost + ft79.p5.cost;
+    ft79.tot_g1 = ft79.p1.g1 + ft79.p2.g1 + ft79.p3.g1 + ft79.p4.g1 + ft79.p5.g1;
+    ft79.tot_g2 = ft79.p1.g2 + ft79.p2.g2 + ft79.p3.g2 + ft79.p4.g2 + ft79.p5.g2;
+    ft79.tot_g3 = ft79.p1.g3 + ft79.p2.g3 + ft79.p3.g3 + ft79.p4.g3 + ft79.p5.g3;
+    ft79.tot_semi = ft79.p1.semi + ft79.p2.semi + ft79.p3.semi + ft79.p4.semi + ft79.p5.semi;
+    ft79.tot_td3 = ft79.p1.td3 + ft79.p2.td3 + ft79.p3.td3 + ft79.p4.td3 + ft79.p5.td3;
+    ft79.tot_final = ft79.p1.final + ft79.p2.final + ft79.p3.final + ft79.p4.final + ft79.p5.final;
+    ft79.tot_team = ft79.p1.tot + ft79.p2.tot + ft79.p3.tot + ft79.p4.tot + ft79.p5.tot;
+    const ft80 = {
+        ...fantateam_type,
+        team_index: 80,
+        name: "Ducks",
+        rione: { ...NORD },
+        p1: { ...MarcoRizzi },
+        p2: { ...MarcoLombardo },
+        p3: { ...DavidGaspardo },
+        p4: { ...FilippoPasquon },
+        p5: { ...LorenzoMoro },
+    };
+    ft80.total_cost = ft80.p1.cost + ft80.p2.cost + ft80.p3.cost + ft80.p4.cost + ft80.p5.cost;
+    ft80.tot_g1 = ft80.p1.g1 + ft80.p2.g1 + ft80.p3.g1 + ft80.p4.g1 + ft80.p5.g1;
+    ft80.tot_g2 = ft80.p1.g2 + ft80.p2.g2 + ft80.p3.g2 + ft80.p4.g2 + ft80.p5.g2;
+    ft80.tot_g3 = ft80.p1.g3 + ft80.p2.g3 + ft80.p3.g3 + ft80.p4.g3 + ft80.p5.g3;
+    ft80.tot_semi = ft80.p1.semi + ft80.p2.semi + ft80.p3.semi + ft80.p4.semi + ft80.p5.semi;
+    ft80.tot_td3 = ft80.p1.td3 + ft80.p2.td3 + ft80.p3.td3 + ft80.p4.td3 + ft80.p5.td3;
+    ft80.tot_final = ft80.p1.final + ft80.p2.final + ft80.p3.final + ft80.p4.final + ft80.p5.final;
+    ft80.tot_team = ft80.p1.tot + ft80.p2.tot + ft80.p3.tot + ft80.p4.tot + ft80.p5.tot;
+    const ft81 = {
+        ...fantateam_type,
+        team_index: 81,
+        name: "LePaliodeirioni",
+        rione: { ...NORD },
+        p1: { ...GiacomoPiacentini },
+        p2: { ...DavideBroggi },
+        p3: { ...MarcoPolo },
+        p4: { ...DevinChiarcos },
+        p5: { ...GioeleTudini },
+    };
+    ft81.total_cost = ft81.p1.cost + ft81.p2.cost + ft81.p3.cost + ft81.p4.cost + ft81.p5.cost;
+    ft81.tot_g1 = ft81.p1.g1 + ft81.p2.g1 + ft81.p3.g1 + ft81.p4.g1 + ft81.p5.g1;
+    ft81.tot_g2 = ft81.p1.g2 + ft81.p2.g2 + ft81.p3.g2 + ft81.p4.g2 + ft81.p5.g2;
+    ft81.tot_g3 = ft81.p1.g3 + ft81.p2.g3 + ft81.p3.g3 + ft81.p4.g3 + ft81.p5.g3;
+    ft81.tot_semi = ft81.p1.semi + ft81.p2.semi + ft81.p3.semi + ft81.p4.semi + ft81.p5.semi;
+    ft81.tot_td3 = ft81.p1.td3 + ft81.p2.td3 + ft81.p3.td3 + ft81.p4.td3 + ft81.p5.td3;
+    ft81.tot_final = ft81.p1.final + ft81.p2.final + ft81.p3.final + ft81.p4.final + ft81.p5.final;
+    ft81.tot_team = ft81.p1.tot + ft81.p2.tot + ft81.p3.tot + ft81.p4.tot + ft81.p5.tot;
+    const ft82 = {
+        ...fantateam_type,
+        team_index: 82,
+        name: "oilapledecoval",
+        rione: { ...NORD },
+        p1: { ...AlessandroSantin },
+        p2: { ...MarcoMarchetti },
+        p3: { ...DavidGaspardo },
+        p4: { ...UmbertoNobile },
+        p5: { ...PietroSoramel },
+    };
+    ft82.total_cost = ft82.p1.cost + ft82.p2.cost + ft82.p3.cost + ft82.p4.cost + ft82.p5.cost;
+    ft82.tot_g1 = ft82.p1.g1 + ft82.p2.g1 + ft82.p3.g1 + ft82.p4.g1 + ft82.p5.g1;
+    ft82.tot_g2 = ft82.p1.g2 + ft82.p2.g2 + ft82.p3.g2 + ft82.p4.g2 + ft82.p5.g2;
+    ft82.tot_g3 = ft82.p1.g3 + ft82.p2.g3 + ft82.p3.g3 + ft82.p4.g3 + ft82.p5.g3;
+    ft82.tot_semi = ft82.p1.semi + ft82.p2.semi + ft82.p3.semi + ft82.p4.semi + ft82.p5.semi;
+    ft82.tot_td3 = ft82.p1.td3 + ft82.p2.td3 + ft82.p3.td3 + ft82.p4.td3 + ft82.p5.td3;
+    ft82.tot_final = ft82.p1.final + ft82.p2.final + ft82.p3.final + ft82.p4.final + ft82.p5.final;
+    ft82.tot_team = ft82.p1.tot + ft82.p2.tot + ft82.p3.tot + ft82.p4.tot + ft82.p5.tot;
+    const ft83 = {
+        ...fantateam_type,
+        team_index: 83,
+        name: "Giacomone",
+        rione: { ...SUD },
+        p1: { ...MatteoSpagnolo },
+        p2: { ...ChristianZanet },
+        p3: { ...VittorioGri },
+        p4: { ...AlessandroSant },
+        p5: { ...WilliamIob },
+    };
+    ft83.total_cost = ft83.p1.cost + ft83.p2.cost + ft83.p3.cost + ft83.p4.cost + ft83.p5.cost;
+    ft83.tot_g1 = ft83.p1.g1 + ft83.p2.g1 + ft83.p3.g1 + ft83.p4.g1 + ft83.p5.g1;
+    ft83.tot_g2 = ft83.p1.g2 + ft83.p2.g2 + ft83.p3.g2 + ft83.p4.g2 + ft83.p5.g2;
+    ft83.tot_g3 = ft83.p1.g3 + ft83.p2.g3 + ft83.p3.g3 + ft83.p4.g3 + ft83.p5.g3;
+    ft83.tot_semi = ft83.p1.semi + ft83.p2.semi + ft83.p3.semi + ft83.p4.semi + ft83.p5.semi;
+    ft83.tot_td3 = ft83.p1.td3 + ft83.p2.td3 + ft83.p3.td3 + ft83.p4.td3 + ft83.p5.td3;
+    ft83.tot_final = ft83.p1.final + ft83.p2.final + ft83.p3.final + ft83.p4.final + ft83.p5.final;
+    ft83.tot_team = ft83.p1.tot + ft83.p2.tot + ft83.p3.tot + ft83.p4.tot + ft83.p5.tot;
+    const ft84 = {
+        ...fantateam_type,
+        team_index: 84,
+        name: "Non capisco di pallacanestro",
+        rione: { ...NORD },
+        p1: { ...MatteoMargarit },
+        p2: { ...FilippoPasquon },
+        p3: { ...LucaGemo },
+        p4: { ...StefanoPolano },
+        p5: { ...GiovanniZanin },
+    };
+    ft84.total_cost = ft84.p1.cost + ft84.p2.cost + ft84.p3.cost + ft84.p4.cost + ft84.p5.cost;
+    ft84.tot_g1 = ft84.p1.g1 + ft84.p2.g1 + ft84.p3.g1 + ft84.p4.g1 + ft84.p5.g1;
+    ft84.tot_g2 = ft84.p1.g2 + ft84.p2.g2 + ft84.p3.g2 + ft84.p4.g2 + ft84.p5.g2;
+    ft84.tot_g3 = ft84.p1.g3 + ft84.p2.g3 + ft84.p3.g3 + ft84.p4.g3 + ft84.p5.g3;
+    ft84.tot_semi = ft84.p1.semi + ft84.p2.semi + ft84.p3.semi + ft84.p4.semi + ft84.p5.semi;
+    ft84.tot_td3 = ft84.p1.td3 + ft84.p2.td3 + ft84.p3.td3 + ft84.p4.td3 + ft84.p5.td3;
+    ft84.tot_final = ft84.p1.final + ft84.p2.final + ft84.p3.final + ft84.p4.final + ft84.p5.final;
+    ft84.tot_team = ft84.p1.tot + ft84.p2.tot + ft84.p3.tot + ft84.p4.tot + ft84.p5.tot;
+    const ft85 = {
+        ...fantateam_type,
+        team_index: 85,
+        name: "DOZERS CONFEDERATI",
+        rione: { ...SUD },
+        p1: { ...AlessandroSant },
+        p2: { ...AlessioFurlan },
+        p3: { ...AlessandroRizzi },
+        p4: { ...PietroSoramel },
+        p5: { ...LucaSoramel },
+    };
+    ft85.total_cost = ft85.p1.cost + ft85.p2.cost + ft85.p3.cost + ft85.p4.cost + ft85.p5.cost;
+    ft85.tot_g1 = ft85.p1.g1 + ft85.p2.g1 + ft85.p3.g1 + ft85.p4.g1 + ft85.p5.g1;
+    ft85.tot_g2 = ft85.p1.g2 + ft85.p2.g2 + ft85.p3.g2 + ft85.p4.g2 + ft85.p5.g2;
+    ft85.tot_g3 = ft85.p1.g3 + ft85.p2.g3 + ft85.p3.g3 + ft85.p4.g3 + ft85.p5.g3;
+    ft85.tot_semi = ft85.p1.semi + ft85.p2.semi + ft85.p3.semi + ft85.p4.semi + ft85.p5.semi;
+    ft85.tot_td3 = ft85.p1.td3 + ft85.p2.td3 + ft85.p3.td3 + ft85.p4.td3 + ft85.p5.td3;
+    ft85.tot_final = ft85.p1.final + ft85.p2.final + ft85.p3.final + ft85.p4.final + ft85.p5.final;
+    ft85.tot_team = ft85.p1.tot + ft85.p2.tot + ft85.p3.tot + ft85.p4.tot + ft85.p5.tot;
+    const ft86 = {
+        ...fantateam_type,
+        team_index: 86,
+        name: "Fil🥷",
+        rione: { ...EST },
+        p1: { ...ThomasBaracetti },
+        p2: { ...ValentinoCigainero },
+        p3: { ...MassimilianoMoretti },
+        p4: { ...LarryTrevisan },
+        p5: { ...AlexMicottis },
+    };
+    ft86.total_cost = ft86.p1.cost + ft86.p2.cost + ft86.p3.cost + ft86.p4.cost + ft86.p5.cost;
+    ft86.tot_g1 = ft86.p1.g1 + ft86.p2.g1 + ft86.p3.g1 + ft86.p4.g1 + ft86.p5.g1;
+    ft86.tot_g2 = ft86.p1.g2 + ft86.p2.g2 + ft86.p3.g2 + ft86.p4.g2 + ft86.p5.g2;
+    ft86.tot_g3 = ft86.p1.g3 + ft86.p2.g3 + ft86.p3.g3 + ft86.p4.g3 + ft86.p5.g3;
+    ft86.tot_semi = ft86.p1.semi + ft86.p2.semi + ft86.p3.semi + ft86.p4.semi + ft86.p5.semi;
+    ft86.tot_td3 = ft86.p1.td3 + ft86.p2.td3 + ft86.p3.td3 + ft86.p4.td3 + ft86.p5.td3;
+    ft86.tot_final = ft86.p1.final + ft86.p2.final + ft86.p3.final + ft86.p4.final + ft86.p5.final;
+    ft86.tot_team = ft86.p1.tot + ft86.p2.tot + ft86.p3.tot + ft86.p4.tot + ft86.p5.tot;
+    const ft87 = {
+        ...fantateam_type,
+        team_index: 87,
+        name: "I Penny's Five",
+        rione: { ...SUD },
+        p1: { ...MassimilianoRossi },
+        p2: { ...AlessandroRizzi },
+        p3: { ...TommasoMartello },
+        p4: { ...UmbertoNobile },
+        p5: { ...GiovanniTonizzo },
+    };
+    ft87.total_cost = ft87.p1.cost + ft87.p2.cost + ft87.p3.cost + ft87.p4.cost + ft87.p5.cost;
+    ft87.tot_g1 = ft87.p1.g1 + ft87.p2.g1 + ft87.p3.g1 + ft87.p4.g1 + ft87.p5.g1;
+    ft87.tot_g2 = ft87.p1.g2 + ft87.p2.g2 + ft87.p3.g2 + ft87.p4.g2 + ft87.p5.g2;
+    ft87.tot_g3 = ft87.p1.g3 + ft87.p2.g3 + ft87.p3.g3 + ft87.p4.g3 + ft87.p5.g3;
+    ft87.tot_semi = ft87.p1.semi + ft87.p2.semi + ft87.p3.semi + ft87.p4.semi + ft87.p5.semi;
+    ft87.tot_td3 = ft87.p1.td3 + ft87.p2.td3 + ft87.p3.td3 + ft87.p4.td3 + ft87.p5.td3;
+    ft87.tot_final = ft87.p1.final + ft87.p2.final + ft87.p3.final + ft87.p4.final + ft87.p5.final;
+    ft87.tot_team = ft87.p1.tot + ft87.p2.tot + ft87.p3.tot + ft87.p4.tot + ft87.p5.tot;
+    const ft88 = {
+        ...fantateam_type,
+        team_index: 88,
+        name: "Bmax",
+        rione: { ...EST },
+        p1: { ...EnricoSant },
+        p2: { ...MattiaMasotti },
+        p3: { ...UmbertoNobile },
+        p4: { ...FilippoPasquon },
+        p5: { ...MarcoLombardo },
+    };
+    ft88.total_cost = ft88.p1.cost + ft88.p2.cost + ft88.p3.cost + ft88.p4.cost + ft88.p5.cost;
+    ft88.tot_g1 = ft88.p1.g1 + ft88.p2.g1 + ft88.p3.g1 + ft88.p4.g1 + ft88.p5.g1;
+    ft88.tot_g2 = ft88.p1.g2 + ft88.p2.g2 + ft88.p3.g2 + ft88.p4.g2 + ft88.p5.g2;
+    ft88.tot_g3 = ft88.p1.g3 + ft88.p2.g3 + ft88.p3.g3 + ft88.p4.g3 + ft88.p5.g3;
+    ft88.tot_semi = ft88.p1.semi + ft88.p2.semi + ft88.p3.semi + ft88.p4.semi + ft88.p5.semi;
+    ft88.tot_td3 = ft88.p1.td3 + ft88.p2.td3 + ft88.p3.td3 + ft88.p4.td3 + ft88.p5.td3;
+    ft88.tot_final = ft88.p1.final + ft88.p2.final + ft88.p3.final + ft88.p4.final + ft88.p5.final;
+    ft88.tot_team = ft88.p1.tot + ft88.p2.tot + ft88.p3.tot + ft88.p4.tot + ft88.p5.tot;
+    const ft89 = {
+        ...fantateam_type,
+        team_index: 89,
+        name: "👸🏼",
+        rione: { ...NORD },
+        p1: { ...MattiaRoiatti },
+        p2: { ...MauroCuridori },
+        p3: { ...DanieleGanzit },
+        p4: { ...DiegoNata },
+        p5: { ...MatteoMargarit },
+    };
+    ft89.total_cost = ft89.p1.cost + ft89.p2.cost + ft89.p3.cost + ft89.p4.cost + ft89.p5.cost;
+    ft89.tot_g1 = ft89.p1.g1 + ft89.p2.g1 + ft89.p3.g1 + ft89.p4.g1 + ft89.p5.g1;
+    ft89.tot_g2 = ft89.p1.g2 + ft89.p2.g2 + ft89.p3.g2 + ft89.p4.g2 + ft89.p5.g2;
+    ft89.tot_g3 = ft89.p1.g3 + ft89.p2.g3 + ft89.p3.g3 + ft89.p4.g3 + ft89.p5.g3;
+    ft89.tot_semi = ft89.p1.semi + ft89.p2.semi + ft89.p3.semi + ft89.p4.semi + ft89.p5.semi;
+    ft89.tot_td3 = ft89.p1.td3 + ft89.p2.td3 + ft89.p3.td3 + ft89.p4.td3 + ft89.p5.td3;
+    ft89.tot_final = ft89.p1.final + ft89.p2.final + ft89.p3.final + ft89.p4.final + ft89.p5.final;
+    ft89.tot_team = ft89.p1.tot + ft89.p2.tot + ft89.p3.tot + ft89.p4.tot + ft89.p5.tot;
+    const ft90 = {
+        ...fantateam_type,
+        team_index: 90,
+        name: "Paperelle gay",
+        rione: { ...EST },
+        p1: { ...EnricoSant },
+        p2: { ...WilliamIob },
+        p3: { ...AlessandroCostantini },
+        p4: { ...MarcoSerrao },
+        p5: { ...DenisVanin },
+    };
+    ft90.total_cost = ft90.p1.cost + ft90.p2.cost + ft90.p3.cost + ft90.p4.cost + ft90.p5.cost;
+    ft90.tot_g1 = ft90.p1.g1 + ft90.p2.g1 + ft90.p3.g1 + ft90.p4.g1 + ft90.p5.g1;
+    ft90.tot_g2 = ft90.p1.g2 + ft90.p2.g2 + ft90.p3.g2 + ft90.p4.g2 + ft90.p5.g2;
+    ft90.tot_g3 = ft90.p1.g3 + ft90.p2.g3 + ft90.p3.g3 + ft90.p4.g3 + ft90.p5.g3;
+    ft90.tot_semi = ft90.p1.semi + ft90.p2.semi + ft90.p3.semi + ft90.p4.semi + ft90.p5.semi;
+    ft90.tot_td3 = ft90.p1.td3 + ft90.p2.td3 + ft90.p3.td3 + ft90.p4.td3 + ft90.p5.td3;
+    ft90.tot_final = ft90.p1.final + ft90.p2.final + ft90.p3.final + ft90.p4.final + ft90.p5.final;
+    ft90.tot_team = ft90.p1.tot + ft90.p2.tot + ft90.p3.tot + ft90.p4.tot + ft90.p5.tot;
+    const ft91 = {
+        ...fantateam_type,
+        team_index: 91,
+        name: "Furbicomevolpi",
+        rione: { ...EST },
+        p1: { ...MarcoSerrao },
+        p2: { ...WilliamIob },
+        p3: { ...DenisVanin },
+        p4: { ...SimoneMartinelli },
+        p5: { ...AlessandroSant },
+    };
+    ft91.total_cost = ft91.p1.cost + ft91.p2.cost + ft91.p3.cost + ft91.p4.cost + ft91.p5.cost;
+    ft91.tot_g1 = ft91.p1.g1 + ft91.p2.g1 + ft91.p3.g1 + ft91.p4.g1 + ft91.p5.g1;
+    ft91.tot_g2 = ft91.p1.g2 + ft91.p2.g2 + ft91.p3.g2 + ft91.p4.g2 + ft91.p5.g2;
+    ft91.tot_g3 = ft91.p1.g3 + ft91.p2.g3 + ft91.p3.g3 + ft91.p4.g3 + ft91.p5.g3;
+    ft91.tot_semi = ft91.p1.semi + ft91.p2.semi + ft91.p3.semi + ft91.p4.semi + ft91.p5.semi;
+    ft91.tot_td3 = ft91.p1.td3 + ft91.p2.td3 + ft91.p3.td3 + ft91.p4.td3 + ft91.p5.td3;
+    ft91.tot_final = ft91.p1.final + ft91.p2.final + ft91.p3.final + ft91.p4.final + ft91.p5.final;
+    ft91.tot_team = ft91.p1.tot + ft91.p2.tot + ft91.p3.tot + ft91.p4.tot + ft91.p5.tot;
+    const ft92 = {
+        ...fantateam_type,
+        team_index: 92,
+        name: "Los Vikingos",
+        rione: { ...NORD },
+        p1: { ...MarcoRizzi },
+        p2: { ...AlessandroRizzi },
+        p3: { ...DiegoNata },
+        p4: { ...LucaSoramel },
+        p5: { ...VittorioGri },
+    };
+    ft92.total_cost = ft92.p1.cost + ft92.p2.cost + ft92.p3.cost + ft92.p4.cost + ft92.p5.cost;
+    ft92.tot_g1 = ft92.p1.g1 + ft92.p2.g1 + ft92.p3.g1 + ft92.p4.g1 + ft92.p5.g1;
+    ft92.tot_g2 = ft92.p1.g2 + ft92.p2.g2 + ft92.p3.g2 + ft92.p4.g2 + ft92.p5.g2;
+    ft92.tot_g3 = ft92.p1.g3 + ft92.p2.g3 + ft92.p3.g3 + ft92.p4.g3 + ft92.p5.g3;
+    ft92.tot_semi = ft92.p1.semi + ft92.p2.semi + ft92.p3.semi + ft92.p4.semi + ft92.p5.semi;
+    ft92.tot_td3 = ft92.p1.td3 + ft92.p2.td3 + ft92.p3.td3 + ft92.p4.td3 + ft92.p5.td3;
+    ft92.tot_final = ft92.p1.final + ft92.p2.final + ft92.p3.final + ft92.p4.final + ft92.p5.final;
+    ft92.tot_team = ft92.p1.tot + ft92.p2.tot + ft92.p3.tot + ft92.p4.tot + ft92.p5.tot;
+    
+
+    
+
+
+
+
+
+    const fantateams = [ft1, ft2, ft3, ft4, ft5, ft6, ft7, ft8, ft9, ft10];
+        // ft11, ft12, ft13, ft14, ft15, ft16, ft17, ft18, ft19, ft20, 
+        // ft21, ft22, ft23, ft24, ft25, ft26, ft27, ft28, ft29, ft30, 
+        // ft31, ft32, ft33, ft34, ft35, ft36, ft37, ft38, ft39, ft40, 
+        // ft41, ft42, ft43, ft44, ft45, ft46, ft47, ft48, ft49, ft50, 
+        // ft51, ft52, ft53, ft54, ft55, ft56, ft57, ft58, ft59, ft60, 
+        // ft61, ft62, ft63, ft64, ft65, ft66, ft67, ft68, ft69, ft70, 
+        // ft71, ft72, ft73, ft74, ft75, ft76, ft77, ft78, ft79, ft80, 
+        // ft81, ft82, ft83, ft84, ft85, ft86, ft87, ft88, ft89, ft90, 
+        // ft91, ft92];
+
+
+    // Esporta i tipi di dati per renderli disponibili agli altri script
+    // export {
+    //     player_type,
+    //     rione_type,
+    //     fantateam_type,
+    //     MassimilianoMoretti, AndreaMoretti, LarryTrevisan, AlessandroCostantini, MatteoMargarit,
+    //     MauroCuridori, ChristianZanet, GiacomoPiacentini, GiovanniDalFarra, MiracleObichukwu,
+    //     LucaDellaLonga, AlessandroRojatti, MicheleGorasso, GiacomoFerigo, UmbertoNobile,
+    //     DevinChiarcos, ValentinoCigainero, MicheleDeAnna, DavideParon, AlessioFurlan,
+    //     MichaelMargarit, SebastianoTonizzo,
+    //     DanieleGanzit, GiacomoSilvestri, VittorioGri, VittorioBasso, AlessandroRizzi,
+    //     MassimoBaldassi, GabrieleMiani, MarcoMarchetti, MarcoLombardo, MicheleVendrame,
+    //     LorenzoSchinella, GioeleTudini, FilippoPasquon, TommasoMartello, MarcoRizzi,
+    //     DavidGaspardo, AntonioGri, RiccardoSchinella,
+    //     SimoneMartinelli, MatteoSpagnolo, DavideFaurlin, GiovanniTonizzo, AlessandroSant,
+    //     MatteoBazzaro, AlessandroSantin, AlessandroGalassi, PietroSoramel, FilippoAgnoluzzi,
+    //     EmanueleDaneluzzi, LucaSoramel, PaoloZorzi, ChristianFedrizzi, FilippoSappa,
+    //     GiovanniZanin, EnricoSant, StefanoPolano,
+    //     MarcoPolo, MarcoSerrao, WilliamIob, DavideBroggi, AlexMicottis,
+    //     MassimilianoRossi, MassimoMasotti, EugenioDeTina, LucaAnedda, DenisVanin,
+    //     ThomasBaracetti, LucaGemo, DiegoNata, MattiaRoiatti, EdoardoPicogna,
+    //     MauroPerina, LorenzoMoro, GionaTell, IacopoPivetta, MattiaMasotti,
+    //     NORD, SUD, EST, WEST,
+    //     ft1, ft2, ft3, ft4, ft5, ft6, ft7, ft8, ft9, ft10, 
+    //     ft11, ft12, ft13, ft14, ft15, ft16, ft17, ft18, ft19, ft20, 
+    //     ft21, ft22, ft23, ft24, ft25, ft26, ft27, ft28, ft29, ft30, 
+    //     ft31, ft32, ft33, ft34, ft35, ft36, ft37, ft38, ft39, ft40, 
+    //     ft41, ft42, ft43, ft44, ft45, ft46, ft47, ft48, ft49, ft50, 
+    //     ft51, ft52, ft53, ft54, ft55, ft56, ft57, ft58, ft59, ft60, 
+    //     ft61, ft62, ft63, ft64, ft65, ft66, ft67, ft68, ft69, ft70, 
+    //     ft71, ft72, ft73, ft74, ft75, ft76, ft77, ft78, ft79, ft80, 
+    //     ft81, ft82, ft83, ft84, ft85, ft86, ft87, ft88, ft89, ft90, 
+    //     ft91, ft92,
+
+
+    
+
+export{
+        fantateams
+    };
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     const select = document.getElementById("teamDetails");
+
+//     // Rimuovi eventuali opzioni esistenti
+//     select.innerHTML = '';
+
+//     // Aggiungi nuove opzioni dal data.js
+//     fantateams.forEach(team => {
+//         const opt = document.createElement('option');
+//         opt.value = team.team_index;
+//         opt.textContent = team.name;
+//         select.appendChild(opt);
+//     });
+// });
+
