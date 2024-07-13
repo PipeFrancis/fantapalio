@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Aggiungi la riga per il rione
         const rioneRow = document.createElement('tr');
-        appendEmptyCells(totalRow, 1); // Celle vuote
+        appendEmptyCells(rioneRow, 1); // Celle vuote
         appendCell(rioneRow, selectedTeam.rione.name); // Nome rione
         appendEmptyCells(rioneRow, 6); // Celle vuote
         appendCell(rioneRow, selectedTeam.rione.final_points); // Punti finali del rione
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Aggiungi l'ultima riga per i totali del team
         const totalRow = document.createElement('tr');
-        appendCell(rioneRow, selectedTeam.total_cost); // totale costo
+        appendCell(totalRow, selectedTeam.total_cost); // totale costo
         appendCell(totalRow, "TOTALE");
         appendCell(totalRow, selectedTeam.tot_g1);
         appendCell(totalRow, selectedTeam.tot_g2);
