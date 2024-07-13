@@ -31,6 +31,7 @@ import {
     ft71, ft72, ft73, ft74, ft75, ft76, ft77, ft78, ft79, ft80, 
     ft81, ft82, ft83, ft84, ft85, ft86, ft87, ft88, ft89, ft90, 
     ft91, ft92,
+    players,
     fantateams
 }from '../data.js';
 
