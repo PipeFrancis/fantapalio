@@ -88,7 +88,7 @@ footer {
 }
 /* Stile per la tabella */
 .table-container-player-rankings {
-    width: 50%;
+    width: 65%;
     margin: auto;
 }
 
@@ -98,6 +98,21 @@ footer {
 }
 
 #playerTable th, #playerTable td {
+    padding: 5px; /* Aggiunge spazio interno (padding) a tutte le celle */
+    text-align: center; /* Centra il testo nelle celle */
+}
+
+.table-container-team-rankings {
+    width: 90%;
+    margin: auto;
+}
+
+#teamTable {
+    
+    border-collapse: collapse; /* Combina i bordi delle celle */
+}
+
+#teamTable th, #teamTable td {
     padding: 5px; /* Aggiunge spazio interno (padding) a tutte le celle */
     text-align: center; /* Centra il testo nelle celle */
 }
