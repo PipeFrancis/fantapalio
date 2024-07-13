@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>${index + 1}</td>
-            <td>${team.nome}</td>
+            <td>${team.name}</td>
             <td>${team.tot_team}</td>
             <td>${team.p1.name} (${team.p1.tot})</td>
             <td>${team.p2.name} (${team.p2.tot})</td>
