@@ -401,6 +401,7 @@ footer {
         width: 90%;
         flex-direction: column;
         font-size: 1.5em;
+        margin-top: 30px;
     }
 
     .score_west, .score_nord, .score_sud, .score_est {
