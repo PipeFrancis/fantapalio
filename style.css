@@ -198,6 +198,13 @@ footer {
     margin-bottom: 4px;
 }
 
+.team-card .punteggio-info {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-size: 1em;
+}
+
 /* Stili specifici per mobile */
 @media screen and (max-width: 768px) {
     .team-card-header {
