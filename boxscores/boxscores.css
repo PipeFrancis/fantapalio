@@ -20,8 +20,8 @@ main {
 }
 
 .image-container {
-    width: 10%; /* Imposta la larghezza desiderata */
-    margin: 20px auto; /* Centra il contenitore rispetto alla larghezza del body */
+    width: 100%; /* Imposta la larghezza desiderata */
+    margin: 5px auto; /* Centra il contenitore rispetto alla larghezza del body */
 }
 
 .image-container img {
