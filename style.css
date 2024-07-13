@@ -49,7 +49,7 @@ a button {
     margin: 10px auto;
     padding: 15px 30px;
     font-size: 18px;
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: var(--main-color2);
     color: white;
     border: none;
@@ -390,4 +390,9 @@ footer {
 }
 .gameday{
     font-size: 1.5em;
+}
+
+.regolamento{
+    width:85%;
+    margin: auto;
 }
