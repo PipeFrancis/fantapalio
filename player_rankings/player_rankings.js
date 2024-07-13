@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <td>${index + 1}</td>
             <td>${player.name}</td>
             <td>${player.cost}</td>
-            <td>${player.tot}</td>
+            <td><strong>${player.tot}</strong></td>
             <td>${player.g1}</td>
             <td>${player.g2}</td>
             <td>${player.g3}</td>
