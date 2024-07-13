@@ -88,6 +88,5 @@ footer {
 }
 /* Stile per la tabella */
 .table-container-player-rankings {
-    max-height: 600px; /* Altezza massima desiderata */
-    overflow-y: auto; /* Barra di scorrimento verticale quando necessario */
+    margin: auto;
 }
