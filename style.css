@@ -219,3 +219,53 @@ footer {
         font-size: 0.8em;
     }
 }
+
+
+/* Styles for player cards */
+.player-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px;
+}
+
+.player-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(100% - 40px); /* Full width with padding adjustment */
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+.player-card h3 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.player-card p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.player-card .total {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+@media (min-width: 600px) {
+    .player-card {
+        width: calc(50% - 40px); /* Two cards per row on medium screens */
+    }
+}
+
+@media (min-width: 900px) {
+    .player-card {
+        width: calc(33.333% - 40px); /* Three cards per row on large screens */
+    }
+}
+

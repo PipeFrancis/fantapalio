@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         card.innerHTML = `
             <div class="team-card-header">${index + 1}. ${team.name}</div>
             <div class="team-card-body">
-                <div class="punteggio-info"><span>Punteggio:</span> <strong>${team.tot_team}</strong></div>
+                <div class="punteggio-info"><strong>${team.tot_team}</strong></div>
                 <div class="player-info"> ${team.p1.name} (${team.p1.tot})</div>
                 <div class="player-info"> ${team.p2.name} (${team.p2.tot})</div>
                 <div class="player-info"> ${team.p3.name} (${team.p3.tot})</div>
