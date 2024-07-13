@@ -145,6 +145,7 @@ footer {
     /* Dimensioni del testo */
     #teamTable th, #teamTable td {
         font-size: 0.8em; /* Riduce la dimensione del testo per schermi piccoli */
+        text-align: center; 
     }
 
     /* Dimensioni del testo per team name */
