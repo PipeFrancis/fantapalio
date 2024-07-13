@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         card.innerHTML = `
             <h3>${index + 1}. ${player.name}</h3>
             <p>Prezzo: ${player.cost}</p>
-            <p class="total">Totale: ${player.tot}</p>
+            <p class="total">${player.tot}</p>
             <p>G1: ${player.g1}</p>
             <p>G2: ${player.g2}</p>
             <p>G3: ${player.g3}</p>
