@@ -2,7 +2,7 @@ import { fantateams } from './data.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("teamDetails");
-    const teamCardsContainer = document.getElementById("teamCardsContainer");
+    const teamCardsContainer = document.getElementById("teamCardsContainer1");
 
     // Rimuovi eventuali opzioni esistenti
     select.innerHTML = '';
