@@ -401,12 +401,12 @@ footer {
         width: 90%;
         flex-direction: column;
         font-size: 1.5em;
-        margin-top: 30px;
+        margin-top: 40px;
     }
 
     .score_west, .score_nord, .score_sud, .score_est {
         width: 80%;
-        margin: 10px auto;
+        margin: 5px auto;
         font-size: 1em;
     }
 }
