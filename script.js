@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <p>Semifinale: ${player.semi}</p>
                 <p>Tiro da 3: ${player.td3}</p>
                 <p>Finale: ${player.final}</p>
-                <p class="total">Totale: ${player.tot}</p>
+                <p class="total">Totale: <span class="totalpointsindex">${player.tot}</span></p>
             `;
             teamCardsContainer.appendChild(card);
         }

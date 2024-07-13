@@ -317,4 +317,7 @@ footer {
         width: calc(33.333% - 40px); /* Three cards per row on large screens */
     }
 }
-
+.totalpointsindex{
+    font-weight: bold;
+    font-size: 1.5em;
+}
