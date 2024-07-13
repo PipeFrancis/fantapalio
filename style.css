@@ -90,3 +90,13 @@ footer {
 .table-container-player-rankings {
     margin: auto;
 }
+
+#playerTable {
+    
+    border-collapse: collapse; /* Combina i bordi delle celle */
+}
+
+#playerTable th, #playerTable td {
+    padding: 5px; /* Aggiunge spazio interno (padding) a tutte le celle */
+    text-align: center; /* Centra il testo nelle celle */
+}
