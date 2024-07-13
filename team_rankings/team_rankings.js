@@ -1,5 +1,5 @@
 import {
-    team_type,
+    fantateam_type,
     NORD, SUD, EST, WEST,
     fantateams
 } from '../data.js';
