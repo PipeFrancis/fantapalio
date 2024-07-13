@@ -2769,8 +2769,7 @@
     ft111.tot_td3 = ft111.p1.td3 + ft111.p2.td3 + ft111.p3.td3 + ft111.p4.td3 + ft111.p5.td3;
     ft111.tot_final = ft111.p1.final + ft111.p2.final + ft111.p3.final + ft111.p4.final + ft111.p5.final;
     ft111.tot_team = ft111.p1.tot + ft111.p2.tot + ft111.p3.tot + ft111.p4.tot + ft111.p5.tot;
-    
-    const fantateams = ['ft1', 'ft2', 'ft3', 'ft4', 'ft5', 'ft6', 'ft7', 'ft8', 'ft9', 'ft10', 'ft11', 'ft12', 'ft13', 'ft14', 'ft15', 'ft16', 'ft17', 'ft18', 'ft19', 'ft20', 'ft21', 'ft22', 'ft23', 'ft24', 'ft25', 'ft26', 'ft27', 'ft28', 'ft29', 'ft30', 'ft31', 'ft32', 'ft33', 'ft34', 'ft35', 'ft36', 'ft37', 'ft38', 'ft39', 'ft40', 'ft41', 'ft42', 'ft43', 'ft44', 'ft45', 'ft46', 'ft47', 'ft48', 'ft49', 'ft50', 'ft51', 'ft52', 'ft53', 'ft54', 'ft55', 'ft56', 'ft57', 'ft58', 'ft59', 'ft60', 'ft61', 'ft62', 'ft63', 'ft64', 'ft65', 'ft66', 'ft67', 'ft68', 'ft69', 'ft70', 'ft71', 'ft72', 'ft73', 'ft74', 'ft75', 'ft76', 'ft77', 'ft78', 'ft79', 'ft80', 'ft81', 'ft82', 'ft83', 'ft84', 'ft85', 'ft86', 'ft87', 'ft88', 'ft89', 'ft90', 'ft91', 'ft92', 'ft93', 'ft94', 'ft95', 'ft96', 'ft97', 'ft98', 'ft99', 'ft100', 'ft101', 'ft102', 'ft103', 'ft104', 'ft105', 'ft106', 'ft107', 'ft108', 'ft109', 'ft110', 'ft111'];
+    const fantateams = [ft1, ft2, ft3, ft4, ft5, ft6, ft7, ft8, ft9, ft10, ft11, ft12, ft13, ft14, ft15, ft16, ft17, ft18, ft19, ft20, ft21, ft22, ft23, ft24, ft25, ft26, ft27, ft28, ft29, ft30, ft31, ft32, ft33, ft34, ft35, ft36, ft37, ft38, ft39, ft40, ft41, ft42, ft43, ft44, ft45, ft46, ft47, ft48, ft49, ft50, ft51, ft52, ft53, ft54, ft55, ft56, ft57, ft58, ft59, ft60, ft61, ft62, ft63, ft64, ft65, ft66, ft67, ft68, ft69, ft70, ft71, ft72, ft73, ft74, ft75, ft76, ft77, ft78, ft79, ft80, ft81, ft82, ft83, ft84, ft85, ft86, ft87, ft88, ft89, ft90, ft91, ft92, ft93, ft94, ft95, ft96, ft97, ft98, ft99, ft100, ft101, ft102, ft103, ft104, ft105, ft106, ft107, ft108, ft109, ft110, ft111];
     
 
 
