@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="player-info"> ${team.p3.name} (${team.p3.tot})</div>
                 <div class="player-info"> ${team.p4.name} (${team.p4.tot})</div>
                 <div class="player-info"> ${team.p5.name} (${team.p5.tot})</div>
-                <div><span class="bold">Rione:</span> ${team.rione.name}</div>
+                <div>Rione: <strong>${team.rione.name}</strong></div>
             </div>
         `;
         teamCardsContainer.appendChild(card);
