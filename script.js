@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const row = document.createElement('tr');
             
             // Aggiungi le celle con i dati del giocatore
-            appendCell(row, i); // Numero giocatore
+            appendCell(row, player.cost); //costo
             appendCell(row, player.name);
             appendCell(row, player.g1);
             appendCell(row, player.g2);
