@@ -38,8 +38,11 @@ import {
 document.addEventListener('DOMContentLoaded', function() {
     const tableBody = document.getElementById('tableBody');
 
-    // Ciclo attraverso i giocatori e creo le righe della tabella
-    players.forEach((player, index) => {
+    // Ordina i giocatori in ordine decrescente in base al campo 'tot'
+    const sortedPlayers = players.slice().sort((a, b) => b.tot - a.tot);
+
+    // Ciclo attraverso i giocatori ordinati e creo le righe della tabella
+    sortedPlayers.forEach((player, index) => {
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>${index + 1}</td>
