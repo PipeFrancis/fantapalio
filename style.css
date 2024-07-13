@@ -2,6 +2,18 @@
     --main-color1:rgb(204, 92, 0);
     --main-color2:rgb(6, 1, 87);
 
+    --nord-color1:rgb(190, 0, 0);
+    --nord-color2:rgb(0, 0, 0);
+
+    --west-color1:rgb(0, 0, 0);
+    --west-color2:rgb(255, 213, 0);
+
+    --est-color1:rgb(4, 0, 218);
+    --est-color2:rgb(255, 26, 26);
+
+    --sud-color2:rgb(34, 145, 0);
+    --sud-color1:rgb(255, 255, 255);
+
 }
 
 body {
@@ -319,5 +331,54 @@ footer {
 }
 .totalpointsindex{
     font-weight: bold;
+    font-size: 1.5em;
+}
+.gamescore{
+    width: 50%;
+    margin: auto;
+    margin-bottom:30px;
+    font-size: 2em;
+    flex-direction: row;
+    display:flex;
+}
+
+.score_west{
+    width: 50%;
+    color: var(--west-color2);
+    background-color: var(--west-color1);
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 5px solid var(--west-color2);
+    margin: 8px;
+}
+.score_nord{
+    width: 50%;
+    color: var(--nord-color2);
+    background-color: var(--nord-color1);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 8px;
+    border: 5px solid var(--nord-color2);
+}
+    
+.score_sud{
+    width: 50%;
+    color: var(--sud-color2);
+    background-color: var(--sud-color1);
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 5px solid var(--sud-color2);
+    margin: 8px;
+}
+.score_est{
+    width: 50%;
+    color: var(--est-color2);
+    background-color: var(--est-color1);
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 5px solid var(--est-color2);
+    margin: 8px;
+}
+.gameday{
     font-size: 1.5em;
 }
