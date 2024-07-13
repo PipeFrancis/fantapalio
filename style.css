@@ -116,3 +116,14 @@ footer {
     padding: 5px; /* Aggiunge spazio interno (padding) a tutte le celle */
     text-align: center; /* Centra il testo nelle celle */
 }
+.team-name {
+    font-size: 1.2em; /* Dimensione del testo maggiore per il nome del team */
+}
+
+.player-info {
+    font-size: 0.8em; /* Dimensione del testo minore per le informazioni sui giocatori */
+}
+
+.bold {
+    font-weight: bold; /* Mantieni questa regola se vuoi che il tot_team sia in grassetto */
+}

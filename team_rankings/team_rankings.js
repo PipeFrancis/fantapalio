@@ -15,14 +15,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>${index + 1}</td>
-            <td>${team.name}</td>
+            <td class="team-name">${team.name}</td>
             <td><strong>${team.tot_team}</strong></td>
-            <td>${team.p1.name} (${team.p1.tot})</td>
-            <td>${team.p2.name} (${team.p2.tot})</td>
-            <td>${team.p3.name} (${team.p3.tot})</td>
-            <td>${team.p4.name} (${team.p4.tot})</td>
-            <td>${team.p5.name} (${team.p5.tot})</td>
-            <td>${team.rione.name}</td>
+            <td class="player-info">${team.p1.name} (${team.p1.tot})</td>
+            <td class="player-info">${team.p2.name} (${team.p2.tot})</td>
+            <td class="player-info">${team.p3.name} (${team.p3.tot})</td>
+            <td class="player-info">${team.p4.name} (${team.p4.tot})</td>
+            <td class="player-info">${team.p5.name} (${team.p5.tot})</td>
+            <td>${team.rione}</td>
         `;
         teamTableBody.appendChild(row);
     });
