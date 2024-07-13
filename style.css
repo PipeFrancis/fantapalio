@@ -127,3 +127,33 @@ footer {
 .bold {
     font-weight: bold; /* Mantieni questa regola se vuoi che il tot_team sia in grassetto */
 }
+
+/* Celle della tabella */
+#teamTable th, #teamTable td {
+    padding: 8px; /* Aggiunge spazio interno alle celle */
+    text-align: left; /* Allinea il testo a sinistra */
+    font-size: 1em; /* Imposta una dimensione del testo di base */
+}
+
+/* Intestazioni della tabella */
+#teamTable th {
+    background-color: #f2f2f2; /* Aggiunge uno sfondo alle intestazioni */
+}
+
+/* Stili specifici per mobile */
+@media screen and (max-width: 768px) {
+    /* Dimensioni del testo */
+    #teamTable th, #teamTable td {
+        font-size: 0.8em; /* Riduce la dimensione del testo per schermi piccoli */
+    }
+
+    /* Dimensioni del testo per team name */
+    .team-name {
+        font-size: 1em; /* Aumenta leggermente la dimensione del testo per il nome del team */
+    }
+
+    /* Dimensioni del testo per player info */
+    .player-info {
+        font-size: 0.7em; /* Riduce leggermente la dimensione del testo per le informazioni sui giocatori */
+    }
+}
