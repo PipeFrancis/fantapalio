@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <td class="player-info">${team.p3.name} (${team.p3.tot})</td>
             <td class="player-info">${team.p4.name} (${team.p4.tot})</td>
             <td class="player-info">${team.p5.name} (${team.p5.tot})</td>
-            <td>${team.rione}</td>
+            <td>${team.rione.name}</td>
         `;
         teamTableBody.appendChild(row);
     });
