@@ -65,3 +65,20 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altezza del viewport */
+}
+
+#teamTable {
+    width: 80%; /* Larghezza desiderata della tabella */
+    /* Altri stili desiderati per la tabella */
+}
+
+#teamTable th, #teamTable td {
+    padding: 8px; /* Padding per le celle */
+    text-align: center; /* Testo centrato nelle celle */
+}
