@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Aggiungi la scheda per il rione
         const rioneCard = document.createElement('div');
-        rioneCard.classList.add('team-card');
+        rioneCard.classList.add('team-card', `cardclass${selectedTeam.rione.name}`);
         rioneCard.innerHTML = `
             <h3>Rione: ${selectedTeam.rione.name}</h3>
             <p class="total">Punti finali: ${selectedTeam.rione.final_points}</p>
