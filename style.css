@@ -451,44 +451,36 @@ footer {
 
 
 
-/* Stili per le player cards */
-.player-card1 {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
-    margin: 5px;
-    cursor: pointer;
-    background-color: #fff;
-    transition: background-color 0.3s ease;
-    width: calc(33.333% - 10px); /* Calcolo della larghezza per 3 card per riga */
-    max-width: 200px; /* Larghezza massima delle card */
-    box-sizing: border-box; /* Rispetta il box model */
-}
-
-@media (max-width: 768px) {
-    .player-card1 {
-        width: calc(50% - 10px); /* Due card per riga su schermi più piccoli */
-    }
-}
 
 
 .players-container {
-    height: 400px; /* Altezza fissa del contenitore */
+    display: flex; /* Usa flexbox per disporre i giocatori su righe */
+    flex-wrap: wrap; /* Avvolgi le card se non ci sono abbastanza spazi orizzontali */
+    justify-content: center; /* Centra le card orizzontalmente */
+    gap: 10px; /* Spazio tra le card */
+    max-height: 400px; /* Altezza massima del contenitore */
     overflow-y: auto; /* Abilita lo scrolling verticale se necessario */
     margin-bottom: 20px; /* Margine inferiore per separare il team dal contenitore giocatori */
 }
 
-
-.team-container {
-    position: fixed; /* Posizionamento fisso */
-    bottom: 20px; /* Distanza dal fondo della pagina */
-    width: calc(100% - 40px); /* Larghezza quasi piena */
-    max-width: 800px; /* Larghezza massima del container */
-    background-color: #fff; /* Sfondo bianco */
-    padding: 10px; /* Padding interno */
-    border-radius: 8px; /* Bordo arrotondato */
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Ombra */
-    text-align: center; /* Allineamento testo */
-    z-index: 100; /* Posizionamento sopra altri contenuti */
+.player-card1 {
+    flex: 1 0 calc(25% - 10px); /* Calc con spazi tra i bordi */
+    max-width: 200px; /* Larghezza massima delle card */
+    box-sizing: border-box; /* Rispetta il box model */
+}
+@media (max-width: 768px) {
+    .player-card1 {
+        flex: 1 0 calc(50% - 10px); /* Due card per riga su schermi più piccoli */
+    }
 }
 
+
+
+
+.team-container {
+    display: flex; /* Utilizza flexbox */
+    flex-wrap: wrap; /* Avvolgi le card se necessario */
+    justify-content: center; /* Centra le card orizzontalmente */
+    gap: 10px; /* Spazio tra le card */
+    margin-top: 20px; /* Margine superiore */
+}
