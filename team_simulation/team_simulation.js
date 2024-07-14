@@ -97,7 +97,7 @@ function populatePlayersList() {
 
     players.forEach((player) => {
         const playerCard = document.createElement('div');
-        playerCard.classList.add('player-card1');
+        playerCard.classList.add('player-card1',`cardclass${player.team}`);
         playerCard.innerHTML = `
             <p>${player.name}</p>
             <p>$${player.cost}</p>
