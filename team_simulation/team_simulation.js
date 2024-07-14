@@ -6,6 +6,9 @@ let selectedPlayers = [];
 let totalCost = 0;
 const maxCredits = 30; // Massimo credito disponibile per il team
 
+// Variabile per tenere traccia del messaggio "VALIDO"
+let isValidTeam = false;
+
 // Funzione per aggiungere un giocatore al team
 function addPlayer(player) {
     // Verifica se il numero di giocatori selezionati ha raggiunto il limite di 5
@@ -32,6 +35,18 @@ function addPlayer(player) {
 
     // Aggiorna l'interfaccia del team
     renderTeam();
+
+    // Aggiungi il messaggio "VALIDO" se sono stati selezionati 5 giocatori
+    if (selectedPlayers.length === 5 && !isValidTeam) {
+        const validMessage = document.createElement('p');
+        validMessage.textContent = 'VALIDO';
+        validMessage.classList.add('valid-message');
+        validMessage.style.color = 'green';
+        validMessage.style.fontWeight = 'bold';
+        const teamContainer = document.getElementById('teamContainer');
+        teamContainer.parentNode.insertBefore(validMessage, teamContainer);
+        isValidTeam = true;
+    }
 }
 
 // Funzione per rimuovere un giocatore dal team
@@ -42,11 +57,13 @@ function removePlayer(index) {
     // Aggiorna l'interfaccia del team
     renderTeam();
 
-    // Rimuovi il messaggio "VALIDO" se presente
-    const teamContainer = document.getElementById('teamContainer');
-    const validMessage = teamContainer.querySelector('p.valid-message');
-    if (validMessage) {
-        teamContainer.removeChild(validMessage);
+    // Rimuovi il messaggio "VALIDO" se tutti i giocatori sono stati rimossi
+    if (selectedPlayers.length < 5 && isValidTeam) {
+        const validMessage = document.querySelector('p.valid-message');
+        if (validMessage) {
+            validMessage.parentNode.removeChild(validMessage);
+        }
+        isValidTeam = false;
     }
 }
 
@@ -58,16 +75,6 @@ function renderTeam() {
     if (selectedPlayers.length === 0) {
         teamContainer.innerHTML = '<p><em>Team vuoto</em></p>';
     } else {
-        // Aggiungi il messaggio "VALIDO" se sono stati selezionati 5 giocatori
-        if (selectedPlayers.length === 5) {
-            const validMessage = document.createElement('p');
-            validMessage.textContent = 'VALIDO';
-            validMessage.classList.add('valid-message');
-            validMessage.style.color = 'green';
-            validMessage.style.fontWeight = 'bold';
-            teamContainer.parentNode.insertBefore(validMessage, teamContainer);
-        }
-
         selectedPlayers.forEach((player, index) => {
             const playerCard = document.createElement('div');
             playerCard.classList.add('player-card1');
@@ -90,7 +97,7 @@ function populatePlayersList() {
 
     players.forEach((player) => {
         const playerCard = document.createElement('div');
-        playerCard.classList.add('player-card1',`cardclass${player.team}`);
+        playerCard.classList.add('player-card1');
         playerCard.innerHTML = `
             <p>${player.name}</p>
             <p>$${player.cost}</p>
