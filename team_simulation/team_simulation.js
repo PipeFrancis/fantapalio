@@ -75,6 +75,7 @@ function renderTeam() {
                 newSignupLink.target = "_blank";
                 newSignupLink.textContent = "iscrivi la squadra";
                 newSignupLink.id = 'signupLink';
+                newSignupLink.classList.add('registrationlink');  // Aggiunge la classe registrationlink
                 newValidMessage.parentNode.insertBefore(newSignupLink, newValidMessage.nextSibling);
             }
         } else {

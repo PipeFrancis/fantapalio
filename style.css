@@ -498,3 +498,7 @@ footer {
 .validmessage{
     font-size: 4em;
 }
+
+.registrationlink{
+    text-decoration: underline;
+}
