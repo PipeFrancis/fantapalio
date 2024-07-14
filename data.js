@@ -638,6 +638,7 @@
 //Extra da eliminare (inizio)
     // SEMI
 // SEMI
+// SEMI
 MassimilianoMoretti.semi = 4.25;
 AndreaMoretti.semi = 7.5;
 LarryTrevisan.semi = 1.25;
@@ -797,6 +798,95 @@ LucaGemo.td3 = 1.0;
 DiegoNata.td3 = 5.75;
 MattiaRoiatti.td3 = 1.5;
 EdoardoPicogna.td3 = 2.5;
+MauroPerina.td3 = 7.75;
+LorenzoMoro.td3 = 0.5;
+GionaTell.td3 = 6.75;
+IacopoPivetta.td3 = 4.5;
+MattiaMasotti.td3 = 0.25;
+
+// FINALE
+MassimilianoMoretti.final = 2.25;
+AndreaMoretti.final = 5.5;
+LarryTrevisan.final = 7.0;
+AlessandroCostantini.final = 0.0;
+MatteoMargarit.final = 7.75;
+MauroCuridori.final = 1.25;
+ChristianZanet.final = 4.5;
+GiacomoPiacentini.final = 10.0;
+GiovanniDalFarra.final = 3.5;
+MiracleObichukwu.final = 0.75;
+LucaDellaLonga.final = 8.25;
+AlessandroRojatti.final = 4.25;
+MicheleGorasso.final = 3.0;
+GiacomoFerigo.final = 7.75;
+UmbertoNobile.final = 2.75;
+DevinChiarcos.final = 5.75;
+ValentinoCigainero.final = 1.5;
+MicheleDeAnna.final = 6.0;
+DavideParon.final = 6.0;
+AlessioFurlan.final = 1.0;
+MichaelMargarit.final = 9.0;
+SebastianoTonizzo.final = 0.5;
+
+DanieleGanzit.final = 5.0;
+GiacomoSilvestri.final = 8.75;
+VittorioGri.final = 9.25;
+VittorioBasso.final = 2.75;
+AlessandroRizzi.final = 1.0;
+MassimoBaldassi.final = 5.0;
+GabrieleMiani.final = 0.25;
+MarcoMarchetti.final = 7.0;
+MarcoLombardo.final = 3.25;
+MicheleVendrame.final = 4.5;
+LorenzoSchinella.final = 0.5;
+GioeleTudini.final = 7.25;
+FilippoPasquon.final = 6.0;
+TommasoMartello.final = 2.75;
+MarcoRizzi.final = 4.0;
+DavidGaspardo.final = 8.5;
+AntonioGri.final = 1.5;
+RiccardoSchinella.final = 9.75;
+
+SimoneMartinelli.final = 1.0;
+MatteoSpagnolo.final = 6.75;
+DavideFaurlin.final = 4.5;
+GiovanniTonizzo.final = 2.5;
+AlessandroSant.final = 3.5;
+MatteoBazzaro.final = 7.25;
+AlessandroSantin.final = 5.75;
+AlessandroGalassi.final = 8.0;
+PietroSoramel.final = 4.0;
+FilippoAgnoluzzi.final = 9.5;
+EmanueleDaneluzzi.final = 1.0;
+LucaSoramel.final = 5.0;
+PaoloZorzi.final = 6.5;
+ChristianFedrizzi.final = 2.25;
+FilippoSappa.final = 7.5;
+GiovanniZanin.final = 0.75;
+EnricoSant.final = 3.75;
+StefanoPolano.final = 0.5;
+
+MarcoPolo.final = 4.25;
+MarcoSerrao.final = 1.5;
+WilliamIob.final = 9.75;
+DavideBroggi.final = 0.25;
+AlexMicottis.final = 6.5;
+MassimilianoRossi.final = 8.5;
+MassimoMasotti.final = 3.25;
+EugenioDeTina.final = 2.0;
+LucaAnedda.final = 9.5;
+DenisVanin.final = 5.0;
+ThomasBaracetti.final = 7.75;
+LucaGemo.final = 5.75;
+DiegoNata.final = 0.25;
+MattiaRoiatti.final = 8.75;
+EdoardoPicogna.final = 2.75;
+MauroPerina.final = 6.5;
+LorenzoMoro.final = 7.0;
+GionaTell.final = 0.0;
+IacopoPivetta.final = 9.0;
+MattiaMasotti.final = 1.25;
+
 
 //Extra da eliminare (fine)
 
