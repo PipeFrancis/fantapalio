@@ -568,12 +568,12 @@ MattiaMasotti.g1 = 3.00;
     DevinChiarcos.final = 0.0;
     ValentinoCigainero.final = 0.0;
     MicheleDeAnna.final = 0.0;
-    DavideParon.final = 6;
-    AlessioFurlan.final = 1;
-    MichaelMargarit.final = 9;
-    SebastianoTonizzo.final = 0.4;
+    DavideParon.final = 0.0;
+    AlessioFurlan.final = 0.0;
+    MichaelMargarit.final = 0.0;
+    SebastianoTonizzo.final = 0;
 
-    DanieleGanzit.final = 5;
+    DanieleGanzit.final = 0.0;
     GiacomoSilvestri.final = 0.0;
     VittorioGri.final = 0.0;
     VittorioBasso.final = 0.0;
@@ -632,7 +632,6 @@ MattiaMasotti.g1 = 3.00;
     IacopoPivetta.final = 0.0;
     MattiaMasotti.final = 0.0;
 
-    AlessioFurlan.g1 = 8.00;
 
 
     const players = [MassimilianoMoretti, AndreaMoretti, LarryTrevisan, AlessandroCostantini, MatteoMargarit, 
