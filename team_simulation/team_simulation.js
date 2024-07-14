@@ -65,7 +65,7 @@ function renderTeam() {
             validMessage.classList.add('valid-message');
             validMessage.style.color = 'green';
             validMessage.style.fontWeight = 'bold';
-            teamContainer.appendChild(validMessage);
+            teamContainer.parentNode.insertBefore(validMessage, teamContainer);
         }
 
         selectedPlayers.forEach((player, index) => {
