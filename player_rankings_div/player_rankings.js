@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Ciclo attraverso i giocatori ordinati e creo le schede
     sortedPlayers.forEach((player, index) => {
         const card = document.createElement('div');
-        card.classList.add('player-card');
+        card.classList.add('player-card',`cardclass${player.team}`);
         card.innerHTML = `
             <h3>${index + 1}. ${player.name}</h3>
             <p>Prezzo: ${player.cost}</p>
