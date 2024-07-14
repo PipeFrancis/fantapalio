@@ -69,14 +69,13 @@ function renderTeam() {
                 newValidMessage.style.fontWeight = 'bold';
                 newValidMessage.id = 'validMessage';
                 teamContainer.parentNode.insertBefore(newValidMessage, teamContainer);
-            }
-            if (!signupLink) {
+
                 const newSignupLink = document.createElement('a');
                 newSignupLink.href = "https://surveyheart.com/form/6693eb0ae930bd1754994530";
                 newSignupLink.target = "_blank";
                 newSignupLink.textContent = "iscrivi la squadra";
                 newSignupLink.id = 'signupLink';
-                teamContainer.parentNode.insertBefore(newSignupLink, teamContainer.nextSibling);
+                newValidMessage.parentNode.insertBefore(newSignupLink, newValidMessage.nextSibling);
             }
         } else {
             if (validMessage) {
