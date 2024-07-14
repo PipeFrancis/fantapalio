@@ -92,8 +92,8 @@ function renderTeam() {
             playerCard.classList.add('player-card1',`cardclass${player.team}`);
             playerCard.innerHTML = `
                 <p>${player.name}</p>
-                <p>Squadra: ${player.team}</p>
-                <p>Costo: ${player.cost}</p>
+                <p>$${player.cost}</p>
+                <p>${player.team}</p>
             `;
             // Aggiungi un evento per rimuovere il giocatore cliccando sulla card
             playerCard.addEventListener('click', () => removePlayer(index));
