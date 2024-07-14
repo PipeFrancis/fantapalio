@@ -420,21 +420,25 @@ footer {
     background-color: var(--west-color1);
     border: 6px solid var(--west-color2);
     color: var(--west-color2);
+    border-radius: 8px;
 }
 .cardclassNORD{
     background-color: var(--nord-color1);
     border: 6px solid var(--nord-color2);
     color: var(--nord-color2);
+    border-radius: 8px;
 }
 .cardclassSUD{
     background-color: var(--sud-color1);
     border: 6px solid var(--sud-color2);
     color: var(--sud-color3);
+    border-radius: 8px;
 }
 .cardclassEST{
     background-color: var(--est-color1);
     border: 6px solid var(--est-color2);
     color: var(--est-color3);
+    border-radius: 8px;
 }
 
 .cardclasssoftWEST{
