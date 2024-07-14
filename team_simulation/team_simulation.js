@@ -32,11 +32,6 @@ function addPlayer(player) {
 
     // Aggiorna l'interfaccia del team
     renderTeam();
-
-    // Verifica se sono stati selezionati 5 giocatori e mostra il messaggio "VALIDO"
-    if (selectedPlayers.length === 5) {
-        showTeamValidMessage();
-    }
 }
 
 // Funzione per rimuovere un giocatore dal team
@@ -49,7 +44,7 @@ function removePlayer(index) {
 
     // Rimuovi il messaggio "VALIDO" se presente
     const teamContainer = document.getElementById('teamContainer');
-    const validMessage = teamContainer.querySelector('p');
+    const validMessage = teamContainer.querySelector('p.valid-message');
     if (validMessage) {
         teamContainer.removeChild(validMessage);
     }
@@ -63,6 +58,16 @@ function renderTeam() {
     if (selectedPlayers.length === 0) {
         teamContainer.innerHTML = '<p><em>Team vuoto</em></p>';
     } else {
+        // Aggiungi il messaggio "VALIDO" se sono stati selezionati 5 giocatori
+        if (selectedPlayers.length === 5) {
+            const validMessage = document.createElement('p');
+            validMessage.textContent = 'Il tuo team: VALIDO';
+            validMessage.classList.add('valid-message');
+            validMessage.style.color = 'green';
+            validMessage.style.fontWeight = 'bold';
+            teamContainer.appendChild(validMessage);
+        }
+
         selectedPlayers.forEach((player, index) => {
             const playerCard = document.createElement('div');
             playerCard.classList.add('player-card1');
@@ -76,16 +81,6 @@ function renderTeam() {
             teamContainer.appendChild(playerCard);
         });
     }
-}
-
-// Funzione per mostrare il messaggio "VALIDO" nel team container
-function showTeamValidMessage() {
-    const teamContainer = document.getElementById('teamContainer');
-    const validMessage = document.createElement('p');
-    validMessage.textContent = 'Il tuo team: VALIDO';
-    validMessage.style.color = 'green';
-    validMessage.style.fontWeight = 'bold';
-    teamContainer.appendChild(validMessage);
 }
 
 // Funzione per popolare la lista dei giocatori disponibili
