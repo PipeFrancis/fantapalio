@@ -107,7 +107,7 @@ function renderTeam() {
 // Funzione per aggiornare i crediti rimanenti
 function updateCreditsCounter() {
     const creditsCounter = document.getElementById('creditsCounter');
-    creditsCounter.textContent = `Crediti rimanenti: ${maxCredits - totalCost}`;
+    creditsCounter.textContent = `Hai ancora: ${maxCredits - totalCost}$`;
 }
 
 // Funzione per popolare la lista dei giocatori disponibili
@@ -131,7 +131,7 @@ function populatePlayersList() {
     // Aggiungi l'elemento per i crediti rimanenti
     const creditsCounter = document.createElement('p');
     creditsCounter.id = 'creditsCounter';
-    creditsCounter.textContent = `Crediti rimanenti: ${maxCredits}`;
+    creditsCounter.textContent = `Hai ancora: ${maxCredits}$`;
     playersContainer.parentNode.insertBefore(creditsCounter, playersContainer.nextSibling);
 }
 
