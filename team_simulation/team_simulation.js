@@ -77,7 +77,7 @@ function renderTeam() {
     } else {
         selectedPlayers.forEach((player, index) => {
             const playerCard = document.createElement('div');
-            playerCard.classList.add('player-card1');
+            playerCard.classList.add('player-card1',`cardclass${player.team}`);
             playerCard.innerHTML = `
                 <p>${player.name}</p>
                 <p>Squadra: ${player.team}</p>
