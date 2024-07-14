@@ -491,3 +491,7 @@ footer {
     margin-top: 20px; /* Margine superiore */
     border: 2px solid black;
 }
+
+.validmessage{
+    font-size: 2em;
+}

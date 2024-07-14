@@ -61,7 +61,7 @@ function renderTeam() {
         // Aggiungi il messaggio "VALIDO" se sono stati selezionati 5 giocatori
         if (selectedPlayers.length === 5) {
             const validMessage = document.createElement('p');
-            validMessage.textContent = 'Il tuo team: VALIDO';
+            validMessage.textContent = 'VALIDO';
             validMessage.classList.add('valid-message');
             validMessage.style.color = 'green';
             validMessage.style.fontWeight = 'bold';
