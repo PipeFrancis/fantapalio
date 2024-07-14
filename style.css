@@ -414,4 +414,20 @@ footer {
 .cardclassNORD{
     background-color: var(--nord-color1);
     border: 2px solid var(--nord-color2);
+    color: var(--nord-color2);
+}
+.cardclassSUD{
+    background-color: var(--sud-color1);
+    border: 2px solid var(--sud-color2);
+    color: var(--sud-color2);
+}
+.cardclassEST{
+    background-color: var(--est-color1);
+    border: 2px solid var(--est-color2);
+    color: var(--est-color2);
+}
+.cardclassWEST{
+    background-color: var(--west-color1);
+    border: 2px solid var(--west-color2);
+    color: var(--west-color2);
 }

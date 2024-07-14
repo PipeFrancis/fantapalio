@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // Crea una nuova scheda
             const card = document.createElement('div');
-            card.classList.add('team-card');
+            card.classList.add('team-card',`cardclass${player.team}`);
             card.innerHTML = `
                 <h3>${player.name}</h3>
                 <p>Prezzo: ${player.cost}</p>
