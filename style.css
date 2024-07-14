@@ -12,8 +12,8 @@
     --est-color2:rgb(255, 26, 26);
     --est-color3:rgb(255, 255,255);
 
-    --sud-color2:rgb(34, 145, 0);
     --sud-color1:rgb(255, 255, 255);
+    --sud-color2:rgb(34, 145, 0);
     --sud-color3:red;
 
 }
@@ -430,4 +430,17 @@ footer {
     background-color: var(--est-color1);
     border: 6px solid var(--est-color2);
     color: var(--est-color3);
+}
+
+.cardclasssoftWEST{
+    border: 4px solid var(--west-color1);
+}
+.cardclasssoftNORD{
+    border: 4px solid var(--nord-color1);
+}
+.cardclasssoftSUD{
+    border: 4px solid var(--sud-color2);
+}
+.cardclasssoftEST{
+    border: 4px solid var(--est-color1);
 }

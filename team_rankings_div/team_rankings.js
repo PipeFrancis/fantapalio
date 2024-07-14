@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Ciclo attraverso le squadre e creo le schede
     fantateams.forEach((team, index) => {
         const card = document.createElement('div');
-        card.classList.add('team-card');
+        card.classList.add('team-card',`cardclasssoft${team.rione.name}`);
 
         card.innerHTML = `
             <div class="team-card-header">${index + 1}. ${team.name}</div>
