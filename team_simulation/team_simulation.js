@@ -6,9 +6,6 @@ let selectedPlayers = [];
 let totalCost = 0;
 const maxCredits = 30; // Massimo credito disponibile per il team
 
-// Variabile per tenere traccia del messaggio "VALIDO"
-let isValidTeam = false;
-
 // Funzione per aggiungere un giocatore al team
 function addPlayer(player) {
     // Verifica se il numero di giocatori selezionati ha raggiunto il limite di 5
@@ -35,18 +32,6 @@ function addPlayer(player) {
 
     // Aggiorna l'interfaccia del team
     renderTeam();
-
-    // Aggiungi il messaggio "VALIDO" se sono stati selezionati 5 giocatori
-    if (selectedPlayers.length === 5 && !isValidTeam) {
-        const validMessage = document.createElement('p');
-        validMessage.textContent = 'VALIDO';
-        validMessage.classList.add('valid-message');
-        validMessage.style.color = 'green';
-        validMessage.style.fontWeight = 'bold';
-        const teamContainer = document.getElementById('teamContainer');
-        teamContainer.parentNode.insertBefore(validMessage, teamContainer);
-        isValidTeam = true;
-    }
 }
 
 // Funzione per rimuovere un giocatore dal team
@@ -56,15 +41,6 @@ function removePlayer(index) {
 
     // Aggiorna l'interfaccia del team
     renderTeam();
-
-    // Rimuovi il messaggio "VALIDO" se tutti i giocatori sono stati rimossi
-    if (selectedPlayers.length < 5 && isValidTeam) {
-        const validMessage = document.querySelector('p.valid-message');
-        if (validMessage) {
-            validMessage.parentNode.removeChild(validMessage);
-        }
-        isValidTeam = false;
-    }
 }
 
 // Funzione per aggiornare l'interfaccia del team
@@ -72,9 +48,45 @@ function renderTeam() {
     const teamContainer = document.getElementById('teamContainer');
     teamContainer.innerHTML = '';
 
+    const validMessage = document.getElementById('validMessage');
+    const signupLink = document.getElementById('signupLink');
+
     if (selectedPlayers.length === 0) {
         teamContainer.innerHTML = '<p><em>Team vuoto</em></p>';
+        if (validMessage) {
+            validMessage.remove();
+        }
+        if (signupLink) {
+            signupLink.remove();
+        }
     } else {
+        if (selectedPlayers.length === 5) {
+            if (!validMessage) {
+                const newValidMessage = document.createElement('p');
+                newValidMessage.textContent = 'VALIDO';
+                newValidMessage.classList.add('valid-message');
+                newValidMessage.style.color = 'green';
+                newValidMessage.style.fontWeight = 'bold';
+                newValidMessage.id = 'validMessage';
+                teamContainer.parentNode.insertBefore(newValidMessage, teamContainer);
+            }
+            if (!signupLink) {
+                const newSignupLink = document.createElement('a');
+                newSignupLink.href = "https://surveyheart.com/form/6693eb0ae930bd1754994530";
+                newSignupLink.target = "_blank";
+                newSignupLink.textContent = "iscrivi la squadra";
+                newSignupLink.id = 'signupLink';
+                teamContainer.parentNode.insertBefore(newSignupLink, teamContainer.nextSibling);
+            }
+        } else {
+            if (validMessage) {
+                validMessage.remove();
+            }
+            if (signupLink) {
+                signupLink.remove();
+            }
+        }
+
         selectedPlayers.forEach((player, index) => {
             const playerCard = document.createElement('div');
             playerCard.classList.add('player-card1',`cardclass${player.team}`);
