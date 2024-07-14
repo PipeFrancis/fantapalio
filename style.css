@@ -306,6 +306,11 @@ footer {
 
 .team-card1 h3 {
     margin-top: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+.team-card h3 {
+    margin-top: 0;
     font-size: 35px;
     font-weight: bold;
 }
