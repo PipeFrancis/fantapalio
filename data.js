@@ -632,7 +632,7 @@ MattiaMasotti.g1 = 3.00;
     IacopoPivetta.final = 0.0;
     MattiaMasotti.final = 0.0;
 
-
+    AlessioFurlan.g1 = 8.00;
 
 
     const players = [MassimilianoMoretti, AndreaMoretti, LarryTrevisan, AlessandroCostantini, MatteoMargarit, 
