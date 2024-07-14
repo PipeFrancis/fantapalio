@@ -472,7 +472,6 @@ footer {
     flex: 1 0 calc(25% - 10px); /* Calc con spazi tra i bordi */
     max-width: 200px; /* Larghezza massima delle card */
     box-sizing: border-box; /* Rispetta il box model */
-    border: 2px solid red;
 }
 @media (max-width: 768px) {
     .player-card1 {
@@ -489,7 +488,7 @@ footer {
     justify-content: center; /* Centra le card orizzontalmente */
     gap: 10px; /* Spazio tra le card */
     margin-top: 20px; /* Margine superiore */
-    border: 2px solid black;
+    /*border: 2px solid black;*/
 }
 
 .validmessage{
