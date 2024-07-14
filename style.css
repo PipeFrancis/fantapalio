@@ -26,7 +26,7 @@ body {
 }
 
 header {
-    background-color: var(--main-color2);
+    background-color: var(--main-color1);
     color: white;
     text-align: center;
     padding: 0.5em 0;
@@ -50,14 +50,14 @@ a button {
     padding: 15px 30px;
     font-size: 18px;
     border-radius: 8px;
-    background-color: var(--main-color2);
+    background-color: var(--main-color1);
     color: white;
     border: none;
     cursor: pointer;
 }
 
 a button:hover {
-    background-color: var(--main-color1);
+    background-color: var(--main-color2);
 }
 
 .dropdown {
