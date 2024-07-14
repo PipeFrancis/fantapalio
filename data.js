@@ -138,87 +138,85 @@
 
 
     //QUI SARANNO DA DARE TUTTI I PUNTEGGI DI TUTTI I GIOCATORI IN TUTTE LE GIORNATE
-    MassimilianoMoretti.g1 = 0.0;
-    AndreaMoretti.g1 = 0.0;
-    LarryTrevisan.g1 = 0.0;
-    AlessandroCostantini.g1 = 0.0;
-    MatteoMargarit.g1 = 0.0;
-    MauroCuridori.g1 = 0.0;
-    ChristianZanet.g1 = 0.0;
-    GiacomoPiacentini.g1 = 0.0;
-    GiovanniDalFarra.g1 = 0.0;
-    MiracleObichukwu.g1 = 0.0;
-    LucaDellaLonga.g1 = 0.0;
-    AlessandroRojatti.g1 = 0.0;
-    MicheleGorasso.g1 = 0.0;
-    GiacomoFerigo.g1 = 0.0;
-    UmbertoNobile.g1 = 0.0;
-    DevinChiarcos.g1 = 0.0;
-    ValentinoCigainero.g1 = 0.0;
-    MicheleDeAnna.g1 = 0.0;
-    DavideParon.g1 = 0.0;
-    AlessioFurlan.g1 = 0.0;
-    MichaelMargarit.g1 = 0.0;
-    SebastianoTonizzo.g1 = 0.0;
+    MassimilianoMoretti.g1 = 12.75;
+AndreaMoretti.g1 = 0.25;
+LarryTrevisan.g1 = 8.00;
+AlessandroCostantini.g1 = 9.50;
+MatteoMargarit.g1 = 8.75;
+MauroCuridori.g1 = 10.00;
+ChristianZanet.g1 = 0.75;
+GiacomoPiacentini.g1 = 2.00;
+GiovanniDalFarra.g1 = 3.00;
+MiracleObichukwu.g1 = 6.00;
+LucaDellaLonga.g1 = 2.75;
+AlessandroRojatti.g1 = 1.25;
+MicheleGorasso.g1 = 10.50;
+GiacomoFerigo.g1 = 8.75;
+UmbertoNobile.g1 = 25.75;
+DevinChiarcos.g1 = 18.75;
+ValentinoCigainero.g1 = 2.00;
+MicheleDeAnna.g1 = 2.00;
+DavideParon.g1 = 2.00;
+AlessioFurlan.g1 = 8.00;
+MichaelMargarit.g1 = 2.00;
+SebastianoTonizzo.g1 = 2.00;
+DanieleGanzit.g1 = 2.00;
+GiacomoSilvestri.g1 = 2.00;
+VittorioGri.g1 = 2.00;
+VittorioBasso.g1 = 2.00;
+AlessandroRizzi.g1 = 2.00;
+MassimoBaldassi.g1 = 2.00;
+GabrieleMiani.g1 = 2.00;
+MarcoMarchetti.g1 = 2.00;
+MarcoLombardo.g1 = 2.00;
+MicheleVendrame.g1 = 2.00;
+LorenzoSchinella.g1 = 2.00;
+GioeleTudini.g1 = 2.00;
+FilippoPasquon.g1 = 2.00;
+TommasoMartello.g1 = 2.00;
+MarcoRizzi.g1 = 2.00;
+DavidGaspardo.g1 = 2.00;
+AntonioGri.g1 = 2.00;
+RiccardoSchinella.g1 = 2.00;
+SimoneMartinelli.g1 = -3.50;
+MatteoSpagnolo.g1 = 7.50;
+DavideFaurlin.g1 = -2.75;
+GiovanniTonizzo.g1 = 0.75;
+AlessandroSant.g1 = 1.25;
+MatteoBazzaro.g1 = -0.75;
+AlessandroSantin.g1 = -2.00;
+AlessandroGalassi.g1 = 0.50;
+PietroSoramel.g1 = 15.50;
+FilippoAgnoluzzi.g1 = 1.25;
+EmanueleDaneluzzi.g1 = 3.25;
+LucaSoramel.g1 = -1.75;
+PaoloZorzi.g1 = 5.00;
+ChristianFedrizzi.g1 = 2.75;
+FilippoSappa.g1 = 20.50;
+GiovanniZanin.g1 = 7.25;
+EnricoSant.g1 = 0.00;
+StefanoPolano.g1 = 1.25;
+MarcoPolo.g1 = 3.00;
+MarcoSerrao.g1 = 3.00;
+WilliamIob.g1 = 3.00;
+DavideBroggi.g1 = 3.00;
+AlexMicottis.g1 = 3.00;
+MassimilianoRossi.g1 = 3.00;
+MassimoMasotti.g1 = 3.00;
+EugenioDeTina.g1 = 3.00;
+LucaAnedda.g1 = 3.00;
+DenisVanin.g1 = 3.00;
+ThomasBaracetti.g1 = 3.00;
+LucaGemo.g1 = 3.00;
+DiegoNata.g1 = 3.00;
+MattiaRoiatti.g1 = 3.00;
+EdoardoPicogna.g1 = 3.00;
+MauroPerina.g1 = 3.00;
+LorenzoMoro.g1 = 3.00;
+GionaTell.g1 = 3.00;
+IacopoPivetta.g1 = 3.00;
+MattiaMasotti.g1 = 3.00;
 
-    DanieleGanzit.g1 = 0.0;
-    GiacomoSilvestri.g1 = 0.0;
-    VittorioGri.g1 = 0.0;
-    VittorioBasso.g1 = 0.0;
-    AlessandroRizzi.g1 = 0.0;
-    MassimoBaldassi.g1 = 0.0;
-    GabrieleMiani.g1 = 0.0;
-    MarcoMarchetti.g1 = 0.0;
-    MarcoLombardo.g1 = 0.0;
-    MicheleVendrame.g1 = 0.0;
-    LorenzoSchinella.g1 = 0.0;
-    GioeleTudini.g1 = 0.0;
-    FilippoPasquon.g1 = 0.0;
-    TommasoMartello.g1 = 0.0;
-    MarcoRizzi.g1 = 0.0;
-    DavidGaspardo.g1 = 0.0;
-    AntonioGri.g1 = 0.0;
-    RiccardoSchinella.g1 = 0.0;
-
-    SimoneMartinelli.g1 = 0.0;
-    MatteoSpagnolo.g1 = 0.0;
-    DavideFaurlin.g1 = 0.0;
-    GiovanniTonizzo.g1 = 0.0;
-    AlessandroSant.g1 = 0.0;
-    MatteoBazzaro.g1 = 0.0;
-    AlessandroSantin.g1 = 0.0;
-    AlessandroGalassi.g1 = 0.0;
-    PietroSoramel.g1 = 0.0;
-    FilippoAgnoluzzi.g1 = 0.0;
-    EmanueleDaneluzzi.g1 = 0.0;
-    LucaSoramel.g1 = 0.0;
-    PaoloZorzi.g1 = 0.0;
-    ChristianFedrizzi.g1 = 0.0;
-    FilippoSappa.g1 = 0.0;
-    GiovanniZanin.g1 = 0.0;
-    EnricoSant.g1 = 0.0;
-    StefanoPolano.g1 = 0.0;
-
-    MarcoPolo.g1 = 0.0;
-    MarcoSerrao.g1 = 0.0;
-    WilliamIob.g1 = 0.0;
-    DavideBroggi.g1 = 0.0;
-    AlexMicottis.g1 = 0.0;
-    MassimilianoRossi.g1 = 0.0;
-    MassimoMasotti.g1 = 0.0;
-    EugenioDeTina.g1 = 0.0;
-    LucaAnedda.g1 = 0.0;
-    DenisVanin.g1 = 0.0;
-    ThomasBaracetti.g1 = 0.0;
-    LucaGemo.g1 = 0.0;
-    DiegoNata.g1 = 0.0;
-    MattiaRoiatti.g1 = 0.0;
-    EdoardoPicogna.g1 = 0.0;
-    MauroPerina.g1 = 0.0;
-    LorenzoMoro.g1 = 0.0;
-    GionaTell.g1 = 0.0;
-    IacopoPivetta.g1 = 0.0;
-    MattiaMasotti.g1 = 0.0;
 
     // GIORNATA 2
     MassimilianoMoretti.g2 = 0.0;
@@ -635,504 +633,7 @@
     MattiaMasotti.final = 0.0;
 
 
-//Extra da eliminare (inizio)
-MassimilianoMoretti.g1 = 8.25;
-AndreaMoretti.g1 = 5.5;
-LarryTrevisan.g1 = 2.75;
-AlessandroCostantini.g1 = 6.0;
-MatteoMargarit.g1 = 4.0;
-MauroCuridori.g1 = 9.75;
-ChristianZanet.g1 = 1.5;
-GiacomoPiacentini.g1 = 7.25;
-GiovanniDalFarra.g1 = 3.75;
-MiracleObichukwu.g1 = 10.0;
-LucaDellaLonga.g1 = 4.75;
-AlessandroRojatti.g1 = 6.5;
-MicheleGorasso.g1 = 0.0;
-GiacomoFerigo.g1 = 7.75;
-UmbertoNobile.g1 = 8.5;
-DevinChiarcos.g1 = 9.0;
-ValentinoCigainero.g1 = 5.25;
-MicheleDeAnna.g1 = 2.5;
-DavideParon.g1 = 1.0;
-AlessioFurlan.g1 = 0.25;
-MichaelMargarit.g1 = 9.5;
-SebastianoTonizzo.g1 = 3.0;
 
-DanieleGanzit.g1 = 7.0;
-GiacomoSilvestri.g1 = 8.75;
-VittorioGri.g1 = 6.75;
-VittorioBasso.g1 = 5.0;
-AlessandroRizzi.g1 = 4.25;
-MassimoBaldassi.g1 = 2.0;
-GabrieleMiani.g1 = 0.5;
-MarcoMarchetti.g1 = 10.0;
-MarcoLombardo.g1 = 8.0;
-MicheleVendrame.g1 = 7.5;
-LorenzoSchinella.g1 = 6.25;
-GioeleTudini.g1 = 5.75;
-FilippoPasquon.g1 = 3.5;
-TommasoMartello.g1 = 4.5;
-MarcoRizzi.g1 = 9.25;
-DavidGaspardo.g1 = 2.25;
-AntonioGri.g1 = 1.75;
-RiccardoSchinella.g1 = 3.25;
-
-SimoneMartinelli.g1 = 6.0;
-MatteoSpagnolo.g1 = 4.75;
-DavideFaurlin.g1 = 2.5;
-GiovanniTonizzo.g1 = 1.25;
-AlessandroSant.g1 = 0.75;
-MatteoBazzaro.g1 = 9.5;
-AlessandroSantin.g1 = 7.25;
-AlessandroGalassi.g1 = 6.0;
-PietroSoramel.g1 = 4.0;
-FilippoAgnoluzzi.g1 = 2.75;
-EmanueleDaneluzzi.g1 = 1.5;
-LucaSoramel.g1 = 0.25;
-PaoloZorzi.g1 = 8.75;
-ChristianFedrizzi.g1 = 7.0;
-FilippoSappa.g1 = 5.25;
-GiovanniZanin.g1 = 3.5;
-EnricoSant.g1 = 9.75;
-StefanoPolano.g1 = 1.0;
-
-MarcoPolo.g1 = 6.5;
-MarcoSerrao.g1 = 4.25;
-WilliamIob.g1 = 2.0;
-DavideBroggi.g1 = 0.5;
-AlexMicottis.g1 = 10.0;
-MassimilianoRossi.g1 = 8.25;
-MassimoMasotti.g1 = 7.0;
-EugenioDeTina.g1 = 5.75;
-LucaAnedda.g1 = 4.5;
-DenisVanin.g1 = 2.25;
-ThomasBaracetti.g1 = 9.0;
-LucaGemo.g1 = 0.75;
-DiegoNata.g1 = 3.0;
-MattiaRoiatti.g1 = 1.5;
-EdoardoPicogna.g1 = 8.75;
-MauroPerina.g1 = 7.25;
-LorenzoMoro.g1 = 5.0;
-GionaTell.g1 = 3.5;
-IacopoPivetta.g1 = 1.25;
-MattiaMasotti.g1 = 9.5;
-
-MassimilianoMoretti.g2 = 0.5;
-AndreaMoretti.g2 = 8.0;
-LarryTrevisan.g2 = 6.25;
-AlessandroCostantini.g2 = 4.0;
-MatteoMargarit.g2 = 2.25;
-MauroCuridori.g2 = 1.0;
-ChristianZanet.g2 = 9.75;
-GiacomoPiacentini.g2 = 8.25;
-GiovanniDalFarra.g2 = 7.5;
-MiracleObichukwu.g2 = 5.75;
-LucaDellaLonga.g2 = 4.5;
-AlessandroRojatti.g2 = 3.25;
-MicheleGorasso.g2 = 2.0;
-GiacomoFerigo.g2 = 1.25;
-UmbertoNobile.g2 = 0.0;
-DevinChiarcos.g2 = 9.0;
-ValentinoCigainero.g2 = 7.25;
-MicheleDeAnna.g2 = 5.5;
-DavideParon.g2 = 3.75;
-AlessioFurlan.g2 = 2.5;
-MichaelMargarit.g2 = 1.75;
-SebastianoTonizzo.g2 = 0.25;
-
-DanieleGanzit.g2 = 6.75;
-GiacomoSilvestri.g2 = 5.0;
-VittorioGri.g2 = 3.5;
-VittorioBasso.g2 = 2.25;
-AlessandroRizzi.g2 = 1.0;
-MassimoBaldassi.g2 = 0.0;
-GabrieleMiani.g2 = 8.75;
-MarcoMarchetti.g2 = 7.5;
-MarcoLombardo.g2 = 6.25;
-MicheleVendrame.g2 = 5.0;
-LorenzoSchinella.g2 = 4.75;
-GioeleTudini.g2 = 3.0;
-FilippoPasquon.g2 = 1.25;
-TommasoMartello.g2 = 0.5;
-MarcoRizzi.g2 = 9.75;
-DavidGaspardo.g2 = 8.25;
-AntonioGri.g2 = 7.0;
-RiccardoSchinella.g2 = 6.5;
-
-SimoneMartinelli.g2 = 4.25;
-MatteoSpagnolo.g2 = 3.0;
-DavideFaurlin.g2 = 2.75;
-GiovanniTonizzo.g2 = 1.0;
-AlessandroSant.g2 = 0.0;
-MatteoBazzaro.g2 = 9.5;
-AlessandroSantin.g2 = 8.0;
-AlessandroGalassi.g2 = 7.25;
-PietroSoramel.g2 = 6.0;
-FilippoAgnoluzzi.g2 = 5.25;
-EmanueleDaneluzzi.g2 = 4.0;
-LucaSoramel.g2 = 3.5;
-PaoloZorzi.g2 = 2.25;
-ChristianFedrizzi.g2 = 1.0;
-FilippoSappa.g2 = 0.0;
-GiovanniZanin.g2 = 8.75;
-EnricoSant.g2 = 7.5;
-StefanoPolano.g2 = 6.0;
-
-MarcoPolo.g2 = 4.75;
-MarcoSerrao.g2 = 3.25;
-WilliamIob.g2 = 2.0;
-DavideBroggi.g2 = 0.5;
-AlexMicottis.g2 = 10.0;
-MassimilianoRossi.g2 = 8.25;
-MassimoMasotti.g2 = 7.0;
-EugenioDeTina.g2 = 5.75;
-LucaAnedda.g2 = 4.5;
-DenisVanin.g2 = 2.25;
-ThomasBaracetti.g2 = 9.0;
-LucaGemo.g2 = 0.75;
-DiegoNata.g2 = 3.0;
-MattiaRoiatti.g2 = 1.5;
-EdoardoPicogna.g2 = 8.75;
-MauroPerina.g2 = 7.25;
-LorenzoMoro.g2 = 5.0;
-GionaTell.g2 = 3.5;
-IacopoPivetta.g2 = 1.25;
-MattiaMasotti.g2 = 9.5;
-
-MassimilianoMoretti.g3 = 1.5;
-AndreaMoretti.g3 = 9.0;
-LarryTrevisan.g3 = 7.25;
-AlessandroCostantini.g3 = 5.0;
-MatteoMargarit.g3 = 3.75;
-MauroCuridori.g3 = 2.0;
-ChristianZanet.g3 = 0.25;
-GiacomoPiacentini.g3 = 9.5;
-GiovanniDalFarra.g3 = 8.0;
-MiracleObichukwu.g3 = 6.75;
-LucaDellaLonga.g3 = 5.25;
-AlessandroRojatti.g3 = 4.0;
-MicheleGorasso.g3 = 3.5;
-GiacomoFerigo.g3 = 2.25;
-UmbertoNobile.g3 = 1.0;
-DevinChiarcos.g3 = 0.75;
-ValentinoCigainero.g3 = 8.25;
-MicheleDeAnna.g3 = 7.0;
-DavideParon.g3 = 5.75;
-AlessioFurlan.g3 = 4.5;
-MichaelMargarit.g3 = 3.0;
-SebastianoTonizzo.g3 = 2.75;
-
-DanieleGanzit.g3 = 0.0;
-GiacomoSilvestri.g3 = 9.25;
-VittorioGri.g3 = 8.0;
-VittorioBasso.g3 = 6.5;
-AlessandroRizzi.g3 = 5.0;
-MassimoBaldassi.g3 = 3.75;
-GabrieleMiani.g3 = 2.25;
-MarcoMarchetti.g3 = 1.0;
-MarcoLombardo.g3 = 0.5;
-MicheleVendrame.g3 = 9.75;
-LorenzoSchinella.g3 = 8.5;
-GioeleTudini.g3 = 7.25;
-FilippoPasquon.g3 = 6.0;
-TommasoMartello.g3 = 4.75;
-MarcoRizzi.g3 = 3.0;
-DavidGaspardo.g3 = 1.5;
-AntonioGri.g3 = 0.0;
-RiccardoSchinella.g3 = 9.5;
-
-SimoneMartinelli.g3 = 8.25;
-MatteoSpagnolo.g3 = 7.0;
-DavideFaurlin.g3 = 5.75;
-GiovanniTonizzo.g3 = 4.5;
-AlessandroSant.g3 = 3.0;
-MatteoBazzaro.g3 = 2.75;
-AlessandroSantin.g3 = 1.25;
-AlessandroGalassi.g3 = 0.0;
-PietroSoramel.g3 = 9.75;
-FilippoAgnoluzzi.g3 = 8.0;
-EmanueleDaneluzzi.g3 = 7.5;
-LucaSoramel.g3 = 6.25;
-PaoloZorzi.g3 = 5.0;
-ChristianFedrizzi.g3 = 4.75;
-FilippoSappa.g3 = 3.5;
-GiovanniZanin.g3 = 2.25;
-EnricoSant.g3 = 1.0;
-StefanoPolano.g3 = 0.25;
-
-MarcoPolo.g3 = 10.0;
-MarcoSerrao.g3 = 8.75;
-WilliamIob.g3 = 7.5;
-DavideBroggi.g3 = 6.0;
-AlexMicottis.g3 = 4.75;
-MassimilianoRossi.g3 = 3.25;
-MassimoMasotti.g3 = 2.0;
-EugenioDeTina.g3 = 0.0;
-LucaAnedda.g3 = 9.5;
-DenisVanin.g3 = 8.25;
-ThomasBaracetti.g3 = 7.0;
-LucaGemo.g3 = 5.75;
-DiegoNata.g3 = 4.5;
-MattiaRoiatti.g3 = 3.0;
-EdoardoPicogna.g3 = 2.75;
-MauroPerina.g3 = 1.25;
-LorenzoMoro.g3 = 0.0;
-GionaTell.g3 = 9.75;
-IacopoPivetta.g3 = 8.5;
-MattiaMasotti.g3 = 7.25;
-
-// SEMI
-MassimilianoMoretti.semi = 4.25;
-AndreaMoretti.semi = 7.5;
-LarryTrevisan.semi = 1.25;
-AlessandroCostantini.semi = 6.75;
-MatteoMargarit.semi = 3.0;
-MauroCuridori.semi = 2.5;
-ChristianZanet.semi = 6.0;
-GiacomoPiacentini.semi = 0.5;
-GiovanniDalFarra.semi = 9.75;
-MiracleObichukwu.semi = 6.5;
-LucaDellaLonga.semi = 3.75;
-AlessandroRojatti.semi = 8.25;
-MicheleGorasso.semi = 7.0;
-GiacomoFerigo.semi = 2.75;
-UmbertoNobile.semi = 1.5;
-DevinChiarcos.semi = 9.5;
-ValentinoCigainero.semi = 6.0;
-MicheleDeAnna.semi = 4.25;
-DavideParon.semi = 1.0;
-AlessioFurlan.semi = 2.5;
-MichaelMargarit.semi = 7.75;
-SebastianoTonizzo.semi = 3.25;
-
-DanieleGanzit.semi = 5.25;
-GiacomoSilvestri.semi = 4.75;
-VittorioGri.semi = 8.5;
-VittorioBasso.semi = 1.5;
-AlessandroRizzi.semi = 9.25;
-MassimoBaldassi.semi = 6.0;
-GabrieleMiani.semi = 7.75;
-MarcoMarchetti.semi = 5.5;
-MarcoLombardo.semi = 8.0;
-MicheleVendrame.semi = 2.75;
-LorenzoSchinella.semi = 4.5;
-GioeleTudini.semi = 9.0;
-FilippoPasquon.semi = 3.5;
-TommasoMartello.semi = 1.25;
-MarcoRizzi.semi = 8.0;
-DavidGaspardo.semi = 6.25;
-AntonioGri.semi = 0.75;
-RiccardoSchinella.semi = 8.5;
-
-SimoneMartinelli.semi = 5.5;
-MatteoSpagnolo.semi = 7.25;
-DavideFaurlin.semi = 2.0;
-GiovanniTonizzo.semi = 3.5;
-AlessandroSant.semi = 10.0;
-MatteoBazzaro.semi = 4.0;
-AlessandroSantin.semi = 7.25;
-AlessandroGalassi.semi = 2.0;
-PietroSoramel.semi = 6.5;
-FilippoAgnoluzzi.semi = 0.25;
-EmanueleDaneluzzi.semi = 2.75;
-LucaSoramel.semi = 5.0;
-PaoloZorzi.semi = 9.0;
-ChristianFedrizzi.semi = 5.0;
-FilippoSappa.semi = 3.0;
-GiovanniZanin.semi = 2.0;
-EnricoSant.semi = 6.5;
-StefanoPolano.semi = 2.0;
-
-MarcoPolo.semi = 9.0;
-MarcoSerrao.semi = 0.5;
-WilliamIob.semi = 3.75;
-DavideBroggi.semi = 9.5;
-AlexMicottis.semi = 5.5;
-MassimilianoRossi.semi = 4.75;
-MassimoMasotti.semi = 7.5;
-EugenioDeTina.semi = 1.75;
-LucaAnedda.semi = 7.0;
-DenisVanin.semi = 0.25;
-ThomasBaracetti.semi = 2.5;
-LucaGemo.semi = 7.75;
-DiegoNata.semi = 4.5;
-MattiaRoiatti.semi = 3.25;
-EdoardoPicogna.semi = 8.25;
-MauroPerina.semi = 1.0;
-LorenzoMoro.semi = 5.25;
-GionaTell.semi = 0.5;
-IacopoPivetta.semi = 8.5;
-MattiaMasotti.semi = 2.25;
-
-// Tiro da 3
-MassimilianoMoretti.td3 = 5.25;
-AndreaMoretti.td3 = 6.0;
-LarryTrevisan.td3 = 2.0;
-AlessandroCostantini.td3 = 4.5;
-MatteoMargarit.td3 = 2.25;
-MauroCuridori.td3 = 8.75;
-ChristianZanet.td3 = 3.5;
-GiacomoPiacentini.td3 = 7.5;
-GiovanniDalFarra.td3 = 0.5;
-MiracleObichukwu.td3 = 6.25;
-LucaDellaLonga.td3 = 4.75;
-AlessandroRojatti.td3 = 2.0;
-MicheleGorasso.td3 = 9.25;
-GiacomoFerigo.td3 = 5.5;
-UmbertoNobile.td3 = 1.75;
-DevinChiarcos.td3 = 0.75;
-ValentinoCigainero.td3 = 3.5;
-MicheleDeAnna.td3 = 10.0;
-DavideParon.td3 = 2.5;
-AlessioFurlan.td3 = 8.5;
-MichaelMargarit.td3 = 0.5;
-SebastianoTonizzo.td3 = 4.75;
-
-DanieleGanzit.td3 = 6.25;
-GiacomoSilvestri.td3 = 1.25;
-VittorioGri.td3 = 7.75;
-VittorioBasso.td3 = 4.0;
-AlessandroRizzi.td3 = 5.0;
-MassimoBaldassi.td3 = 0.0;
-GabrieleMiani.td3 = 9.5;
-MarcoMarchetti.td3 = 2.5;
-MarcoLombardo.td3 = 7.0;
-MicheleVendrame.td3 = 3.25;
-LorenzoSchinella.td3 = 5.0;
-GioeleTudini.td3 = 0.25;
-FilippoPasquon.td3 = 8.5;
-TommasoMartello.td3 = 1.75;
-MarcoRizzi.td3 = 6.0;
-DavidGaspardo.td3 = 2.75;
-AntonioGri.td3 = 5.5;
-RiccardoSchinella.td3 = 0.5;
-
-SimoneMartinelli.td3 = 3.75;
-MatteoSpagnolo.td3 = 9.0;
-DavideFaurlin.td3 = 1.25;
-GiovanniTonizzo.td3 = 8.0;
-AlessandroSant.td3 = 4.25;
-MatteoBazzaro.td3 = 5.5;
-AlessandroSantin.td3 = 3.0;
-AlessandroGalassi.td3 = 3.5;
-PietroSoramel.td3 = 7.75;
-FilippoAgnoluzzi.td3 = 0.75;
-EmanueleDaneluzzi.td3 = 9.5;
-LucaSoramel.td3 = 6.5;
-PaoloZorzi.td3 = 1.0;
-ChristianFedrizzi.td3 = 4.25;
-FilippoSappa.td3 = 3.0;
-GiovanniZanin.td3 = 0.5;
-EnricoSant.td3 = 5.25;
-StefanoPolano.td3 = 7.0;
-
-MarcoPolo.td3 = 8.75;
-MarcoSerrao.td3 = 2.0;
-WilliamIob.td3 = 3.0;
-DavideBroggi.td3 = 5.0;
-AlexMicottis.td3 = 1.5;
-MassimilianoRossi.td3 = 0.75;
-MassimoMasotti.td3 = 8.25;
-EugenioDeTina.td3 = 4.0;
-LucaAnedda.td3 = 6.5;
-DenisVanin.td3 = 7.75;
-ThomasBaracetti.td3 = 9.75;
-LucaGemo.td3 = 1.0;
-DiegoNata.td3 = 5.75;
-MattiaRoiatti.td3 = 1.5;
-EdoardoPicogna.td3 = 2.5;
-MauroPerina.td3 = 7.75;
-LorenzoMoro.td3 = 0.5;
-GionaTell.td3 = 6.75;
-IacopoPivetta.td3 = 4.5;
-MattiaMasotti.td3 = 0.25;
-
-// FINALE
-MassimilianoMoretti.final = 2.25;
-AndreaMoretti.final = 5.5;
-LarryTrevisan.final = 7.0;
-AlessandroCostantini.final = 0.0;
-MatteoMargarit.final = 7.75;
-MauroCuridori.final = 1.25;
-ChristianZanet.final = 4.5;
-GiacomoPiacentini.final = 10.0;
-GiovanniDalFarra.final = 3.5;
-MiracleObichukwu.final = 0.75;
-LucaDellaLonga.final = 8.25;
-AlessandroRojatti.final = 4.25;
-MicheleGorasso.final = 3.0;
-GiacomoFerigo.final = 7.75;
-UmbertoNobile.final = 2.75;
-DevinChiarcos.final = 5.75;
-ValentinoCigainero.final = 1.5;
-MicheleDeAnna.final = 6.0;
-DavideParon.final = 6.0;
-AlessioFurlan.final = 1.0;
-MichaelMargarit.final = 9.0;
-SebastianoTonizzo.final = 0.5;
-
-DanieleGanzit.final = 5.0;
-GiacomoSilvestri.final = 8.75;
-VittorioGri.final = 9.25;
-VittorioBasso.final = 2.75;
-AlessandroRizzi.final = 1.0;
-MassimoBaldassi.final = 5.0;
-GabrieleMiani.final = 0.25;
-MarcoMarchetti.final = 7.0;
-MarcoLombardo.final = 3.25;
-MicheleVendrame.final = 4.5;
-LorenzoSchinella.final = 0.5;
-GioeleTudini.final = 7.25;
-FilippoPasquon.final = 6.0;
-TommasoMartello.final = 2.75;
-MarcoRizzi.final = 4.0;
-DavidGaspardo.final = 8.5;
-AntonioGri.final = 1.5;
-RiccardoSchinella.final = 9.75;
-
-SimoneMartinelli.final = 1.0;
-MatteoSpagnolo.final = 6.75;
-DavideFaurlin.final = 4.5;
-GiovanniTonizzo.final = 2.5;
-AlessandroSant.final = 3.5;
-MatteoBazzaro.final = 7.25;
-AlessandroSantin.final = 5.75;
-AlessandroGalassi.final = 8.0;
-PietroSoramel.final = 4.0;
-FilippoAgnoluzzi.final = 9.5;
-EmanueleDaneluzzi.final = 1.0;
-LucaSoramel.final = 5.0;
-PaoloZorzi.final = 6.5;
-ChristianFedrizzi.final = 2.25;
-FilippoSappa.final = 7.5;
-GiovanniZanin.final = 0.75;
-EnricoSant.final = 3.75;
-StefanoPolano.final = 0.5;
-
-MarcoPolo.final = 4.25;
-MarcoSerrao.final = 1.5;
-WilliamIob.final = 9.75;
-DavideBroggi.final = 0.25;
-AlexMicottis.final = 6.5;
-MassimilianoRossi.final = 8.5;
-MassimoMasotti.final = 3.25;
-EugenioDeTina.final = 2.0;
-LucaAnedda.final = 9.5;
-DenisVanin.final = 5.0;
-ThomasBaracetti.final = 7.75;
-LucaGemo.final = 5.75;
-DiegoNata.final = 0.25;
-MattiaRoiatti.final = 8.75;
-EdoardoPicogna.final = 2.75;
-MauroPerina.final = 6.5;
-LorenzoMoro.final = 7.0;
-GionaTell.final = 0.0;
-IacopoPivetta.final = 9.0;
-MattiaMasotti.final = 1.25;
-
-
-//Extra da eliminare (fine)
 
     const players = [MassimilianoMoretti, AndreaMoretti, LarryTrevisan, AlessandroCostantini, MatteoMargarit, 
         MauroCuridori, ChristianZanet, GiacomoPiacentini, GiovanniDalFarra, MiracleObichukwu, LucaDellaLonga, 
@@ -1163,13 +664,13 @@ MattiaMasotti.final = 1.25;
     const ft1 = {
         ...fantateam_type,
         team_index: 1,
-        name: "CesoloilNordAP",
-        rione: { ...NORD },
-        p1: { ...DiegoNata },
-        p2: { ...LucaAnedda },
-        p3: { ...FilippoPasquon },
-        p4: { ...AlessandroRizzi },
-        p5: { ...GiacomoPiacentini },
+        name: "Burritos Picantes",
+        rione: { ...EST },
+        p1: { ...EdoardoPicogna },
+        p2: { ...WilliamIob },
+        p3: { ...FilippoSappa },
+        p4: { ...UmbertoNobile },
+        p5: { ...MatteoSpagnolo },
     };
     ft1.total_cost = ft1.p1.cost + ft1.p2.cost + ft1.p3.cost + ft1.p4.cost + ft1.p5.cost;
     ft1.tot_g1 = ft1.p1.g1 + ft1.p2.g1 + ft1.p3.g1 + ft1.p4.g1 + ft1.p5.g1;
@@ -1182,13 +683,13 @@ MattiaMasotti.final = 1.25;
     const ft2 = {
         ...fantateam_type,
         team_index: 2,
-        name: "Pangri",
-        rione: { ...EST },
-        p1: { ...MarcoRizzi },
-        p2: { ...AlessioFurlan },
+        name: "Nord",
+        rione: { ...NORD },
+        p1: { ...AlessandroRizzi },
+        p2: { ...DevinChiarcos },
         p3: { ...UmbertoNobile },
-        p4: { ...MassimilianoMoretti },
-        p5: { ...MarcoPolo },
+        p4: { ...GiacomoFerigo },
+        p5: { ...AlessandroSant },
     };
     ft2.total_cost = ft2.p1.cost + ft2.p2.cost + ft2.p3.cost + ft2.p4.cost + ft2.p5.cost;
     ft2.tot_g1 = ft2.p1.g1 + ft2.p2.g1 + ft2.p3.g1 + ft2.p4.g1 + ft2.p5.g1;
@@ -1201,13 +702,13 @@ MattiaMasotti.final = 1.25;
     const ft3 = {
         ...fantateam_type,
         team_index: 3,
-        name: "Massive Crash",
-        rione: { ...EST },
-        p1: { ...LucaSoramel },
-        p2: { ...AlessandroSant },
-        p3: { ...PietroSoramel },
-        p4: { ...AlessandroRizzi },
-        p5: { ...AndreaMoretti },
+        name: "Festainvigna",
+        rione: { ...WEST },
+        p1: { ...FilippoAgnoluzzi },
+        p2: { ...UmbertoNobile },
+        p3: { ...MatteoSpagnolo },
+        p4: { ...MassimilianoMoretti },
+        p5: { ...PaoloZorzi },
     };
     ft3.total_cost = ft3.p1.cost + ft3.p2.cost + ft3.p3.cost + ft3.p4.cost + ft3.p5.cost;
     ft3.tot_g1 = ft3.p1.g1 + ft3.p2.g1 + ft3.p3.g1 + ft3.p4.g1 + ft3.p5.g1;
@@ -1220,13 +721,13 @@ MattiaMasotti.final = 1.25;
     const ft4 = {
         ...fantateam_type,
         team_index: 4,
-        name: "pausa giacomone",
-        rione: { ...SUD },
-        p1: { ...ChristianFedrizzi },
-        p2: { ...VittorioGri },
-        p3: { ...MatteoSpagnolo },
-        p4: { ...PaoloZorzi },
-        p5: { ...DavidGaspardo },
+        name: "Pangri",
+        rione: { ...EST },
+        p1: { ...MarcoRizzi },
+        p2: { ...AlessioFurlan },
+        p3: { ...UmbertoNobile },
+        p4: { ...MassimilianoMoretti },
+        p5: { ...MarcoPolo },
     };
     ft4.total_cost = ft4.p1.cost + ft4.p2.cost + ft4.p3.cost + ft4.p4.cost + ft4.p5.cost;
     ft4.tot_g1 = ft4.p1.g1 + ft4.p2.g1 + ft4.p3.g1 + ft4.p4.g1 + ft4.p5.g1;
@@ -1239,13 +740,13 @@ MattiaMasotti.final = 1.25;
     const ft5 = {
         ...fantateam_type,
         team_index: 5,
-        name: "🦀",
+        name: "Zoo_Rehab",
         rione: { ...WEST },
-        p1: { ...PietroSoramel },
-        p2: { ...MassimilianoMoretti },
-        p3: { ...AlessioFurlan },
-        p4: { ...LucaSoramel },
-        p5: { ...MarcoRizzi },
+        p1: { ...DavidGaspardo },
+        p2: { ...UmbertoNobile },
+        p3: { ...DevinChiarcos },
+        p4: { ...GiacomoPiacentini },
+        p5: { ...FilippoPasquon },
     };
     ft5.total_cost = ft5.p1.cost + ft5.p2.cost + ft5.p3.cost + ft5.p4.cost + ft5.p5.cost;
     ft5.tot_g1 = ft5.p1.g1 + ft5.p2.g1 + ft5.p3.g1 + ft5.p4.g1 + ft5.p5.g1;
@@ -1258,13 +759,13 @@ MattiaMasotti.final = 1.25;
     const ft6 = {
         ...fantateam_type,
         team_index: 6,
-        name: "Ta qifsha pidhin",
-        rione: { ...EST },
-        p1: { ...GionaTell },
-        p2: { ...AlessandroSantin },
-        p3: { ...MassimilianoMoretti },
-        p4: { ...MassimoBaldassi },
-        p5: { ...LarryTrevisan },
+        name: "Nordes",
+        rione: { ...NORD },
+        p1: { ...DiegoNata },
+        p2: { ...FilippoPasquon },
+        p3: { ...UmbertoNobile },
+        p4: { ...LucaAnedda },
+        p5: { ...DevinChiarcos },
     };
     ft6.total_cost = ft6.p1.cost + ft6.p2.cost + ft6.p3.cost + ft6.p4.cost + ft6.p5.cost;
     ft6.tot_g1 = ft6.p1.g1 + ft6.p2.g1 + ft6.p3.g1 + ft6.p4.g1 + ft6.p5.g1;
@@ -1277,13 +778,13 @@ MattiaMasotti.final = 1.25;
     const ft7 = {
         ...fantateam_type,
         team_index: 7,
-        name: "A tutta birra",
-        rione: { ...NORD },
-        p1: { ...MarcoRizzi },
-        p2: { ...LucaSoramel },
-        p3: { ...EugenioDeTina },
-        p4: { ...MassimilianoMoretti },
-        p5: { ...EnricoSant },
+        name: "Estateam",
+        rione: { ...EST },
+        p1: { ...SimoneMartinelli },
+        p2: { ...UmbertoNobile },
+        p3: { ...MattiaMasotti },
+        p4: { ...FilippoSappa },
+        p5: { ...FilippoPasquon },
     };
     ft7.total_cost = ft7.p1.cost + ft7.p2.cost + ft7.p3.cost + ft7.p4.cost + ft7.p5.cost;
     ft7.tot_g1 = ft7.p1.g1 + ft7.p2.g1 + ft7.p3.g1 + ft7.p4.g1 + ft7.p5.g1;
@@ -1296,13 +797,13 @@ MattiaMasotti.final = 1.25;
     const ft8 = {
         ...fantateam_type,
         team_index: 8,
-        name: "Leggende",
+        name: "stirati",
         rione: { ...NORD },
-        p1: { ...LarryTrevisan },
-        p2: { ...DanieleGanzit },
-        p3: { ...MarcoPolo },
-        p4: { ...MarcoSerrao },
-        p5: { ...AlessandroSant },
+        p1: { ...UmbertoNobile },
+        p2: { ...AlessandroSant },
+        p3: { ...FilippoPasquon },
+        p4: { ...MiracleObichukwu },
+        p5: { ...LarryTrevisan },
     };
     ft8.total_cost = ft8.p1.cost + ft8.p2.cost + ft8.p3.cost + ft8.p4.cost + ft8.p5.cost;
     ft8.tot_g1 = ft8.p1.g1 + ft8.p2.g1 + ft8.p3.g1 + ft8.p4.g1 + ft8.p5.g1;
@@ -1315,12 +816,12 @@ MattiaMasotti.final = 1.25;
     const ft9 = {
         ...fantateam_type,
         team_index: 9,
-        name: "sustovich",
-        rione: { ...WEST },
-        p1: { ...MiracleObichukwu },
-        p2: { ...MassimilianoMoretti },
-        p3: { ...LucaSoramel },
-        p4: { ...AndreaMoretti },
+        name: "emosbobna",
+        rione: { ...NORD },
+        p1: { ...DevinChiarcos },
+        p2: { ...MarcoLombardo },
+        p3: { ...GiovanniZanin },
+        p4: { ...MattiaRoiatti },
         p5: { ...PietroSoramel },
     };
     ft9.total_cost = ft9.p1.cost + ft9.p2.cost + ft9.p3.cost + ft9.p4.cost + ft9.p5.cost;
@@ -1334,12 +835,12 @@ MattiaMasotti.final = 1.25;
     const ft10 = {
         ...fantateam_type,
         team_index: 10,
-        name: "TheFinalCut95",
+        name: "Gabro's top team",
         rione: { ...WEST },
-        p1: { ...AlessandroSant },
-        p2: { ...LucaSoramel },
-        p3: { ...DanieleGanzit },
-        p4: { ...UmbertoNobile },
+        p1: { ...UmbertoNobile },
+        p2: { ...AlessandroCostantini },
+        p3: { ...MarcoSerrao },
+        p4: { ...MiracleObichukwu },
         p5: { ...EnricoSant },
     };
     ft10.total_cost = ft10.p1.cost + ft10.p2.cost + ft10.p3.cost + ft10.p4.cost + ft10.p5.cost;
@@ -1353,13 +854,13 @@ MattiaMasotti.final = 1.25;
     const ft11 = {
         ...fantateam_type,
         team_index: 11,
-        name: "stirati",
+        name: "oilapledecoval",
         rione: { ...NORD },
-        p1: { ...UmbertoNobile },
-        p2: { ...AlessandroSant },
-        p3: { ...FilippoPasquon },
-        p4: { ...MiracleObichukwu },
-        p5: { ...LarryTrevisan },
+        p1: { ...AlessandroSantin },
+        p2: { ...MarcoMarchetti },
+        p3: { ...DavidGaspardo },
+        p4: { ...UmbertoNobile },
+        p5: { ...PietroSoramel },
     };
     ft11.total_cost = ft11.p1.cost + ft11.p2.cost + ft11.p3.cost + ft11.p4.cost + ft11.p5.cost;
     ft11.tot_g1 = ft11.p1.g1 + ft11.p2.g1 + ft11.p3.g1 + ft11.p4.g1 + ft11.p5.g1;
@@ -1372,13 +873,13 @@ MattiaMasotti.final = 1.25;
     const ft12 = {
         ...fantateam_type,
         team_index: 12,
-        name: "Ghisangeles Clippers II",
-        rione: { ...EST },
-        p1: { ...MattiaMasotti },
-        p2: { ...ChristianZanet },
-        p3: { ...FilippoPasquon },
-        p4: { ...DavidGaspardo },
-        p5: { ...MassimilianoRossi },
+        name: "Armata Rossa",
+        rione: { ...NORD },
+        p1: { ...MarcoRizzi },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...UmbertoNobile },
+        p4: { ...MassimilianoRossi },
+        p5: { ...LucaAnedda },
     };
     ft12.total_cost = ft12.p1.cost + ft12.p2.cost + ft12.p3.cost + ft12.p4.cost + ft12.p5.cost;
     ft12.tot_g1 = ft12.p1.g1 + ft12.p2.g1 + ft12.p3.g1 + ft12.p4.g1 + ft12.p5.g1;
@@ -1391,13 +892,13 @@ MattiaMasotti.final = 1.25;
     const ft13 = {
         ...fantateam_type,
         team_index: 13,
-        name: "Nipponici",
-        rione: { ...EST },
-        p1: { ...AndreaMoretti },
-        p2: { ...MattiaRoiatti },
-        p3: { ...DiegoNata },
-        p4: { ...AlessandroRizzi },
-        p5: { ...PietroSoramel },
+        name: "La Betty",
+        rione: { ...WEST },
+        p1: { ...EmanueleDaneluzzi },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...PietroSoramel },
+        p4: { ...EdoardoPicogna },
+        p5: { ...MiracleObichukwu },
     };
     ft13.total_cost = ft13.p1.cost + ft13.p2.cost + ft13.p3.cost + ft13.p4.cost + ft13.p5.cost;
     ft13.tot_g1 = ft13.p1.g1 + ft13.p2.g1 + ft13.p3.g1 + ft13.p4.g1 + ft13.p5.g1;
@@ -1410,13 +911,13 @@ MattiaMasotti.final = 1.25;
     const ft14 = {
         ...fantateam_type,
         team_index: 14,
-        name: "NORDmania",
-        rione: { ...NORD },
-        p1: { ...GioeleTudini },
-        p2: { ...MassimilianoMoretti },
-        p3: { ...FilippoPasquon },
-        p4: { ...MatteoSpagnolo },
-        p5: { ...MattiaMasotti },
+        name: "Estinti",
+        rione: { ...WEST },
+        p1: { ...UmbertoNobile },
+        p2: { ...AlessandroCostantini },
+        p3: { ...AlessandroSant },
+        p4: { ...MauroPerina },
+        p5: { ...MarcoMarchetti },
     };
     ft14.total_cost = ft14.p1.cost + ft14.p2.cost + ft14.p3.cost + ft14.p4.cost + ft14.p5.cost;
     ft14.tot_g1 = ft14.p1.g1 + ft14.p2.g1 + ft14.p3.g1 + ft14.p4.g1 + ft14.p5.g1;
@@ -1429,13 +930,13 @@ MattiaMasotti.final = 1.25;
     const ft15 = {
         ...fantateam_type,
         team_index: 15,
-        name: "Utopia (:",
-        rione: { ...WEST },
-        p1: { ...AndreaMoretti },
-        p2: { ...AlessandroRojatti },
-        p3: { ...MarcoRizzi },
-        p4: { ...MassimilianoMoretti },
-        p5: { ...AlessandroRizzi },
+        name: "C&C",
+        rione: { ...SUD },
+        p1: { ...FilippoSappa },
+        p2: { ...LorenzoMoro },
+        p3: { ...PietroSoramel },
+        p4: { ...EnricoSant },
+        p5: { ...DanieleGanzit },
     };
     ft15.total_cost = ft15.p1.cost + ft15.p2.cost + ft15.p3.cost + ft15.p4.cost + ft15.p5.cost;
     ft15.tot_g1 = ft15.p1.g1 + ft15.p2.g1 + ft15.p3.g1 + ft15.p4.g1 + ft15.p5.g1;
@@ -1448,13 +949,13 @@ MattiaMasotti.final = 1.25;
     const ft16 = {
         ...fantateam_type,
         team_index: 16,
-        name: "Robur Nazionale",
+        name: "🦀",
         rione: { ...WEST },
-        p1: { ...AlessandroRizzi },
-        p2: { ...MattiaMasotti },
-        p3: { ...MarcoSerrao },
-        p4: { ...MicheleDeAnna },
-        p5: { ...MiracleObichukwu },
+        p1: { ...PietroSoramel },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...AlessioFurlan },
+        p4: { ...LucaSoramel },
+        p5: { ...MarcoRizzi },
     };
     ft16.total_cost = ft16.p1.cost + ft16.p2.cost + ft16.p3.cost + ft16.p4.cost + ft16.p5.cost;
     ft16.tot_g1 = ft16.p1.g1 + ft16.p2.g1 + ft16.p3.g1 + ft16.p4.g1 + ft16.p5.g1;
@@ -1467,13 +968,13 @@ MattiaMasotti.final = 1.25;
     const ft17 = {
         ...fantateam_type,
         team_index: 17,
-        name: "SEBA CENGA",
-        rione: { ...WEST },
-        p1: { ...LucaDellaLonga },
-        p2: { ...DiegoNata },
-        p3: { ...AndreaMoretti },
-        p4: { ...UmbertoNobile },
-        p5: { ...DavideFaurlin },
+        name: "Melinda",
+        rione: { ...NORD },
+        p1: { ...PietroSoramel },
+        p2: { ...LucaSoramel },
+        p3: { ...MassimilianoMoretti },
+        p4: { ...AlessioFurlan },
+        p5: { ...AndreaMoretti },
     };
     ft17.total_cost = ft17.p1.cost + ft17.p2.cost + ft17.p3.cost + ft17.p4.cost + ft17.p5.cost;
     ft17.tot_g1 = ft17.p1.g1 + ft17.p2.g1 + ft17.p3.g1 + ft17.p4.g1 + ft17.p5.g1;
@@ -1486,13 +987,13 @@ MattiaMasotti.final = 1.25;
     const ft18 = {
         ...fantateam_type,
         team_index: 18,
-        name: "PSYCHO P",
-        rione: { ...NORD },
-        p1: { ...MarcoLombardo },
-        p2: { ...MarcoSerrao },
-        p3: { ...FilippoPasquon },
-        p4: { ...AlessandroCostantini },
-        p5: { ...VittorioBasso },
+        name: "Winxclub",
+        rione: { ...EST },
+        p1: { ...AlessioFurlan },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...LucaSoramel },
+        p4: { ...PietroSoramel },
+        p5: { ...LucaAnedda },
     };
     ft18.total_cost = ft18.p1.cost + ft18.p2.cost + ft18.p3.cost + ft18.p4.cost + ft18.p5.cost;
     ft18.tot_g1 = ft18.p1.g1 + ft18.p2.g1 + ft18.p3.g1 + ft18.p4.g1 + ft18.p5.g1;
@@ -1505,13 +1006,13 @@ MattiaMasotti.final = 1.25;
     const ft19 = {
         ...fantateam_type,
         team_index: 19,
-        name: "Vitellonseeee",
+        name: "tnerb",
         rione: { ...SUD },
-        p1: { ...AlessandroSantin },
-        p2: { ...MattiaMasotti },
-        p3: { ...AlessandroSant },
-        p4: { ...GiacomoPiacentini },
-        p5: { ...AlessandroCostantini },
+        p1: { ...MassimilianoMoretti },
+        p2: { ...GiovanniTonizzo },
+        p3: { ...PietroSoramel },
+        p4: { ...MarcoPolo },
+        p5: { ...MatteoSpagnolo },
     };
     ft19.total_cost = ft19.p1.cost + ft19.p2.cost + ft19.p3.cost + ft19.p4.cost + ft19.p5.cost;
     ft19.tot_g1 = ft19.p1.g1 + ft19.p2.g1 + ft19.p3.g1 + ft19.p4.g1 + ft19.p5.g1;
@@ -1524,13 +1025,13 @@ MattiaMasotti.final = 1.25;
     const ft20 = {
         ...fantateam_type,
         team_index: 20,
-        name: "Bitchass",
+        name: "Prime time players",
         rione: { ...WEST },
-        p1: { ...MarcoRizzi },
-        p2: { ...MassimilianoMoretti },
-        p3: { ...LucaAnedda },
-        p4: { ...LucaSoramel },
-        p5: { ...MattiaRoiatti },
+        p1: { ...LarryTrevisan },
+        p2: { ...MarcoSerrao },
+        p3: { ...UmbertoNobile },
+        p4: { ...FilippoPasquon },
+        p5: { ...LorenzoMoro },
     };
     ft20.total_cost = ft20.p1.cost + ft20.p2.cost + ft20.p3.cost + ft20.p4.cost + ft20.p5.cost;
     ft20.tot_g1 = ft20.p1.g1 + ft20.p2.g1 + ft20.p3.g1 + ft20.p4.g1 + ft20.p5.g1;
@@ -1543,13 +1044,13 @@ MattiaMasotti.final = 1.25;
     const ft21 = {
         ...fantateam_type,
         team_index: 21,
-        name: "La Foca per una Codroipo Libera",
-        rione: { ...NORD },
-        p1: { ...IacopoPivetta },
-        p2: { ...LarryTrevisan },
+        name: "Golden Cod Cepe’s Warriors",
+        rione: { ...SUD },
+        p1: { ...AntonioGri },
+        p2: { ...GiovanniZanin },
         p3: { ...MiracleObichukwu },
-        p4: { ...ValentinoCigainero },
-        p5: { ...MarcoPolo },
+        p4: { ...FilippoSappa },
+        p5: { ...GiovanniTonizzo },
     };
     ft21.total_cost = ft21.p1.cost + ft21.p2.cost + ft21.p3.cost + ft21.p4.cost + ft21.p5.cost;
     ft21.tot_g1 = ft21.p1.g1 + ft21.p2.g1 + ft21.p3.g1 + ft21.p4.g1 + ft21.p5.g1;
@@ -1562,13 +1063,13 @@ MattiaMasotti.final = 1.25;
     const ft22 = {
         ...fantateam_type,
         team_index: 22,
-        name: "fantadario",
+        name: "sustovich",
         rione: { ...WEST },
-        p1: { ...LarryTrevisan },
-        p2: { ...FilippoPasquon },
-        p3: { ...AlessandroSant },
-        p4: { ...AlessandroGalassi },
-        p5: { ...MattiaMasotti },
+        p1: { ...MiracleObichukwu },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...LucaSoramel },
+        p4: { ...AndreaMoretti },
+        p5: { ...PietroSoramel },
     };
     ft22.total_cost = ft22.p1.cost + ft22.p2.cost + ft22.p3.cost + ft22.p4.cost + ft22.p5.cost;
     ft22.tot_g1 = ft22.p1.g1 + ft22.p2.g1 + ft22.p3.g1 + ft22.p4.g1 + ft22.p5.g1;
@@ -1581,13 +1082,13 @@ MattiaMasotti.final = 1.25;
     const ft23 = {
         ...fantateam_type,
         team_index: 23,
-        name: "Zanzibar",
+        name: "Groviscrazia",
         rione: { ...WEST },
-        p1: { ...LarryTrevisan },
-        p2: { ...ChristianZanet },
-        p3: { ...FilippoPasquon },
-        p4: { ...MattiaMasotti },
-        p5: { ...AlessandroRizzi },
+        p1: { ...PietroSoramel },
+        p2: { ...LucaSoramel },
+        p3: { ...MiracleObichukwu },
+        p4: { ...MicheleVendrame },
+        p5: { ...MassimilianoMoretti },
     };
     ft23.total_cost = ft23.p1.cost + ft23.p2.cost + ft23.p3.cost + ft23.p4.cost + ft23.p5.cost;
     ft23.tot_g1 = ft23.p1.g1 + ft23.p2.g1 + ft23.p3.g1 + ft23.p4.g1 + ft23.p5.g1;
@@ -1600,13 +1101,13 @@ MattiaMasotti.final = 1.25;
     const ft24 = {
         ...fantateam_type,
         team_index: 24,
-        name: "ISTANBULKEBAB GLOBETROTTERS",
-        rione: { ...SUD },
-        p1: { ...ValentinoCigainero },
-        p2: { ...MicheleDeAnna },
-        p3: { ...MattiaRoiatti },
-        p4: { ...LucaAnedda },
-        p5: { ...GiacomoSilvestri },
+        name: "DEVIN",
+        rione: { ...WEST },
+        p1: { ...MassimilianoMoretti },
+        p2: { ...GiacomoPiacentini },
+        p3: { ...DevinChiarcos },
+        p4: { ...VittorioBasso },
+        p5: { ...FilippoPasquon },
     };
     ft24.total_cost = ft24.p1.cost + ft24.p2.cost + ft24.p3.cost + ft24.p4.cost + ft24.p5.cost;
     ft24.tot_g1 = ft24.p1.g1 + ft24.p2.g1 + ft24.p3.g1 + ft24.p4.g1 + ft24.p5.g1;
@@ -1619,13 +1120,13 @@ MattiaMasotti.final = 1.25;
     const ft25 = {
         ...fantateam_type,
         team_index: 25,
-        name: "Golden shower",
+        name: "Mia",
         rione: { ...WEST },
-        p1: { ...MattiaMasotti },
-        p2: { ...AlessandroRizzi },
-        p3: { ...MatteoMargarit },
-        p4: { ...PietroSoramel },
-        p5: { ...MattiaRoiatti },
+        p1: { ...DavideParon },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...DevinChiarcos },
+        p4: { ...MattiaMasotti },
+        p5: { ...FilippoPasquon },
     };
     ft25.total_cost = ft25.p1.cost + ft25.p2.cost + ft25.p3.cost + ft25.p4.cost + ft25.p5.cost;
     ft25.tot_g1 = ft25.p1.g1 + ft25.p2.g1 + ft25.p3.g1 + ft25.p4.g1 + ft25.p5.g1;
@@ -1638,13 +1139,13 @@ MattiaMasotti.final = 1.25;
     const ft26 = {
         ...fantateam_type,
         team_index: 26,
-        name: "DD",
+        name: "Goggo Bello",
         rione: { ...WEST },
-        p1: { ...MassimoMasotti },
-        p2: { ...MassimilianoMoretti },
-        p3: { ...AlessandroRizzi },
-        p4: { ...AntonioGri },
-        p5: { ...MatteoBazzaro },
+        p1: { ...AlessandroSant },
+        p2: { ...MiracleObichukwu },
+        p3: { ...UmbertoNobile },
+        p4: { ...TommasoMartello },
+        p5: { ...GionaTell },
     };
     ft26.total_cost = ft26.p1.cost + ft26.p2.cost + ft26.p3.cost + ft26.p4.cost + ft26.p5.cost;
     ft26.tot_g1 = ft26.p1.g1 + ft26.p2.g1 + ft26.p3.g1 + ft26.p4.g1 + ft26.p5.g1;
@@ -1657,13 +1158,13 @@ MattiaMasotti.final = 1.25;
     const ft27 = {
         ...fantateam_type,
         team_index: 27,
-        name: "zioperone",
+        name: "Rione Muscletto",
         rione: { ...NORD },
-        p1: { ...LorenzoMoro },
-        p2: { ...DavidGaspardo },
-        p3: { ...FilippoPasquon },
-        p4: { ...VittorioBasso },
-        p5: { ...WilliamIob },
+        p1: { ...GioeleTudini },
+        p2: { ...FilippoSappa },
+        p3: { ...LarryTrevisan },
+        p4: { ...AlessandroSant },
+        p5: { ...AlessandroRojatti },
     };
     ft27.total_cost = ft27.p1.cost + ft27.p2.cost + ft27.p3.cost + ft27.p4.cost + ft27.p5.cost;
     ft27.tot_g1 = ft27.p1.g1 + ft27.p2.g1 + ft27.p3.g1 + ft27.p4.g1 + ft27.p5.g1;
@@ -1676,13 +1177,13 @@ MattiaMasotti.final = 1.25;
     const ft28 = {
         ...fantateam_type,
         team_index: 28,
-        name: "Baskettone",
-        rione: { ...NORD },
-        p1: { ...MattiaRoiatti },
-        p2: { ...GabrieleMiani },
-        p3: { ...MauroPerina },
-        p4: { ...MarcoMarchetti },
-        p5: { ...MassimoMasotti },
+        name: "Oklahoma city tinder",
+        rione: { ...WEST },
+        p1: { ...DevinChiarcos },
+        p2: { ...MattiaRoiatti },
+        p3: { ...MattiaMasotti },
+        p4: { ...FilippoPasquon },
+        p5: { ...MassimilianoMoretti },
     };
     ft28.total_cost = ft28.p1.cost + ft28.p2.cost + ft28.p3.cost + ft28.p4.cost + ft28.p5.cost;
     ft28.tot_g1 = ft28.p1.g1 + ft28.p2.g1 + ft28.p3.g1 + ft28.p4.g1 + ft28.p5.g1;
@@ -1695,13 +1196,13 @@ MattiaMasotti.final = 1.25;
     const ft29 = {
         ...fantateam_type,
         team_index: 29,
-        name: "Penelope's Team",
-        rione: { ...SUD },
-        p1: { ...GiovanniTonizzo },
-        p2: { ...AlessandroSant },
-        p3: { ...MarcoPolo },
-        p4: { ...LucaSoramel },
-        p5: { ...FilippoSappa },
+        name: "Mau",
+        rione: { ...WEST },
+        p1: { ...EnricoSant },
+        p2: { ...MauroCuridori },
+        p3: { ...GiacomoSilvestri },
+        p4: { ...FilippoSappa },
+        p5: { ...AlessandroRizzi },
     };
     ft29.total_cost = ft29.p1.cost + ft29.p2.cost + ft29.p3.cost + ft29.p4.cost + ft29.p5.cost;
     ft29.tot_g1 = ft29.p1.g1 + ft29.p2.g1 + ft29.p3.g1 + ft29.p4.g1 + ft29.p5.g1;
@@ -1714,13 +1215,13 @@ MattiaMasotti.final = 1.25;
     const ft30 = {
         ...fantateam_type,
         team_index: 30,
-        name: "qwerty",
-        rione: { ...EST },
-        p1: { ...GionaTell },
-        p2: { ...LorenzoMoro },
-        p3: { ...SimoneMartinelli },
-        p4: { ...MauroPerina },
-        p5: { ...EdoardoPicogna },
+        name: "SuperOne",
+        rione: { ...WEST },
+        p1: { ...AndreaMoretti },
+        p2: { ...MicheleDeAnna },
+        p3: { ...MassimilianoMoretti },
+        p4: { ...MiracleObichukwu },
+        p5: { ...MicheleGorasso },
     };
     ft30.total_cost = ft30.p1.cost + ft30.p2.cost + ft30.p3.cost + ft30.p4.cost + ft30.p5.cost;
     ft30.tot_g1 = ft30.p1.g1 + ft30.p2.g1 + ft30.p3.g1 + ft30.p4.g1 + ft30.p5.g1;
@@ -1733,13 +1234,13 @@ MattiaMasotti.final = 1.25;
     const ft31 = {
         ...fantateam_type,
         team_index: 31,
-        name: "dunk",
-        rione: { ...WEST },
-        p1: { ...LucaSoramel },
-        p2: { ...PaoloZorzi },
-        p3: { ...ChristianFedrizzi },
-        p4: { ...EmanueleDaneluzzi },
-        p5: { ...FilippoAgnoluzzi },
+        name: "Liam",
+        rione: { ...NORD },
+        p1: { ...MattiaMasotti },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...EnricoSant },
+        p4: { ...MassimoMasotti },
+        p5: { ...DevinChiarcos },
     };
     ft31.total_cost = ft31.p1.cost + ft31.p2.cost + ft31.p3.cost + ft31.p4.cost + ft31.p5.cost;
     ft31.tot_g1 = ft31.p1.g1 + ft31.p2.g1 + ft31.p3.g1 + ft31.p4.g1 + ft31.p5.g1;
@@ -1752,13 +1253,13 @@ MattiaMasotti.final = 1.25;
     const ft32 = {
         ...fantateam_type,
         team_index: 32,
-        name: "I belli",
-        rione: { ...NORD },
-        p1: { ...LucaAnedda },
-        p2: { ...AlessandroRizzi },
-        p3: { ...PietroSoramel },
-        p4: { ...GiovanniTonizzo },
-        p5: { ...AlessandroCostantini },
+        name: "Flacko the sheriff",
+        rione: { ...WEST },
+        p1: { ...MicheleVendrame },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...MattiaRoiatti },
+        p4: { ...PietroSoramel },
+        p5: { ...ValentinoCigainero },
     };
     ft32.total_cost = ft32.p1.cost + ft32.p2.cost + ft32.p3.cost + ft32.p4.cost + ft32.p5.cost;
     ft32.tot_g1 = ft32.p1.g1 + ft32.p2.g1 + ft32.p3.g1 + ft32.p4.g1 + ft32.p5.g1;
@@ -1771,13 +1272,13 @@ MattiaMasotti.final = 1.25;
     const ft33 = {
         ...fantateam_type,
         team_index: 33,
-        name: "asdfg",
-        rione: { ...WEST },
-        p1: { ...MassimilianoRossi },
-        p2: { ...MassimoMasotti },
-        p3: { ...EugenioDeTina },
-        p4: { ...DenisVanin },
-        p5: { ...LucaAnedda },
+        name: "Ghetto boys",
+        rione: { ...NORD },
+        p1: { ...MiracleObichukwu },
+        p2: { ...LarryTrevisan },
+        p3: { ...GiovanniTonizzo },
+        p4: { ...PietroSoramel },
+        p5: { ...DiegoNata },
     };
     ft33.total_cost = ft33.p1.cost + ft33.p2.cost + ft33.p3.cost + ft33.p4.cost + ft33.p5.cost;
     ft33.tot_g1 = ft33.p1.g1 + ft33.p2.g1 + ft33.p3.g1 + ft33.p4.g1 + ft33.p5.g1;
@@ -1790,13 +1291,13 @@ MattiaMasotti.final = 1.25;
     const ft34 = {
         ...fantateam_type,
         team_index: 34,
-        name: "Wpalio",
-        rione: { ...SUD },
-        p1: { ...StefanoPolano },
-        p2: { ...DavidGaspardo },
-        p3: { ...ThomasBaracetti },
-        p4: { ...AlessandroGalassi },
-        p5: { ...EmanueleDaneluzzi },
+        name: "GIOGIZ",
+        rione: { ...WEST },
+        p1: { ...GiacomoPiacentini },
+        p2: { ...GiacomoFerigo },
+        p3: { ...DevinChiarcos },
+        p4: { ...DavidGaspardo },
+        p5: { ...FilippoAgnoluzzi },
     };
     ft34.total_cost = ft34.p1.cost + ft34.p2.cost + ft34.p3.cost + ft34.p4.cost + ft34.p5.cost;
     ft34.tot_g1 = ft34.p1.g1 + ft34.p2.g1 + ft34.p3.g1 + ft34.p4.g1 + ft34.p5.g1;
@@ -1809,13 +1310,13 @@ MattiaMasotti.final = 1.25;
     const ft35 = {
         ...fantateam_type,
         team_index: 35,
-        name: "Carichi",
-        rione: { ...NORD },
-        p1: { ...MiracleObichukwu },
-        p2: { ...AlessandroCostantini },
-        p3: { ...MatteoMargarit },
-        p4: { ...GiacomoPiacentini },
-        p5: { ...ChristianZanet },
+        name: "After CapOstile",
+        rione: { ...WEST },
+        p1: { ...SebastianoTonizzo },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...LarryTrevisan },
+        p4: { ...MiracleObichukwu },
+        p5: { ...VittorioGri },
     };
     ft35.total_cost = ft35.p1.cost + ft35.p2.cost + ft35.p3.cost + ft35.p4.cost + ft35.p5.cost;
     ft35.tot_g1 = ft35.p1.g1 + ft35.p2.g1 + ft35.p3.g1 + ft35.p4.g1 + ft35.p5.g1;
@@ -1828,13 +1329,13 @@ MattiaMasotti.final = 1.25;
     const ft36 = {
         ...fantateam_type,
         team_index: 36,
-        name: "giorgina",
-        rione: { ...EST },
-        p1: { ...MarcoRizzi },
-        p2: { ...ValentinoCigainero },
-        p3: { ...MattiaRoiatti },
-        p4: { ...LucaAnedda },
-        p5: { ...GiacomoSilvestri },
+        name: "Ringhio",
+        rione: { ...WEST },
+        p1: { ...LucaSoramel },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...LarryTrevisan },
+        p4: { ...AlessandroRojatti },
+        p5: { ...GiacomoFerigo },
     };
     ft36.total_cost = ft36.p1.cost + ft36.p2.cost + ft36.p3.cost + ft36.p4.cost + ft36.p5.cost;
     ft36.tot_g1 = ft36.p1.g1 + ft36.p2.g1 + ft36.p3.g1 + ft36.p4.g1 + ft36.p5.g1;
@@ -1847,13 +1348,13 @@ MattiaMasotti.final = 1.25;
     const ft37 = {
         ...fantateam_type,
         team_index: 37,
-        name: "La Betty",
+        name: "Matte",
         rione: { ...WEST },
-        p1: { ...EmanueleDaneluzzi },
-        p2: { ...MassimilianoMoretti },
-        p3: { ...PietroSoramel },
-        p4: { ...EdoardoPicogna },
-        p5: { ...MiracleObichukwu },
+        p1: { ...GiacomoSilvestri },
+        p2: { ...MarcoSerrao },
+        p3: { ...LucaGemo },
+        p4: { ...FilippoSappa },
+        p5: { ...LarryTrevisan },
     };
     ft37.total_cost = ft37.p1.cost + ft37.p2.cost + ft37.p3.cost + ft37.p4.cost + ft37.p5.cost;
     ft37.tot_g1 = ft37.p1.g1 + ft37.p2.g1 + ft37.p3.g1 + ft37.p4.g1 + ft37.p5.g1;
@@ -1866,13 +1367,13 @@ MattiaMasotti.final = 1.25;
     const ft38 = {
         ...fantateam_type,
         team_index: 38,
-        name: "PAMPA MENTALITY",
-        rione: { ...SUD },
-        p1: { ...FilippoPasquon },
-        p2: { ...MattiaMasotti },
-        p3: { ...ChristianZanet },
-        p4: { ...MiracleObichukwu },
-        p5: { ...DiegoNata },
+        name: "Unavoltaerofortealchiosco!",
+        rione: { ...WEST },
+        p1: { ...UmbertoNobile },
+        p2: { ...MarcoSerrao },
+        p3: { ...AlessandroRizzi },
+        p4: { ...GiacomoPiacentini },
+        p5: { ...MassimilianoRossi },
     };
     ft38.total_cost = ft38.p1.cost + ft38.p2.cost + ft38.p3.cost + ft38.p4.cost + ft38.p5.cost;
     ft38.tot_g1 = ft38.p1.g1 + ft38.p2.g1 + ft38.p3.g1 + ft38.p4.g1 + ft38.p5.g1;
@@ -1885,13 +1386,13 @@ MattiaMasotti.final = 1.25;
     const ft39 = {
         ...fantateam_type,
         team_index: 39,
-        name: "Prime time players",
-        rione: { ...WEST },
-        p1: { ...LarryTrevisan },
-        p2: { ...MarcoSerrao },
-        p3: { ...UmbertoNobile },
+        name: "Samu Masotti",
+        rione: { ...EST },
+        p1: { ...DevinChiarcos },
+        p2: { ...AlessandroCostantini },
+        p3: { ...VittorioBasso },
         p4: { ...FilippoPasquon },
-        p5: { ...LorenzoMoro },
+        p5: { ...DavideBroggi },
     };
     ft39.total_cost = ft39.p1.cost + ft39.p2.cost + ft39.p3.cost + ft39.p4.cost + ft39.p5.cost;
     ft39.tot_g1 = ft39.p1.g1 + ft39.p2.g1 + ft39.p3.g1 + ft39.p4.g1 + ft39.p5.g1;
@@ -1904,13 +1405,13 @@ MattiaMasotti.final = 1.25;
     const ft40 = {
         ...fantateam_type,
         team_index: 40,
-        name: "Rione Muscletto",
+        name: "Machico",
         rione: { ...NORD },
-        p1: { ...GioeleTudini },
-        p2: { ...FilippoSappa },
-        p3: { ...LarryTrevisan },
-        p4: { ...AlessandroSant },
-        p5: { ...AlessandroRojatti },
+        p1: { ...AndreaMoretti },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...GiovanniTonizzo },
+        p4: { ...LucaAnedda },
+        p5: { ...PietroSoramel },
     };
     ft40.total_cost = ft40.p1.cost + ft40.p2.cost + ft40.p3.cost + ft40.p4.cost + ft40.p5.cost;
     ft40.tot_g1 = ft40.p1.g1 + ft40.p2.g1 + ft40.p3.g1 + ft40.p4.g1 + ft40.p5.g1;
@@ -1923,13 +1424,13 @@ MattiaMasotti.final = 1.25;
     const ft41 = {
         ...fantateam_type,
         team_index: 41,
-        name: "Oklahoma city tinder",
-        rione: { ...WEST },
-        p1: { ...DevinChiarcos },
-        p2: { ...MattiaRoiatti },
-        p3: { ...MattiaMasotti },
+        name: "Alto Moro",
+        rione: { ...SUD },
+        p1: { ...ChristianZanet },
+        p2: { ...MicheleDeAnna },
+        p3: { ...UmbertoNobile },
         p4: { ...FilippoPasquon },
-        p5: { ...MassimilianoMoretti },
+        p5: { ...MattiaMasotti },
     };
     ft41.total_cost = ft41.p1.cost + ft41.p2.cost + ft41.p3.cost + ft41.p4.cost + ft41.p5.cost;
     ft41.tot_g1 = ft41.p1.g1 + ft41.p2.g1 + ft41.p3.g1 + ft41.p4.g1 + ft41.p5.g1;
@@ -1942,11 +1443,11 @@ MattiaMasotti.final = 1.25;
     const ft42 = {
         ...fantateam_type,
         team_index: 42,
-        name: "FMB united",
-        rione: { ...EST },
-        p1: { ...AlessandroRojatti },
-        p2: { ...GabrieleMiani },
-        p3: { ...MarcoRizzi },
+        name: "Fittofatto BC",
+        rione: { ...NORD },
+        p1: { ...FilippoPasquon },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...PietroSoramel },
         p4: { ...MattiaRoiatti },
         p5: { ...LucaAnedda },
     };
@@ -1961,13 +1462,13 @@ MattiaMasotti.final = 1.25;
     const ft43 = {
         ...fantateam_type,
         team_index: 43,
-        name: "giulia",
-        rione: { ...EST },
-        p1: { ...AlessandroRizzi },
-        p2: { ...MarcoRizzi },
-        p3: { ...LucaAnedda },
-        p4: { ...MattiaRoiatti },
-        p5: { ...EmanueleDaneluzzi },
+        name: "Caspinixx",
+        rione: { ...SUD },
+        p1: { ...MarcoRizzi },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...AndreaMoretti },
+        p4: { ...LucaSoramel },
+        p5: { ...PietroSoramel },
     };
     ft43.total_cost = ft43.p1.cost + ft43.p2.cost + ft43.p3.cost + ft43.p4.cost + ft43.p5.cost;
     ft43.tot_g1 = ft43.p1.g1 + ft43.p2.g1 + ft43.p3.g1 + ft43.p4.g1 + ft43.p5.g1;
@@ -1980,13 +1481,13 @@ MattiaMasotti.final = 1.25;
     const ft44 = {
         ...fantateam_type,
         team_index: 44,
-        name: "Flacko the sheriff",
-        rione: { ...WEST },
-        p1: { ...MicheleVendrame },
-        p2: { ...MassimilianoMoretti },
-        p3: { ...MattiaRoiatti },
-        p4: { ...PietroSoramel },
-        p5: { ...ValentinoCigainero },
+        name: "Enea",
+        rione: { ...NORD },
+        p1: { ...GabrieleMiani },
+        p2: { ...GiacomoFerigo },
+        p3: { ...DevinChiarcos },
+        p4: { ...VittorioBasso },
+        p5: { ...AntonioGri },
     };
     ft44.total_cost = ft44.p1.cost + ft44.p2.cost + ft44.p3.cost + ft44.p4.cost + ft44.p5.cost;
     ft44.tot_g1 = ft44.p1.g1 + ft44.p2.g1 + ft44.p3.g1 + ft44.p4.g1 + ft44.p5.g1;
@@ -1999,13 +1500,13 @@ MattiaMasotti.final = 1.25;
     const ft45 = {
         ...fantateam_type,
         team_index: 45,
-        name: "Visca",
-        rione: { ...NORD },
-        p1: { ...GiacomoSilvestri },
-        p2: { ...LarryTrevisan },
-        p3: { ...ChristianZanet },
-        p4: { ...MicheleDeAnna },
-        p5: { ...AlessandroRizzi },
+        name: "TheFinalCut95",
+        rione: { ...WEST },
+        p1: { ...AlessandroSant },
+        p2: { ...LucaSoramel },
+        p3: { ...DanieleGanzit },
+        p4: { ...UmbertoNobile },
+        p5: { ...EnricoSant },
     };
     ft45.total_cost = ft45.p1.cost + ft45.p2.cost + ft45.p3.cost + ft45.p4.cost + ft45.p5.cost;
     ft45.tot_g1 = ft45.p1.g1 + ft45.p2.g1 + ft45.p3.g1 + ft45.p4.g1 + ft45.p5.g1;
@@ -2018,13 +1519,13 @@ MattiaMasotti.final = 1.25;
     const ft46 = {
         ...fantateam_type,
         team_index: 46,
-        name: "emosbobna",
-        rione: { ...NORD },
-        p1: { ...DevinChiarcos },
-        p2: { ...MarcoLombardo },
-        p3: { ...GiovanniZanin },
-        p4: { ...MattiaRoiatti },
-        p5: { ...PietroSoramel },
+        name: "SEBA CENGA",
+        rione: { ...WEST },
+        p1: { ...LucaDellaLonga },
+        p2: { ...DiegoNata },
+        p3: { ...AndreaMoretti },
+        p4: { ...UmbertoNobile },
+        p5: { ...DavideFaurlin },
     };
     ft46.total_cost = ft46.p1.cost + ft46.p2.cost + ft46.p3.cost + ft46.p4.cost + ft46.p5.cost;
     ft46.tot_g1 = ft46.p1.g1 + ft46.p2.g1 + ft46.p3.g1 + ft46.p4.g1 + ft46.p5.g1;
@@ -2037,13 +1538,13 @@ MattiaMasotti.final = 1.25;
     const ft47 = {
         ...fantateam_type,
         team_index: 47,
-        name: "Groviscrazia",
-        rione: { ...WEST },
-        p1: { ...PietroSoramel },
-        p2: { ...LucaSoramel },
-        p3: { ...MiracleObichukwu },
-        p4: { ...MicheleVendrame },
-        p5: { ...MassimilianoMoretti },
+        name: "Carichi",
+        rione: { ...NORD },
+        p1: { ...MiracleObichukwu },
+        p2: { ...AlessandroCostantini },
+        p3: { ...MatteoMargarit },
+        p4: { ...GiacomoPiacentini },
+        p5: { ...ChristianZanet },
     };
     ft47.total_cost = ft47.p1.cost + ft47.p2.cost + ft47.p3.cost + ft47.p4.cost + ft47.p5.cost;
     ft47.tot_g1 = ft47.p1.g1 + ft47.p2.g1 + ft47.p3.g1 + ft47.p4.g1 + ft47.p5.g1;
@@ -2056,12 +1557,12 @@ MattiaMasotti.final = 1.25;
     const ft48 = {
         ...fantateam_type,
         team_index: 48,
-        name: "Betta Zul",
-        rione: { ...EST },
-        p1: { ...MattiaMasotti },
-        p2: { ...LucaDellaLonga },
-        p3: { ...MarcoSerrao },
-        p4: { ...FilippoSappa },
+        name: "TheFinalCut95!",
+        rione: { ...WEST },
+        p1: { ...AlessandroSant },
+        p2: { ...LucaSoramel },
+        p3: { ...DanieleGanzit },
+        p4: { ...UmbertoNobile },
         p5: { ...EnricoSant },
     };
     ft48.total_cost = ft48.p1.cost + ft48.p2.cost + ft48.p3.cost + ft48.p4.cost + ft48.p5.cost;
@@ -2075,13 +1576,13 @@ MattiaMasotti.final = 1.25;
     const ft49 = {
         ...fantateam_type,
         team_index: 49,
-        name: "Team Canaja",
-        rione: { ...NORD },
-        p1: { ...MarcoLombardo },
-        p2: { ...DiegoNata },
-        p3: { ...DanieleGanzit },
-        p4: { ...EnricoSant },
-        p5: { ...AlessioFurlan },
+        name: "I Penny's Five",
+        rione: { ...SUD },
+        p1: { ...MassimilianoRossi },
+        p2: { ...AlessandroRizzi },
+        p3: { ...TommasoMartello },
+        p4: { ...UmbertoNobile },
+        p5: { ...GiovanniTonizzo },
     };
     ft49.total_cost = ft49.p1.cost + ft49.p2.cost + ft49.p3.cost + ft49.p4.cost + ft49.p5.cost;
     ft49.tot_g1 = ft49.p1.g1 + ft49.p2.g1 + ft49.p3.g1 + ft49.p4.g1 + ft49.p5.g1;
@@ -2094,13 +1595,13 @@ MattiaMasotti.final = 1.25;
     const ft50 = {
         ...fantateam_type,
         team_index: 50,
-        name: "ivan",
-        rione: { ...NORD },
-        p1: { ...FilippoPasquon },
-        p2: { ...MiracleObichukwu },
-        p3: { ...AlessandroGalassi },
-        p4: { ...PietroSoramel },
-        p5: { ...AlessandroRizzi },
+        name: "Bmax",
+        rione: { ...EST },
+        p1: { ...EnricoSant },
+        p2: { ...MattiaMasotti },
+        p3: { ...UmbertoNobile },
+        p4: { ...FilippoPasquon },
+        p5: { ...MarcoLombardo },
     };
     ft50.total_cost = ft50.p1.cost + ft50.p2.cost + ft50.p3.cost + ft50.p4.cost + ft50.p5.cost;
     ft50.tot_g1 = ft50.p1.g1 + ft50.p2.g1 + ft50.p3.g1 + ft50.p4.g1 + ft50.p5.g1;
@@ -2113,13 +1614,13 @@ MattiaMasotti.final = 1.25;
     const ft51 = {
         ...fantateam_type,
         team_index: 51,
-        name: "Matte",
-        rione: { ...WEST },
-        p1: { ...GiacomoSilvestri },
-        p2: { ...MarcoSerrao },
-        p3: { ...LucaGemo },
-        p4: { ...FilippoSappa },
-        p5: { ...LarryTrevisan },
+        name: "Gli Sbronzatissimi",
+        rione: { ...NORD },
+        p1: { ...GiovanniTonizzo },
+        p2: { ...UmbertoNobile },
+        p3: { ...AlessandroRizzi },
+        p4: { ...MarcoLombardo },
+        p5: { ...MattiaRoiatti },
     };
     ft51.total_cost = ft51.p1.cost + ft51.p2.cost + ft51.p3.cost + ft51.p4.cost + ft51.p5.cost;
     ft51.tot_g1 = ft51.p1.g1 + ft51.p2.g1 + ft51.p3.g1 + ft51.p4.g1 + ft51.p5.g1;
@@ -2132,13 +1633,13 @@ MattiaMasotti.final = 1.25;
     const ft52 = {
         ...fantateam_type,
         team_index: 52,
-        name: "Uoff",
-        rione: { ...SUD },
-        p1: { ...MassimilianoMoretti },
-        p2: { ...MarcoRizzi },
-        p3: { ...LucaAnedda },
-        p4: { ...MattiaRoiatti },
-        p5: { ...AlessandroRizzi },
+        name: "I belli",
+        rione: { ...NORD },
+        p1: { ...LucaAnedda },
+        p2: { ...AlessandroRizzi },
+        p3: { ...PietroSoramel },
+        p4: { ...GiovanniTonizzo },
+        p5: { ...AlessandroCostantini },
     };
     ft52.total_cost = ft52.p1.cost + ft52.p2.cost + ft52.p3.cost + ft52.p4.cost + ft52.p5.cost;
     ft52.tot_g1 = ft52.p1.g1 + ft52.p2.g1 + ft52.p3.g1 + ft52.p4.g1 + ft52.p5.g1;
@@ -2151,13 +1652,13 @@ MattiaMasotti.final = 1.25;
     const ft53 = {
         ...fantateam_type,
         team_index: 53,
-        name: "Azzzzz",
-        rione: { ...EST },
-        p1: { ...GiovanniTonizzo },
-        p2: { ...ChristianZanet },
-        p3: { ...MicheleDeAnna },
-        p4: { ...MattiaRoiatti },
-        p5: { ...AlessandroCostantini },
+        name: "Golden shower",
+        rione: { ...WEST },
+        p1: { ...MattiaMasotti },
+        p2: { ...AlessandroRizzi },
+        p3: { ...MatteoMargarit },
+        p4: { ...PietroSoramel },
+        p5: { ...MattiaRoiatti },
     };
     ft53.total_cost = ft53.p1.cost + ft53.p2.cost + ft53.p3.cost + ft53.p4.cost + ft53.p5.cost;
     ft53.tot_g1 = ft53.p1.g1 + ft53.p2.g1 + ft53.p3.g1 + ft53.p4.g1 + ft53.p5.g1;
@@ -2170,13 +1671,13 @@ MattiaMasotti.final = 1.25;
     const ft54 = {
         ...fantateam_type,
         team_index: 54,
-        name: "Super chicche",
-        rione: { ...WEST },
-        p1: { ...LucaSoramel },
-        p2: { ...GiovanniTonizzo },
-        p3: { ...MarcoRizzi },
-        p4: { ...MassimilianoMoretti },
-        p5: { ...VittorioGri },
+        name: "DOZERS CONFEDERATI",
+        rione: { ...SUD },
+        p1: { ...AlessandroSant },
+        p2: { ...AlessioFurlan },
+        p3: { ...AlessandroRizzi },
+        p4: { ...PietroSoramel },
+        p5: { ...LucaSoramel },
     };
     ft54.total_cost = ft54.p1.cost + ft54.p2.cost + ft54.p3.cost + ft54.p4.cost + ft54.p5.cost;
     ft54.tot_g1 = ft54.p1.g1 + ft54.p2.g1 + ft54.p3.g1 + ft54.p4.g1 + ft54.p5.g1;
@@ -2189,13 +1690,13 @@ MattiaMasotti.final = 1.25;
     const ft55 = {
         ...fantateam_type,
         team_index: 55,
-        name: "Burritos Picantes",
-        rione: { ...EST },
-        p1: { ...EdoardoPicogna },
-        p2: { ...WilliamIob },
-        p3: { ...FilippoSappa },
-        p4: { ...UmbertoNobile },
-        p5: { ...MatteoSpagnolo },
+        name: "Appalla",
+        rione: { ...WEST },
+        p1: { ...VittorioBasso },
+        p2: { ...LucaDellaLonga },
+        p3: { ...AlessandroSant },
+        p4: { ...FilippoSappa },
+        p5: { ...MattiaMasotti },
     };
     ft55.total_cost = ft55.p1.cost + ft55.p2.cost + ft55.p3.cost + ft55.p4.cost + ft55.p5.cost;
     ft55.tot_g1 = ft55.p1.g1 + ft55.p2.g1 + ft55.p3.g1 + ft55.p4.g1 + ft55.p5.g1;
@@ -2208,12 +1709,12 @@ MattiaMasotti.final = 1.25;
     const ft56 = {
         ...fantateam_type,
         team_index: 56,
-        name: "Machico",
-        rione: { ...NORD },
-        p1: { ...AndreaMoretti },
-        p2: { ...MassimilianoMoretti },
-        p3: { ...GiovanniTonizzo },
-        p4: { ...LucaAnedda },
+        name: "I pupetti",
+        rione: { ...EST },
+        p1: { ...LucaSoramel },
+        p2: { ...AlessandroRizzi },
+        p3: { ...AlessandroCostantini },
+        p4: { ...VittorioGri },
         p5: { ...PietroSoramel },
     };
     ft56.total_cost = ft56.p1.cost + ft56.p2.cost + ft56.p3.cost + ft56.p4.cost + ft56.p5.cost;
@@ -2227,13 +1728,13 @@ MattiaMasotti.final = 1.25;
     const ft57 = {
         ...fantateam_type,
         team_index: 57,
-        name: "Unavoltaerofortealchiosco!",
+        name: "The best",
         rione: { ...WEST },
-        p1: { ...UmbertoNobile },
-        p2: { ...MarcoSerrao },
-        p3: { ...AlessandroRizzi },
-        p4: { ...GiacomoPiacentini },
-        p5: { ...MassimilianoRossi },
+        p1: { ...GiacomoFerigo },
+        p2: { ...VittorioBasso },
+        p3: { ...GiovanniDalFarra },
+        p4: { ...TommasoMartello },
+        p5: { ...MassimilianoMoretti },
     };
     ft57.total_cost = ft57.p1.cost + ft57.p2.cost + ft57.p3.cost + ft57.p4.cost + ft57.p5.cost;
     ft57.tot_g1 = ft57.p1.g1 + ft57.p2.g1 + ft57.p3.g1 + ft57.p4.g1 + ft57.p5.g1;
@@ -2246,13 +1747,13 @@ MattiaMasotti.final = 1.25;
     const ft58 = {
         ...fantateam_type,
         team_index: 58,
-        name: "I miracoli",
-        rione: { ...WEST },
-        p1: { ...AlessandroSant },
-        p2: { ...AlessandroRizzi },
-        p3: { ...GiacomoPiacentini },
-        p4: { ...MattiaMasotti },
-        p5: { ...DevinChiarcos },
+        name: "Betta Zul",
+        rione: { ...EST },
+        p1: { ...MattiaMasotti },
+        p2: { ...LucaDellaLonga },
+        p3: { ...MarcoSerrao },
+        p4: { ...FilippoSappa },
+        p5: { ...EnricoSant },
     };
     ft58.total_cost = ft58.p1.cost + ft58.p2.cost + ft58.p3.cost + ft58.p4.cost + ft58.p5.cost;
     ft58.tot_g1 = ft58.p1.g1 + ft58.p2.g1 + ft58.p3.g1 + ft58.p4.g1 + ft58.p5.g1;
@@ -2265,13 +1766,13 @@ MattiaMasotti.final = 1.25;
     const ft59 = {
         ...fantateam_type,
         team_index: 59,
-        name: "SimoVinny",
-        rione: { ...SUD },
-        p1: { ...ValentinoCigainero },
-        p2: { ...MassimilianoMoretti },
-        p3: { ...DavideFaurlin },
-        p4: { ...MattiaMasotti },
-        p5: { ...MarcoRizzi },
+        name: "Fil🥷",
+        rione: { ...EST },
+        p1: { ...ThomasBaracetti },
+        p2: { ...ValentinoCigainero },
+        p3: { ...MassimilianoMoretti },
+        p4: { ...LarryTrevisan },
+        p5: { ...AlexMicottis },
     };
     ft59.total_cost = ft59.p1.cost + ft59.p2.cost + ft59.p3.cost + ft59.p4.cost + ft59.p5.cost;
     ft59.tot_g1 = ft59.p1.g1 + ft59.p2.g1 + ft59.p3.g1 + ft59.p4.g1 + ft59.p5.g1;
@@ -2284,13 +1785,13 @@ MattiaMasotti.final = 1.25;
     const ft60 = {
         ...fantateam_type,
         team_index: 60,
-        name: "TheFinalCut95!",
-        rione: { ...WEST },
-        p1: { ...AlessandroSant },
-        p2: { ...LucaSoramel },
-        p3: { ...DanieleGanzit },
-        p4: { ...UmbertoNobile },
-        p5: { ...EnricoSant },
+        name: "i Bolliti",
+        rione: { ...SUD },
+        p1: { ...LarryTrevisan },
+        p2: { ...AlessandroCostantini },
+        p3: { ...DavidGaspardo },
+        p4: { ...MatteoSpagnolo },
+        p5: { ...AlessandroSantin },
     };
     ft60.total_cost = ft60.p1.cost + ft60.p2.cost + ft60.p3.cost + ft60.p4.cost + ft60.p5.cost;
     ft60.tot_g1 = ft60.p1.g1 + ft60.p2.g1 + ft60.p3.g1 + ft60.p4.g1 + ft60.p5.g1;
@@ -2303,13 +1804,13 @@ MattiaMasotti.final = 1.25;
     const ft61 = {
         ...fantateam_type,
         team_index: 61,
-        name: "Ratflingbanana",
-        rione: { ...SUD },
-        p1: { ...DavideBroggi },
-        p2: { ...MattiaMasotti },
-        p3: { ...GiacomoSilvestri },
-        p4: { ...ChristianZanet },
-        p5: { ...DavidGaspardo },
+        name: "CT",
+        rione: { ...NORD },
+        p1: { ...PietroSoramel },
+        p2: { ...GiovanniZanin },
+        p3: { ...TommasoMartello },
+        p4: { ...EnricoSant },
+        p5: { ...AntonioGri },
     };
     ft61.total_cost = ft61.p1.cost + ft61.p2.cost + ft61.p3.cost + ft61.p4.cost + ft61.p5.cost;
     ft61.tot_g1 = ft61.p1.g1 + ft61.p2.g1 + ft61.p3.g1 + ft61.p4.g1 + ft61.p5.g1;
@@ -2322,13 +1823,13 @@ MattiaMasotti.final = 1.25;
     const ft62 = {
         ...fantateam_type,
         team_index: 62,
-        name: "Verità per GR",
-        rione: { ...NORD },
-        p1: { ...MattiaRoiatti },
-        p2: { ...LucaAnedda },
-        p3: { ...MassimilianoMoretti },
-        p4: { ...MarcoRizzi },
-        p5: { ...FilippoPasquon },
+        name: "I miracoli",
+        rione: { ...WEST },
+        p1: { ...AlessandroSant },
+        p2: { ...AlessandroRizzi },
+        p3: { ...GiacomoPiacentini },
+        p4: { ...MattiaMasotti },
+        p5: { ...DevinChiarcos },
     };
     ft62.total_cost = ft62.p1.cost + ft62.p2.cost + ft62.p3.cost + ft62.p4.cost + ft62.p5.cost;
     ft62.tot_g1 = ft62.p1.g1 + ft62.p2.g1 + ft62.p3.g1 + ft62.p4.g1 + ft62.p5.g1;
@@ -2341,13 +1842,13 @@ MattiaMasotti.final = 1.25;
     const ft63 = {
         ...fantateam_type,
         team_index: 63,
-        name: "Armata Rossa",
-        rione: { ...NORD },
-        p1: { ...MarcoRizzi },
-        p2: { ...MassimilianoMoretti },
-        p3: { ...UmbertoNobile },
-        p4: { ...MassimilianoRossi },
-        p5: { ...LucaAnedda },
+        name: "Dr Tanzimat",
+        rione: { ...SUD },
+        p1: { ...GiovanniZanin },
+        p2: { ...LucaSoramel },
+        p3: { ...PietroSoramel },
+        p4: { ...GiovanniTonizzo },
+        p5: { ...VittorioGri },
     };
     ft63.total_cost = ft63.p1.cost + ft63.p2.cost + ft63.p3.cost + ft63.p4.cost + ft63.p5.cost;
     ft63.tot_g1 = ft63.p1.g1 + ft63.p2.g1 + ft63.p3.g1 + ft63.p4.g1 + ft63.p5.g1;
@@ -2360,13 +1861,13 @@ MattiaMasotti.final = 1.25;
     const ft64 = {
         ...fantateam_type,
         team_index: 64,
-        name: "Samu veni",
-        rione: { ...SUD },
-        p1: { ...MiracleObichukwu },
-        p2: { ...AlessandroRizzi },
-        p3: { ...DavidGaspardo },
-        p4: { ...GioeleTudini },
-        p5: { ...MicheleDeAnna },
+        name: "Vichingo72",
+        rione: { ...NORD },
+        p1: { ...LucaAnedda },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...AlessandroCostantini },
+        p4: { ...MauroPerina },
+        p5: { ...MattiaRoiatti },
     };
     ft64.total_cost = ft64.p1.cost + ft64.p2.cost + ft64.p3.cost + ft64.p4.cost + ft64.p5.cost;
     ft64.tot_g1 = ft64.p1.g1 + ft64.p2.g1 + ft64.p3.g1 + ft64.p4.g1 + ft64.p5.g1;
@@ -2379,13 +1880,13 @@ MattiaMasotti.final = 1.25;
     const ft65 = {
         ...fantateam_type,
         team_index: 65,
-        name: "NonCapiscoNienteDiBasket",
-        rione: { ...SUD },
-        p1: { ...StefanoPolano },
-        p2: { ...GiovanniZanin },
-        p3: { ...MatteoMargarit },
-        p4: { ...MassimilianoRossi },
-        p5: { ...DanieleGanzit },
+        name: "ivan",
+        rione: { ...NORD },
+        p1: { ...FilippoPasquon },
+        p2: { ...MiracleObichukwu },
+        p3: { ...AlessandroGalassi },
+        p4: { ...PietroSoramel },
+        p5: { ...AlessandroRizzi },
     };
     ft65.total_cost = ft65.p1.cost + ft65.p2.cost + ft65.p3.cost + ft65.p4.cost + ft65.p5.cost;
     ft65.tot_g1 = ft65.p1.g1 + ft65.p2.g1 + ft65.p3.g1 + ft65.p4.g1 + ft65.p5.g1;
@@ -2398,13 +1899,13 @@ MattiaMasotti.final = 1.25;
     const ft66 = {
         ...fantateam_type,
         team_index: 66,
-        name: "Alto Moro",
-        rione: { ...SUD },
-        p1: { ...ChristianZanet },
-        p2: { ...MicheleDeAnna },
-        p3: { ...UmbertoNobile },
-        p4: { ...FilippoPasquon },
-        p5: { ...MattiaMasotti },
+        name: "Dusty Bottoms",
+        rione: { ...WEST },
+        p1: { ...GiacomoPiacentini },
+        p2: { ...AlessandroCostantini },
+        p3: { ...LarryTrevisan },
+        p4: { ...MicheleDeAnna },
+        p5: { ...ChristianZanet },
     };
     ft66.total_cost = ft66.p1.cost + ft66.p2.cost + ft66.p3.cost + ft66.p4.cost + ft66.p5.cost;
     ft66.tot_g1 = ft66.p1.g1 + ft66.p2.g1 + ft66.p3.g1 + ft66.p4.g1 + ft66.p5.g1;
@@ -2417,13 +1918,13 @@ MattiaMasotti.final = 1.25;
     const ft67 = {
         ...fantateam_type,
         team_index: 67,
-        name: "Gate 2 Aeroporto Malpensa-Silvio Berlusconi Milano✈️",
-        rione: { ...EST },
-        p1: { ...DavidGaspardo },
-        p2: { ...FilippoPasquon },
-        p3: { ...MarcoPolo },
-        p4: { ...MattiaMasotti },
-        p5: { ...LucaGemo },
+        name: "Spagnolo sposami",
+        rione: { ...SUD },
+        p1: { ...SebastianoTonizzo },
+        p2: { ...MatteoSpagnolo },
+        p3: { ...MatteoMargarit },
+        p4: { ...DavideParon },
+        p5: { ...MichaelMargarit },
     };
     ft67.total_cost = ft67.p1.cost + ft67.p2.cost + ft67.p3.cost + ft67.p4.cost + ft67.p5.cost;
     ft67.tot_g1 = ft67.p1.g1 + ft67.p2.g1 + ft67.p3.g1 + ft67.p4.g1 + ft67.p5.g1;
@@ -2436,13 +1937,13 @@ MattiaMasotti.final = 1.25;
     const ft68 = {
         ...fantateam_type,
         team_index: 68,
-        name: "Estateam",
-        rione: { ...EST },
-        p1: { ...SimoneMartinelli },
-        p2: { ...UmbertoNobile },
-        p3: { ...MattiaMasotti },
-        p4: { ...FilippoSappa },
-        p5: { ...FilippoPasquon },
+        name: "Franta Palio",
+        rione: { ...NORD },
+        p1: { ...FilippoSappa },
+        p2: { ...AlessandroRojatti },
+        p3: { ...AlessandroRizzi },
+        p4: { ...TommasoMartello },
+        p5: { ...GiovanniTonizzo },
     };
     ft68.total_cost = ft68.p1.cost + ft68.p2.cost + ft68.p3.cost + ft68.p4.cost + ft68.p5.cost;
     ft68.tot_g1 = ft68.p1.g1 + ft68.p2.g1 + ft68.p3.g1 + ft68.p4.g1 + ft68.p5.g1;
@@ -2455,13 +1956,13 @@ MattiaMasotti.final = 1.25;
     const ft69 = {
         ...fantateam_type,
         team_index: 69,
-        name: "Arrosto & tiro",
-        rione: { ...EST },
-        p1: { ...IacopoPivetta },
-        p2: { ...WilliamIob },
-        p3: { ...DenisVanin },
-        p4: { ...DanieleGanzit },
-        p5: { ...MarcoSerrao },
+        name: "Nani del sud",
+        rione: { ...SUD },
+        p1: { ...FilippoAgnoluzzi },
+        p2: { ...FilippoSappa },
+        p3: { ...LucaAnedda },
+        p4: { ...GiacomoSilvestri },
+        p5: { ...DavidGaspardo },
     };
     ft69.total_cost = ft69.p1.cost + ft69.p2.cost + ft69.p3.cost + ft69.p4.cost + ft69.p5.cost;
     ft69.tot_g1 = ft69.p1.g1 + ft69.p2.g1 + ft69.p3.g1 + ft69.p4.g1 + ft69.p5.g1;
@@ -2474,13 +1975,13 @@ MattiaMasotti.final = 1.25;
     const ft70 = {
         ...fantateam_type,
         team_index: 70,
-        name: "Nordes",
-        rione: { ...NORD },
-        p1: { ...DiegoNata },
-        p2: { ...FilippoPasquon },
-        p3: { ...UmbertoNobile },
-        p4: { ...LucaAnedda },
-        p5: { ...DevinChiarcos },
+        name: "Penelope's Team",
+        rione: { ...SUD },
+        p1: { ...GiovanniTonizzo },
+        p2: { ...AlessandroSant },
+        p3: { ...MarcoPolo },
+        p4: { ...LucaSoramel },
+        p5: { ...FilippoSappa },
     };
     ft70.total_cost = ft70.p1.cost + ft70.p2.cost + ft70.p3.cost + ft70.p4.cost + ft70.p5.cost;
     ft70.tot_g1 = ft70.p1.g1 + ft70.p2.g1 + ft70.p3.g1 + ft70.p4.g1 + ft70.p5.g1;
@@ -2493,13 +1994,13 @@ MattiaMasotti.final = 1.25;
     const ft71 = {
         ...fantateam_type,
         team_index: 71,
-        name: "gigiovena",
-        rione: { ...NORD },
-        p1: { ...GiovanniTonizzo },
-        p2: { ...PietroSoramel },
-        p3: { ...AlessandroRizzi },
-        p4: { ...MarcoSerrao },
-        p5: { ...VittorioGri },
+        name: "Codroipen F.C.",
+        rione: { ...WEST },
+        p1: { ...DavideParon },
+        p2: { ...DevinChiarcos },
+        p3: { ...GabrieleMiani },
+        p4: { ...EdoardoPicogna },
+        p5: { ...VittorioBasso },
     };
     ft71.total_cost = ft71.p1.cost + ft71.p2.cost + ft71.p3.cost + ft71.p4.cost + ft71.p5.cost;
     ft71.tot_g1 = ft71.p1.g1 + ft71.p2.g1 + ft71.p3.g1 + ft71.p4.g1 + ft71.p5.g1;
@@ -2512,13 +2013,13 @@ MattiaMasotti.final = 1.25;
     const ft72 = {
         ...fantateam_type,
         team_index: 72,
-        name: "Michael Scott's Tots",
-        rione: { ...NORD },
-        p1: { ...DavidGaspardo },
-        p2: { ...MiracleObichukwu },
-        p3: { ...AlessioFurlan },
-        p4: { ...DiegoNata },
-        p5: { ...MarcoPolo },
+        name: "west solos",
+        rione: { ...WEST },
+        p1: { ...MassimoMasotti },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...GiacomoPiacentini },
+        p4: { ...MiracleObichukwu },
+        p5: { ...EnricoSant },
     };
     ft72.total_cost = ft72.p1.cost + ft72.p2.cost + ft72.p3.cost + ft72.p4.cost + ft72.p5.cost;
     ft72.tot_g1 = ft72.p1.g1 + ft72.p2.g1 + ft72.p3.g1 + ft72.p4.g1 + ft72.p5.g1;
@@ -2531,13 +2032,13 @@ MattiaMasotti.final = 1.25;
     const ft73 = {
         ...fantateam_type,
         team_index: 73,
-        name: "West4ever",
-        rione: { ...WEST },
-        p1: { ...LucaSoramel },
-        p2: { ...MassimilianoMoretti },
-        p3: { ...AndreaMoretti },
-        p4: { ...EnricoSant },
-        p5: { ...StefanoPolano },
+        name: "Sud",
+        rione: { ...SUD },
+        p1: { ...GiacomoPiacentini },
+        p2: { ...DevinChiarcos },
+        p3: { ...VittorioBasso },
+        p4: { ...EdoardoPicogna },
+        p5: { ...DavidGaspardo },
     };
     ft73.total_cost = ft73.p1.cost + ft73.p2.cost + ft73.p3.cost + ft73.p4.cost + ft73.p5.cost;
     ft73.tot_g1 = ft73.p1.g1 + ft73.p2.g1 + ft73.p3.g1 + ft73.p4.g1 + ft73.p5.g1;
@@ -2550,13 +2051,13 @@ MattiaMasotti.final = 1.25;
     const ft74 = {
         ...fantateam_type,
         team_index: 74,
-        name: "Ringhio",
-        rione: { ...WEST },
-        p1: { ...LucaSoramel },
+        name: "NORDmania",
+        rione: { ...NORD },
+        p1: { ...GioeleTudini },
         p2: { ...MassimilianoMoretti },
-        p3: { ...LarryTrevisan },
-        p4: { ...AlessandroRojatti },
-        p5: { ...GiacomoFerigo },
+        p3: { ...FilippoPasquon },
+        p4: { ...MatteoSpagnolo },
+        p5: { ...MattiaMasotti },
     };
     ft74.total_cost = ft74.p1.cost + ft74.p2.cost + ft74.p3.cost + ft74.p4.cost + ft74.p5.cost;
     ft74.tot_g1 = ft74.p1.g1 + ft74.p2.g1 + ft74.p3.g1 + ft74.p4.g1 + ft74.p5.g1;
@@ -2569,13 +2070,13 @@ MattiaMasotti.final = 1.25;
     const ft75 = {
         ...fantateam_type,
         team_index: 75,
-        name: "Samu Masotti",
+        name: "Ta qifsha pidhin",
         rione: { ...EST },
-        p1: { ...DevinChiarcos },
-        p2: { ...AlessandroCostantini },
-        p3: { ...VittorioBasso },
-        p4: { ...FilippoPasquon },
-        p5: { ...DavideBroggi },
+        p1: { ...GionaTell },
+        p2: { ...AlessandroSantin },
+        p3: { ...MassimilianoMoretti },
+        p4: { ...MassimoBaldassi },
+        p5: { ...LarryTrevisan },
     };
     ft75.total_cost = ft75.p1.cost + ft75.p2.cost + ft75.p3.cost + ft75.p4.cost + ft75.p5.cost;
     ft75.tot_g1 = ft75.p1.g1 + ft75.p2.g1 + ft75.p3.g1 + ft75.p4.g1 + ft75.p5.g1;
@@ -2588,12 +2089,12 @@ MattiaMasotti.final = 1.25;
     const ft76 = {
         ...fantateam_type,
         team_index: 76,
-        name: "Gabrindri",
+        name: "Le bimbe di maso",
         rione: { ...EST },
-        p1: { ...LucaSoramel },
-        p2: { ...AlessioFurlan },
-        p3: { ...FilippoPasquon },
-        p4: { ...DiegoNata },
+        p1: { ...MassimilianoMoretti },
+        p2: { ...MiracleObichukwu },
+        p3: { ...DenisVanin },
+        p4: { ...MassimoMasotti },
         p5: { ...MattiaMasotti },
     };
     ft76.total_cost = ft76.p1.cost + ft76.p2.cost + ft76.p3.cost + ft76.p4.cost + ft76.p5.cost;
@@ -2607,13 +2108,13 @@ MattiaMasotti.final = 1.25;
     const ft77 = {
         ...fantateam_type,
         team_index: 77,
-        name: "Le bimbe di maso",
-        rione: { ...EST },
-        p1: { ...MassimilianoMoretti },
+        name: "DajeRoma",
+        rione: { ...NORD },
+        p1: { ...TommasoMartello },
         p2: { ...MiracleObichukwu },
-        p3: { ...DenisVanin },
-        p4: { ...MassimoMasotti },
-        p5: { ...MattiaMasotti },
+        p3: { ...DanieleGanzit },
+        p4: { ...MassimilianoMoretti },
+        p5: { ...LucaAnedda },
     };
     ft77.total_cost = ft77.p1.cost + ft77.p2.cost + ft77.p3.cost + ft77.p4.cost + ft77.p5.cost;
     ft77.tot_g1 = ft77.p1.g1 + ft77.p2.g1 + ft77.p3.g1 + ft77.p4.g1 + ft77.p5.g1;
@@ -2626,13 +2127,13 @@ MattiaMasotti.final = 1.25;
     const ft78 = {
         ...fantateam_type,
         team_index: 78,
-        name: "Mau",
-        rione: { ...WEST },
-        p1: { ...EnricoSant },
+        name: "👸🏼",
+        rione: { ...NORD },
+        p1: { ...MattiaRoiatti },
         p2: { ...MauroCuridori },
-        p3: { ...GiacomoSilvestri },
-        p4: { ...FilippoSappa },
-        p5: { ...AlessandroRizzi },
+        p3: { ...DanieleGanzit },
+        p4: { ...DiegoNata },
+        p5: { ...MatteoMargarit },
     };
     ft78.total_cost = ft78.p1.cost + ft78.p2.cost + ft78.p3.cost + ft78.p4.cost + ft78.p5.cost;
     ft78.tot_g1 = ft78.p1.g1 + ft78.p2.g1 + ft78.p3.g1 + ft78.p4.g1 + ft78.p5.g1;
@@ -2645,13 +2146,13 @@ MattiaMasotti.final = 1.25;
     const ft79 = {
         ...fantateam_type,
         team_index: 79,
-        name: "West riformulato",
+        name: "Team17",
         rione: { ...WEST },
-        p1: { ...VittorioGri },
-        p2: { ...ChristianZanet },
-        p3: { ...MauroPerina },
-        p4: { ...MattiaRoiatti },
-        p5: { ...AlessandroRizzi },
+        p1: { ...DanieleGanzit },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...MattiaMasotti },
+        p4: { ...PaoloZorzi },
+        p5: { ...MassimilianoRossi },
     };
     ft79.total_cost = ft79.p1.cost + ft79.p2.cost + ft79.p3.cost + ft79.p4.cost + ft79.p5.cost;
     ft79.tot_g1 = ft79.p1.g1 + ft79.p2.g1 + ft79.p3.g1 + ft79.p4.g1 + ft79.p5.g1;
@@ -2664,13 +2165,13 @@ MattiaMasotti.final = 1.25;
     const ft80 = {
         ...fantateam_type,
         team_index: 80,
-        name: "Ducks",
-        rione: { ...NORD },
-        p1: { ...MarcoRizzi },
-        p2: { ...MarcoLombardo },
-        p3: { ...DavidGaspardo },
-        p4: { ...FilippoPasquon },
-        p5: { ...LorenzoMoro },
+        name: "Trrr.... Non va!",
+        rione: { ...SUD },
+        p1: { ...GiovanniTonizzo },
+        p2: { ...AlessandroSantin },
+        p3: { ...AlessandroSant },
+        p4: { ...DevinChiarcos },
+        p5: { ...DiegoNata },
     };
     ft80.total_cost = ft80.p1.cost + ft80.p2.cost + ft80.p3.cost + ft80.p4.cost + ft80.p5.cost;
     ft80.tot_g1 = ft80.p1.g1 + ft80.p2.g1 + ft80.p3.g1 + ft80.p4.g1 + ft80.p5.g1;
@@ -2683,13 +2184,13 @@ MattiaMasotti.final = 1.25;
     const ft81 = {
         ...fantateam_type,
         team_index: 81,
-        name: "LePaliodeirioni",
+        name: "La Foca per una Codroipo Libera",
         rione: { ...NORD },
-        p1: { ...GiacomoPiacentini },
-        p2: { ...DavideBroggi },
-        p3: { ...MarcoPolo },
-        p4: { ...DevinChiarcos },
-        p5: { ...GioeleTudini },
+        p1: { ...IacopoPivetta },
+        p2: { ...LarryTrevisan },
+        p3: { ...MiracleObichukwu },
+        p4: { ...ValentinoCigainero },
+        p5: { ...MarcoPolo },
     };
     ft81.total_cost = ft81.p1.cost + ft81.p2.cost + ft81.p3.cost + ft81.p4.cost + ft81.p5.cost;
     ft81.tot_g1 = ft81.p1.g1 + ft81.p2.g1 + ft81.p3.g1 + ft81.p4.g1 + ft81.p5.g1;
@@ -2702,13 +2203,13 @@ MattiaMasotti.final = 1.25;
     const ft82 = {
         ...fantateam_type,
         team_index: 82,
-        name: "oilapledecoval",
+        name: "Non capisco di pallacanestro",
         rione: { ...NORD },
-        p1: { ...AlessandroSantin },
-        p2: { ...MarcoMarchetti },
-        p3: { ...DavidGaspardo },
-        p4: { ...UmbertoNobile },
-        p5: { ...PietroSoramel },
+        p1: { ...MatteoMargarit },
+        p2: { ...FilippoPasquon },
+        p3: { ...LucaGemo },
+        p4: { ...StefanoPolano },
+        p5: { ...GiovanniZanin },
     };
     ft82.total_cost = ft82.p1.cost + ft82.p2.cost + ft82.p3.cost + ft82.p4.cost + ft82.p5.cost;
     ft82.tot_g1 = ft82.p1.g1 + ft82.p2.g1 + ft82.p3.g1 + ft82.p4.g1 + ft82.p5.g1;
@@ -2721,13 +2222,13 @@ MattiaMasotti.final = 1.25;
     const ft83 = {
         ...fantateam_type,
         team_index: 83,
-        name: "Giacomone",
-        rione: { ...SUD },
-        p1: { ...MatteoSpagnolo },
-        p2: { ...ChristianZanet },
-        p3: { ...VittorioGri },
-        p4: { ...AlessandroSant },
-        p5: { ...WilliamIob },
+        name: "TEAM LG",
+        rione: { ...NORD },
+        p1: { ...LucaGemo },
+        p2: { ...GiovanniZanin },
+        p3: { ...MatteoMargarit },
+        p4: { ...StefanoPolano },
+        p5: { ...EnricoSant },
     };
     ft83.total_cost = ft83.p1.cost + ft83.p2.cost + ft83.p3.cost + ft83.p4.cost + ft83.p5.cost;
     ft83.tot_g1 = ft83.p1.g1 + ft83.p2.g1 + ft83.p3.g1 + ft83.p4.g1 + ft83.p5.g1;
@@ -2740,13 +2241,13 @@ MattiaMasotti.final = 1.25;
     const ft84 = {
         ...fantateam_type,
         team_index: 84,
-        name: "Non capisco di pallacanestro",
-        rione: { ...NORD },
-        p1: { ...MatteoMargarit },
-        p2: { ...FilippoPasquon },
-        p3: { ...LucaGemo },
-        p4: { ...StefanoPolano },
-        p5: { ...GiovanniZanin },
+        name: "NonCapiscoNienteDiBasket",
+        rione: { ...SUD },
+        p1: { ...StefanoPolano },
+        p2: { ...GiovanniZanin },
+        p3: { ...MatteoMargarit },
+        p4: { ...MassimilianoRossi },
+        p5: { ...DanieleGanzit },
     };
     ft84.total_cost = ft84.p1.cost + ft84.p2.cost + ft84.p3.cost + ft84.p4.cost + ft84.p5.cost;
     ft84.tot_g1 = ft84.p1.g1 + ft84.p2.g1 + ft84.p3.g1 + ft84.p4.g1 + ft84.p5.g1;
@@ -2759,13 +2260,13 @@ MattiaMasotti.final = 1.25;
     const ft85 = {
         ...fantateam_type,
         team_index: 85,
-        name: "DOZERS CONFEDERATI",
-        rione: { ...SUD },
-        p1: { ...AlessandroSant },
-        p2: { ...AlessioFurlan },
-        p3: { ...AlessandroRizzi },
-        p4: { ...PietroSoramel },
-        p5: { ...LucaSoramel },
+        name: "Nipponici",
+        rione: { ...EST },
+        p1: { ...AndreaMoretti },
+        p2: { ...MattiaRoiatti },
+        p3: { ...DiegoNata },
+        p4: { ...AlessandroRizzi },
+        p5: { ...PietroSoramel },
     };
     ft85.total_cost = ft85.p1.cost + ft85.p2.cost + ft85.p3.cost + ft85.p4.cost + ft85.p5.cost;
     ft85.tot_g1 = ft85.p1.g1 + ft85.p2.g1 + ft85.p3.g1 + ft85.p4.g1 + ft85.p5.g1;
@@ -2778,13 +2279,13 @@ MattiaMasotti.final = 1.25;
     const ft86 = {
         ...fantateam_type,
         team_index: 86,
-        name: "Fil🥷",
+        name: "Massive Crash",
         rione: { ...EST },
-        p1: { ...ThomasBaracetti },
-        p2: { ...ValentinoCigainero },
-        p3: { ...MassimilianoMoretti },
-        p4: { ...LarryTrevisan },
-        p5: { ...AlexMicottis },
+        p1: { ...LucaSoramel },
+        p2: { ...AlessandroSant },
+        p3: { ...PietroSoramel },
+        p4: { ...AlessandroRizzi },
+        p5: { ...AndreaMoretti },
     };
     ft86.total_cost = ft86.p1.cost + ft86.p2.cost + ft86.p3.cost + ft86.p4.cost + ft86.p5.cost;
     ft86.tot_g1 = ft86.p1.g1 + ft86.p2.g1 + ft86.p3.g1 + ft86.p4.g1 + ft86.p5.g1;
@@ -2797,13 +2298,13 @@ MattiaMasotti.final = 1.25;
     const ft87 = {
         ...fantateam_type,
         team_index: 87,
-        name: "I Penny's Five",
-        rione: { ...SUD },
-        p1: { ...MassimilianoRossi },
-        p2: { ...AlessandroRizzi },
-        p3: { ...TommasoMartello },
-        p4: { ...UmbertoNobile },
-        p5: { ...GiovanniTonizzo },
+        name: "gigiovena",
+        rione: { ...NORD },
+        p1: { ...GiovanniTonizzo },
+        p2: { ...PietroSoramel },
+        p3: { ...AlessandroRizzi },
+        p4: { ...MarcoSerrao },
+        p5: { ...VittorioGri },
     };
     ft87.total_cost = ft87.p1.cost + ft87.p2.cost + ft87.p3.cost + ft87.p4.cost + ft87.p5.cost;
     ft87.tot_g1 = ft87.p1.g1 + ft87.p2.g1 + ft87.p3.g1 + ft87.p4.g1 + ft87.p5.g1;
@@ -2816,13 +2317,13 @@ MattiaMasotti.final = 1.25;
     const ft88 = {
         ...fantateam_type,
         team_index: 88,
-        name: "Bmax",
-        rione: { ...EST },
-        p1: { ...EnricoSant },
-        p2: { ...MattiaMasotti },
-        p3: { ...UmbertoNobile },
-        p4: { ...FilippoPasquon },
-        p5: { ...MarcoLombardo },
+        name: "pausa giacomone",
+        rione: { ...SUD },
+        p1: { ...ChristianFedrizzi },
+        p2: { ...VittorioGri },
+        p3: { ...MatteoSpagnolo },
+        p4: { ...PaoloZorzi },
+        p5: { ...DavidGaspardo },
     };
     ft88.total_cost = ft88.p1.cost + ft88.p2.cost + ft88.p3.cost + ft88.p4.cost + ft88.p5.cost;
     ft88.tot_g1 = ft88.p1.g1 + ft88.p2.g1 + ft88.p3.g1 + ft88.p4.g1 + ft88.p5.g1;
@@ -2835,13 +2336,13 @@ MattiaMasotti.final = 1.25;
     const ft89 = {
         ...fantateam_type,
         team_index: 89,
-        name: "👸🏼",
+        name: "Michael Scott's Tots",
         rione: { ...NORD },
-        p1: { ...MattiaRoiatti },
-        p2: { ...MauroCuridori },
-        p3: { ...DanieleGanzit },
+        p1: { ...DavidGaspardo },
+        p2: { ...MiracleObichukwu },
+        p3: { ...AlessioFurlan },
         p4: { ...DiegoNata },
-        p5: { ...MatteoMargarit },
+        p5: { ...MarcoPolo },
     };
     ft89.total_cost = ft89.p1.cost + ft89.p2.cost + ft89.p3.cost + ft89.p4.cost + ft89.p5.cost;
     ft89.tot_g1 = ft89.p1.g1 + ft89.p2.g1 + ft89.p3.g1 + ft89.p4.g1 + ft89.p5.g1;
@@ -2854,13 +2355,13 @@ MattiaMasotti.final = 1.25;
     const ft90 = {
         ...fantateam_type,
         team_index: 90,
-        name: "Paperelle gay",
-        rione: { ...EST },
-        p1: { ...EnricoSant },
-        p2: { ...WilliamIob },
-        p3: { ...AlessandroCostantini },
-        p4: { ...MarcoSerrao },
-        p5: { ...DenisVanin },
+        name: "ee4",
+        rione: { ...SUD },
+        p1: { ...ValentinoCigainero },
+        p2: { ...MauroCuridori },
+        p3: { ...MicheleDeAnna },
+        p4: { ...MattiaMasotti },
+        p5: { ...TommasoMartello },
     };
     ft90.total_cost = ft90.p1.cost + ft90.p2.cost + ft90.p3.cost + ft90.p4.cost + ft90.p5.cost;
     ft90.tot_g1 = ft90.p1.g1 + ft90.p2.g1 + ft90.p3.g1 + ft90.p4.g1 + ft90.p5.g1;
@@ -2873,13 +2374,13 @@ MattiaMasotti.final = 1.25;
     const ft91 = {
         ...fantateam_type,
         team_index: 91,
-        name: "Furbicomevolpi",
-        rione: { ...EST },
-        p1: { ...MarcoSerrao },
-        p2: { ...WilliamIob },
-        p3: { ...DenisVanin },
-        p4: { ...SimoneMartinelli },
-        p5: { ...AlessandroSant },
+        name: "Utopia (:",
+        rione: { ...WEST },
+        p1: { ...AndreaMoretti },
+        p2: { ...AlessandroRojatti },
+        p3: { ...MarcoRizzi },
+        p4: { ...MassimilianoMoretti },
+        p5: { ...AlessandroRizzi },
     };
     ft91.total_cost = ft91.p1.cost + ft91.p2.cost + ft91.p3.cost + ft91.p4.cost + ft91.p5.cost;
     ft91.tot_g1 = ft91.p1.g1 + ft91.p2.g1 + ft91.p3.g1 + ft91.p4.g1 + ft91.p5.g1;
@@ -2892,13 +2393,13 @@ MattiaMasotti.final = 1.25;
     const ft92 = {
         ...fantateam_type,
         team_index: 92,
-        name: "Los Vikingos",
-        rione: { ...NORD },
-        p1: { ...MarcoRizzi },
-        p2: { ...AlessandroRizzi },
-        p3: { ...DiegoNata },
-        p4: { ...LucaSoramel },
-        p5: { ...VittorioGri },
+        name: "AirBall",
+        rione: { ...EST },
+        p1: { ...AlessandroRojatti },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...AlessandroRizzi },
+        p4: { ...AntonioGri },
+        p5: { ...LucaAnedda },
     };
     ft92.total_cost = ft92.p1.cost + ft92.p2.cost + ft92.p3.cost + ft92.p4.cost + ft92.p5.cost;
     ft92.tot_g1 = ft92.p1.g1 + ft92.p2.g1 + ft92.p3.g1 + ft92.p4.g1 + ft92.p5.g1;
@@ -2911,13 +2412,13 @@ MattiaMasotti.final = 1.25;
     const ft93 = {
         ...fantateam_type,
         team_index: 93,
-        name: "Dr Tanzimat",
-        rione: { ...SUD },
-        p1: { ...GiovanniZanin },
-        p2: { ...LucaSoramel },
-        p3: { ...PietroSoramel },
-        p4: { ...GiovanniTonizzo },
-        p5: { ...VittorioGri },
+        name: "Panade",
+        rione: { ...NORD },
+        p1: { ...AntonioGri },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...AlessandroRizzi },
+        p4: { ...AlessandroRojatti },
+        p5: { ...AndreaMoretti },
     };
     ft93.total_cost = ft93.p1.cost + ft93.p2.cost + ft93.p3.cost + ft93.p4.cost + ft93.p5.cost;
     ft93.tot_g1 = ft93.p1.g1 + ft93.p2.g1 + ft93.p3.g1 + ft93.p4.g1 + ft93.p5.g1;
@@ -2930,13 +2431,13 @@ MattiaMasotti.final = 1.25;
     const ft94 = {
         ...fantateam_type,
         team_index: 94,
-        name: "SuperOne",
+        name: "DD",
         rione: { ...WEST },
-        p1: { ...AndreaMoretti },
-        p2: { ...MicheleDeAnna },
-        p3: { ...MassimilianoMoretti },
-        p4: { ...MiracleObichukwu },
-        p5: { ...MicheleGorasso },
+        p1: { ...MassimoMasotti },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...AlessandroRizzi },
+        p4: { ...AntonioGri },
+        p5: { ...MatteoBazzaro },
     };
     ft94.total_cost = ft94.p1.cost + ft94.p2.cost + ft94.p3.cost + ft94.p4.cost + ft94.p5.cost;
     ft94.tot_g1 = ft94.p1.g1 + ft94.p2.g1 + ft94.p3.g1 + ft94.p4.g1 + ft94.p5.g1;
@@ -2949,13 +2450,13 @@ MattiaMasotti.final = 1.25;
     const ft95 = {
         ...fantateam_type,
         team_index: 95,
-        name: "Maestro Shifu",
-        rione: { ...NORD },
-        p1: { ...MattiaRoiatti },
+        name: "West4ever",
+        rione: { ...WEST },
+        p1: { ...LucaSoramel },
         p2: { ...MassimilianoMoretti },
-        p3: { ...AlessandroRizzi },
-        p4: { ...MarcoRizzi },
-        p5: { ...AndreaMoretti },
+        p3: { ...AndreaMoretti },
+        p4: { ...EnricoSant },
+        p5: { ...StefanoPolano },
     };
     ft95.total_cost = ft95.p1.cost + ft95.p2.cost + ft95.p3.cost + ft95.p4.cost + ft95.p5.cost;
     ft95.tot_g1 = ft95.p1.g1 + ft95.p2.g1 + ft95.p3.g1 + ft95.p4.g1 + ft95.p5.g1;
@@ -2968,13 +2469,13 @@ MattiaMasotti.final = 1.25;
     const ft96 = {
         ...fantateam_type,
         team_index: 96,
-        name: "DajeRoma",
-        rione: { ...NORD },
-        p1: { ...TommasoMartello },
-        p2: { ...MiracleObichukwu },
-        p3: { ...DanieleGanzit },
-        p4: { ...MassimilianoMoretti },
-        p5: { ...LucaAnedda },
+        name: "Uoff",
+        rione: { ...SUD },
+        p1: { ...MassimilianoMoretti },
+        p2: { ...MarcoRizzi },
+        p3: { ...LucaAnedda },
+        p4: { ...MattiaRoiatti },
+        p5: { ...AlessandroRizzi },
     };
     ft96.total_cost = ft96.p1.cost + ft96.p2.cost + ft96.p3.cost + ft96.p4.cost + ft96.p5.cost;
     ft96.tot_g1 = ft96.p1.g1 + ft96.p2.g1 + ft96.p3.g1 + ft96.p4.g1 + ft96.p5.g1;
@@ -2987,13 +2488,13 @@ MattiaMasotti.final = 1.25;
     const ft97 = {
         ...fantateam_type,
         team_index: 97,
-        name: "west solos",
-        rione: { ...WEST },
-        p1: { ...MassimoMasotti },
+        name: "SimoVinny",
+        rione: { ...SUD },
+        p1: { ...ValentinoCigainero },
         p2: { ...MassimilianoMoretti },
-        p3: { ...GiacomoPiacentini },
-        p4: { ...MiracleObichukwu },
-        p5: { ...EnricoSant },
+        p3: { ...DavideFaurlin },
+        p4: { ...MattiaMasotti },
+        p5: { ...MarcoRizzi },
     };
     ft97.total_cost = ft97.p1.cost + ft97.p2.cost + ft97.p3.cost + ft97.p4.cost + ft97.p5.cost;
     ft97.tot_g1 = ft97.p1.g1 + ft97.p2.g1 + ft97.p3.g1 + ft97.p4.g1 + ft97.p5.g1;
@@ -3006,13 +2507,13 @@ MattiaMasotti.final = 1.25;
     const ft98 = {
         ...fantateam_type,
         team_index: 98,
-        name: "Ghetto boys",
+        name: "Verità per GR",
         rione: { ...NORD },
-        p1: { ...MiracleObichukwu },
-        p2: { ...LarryTrevisan },
-        p3: { ...GiovanniTonizzo },
-        p4: { ...PietroSoramel },
-        p5: { ...DiegoNata },
+        p1: { ...MattiaRoiatti },
+        p2: { ...LucaAnedda },
+        p3: { ...MassimilianoMoretti },
+        p4: { ...MarcoRizzi },
+        p5: { ...FilippoPasquon },
     };
     ft98.total_cost = ft98.p1.cost + ft98.p2.cost + ft98.p3.cost + ft98.p4.cost + ft98.p5.cost;
     ft98.tot_g1 = ft98.p1.g1 + ft98.p2.g1 + ft98.p3.g1 + ft98.p4.g1 + ft98.p5.g1;
@@ -3025,13 +2526,13 @@ MattiaMasotti.final = 1.25;
     const ft99 = {
         ...fantateam_type,
         team_index: 99,
-        name: "DEVIN",
-        rione: { ...WEST },
-        p1: { ...MassimilianoMoretti },
-        p2: { ...GiacomoPiacentini },
-        p3: { ...DevinChiarcos },
-        p4: { ...VittorioBasso },
-        p5: { ...FilippoPasquon },
+        name: "Maestro Shifu",
+        rione: { ...NORD },
+        p1: { ...MattiaRoiatti },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...AlessandroRizzi },
+        p4: { ...MarcoRizzi },
+        p5: { ...AndreaMoretti },
     };
     ft99.total_cost = ft99.p1.cost + ft99.p2.cost + ft99.p3.cost + ft99.p4.cost + ft99.p5.cost;
     ft99.tot_g1 = ft99.p1.g1 + ft99.p2.g1 + ft99.p3.g1 + ft99.p4.g1 + ft99.p5.g1;
@@ -3044,13 +2545,13 @@ MattiaMasotti.final = 1.25;
     const ft100 = {
         ...fantateam_type,
         team_index: 100,
-        name: "After CapOstile",
-        rione: { ...WEST },
-        p1: { ...SebastianoTonizzo },
-        p2: { ...MassimilianoMoretti },
-        p3: { ...LarryTrevisan },
-        p4: { ...MiracleObichukwu },
-        p5: { ...VittorioGri },
+        name: "A tutta birra",
+        rione: { ...NORD },
+        p1: { ...MarcoRizzi },
+        p2: { ...LucaSoramel },
+        p3: { ...EugenioDeTina },
+        p4: { ...MassimilianoMoretti },
+        p5: { ...EnricoSant },
     };
     ft100.total_cost = ft100.p1.cost + ft100.p2.cost + ft100.p3.cost + ft100.p4.cost + ft100.p5.cost;
     ft100.tot_g1 = ft100.p1.g1 + ft100.p2.g1 + ft100.p3.g1 + ft100.p4.g1 + ft100.p5.g1;
@@ -3063,13 +2564,13 @@ MattiaMasotti.final = 1.25;
     const ft101 = {
         ...fantateam_type,
         team_index: 101,
-        name: "Trrrr non va",
-        rione: { ...SUD },
-        p1: { ...DiegoNata },
-        p2: { ...AndreaMoretti },
-        p3: { ...AlessioFurlan },
-        p4: { ...MarcoRizzi },
-        p5: { ...DavidGaspardo },
+        name: "Bitchass",
+        rione: { ...WEST },
+        p1: { ...MarcoRizzi },
+        p2: { ...MassimilianoMoretti },
+        p3: { ...LucaAnedda },
+        p4: { ...LucaSoramel },
+        p5: { ...MattiaRoiatti },
     };
     ft101.total_cost = ft101.p1.cost + ft101.p2.cost + ft101.p3.cost + ft101.p4.cost + ft101.p5.cost;
     ft101.tot_g1 = ft101.p1.g1 + ft101.p2.g1 + ft101.p3.g1 + ft101.p4.g1 + ft101.p5.g1;
@@ -3082,13 +2583,13 @@ MattiaMasotti.final = 1.25;
     const ft102 = {
         ...fantateam_type,
         team_index: 102,
-        name: "FIRETEAM!",
-        rione: { ...NORD },
-        p1: { ...VittorioGri },
-        p2: { ...MarcoLombardo },
-        p3: { ...MarcoSerrao },
-        p4: { ...AlessandroRizzi },
-        p5: { ...VittorioBasso },
+        name: "Azzzzz",
+        rione: { ...EST },
+        p1: { ...GiovanniTonizzo },
+        p2: { ...ChristianZanet },
+        p3: { ...MicheleDeAnna },
+        p4: { ...MattiaRoiatti },
+        p5: { ...AlessandroCostantini },
     };
     ft102.total_cost = ft102.p1.cost + ft102.p2.cost + ft102.p3.cost + ft102.p4.cost + ft102.p5.cost;
     ft102.tot_g1 = ft102.p1.g1 + ft102.p2.g1 + ft102.p3.g1 + ft102.p4.g1 + ft102.p5.g1;
@@ -3101,13 +2602,13 @@ MattiaMasotti.final = 1.25;
     const ft103 = {
         ...fantateam_type,
         team_index: 103,
-        name: "TEAM LG",
-        rione: { ...NORD },
-        p1: { ...LucaGemo },
-        p2: { ...GiovanniZanin },
-        p3: { ...MatteoMargarit },
-        p4: { ...StefanoPolano },
-        p5: { ...EnricoSant },
+        name: "Super chicche",
+        rione: { ...WEST },
+        p1: { ...LucaSoramel },
+        p2: { ...GiovanniTonizzo },
+        p3: { ...MarcoRizzi },
+        p4: { ...MassimilianoMoretti },
+        p5: { ...VittorioGri },
     };
     ft103.total_cost = ft103.p1.cost + ft103.p2.cost + ft103.p3.cost + ft103.p4.cost + ft103.p5.cost;
     ft103.tot_g1 = ft103.p1.g1 + ft103.p2.g1 + ft103.p3.g1 + ft103.p4.g1 + ft103.p5.g1;
@@ -3120,13 +2621,13 @@ MattiaMasotti.final = 1.25;
     const ft104 = {
         ...fantateam_type,
         team_index: 104,
-        name: "Real Codroipen",
-        rione: { ...WEST },
-        p1: { ...ThomasBaracetti },
-        p2: { ...GabrieleMiani },
-        p3: { ...SebastianoTonizzo },
-        p4: { ...MarcoMarchetti },
-        p5: { ...EdoardoPicogna },
+        name: "il Fanto Padre",
+        rione: { ...NORD },
+        p1: { ...LucaDellaLonga },
+        p2: { ...GiovanniZanin },
+        p3: { ...GiovanniTonizzo },
+        p4: { ...GiacomoPiacentini },
+        p5: { ...MarcoLombardo },
     };
     ft104.total_cost = ft104.p1.cost + ft104.p2.cost + ft104.p3.cost + ft104.p4.cost + ft104.p5.cost;
     ft104.tot_g1 = ft104.p1.g1 + ft104.p2.g1 + ft104.p3.g1 + ft104.p4.g1 + ft104.p5.g1;
@@ -3139,13 +2640,13 @@ MattiaMasotti.final = 1.25;
     const ft105 = {
         ...fantateam_type,
         team_index: 105,
-        name: "Vichingo72",
-        rione: { ...NORD },
-        p1: { ...LucaAnedda },
-        p2: { ...MassimilianoMoretti },
-        p3: { ...AlessandroCostantini },
-        p4: { ...MauroPerina },
-        p5: { ...MattiaRoiatti },
+        name: "dunk",
+        rione: { ...WEST },
+        p1: { ...LucaSoramel },
+        p2: { ...PaoloZorzi },
+        p3: { ...ChristianFedrizzi },
+        p4: { ...EmanueleDaneluzzi },
+        p5: { ...FilippoAgnoluzzi },
     };
     ft105.total_cost = ft105.p1.cost + ft105.p2.cost + ft105.p3.cost + ft105.p4.cost + ft105.p5.cost;
     ft105.tot_g1 = ft105.p1.g1 + ft105.p2.g1 + ft105.p3.g1 + ft105.p4.g1 + ft105.p5.g1;
@@ -3158,13 +2659,13 @@ MattiaMasotti.final = 1.25;
     const ft106 = {
         ...fantateam_type,
         team_index: 106,
-        name: "Codroipen F.C.",
-        rione: { ...WEST },
-        p1: { ...DavideParon },
-        p2: { ...DevinChiarcos },
-        p3: { ...GabrieleMiani },
-        p4: { ...EdoardoPicogna },
-        p5: { ...VittorioBasso },
+        name: "Vitellonseeee",
+        rione: { ...SUD },
+        p1: { ...AlessandroSantin },
+        p2: { ...MattiaMasotti },
+        p3: { ...AlessandroSant },
+        p4: { ...GiacomoPiacentini },
+        p5: { ...AlessandroCostantini },
     };
     ft106.total_cost = ft106.p1.cost + ft106.p2.cost + ft106.p3.cost + ft106.p4.cost + ft106.p5.cost;
     ft106.tot_g1 = ft106.p1.g1 + ft106.p2.g1 + ft106.p3.g1 + ft106.p4.g1 + ft106.p5.g1;
@@ -3177,13 +2678,13 @@ MattiaMasotti.final = 1.25;
     const ft107 = {
         ...fantateam_type,
         team_index: 107,
-        name: "Trevi BC",
-        rione: { ...SUD },
-        p1: { ...DavidGaspardo },
-        p2: { ...FilippoPasquon },
-        p3: { ...MarcoLombardo },
-        p4: { ...EnricoSant },
-        p5: { ...MarcoRizzi },
+        name: "Visca",
+        rione: { ...NORD },
+        p1: { ...GiacomoSilvestri },
+        p2: { ...LarryTrevisan },
+        p3: { ...ChristianZanet },
+        p4: { ...MicheleDeAnna },
+        p5: { ...AlessandroRizzi },
     };
     ft107.total_cost = ft107.p1.cost + ft107.p2.cost + ft107.p3.cost + ft107.p4.cost + ft107.p5.cost;
     ft107.tot_g1 = ft107.p1.g1 + ft107.p2.g1 + ft107.p3.g1 + ft107.p4.g1 + ft107.p5.g1;
@@ -3196,13 +2697,13 @@ MattiaMasotti.final = 1.25;
     const ft108 = {
         ...fantateam_type,
         team_index: 108,
-        name: "Axeliathepoliceofficer",
-        rione: { ...EST },
-        p1: { ...MatteoBazzaro },
-        p2: { ...MiracleObichukwu },
-        p3: { ...MarcoRizzi },
-        p4: { ...MarcoPolo },
-        p5: { ...LucaAnedda },
+        name: "Ailantus",
+        rione: { ...WEST },
+        p1: { ...MarcoRizzi },
+        p2: { ...MatteoMargarit },
+        p3: { ...ChristianZanet },
+        p4: { ...AlessandroRizzi },
+        p5: { ...MicheleDeAnna },
     };
     ft108.total_cost = ft108.p1.cost + ft108.p2.cost + ft108.p3.cost + ft108.p4.cost + ft108.p5.cost;
     ft108.tot_g1 = ft108.p1.g1 + ft108.p2.g1 + ft108.p3.g1 + ft108.p4.g1 + ft108.p5.g1;
@@ -3215,13 +2716,13 @@ MattiaMasotti.final = 1.25;
     const ft109 = {
         ...fantateam_type,
         team_index: 109,
-        name: "Pix",
+        name: "Giangi",
         rione: { ...WEST },
-        p1: { ...GiacomoPiacentini },
-        p2: { ...VittorioBasso },
-        p3: { ...MarcoSerrao },
-        p4: { ...TommasoMartello },
-        p5: { ...AlessandroRizzi },
+        p1: { ...ChristianFedrizzi },
+        p2: { ...GiacomoFerigo },
+        p3: { ...MicheleVendrame },
+        p4: { ...LorenzoSchinella },
+        p5: { ...DavideBroggi },
     };
     ft109.total_cost = ft109.p1.cost + ft109.p2.cost + ft109.p3.cost + ft109.p4.cost + ft109.p5.cost;
     ft109.tot_g1 = ft109.p1.g1 + ft109.p2.g1 + ft109.p3.g1 + ft109.p4.g1 + ft109.p5.g1;
@@ -3234,13 +2735,13 @@ MattiaMasotti.final = 1.25;
     const ft110 = {
         ...fantateam_type,
         team_index: 110,
-        name: "Orsa",
+        name: "PSYCHO P",
         rione: { ...NORD },
-        p1: { ...GabrieleMiani },
-        p2: { ...LucaAnedda },
-        p3: { ...AlessandroSantin },
-        p4: { ...LucaDellaLonga },
-        p5: { ...MarcoPolo },
+        p1: { ...MarcoLombardo },
+        p2: { ...MarcoSerrao },
+        p3: { ...FilippoPasquon },
+        p4: { ...AlessandroCostantini },
+        p5: { ...VittorioBasso },
     };
     ft110.total_cost = ft110.p1.cost + ft110.p2.cost + ft110.p3.cost + ft110.p4.cost + ft110.p5.cost;
     ft110.tot_g1 = ft110.p1.g1 + ft110.p2.g1 + ft110.p3.g1 + ft110.p4.g1 + ft110.p5.g1;
@@ -3253,13 +2754,13 @@ MattiaMasotti.final = 1.25;
     const ft111 = {
         ...fantateam_type,
         team_index: 111,
-        name: "ee4",
-        rione: { ...SUD },
-        p1: { ...ValentinoCigainero },
-        p2: { ...MauroCuridori },
-        p3: { ...MicheleDeAnna },
-        p4: { ...MattiaMasotti },
-        p5: { ...TommasoMartello },
+        name: "fantadario",
+        rione: { ...WEST },
+        p1: { ...LarryTrevisan },
+        p2: { ...FilippoPasquon },
+        p3: { ...AlessandroSant },
+        p4: { ...AlessandroGalassi },
+        p5: { ...MattiaMasotti },
     };
     ft111.total_cost = ft111.p1.cost + ft111.p2.cost + ft111.p3.cost + ft111.p4.cost + ft111.p5.cost;
     ft111.tot_g1 = ft111.p1.g1 + ft111.p2.g1 + ft111.p3.g1 + ft111.p4.g1 + ft111.p5.g1;
@@ -3272,12 +2773,12 @@ MattiaMasotti.final = 1.25;
     const ft112 = {
         ...fantateam_type,
         team_index: 112,
-        name: "Nord",
+        name: "Leggende",
         rione: { ...NORD },
-        p1: { ...AlessandroRizzi },
-        p2: { ...DevinChiarcos },
-        p3: { ...UmbertoNobile },
-        p4: { ...GiacomoFerigo },
+        p1: { ...LarryTrevisan },
+        p2: { ...DanieleGanzit },
+        p3: { ...MarcoPolo },
+        p4: { ...MarcoSerrao },
         p5: { ...AlessandroSant },
     };
     ft112.total_cost = ft112.p1.cost + ft112.p2.cost + ft112.p3.cost + ft112.p4.cost + ft112.p5.cost;
@@ -3291,13 +2792,13 @@ MattiaMasotti.final = 1.25;
     const ft113 = {
         ...fantateam_type,
         team_index: 113,
-        name: "Gabro's top team",
-        rione: { ...WEST },
-        p1: { ...UmbertoNobile },
-        p2: { ...AlessandroCostantini },
-        p3: { ...MarcoSerrao },
-        p4: { ...MiracleObichukwu },
-        p5: { ...EnricoSant },
+        name: "Paperelle gay",
+        rione: { ...EST },
+        p1: { ...EnricoSant },
+        p2: { ...WilliamIob },
+        p3: { ...AlessandroCostantini },
+        p4: { ...MarcoSerrao },
+        p5: { ...DenisVanin },
     };
     ft113.total_cost = ft113.p1.cost + ft113.p2.cost + ft113.p3.cost + ft113.p4.cost + ft113.p5.cost;
     ft113.tot_g1 = ft113.p1.g1 + ft113.p2.g1 + ft113.p3.g1 + ft113.p4.g1 + ft113.p5.g1;
@@ -3310,13 +2811,13 @@ MattiaMasotti.final = 1.25;
     const ft114 = {
         ...fantateam_type,
         team_index: 114,
-        name: "Samu & Ema",
-        rione: { ...EST },
+        name: "CIPPI",
+        rione: { ...NORD },
         p1: { ...AlessandroCostantini },
-        p2: { ...EnricoSant },
-        p3: { ...MattiaMasotti },
-        p4: { ...FilippoPasquon },
-        p5: { ...AlessandroRizzi },
+        p2: { ...VittorioGri },
+        p3: { ...LucaSoramel },
+        p4: { ...GionaTell },
+        p5: { ...AlessandroSant },
     };
     ft114.total_cost = ft114.p1.cost + ft114.p2.cost + ft114.p3.cost + ft114.p4.cost + ft114.p5.cost;
     ft114.tot_g1 = ft114.p1.g1 + ft114.p2.g1 + ft114.p3.g1 + ft114.p4.g1 + ft114.p5.g1;
@@ -3329,13 +2830,13 @@ MattiaMasotti.final = 1.25;
     const ft115 = {
         ...fantateam_type,
         team_index: 115,
-        name: "Melinda",
-        rione: { ...NORD },
-        p1: { ...PietroSoramel },
-        p2: { ...LucaSoramel },
-        p3: { ...MassimilianoMoretti },
-        p4: { ...AlessioFurlan },
-        p5: { ...AndreaMoretti },
+        name: "Samu & Ema",
+        rione: { ...EST },
+        p1: { ...AlessandroCostantini },
+        p2: { ...EnricoSant },
+        p3: { ...MattiaMasotti },
+        p4: { ...FilippoPasquon },
+        p5: { ...AlessandroRizzi },
     };
     ft115.total_cost = ft115.p1.cost + ft115.p2.cost + ft115.p3.cost + ft115.p4.cost + ft115.p5.cost;
     ft115.tot_g1 = ft115.p1.g1 + ft115.p2.g1 + ft115.p3.g1 + ft115.p4.g1 + ft115.p5.g1;
@@ -3348,13 +2849,13 @@ MattiaMasotti.final = 1.25;
     const ft116 = {
         ...fantateam_type,
         team_index: 116,
-        name: "SPAGNOLOTIAMO",
-        rione: { ...SUD },
-        p1: { ...MatteoSpagnolo },
-        p2: { ...VittorioGri },
-        p3: { ...MiracleObichukwu },
-        p4: { ...GabrieleMiani },
-        p5: { ...EST },
+        name: "Robur Nazionale",
+        rione: { ...WEST },
+        p1: { ...AlessandroRizzi },
+        p2: { ...MattiaMasotti },
+        p3: { ...MarcoSerrao },
+        p4: { ...MicheleDeAnna },
+        p5: { ...MiracleObichukwu },
     };
     ft116.total_cost = ft116.p1.cost + ft116.p2.cost + ft116.p3.cost + ft116.p4.cost + ft116.p5.cost;
     ft116.tot_g1 = ft116.p1.g1 + ft116.p2.g1 + ft116.p3.g1 + ft116.p4.g1 + ft116.p5.g1;
@@ -3367,13 +2868,13 @@ MattiaMasotti.final = 1.25;
     const ft117 = {
         ...fantateam_type,
         team_index: 117,
-        name: "Spagnolo sposami",
+        name: "Giacomone",
         rione: { ...SUD },
-        p1: { ...SebastianoTonizzo },
-        p2: { ...MatteoSpagnolo },
-        p3: { ...MatteoMargarit },
-        p4: { ...DavideParon },
-        p5: { ...MichaelMargarit },
+        p1: { ...MatteoSpagnolo },
+        p2: { ...ChristianZanet },
+        p3: { ...VittorioGri },
+        p4: { ...AlessandroSant },
+        p5: { ...WilliamIob },
     };
     ft117.total_cost = ft117.p1.cost + ft117.p2.cost + ft117.p3.cost + ft117.p4.cost + ft117.p5.cost;
     ft117.tot_g1 = ft117.p1.g1 + ft117.p2.g1 + ft117.p3.g1 + ft117.p4.g1 + ft117.p5.g1;
@@ -3386,13 +2887,13 @@ MattiaMasotti.final = 1.25;
     const ft118 = {
         ...fantateam_type,
         team_index: 118,
-        name: "Enea",
+        name: "Team Canaja",
         rione: { ...NORD },
-        p1: { ...GabrieleMiani },
-        p2: { ...GiacomoFerigo },
-        p3: { ...DevinChiarcos },
-        p4: { ...VittorioBasso },
-        p5: { ...AntonioGri },
+        p1: { ...MarcoLombardo },
+        p2: { ...DiegoNata },
+        p3: { ...DanieleGanzit },
+        p4: { ...EnricoSant },
+        p5: { ...AlessioFurlan },
     };
     ft118.total_cost = ft118.p1.cost + ft118.p2.cost + ft118.p3.cost + ft118.p4.cost + ft118.p5.cost;
     ft118.tot_g1 = ft118.p1.g1 + ft118.p2.g1 + ft118.p3.g1 + ft118.p4.g1 + ft118.p5.g1;
@@ -3405,13 +2906,13 @@ MattiaMasotti.final = 1.25;
     const ft119 = {
         ...fantateam_type,
         team_index: 119,
-        name: "Liam",
-        rione: { ...NORD },
-        p1: { ...MattiaMasotti },
-        p2: { ...MassimilianoMoretti },
-        p3: { ...EnricoSant },
-        p4: { ...MassimoMasotti },
-        p5: { ...DevinChiarcos },
+        name: "Trrrr non va",
+        rione: { ...SUD },
+        p1: { ...DiegoNata },
+        p2: { ...AndreaMoretti },
+        p3: { ...AlessioFurlan },
+        p4: { ...MarcoRizzi },
+        p5: { ...DavidGaspardo },
     };
     ft119.total_cost = ft119.p1.cost + ft119.p2.cost + ft119.p3.cost + ft119.p4.cost + ft119.p5.cost;
     ft119.tot_g1 = ft119.p1.g1 + ft119.p2.g1 + ft119.p3.g1 + ft119.p4.g1 + ft119.p5.g1;
@@ -3424,13 +2925,13 @@ MattiaMasotti.final = 1.25;
     const ft120 = {
         ...fantateam_type,
         team_index: 120,
-        name: "Appalla",
-        rione: { ...WEST },
-        p1: { ...VittorioBasso },
-        p2: { ...LucaDellaLonga },
-        p3: { ...AlessandroSant },
-        p4: { ...FilippoSappa },
-        p5: { ...MattiaMasotti },
+        name: "Samu veni",
+        rione: { ...SUD },
+        p1: { ...MiracleObichukwu },
+        p2: { ...AlessandroRizzi },
+        p3: { ...DavidGaspardo },
+        p4: { ...GioeleTudini },
+        p5: { ...MicheleDeAnna },
     };
     ft120.total_cost = ft120.p1.cost + ft120.p2.cost + ft120.p3.cost + ft120.p4.cost + ft120.p5.cost;
     ft120.tot_g1 = ft120.p1.g1 + ft120.p2.g1 + ft120.p3.g1 + ft120.p4.g1 + ft120.p5.g1;
@@ -3443,13 +2944,13 @@ MattiaMasotti.final = 1.25;
     const ft121 = {
         ...fantateam_type,
         team_index: 121,
-        name: "Team17",
-        rione: { ...WEST },
-        p1: { ...DanieleGanzit },
-        p2: { ...MassimilianoMoretti },
-        p3: { ...MattiaMasotti },
-        p4: { ...PaoloZorzi },
-        p5: { ...MassimilianoRossi },
+        name: "Miangeles",
+        rione: { ...NORD },
+        p1: { ...EdoardoPicogna },
+        p2: { ...FilippoPasquon },
+        p3: { ...RiccardoSchinella },
+        p4: { ...AlessandroSant },
+        p5: { ...GiovanniZanin },
     };
     ft121.total_cost = ft121.p1.cost + ft121.p2.cost + ft121.p3.cost + ft121.p4.cost + ft121.p5.cost;
     ft121.tot_g1 = ft121.p1.g1 + ft121.p2.g1 + ft121.p3.g1 + ft121.p4.g1 + ft121.p5.g1;
@@ -3462,13 +2963,13 @@ MattiaMasotti.final = 1.25;
     const ft122 = {
         ...fantateam_type,
         team_index: 122,
-        name: "Fittofatto BC",
+        name: "Amico di Simone Cengarle",
         rione: { ...NORD },
-        p1: { ...FilippoPasquon },
-        p2: { ...MassimilianoMoretti },
-        p3: { ...PietroSoramel },
-        p4: { ...MattiaRoiatti },
-        p5: { ...LucaAnedda },
+        p1: { ...VittorioBasso },
+        p2: { ...MarcoLombardo },
+        p3: { ...DavidGaspardo },
+        p4: { ...MatteoBazzaro },
+        p5: { ...LarryTrevisan },
     };
     ft122.total_cost = ft122.p1.cost + ft122.p2.cost + ft122.p3.cost + ft122.p4.cost + ft122.p5.cost;
     ft122.tot_g1 = ft122.p1.g1 + ft122.p2.g1 + ft122.p3.g1 + ft122.p4.g1 + ft122.p5.g1;
@@ -3481,13 +2982,13 @@ MattiaMasotti.final = 1.25;
     const ft123 = {
         ...fantateam_type,
         team_index: 123,
-        name: "Festainvigna",
-        rione: { ...WEST },
-        p1: { ...FilippoAgnoluzzi },
-        p2: { ...UmbertoNobile },
-        p3: { ...MatteoSpagnolo },
-        p4: { ...MassimilianoMoretti },
-        p5: { ...PaoloZorzi },
+        name: "Gabrindri",
+        rione: { ...EST },
+        p1: { ...LucaSoramel },
+        p2: { ...AlessioFurlan },
+        p3: { ...FilippoPasquon },
+        p4: { ...DiegoNata },
+        p5: { ...MattiaMasotti },
     };
     ft123.total_cost = ft123.p1.cost + ft123.p2.cost + ft123.p3.cost + ft123.p4.cost + ft123.p5.cost;
     ft123.tot_g1 = ft123.p1.g1 + ft123.p2.g1 + ft123.p3.g1 + ft123.p4.g1 + ft123.p5.g1;
@@ -3519,13 +3020,13 @@ MattiaMasotti.final = 1.25;
     const ft125 = {
         ...fantateam_type,
         team_index: 125,
-        name: "Estinti",
-        rione: { ...WEST },
-        p1: { ...UmbertoNobile },
-        p2: { ...AlessandroCostantini },
-        p3: { ...AlessandroSant },
-        p4: { ...MauroPerina },
-        p5: { ...MarcoMarchetti },
+        name: "PAMPA MENTALITY",
+        rione: { ...SUD },
+        p1: { ...FilippoPasquon },
+        p2: { ...MattiaMasotti },
+        p3: { ...ChristianZanet },
+        p4: { ...MiracleObichukwu },
+        p5: { ...DiegoNata },
     };
     ft125.total_cost = ft125.p1.cost + ft125.p2.cost + ft125.p3.cost + ft125.p4.cost + ft125.p5.cost;
     ft125.tot_g1 = ft125.p1.g1 + ft125.p2.g1 + ft125.p3.g1 + ft125.p4.g1 + ft125.p5.g1;
@@ -3538,13 +3039,13 @@ MattiaMasotti.final = 1.25;
     const ft126 = {
         ...fantateam_type,
         team_index: 126,
-        name: "i Fantapapà",
-        rione: { ...NORD },
-        p1: { ...LucaDellaLonga },
-        p2: { ...GiovanniZanin },
-        p3: { ...MarcoLombardo },
-        p4: { ...GiacomoPiacentini },
-        p5: { ...GiovanniTonizzo },
+        name: "Axeliathepoliceofficer",
+        rione: { ...EST },
+        p1: { ...MatteoBazzaro },
+        p2: { ...MiracleObichukwu },
+        p3: { ...MarcoRizzi },
+        p4: { ...MarcoPolo },
+        p5: { ...LucaAnedda },
     };
     ft126.total_cost = ft126.p1.cost + ft126.p2.cost + ft126.p3.cost + ft126.p4.cost + ft126.p5.cost;
     ft126.tot_g1 = ft126.p1.g1 + ft126.p2.g1 + ft126.p3.g1 + ft126.p4.g1 + ft126.p5.g1;
@@ -3557,13 +3058,13 @@ MattiaMasotti.final = 1.25;
     const ft127 = {
         ...fantateam_type,
         team_index: 127,
-        name: "I pupetti",
-        rione: { ...EST },
-        p1: { ...LucaSoramel },
-        p2: { ...AlessandroRizzi },
-        p3: { ...AlessandroCostantini },
-        p4: { ...VittorioGri },
-        p5: { ...PietroSoramel },
+        name: "ISTANBULKEBAB GLOBETROTTERS",
+        rione: { ...SUD },
+        p1: { ...ValentinoCigainero },
+        p2: { ...MicheleDeAnna },
+        p3: { ...MattiaRoiatti },
+        p4: { ...LucaAnedda },
+        p5: { ...GiacomoSilvestri },
     };
     ft127.total_cost = ft127.p1.cost + ft127.p2.cost + ft127.p3.cost + ft127.p4.cost + ft127.p5.cost;
     ft127.tot_g1 = ft127.p1.g1 + ft127.p2.g1 + ft127.p3.g1 + ft127.p4.g1 + ft127.p5.g1;
@@ -3576,13 +3077,13 @@ MattiaMasotti.final = 1.25;
     const ft128 = {
         ...fantateam_type,
         team_index: 128,
-        name: "AirBall",
-        rione: { ...EST },
-        p1: { ...AlessandroRojatti },
-        p2: { ...MassimilianoMoretti },
-        p3: { ...AlessandroRizzi },
-        p4: { ...AntonioGri },
-        p5: { ...LucaAnedda },
+        name: "Wpalio",
+        rione: { ...SUD },
+        p1: { ...StefanoPolano },
+        p2: { ...DavidGaspardo },
+        p3: { ...ThomasBaracetti },
+        p4: { ...AlessandroGalassi },
+        p5: { ...EmanueleDaneluzzi },
     };
     ft128.total_cost = ft128.p1.cost + ft128.p2.cost + ft128.p3.cost + ft128.p4.cost + ft128.p5.cost;
     ft128.tot_g1 = ft128.p1.g1 + ft128.p2.g1 + ft128.p3.g1 + ft128.p4.g1 + ft128.p5.g1;
@@ -3595,13 +3096,13 @@ MattiaMasotti.final = 1.25;
     const ft129 = {
         ...fantateam_type,
         team_index: 129,
-        name: "Winxclub",
+        name: "giulia",
         rione: { ...EST },
-        p1: { ...AlessioFurlan },
-        p2: { ...MassimilianoMoretti },
-        p3: { ...LucaSoramel },
-        p4: { ...PietroSoramel },
-        p5: { ...LucaAnedda },
+        p1: { ...AlessandroRizzi },
+        p2: { ...MarcoRizzi },
+        p3: { ...LucaAnedda },
+        p4: { ...MattiaRoiatti },
+        p5: { ...EmanueleDaneluzzi },
     };
     ft129.total_cost = ft129.p1.cost + ft129.p2.cost + ft129.p3.cost + ft129.p4.cost + ft129.p5.cost;
     ft129.tot_g1 = ft129.p1.g1 + ft129.p2.g1 + ft129.p3.g1 + ft129.p4.g1 + ft129.p5.g1;
@@ -3614,13 +3115,13 @@ MattiaMasotti.final = 1.25;
     const ft130 = {
         ...fantateam_type,
         team_index: 130,
-        name: "Dusty Bottoms",
-        rione: { ...WEST },
-        p1: { ...GiacomoPiacentini },
-        p2: { ...AlessandroCostantini },
-        p3: { ...LarryTrevisan },
-        p4: { ...MicheleDeAnna },
-        p5: { ...ChristianZanet },
+        name: "giorgina",
+        rione: { ...EST },
+        p1: { ...MarcoRizzi },
+        p2: { ...ValentinoCigainero },
+        p3: { ...MattiaRoiatti },
+        p4: { ...LucaAnedda },
+        p5: { ...GiacomoSilvestri },
     };
     ft130.total_cost = ft130.p1.cost + ft130.p2.cost + ft130.p3.cost + ft130.p4.cost + ft130.p5.cost;
     ft130.tot_g1 = ft130.p1.g1 + ft130.p2.g1 + ft130.p3.g1 + ft130.p4.g1 + ft130.p5.g1;
@@ -3630,7 +3131,425 @@ MattiaMasotti.final = 1.25;
     ft130.tot_td3 = ft130.p1.td3 + ft130.p2.td3 + ft130.p3.td3 + ft130.p4.td3 + ft130.p5.td3;
     ft130.tot_final = ft130.p1.final + ft130.p2.final + ft130.p3.final + ft130.p4.final + ft130.p5.final;
     ft130.tot_team = ft130.p1.tot + ft130.p2.tot + ft130.p3.tot + ft130.p4.tot + ft130.p5.tot;
-    const fantateams = [ft1, ft2, ft3, ft4, ft5, ft6, ft7, ft8, ft9, ft10, ft11, ft12, ft13, ft14, ft15, ft16, ft17, ft18, ft19, ft20, ft21, ft22, ft23, ft24, ft25, ft26, ft27, ft28, ft29, ft30, ft31, ft32, ft33, ft34, ft35, ft36, ft37, ft38, ft39, ft40, ft41, ft42, ft43, ft44, ft45, ft46, ft47, ft48, ft49, ft50, ft51, ft52, ft53, ft54, ft55, ft56, ft57, ft58, ft59, ft60, ft61, ft62, ft63, ft64, ft65, ft66, ft67, ft68, ft69, ft70, ft71, ft72, ft73, ft74, ft75, ft76, ft77, ft78, ft79, ft80, ft81, ft82, ft83, ft84, ft85, ft86, ft87, ft88, ft89, ft90, ft91, ft92, ft93, ft94, ft95, ft96, ft97, ft98, ft99, ft100, ft101, ft102, ft103, ft104, ft105, ft106, ft107, ft108, ft109, ft110, ft111, ft112, ft113, ft114, ft115, ft116, ft117, ft118, ft119, ft120, ft121, ft122, ft123, ft124, ft125, ft126, ft127, ft128, ft129, ft130];
+    const ft131 = {
+        ...fantateam_type,
+        team_index: 131,
+        name: "CesoloilNordAP",
+        rione: { ...NORD },
+        p1: { ...DiegoNata },
+        p2: { ...LucaAnedda },
+        p3: { ...FilippoPasquon },
+        p4: { ...AlessandroRizzi },
+        p5: { ...GiacomoPiacentini },
+    };
+    ft131.total_cost = ft131.p1.cost + ft131.p2.cost + ft131.p3.cost + ft131.p4.cost + ft131.p5.cost;
+    ft131.tot_g1 = ft131.p1.g1 + ft131.p2.g1 + ft131.p3.g1 + ft131.p4.g1 + ft131.p5.g1;
+    ft131.tot_g2 = ft131.p1.g2 + ft131.p2.g2 + ft131.p3.g2 + ft131.p4.g2 + ft131.p5.g2;
+    ft131.tot_g3 = ft131.p1.g3 + ft131.p2.g3 + ft131.p3.g3 + ft131.p4.g3 + ft131.p5.g3;
+    ft131.tot_semi = ft131.p1.semi + ft131.p2.semi + ft131.p3.semi + ft131.p4.semi + ft131.p5.semi;
+    ft131.tot_td3 = ft131.p1.td3 + ft131.p2.td3 + ft131.p3.td3 + ft131.p4.td3 + ft131.p5.td3;
+    ft131.tot_final = ft131.p1.final + ft131.p2.final + ft131.p3.final + ft131.p4.final + ft131.p5.final;
+    ft131.tot_team = ft131.p1.tot + ft131.p2.tot + ft131.p3.tot + ft131.p4.tot + ft131.p5.tot;
+    const ft132 = {
+        ...fantateam_type,
+        team_index: 132,
+        name: "Real Codroipen",
+        rione: { ...WEST },
+        p1: { ...ThomasBaracetti },
+        p2: { ...GabrieleMiani },
+        p3: { ...SebastianoTonizzo },
+        p4: { ...MarcoMarchetti },
+        p5: { ...EdoardoPicogna },
+    };
+    ft132.total_cost = ft132.p1.cost + ft132.p2.cost + ft132.p3.cost + ft132.p4.cost + ft132.p5.cost;
+    ft132.tot_g1 = ft132.p1.g1 + ft132.p2.g1 + ft132.p3.g1 + ft132.p4.g1 + ft132.p5.g1;
+    ft132.tot_g2 = ft132.p1.g2 + ft132.p2.g2 + ft132.p3.g2 + ft132.p4.g2 + ft132.p5.g2;
+    ft132.tot_g3 = ft132.p1.g3 + ft132.p2.g3 + ft132.p3.g3 + ft132.p4.g3 + ft132.p5.g3;
+    ft132.tot_semi = ft132.p1.semi + ft132.p2.semi + ft132.p3.semi + ft132.p4.semi + ft132.p5.semi;
+    ft132.tot_td3 = ft132.p1.td3 + ft132.p2.td3 + ft132.p3.td3 + ft132.p4.td3 + ft132.p5.td3;
+    ft132.tot_final = ft132.p1.final + ft132.p2.final + ft132.p3.final + ft132.p4.final + ft132.p5.final;
+    ft132.tot_team = ft132.p1.tot + ft132.p2.tot + ft132.p3.tot + ft132.p4.tot + ft132.p5.tot;
+    const ft133 = {
+        ...fantateam_type,
+        team_index: 133,
+        name: "Pix",
+        rione: { ...WEST },
+        p1: { ...GiacomoPiacentini },
+        p2: { ...VittorioBasso },
+        p3: { ...MarcoSerrao },
+        p4: { ...TommasoMartello },
+        p5: { ...AlessandroRizzi },
+    };
+    ft133.total_cost = ft133.p1.cost + ft133.p2.cost + ft133.p3.cost + ft133.p4.cost + ft133.p5.cost;
+    ft133.tot_g1 = ft133.p1.g1 + ft133.p2.g1 + ft133.p3.g1 + ft133.p4.g1 + ft133.p5.g1;
+    ft133.tot_g2 = ft133.p1.g2 + ft133.p2.g2 + ft133.p3.g2 + ft133.p4.g2 + ft133.p5.g2;
+    ft133.tot_g3 = ft133.p1.g3 + ft133.p2.g3 + ft133.p3.g3 + ft133.p4.g3 + ft133.p5.g3;
+    ft133.tot_semi = ft133.p1.semi + ft133.p2.semi + ft133.p3.semi + ft133.p4.semi + ft133.p5.semi;
+    ft133.tot_td3 = ft133.p1.td3 + ft133.p2.td3 + ft133.p3.td3 + ft133.p4.td3 + ft133.p5.td3;
+    ft133.tot_final = ft133.p1.final + ft133.p2.final + ft133.p3.final + ft133.p4.final + ft133.p5.final;
+    ft133.tot_team = ft133.p1.tot + ft133.p2.tot + ft133.p3.tot + ft133.p4.tot + ft133.p5.tot;
+    const ft134 = {
+        ...fantateam_type,
+        team_index: 134,
+        name: "FMB united",
+        rione: { ...EST },
+        p1: { ...AlessandroRojatti },
+        p2: { ...GabrieleMiani },
+        p3: { ...MarcoRizzi },
+        p4: { ...MattiaRoiatti },
+        p5: { ...LucaAnedda },
+    };
+    ft134.total_cost = ft134.p1.cost + ft134.p2.cost + ft134.p3.cost + ft134.p4.cost + ft134.p5.cost;
+    ft134.tot_g1 = ft134.p1.g1 + ft134.p2.g1 + ft134.p3.g1 + ft134.p4.g1 + ft134.p5.g1;
+    ft134.tot_g2 = ft134.p1.g2 + ft134.p2.g2 + ft134.p3.g2 + ft134.p4.g2 + ft134.p5.g2;
+    ft134.tot_g3 = ft134.p1.g3 + ft134.p2.g3 + ft134.p3.g3 + ft134.p4.g3 + ft134.p5.g3;
+    ft134.tot_semi = ft134.p1.semi + ft134.p2.semi + ft134.p3.semi + ft134.p4.semi + ft134.p5.semi;
+    ft134.tot_td3 = ft134.p1.td3 + ft134.p2.td3 + ft134.p3.td3 + ft134.p4.td3 + ft134.p5.td3;
+    ft134.tot_final = ft134.p1.final + ft134.p2.final + ft134.p3.final + ft134.p4.final + ft134.p5.final;
+    ft134.tot_team = ft134.p1.tot + ft134.p2.tot + ft134.p3.tot + ft134.p4.tot + ft134.p5.tot;
+    const ft135 = {
+        ...fantateam_type,
+        team_index: 135,
+        name: "Ghisangeles Clippers II",
+        rione: { ...EST },
+        p1: { ...MattiaMasotti },
+        p2: { ...ChristianZanet },
+        p3: { ...FilippoPasquon },
+        p4: { ...DavidGaspardo },
+        p5: { ...MassimilianoRossi },
+    };
+    ft135.total_cost = ft135.p1.cost + ft135.p2.cost + ft135.p3.cost + ft135.p4.cost + ft135.p5.cost;
+    ft135.tot_g1 = ft135.p1.g1 + ft135.p2.g1 + ft135.p3.g1 + ft135.p4.g1 + ft135.p5.g1;
+    ft135.tot_g2 = ft135.p1.g2 + ft135.p2.g2 + ft135.p3.g2 + ft135.p4.g2 + ft135.p5.g2;
+    ft135.tot_g3 = ft135.p1.g3 + ft135.p2.g3 + ft135.p3.g3 + ft135.p4.g3 + ft135.p5.g3;
+    ft135.tot_semi = ft135.p1.semi + ft135.p2.semi + ft135.p3.semi + ft135.p4.semi + ft135.p5.semi;
+    ft135.tot_td3 = ft135.p1.td3 + ft135.p2.td3 + ft135.p3.td3 + ft135.p4.td3 + ft135.p5.td3;
+    ft135.tot_final = ft135.p1.final + ft135.p2.final + ft135.p3.final + ft135.p4.final + ft135.p5.final;
+    ft135.tot_team = ft135.p1.tot + ft135.p2.tot + ft135.p3.tot + ft135.p4.tot + ft135.p5.tot;
+    const ft136 = {
+        ...fantateam_type,
+        team_index: 136,
+        name: "asdfg",
+        rione: { ...WEST },
+        p1: { ...MassimilianoRossi },
+        p2: { ...MassimoMasotti },
+        p3: { ...EugenioDeTina },
+        p4: { ...DenisVanin },
+        p5: { ...LucaAnedda },
+    };
+    ft136.total_cost = ft136.p1.cost + ft136.p2.cost + ft136.p3.cost + ft136.p4.cost + ft136.p5.cost;
+    ft136.tot_g1 = ft136.p1.g1 + ft136.p2.g1 + ft136.p3.g1 + ft136.p4.g1 + ft136.p5.g1;
+    ft136.tot_g2 = ft136.p1.g2 + ft136.p2.g2 + ft136.p3.g2 + ft136.p4.g2 + ft136.p5.g2;
+    ft136.tot_g3 = ft136.p1.g3 + ft136.p2.g3 + ft136.p3.g3 + ft136.p4.g3 + ft136.p5.g3;
+    ft136.tot_semi = ft136.p1.semi + ft136.p2.semi + ft136.p3.semi + ft136.p4.semi + ft136.p5.semi;
+    ft136.tot_td3 = ft136.p1.td3 + ft136.p2.td3 + ft136.p3.td3 + ft136.p4.td3 + ft136.p5.td3;
+    ft136.tot_final = ft136.p1.final + ft136.p2.final + ft136.p3.final + ft136.p4.final + ft136.p5.final;
+    ft136.tot_team = ft136.p1.tot + ft136.p2.tot + ft136.p3.tot + ft136.p4.tot + ft136.p5.tot;
+    const ft137 = {
+        ...fantateam_type,
+        team_index: 137,
+        name: "zioperone",
+        rione: { ...NORD },
+        p1: { ...LorenzoMoro },
+        p2: { ...DavidGaspardo },
+        p3: { ...FilippoPasquon },
+        p4: { ...VittorioBasso },
+        p5: { ...WilliamIob },
+    };
+    ft137.total_cost = ft137.p1.cost + ft137.p2.cost + ft137.p3.cost + ft137.p4.cost + ft137.p5.cost;
+    ft137.tot_g1 = ft137.p1.g1 + ft137.p2.g1 + ft137.p3.g1 + ft137.p4.g1 + ft137.p5.g1;
+    ft137.tot_g2 = ft137.p1.g2 + ft137.p2.g2 + ft137.p3.g2 + ft137.p4.g2 + ft137.p5.g2;
+    ft137.tot_g3 = ft137.p1.g3 + ft137.p2.g3 + ft137.p3.g3 + ft137.p4.g3 + ft137.p5.g3;
+    ft137.tot_semi = ft137.p1.semi + ft137.p2.semi + ft137.p3.semi + ft137.p4.semi + ft137.p5.semi;
+    ft137.tot_td3 = ft137.p1.td3 + ft137.p2.td3 + ft137.p3.td3 + ft137.p4.td3 + ft137.p5.td3;
+    ft137.tot_final = ft137.p1.final + ft137.p2.final + ft137.p3.final + ft137.p4.final + ft137.p5.final;
+    ft137.tot_team = ft137.p1.tot + ft137.p2.tot + ft137.p3.tot + ft137.p4.tot + ft137.p5.tot;
+    const ft138 = {
+        ...fantateam_type,
+        team_index: 138,
+        name: "Baskettone",
+        rione: { ...NORD },
+        p1: { ...MattiaRoiatti },
+        p2: { ...GabrieleMiani },
+        p3: { ...MauroPerina },
+        p4: { ...MarcoMarchetti },
+        p5: { ...MassimoMasotti },
+    };
+    ft138.total_cost = ft138.p1.cost + ft138.p2.cost + ft138.p3.cost + ft138.p4.cost + ft138.p5.cost;
+    ft138.tot_g1 = ft138.p1.g1 + ft138.p2.g1 + ft138.p3.g1 + ft138.p4.g1 + ft138.p5.g1;
+    ft138.tot_g2 = ft138.p1.g2 + ft138.p2.g2 + ft138.p3.g2 + ft138.p4.g2 + ft138.p5.g2;
+    ft138.tot_g3 = ft138.p1.g3 + ft138.p2.g3 + ft138.p3.g3 + ft138.p4.g3 + ft138.p5.g3;
+    ft138.tot_semi = ft138.p1.semi + ft138.p2.semi + ft138.p3.semi + ft138.p4.semi + ft138.p5.semi;
+    ft138.tot_td3 = ft138.p1.td3 + ft138.p2.td3 + ft138.p3.td3 + ft138.p4.td3 + ft138.p5.td3;
+    ft138.tot_final = ft138.p1.final + ft138.p2.final + ft138.p3.final + ft138.p4.final + ft138.p5.final;
+    ft138.tot_team = ft138.p1.tot + ft138.p2.tot + ft138.p3.tot + ft138.p4.tot + ft138.p5.tot;
+    const ft139 = {
+        ...fantateam_type,
+        team_index: 139,
+        name: "Gate 2 Aeroporto Malpensa-Silvio Berlusconi Milano✈️",
+        rione: { ...EST },
+        p1: { ...DavidGaspardo },
+        p2: { ...FilippoPasquon },
+        p3: { ...MarcoPolo },
+        p4: { ...MattiaMasotti },
+        p5: { ...LucaGemo },
+    };
+    ft139.total_cost = ft139.p1.cost + ft139.p2.cost + ft139.p3.cost + ft139.p4.cost + ft139.p5.cost;
+    ft139.tot_g1 = ft139.p1.g1 + ft139.p2.g1 + ft139.p3.g1 + ft139.p4.g1 + ft139.p5.g1;
+    ft139.tot_g2 = ft139.p1.g2 + ft139.p2.g2 + ft139.p3.g2 + ft139.p4.g2 + ft139.p5.g2;
+    ft139.tot_g3 = ft139.p1.g3 + ft139.p2.g3 + ft139.p3.g3 + ft139.p4.g3 + ft139.p5.g3;
+    ft139.tot_semi = ft139.p1.semi + ft139.p2.semi + ft139.p3.semi + ft139.p4.semi + ft139.p5.semi;
+    ft139.tot_td3 = ft139.p1.td3 + ft139.p2.td3 + ft139.p3.td3 + ft139.p4.td3 + ft139.p5.td3;
+    ft139.tot_final = ft139.p1.final + ft139.p2.final + ft139.p3.final + ft139.p4.final + ft139.p5.final;
+    ft139.tot_team = ft139.p1.tot + ft139.p2.tot + ft139.p3.tot + ft139.p4.tot + ft139.p5.tot;
+    const ft140 = {
+        ...fantateam_type,
+        team_index: 140,
+        name: "Arrosto & tiro",
+        rione: { ...EST },
+        p1: { ...IacopoPivetta },
+        p2: { ...WilliamIob },
+        p3: { ...DenisVanin },
+        p4: { ...DanieleGanzit },
+        p5: { ...MarcoSerrao },
+    };
+    ft140.total_cost = ft140.p1.cost + ft140.p2.cost + ft140.p3.cost + ft140.p4.cost + ft140.p5.cost;
+    ft140.tot_g1 = ft140.p1.g1 + ft140.p2.g1 + ft140.p3.g1 + ft140.p4.g1 + ft140.p5.g1;
+    ft140.tot_g2 = ft140.p1.g2 + ft140.p2.g2 + ft140.p3.g2 + ft140.p4.g2 + ft140.p5.g2;
+    ft140.tot_g3 = ft140.p1.g3 + ft140.p2.g3 + ft140.p3.g3 + ft140.p4.g3 + ft140.p5.g3;
+    ft140.tot_semi = ft140.p1.semi + ft140.p2.semi + ft140.p3.semi + ft140.p4.semi + ft140.p5.semi;
+    ft140.tot_td3 = ft140.p1.td3 + ft140.p2.td3 + ft140.p3.td3 + ft140.p4.td3 + ft140.p5.td3;
+    ft140.tot_final = ft140.p1.final + ft140.p2.final + ft140.p3.final + ft140.p4.final + ft140.p5.final;
+    ft140.tot_team = ft140.p1.tot + ft140.p2.tot + ft140.p3.tot + ft140.p4.tot + ft140.p5.tot;
+    const ft141 = {
+        ...fantateam_type,
+        team_index: 141,
+        name: "West riformulato",
+        rione: { ...WEST },
+        p1: { ...VittorioGri },
+        p2: { ...ChristianZanet },
+        p3: { ...MauroPerina },
+        p4: { ...MattiaRoiatti },
+        p5: { ...AlessandroRizzi },
+    };
+    ft141.total_cost = ft141.p1.cost + ft141.p2.cost + ft141.p3.cost + ft141.p4.cost + ft141.p5.cost;
+    ft141.tot_g1 = ft141.p1.g1 + ft141.p2.g1 + ft141.p3.g1 + ft141.p4.g1 + ft141.p5.g1;
+    ft141.tot_g2 = ft141.p1.g2 + ft141.p2.g2 + ft141.p3.g2 + ft141.p4.g2 + ft141.p5.g2;
+    ft141.tot_g3 = ft141.p1.g3 + ft141.p2.g3 + ft141.p3.g3 + ft141.p4.g3 + ft141.p5.g3;
+    ft141.tot_semi = ft141.p1.semi + ft141.p2.semi + ft141.p3.semi + ft141.p4.semi + ft141.p5.semi;
+    ft141.tot_td3 = ft141.p1.td3 + ft141.p2.td3 + ft141.p3.td3 + ft141.p4.td3 + ft141.p5.td3;
+    ft141.tot_final = ft141.p1.final + ft141.p2.final + ft141.p3.final + ft141.p4.final + ft141.p5.final;
+    ft141.tot_team = ft141.p1.tot + ft141.p2.tot + ft141.p3.tot + ft141.p4.tot + ft141.p5.tot;
+    const ft142 = {
+        ...fantateam_type,
+        team_index: 142,
+        name: "Ratflingbanana",
+        rione: { ...SUD },
+        p1: { ...DavideBroggi },
+        p2: { ...MattiaMasotti },
+        p3: { ...GiacomoSilvestri },
+        p4: { ...ChristianZanet },
+        p5: { ...DavidGaspardo },
+    };
+    ft142.total_cost = ft142.p1.cost + ft142.p2.cost + ft142.p3.cost + ft142.p4.cost + ft142.p5.cost;
+    ft142.tot_g1 = ft142.p1.g1 + ft142.p2.g1 + ft142.p3.g1 + ft142.p4.g1 + ft142.p5.g1;
+    ft142.tot_g2 = ft142.p1.g2 + ft142.p2.g2 + ft142.p3.g2 + ft142.p4.g2 + ft142.p5.g2;
+    ft142.tot_g3 = ft142.p1.g3 + ft142.p2.g3 + ft142.p3.g3 + ft142.p4.g3 + ft142.p5.g3;
+    ft142.tot_semi = ft142.p1.semi + ft142.p2.semi + ft142.p3.semi + ft142.p4.semi + ft142.p5.semi;
+    ft142.tot_td3 = ft142.p1.td3 + ft142.p2.td3 + ft142.p3.td3 + ft142.p4.td3 + ft142.p5.td3;
+    ft142.tot_final = ft142.p1.final + ft142.p2.final + ft142.p3.final + ft142.p4.final + ft142.p5.final;
+    ft142.tot_team = ft142.p1.tot + ft142.p2.tot + ft142.p3.tot + ft142.p4.tot + ft142.p5.tot;
+    const ft143 = {
+        ...fantateam_type,
+        team_index: 143,
+        name: "Ducks",
+        rione: { ...NORD },
+        p1: { ...MarcoRizzi },
+        p2: { ...MarcoLombardo },
+        p3: { ...DavidGaspardo },
+        p4: { ...FilippoPasquon },
+        p5: { ...LorenzoMoro },
+    };
+    ft143.total_cost = ft143.p1.cost + ft143.p2.cost + ft143.p3.cost + ft143.p4.cost + ft143.p5.cost;
+    ft143.tot_g1 = ft143.p1.g1 + ft143.p2.g1 + ft143.p3.g1 + ft143.p4.g1 + ft143.p5.g1;
+    ft143.tot_g2 = ft143.p1.g2 + ft143.p2.g2 + ft143.p3.g2 + ft143.p4.g2 + ft143.p5.g2;
+    ft143.tot_g3 = ft143.p1.g3 + ft143.p2.g3 + ft143.p3.g3 + ft143.p4.g3 + ft143.p5.g3;
+    ft143.tot_semi = ft143.p1.semi + ft143.p2.semi + ft143.p3.semi + ft143.p4.semi + ft143.p5.semi;
+    ft143.tot_td3 = ft143.p1.td3 + ft143.p2.td3 + ft143.p3.td3 + ft143.p4.td3 + ft143.p5.td3;
+    ft143.tot_final = ft143.p1.final + ft143.p2.final + ft143.p3.final + ft143.p4.final + ft143.p5.final;
+    ft143.tot_team = ft143.p1.tot + ft143.p2.tot + ft143.p3.tot + ft143.p4.tot + ft143.p5.tot;
+    const ft144 = {
+        ...fantateam_type,
+        team_index: 144,
+        name: "Trevi BC",
+        rione: { ...SUD },
+        p1: { ...DavidGaspardo },
+        p2: { ...FilippoPasquon },
+        p3: { ...MarcoLombardo },
+        p4: { ...EnricoSant },
+        p5: { ...MarcoRizzi },
+    };
+    ft144.total_cost = ft144.p1.cost + ft144.p2.cost + ft144.p3.cost + ft144.p4.cost + ft144.p5.cost;
+    ft144.tot_g1 = ft144.p1.g1 + ft144.p2.g1 + ft144.p3.g1 + ft144.p4.g1 + ft144.p5.g1;
+    ft144.tot_g2 = ft144.p1.g2 + ft144.p2.g2 + ft144.p3.g2 + ft144.p4.g2 + ft144.p5.g2;
+    ft144.tot_g3 = ft144.p1.g3 + ft144.p2.g3 + ft144.p3.g3 + ft144.p4.g3 + ft144.p5.g3;
+    ft144.tot_semi = ft144.p1.semi + ft144.p2.semi + ft144.p3.semi + ft144.p4.semi + ft144.p5.semi;
+    ft144.tot_td3 = ft144.p1.td3 + ft144.p2.td3 + ft144.p3.td3 + ft144.p4.td3 + ft144.p5.td3;
+    ft144.tot_final = ft144.p1.final + ft144.p2.final + ft144.p3.final + ft144.p4.final + ft144.p5.final;
+    ft144.tot_team = ft144.p1.tot + ft144.p2.tot + ft144.p3.tot + ft144.p4.tot + ft144.p5.tot;
+    const ft145 = {
+        ...fantateam_type,
+        team_index: 145,
+        name: "FIRETEAM!",
+        rione: { ...NORD },
+        p1: { ...VittorioGri },
+        p2: { ...MarcoLombardo },
+        p3: { ...MarcoSerrao },
+        p4: { ...AlessandroRizzi },
+        p5: { ...VittorioBasso },
+    };
+    ft145.total_cost = ft145.p1.cost + ft145.p2.cost + ft145.p3.cost + ft145.p4.cost + ft145.p5.cost;
+    ft145.tot_g1 = ft145.p1.g1 + ft145.p2.g1 + ft145.p3.g1 + ft145.p4.g1 + ft145.p5.g1;
+    ft145.tot_g2 = ft145.p1.g2 + ft145.p2.g2 + ft145.p3.g2 + ft145.p4.g2 + ft145.p5.g2;
+    ft145.tot_g3 = ft145.p1.g3 + ft145.p2.g3 + ft145.p3.g3 + ft145.p4.g3 + ft145.p5.g3;
+    ft145.tot_semi = ft145.p1.semi + ft145.p2.semi + ft145.p3.semi + ft145.p4.semi + ft145.p5.semi;
+    ft145.tot_td3 = ft145.p1.td3 + ft145.p2.td3 + ft145.p3.td3 + ft145.p4.td3 + ft145.p5.td3;
+    ft145.tot_final = ft145.p1.final + ft145.p2.final + ft145.p3.final + ft145.p4.final + ft145.p5.final;
+    ft145.tot_team = ft145.p1.tot + ft145.p2.tot + ft145.p3.tot + ft145.p4.tot + ft145.p5.tot;
+    const ft146 = {
+        ...fantateam_type,
+        team_index: 146,
+        name: "Orsa",
+        rione: { ...NORD },
+        p1: { ...GabrieleMiani },
+        p2: { ...LucaAnedda },
+        p3: { ...AlessandroSantin },
+        p4: { ...LucaDellaLonga },
+        p5: { ...MarcoPolo },
+    };
+    ft146.total_cost = ft146.p1.cost + ft146.p2.cost + ft146.p3.cost + ft146.p4.cost + ft146.p5.cost;
+    ft146.tot_g1 = ft146.p1.g1 + ft146.p2.g1 + ft146.p3.g1 + ft146.p4.g1 + ft146.p5.g1;
+    ft146.tot_g2 = ft146.p1.g2 + ft146.p2.g2 + ft146.p3.g2 + ft146.p4.g2 + ft146.p5.g2;
+    ft146.tot_g3 = ft146.p1.g3 + ft146.p2.g3 + ft146.p3.g3 + ft146.p4.g3 + ft146.p5.g3;
+    ft146.tot_semi = ft146.p1.semi + ft146.p2.semi + ft146.p3.semi + ft146.p4.semi + ft146.p5.semi;
+    ft146.tot_td3 = ft146.p1.td3 + ft146.p2.td3 + ft146.p3.td3 + ft146.p4.td3 + ft146.p5.td3;
+    ft146.tot_final = ft146.p1.final + ft146.p2.final + ft146.p3.final + ft146.p4.final + ft146.p5.final;
+    ft146.tot_team = ft146.p1.tot + ft146.p2.tot + ft146.p3.tot + ft146.p4.tot + ft146.p5.tot;
+    const ft147 = {
+        ...fantateam_type,
+        team_index: 147,
+        name: "Fantasia 0",
+        rione: { ...NORD },
+        p1: { ...GioeleTudini },
+        p2: { ...GabrieleMiani },
+        p3: { ...MarcoMarchetti },
+        p4: { ...MicheleVendrame },
+        p5: { ...LorenzoSchinella },
+    };
+    ft147.total_cost = ft147.p1.cost + ft147.p2.cost + ft147.p3.cost + ft147.p4.cost + ft147.p5.cost;
+    ft147.tot_g1 = ft147.p1.g1 + ft147.p2.g1 + ft147.p3.g1 + ft147.p4.g1 + ft147.p5.g1;
+    ft147.tot_g2 = ft147.p1.g2 + ft147.p2.g2 + ft147.p3.g2 + ft147.p4.g2 + ft147.p5.g2;
+    ft147.tot_g3 = ft147.p1.g3 + ft147.p2.g3 + ft147.p3.g3 + ft147.p4.g3 + ft147.p5.g3;
+    ft147.tot_semi = ft147.p1.semi + ft147.p2.semi + ft147.p3.semi + ft147.p4.semi + ft147.p5.semi;
+    ft147.tot_td3 = ft147.p1.td3 + ft147.p2.td3 + ft147.p3.td3 + ft147.p4.td3 + ft147.p5.td3;
+    ft147.tot_final = ft147.p1.final + ft147.p2.final + ft147.p3.final + ft147.p4.final + ft147.p5.final;
+    ft147.tot_team = ft147.p1.tot + ft147.p2.tot + ft147.p3.tot + ft147.p4.tot + ft147.p5.tot;
+    const ft148 = {
+        ...fantateam_type,
+        team_index: 148,
+        name: "Los Vikingos	-",
+        rione: { ...NORD },
+        p1: { ...MarcoRizzi },
+        p2: { ...AlessandroRizzi },
+        p3: { ...DiegoNata },
+        p4: { ...LucaSoramel },
+        p5: { ...VittorioGri },
+    };
+    ft148.total_cost = ft148.p1.cost + ft148.p2.cost + ft148.p3.cost + ft148.p4.cost + ft148.p5.cost;
+    ft148.tot_g1 = ft148.p1.g1 + ft148.p2.g1 + ft148.p3.g1 + ft148.p4.g1 + ft148.p5.g1;
+    ft148.tot_g2 = ft148.p1.g2 + ft148.p2.g2 + ft148.p3.g2 + ft148.p4.g2 + ft148.p5.g2;
+    ft148.tot_g3 = ft148.p1.g3 + ft148.p2.g3 + ft148.p3.g3 + ft148.p4.g3 + ft148.p5.g3;
+    ft148.tot_semi = ft148.p1.semi + ft148.p2.semi + ft148.p3.semi + ft148.p4.semi + ft148.p5.semi;
+    ft148.tot_td3 = ft148.p1.td3 + ft148.p2.td3 + ft148.p3.td3 + ft148.p4.td3 + ft148.p5.td3;
+    ft148.tot_final = ft148.p1.final + ft148.p2.final + ft148.p3.final + ft148.p4.final + ft148.p5.final;
+    ft148.tot_team = ft148.p1.tot + ft148.p2.tot + ft148.p3.tot + ft148.p4.tot + ft148.p5.tot;
+    const ft149 = {
+        ...fantateam_type,
+        team_index: 149,
+        name: "Quelli di zona	-",
+        rione: { ...EST },
+        p1: { ...AndreaMoretti },
+        p2: { ...AlessandroRizzi },
+        p3: { ...DiegoNata },
+        p4: { ...MassimilianoRossi },
+        p5: { ...LucaSoramel },
+    };
+    ft149.total_cost = ft149.p1.cost + ft149.p2.cost + ft149.p3.cost + ft149.p4.cost + ft149.p5.cost;
+    ft149.tot_g1 = ft149.p1.g1 + ft149.p2.g1 + ft149.p3.g1 + ft149.p4.g1 + ft149.p5.g1;
+    ft149.tot_g2 = ft149.p1.g2 + ft149.p2.g2 + ft149.p3.g2 + ft149.p4.g2 + ft149.p5.g2;
+    ft149.tot_g3 = ft149.p1.g3 + ft149.p2.g3 + ft149.p3.g3 + ft149.p4.g3 + ft149.p5.g3;
+    ft149.tot_semi = ft149.p1.semi + ft149.p2.semi + ft149.p3.semi + ft149.p4.semi + ft149.p5.semi;
+    ft149.tot_td3 = ft149.p1.td3 + ft149.p2.td3 + ft149.p3.td3 + ft149.p4.td3 + ft149.p5.td3;
+    ft149.tot_final = ft149.p1.final + ft149.p2.final + ft149.p3.final + ft149.p4.final + ft149.p5.final;
+    ft149.tot_team = ft149.p1.tot + ft149.p2.tot + ft149.p3.tot + ft149.p4.tot + ft149.p5.tot;
+    const ft150 = {
+        ...fantateam_type,
+        team_index: 150,
+        name: "Furbicomevolpi	-",
+        rione: { ...EST },
+        p1: { ...MarcoSerrao },
+        p2: { ...WilliamIob },
+        p3: { ...DenisVanin },
+        p4: { ...SimoneMartinelli },
+        p5: { ...AlessandroSant },
+    };
+    ft150.total_cost = ft150.p1.cost + ft150.p2.cost + ft150.p3.cost + ft150.p4.cost + ft150.p5.cost;
+    ft150.tot_g1 = ft150.p1.g1 + ft150.p2.g1 + ft150.p3.g1 + ft150.p4.g1 + ft150.p5.g1;
+    ft150.tot_g2 = ft150.p1.g2 + ft150.p2.g2 + ft150.p3.g2 + ft150.p4.g2 + ft150.p5.g2;
+    ft150.tot_g3 = ft150.p1.g3 + ft150.p2.g3 + ft150.p3.g3 + ft150.p4.g3 + ft150.p5.g3;
+    ft150.tot_semi = ft150.p1.semi + ft150.p2.semi + ft150.p3.semi + ft150.p4.semi + ft150.p5.semi;
+    ft150.tot_td3 = ft150.p1.td3 + ft150.p2.td3 + ft150.p3.td3 + ft150.p4.td3 + ft150.p5.td3;
+    ft150.tot_final = ft150.p1.final + ft150.p2.final + ft150.p3.final + ft150.p4.final + ft150.p5.final;
+    ft150.tot_team = ft150.p1.tot + ft150.p2.tot + ft150.p3.tot + ft150.p4.tot + ft150.p5.tot;
+    const ft151 = {
+        ...fantateam_type,
+        team_index: 151,
+        name: "qwerty	-",
+        rione: { ...EST },
+        p1: { ...GionaTell },
+        p2: { ...LorenzoMoro },
+        p3: { ...SimoneMartinelli },
+        p4: { ...MauroPerina },
+        p5: { ...EdoardoPicogna },
+    };
+    ft151.total_cost = ft151.p1.cost + ft151.p2.cost + ft151.p3.cost + ft151.p4.cost + ft151.p5.cost;
+    ft151.tot_g1 = ft151.p1.g1 + ft151.p2.g1 + ft151.p3.g1 + ft151.p4.g1 + ft151.p5.g1;
+    ft151.tot_g2 = ft151.p1.g2 + ft151.p2.g2 + ft151.p3.g2 + ft151.p4.g2 + ft151.p5.g2;
+    ft151.tot_g3 = ft151.p1.g3 + ft151.p2.g3 + ft151.p3.g3 + ft151.p4.g3 + ft151.p5.g3;
+    ft151.tot_semi = ft151.p1.semi + ft151.p2.semi + ft151.p3.semi + ft151.p4.semi + ft151.p5.semi;
+    ft151.tot_td3 = ft151.p1.td3 + ft151.p2.td3 + ft151.p3.td3 + ft151.p4.td3 + ft151.p5.td3;
+    ft151.tot_final = ft151.p1.final + ft151.p2.final + ft151.p3.final + ft151.p4.final + ft151.p5.final;
+    ft151.tot_team = ft151.p1.tot + ft151.p2.tot + ft151.p3.tot + ft151.p4.tot + ft151.p5.tot;
+    
+    const fantateams = [
+        ft1, ft2, ft3, ft4, ft5, ft6, ft7, ft8, ft9, ft10, 
+        ft11, ft12, ft13, ft14, ft15, ft16, ft17, ft18, ft19, ft20, 
+        ft21, ft22, ft23, ft24, ft25, ft26, ft27, ft28, ft29, ft30, 
+        ft31, ft32, ft33, ft34, ft35, ft36, ft37, ft38, ft39, ft40, 
+        ft41, ft42, ft43, ft44, ft45, ft46, ft47, ft48, ft49, ft50, 
+        ft51, ft52, ft53, ft54, ft55, ft56, ft57, ft58, ft59, ft60, 
+        ft61, ft62, ft63, ft64, ft65, ft66, ft67, ft68, ft69, ft70, 
+        ft71, ft72, ft73, ft74, ft75, ft76, ft77, ft78, ft79, ft80, 
+        ft81, ft82, ft83, ft84, ft85, ft86, ft87, ft88, ft89, ft90, 
+        ft91, ft92, ft93, ft94, ft95, ft96, ft97, ft98, ft99, ft100, 
+        ft101, ft102, ft103, ft104, ft105, ft106, ft107, ft108, ft109, ft110, 
+        ft111, ft112, ft113, ft114, ft115, ft116, ft117, ft118, ft119, ft120, 
+        ft121, ft122, ft123, ft124, ft125, ft126, ft127, ft128, ft129, ft130, 
+        ft131, ft132, ft133, ft134, ft135, ft136, ft137, ft138, ft139, ft140, 
+        ft141, ft142, ft143, ft144, ft145, ft146, ft147, ft148, ft149, ft150, 
+        ft151
+      ];
+      
     
 
 
