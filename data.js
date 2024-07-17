@@ -167,13 +167,13 @@
     MicheleGorasso.stats_g1 =       [0,2,2,0,1,2,1,1,1,0,1,0,1,0,0,0,0,1,0]; // 21
     GiacomoFerigo.stats_g1 =        [0,0,0,1,1,0,0,2,0,0,1,1,1,0,0,0,0,1,0]; // 16
     UmbertoNobile.stats_g1 =        [0,2,0,0,0,2,0,5,3,0,5,0,1,0,0,0,0,1,0]; // 15
-    DevinChiarcos.stats_g1 =        []; // 18
-    ValentinoCigainero.stats_g1 =   []; //
-    MicheleDeAnna.stats_g1 =        []; //
-    DavideParon.stats_g1 =          []; // 6
-    AlessioFurlan.stats_g1 =        []; // 10
-    MichaelMargarit.stats_g1 =      []; //
-    SebastianoTonizzo.stats_g1 =    []; // 5
+    DevinChiarcos.stats_g1 =        [0,2,2,4,1,0,0,1,0,0,0,1,0,0,0,0,0,1,1]; // 18
+    ValentinoCigainero.stats_g1 =   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0]; //
+    MicheleDeAnna.stats_g1 =        [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0]; //
+    DavideParon.stats_g1 =          [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0]; // 6
+    AlessioFurlan.stats_g1 =        [0,0,2,1,0,2,0,1,0,0,0,0,0,0,0,0,0,1,1]; // 10
+    MichaelMargarit.stats_g1 =      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0]; //
+    SebastianoTonizzo.stats_g1 =    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0]; // 5
 
     DanieleGanzit.stats_g1 =        []; // 
     GiacomoSilvestri.stats_g1 =     []; // 9
