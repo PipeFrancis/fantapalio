@@ -12,18 +12,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Ciclo attraverso le squadre e creo le schede
     fantateams.forEach((team, index) => {
+        // Estrai i giocatori dal team e ordina in ordine decrescente in base a player.tot
+        const players = [team.p1, team.p2, team.p3, team.p4, team.p5];
+        players.sort((a, b) => b.tot - a.tot);
+
         const card = document.createElement('div');
-        card.classList.add('team-card',`cardclasssoft${team.rione.name}`);
+        card.classList.add('team-card', `cardclasssoft${team.rione.name}`);
+
+        const playerInfoHTML = `
+            <div class="player-info"> ${players[0].name} (${players[0].tot})</div>
+            <div class="player-info"> ${players[1].name} (${players[1].tot})</div>
+            <div class="player-info"> ${players[2].name} (${players[2].tot})</div>
+            <div class="player-info"> ${players[3].name} (${players[3].tot})</div>
+            <div class="player-info"> ${players[4].name} (${players[4].tot})</div>
+        `;
 
         card.innerHTML = `
             <div class="team-card-header">${index + 1}. ${team.name}</div>
             <div class="team-card-body">
                 <div class="punteggio-info"><strong>${team.tot_team}</strong></div>
-                <div class="player-info"> ${team.p1.name} (${team.p1.tot})</div>
-                <div class="player-info"> ${team.p2.name} (${team.p2.tot})</div>
-                <div class="player-info"> ${team.p3.name} (${team.p3.tot})</div>
-                <div class="player-info"> ${team.p4.name} (${team.p4.tot})</div>
-                <div class="player-info"> ${team.p5.name} (${team.p5.tot})</div>
+                ${playerInfoHTML}
                 <div>${team.rione.name}</div>
             </div>
         `;

@@ -7,6 +7,11 @@ document.addEventListener("DOMContentLoaded", function() {
     // Rimuovi eventuali opzioni esistenti
     select.innerHTML = '';
 
+    // Sorta in ordine alfabetico
+    fantateams.sort((a, b) => {
+        return a.name.localeCompare(b.name);
+    });
+
     // Aggiungi nuove opzioni dal data.js
     fantateams.forEach(team => {
         const opt = document.createElement('option');
@@ -26,13 +31,18 @@ document.addEventListener("DOMContentLoaded", function() {
         // Pulisci il contenitore delle carte
         teamCardsContainer.innerHTML = '';
 
-        // Aggiungi le schede per i giocatori p1, p2, p3, p4, p5 del team selezionato
+        // Estrai i giocatori dal team e ordina in ordine decrescente in base a player.tot
+        const players = [];
         for (let i = 1; i <= 5; i++) {
-            const player = selectedTeam['p' + i];
+            players.push(selectedTeam['p' + i]);
+        }
+        players.sort((a, b) => b.tot - a.tot);
 
+        // Aggiungi le schede per i giocatori p1, p2, p3, p4, p5 del team selezionato
+        players.forEach(player => {
             // Crea una nuova scheda
             const card = document.createElement('div');
-            card.classList.add('team-card',`cardclass${player.team}`);
+            card.classList.add('team-card1', `cardclass${player.team}`);
             card.innerHTML = `
                 <h3>${player.name}</h3>
                 <p>Prezzo: ${player.cost}</p>
@@ -45,11 +55,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 <p class="total">Totale: <span class="totalpointsindex">${player.tot}</span></p>
             `;
             teamCardsContainer.appendChild(card);
-        }
+        });
 
         // Aggiungi la scheda per il rione
         const rioneCard = document.createElement('div');
-        rioneCard.classList.add('team-card', `cardclass${selectedTeam.rione.name}`);
+        rioneCard.classList.add('team-card1', `cardclass${selectedTeam.rione.name}`);
         rioneCard.innerHTML = `
             <h3>Rione: ${selectedTeam.rione.name}</h3>
             <p class="total">Punti finali: ${selectedTeam.rione.final_points}</p>
@@ -58,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Aggiungi la scheda per i totali del team
         const totalCard = document.createElement('div');
-        totalCard.classList.add('team-card');
+        totalCard.classList.add('team-card1');
         totalCard.innerHTML = `
             <h3>Totale squadra</h3>
             <p>Prezzo totale: ${selectedTeam.total_cost}</p>

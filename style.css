@@ -2,7 +2,7 @@
     --main-color1:rgb(204, 92, 0);
     --main-color2:rgb(6, 1, 87);
 
-    --nord-color1:rgb(190, 0, 0);
+    --nord-color1:rgb(209, 0, 0);
     --nord-color2:rgb(0, 0, 0);
 
     --west-color1:rgb(0, 0, 0);
@@ -338,7 +338,7 @@ footer {
 }
 .totalpointsindex{
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 .gamescore{
     width: 60%;
@@ -467,7 +467,7 @@ footer {
     flex-wrap: wrap; /* Avvolgi le card se non ci sono abbastanza spazi orizzontali */
     justify-content: center; /* Centra le card orizzontalmente */
     gap: 10px; /* Spazio tra le card */
-    max-height: 300px; /* Altezza massima del contenitore */
+    max-height: 400px; /* Altezza massima del contenitore */
     overflow-y: auto; /* Abilita lo scrolling verticale se necessario */
     margin-bottom: 20px; /* Margine inferiore per separare il team dal contenitore giocatori */
 }
