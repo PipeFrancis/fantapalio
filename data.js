@@ -920,13 +920,13 @@
         // Ripeti per g2, g3, semi, final
         // Per semplicità, i calcoli di PTS e Rtot sono gli stessi, solo cambiando l'array di riferimento (player.stats_g2, player.stats_g3, ecc.)
         //da scommentare altre giornate
-        // player.stats_g2[0] = player.stats_g2[1] * 2 + player.stats_g2[3] * 3 + player.stats_g2[5];
-        // player.stats_g2[9] = player.stats_g2[7] + player.stats_g2[8];
-        // const valuesToCheckG2 = [player.stats_g2[0], player.stats_g2[9], player.stats_g2[10], player.stats_g2[12], player.stats_g2[13]];
-        // const countGreaterThanNineG2 = valuesToCheckG2.filter(value => value > 9).length;
-        // player.stats_g2[15] = countGreaterThanNineG2 >= 2 ? 1 : 0;
-        // player.stats_g2[16] = countGreaterThanNineG2 >= 3 ? 1 : 0;
-        // player.g2 = sumProduct(player.stats_g2, pdkWeights);
+        player.stats_g2[0] = player.stats_g2[1] * 2 + player.stats_g2[3] * 3 + player.stats_g2[5];
+        player.stats_g2[9] = player.stats_g2[7] + player.stats_g2[8];
+        const valuesToCheckG2 = [player.stats_g2[0], player.stats_g2[9], player.stats_g2[10], player.stats_g2[12], player.stats_g2[13]];
+        const countGreaterThanNineG2 = valuesToCheckG2.filter(value => value > 9).length;
+        player.stats_g2[15] = countGreaterThanNineG2 >= 2 ? 1 : 0;
+        player.stats_g2[16] = countGreaterThanNineG2 >= 3 ? 1 : 0;
+        player.g2 = sumProduct(player.stats_g2, pdkWeights);
     
         // player.stats_g3[0] = player.stats_g3[1] * 2 + player.stats_g3[3] * 3 + player.stats_g3[5];
         // player.stats_g3[9] = player.stats_g3[7] + player.stats_g3[8];
