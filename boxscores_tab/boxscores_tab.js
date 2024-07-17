@@ -20,11 +20,17 @@ function populateTable(team, players) {
     headerRow += '</tr>';
     tableBody.innerHTML = headerRow;
 
+    // Funzione per calcolare la percentuale in modo sicuro
+    function calculatePercentage(numerator, denominator) {
+        if (denominator === 0) {
+            return "0%";
+        }
+        return ((numerator / denominator) * 100).toFixed(1) + "%";
+    }
+
     // Popola le righe della tabella con i dati dei giocatori del team specificato
     players.forEach(player => {
-        console.log(player.name, player.team); // Verifica quale giocatore viene selezionato
         if (player.team === team) {
-            console.log("Adding player:", player.name); // Verifica se il giocatore viene aggiunto alla tabella
             let playerRow = '<tr>';
             playerRow += `<td>${player.name}</td>`;
             playerRow += `<td>${player.stats_g1[0]}</td>`;
@@ -37,19 +43,20 @@ function populateTable(team, players) {
             playerRow += `<td>${player.stats_g1[11]}</td>`;
             playerRow += `<td>${player.stats_g1[1]}</td>`;
             playerRow += `<td>${player.stats_g1[1] + player.stats_g1[2]}</td>`;
-            playerRow += `<td>${((player.stats_g1[1] / (player.stats_g1[1] + player.stats_g1[2])) * 100).toFixed(1)}%</td>`;
+            playerRow += `<td>${calculatePercentage(player.stats_g1[1], player.stats_g1[1] + player.stats_g1[2])}</td>`;
             playerRow += `<td>${player.stats_g1[3]}</td>`;
             playerRow += `<td>${player.stats_g1[3] + player.stats_g1[4]}</td>`;
-            playerRow += `<td>${((player.stats_g1[3] / (player.stats_g1[3] + player.stats_g1[4])) * 100).toFixed(1)}%</td>`;
+            playerRow += `<td>${calculatePercentage(player.stats_g1[3], player.stats_g1[3] + player.stats_g1[4])}</td>`;
             playerRow += `<td>${player.stats_g1[5]}</td>`;
             playerRow += `<td>${player.stats_g1[5] + player.stats_g1[6]}</td>`;
-            playerRow += `<td>${((player.stats_g1[5] / (player.stats_g1[5] + player.stats_g1[6])) * 100).toFixed(1)}%</td>`;
+            playerRow += `<td>${calculatePercentage(player.stats_g1[5], player.stats_g1[5] + player.stats_g1[6])}</td>`;
             playerRow += `<td>${player.stats_g1[14]}</td>`;
             playerRow += '</tr>';
             tableBody.innerHTML += playerRow;
         }
     });
 }
+
 
 // Chiamata alla funzione per popolare le tabelle per ciascun team
 populateTable("WEST", players);
