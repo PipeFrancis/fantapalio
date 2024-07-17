@@ -21,7 +21,9 @@ function populateTable(team, players) {
 
     // Popola le righe della tabella con i dati dei giocatori del team specificato
     players.forEach(player => {
+        console.log(player.name, player.team); // Verifica quale giocatore viene selezionato
         if (player.team === team) {
+            console.log("Adding player:", player.name); // Verifica se il giocatore viene aggiunto alla tabella
             let playerRow = '<tr>';
             playerRow += `<td>${player.name}</td>`;
             playerRow += `<td>${player.stats_g1[0]}</td>`;

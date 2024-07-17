@@ -24,7 +24,7 @@
 // gx_stats =      [PTS, 2P, 2Px, 3P, 3Px, FT, FTx, DR, OR, Rtot, ASS, TO, ST, BL, EXP, DD, TD, Win, Meme]
 //pesi per ogni stat (totale sarà calcolato con sumproduct)
 
-console.log(myArray);
+
 
 
     // Definizione del tipo rione_type
