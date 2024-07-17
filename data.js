@@ -150,29 +150,29 @@
     const WEST = { ...rione_type, name: "WEST", final_points: 0 };
     //da commentare numero maglia vicino a nome sennò ci vuole troppo a controllare sull' excel
     //     gx_stats =             [PTS, 2P, 2Px, 3P, 3Px, FT, FTx, DR, OR, Rtot, ASS, TO, ST, BL, EXP, DD, TD, Win, Meme]
-    MassimilianoMoretti.stats_g1=   [0,2,2,0,1,0,0,2,2,0,0,1,3,0,0,0,0,1,0];
-    UmbertoNobile.stats_g1=[0,    2,   0,  0,   0,  2,   0,  5,  3,    0,   5,  0,  1,  0,   0,  0,  0,   1,    0];
-    AndreaMoretti.stats_g1 =        [0,0,3,0,1,0,0,3,1,0,0,3,0,0,0,0,0,1,0];
-    LarryTrevisan.stats_g1 =        [];
-    AlessandroCostantini.stats_g1 = [];
-    MatteoMargarit.stats_g1 =       [];
-    MauroCuridori.stats_g1 =        [];
-    ChristianZanet.stats_g1 =       [];
-    GiacomoPiacentini.stats_g1 =    [];
-    GiovanniDalFarra.stats_g1 =     [];
-    MiracleObichukwu.stats_g1 =     [];
-    LucaDellaLonga.stats_g1 =       [];
-    AlessandroRojatti.stats_g1 =    [];
-    MicheleGorasso.stats_g1 =       [];
-    GiacomoFerigo.stats_g1 =        [];
-    UmbertoNobile.stats_g1 =        [];
-    DevinChiarcos.stats_g1 =        [];
-    ValentinoCigainero.stats_g1 =   [];
-    MicheleDeAnna.stats_g1 =        [];
-    DavideParon.stats_g1 =          [];
-    AlessioFurlan.stats_g1 =        [];
-    MichaelMargarit.stats_g1 =      [];
-    SebastianoTonizzo.stats_g1 =    [];
+
+    MassimilianoMoretti.stats_g1=   [0,2,2,0,1,0,0,2,2,0,0,1,3,0,0,0,0,1,0]; //13
+    AndreaMoretti.stats_g1 =        [0,0,3,0,1,0,0,3,1,0,0,3,0,0,0,0,0,1,0]; //24
+    LarryTrevisan.stats_g1 =        [0,0,2,0,1,1,1,3,1,0,2,1,1,0,0,0,0,1,0]; // 23
+    AlessandroCostantini.stats_g1 = [0,3,0,0,2,0,0,2,0,0,0,0,0,0,0,0,0,1,1]; // 4 
+    MatteoMargarit.stats_g1 =       []; // 22
+    MauroCuridori.stats_g1 =        []; // 2 
+    ChristianZanet.stats_g1 =       []; // 9
+    GiacomoPiacentini.stats_g1 =    []; // 20
+    GiovanniDalFarra.stats_g1 =     []; // 7
+    MiracleObichukwu.stats_g1 =     []; // 14
+    LucaDellaLonga.stats_g1 =       []; // 3
+    AlessandroRojatti.stats_g1 =    []; // 12
+    MicheleGorasso.stats_g1 =       []; // 21
+    GiacomoFerigo.stats_g1 =        []; // 16
+    UmbertoNobile.stats_g1 =        [0,2,0,0,0,2,0,5,3,0,5,0,1,0,0,0,0,1,0]; // 15
+    DevinChiarcos.stats_g1 =        []; // 18
+    ValentinoCigainero.stats_g1 =   []; //
+    MicheleDeAnna.stats_g1 =        []; //
+    DavideParon.stats_g1 =          []; // 6
+    AlessioFurlan.stats_g1 =        []; // 10
+    MichaelMargarit.stats_g1 =      []; //
+    SebastianoTonizzo.stats_g1 =    []; // 5
 
     //QUI SARANNO DA DARE TUTTI I PUNTEGGI DI TUTTI I GIOCATORI IN TUTTE LE GIORNATE
     MassimilianoMoretti.g1 = 12.75;
