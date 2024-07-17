@@ -8,7 +8,7 @@ function populateTable_g1(team, players) {
 
     // Intestazione dei parametri da mostrare nella tabella
     const headers = [
-        "Giocatore", "PTS", "REB", "DR", "OR", "A", "ST", "BLK", "TO", "2PM", "2PA", "2P%", 
+        "Giocatore", "PTS", "REB", "DREB", "OREB", "ASS", "STL", "BLK", "TO", "2PM", "2PA", "2P%", 
         "3PM", "3PA", "3P%", "FTM", "FTA", "FT%", "EXP","Meme","TOT"
     ];
 
@@ -66,7 +66,7 @@ function populateTable_g2(team, players) {
 
     // Intestazione dei parametri da mostrare nella tabella
     const headers = [
-        "Giocatore", "PTS", "REB", "DR", "OR", "A", "ST", "BLK", "TO", "2PM", "2PA", "2P%", 
+        "Giocatore", "PTS", "REB", "DREB", "OREB", "ASS", "STL", "BLK", "TO", "2PM", "2PA", "2P%", 
         "3PM", "3PA", "3P%", "FTM", "FTA", "FT%", "EXP","Meme","TOT"
     ];
 
@@ -123,7 +123,7 @@ function populateTable_g3(team, players) {
 
     // Intestazione dei parametri da mostrare nella tabella
     const headers = [
-        "Giocatore", "PTS", "REB", "DR", "OR", "A", "ST", "BLK", "TO", "2PM", "2PA", "2P%", 
+        "Giocatore", "PTS", "REB", "DREB", "OREB", "ASS", "STL", "BLK", "TO", "2PM", "2PA", "2P%", 
         "3PM", "3PA", "3P%", "FTM", "FTA", "FT%", "EXP","Meme","TOT"
     ];
 
@@ -180,7 +180,7 @@ function populateTable_semi(team, players) {
 
     // Intestazione dei parametri da mostrare nella tabella
     const headers = [
-        "Giocatore", "PTS", "REB", "DR", "OR", "A", "ST", "BLK", "TO", "2PM", "2PA", "2P%", 
+        "Giocatore", "PTS", "REB", "DREB", "OREB", "ASS", "STL", "BLK", "TO", "2PM", "2PA", "2P%", 
         "3PM", "3PA", "3P%", "FTM", "FTA", "FT%", "EXP","Meme","TOT"
     ];
 
@@ -238,7 +238,7 @@ function populateTable_final(team, players) {
 
     // Intestazione dei parametri da mostrare nella tabella
     const headers = [
-        "Giocatore", "PTS", "REB", "DR", "OR", "A", "ST", "BLK", "TO", "2PM", "2PA", "2P%", 
+        "Giocatore", "PTS", "REB", "DREB", "OREB", "ASS", "STL", "BLK", "TO", "2PM", "2PA", "2P%", 
         "3PM", "3PA", "3P%", "FTM", "FTA", "FT%", "EXP","Meme","TOT"
     ];
 
