@@ -150,7 +150,7 @@
     const WEST = { ...rione_type, name: "WEST", final_points: 0 };
 
     //     gx_stats =      [PTS, 2P, 2Px, 3P, 3Px, FT, FTx, DR, OR, Rtot, ASS, TO, ST, BL, EXP, DD, TD, Win, Meme]
-    UmbertoNobile.stats_g1=[0,    2,   0,  0,   0,  2,   0,  5,  3,    0,   5,  0,  1,  0,   0,  0,  0,   1,    1];
+    UmbertoNobile.stats_g1=[0,    2,   0,  0,   0,  2,   0,  5,  3,    0,   5,  0,  1,  0,   0,  0,  0,   1,    0];
 
 
     //QUI SARANNO DA DARE TUTTI I PUNTEGGI DI TUTTI I GIOCATORI IN TUTTE LE GIORNATE
