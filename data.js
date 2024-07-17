@@ -763,7 +763,7 @@
 
     //                   0    1   2   3    4   5   6    7   8    9     10  11  12  13  14   15  16  17   18
     // gx_stats =      [PTS, 2P, 2Px, 3P, 3Px, FT, FTx, DR, OR, Rtot, ASS, TO, ST, BL, EXP, DD, TD, Win, Meme]
-    const pdkWeights = [1, 0, -0.75, 0, -0.75, 0, -0.5, 1, 1.25,  0, 1.5, -1, 1.5, 1.5, -3,  3,  6,   2,  1];
+    const pdkWeights = [1, 0, -0.75, 0.5, -0.75, 0, -0.5, 1, 1.25,  0, 1.5, -1, 1.5, 1.5, -3,  3,  6,   2,  1];
 
     // Calcola g1 per ogni giocatore
     for (let player of players) {
