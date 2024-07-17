@@ -174,65 +174,77 @@
     AlessioFurlan.stats_g1 =        [0,0,2,1,0,2,0,1,0,0,0,0,0,0,0,0,0,1,1]; // 10
     MichaelMargarit.stats_g1 =      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0]; //
     SebastianoTonizzo.stats_g1 =    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0]; // 5
-
-    DanieleGanzit.stats_g1 =        []; // 
-    GiacomoSilvestri.stats_g1 =     []; // 9
-    VittorioGri.stats_g1 =          []; // 11
-    VittorioBasso.stats_g1 =        []; // 8
-    AlessandroRizzi.stats_g1 =      []; // 10
-    MassimoBaldassi.stats_g1 =      []; // 
-    GabrieleMiani.stats_g1 =        []; // 14
-    MarcoMarchetti.stats_g1 =       []; // 
-    MarcoLombardo.stats_g1 =        []; // 15
-    MicheleVendrame.stats_g1 =      []; // 13
-    LorenzoSchinella.stats_g1 =     []; // 3
-    GioeleTudini.stats_g1 =         []; // 7
-    FilippoPasquon.stats_g1 =       []; // 2
-    TommasoMartello.stats_g1 =      []; // 16
-    MarcoRizzi.stats_g1 =           []; // 6
-    DavidGaspardo.stats_g1 =        []; // 19
-    AntonioGri.stats_g1 =           []; // 5
-    RiccardoSchinella.stats_g1 =    []; // 1
-    
-    SimoneMartinelli.stats_g1 =     []; // 22
-    MatteoSpagnolo.stats_g1 =       []; // 21
-    DavideFaurlin.stats_g1 =        []; // 18
-    GiovanniTonizzo.stats_g1 =      []; // 5
-    AlessandroSant.stats_g1 =       []; // 7
-    MatteoBazzaro.stats_g1 =        []; // 1
-    AlessandroSantin.stats_g1 =     []; // 10
-    AlessandroGalassi.stats_g1 =    []; // 19
-    PietroSoramel.stats_g1 =        []; // 16
-    FilippoAgnoluzzi.stats_g1 =     []; // 2
-    EmanueleDaneluzzi.stats_g1 =    []; // 6
-    LucaSoramel.stats_g1 =          []; // 12
-    PaoloZorzi.stats_g1 =           []; // 9
-    ChristianFedrizzi.stats_g1 =    []; // 3
-    FilippoSappa.stats_g1 =         []; // 15
-    GiovanniZanin.stats_g1 =        []; // 23
-    EnricoSant.stats_g1 =           []; // 4
-    StefanoPolano.stats_g1 =        []; // 17
-    
-    MarcoPolo.stats_g1 =            []; // 15
-    MarcoSerrao.stats_g1 =          []; // 8
-    WilliamIob.stats_g1 =           []; // 12
-    DavideBroggi.stats_g1 =         []; // 3
-    AlexMicottis.stats_g1 =         []; // 21
-    MassimilianoRossi.stats_g1 =    []; // 22
-    MassimoMasotti.stats_g1 =       []; // 10
-    EugenioDeTina.stats_g1 =        []; // 9
-    LucaAnedda.stats_g1 =           []; // 5
-    DenisVanin.stats_g1 =           []; // 17
-    ThomasBaracetti.stats_g1 =      []; // 2
-    LucaGemo.stats_g1 =             []; // 6
-    DiegoNata.stats_g1 =            []; // 19
-    MattiaRoiatti.stats_g1 =        []; // 11
-    EdoardoPicogna.stats_g1 =       []; // 7
-    MauroPerina.stats_g1 =          []; // 18
-    LorenzoMoro.stats_g1 =          []; // 14
-    GionaTell.stats_g1 =            []; // 4
-    IacopoPivetta.stats_g1 =        []; // 20
-    MattiaMasotti.stats_g1 =        []; // 13
+    //                               | | | | | | | | | | | | | | | | | | | 
+    //     gx_stats =              PTS,|2Px|3Px|FTx|OR,|ASS|ST,|EXP|TD,|Meme
+    //     gx_stats =                |2P,|3P,|FT,|DR,|Rt,|TO,|BL,|DD,|Win|
+    //                               | | | | | | | | | | | | | | | | | | | 
+    DanieleGanzit.stats_g1 =        [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2]; // 
+    GiacomoSilvestri.stats_g1 =     [0,0,0,0,1,1,1,0,0,0,0,2,0,0,0,0,0,1,3]; // 9
+    VittorioGri.stats_g1 =          [0,1,5,0,0,0,0,1,0,0,0,2,1,0,0,0,0,1,3]; // 11
+    VittorioBasso.stats_g1 =        [0,0,2,0,0,0,2,0,0,0,0,0,0,0,0,0,0,1,2]; // 8
+    AlessandroRizzi.stats_g1 =      [0,0,2,0,1,1,1,1,1,0,0,0,0,0,0,0,0,1,3]; // 10
+    MassimoBaldassi.stats_g1 =      [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2]; // 
+    GabrieleMiani.stats_g1 =        [0,6,3,3,3,3,0,3,7,0,2,1,1,0,0,0,0,1,3]; // 14
+    MarcoMarchetti.stats_g1 =       [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2]; // 
+    MarcoLombardo.stats_g1 =        [0,1,5,0,0,2,0,3,4,0,0,1,1,0,0,0,0,1,2]; // 15
+    MicheleVendrame.stats_g1 =      [0,2,0,0,0,0,0,2,0,0,0,1,0,0,0,0,0,1,2]; // 13
+    LorenzoSchinella.stats_g1 =     [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2]; // 3
+    GioeleTudini.stats_g1 =         [0,0,0,0,1,0,0,0,1,0,0,1,1,0,0,0,0,1,2]; // 7
+    FilippoPasquon.stats_g1 =       [0,1,0,0,3,0,2,1,1,0,1,0,3,0,0,0,0,1,2]; // 2
+    TommasoMartello.stats_g1 =      [0,3,2,0,1,2,5,0,0,0,0,2,2,0,0,0,0,1,2]; // 16
+    MarcoRizzi.stats_g1 =           [0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,2]; // 6
+    DavidGaspardo.stats_g1 =        [0,0,1,1,6,0,0,7,1,0,2,3,1,0,0,0,0,1,2]; // 19
+    AntonioGri.stats_g1 =           [0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,2]; // 5
+    RiccardoSchinella.stats_g1 =    [0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,2]; // 1
+    //                               | | | | | | | | | | | | | | | | | | | 
+    //     gx_stats =              PTS,|2Px|3Px|FTx|OR,|ASS|ST,|EXP|TD,|Meme
+    //     gx_stats =                |2P,|3P,|FT,|DR,|Rt,|TO,|BL,|DD,|Win|
+    //                               | | | | | | | | | | | | | | | | | | | 
+    SimoneMartinelli.stats_g1 =     [0,1,3,0,3,0,1,0,1,0,0,1,0,0,0,0,0,0,0]; // 22
+    MatteoSpagnolo.stats_g1 =       [0,0,0,0,2,0,0,2,1,0,0,0,2,1,0,0,0,0,0]; // 21
+    DavideFaurlin.stats_g1 =        [0,0,1,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0]; // 18
+    GiovanniTonizzo.stats_g1 =      [0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0]; // 5
+    AlessandroSant.stats_g1 =       [0,0,3,0,4,4,2,0,0,0,1,1,1,1,0,0,0,0,0]; // 7
+    MatteoBazzaro.stats_g1 =        [0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]; // 1
+    AlessandroSantin.stats_g1 =     [0,0,2,0,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0]; // 10
+    AlessandroGalassi.stats_g1 =    [0,0,2,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0]; // 19
+    PietroSoramel.stats_g1 =        [0,1,2,2,0,0,0,1,2,0,1,0,2,0,0,0,0,0,0]; // 16
+    FilippoAgnoluzzi.stats_g1 =     [0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]; // 2
+    EmanueleDaneluzzi.stats_g1 =    [0,0,1,0,0,2,0,2,1,0,0,2,0,0,0,0,0,0,0]; // 6
+    LucaSoramel.stats_g1 =          [0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0]; // 12
+    PaoloZorzi.stats_g1 =           [0,0,1,1,0,0,0,0,1,0,0,2,1,1,0,0,0,0,0]; // 9
+    ChristianFedrizzi.stats_g1 =    [0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0]; // 3
+    FilippoSappa.stats_g1 =         [0,3,4,0,2,5,1,3,6,0,2,3,2,0,0,0,0,0,1]; // 15
+    GiovanniZanin.stats_g1 =        [0,1,6,0,3,3,4,6,4,0,2,4,0,0,0,0,0,0,1]; // 23
+    EnricoSant.stats_g1 =           [0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]; // 4
+    StefanoPolano.stats_g1 =        [0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]; // 17
+    //                               | | | | | | | | | | | | | | | | | | | 
+    //     gx_stats =              PTS,|2Px|3Px|FTx|OR,|ASS|ST,|EXP|TD,|Meme
+    //     gx_stats =                |2P,|3P,|FT,|DR,|Rt,|TO,|BL,|DD,|Win|
+    //                               | | | | | | | | | | | | | | | | | | | 
+    MarcoPolo.stats_g1 =            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3]; // 15
+    MarcoSerrao.stats_g1 =          [0,3,5,2,2,2,1,5,2,0,2,1,0,1,0,0,0,0,3]; // 8
+    WilliamIob.stats_g1 =           [0,4,2,1,0,0,0,1,1,0,0,1,0,0,0,0,0,0,4]; // 12
+    DavideBroggi.stats_g1 =         [0,0,2,0,0,2,0,1,0,0,0,1,2,0,0,0,0,0,3]; // 3
+    AlexMicottis.stats_g1 =         [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3]; // 21
+    MassimilianoRossi.stats_g1 =    [0,0,0,0,2,0,0,1,0,0,0,2,2,0,0,0,0,0,3]; // 22
+    MassimoMasotti.stats_g1 =       [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3]; // 10
+    EugenioDeTina.stats_g1 =        [0,1,0,0,1,0,1,0,0,0,0,1,1,0,1,0,0,0,3]; // 9
+    LucaAnedda.stats_g1 =           [0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4]; // 5
+    DenisVanin.stats_g1 =           [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4]; // 17
+    ThomasBaracetti.stats_g1 =      [0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,3]; // 2
+    LucaGemo.stats_g1 =             [0,0,0,0,0,0,0,1,0,0,1,3,0,0,0,0,0,0,3]; // 6
+    DiegoNata.stats_g1 =            [0,3,6,1,0,0,0,6,2,0,1,2,3,0,0,0,0,0,1]; // 19
+    MattiaRoiatti.stats_g1 =        [0,0,0,0,1,0,0,1,0,0,0,1,0,0,0,0,0,0,4]; // 11
+    EdoardoPicogna.stats_g1 =       [0,0,0,0,2,1,1,0,0,0,0,2,0,0,0,0,0,0,4]; // 7
+    MauroPerina.stats_g1 =          [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3]; // 18
+    LorenzoMoro.stats_g1 =          [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8]; // 14
+    GionaTell.stats_g1 =            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3]; // 4
+    IacopoPivetta.stats_g1 =        [0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,4]; // 20
+    MattiaMasotti.stats_g1 =        [0,3,5,0,4,2,3,2,4,0,0,2,1,1,0,0,0,0,3]; // 13
+    //                               | | | | | | | | | | | | | | | | | | | 
+    //     gx_stats =              PTS,|2Px|3Px|FTx|OR,|ASS|ST,|EXP|TD,|Meme
+    //     gx_stats =                |2P,|3P,|FT,|DR,|Rt,|TO,|BL,|DD,|Win|
 
     //QUI SARANNO DA DARE TUTTI I PUNTEGGI DI TUTTI I GIOCATORI IN TUTTE LE GIORNATE
     MassimilianoMoretti.g1 = 12.75;
