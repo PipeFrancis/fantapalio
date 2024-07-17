@@ -9,7 +9,7 @@ function populateTable_g1(team, players) {
     // Intestazione dei parametri da mostrare nella tabella
     const headers = [
         "Giocatore", "PTS", "REB", "DR", "OR", "A", "ST", "BLK", "TO", "2PM", "2PA", "2P%", 
-        "3PM", "3PA", "3P%", "FTM", "FTA", "FT%", "EXP"
+        "3PM", "3PA", "3P%", "FTM", "FTA", "FT%", "EXP","TOT"
     ];
 
     // Aggiungi la prima riga con gli header alla tabella
@@ -51,6 +51,7 @@ function populateTable_g1(team, players) {
             playerRow += `<td>${player.stats_g1[5] + player.stats_g1[6]}</td>`;
             playerRow += `<td>${calculatePercentage(player.stats_g1[5], player.stats_g1[5] + player.stats_g1[6])}</td>`;
             playerRow += `<td>${player.stats_g1[14]}</td>`;
+            playerRow += `<td><strong>${player.tot}</strong></td>`;
             playerRow += '</tr>';
             tableBody.innerHTML += playerRow;
         }
@@ -65,7 +66,7 @@ function populateTable_g2(team, players) {
     // Intestazione dei parametri da mostrare nella tabella
     const headers = [
         "Giocatore", "PTS", "REB", "DR", "OR", "A", "ST", "BLK", "TO", "2PM", "2PA", "2P%", 
-        "3PM", "3PA", "3P%", "FTM", "FTA", "FT%", "EXP"
+        "3PM", "3PA", "3P%", "FTM", "FTA", "FT%", "EXP","TOT"
     ];
 
     // Aggiungi la prima riga con gli header alla tabella
@@ -106,7 +107,7 @@ function populateTable_g2(team, players) {
             playerRow += `<td>${player.stats_g2[5]}</td>`;
             playerRow += `<td>${player.stats_g2[5] + player.stats_g2[6]}</td>`;
             playerRow += `<td>${calculatePercentage(player.stats_g2[5], player.stats_g2[5] + player.stats_g2[6])}</td>`;
-            playerRow += `<td>${player.stats_g2[14]}</td>`;
+            playerRow += `<td><strong>${player.tot}</strong></td>`;
             playerRow += '</tr>';
             tableBody.innerHTML += playerRow;
         }
@@ -120,7 +121,7 @@ function populateTable_g3(team, players) {
     // Intestazione dei parametri da mostrare nella tabella
     const headers = [
         "Giocatore", "PTS", "REB", "DR", "OR", "A", "ST", "BLK", "TO", "2PM", "2PA", "2P%", 
-        "3PM", "3PA", "3P%", "FTM", "FTA", "FT%", "EXP"
+        "3PM", "3PA", "3P%", "FTM", "FTA", "FT%", "EXP","TOT"
     ];
 
     // Aggiungi la prima riga con gli header alla tabella
@@ -161,7 +162,7 @@ function populateTable_g3(team, players) {
             playerRow += `<td>${player.stats_g3[5]}</td>`;
             playerRow += `<td>${player.stats_g3[5] + player.stats_g3[6]}</td>`;
             playerRow += `<td>${calculatePercentage(player.stats_g3[5], player.stats_g3[5] + player.stats_g3[6])}</td>`;
-            playerRow += `<td>${player.stats_g3[14]}</td>`;
+            playerRow += `<td><strong>${player.tot}</strong></td>`;
             playerRow += '</tr>';
             tableBody.innerHTML += playerRow;
         }
@@ -175,7 +176,7 @@ function populateTable_semi(team, players) {
     // Intestazione dei parametri da mostrare nella tabella
     const headers = [
         "Giocatore", "PTS", "REB", "DR", "OR", "A", "ST", "BLK", "TO", "2PM", "2PA", "2P%", 
-        "3PM", "3PA", "3P%", "FTM", "FTA", "FT%", "EXP"
+        "3PM", "3PA", "3P%", "FTM", "FTA", "FT%", "EXP","TOT"
     ];
 
     // Aggiungi la prima riga con gli header alla tabella
@@ -216,7 +217,7 @@ function populateTable_semi(team, players) {
             playerRow += `<td>${player.stats_semi[5]}</td>`;
             playerRow += `<td>${player.stats_semi[5] + player.stats_semi[6]}</td>`;
             playerRow += `<td>${calculatePercentage(player.stats_semi[5], player.stats_semi[5] + player.stats_semi[6])}</td>`;
-            playerRow += `<td>${player.stats_semi[14]}</td>`;
+            playerRow += `<td><strong>${player.tot}</strong></td>`;
             playerRow += '</tr>';
             tableBody.innerHTML += playerRow;
         }
@@ -231,7 +232,7 @@ function populateTable_final(team, players) {
     // Intestazione dei parametri da mostrare nella tabella
     const headers = [
         "Giocatore", "PTS", "REB", "DR", "OR", "A", "ST", "BLK", "TO", "2PM", "2PA", "2P%", 
-        "3PM", "3PA", "3P%", "FTM", "FTA", "FT%", "EXP"
+        "3PM", "3PA", "3P%", "FTM", "FTA", "FT%", "EXP","TOT"
     ];
 
     // Aggiungi la prima riga con gli header alla tabella
@@ -272,7 +273,7 @@ function populateTable_final(team, players) {
             playerRow += `<td>${player.stats_final[5]}</td>`;
             playerRow += `<td>${player.stats_final[5] + player.stats_final[6]}</td>`;
             playerRow += `<td>${calculatePercentage(player.stats_final[5], player.stats_final[5] + player.stats_final[6])}</td>`;
-            playerRow += `<td>${player.stats_final[14]}</td>`;
+            playerRow += `<td><strong>${player.tot}</strong></td>`;
             playerRow += '</tr>';
             tableBody.innerHTML += playerRow;
         }
