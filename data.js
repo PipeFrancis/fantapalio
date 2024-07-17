@@ -5,14 +5,26 @@
         name: "Nome Giocatore",
         team: "Nome Squadra",
         g1: 0.0,
+        stats_g1: Array(19).fill(0),
         g2: 0.0,
+        stats_g2: Array(19).fill(0),
         g3: 0.0,
+        stats_g3: Array(19).fill(0),
         semi: 0.0,
+        stats_semi: Array(19).fill(0),
         td3: 0.0,
         final: 0.0,
+        stats_final: Array(19).fill(0),
         tot: 0.0,
         cost: 0
     };
+//questo array sarà da riempire per ogni giocatore per ogni partita
+//poi il resto (player.g1 ecc viene calcolato in automatico)
+//                   0    1   2   3    4   5   6    7   8    9     10  11  12  13  14   15  16  17   18
+// gx_stats =      [PTS, 2P, 2Px, 3P, 3Px, FT, FTx, DR, OR, Rtot, ASS, TO, ST, BL, EXP, DD, TD, Win, Meme]
+//pesi per ogni stat (totale sarà calcolato con sumproduct)
+
+console.log(myArray);
 
 
     // Definizione del tipo rione_type
@@ -40,6 +52,7 @@
         tot_final: 0.0,
         tot_team: 0.0,
     };
+
 
     //definizione players
     // Team WEST
@@ -135,6 +148,9 @@
     const SUD  = { ...rione_type, name: "SUD", final_points: 0 };
     const EST  = { ...rione_type, name: "EST", final_points: 0 };
     const WEST = { ...rione_type, name: "WEST", final_points: 0 };
+
+    //     gx_stats =      [PTS, 2P, 2Px, 3P, 3Px, FT, FTx, DR, OR, Rtot, ASS, TO, ST, BL, EXP, DD, TD, Win, Meme]
+    UmbertoNobile.stats_g1=[0,    2,   0,  0,   0,  2,   0,  5,  3,    0,   5,  0,  1,  0,   0,  0,  0,   1,    1];
 
 
     //QUI SARANNO DA DARE TUTTI I PUNTEGGI DI TUTTI I GIOCATORI IN TUTTE LE GIORNATE
@@ -654,8 +670,74 @@
 
         MarcoPolo, MarcoSerrao, WilliamIob, DavideBroggi, AlexMicottis, MassimilianoRossi, MassimoMasotti, 
         EugenioDeTina, LucaAnedda, DenisVanin, ThomasBaracetti, LucaGemo, DiegoNata, MattiaRoiatti, 
-        EdoardoPicogna, MauroPerina, LorenzoMoro, GionaTell, IacopoPivetta, MattiaMasotti, ];
+        EdoardoPicogna, MauroPerina, LorenzoMoro, GionaTell, IacopoPivetta, MattiaMasotti ];
 
+
+        // Funzione per calcolare il prodotto scalare
+    function sumProduct(array1, array2) {
+        return array1.reduce((sum, a, i) => sum + a * array2[i], 0);
+    }
+
+
+
+    //                   0    1   2   3    4   5   6    7   8    9     10  11  12  13  14   15  16  17   18
+    // gx_stats =      [PTS, 2P, 2Px, 3P, 3Px, FT, FTx, DR, OR, Rtot, ASS, TO, ST, BL, EXP, DD, TD, Win, Meme]
+    const pdkWeights = [1, 0, -0.75, 0, -0.75, 0, -0.5, 1, 1.25,  0, 1.5, -1, 1.5, 1.5, -3,  3,  6,   2,  1];
+
+    // Calcola g1 per ogni giocatore
+    for (let player of players) {
+        // Calcola PTS (player.stats_g1[0])
+        player.stats_g1[0] = player.stats_g1[1] * 2 + player.stats_g1[3] * 3 + player.stats_g1[5];
+        
+        // Calcola Rtot (player.stats_g1[9])
+        player.stats_g1[9] = player.stats_g1[7] + player.stats_g1[8];
+    
+        // Calcolo DD e TD
+        const valuesToCheck = [player.stats_g1[0], player.stats_g1[9], player.stats_g1[10], player.stats_g1[12], player.stats_g1[13]];
+        const countGreaterThanNine = valuesToCheck.filter(value => value > 9).length;
+        
+        // Imposta player.stats_g1[15] e player.stats_g1[16]
+        player.stats_g1[15] = countGreaterThanNine >= 2 ? 1 : 0;
+        player.stats_g1[16] = countGreaterThanNine >= 3 ? 1 : 0;
+    
+        // Calcola g1 utilizzando sumProduct
+        player.g1 = sumProduct(player.stats_g1, pdkWeights);
+    
+        // Ripeti per g2, g3, semi, final
+        // Per semplicità, i calcoli di PTS e Rtot sono gli stessi, solo cambiando l'array di riferimento (player.stats_g2, player.stats_g3, ecc.)
+        //da scommentare altre giornate
+        // player.stats_g2[0] = player.stats_g2[1] * 2 + player.stats_g2[3] * 3 + player.stats_g2[5];
+        // player.stats_g2[9] = player.stats_g2[7] + player.stats_g2[8];
+        // const valuesToCheckG2 = [player.stats_g2[0], player.stats_g2[9], player.stats_g2[10], player.stats_g2[12], player.stats_g2[13]];
+        // const countGreaterThanNineG2 = valuesToCheckG2.filter(value => value > 9).length;
+        // player.stats_g2[15] = countGreaterThanNineG2 >= 2 ? 1 : 0;
+        // player.stats_g2[16] = countGreaterThanNineG2 >= 3 ? 1 : 0;
+        // player.g2 = sumProduct(player.stats_g2, pdkWeights);
+    
+        // player.stats_g3[0] = player.stats_g3[1] * 2 + player.stats_g3[3] * 3 + player.stats_g3[5];
+        // player.stats_g3[9] = player.stats_g3[7] + player.stats_g3[8];
+        // const valuesToCheckG3 = [player.stats_g3[0], player.stats_g3[9], player.stats_g3[10], player.stats_g3[12], player.stats_g3[13]];
+        // const countGreaterThanNineG3 = valuesToCheckG3.filter(value => value > 9).length;
+        // player.stats_g3[15] = countGreaterThanNineG3 >= 2 ? 1 : 0;
+        // player.stats_g3[16] = countGreaterThanNineG3 >= 3 ? 1 : 0;
+        // player.g3 = sumProduct(player.stats_g3, pdkWeights);
+    
+        // player.stats_semi[0] = player.stats_semi[1] * 2 + player.stats_semi[3] * 3 + player.stats_semi[5];
+        // player.stats_semi[9] = player.stats_semi[7] + player.stats_semi[8];
+        // const valuesToCheckSemi = [player.stats_semi[0], player.stats_semi[9], player.stats_semi[10], player.stats_semi[12], player.stats_semi[13]];
+        // const countGreaterThanNineSemi = valuesToCheckSemi.filter(value => value > 9).length;
+        // player.stats_semi[15] = countGreaterThanNineSemi >= 2 ? 1 : 0;
+        // player.stats_semi[16] = countGreaterThanNineSemi >= 3 ? 1 : 0;
+        // player.semi = sumProduct(player.stats_semi, pdkWeights);
+    
+        // player.stats_final[0] = player.stats_final[1] * 2 + player.stats_final[3] * 3 + player.stats_final[5];
+        // player.stats_final[9] = player.stats_final[7] + player.stats_final[8];
+        // const valuesToCheckFinal = [player.stats_final[0], player.stats_final[9], player.stats_final[10], player.stats_final[12], player.stats_final[13]];
+        // const countGreaterThanNineFinal = valuesToCheckFinal.filter(value => value > 9).length;
+        // player.stats_final[15] = countGreaterThanNineFinal >= 2 ? 1 : 0;
+        // player.stats_final[16] = countGreaterThanNineFinal >= 3 ? 1 : 0;
+        // player.final = sumProduct(player.stats_final, pdkWeights);
+    }
 
     // Ciclo for per calcolare player.tot per ogni giocatore
     for (let i = 0; i < players.length; i++) {
