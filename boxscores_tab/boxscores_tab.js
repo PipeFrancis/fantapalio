@@ -51,7 +51,7 @@ function populateTable_g1(team, players) {
             playerRow += `<td>${player.stats_g1[5] + player.stats_g1[6]}</td>`;
             playerRow += `<td>${calculatePercentage(player.stats_g1[5], player.stats_g1[5] + player.stats_g1[6])}</td>`;
             playerRow += `<td>${player.stats_g1[14]}</td>`;
-            playerRow += `<td><strong>${player.tot}</strong></td>`;
+            playerRow += `<td><strong>${player.g1}</strong></td>`;
             playerRow += '</tr>';
             tableBody.innerHTML += playerRow;
         }
@@ -107,7 +107,7 @@ function populateTable_g2(team, players) {
             playerRow += `<td>${player.stats_g2[5]}</td>`;
             playerRow += `<td>${player.stats_g2[5] + player.stats_g2[6]}</td>`;
             playerRow += `<td>${calculatePercentage(player.stats_g2[5], player.stats_g2[5] + player.stats_g2[6])}</td>`;
-            playerRow += `<td><strong>${player.tot}</strong></td>`;
+            playerRow += `<td><strong>${player.g2}</strong></td>`;
             playerRow += '</tr>';
             tableBody.innerHTML += playerRow;
         }
@@ -162,7 +162,7 @@ function populateTable_g3(team, players) {
             playerRow += `<td>${player.stats_g3[5]}</td>`;
             playerRow += `<td>${player.stats_g3[5] + player.stats_g3[6]}</td>`;
             playerRow += `<td>${calculatePercentage(player.stats_g3[5], player.stats_g3[5] + player.stats_g3[6])}</td>`;
-            playerRow += `<td><strong>${player.tot}</strong></td>`;
+            playerRow += `<td><strong>${player.g3}</strong></td>`;
             playerRow += '</tr>';
             tableBody.innerHTML += playerRow;
         }
@@ -217,7 +217,7 @@ function populateTable_semi(team, players) {
             playerRow += `<td>${player.stats_semi[5]}</td>`;
             playerRow += `<td>${player.stats_semi[5] + player.stats_semi[6]}</td>`;
             playerRow += `<td>${calculatePercentage(player.stats_semi[5], player.stats_semi[5] + player.stats_semi[6])}</td>`;
-            playerRow += `<td><strong>${player.tot}</strong></td>`;
+            playerRow += `<td><strong>${player.semi}</strong></td>`;
             playerRow += '</tr>';
             tableBody.innerHTML += playerRow;
         }
@@ -273,7 +273,7 @@ function populateTable_final(team, players) {
             playerRow += `<td>${player.stats_final[5]}</td>`;
             playerRow += `<td>${player.stats_final[5] + player.stats_final[6]}</td>`;
             playerRow += `<td>${calculatePercentage(player.stats_final[5], player.stats_final[5] + player.stats_final[6])}</td>`;
-            playerRow += `<td><strong>${player.tot}</strong></td>`;
+            playerRow += `<td><strong>${player.final}</strong></td>`;
             playerRow += '</tr>';
             tableBody.innerHTML += playerRow;
         }
