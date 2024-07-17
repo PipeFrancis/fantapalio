@@ -57,7 +57,7 @@ function populateTable_g1(team, players) {
             tableBody.innerHTML += playerRow;
         }
     });
-    tableBody.innerHTML = headerRow;
+    tableBody.innerHTML += headerRow;
 }
 
 
