@@ -1,5 +1,6 @@
 // Importa player_type e players dal modulo data.js
 import { player_type, players } from '../data.js';
+console.log("inizio boxscore js"); // inizio
 
 // Funzione per popolare la tabella per un team specifico
 function populateTable(team, players) {
