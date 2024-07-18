@@ -75,7 +75,7 @@ function renderTeam() {
                 const newSignupLink = document.createElement('a');
                 newSignupLink.href = "https://surveyheart.com/form/6693eb0ae930bd1754994530";
                 newSignupLink.target = "_blank";
-                newSignupLink.textContent = "iscrivi la squadra";
+                newSignupLink.textContent = "ricordateli bene, poi iscrivi la squadra";
                 newSignupLink.id = 'signupLink';
                 newSignupLink.classList.add('registrationlink');  // Aggiunge la classe registrationlink
                 newValidMessage.parentNode.insertBefore(newSignupLink, newValidMessage.nextSibling);

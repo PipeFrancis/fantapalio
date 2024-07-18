@@ -16,7 +16,7 @@ function populateTable_g1(team, players) {
     let headerRow = '<tr>';
     headers.forEach(header => {
         headerRow += `<th>${header}</th>`;
-    });
+    }); //
     headerRow += '</tr>';
     tableBody.innerHTML = headerRow;
 
