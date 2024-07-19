@@ -292,7 +292,7 @@ function populateTable_final(team, players) {
         }
     });
     tableBody.innerHTML += headerRow;
-}
+}//
 
 // Chiamata alla funzione per popolare le tabelle per ciascun team
 populateTable_g1("NORD", players);
