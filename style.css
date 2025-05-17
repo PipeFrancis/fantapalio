@@ -1,6 +1,9 @@
 :root {
-    --main-color1:rgb(204, 92, 0);
-    --main-color2:rgb(6, 1, 87);
+    /*--main-color1:rgb(204, 92, 0);
+    --main-color2:rgb(6, 1, 87);*/
+    --main-color1:rgb(78, 78, 78);
+    /*--main-color2:rgb(200, 200, 160);*/
+    --main-color2:black;
 
     --nord-color1:rgb(255, 0, 0);
     --nord-color2:rgb(0, 0, 0);
@@ -19,7 +22,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;   
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
@@ -51,7 +54,9 @@ a button {
     font-size: 18px;
     border-radius: 8px;
     background-color: var(--main-color1);
+    font-family: 'Poppins', sans-serif !important;
     color: white;
+    /*color: var(--main-color2);*/
     border: none;
     cursor: pointer;
 }
@@ -63,7 +68,7 @@ a button:hover {
 .dropdown {
     display: block;
     width: 200px;
-    margin: 10px auto;
+    margin: 10px auto;  
     padding: 10px;
     font-size: 16px;
     border-radius: 5px;
@@ -344,6 +349,7 @@ footer {
     width: 60%;
     margin: auto;
     margin-bottom:30px;
+    margin-top:30px;
     font-size: 2em;
     flex-direction: row;
     display:flex;
@@ -442,16 +448,16 @@ footer {
 }
 
 .cardclasssoftWEST{
-    border: 4px solid var(--west-color1);
+    border: 6px solid var(--west-color1);
 }
 .cardclasssoftNORD{
-    border: 4px solid var(--nord-color1);
+    border: 6px solid var(--nord-color1);
 }
 .cardclasssoftSUD{
-    border: 4px solid var(--sud-color2);
+    border: 6px solid var(--sud-color2);
 }
 .cardclasssoftEST{
-    border: 4px solid var(--est-color1);
+    border: 6px solid var(--est-color1);
 }
 
 
@@ -576,4 +582,19 @@ footer {
     border-radius: 5px;
     color: var(--main-color2);
     padding-bottom:20px;
+}
+
+
+/* Only for the registration page to fix column width */
+.fixed-column-table {
+    table-layout: fixed;
+}
+
+/* Control width of columns inside fixed layout */
+.fixed-column-table th:first-child, .fixed-column-table td:first-child {
+    width: 70%; /* Name */
+}
+
+.fixed-column-table th:last-child, .fixed-column-table td:last-child {
+    width: 30%; /* Cost */
 }

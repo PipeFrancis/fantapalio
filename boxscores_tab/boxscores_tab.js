@@ -2,6 +2,16 @@
 import { player_type, players, td3Weights } from '../data.js';
 console.log("inizio boxscore js"); // inizio
 
+
+
+
+// qui c'è una funzione per ogni giornata, uguale eccetto i dati stats che usa il suffisso diverso
+// quella del td3 è un po diversa ma ci sta
+// g1, g2, g3, semi, final, medie, totals, td3
+
+
+
+
 // Funzione per popolare la tabella per un team specifico
 function populateTable_g1(team, players) {
     const tableBody = document.getElementById(`tableBodyG1${team}`);
@@ -33,27 +43,27 @@ function populateTable_g1(team, players) {
     players.forEach(player => {
         if (player.team === team) {
             let playerRow = '<tr>';
-            playerRow += `<td>${player.name}</td>`;
-            playerRow += `<td>${player.stats_g1[0]}</td>`;
-            playerRow += `<td>${player.stats_g1[9]}</td>`;
-            playerRow += `<td>${player.stats_g1[7]}</td>`;
-            playerRow += `<td>${player.stats_g1[8]}</td>`;
-            playerRow += `<td>${player.stats_g1[10]}</td>`;
-            playerRow += `<td>${player.stats_g1[12]}</td>`;
-            playerRow += `<td>${player.stats_g1[13]}</td>`;
-            playerRow += `<td>${player.stats_g1[11]}</td>`;
-            playerRow += `<td>${player.stats_g1[1]}</td>`;
-            playerRow += `<td>${player.stats_g1[1] + player.stats_g1[2]}</td>`;
-            playerRow += `<td>${calculatePercentage(player.stats_g1[1], player.stats_g1[1] + player.stats_g1[2])}</td>`;
-            playerRow += `<td>${player.stats_g1[3]}</td>`;
-            playerRow += `<td>${player.stats_g1[3] + player.stats_g1[4]}</td>`;
-            playerRow += `<td>${calculatePercentage(player.stats_g1[3], player.stats_g1[3] + player.stats_g1[4])}</td>`;
-            playerRow += `<td>${player.stats_g1[5]}</td>`;
-            playerRow += `<td>${player.stats_g1[5] + player.stats_g1[6]}</td>`;
-            playerRow += `<td>${calculatePercentage(player.stats_g1[5], player.stats_g1[5] + player.stats_g1[6])}</td>`;
-            playerRow += `<td>${player.stats_g1[14]}</td>`;
-            playerRow += `<td>${player.stats_g1[18]}</td>`;
-            playerRow += `<td><strong>${player.g1}</strong></td>`;
+            playerRow += `<td>${player.name}</td>`; // "giocatore"
+            playerRow += `<td>${player.stats_g1[0]}</td>`; // "PTS"
+            playerRow += `<td>${player.stats_g1[9]}</td>`; // "REB"
+            playerRow += `<td>${player.stats_g1[7]}</td>`; // "DREB"
+            playerRow += `<td>${player.stats_g1[8]}</td>`; // "OREB"
+            playerRow += `<td>${player.stats_g1[10]}</td>`; // "AST"
+            playerRow += `<td>${player.stats_g1[12]}</td>`; // "STL"
+            playerRow += `<td>${player.stats_g1[13]}</td>`; // "BLK"
+            playerRow += `<td>${player.stats_g1[11]}</td>`; // "TO"
+            playerRow += `<td>${player.stats_g1[1]}</td>`; // "2PM"
+            playerRow += `<td>${player.stats_g1[1] + player.stats_g1[2]}</td>`; // "2PA"
+            playerRow += `<td>${calculatePercentage(player.stats_g1[1], player.stats_g1[1] + player.stats_g1[2])}</td>`; // "2P%"
+            playerRow += `<td>${player.stats_g1[3]}</td>`; // "3PM"
+            playerRow += `<td>${player.stats_g1[3] + player.stats_g1[4]}</td>`;// "3PA"
+            playerRow += `<td>${calculatePercentage(player.stats_g1[3], player.stats_g1[3] + player.stats_g1[4])}</td>`; // "3P%"
+            playerRow += `<td>${player.stats_g1[5]}</td>`; // "FTM"
+            playerRow += `<td>${player.stats_g1[5] + player.stats_g1[6]}</td>`; // "FTA"
+            playerRow += `<td>${calculatePercentage(player.stats_g1[5], player.stats_g1[5] + player.stats_g1[6])}</td>`; // "FT%"
+            playerRow += `<td>${player.stats_g1[14]}</td>`; // "EXP"
+            playerRow += `<td>${player.stats_g1[18]}</td>`; // "Meme"
+            playerRow += `<td><strong>${player.g1}</strong></td>`; // "TOT"
             playerRow += '</tr>';
             tableBody.innerHTML += playerRow;
             iheader++;
@@ -509,7 +519,7 @@ function populateTable_td3(team, players) {
 
     // Intestazione dei parametri da mostrare nella tabella
     const headers = [
-        "Giocatore", "Partecipazione", "2° turno", "3° turno", "4° turno", "5° turno", "Finale", "Posizionamento", "0 su 10 da 3", "Ciabatte", "Altri Meme","TOT"
+        "Giocatore", "Partecipazione", "2° turno", "3° turno", "4° turno", "5° turno", "Finale", "Posizionamento", "0/10 tiri", "Ciabatte", "Altri Meme","TOT"
     ];
 
     // Aggiungi la prima riga con gli header alla tabella
