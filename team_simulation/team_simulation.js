@@ -79,6 +79,7 @@ function renderTeam() {
                 newSignupLink.textContent = "ricordateli bene, poi iscrivi la squadra";
                 newSignupLink.id = 'signupLink';
                 newSignupLink.classList.add('registrationlink');  // Aggiunge la classe registrationlink
+                newSignupLink.classList.add('highlighted-text');
                 newValidMessage.parentNode.insertBefore(newSignupLink, newValidMessage.nextSibling);
             }
         } else {
