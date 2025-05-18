@@ -34,7 +34,7 @@ body {
     background-image: url('sopravert.jpg'); /* Replace with your image file path */
     background-size: cover; /* Ensures it covers the whole page */
     background-repeat: no-repeat; /* Prevents repeating */
-    /*background-attachment: fixed; /* Keeps it fixed when scrolling */
+    background-attachment: scroll; /* Keeps it fixed when scrolling */
     background-position: center center; /* Center the image */
     /* Optional: Set a fallback background color */
     background-color: #f0f0f0;
