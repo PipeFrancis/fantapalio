@@ -168,6 +168,7 @@ function populatePlayersList() {
 
     const creditsCounter = document.createElement('p');
     creditsCounter.id = 'creditsCounter';
+    creditsCounter.classList.add('highlighted-text')
     creditsCounter.textContent = `Hai ancora: ${maxCredits}$`;
     playersContainer.parentNode.insertBefore(creditsCounter, playersContainer.nextSibling);
 }
