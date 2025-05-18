@@ -839,7 +839,8 @@ RiccardoSchinella24.stats_final = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 //                        CREAZIONE ARRAY players E CALCOLO PUNTEGGI FANTA
 // ----------------------------------------------------------------------------------------------- 
  
-
+    // 2025: da inserire tutti i players qua sotto dentro array
+    const players25 = [];
 
     const players24 = [MassimilianoMoretti24, AndreaMoretti24, LarryTrevisan24, AlessandroCostantini24, MatteoMargarit24, 
         MauroCuridori24, ChristianZanet24, GiacomoPiacentini24, GiovanniDalFarra24, MiracleObichukwu24, LucaDellaLonga24, 
@@ -931,7 +932,63 @@ RiccardoSchinella24.stats_final = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 
     }
 
+  // Calcola g1 per ogni giocatore
+    for (let player of players25) { //da copiare questo for ogni anno con l' anno giusto
+        // Calcola PTS (player.stats_g1[0])
+        player.stats_g1[0] = player.stats_g1[1] * 2 + player.stats_g1[3] * 3 + player.stats_g1[5];
+        
+        // Calcola Rtot (player.stats_g1[9])
+        player.stats_g1[9] = player.stats_g1[7] + player.stats_g1[8];
+    
+        // Calcolo DD e TD
+        const valuesToCheck = [player.stats_g1[0], player.stats_g1[9], player.stats_g1[10], player.stats_g1[12], player.stats_g1[13]];
+        const countGreaterThanNine = valuesToCheck.filter(value => value > 9).length;
+        
+        // Imposta player.stats_g1[15] e player.stats_g1[16]
+        player.stats_g1[15] = countGreaterThanNine >= 2 ? 1 : 0;
+        player.stats_g1[16] = countGreaterThanNine >= 3 ? 1 : 0;
+    
+        // Calcola g1 utilizzando sumProduct
+        player.g1 = sumProduct(player.stats_g1, pdkWeights);
+    
+        // Ripeti per g2, g3, semi, final
+        // Per semplicità, i calcoli di PTS e Rtot sono gli stessi, solo cambiando l'array di riferimento (player.stats_g2, player.stats_g3, ecc.)
+        //da scommentare altre giornate
+        player.stats_g2[0] = player.stats_g2[1] * 2 + player.stats_g2[3] * 3 + player.stats_g2[5];
+        player.stats_g2[9] = player.stats_g2[7] + player.stats_g2[8];
+        const valuesToCheckG2 = [player.stats_g2[0], player.stats_g2[9], player.stats_g2[10], player.stats_g2[12], player.stats_g2[13]];
+        const countGreaterThanNineG2 = valuesToCheckG2.filter(value => value > 9).length;
+        player.stats_g2[15] = countGreaterThanNineG2 >= 2 ? 1 : 0;
+        player.stats_g2[16] = countGreaterThanNineG2 >= 3 ? 1 : 0;
+        player.g2 = sumProduct(player.stats_g2, pdkWeights);
+    
+        player.stats_g3[0] = player.stats_g3[1] * 2 + player.stats_g3[3] * 3 + player.stats_g3[5];
+        player.stats_g3[9] = player.stats_g3[7] + player.stats_g3[8];
+        const valuesToCheckG3 = [player.stats_g3[0], player.stats_g3[9], player.stats_g3[10], player.stats_g3[12], player.stats_g3[13]];
+        const countGreaterThanNineG3 = valuesToCheckG3.filter(value => value > 9).length;
+        player.stats_g3[15] = countGreaterThanNineG3 >= 2 ? 1 : 0;
+        player.stats_g3[16] = countGreaterThanNineG3 >= 3 ? 1 : 0;
+        player.g3 = sumProduct(player.stats_g3, pdkWeights);
+    
+        player.stats_semi[0] = player.stats_semi[1] * 2 + player.stats_semi[3] * 3 + player.stats_semi[5];
+        player.stats_semi[9] = player.stats_semi[7] + player.stats_semi[8];
+        const valuesToCheckSemi = [player.stats_semi[0], player.stats_semi[9], player.stats_semi[10], player.stats_semi[12], player.stats_semi[13]];
+        const countGreaterThanNineSemi = valuesToCheckSemi.filter(value => value > 9).length;
+        player.stats_semi[15] = countGreaterThanNineSemi >= 2 ? 1 : 0;
+        player.stats_semi[16] = countGreaterThanNineSemi >= 3 ? 1 : 0;
+        player.semi = sumProduct(player.stats_semi, pdkWeights);
+    
+        player.td3 = sumProduct(player.stats_td3, td3Weights);
 
+        player.stats_final[0] = player.stats_final[1] * 2 + player.stats_final[3] * 3 + player.stats_final[5];
+        player.stats_final[9] = player.stats_final[7] + player.stats_final[8];
+        const valuesToCheckFinal = [player.stats_final[0], player.stats_final[9], player.stats_final[10], player.stats_final[12], player.stats_final[13]];
+        const countGreaterThanNineFinal = valuesToCheckFinal.filter(value => value > 9).length;
+        player.stats_final[15] = countGreaterThanNineFinal >= 2 ? 1 : 0;
+        player.stats_final[16] = countGreaterThanNineFinal >= 3 ? 1 : 0;
+        player.final = sumProduct(player.stats_final, pdkWeights);
+
+    }
 
     //FINALE punteggi medi calcolati con excel e messi dentro a mano PER SUD E ESt (non hanno giocato in finale24)
 SimoneMartinelli24.final = Math.round(-0.88 * 100) / 100;
@@ -978,7 +1035,10 @@ for (let i = 0; i < players24.length; i++) {
     let player = players24[i];
     player.tot = Math.round((player.g1 + player.g2 + player.g3 + player.semi + player.td3 + player.final)*100)/100;
 };
-
+for (let i = 0; i < players25.length; i++) {
+    let player = players25[i];
+    player.tot = Math.round((player.g1 + player.g2 + player.g3 + player.semi + player.td3 + player.final)*100)/100;
+};
 
 
 // -----------------------------------------------------------------------------------------------
@@ -1183,28 +1243,28 @@ const ft2024_ft153 = createFantateam(152, "Optimum", WEST, [UmbertoNobile24, Dev
         ft2024_ft151, ft2024_ft152, ft2024_ft153
       ];
 //da usare per 2025:
-    //   const fantateams = [
-    //     ft1, ft2, ft3, ft4, ft5, ft6, ft7, ft8, ft9, ft10, 
-    //     ft11, ft12, ft13, ft14, ft15, ft16, ft17, ft18, ft19, ft20, 
-    //     ft21, ft22, ft23, ft24, ft25, ft26, ft27, ft28, ft29, ft30, 
-    //     ft31, ft32, ft33, ft34, ft35, ft36, ft37, ft38, ft39, ft40, 
-    //     ft41, ft42, ft43, ft44, ft45, ft46, ft47, ft48, ft49, ft50, 
-    //     ft51, ft52, ft53, ft54, ft55, ft56, ft57, ft58, ft59, ft60, 
-    //     ft61, ft62, ft63, ft64, ft65, ft66, ft67, ft68, ft69, ft70, 
-    //     ft71, ft72, ft73, ft74, ft75, ft76, ft77, ft78, ft79, ft80, 
-    //     ft81, ft82, ft83, ft84, ft85, ft86, ft87, ft88, ft89, ft90, 
-    //     ft91, ft92, ft93, ft94, ft95, ft96, ft97, ft98, ft99, ft100, 
-    //     ft101, ft102, ft103, ft104, ft105, ft106, ft107, ft108, ft109, ft110, 
-    //     ft111, ft112, ft113, ft114, ft115, ft116, ft117, ft118, ft119, ft120, 
-    //     ft121, ft122, ft123, ft124, ft125, ft126, ft127, ft128, ft129, ft130, 
-    //     ft131, ft132, ft133, ft134, ft135, ft136, ft137, ft138, ft139, ft140, 
-    //     ft141, ft142, ft143, ft144, ft145, ft146, ft147, ft148, ft149, ft150, 
-    //     ft151, ft152, ft153
-    //   ];
+      const fantateams25 = [
+        // ft1, ft2, ft3, ft4, ft5, ft6, ft7, ft8, ft9, ft10, 
+        // ft11, ft12, ft13, ft14, ft15, ft16, ft17, ft18, ft19, ft20, 
+        // ft21, ft22, ft23, ft24, ft25, ft26, ft27, ft28, ft29, ft30, 
+        // ft31, ft32, ft33, ft34, ft35, ft36, ft37, ft38, ft39, ft40, 
+        // ft41, ft42, ft43, ft44, ft45, ft46, ft47, ft48, ft49, ft50, 
+        // ft51, ft52, ft53, ft54, ft55, ft56, ft57, ft58, ft59, ft60, 
+        // ft61, ft62, ft63, ft64, ft65, ft66, ft67, ft68, ft69, ft70, 
+        // ft71, ft72, ft73, ft74, ft75, ft76, ft77, ft78, ft79, ft80, 
+        // ft81, ft82, ft83, ft84, ft85, ft86, ft87, ft88, ft89, ft90, 
+        // ft91, ft92, ft93, ft94, ft95, ft96, ft97, ft98, ft99, ft100, 
+        // ft101, ft102, ft103, ft104, ft105, ft106, ft107, ft108, ft109, ft110, 
+        // ft111, ft112, ft113, ft114, ft115, ft116, ft117, ft118, ft119, ft120, 
+        // ft121, ft122, ft123, ft124, ft125, ft126, ft127, ft128, ft129, ft130, 
+        // ft131, ft132, ft133, ft134, ft135, ft136, ft137, ft138, ft139, ft140, 
+        // ft141, ft142, ft143, ft144, ft145, ft146, ft147, ft148, ft149, ft150, 
+        // ft151, ft152, ft153
+      ];
       
     
-    //const fantateams = fantateams24;
-    //const players = players24;
+    const fantateams = fantateams25;
+    const players = players25;
     //Esporta i tipi di dati per renderli disponibili agli altri script
     export {
         player_type,
