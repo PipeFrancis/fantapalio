@@ -617,3 +617,10 @@ td { /* tutto serve per sfondo immagine*/
 .fixed-column-table th:last-child, .fixed-column-table td:last-child {
     width: 30%; /* Cost */
 }
+
+.highlighted-text {
+  color: white;
+  background-color: rgba(0,0,0,0.6);
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+}
