@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Aggiungi la scheda per i totali del team
         const totalCard = document.createElement('div');
-        totalCard.classList.add('team-card1');
+        totalCard.classList.add('team-card1','totalteamcard');
         totalCard.innerHTML = `
             <h3>Totale squadra</h3>
             <p>Prezzo totale: ${selectedTeam.total_cost}</p>
