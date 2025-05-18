@@ -620,8 +620,8 @@ td { /* tutto serve per sfondo immagine*/
 }
 
 .highlighted-text {
-  color: white;
-  background-color: rgba(0,0,0,0.6);
+  color: black;
+  background-color: white;
   padding: 0.2em 0.4em;
   border-radius: 0.2em;
 }
