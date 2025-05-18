@@ -597,8 +597,9 @@ footer {
     padding-bottom:20px;
     background-color: #f0f0f0; /* sfondo per non fare trasparente*/
 }
-td {
+td { /* tutto serve per sfondo immagine*/
     background-color: white;/* sfondo per non fare trasparente*/
+    color: black;
 }
 
 
