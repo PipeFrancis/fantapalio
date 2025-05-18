@@ -840,7 +840,13 @@ RiccardoSchinella24.stats_final = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 // ----------------------------------------------------------------------------------------------- 
  
     // 2025: da inserire tutti i players qua sotto dentro array
-    const players25 = [];
+    const players25 = [MassimilianoMoretti24, AndreaMoretti24, LarryTrevisan24, 
+
+        DanieleGanzit24, GiacomoSilvestri24, VittorioGri24, VittorioBasso24,
+
+        SimoneMartinelli24, GiacomoSpagnolo24, DavideFaurlin24,
+
+        MarcoPolo24, MarcoSerrao24, WilliamIob24, DavideBroggi24];
 
     const players24 = [MassimilianoMoretti24, AndreaMoretti24, LarryTrevisan24, AlessandroCostantini24, MatteoMargarit24, 
         MauroCuridori24, ChristianZanet24, GiacomoPiacentini24, GiovanniDalFarra24, MiracleObichukwu24, LucaDellaLonga24, 
