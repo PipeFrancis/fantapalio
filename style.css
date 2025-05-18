@@ -1,10 +1,10 @@
 :root {
     /* arancione */
-    --main-color1:rgb(204, 92, 0); 
+    /* --main-color1:rgb(204, 92, 0);  */
     /* --main-color2:rgb(6, 1, 87); */
 
     /* grigio scuro */
-    /* --main-color1:rgb(78, 78, 78); */
+    --main-color1:rgb(78, 78, 78);
 
     /*--main-color2:rgb(200, 200, 160);*/
     --main-color2:black;
@@ -30,7 +30,7 @@ body {
     margin: 0;
     padding: 0;
     
- /*   color: white;
+ /*   color: white; LEAVE COMMENtED, ONLY REFERENCE
  /*   background-image: url('sopravert.jpg'); /* Replace with your image file path */
  /*   background-size: cover; /* Ensures it covers the whole page */
  /*   background-repeat: no-repeat; /* Prevents repeating */
@@ -39,6 +39,16 @@ body {
  /*   /* Optional: Set a fallback background color */
  /*   background-color: #f0f0f0;
  */
+
+ /* COMMENT AND UNCOMMENT THIS to toggle background image and text color white: */
+    color: white;
+    background-image: url('sopravert.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-position: center center; 
+    background-color: #f0f0f0;
+ 
 }
 
 header {
