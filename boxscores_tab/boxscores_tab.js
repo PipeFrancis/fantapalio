@@ -630,6 +630,17 @@ function populateTable_td3(team, players) {
         populateTable_avg("EST", players24);
         populateTable_avg("SUD", players24);
 
+
+// players.sort((a, b) => b.final - a.final); 
+// populateTable_final("NORD", players);
+// populateTable_final("WEST", players);
+
+// players.sort((a, b) => (b.tot-b.td3) - (a.tot-a.td3));
+// populateTable_avg("WEST", players);
+// populateTable_avg("NORD", players);
+// populateTable_avg("EST", players);
+// populateTable_avg("SUD", players);
+
 // players.sort((a, b) => (b.tot-b.td3) - (a.tot-a.td3));
 // //players.sort((a, b) => b.tot - a.tot);
 // populateTable_totals("WEST", players);
