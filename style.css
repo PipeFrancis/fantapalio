@@ -30,7 +30,7 @@ body {
     margin: 0;
     padding: 0;
     
-    
+    color: white;
     background-image: url('sopravert.jpg'); /* Replace with your image file path */
     background-size: cover; /* Ensures it covers the whole page */
     background-repeat: no-repeat; /* Prevents repeating */
