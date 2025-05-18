@@ -1269,8 +1269,8 @@ const ft2024_ft153 = createFantateam(152, "Optimum", WEST, [UmbertoNobile24, Dev
       ];
       
     
-    const fantateams = fantateams25;
-    const players = players25;
+    const fantateams = fantateams24;
+    const players = players24;
     //Esporta i tipi di dati per renderli disponibili agli altri script
     export {
         player_type,
