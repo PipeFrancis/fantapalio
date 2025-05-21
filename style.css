@@ -648,4 +648,5 @@ td { /* tutto serve per sfondo immagine*/
     font-size: 4em;
     color:white;
     background-color: green;
+    padding: 0.2em 0.4em;
 }

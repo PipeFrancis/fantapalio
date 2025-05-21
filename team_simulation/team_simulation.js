@@ -78,7 +78,7 @@ function renderTeam() {
                 newSignupLink.target = "_blank";
                 newSignupLink.textContent = "ricordateli bene, poi iscrivi la squadra";
                 newSignupLink.id = 'signupLink';
-                newSignupLink.classList.add('highlighted-text');
+                // newSignupLink.classList.add('highlighted-text');
                 newSignupLink.classList.add('registrationlink');  // Aggiunge la classe registrationlink
                 
                 newValidMessage.parentNode.insertBefore(newSignupLink, newValidMessage.nextSibling);
