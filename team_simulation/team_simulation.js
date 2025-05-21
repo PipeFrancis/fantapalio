@@ -67,7 +67,7 @@ function renderTeam() {
                 const newValidMessage = document.createElement('p');
                 newValidMessage.textContent = 'VALIDO';
                 newValidMessage.classList.add('valid-message');
-                newValidMessage.classList.add('highlighted-text');
+                //newValidMessage.classList.add('highlighted-text');
                 newValidMessage.style.color = 'green';
                 newValidMessage.style.fontWeight = 'bold';
                 newValidMessage.id = 'validMessage';
@@ -78,7 +78,7 @@ function renderTeam() {
                 newSignupLink.target = "_blank";
                 newSignupLink.textContent = "ricordateli bene, poi iscrivi la squadra";
                 newSignupLink.id = 'signupLink';
-                // newSignupLink.classList.add('highlighted-text');
+                newSignupLink.classList.add('highlighted-text');
                 newSignupLink.classList.add('registrationlink');  // Aggiunge la classe registrationlink
                 
                 newValidMessage.parentNode.insertBefore(newSignupLink, newValidMessage.nextSibling);

@@ -531,10 +531,10 @@ footer {
     background-color: green;
 } */
 
-.registrationlink{
+/* .registrationlink{
     text-decoration: underline;
     color: cyan;
-}
+} */
 
 .boxscore-tableNORD, .boxscore-tableWEST, .boxscore-tableEST, .boxscore-tableSUD{
     margin: auto;
@@ -649,4 +649,8 @@ td { /* tutto serve per sfondo immagine*/
     color:white;
     background-color: green;
     padding: 0.2em 0.4em;
+}
+.registrationlink{
+    text-decoration: underline;
+    color: cyan;
 }
