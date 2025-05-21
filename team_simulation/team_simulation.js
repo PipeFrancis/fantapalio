@@ -68,7 +68,7 @@ function renderTeam() {
                 newValidMessage.textContent = 'VALIDO';
                 newValidMessage.classList.add('highlighted-text');
                 newValidMessage.classList.add('valid-message');
-                newValidMessage.style.color = 'green';
+                // newValidMessage.style.color = 'green';
                 newValidMessage.style.fontWeight = 'bold';
                 newValidMessage.id = 'validMessage';
                 teamContainer.parentNode.insertBefore(newValidMessage, teamContainer);
