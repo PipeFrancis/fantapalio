@@ -66,8 +66,8 @@ function renderTeam() {
             if (!validMessage) {
                 const newValidMessage = document.createElement('p');
                 newValidMessage.textContent = 'VALIDO';
+                newValidMessage.classList.add('highlighted-text');
                 newValidMessage.classList.add('valid-message');
-                //newValidMessage.classList.add('highlighted-text');
                 newValidMessage.style.color = 'green';
                 newValidMessage.style.fontWeight = 'bold';
                 newValidMessage.id = 'validMessage';
