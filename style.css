@@ -525,11 +525,11 @@ footer {
     /*border: 2px solid black;*/
 }
 
-.validmessage{
+/* .validmessage{
     font-size: 4em;
     color:white;
     background-color: green;
-}
+} */
 
 .registrationlink{
     text-decoration: underline;
@@ -642,4 +642,10 @@ td { /* tutto serve per sfondo immagine*/
 
 .totalteamcard{
     color: black;
+}
+
+.validmessage{
+    font-size: 4em;
+    color:white;
+    background-color: green;
 }
