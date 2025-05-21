@@ -90,14 +90,14 @@ function renderTeam() {
                 messageContainerLink.classList.add('highlighted-text');
 
                 // Add plain text
-                const plainTextB4link = document.createTextNode('ricordateli bene, poi ');
+                const plainTextB4link = document.createTextNode('Non hai ancora registrato la squadra. Ricordati i giocatori selezionati e ');
 
                 // Create the link
                 const signupLink = document.createElement('a');
                 signupLink.classList.add('registrationlink');
                 signupLink.href = "https://docs.google.com/forms/d/e/1FAIpQLSfLAo7zMMB_5IvCDB_wVziMdtDbGA4tLScFbTwug7D_TvIoTw/viewform?usp=dialog";
                 signupLink.target = "_blank";
-                signupLink.textContent = 'iscrivi la squadra';
+                signupLink.textContent = 'compila il modulo di iscrizione';
                 signupLink.id = 'signupLink';
 
                 // Append text and link to the container
