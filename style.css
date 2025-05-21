@@ -527,6 +527,8 @@ footer {
 
 .validmessage{
     font-size: 4em;
+    color:white;
+    background-color: green;
 }
 
 .registrationlink{
