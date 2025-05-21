@@ -531,6 +531,7 @@ footer {
 
 .registrationlink{
     text-decoration: underline;
+    color: cyan;
 }
 
 .boxscore-tableNORD, .boxscore-tableWEST, .boxscore-tableEST, .boxscore-tableSUD{
@@ -631,8 +632,8 @@ td { /* tutto serve per sfondo immagine*/
 }
 
 .highlighted-text {
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: black;
   padding: 0.2em 0.4em;
   border-radius: 0.2em;
 }
