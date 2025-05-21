@@ -73,15 +73,39 @@ function renderTeam() {
                 newValidMessage.id = 'validMessage';
                 teamContainer.parentNode.insertBefore(newValidMessage, teamContainer);
 
-                const newSignupLink = document.createElement('a');
-                newSignupLink.href = "https://docs.google.com/forms/d/e/1FAIpQLSfLAo7zMMB_5IvCDB_wVziMdtDbGA4tLScFbTwug7D_TvIoTw/viewform?usp=dialog";
-                newSignupLink.target = "_blank";
-                newSignupLink.textContent = "ricordateli bene, poi iscrivi la squadra";
-                newSignupLink.id = 'signupLink';
-                newSignupLink.classList.add('highlighted-text');
-                newSignupLink.classList.add('registrationlink');  // Aggiunge la classe registrationlink
+                // // commented to separate link and "ricordateli bene, poi"
+                // const newSignupLink = document.createElement('a');
+                // newSignupLink.href = "https://docs.google.com/forms/d/e/1FAIpQLSfLAo7zMMB_5IvCDB_wVziMdtDbGA4tLScFbTwug7D_TvIoTw/viewform?usp=dialog";
+                // newSignupLink.target = "_blank";
+                // newSignupLink.textContent = "ricordateli bene, poi iscrivi la squadra";
+                // newSignupLink.id = 'signupLink';
+                // newSignupLink.classList.add('highlighted-text');
+                // newSignupLink.classList.add('registrationlink');  // Aggiunge la classe registrationlink
                 
-                newValidMessage.parentNode.insertBefore(newSignupLink, newValidMessage.nextSibling);
+                // newValidMessage.parentNode.insertBefore(newSignupLink, newValidMessage.nextSibling);
+
+
+                 // Create container for the message
+                const messageContainerLink = document.createElement('p');
+                messageContainerLink.classList.add('highlighted-text');
+
+                // Add plain text
+                const plainTextB4link = document.createTextNode('ricordateli bene, poi ');
+
+                // Create the link
+                const signupLink = document.createElement('a');
+                signupLink.classList.add('registrationlink');
+                signupLink.href = "https://docs.google.com/forms/d/e/1FAIpQLSfLAo7zMMB_5IvCDB_wVziMdtDbGA4tLScFbTwug7D_TvIoTw/viewform?usp=dialog";
+                signupLink.target = "_blank";
+                signupLink.textContent = 'iscrivi la squadra';
+                signupLink.id = 'signupLink';
+
+                // Append text and link to the container
+                messageContainerLink.appendChild(plainTextB4link);
+                messageContainerLink.appendChild(signupLink);
+
+                // Insert the container after the valid message
+                newValidMessage.parentNode.insertBefore(messageContainerLink, newValidMessage.nextSibling);
             }
         } else {
             if (validMessage) {
