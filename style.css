@@ -645,10 +645,8 @@ td { /* tutto serve per sfondo immagine*/
 }
 
 .valid-message{
-    font-size: 4em;
     color:white;
     background-color: green;
-    padding: 0.2em 0.4em;
 }
 .registrationlink{
     text-decoration: underline;
