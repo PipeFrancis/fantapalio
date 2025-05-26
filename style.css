@@ -50,7 +50,7 @@ body {
     background-color: #f0f0f0; */
  
 }
-#cengapic{
+.cengapic{
     background-image: url('foto_drone_buio.jpg');
     background-size: cover; 
     background-repeat: no-repeat; 
