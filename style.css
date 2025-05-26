@@ -42,22 +42,22 @@ body {
 
  /* COMMENT AND UNCOMMENT THIS to toggle background image and text color white: */
     color: white;
-    /* background-image: url('foto_drone_buio.jpg');
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-attachment: fixed; 
-    background-position: center center; 
-    background-color: #f0f0f0; */
- 
-}
-.cengapic{
     background-image: url('foto_drone_buio.jpg');
     background-size: cover; 
     background-repeat: no-repeat; 
     background-attachment: fixed; 
     background-position: center center; 
     background-color: #f0f0f0;
+ 
 }
+/* .cengapic{
+    background-image: url('foto_drone_buio.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-position: center center; 
+    background-color: #f0f0f0;
+} */
 
 header {
     background-color: var(--main-color1);
