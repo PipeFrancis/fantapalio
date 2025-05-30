@@ -666,3 +666,17 @@ td { /* tutto serve per sfondo immagine*/
     text-decoration: underline;
     color: #00bbbb;
 }
+.refresh_button{
+    display: block;
+    width: 250px;
+    margin: 10px auto;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: var(--main-color1);
+    font-family: 'Poppins', sans-serif !important;
+    color: white;
+    /*color: var(--main-color2);*/
+    border: none;
+    cursor: pointer;
+}
