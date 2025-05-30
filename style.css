@@ -620,6 +620,8 @@ footer {
     width: 80%;
     margin: auto;
     margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     border: 2px solid var(--main-color2);
     border-radius: 5px;
     color: var(--main-color2);
