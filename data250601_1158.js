@@ -1251,7 +1251,7 @@ const ft2024_ft149 = createFantateam(149, "Quelli di zona", EST, [AndreaMoretti2
 const ft2024_ft150 = createFantateam(150, "Furbicomevolpi", EST, [MarcoSerrao24, WilliamIob24, DenisVanin24, SimoneMartinelli24, AlessandroSant24]);
 const ft2024_ft151 = createFantateam(151, "qwerty", EST, [GionaTell24, LorenzoMoro24, SimoneMartinelli24, MauroPerina24, EdoardoPicogna24]);
 const ft2024_ft152 = createFantateam(152, "Top con Gabri", WEST, [GabrieleMiani24, DevinChiarcos24, MassimilianoRossi24, GiacomoSpagnolo24, VittorioBasso24]);
-const ft2024_ft153 = createFantateam(152, "Optimum", WEST, [UmbertoNobile24, DevinChiarcos24, FilippoSappa24, MarcoSerrao24, VittorioBasso24]);
+const ft2024_ft153 = createFantateam(153, "Optimum", WEST, [UmbertoNobile24, DevinChiarcos24, FilippoSappa24, MarcoSerrao24, VittorioBasso24]);
 
     const fantateams24 = [
         ft2024_ft1, ft2024_ft2, ft2024_ft3, ft2024_ft4, ft2024_ft5, ft2024_ft6, ft2024_ft7, ft2024_ft8, ft2024_ft9, ft2024_ft10, 
