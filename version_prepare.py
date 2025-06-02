@@ -46,9 +46,18 @@ for file_path in target_files:
 old_data_file = f"data{OLD_TIMESTAMP}.js"
 new_data_file = f"data{NEW_TIMESTAMP}.js"
 if os.path.exists(old_data_file):
-    shutil.copy(old_data_file, new_data_file)
-    print(f"Copied {old_data_file} to {new_data_file}")
+    if os.path.exists(new_data_file):
+        response = input(f"{new_data_file} already exists. Overwrite? (y/n): ")
+        if response.lower() == 'y':
+            shutil.copy(old_data_file, new_data_file)
+            print(f"Overwritten {new_data_file}.")
+        else:
+            print(f"Skipped overwriting {new_data_file}.")
+    else:
+        shutil.copy(old_data_file, new_data_file)
+        print(f"Copied {old_data_file} to {new_data_file}")
 else:
     print(f"Data file {old_data_file} not found.")
 
 print(f"All specified files updated from {OLD_TIMESTAMP} to {NEW_TIMESTAMP}.")
+
