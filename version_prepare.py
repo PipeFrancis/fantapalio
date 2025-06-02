@@ -1,9 +1,12 @@
 import os
 import shutil
+#################################################################################
+#                  DA CAMBIARE QUESTE 2
 
 # Constants for old and new timestamps
-OLD_TIMESTAMP = "250602_2149"  # replace with the old timestamp
-NEW_TIMESTAMP = "250602_2200"  # replace with the new timestamp
+OLD_TIMESTAMP = "250602_2200"  # replace with the old timestamp
+NEW_TIMESTAMP = "250603_0009"  # replace with the new timestamp
+#################################################################################
 
 # List of files to update (add any .html, .js, etc. you need)
 target_files = [
