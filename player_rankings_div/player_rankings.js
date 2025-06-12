@@ -1,7 +1,7 @@
 import {
     player_type,
     players
-} from '../data250613_0117.js';
+} from '../data250613_0136.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     const playerCardsContainer = document.getElementById('playerCardsContainer');
