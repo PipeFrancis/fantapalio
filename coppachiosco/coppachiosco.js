@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     rioni25.forEach(rione => {
         const card = document.createElement('div');
-        card.classList.add('team-card1');
+        card.classList.add('team-card1',`cardclass${rione.name}`);
 
         card.innerHTML = `
             <h2>${rione.name}</h2>
