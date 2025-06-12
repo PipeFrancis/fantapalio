@@ -11,8 +11,8 @@ window.addEventListener('DOMContentLoaded', () => {
         card.classList.add('team-card1', `cardclass${rione.name}`);
 
         card.innerHTML = `
-            <h2>${rione.name}</h2>
-            <p>${rione.chiosco_tot}</p>
+            <h2>${rione.chiosco_tot}</h2>
+            <p>${rione.name}</p>
         `;
 
         container.appendChild(card);
