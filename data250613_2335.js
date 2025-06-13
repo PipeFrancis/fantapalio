@@ -37,7 +37,10 @@ const player_type = {
     final: 0.0,
     stats_final: Array(19).fill(0),
     tot: 0.0,
-    cost: 0
+    cost: 0,
+    
+    meme_tot:0,
+    extra_bonus:0
 };
 //questo array sarà da riempire per ogni giocatore per ogni partita
 //poi il resto (player.g1 ecc viene calcolato in automatico)
@@ -1086,6 +1089,8 @@ RiccardoSchinella24.stats_final = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
         player.stats_final[16] = countGreaterThanNineFinal >= 3 ? 1 : 0;
         player.final = sumProduct(player.stats_final, pdkWeights);
 
+        //                      somma di tutti i meme [18]                                                                                                                   somma ciabatte                    somma altri meme td3
+        player.meme_tot = pdkWeights[18]*(player.stats_g1[18] + player.stats_g2[18] + player.stats_g3[18] + player.stats_semi[18] + player.stats_final[18]) + td3Weights[11]*player.stats_td3[11] + td3Weights[12]*player.stats_td3[12];
     }
 
   // Calcola g1 per ogni giocatore
