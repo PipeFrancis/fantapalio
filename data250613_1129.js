@@ -137,7 +137,7 @@ const VittorioGri24 = createPlayer("Vittorio Gri", 5, "NORD", 11);
 const VittorioBasso24 = createPlayer("Vittorio Basso", 4, "NORD", 8);
 const AlessandroRizzi24 = createPlayer("Alessandro Rizzi", 7, "NORD", 10);
 const MassimoBaldassi24 = createPlayer("Massimo Baldassi", 4, "NORD", 0);
-const GabrieleMiani24 = createPlayer("Gabriella Miani", 14, "NORD", 14);
+const GabrieleMiani24 = createPlayer("Gabriele Miani", 14, "NORD", 14);
 const MarcoMarchetti24 = createPlayer("Marco Marchetti", 4, "NORD", 0);
 const MarcoLombardo24 = createPlayer("Marco Lombardo", 7, "NORD", 15);
 const MicheleVendrame24 = createPlayer("Michele Vendrame", 4, "NORD", 13);
@@ -1020,7 +1020,7 @@ RiccardoSchinella24.stats_final = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 
 
 
-    //                   0    1   2   3    4   5   6    7   8    9     10  11  12  13  14   15  16  17   18
+    //                   0    1   2   3    4   5   6    7   8    9     10  11   12   13  14   15  16  17   18
     // gx_stats =      [PTS, 2P, 2Px, 3P, 3Px, FT, FTx, DR, OR, Rtot, ASS, TO,  ST,  BL, EXP, DD, TD, Win, Meme]
     const pdkWeights = [1, 0, -0.75, 0.5, -0.75, 0, -0.5, 1, 1.25,  0, 1.5, -1, 1.5, 1.5, -3,  3,  6,   2,  1];
 
@@ -1374,8 +1374,8 @@ const ft2024_ft148 = createFantateam(148, "Los Vikingos", NORD, [MarcoRizzi24, A
 const ft2024_ft149 = createFantateam(149, "Quelli di zona", EST, [AndreaMoretti24, AlessandroRizzi24, DiegoNata24, MassimilianoRossi24, LucaSoramel24]);
 const ft2024_ft150 = createFantateam(150, "Furbicomevolpi", EST, [MarcoSerrao24, WilliamIob24, DenisVanin24, SimoneMartinelli24, AlessandroSant24]);
 const ft2024_ft151 = createFantateam(151, "qwerty", EST, [GionaTell24, LorenzoMoro24, SimoneMartinelli24, MauroPerina24, EdoardoPicogna24]);
-const ft2024_ft152 = createFantateam(152, "Top con Gabri", WEST, [GabrieleMiani24, DevinChiarcos24, MassimilianoRossi24, GiacomoSpagnolo24, VittorioBasso24]);
-const ft2024_ft153 = createFantateam(153, "Optimum", WEST, [UmbertoNobile24, DevinChiarcos24, FilippoSappa24, MarcoSerrao24, VittorioBasso24]);
+// const ft2024_ft152 = createFantateam(152, "Top con Gabri", WEST, [GabrieleMiani24, DevinChiarcos24, MassimilianoRossi24, GiacomoSpagnolo24, VittorioBasso24]);
+// const ft2024_ft153 = createFantateam(153, "Optimum", WEST, [UmbertoNobile24, DevinChiarcos24, FilippoSappa24, MarcoSerrao24, VittorioBasso24]);
 
     const fantateams24 = [
         ft2024_ft1, ft2024_ft2, ft2024_ft3, ft2024_ft4, ft2024_ft5, ft2024_ft6, ft2024_ft7, ft2024_ft8, ft2024_ft9, ft2024_ft10, 
@@ -1393,7 +1393,7 @@ const ft2024_ft153 = createFantateam(153, "Optimum", WEST, [UmbertoNobile24, Dev
         ft2024_ft121, ft2024_ft122, ft2024_ft123, ft2024_ft124, ft2024_ft125, ft2024_ft126, ft2024_ft127, ft2024_ft128, ft2024_ft129, ft2024_ft130, 
         ft2024_ft131, ft2024_ft132, ft2024_ft133, ft2024_ft134, ft2024_ft135, ft2024_ft136, ft2024_ft137, ft2024_ft138, ft2024_ft139, ft2024_ft140, 
         ft2024_ft141, ft2024_ft142, ft2024_ft143, ft2024_ft144, ft2024_ft145, ft2024_ft146, ft2024_ft147, ft2024_ft148, ft2024_ft149, ft2024_ft150, 
-        ft2024_ft151, ft2024_ft152, ft2024_ft153
+        ft2024_ft151
       ];
 //da usare per 2025:
       const fantateams25 = [
