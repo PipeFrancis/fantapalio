@@ -88,7 +88,7 @@ header {
     .top-right-link {
         position: absolute;
         right: 20px;
-        top: 50%;
+        bottom: 20%;
         transform: translateY(-50%);
         color: white;
         font-family: 'Poppins', sans-serif;
