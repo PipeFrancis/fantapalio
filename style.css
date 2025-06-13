@@ -558,8 +558,8 @@ footer {
 
 .boxscore-tableNORD th, .boxscore-tableNORD td, .boxscore-tableWEST th, .boxscore-tableWEST td, .boxscore-tableEST th, .boxscore-tableEST td, .boxscore-tableSUD th, .boxscore-tableSUD td {
     border: 1px solid #ccc; /* Light grey border */
-    padding: 8px; /* Padding inside table cells */
-    font-size: 0.8em;
+    padding: 5px; /* Padding inside table cells */
+    font-size: 0.9em;
 }
 
 
