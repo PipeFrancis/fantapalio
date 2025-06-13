@@ -9,6 +9,8 @@
     /*--main-color2:rgb(200, 200, 160);*/
     --main-color2:black;
 
+    --main-color3:rgb(240,232,168);
+
     --nord-color1:rgb(255, 50, 50);
     --nord-color2:rgb(0, 0, 0);
 
@@ -118,7 +120,7 @@ a button {
     background-color: var(--main-color1);
     font-family: 'Poppins', sans-serif !important;
     color: white;
-    /*color: var(--main-color2);*/
+    color: var(--main-color3);
     border: none;
     cursor: pointer;
 }
