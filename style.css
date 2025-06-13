@@ -188,7 +188,7 @@ footer {
 #teamTable th, #teamTable td {
     padding: 8px; /* Aggiunge spazio interno alle celle */
     text-align: left; /* Allinea il testo a sinistra */
-    font-size: 1em; /* Imposta una dimensione del testo di base */
+    font-size: 0.8em; /* Imposta una dimensione del testo di base */
 }
 
 /* Intestazioni della tabella */
