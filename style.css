@@ -97,9 +97,9 @@ header {
         text-decoration: underline;
     }
 
-    .top-right-link:hover {
+    /* .top-right-link:hover {
         color: var(--main-color2);
-    }
+    } */
 
 
 main {
