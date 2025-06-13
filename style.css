@@ -651,7 +651,7 @@ footer {
     border-radius: 5px;
     color: var(--main-color2);
     padding-bottom:20px;
-    background-color: #f0f0f0; /* sfondo per non fare trasparente*/
+    background-color:var(--main-color3);
 }
 td { /* tutto serve per sfondo immagine*/
     background-color: white;/* sfondo per non fare trasparente*/
