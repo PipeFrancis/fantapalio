@@ -37,7 +37,9 @@ const player_type = {
     final: 0.0,
     stats_final: Array(19).fill(0),
     tot: 0.0,
-    cost: 0
+    cost: 0,
+    
+    extra_bonus:0
 };
 //questo array sarà da riempire per ogni giocatore per ogni partita
 //poi il resto (player.g1 ecc viene calcolato in automatico)
