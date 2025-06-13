@@ -56,7 +56,7 @@ if os.path.exists(old_data_file):
         response = input(f"{new_data_file} already exists. Overwrite? (y/n): ")
         if response.lower() == 'y':
             shutil.copy(old_data_file, new_data_file)
-            print(f"Overwritten {new_data_file}.")
+            print(f"Overwritten {new_data_file} using {old_data_file}.")
         else:
             print(f"Skipped overwriting {new_data_file}.")
     else:
