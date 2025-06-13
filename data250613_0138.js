@@ -1393,7 +1393,7 @@ const ft2024_ft151 = createFantateam(151, "qwerty", EST, [GionaTell24, LorenzoMo
         ft2024_ft121, ft2024_ft122, ft2024_ft123, ft2024_ft124, ft2024_ft125, ft2024_ft126, ft2024_ft127, ft2024_ft128, ft2024_ft129, ft2024_ft130, 
         ft2024_ft131, ft2024_ft132, ft2024_ft133, ft2024_ft134, ft2024_ft135, ft2024_ft136, ft2024_ft137, ft2024_ft138, ft2024_ft139, ft2024_ft140, 
         ft2024_ft141, ft2024_ft142, ft2024_ft143, ft2024_ft144, ft2024_ft145, ft2024_ft146, ft2024_ft147, ft2024_ft148, ft2024_ft149, ft2024_ft150, 
-        ft2024_ft151, ft2024_ft152, ft2024_ft153
+        ft2024_ft151
       ];
 //da usare per 2025:
       const fantateams25 = [
