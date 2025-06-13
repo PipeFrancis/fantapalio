@@ -3,7 +3,7 @@ import {
     player_type,
     players,
     td3Weights
-} from '../data250613_2346.js';
+} from '../data250613_2349.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     const playerCardsContainer = document.getElementById('playerCardsContainer');
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <p>Semifinale: ${player.stats_semi[18]*pdkWeights[18]}</p>
             <p>Tiro da 3: ${player.stats_td3[11]*td3Weights[11]+player.stats_td3[12]*td3Weights[12]}</p>
             <p>Finale: ${player.stats_final[18]*pdkWeights[18]}</p>
-            <p class="meme-points-tot">Punti meme: ${player.meme_tot}</p>
+            <p class="total">Punti meme: ${player.meme_tot}</p>
         `;
         playerCardsContainer.appendChild(card);
     });
