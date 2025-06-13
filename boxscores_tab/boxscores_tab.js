@@ -17,9 +17,13 @@ function populateTable_g1(team, players) {
     const tableBody = document.getElementById(`tableBodyG1${team}`);
 
     // Intestazione dei parametri da mostrare nella tabella
-    const headers = [
-        "Giocatore", "PTS", "REB", "DREB", "OREB", "AST", "STL", "BLK", "TO", "2PM", "2PA", "2P%", 
-        "3PM", "3PA", "3P%", "FTM", "FTA", "FT%", "EXP","Meme","TOT"
+    // const headers = [
+    //     "Giocatore", "PTS", "REB", "DREB", "OREB", "AST", "STL", "BLK", "TO", "2PM", "2PA", "2P%", 
+    //     "3PM", "3PA", "3P%", "FTM", "FTA", "FT%", "EXP","Meme","TOT"
+    // ];
+       const headers = [
+        "Giocatore", "TOT", "PTS", "REB", "AST", "STL", "BLK","Meme", "TO","OREB","DREB", "2PM", "2PA", "2P%", 
+        "3PM", "3PA", "3P%", "FTM", "FTA", "FT%", "EXP"
     ];
 
     // Aggiungi la prima riga con gli header alla tabella
@@ -44,14 +48,16 @@ function populateTable_g1(team, players) {
         if (player.team === team) {
             let playerRow = '<tr>';
             playerRow += `<td>${player.name}</td>`; // "giocatore"
+            playerRow += `<td><strong>${player.g1}</strong></td>`; // "TOT"
             playerRow += `<td>${player.stats_g1[0]}</td>`; // "PTS"
             playerRow += `<td>${player.stats_g1[9]}</td>`; // "REB"
-            playerRow += `<td>${player.stats_g1[7]}</td>`; // "DREB"
-            playerRow += `<td>${player.stats_g1[8]}</td>`; // "OREB"
             playerRow += `<td>${player.stats_g1[10]}</td>`; // "AST"
             playerRow += `<td>${player.stats_g1[12]}</td>`; // "STL"
             playerRow += `<td>${player.stats_g1[13]}</td>`; // "BLK"
+            playerRow += `<td>${player.stats_g1[18]}</td>`; // "Meme"
             playerRow += `<td>${player.stats_g1[11]}</td>`; // "TO"
+            playerRow += `<td>${player.stats_g1[8]}</td>`; // "OREB"
+            playerRow += `<td>${player.stats_g1[7]}</td>`; // "DREB"
             playerRow += `<td>${player.stats_g1[1]}</td>`; // "2PM"
             playerRow += `<td>${player.stats_g1[1] + player.stats_g1[2]}</td>`; // "2PA"
             playerRow += `<td>${calculatePercentage(player.stats_g1[1], player.stats_g1[1] + player.stats_g1[2])}</td>`; // "2P%"
@@ -62,9 +68,32 @@ function populateTable_g1(team, players) {
             playerRow += `<td>${player.stats_g1[5] + player.stats_g1[6]}</td>`; // "FTA"
             playerRow += `<td>${calculatePercentage(player.stats_g1[5], player.stats_g1[5] + player.stats_g1[6])}</td>`; // "FT%"
             playerRow += `<td>${player.stats_g1[14]}</td>`; // "EXP"
-            playerRow += `<td>${player.stats_g1[18]}</td>`; // "Meme"
-            playerRow += `<td><strong>${player.g1}</strong></td>`; // "TOT"
+
+
+            // playerRow += `<td>${player.name}</td>`; // "giocatore"
+            // playerRow += `<td>${player.stats_g1[0]}</td>`; // "PTS"
+            // playerRow += `<td>${player.stats_g1[9]}</td>`; // "REB"
+            // playerRow += `<td>${player.stats_g1[7]}</td>`; // "DREB"
+            // playerRow += `<td>${player.stats_g1[8]}</td>`; // "OREB"
+            // playerRow += `<td>${player.stats_g1[10]}</td>`; // "AST"
+            // playerRow += `<td>${player.stats_g1[12]}</td>`; // "STL"
+            // playerRow += `<td>${player.stats_g1[13]}</td>`; // "BLK"
+            // playerRow += `<td>${player.stats_g1[11]}</td>`; // "TO"
+            // playerRow += `<td>${player.stats_g1[1]}</td>`; // "2PM"
+            // playerRow += `<td>${player.stats_g1[1] + player.stats_g1[2]}</td>`; // "2PA"
+            // playerRow += `<td>${calculatePercentage(player.stats_g1[1], player.stats_g1[1] + player.stats_g1[2])}</td>`; // "2P%"
+            // playerRow += `<td>${player.stats_g1[3]}</td>`; // "3PM"
+            // playerRow += `<td>${player.stats_g1[3] + player.stats_g1[4]}</td>`;// "3PA"
+            // playerRow += `<td>${calculatePercentage(player.stats_g1[3], player.stats_g1[3] + player.stats_g1[4])}</td>`; // "3P%"
+            // playerRow += `<td>${player.stats_g1[5]}</td>`; // "FTM"
+            // playerRow += `<td>${player.stats_g1[5] + player.stats_g1[6]}</td>`; // "FTA"
+            // playerRow += `<td>${calculatePercentage(player.stats_g1[5], player.stats_g1[5] + player.stats_g1[6])}</td>`; // "FT%"
+            // playerRow += `<td>${player.stats_g1[14]}</td>`; // "EXP"
+            // playerRow += `<td>${player.stats_g1[18]}</td>`; // "Meme"
+            // playerRow += `<td><strong>${player.g1}</strong></td>`; // "TOT"
+            
             playerRow += '</tr>';
+            
             tableBody.innerHTML += playerRow;
             iheader++;
             if(iheader==10){
@@ -585,13 +614,13 @@ function populateTable_td3(team, players) {
     // tableBody.innerHTML += headerRow;
 }
 
-// players.sort((a, b) => b.g1 - a.g1);
-// // Chiamata alla funzione per popolare le tabelle per ciascun team
-// populateTable_g1("NORD", players);
-// // Popola le tabelle per EST, SUD e WEST allo stesso modo
-// populateTable_g1("EST", players);
-// populateTable_g1("SUD", players);
-// populateTable_g1("WEST", players);
+players.sort((a, b) => b.g1 - a.g1);
+// Chiamata alla funzione per popolare le tabelle per ciascun team
+populateTable_g1("NORD", players);
+// Popola le tabelle per EST, SUD e WEST allo stesso modo
+populateTable_g1("EST", players);
+populateTable_g1("SUD", players);
+populateTable_g1("WEST", players);
 
 // players.sort((a, b) => b.g2 - a.g2);
 // populateTable_g2("NORD", players);
