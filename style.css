@@ -472,6 +472,15 @@ footer {
 .regolamento{
     width:85%;
     margin: auto;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid var(--main-color2);
+    border-radius: 5px;
+    color: var(--main-color2);
+    padding-bottom:20px;
+    background-color: white;
+
 }
 @media (max-width: 768px) {
     .gamescore {
