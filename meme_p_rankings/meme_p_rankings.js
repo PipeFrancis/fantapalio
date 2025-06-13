@@ -1,7 +1,9 @@
 import {
+    pdkWeights,
     player_type,
-    players
-} from '../data250613_2335.js';
+    players,
+    td3Weights
+} from '../data250613_2342.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     const playerCardsContainer = document.getElementById('playerCardsContainer');
@@ -15,7 +17,13 @@ document.addEventListener('DOMContentLoaded', function() {
         card.classList.add('player-card', `cardclass${player.team}`);
         card.innerHTML = `
             <h3>${index + 1}. ${player.name}</h3>
-            <p class="meme-points">Meme Points: ${player.meme_tot.toFixed(2)}</p>
+            <p>G1: ${player.stats_g1[18]*pdkWeights[18]}</p>
+            <p>G2: ${player.stats_g2[18]*pdkWeights[18]}</p>
+            <p>G3: ${player.stats_g3[18]*pdkWeights[18]}</p>
+            <p>Semifinale: ${player.stats_semi[18]*pdkWeights[18]}</p>
+            <p>Tiro da 3: ${player.stats_td3[11]*td3Weights[11]+player.stats_td3[12]*td3Weights[12]}</p>
+            <p>Finale: ${player.stats_final[18]*pdkWeights[18]}</p>
+            <p class="meme-points-tot">Punti meme: ${player.meme_tot}</p>
         `;
         playerCardsContainer.appendChild(card);
     });
