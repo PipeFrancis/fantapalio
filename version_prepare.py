@@ -23,6 +23,7 @@ target_files = [
     "coppachiosco/coppachiosco.html",
     "updates_page/updates_page.html",
     "meme_p_rankings/meme_p_rankings.html",
+    "rules/rules.html"
 
     "script.js",
     "boxscores/boxscores.js",
