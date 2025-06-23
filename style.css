@@ -119,7 +119,7 @@ a button {
     font-size: 18px;
     border-radius: 8px;
     background-color: var(--main-color1);
-    font-family: 'Poppins', sans-serif !important;
+    font-family: 'Poppins', sans-serif;
     color: white;
     /* color: var(--main-color3); */
     border: none;
@@ -718,4 +718,25 @@ td { /* tutto serve per sfondo immagine*/
     /*color: var(--main-color2);*/
     border: none;
     cursor: pointer;
+}
+.instagram-button{
+    display: block;
+    width: 250px;
+    margin: 10px auto;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    /* color: var(--main-color3); */
+    border: none;
+    cursor: pointer;
+    background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,      /* yellow */
+    #fdf497 5%,
+    #fd5949 45%,     /* orange/red */
+    #d6249f 60%,     /* pink/purple */
+    #285AEB 90%      /* blue */
+  );
 }
