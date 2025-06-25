@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const groupedPlayers = teams.map(team => {
         return {
             team: team,
-            players: players.filter(player => player.team === team).sort((a, b) => b.tot - a.tot)
+            players: players.filter(player => player.team === team).sort((a, b) => b.cost - a.cost)
         };
     });
 
