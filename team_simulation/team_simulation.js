@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players25 } from '../data250625_2207.js';
+import { players25 } from '../data250625_2308.js';
 const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -76,7 +76,7 @@ function renderTeam() {
 
                 // // commented to separate link and "ricordateli bene, poi"
                 // const newSignupLink = document.createElement('a');
-                // newSignupLink.href = "https://docs.google.com/forms/d/e/1FAIpQLSfLAo7zMMB_5IvCDB_wVziMdtDbGA4tLScFbTwug7D_TvIoTw/viewform?usp=dialog";
+                // newSignupLink.href = "https://docs.google.com/forms/d/e/1FAIpQLSeaoPoLHcBNLQOQ6COt7A96HQNuXoVDyabHvqGatlXtEHBnOg/viewform?usp=dialog";
                 // newSignupLink.target = "_blank";
                 // newSignupLink.textContent = "ricordateli bene, poi iscrivi la squadra";
                 // newSignupLink.id = 'signupLink';
@@ -96,7 +96,7 @@ function renderTeam() {
                 // Create the link
                 const signupLink = document.createElement('a');
                 signupLink.classList.add('registrationlink');
-                signupLink.href = "https://docs.google.com/forms/d/e/1FAIpQLSfLAo7zMMB_5IvCDB_wVziMdtDbGA4tLScFbTwug7D_TvIoTw/viewform?usp=dialog";
+                signupLink.href = "https://docs.google.com/forms/d/e/1FAIpQLSeaoPoLHcBNLQOQ6COt7A96HQNuXoVDyabHvqGatlXtEHBnOg/viewform?usp=dialog";
                 signupLink.target = "_blank";
                 signupLink.textContent = 'compila il modulo di iscrizione';
                 signupLink.id = 'signupLink';
