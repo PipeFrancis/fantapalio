@@ -1,5 +1,5 @@
 // Importa player_type e players dal modulo data.js
-import { player_type, players, td3Weights, players24 } from '../data250625_0008.js';
+import { player_type, players, td3Weights, players24 } from '../data250625_1908.js';
 console.log("inizio boxscore js"); // inizio
 
 
@@ -649,13 +649,13 @@ populateTable_g1("WEST", players);
 // populateTable_semi("SUD", players);
 // populateTable_semi("WEST", players);
 
-// players.sort((a, b) => b.td3 - a.td3);
+players.sort((a, b) => b.td3 - a.td3);
 
-// //players.sort((a, b) => b.tot - a.tot);
-// populateTable_td3("WEST", players);
-// populateTable_td3("NORD", players);
-// populateTable_td3("EST", players);
-// populateTable_td3("SUD", players);
+//players.sort((a, b) => b.tot - a.tot);
+populateTable_td3("WEST", players);
+populateTable_td3("NORD", players);
+populateTable_td3("EST", players);
+populateTable_td3("SUD", players);
 
 //ATTENZIONE: AGGIUNTO 24 DOPO "players" nelle prossime righe (indentate)
         players24.sort((a, b) => b.final - a.final); 
