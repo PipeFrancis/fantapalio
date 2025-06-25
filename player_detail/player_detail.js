@@ -3,7 +3,7 @@
 // se si cambiano array di stats è da cambiare anche questo codice
 
 
-import { players, pdkWeights, td3Weights } from '../data250625_2151.js';
+import { players, pdkWeights, td3Weights } from '../data250625_2156.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("playerDetails");
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const groupedPlayers = teams.map(team => {
         return {
             team: team,
-            players: players.filter(player => player.team === team).sort((a, b) => a.name.localeCompare(b.name))
+            players: players.filter(player => player.team === team).sort((a, b) => b.tot - a.tot)
         };
     });
 
