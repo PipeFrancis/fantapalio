@@ -1,5 +1,5 @@
 // Importa player_type e players dal modulo data.js
-import { player_type, players, td3Weights, players24 } from '../data250625_2041.js';
+import { player_type, players, td3Weights, players24, players25 } from '../data250625_2052.js';
 console.log("inizio boxscore js"); // inizio
 
 
@@ -657,7 +657,7 @@ populateTable_td3("NORD", players);
 populateTable_td3("EST", players);
 populateTable_td3("SUD", players);
 
-//ATTENZIONE: AGGIUNTO 24 DOPO "players" nelle prossime righe (indentate)
+//ATTENZIONE: AGGIUNTO 24 DOPO "players" nelle prossime righe (indentate) PER LASCIARE INFO DEL 2024 ANCHE A INIZIO PALIO 2025
         players24.sort((a, b) => b.final - a.final); 
         populateTable_final("NORD", players24);
         populateTable_final("WEST", players24);
