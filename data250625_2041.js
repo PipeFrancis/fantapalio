@@ -1309,7 +1309,8 @@ RiccardoSchinella24.stats_final = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 
     }
 
-    //FINALE punteggi medi calcolati con excel e messi dentro a mano PER SUD E ESt (non hanno giocato in finale24)
+
+    // FINALE PUNTEGGI MEDI CALCOLO AUTOMATICO
 SimoneMartinelli24.final= Math.round((SimoneMartinelli24.g1+SimoneMartinelli24.g2+SimoneMartinelli24.g3+SimoneMartinelli24.semi)*100/4)/100;
 GiacomoSpagnolo24.final = Math.round((GiacomoSpagnolo24.g1 + GiacomoSpagnolo24.g2 + GiacomoSpagnolo24.g3 + GiacomoSpagnolo24.semi) * 100 / 4) / 100;
 DavideFaurlin24.final = Math.round((DavideFaurlin24.g1 + DavideFaurlin24.g2 + DavideFaurlin24.g3 + DavideFaurlin24.semi) * 100 / 4) / 100;
@@ -1348,6 +1349,8 @@ LorenzoMoro24.final = Math.round((LorenzoMoro24.g1 + LorenzoMoro24.g2 + LorenzoM
 GionaTell24.final = Math.round((GionaTell24.g1 + GionaTell24.g2 + GionaTell24.g3 + GionaTell24.semi) * 100 / 4) / 100;
 IacopoPivetta24.final = Math.round((IacopoPivetta24.g1 + IacopoPivetta24.g2 + IacopoPivetta24.g3 + IacopoPivetta24.semi) * 100 / 4) / 100;
 MattiaMasotti24.final = Math.round((MattiaMasotti24.g1 + MattiaMasotti24.g2 + MattiaMasotti24.g3 + MattiaMasotti24.semi) * 100 / 4) / 100;
+
+    //FINALE punteggi medi calcolati con excel e messi dentro a mano PER SUD E ESt (non hanno giocato in finale24)
 // SimoneMartinelli24.final = Math.round(-0.88 * 100) / 100; //fatto il conto a mano con somma/4 meglio
 // DavideFaurlin24.final = Math.round(0.38 * 100) / 100;
 // GiovanniTonizzo24.final = Math.round(0.50 * 100) / 100;
