@@ -64,7 +64,9 @@ document.addEventListener("DOMContentLoaded", function() {
         rioneCard.classList.add('team-card1', `cardclass${selectedTeam.rione.name}`);
         rioneCard.innerHTML = `
             <h3>Rione: ${selectedTeam.rione.name}</h3>
-            <p class="total">Punti finali: ${selectedTeam.rione.final_points}</p>
+            <p>Punti classifica: ${selectedTeam.rione.classifica_bonus}</p>
+            <p>Punti coppa chiosco: ${selectedTeam.rione.chiosco_bonus}</p>
+            <p class="total">Punti totali: ${selectedTeam.rione.final_points}</p>
         `;
         teamCardsContainer.appendChild(rioneCard);
 

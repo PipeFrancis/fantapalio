@@ -1,5 +1,5 @@
 // Importa player_type e players dal modulo data.js
-import { player_type, players, td3Weights, players24 } from '../data250625_1925.js';
+import { player_type, players, td3Weights, players24 } from '../data250625_2029.js';
 console.log("inizio boxscore js"); // inizio
 
 
@@ -557,8 +557,8 @@ function populateTable_td3(team, players) {
 
     // Intestazione dei parametri da mostrare nella tabella
     const headers = [
-        "Giocatore", "Partecipazione", "2° turno", "3° turno", "4° turno", "5° turno", "Finale", "Posizionamento", "0/10 tiri", "Ciabatte", "Altri Meme","TOT"
-    ];
+        "Giocatore", "Partecipazione", "1° turno", "2° turno", "3° turno", "4° turno", "Semifinale", "Finale", "0/10 tiri", "Ciabatte", "Altri Meme","TOT"
+    ]; //                                                                                           "Posizionamento"
 
     // Aggiungi la prima riga con gli header alla tabella
     let headerRow = '<tr>';

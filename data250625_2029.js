@@ -196,6 +196,82 @@ const IacopoPivetta24 = createPlayer("Iacopo Pivetta", 6, "EST", 20);
 const MattiaMasotti24 = createPlayer("Mattia Masotti", 6, "EST", 13);
 
 
+//CREAZIONE GIOCATORI 2025
+const DavidGaspardo25 = createPlayer("David Gaspardo", 10, "NORD", 0);
+const AlessandroRizzi25 = createPlayer("Alessandro Rizzi", 9, "NORD", 0);
+const MarcoLombardo25 = createPlayer("Marco Lombardo", 8, "NORD", 0);
+const FilippoPasquon25 = createPlayer("Filippo Pasquon", 7, "NORD", 0);
+const VittorioGri25 = createPlayer("Vittorio Gri", 6, "NORD", 0);
+const VittorioBasso25 = createPlayer("Vittorio Basso", 6, "NORD", 0);
+const GiacomoSilvestri25 = createPlayer("Giacomo Silvestri", 6, "NORD", 0);
+const MicheleVendrame25 = createPlayer("Michele Vendrame", 5, "NORD", 0);
+const MarcoRizzi25 = createPlayer("Marco Rizzi", 4, "NORD", 0);
+const AntonioGri25 = createPlayer("Antonio Gri", 4, "NORD", 0);
+const FrancescoSchiavone25 = createPlayer("Francesco Schiavone", 4, "NORD", 0);
+const NicolaCollavini25 = createPlayer("Nicola Collavini", 4, "NORD", 0);
+const EnricoBravin25 = createPlayer("Enrico Bravin", 4, "NORD", 0);
+const LeonardoTirelli25 = createPlayer("Leonardo Tirelli", 4, "NORD", 0);
+const FilippoSappa25 = createPlayer("Filippo Sappa", 10, "SUD", 0);
+const AlessandroSant25 = createPlayer("Alessandro Sant", 8, "SUD", 0);
+const GiovanniZanin25 = createPlayer("Giovanni Zanin", 8, "SUD", 0);
+const GiacomoSpagnolo25 = createPlayer("Giacomo Spagnolo", 6, "SUD", 0);
+const PietroSoramel25 = createPlayer("Pietro Soramel", 6, "SUD", 0);
+const GiovanniTonizzo25 = createPlayer("Giovanni Tonizzo", 5, "SUD", 0);
+const EmanueleDaneluzzi25 = createPlayer("Emanuele Daneluzzi", 5, "SUD", 0);
+const LucaSoramel25 = createPlayer("Luca Soramel", 5, "SUD", 0);
+const StefanoPolano25 = createPlayer("Stefano Polano", 5, "SUD", 0);
+const JacopoTomasini25 = createPlayer("Jacopo Tomasini", 5, "SUD", 0);
+const MarcoComisso25 = createPlayer("Marco Comisso", 5, "SUD", 0);
+const DavideFaurlin25 = createPlayer("Davide Faurlin", 4, "SUD", 0);
+const MatteoBazzaro25 = createPlayer("Matteo Bazzaro", 4, "SUD", 0);
+const AlessandroSantin25 = createPlayer("Alessandro Santin", 4, "SUD", 0);
+const AlessandroGalassi25 = createPlayer("Alessandro Galassi", 4, "SUD", 0);
+const PaoloZorzi25 = createPlayer("Paolo Zorzi", 4, "SUD", 0);
+const CristianFedrizzi25 = createPlayer("Cristian Fedrizzi", 4, "SUD", 0);
+const GabrieleAzzarone25 = createPlayer("Gabriele Azzarone", 4, "SUD", 0);
+const GabrieleIndri25 = createPlayer("Gabriele Indri", 10, "EST", 0);
+const MarcoSerrao25 = createPlayer("Marco Serrao", 9, "EST", 0);
+const WilliamIob25 = createPlayer("William Iob", 7, "EST", 0);
+const MattiaMasotti25 = createPlayer("Mattia Masotti", 7, "EST", 0);
+const MaxRossi25 = createPlayer("Max Rossi", 6, "EST", 0);
+const EnricoSant25 = createPlayer("Enrico Sant", 6, "EST", 0);
+const EugenioDeTina25 = createPlayer("Eugenio De Tina", 5, "EST", 0);
+const EdoardoPicogna25 = createPlayer("Edoardo Picogna", 5, "EST", 0);
+const LorenzoMoro25 = createPlayer("Lorenzo moro", 5, "EST", 0);
+const DavideBroggi25 = createPlayer("Davide Broggi", 4, "EST", 0);
+const AlexMicottis25 = createPlayer("Alex Micottis", 4, "EST", 0);
+const MassimoMasotti25 = createPlayer("Massimo Masotti", 4, "EST", 0);
+const ThomasBaracetti25 = createPlayer("Thomas Baracetti", 4, "EST", 0);
+const LucaGemo25 = createPlayer("Luca Gemo", 4, "EST", 0);
+const MattiaRoiatti25 = createPlayer("Mattia Roiatti", 4, "EST", 0);
+const MauroPerina25 = createPlayer("Mauro Perina", 4, "EST", 0);
+const MatteoGrillo25 = createPlayer("Matteo Grillo", 4, "EST", 0);
+const EmanueleStorace25 = createPlayer("Emanuele Storace", 4, "EST", 0);
+const LucaGrillo25 = createPlayer("Luca Grillo", 4, "EST", 0);
+const MattiaAnedda25 = createPlayer("Mattia Anedda", 4, "EST", 0);
+const SamuelMasotti25 = createPlayer("Samuel Masotti", 4, "EST", 0);
+const MassimilianoMoretti25 = createPlayer("Massimiliano Moretti", 11, "WEST", 0);
+const UmbertoNobile25 = createPlayer("Umberto Nobile", 9, "WEST", 0);
+const LarryTrevisan25 = createPlayer("Larry Trevisan", 8, "WEST", 0);
+const AlessandroCostantini25 = createPlayer("Alessandro Costantini", 7, "WEST", 0);
+const MicheleDeAnna25 = createPlayer("Michele De Anna", 7, "WEST", 0);
+const ChristianZanet25 = createPlayer("Christian Zanet", 6, "WEST", 0);
+const AndreaMoretti25 = createPlayer("Andrea Moretti", 5, "WEST", 0);
+const GiacomoPiacentini25 = createPlayer("Giacomo Piacentini", 5, "WEST", 0);
+const MicheleGorasso25 = createPlayer("Michele Gorasso", 5, "WEST", 0);
+const ValentinoCigainero25 = createPlayer("Valentino Cigainero", 5, "WEST", 0);
+const GiovanniDalFarra25 = createPlayer("Giovanni Dal Farra", 4, "WEST", 0);
+const MiracleObichukwu25 = createPlayer("Miracle Obichukwu", 4, "WEST", 0);
+const LucaDellaLonga25 = createPlayer("Luca Della Longa", 4, "WEST", 0);
+const GiacomoFerigo25 = createPlayer("Giacomo Ferigo", 4, "WEST", 0);
+const DavideParon25 = createPlayer("Davide Paron", 4, "WEST", 0);
+const AlessioFurlan25 = createPlayer("Alessio Furlan", 4, "WEST", 0);
+const MichaelMargarit25 = createPlayer("Michael Margarit", 4, "WEST", 0);
+const SebastianoTonizzo25 = createPlayer("Sebastiano Tonizzo", 4, "WEST", 0);
+const MattiaLanna25 = createPlayer("Mattia Lanna", 4, "WEST", 0);
+const EmanueleCorleone25 = createPlayer("Emanuele Corleone", 4, "WEST", 0);
+
+
 // Definizione Rioni 2024
 const NORD24 = { ...rione_type, name: "NORD", final_points: 10 };
 const SUD24  = { ...rione_type, name: "SUD", final_points: 0 };
@@ -205,12 +281,14 @@ const WEST24 = { ...rione_type, name: "WEST", final_points: 20 };
 //final_points = posizionamento finale, final_bonus = bonus eventuale per la finale (non serve)
 const NORD25 = { ...rione_type, 
     name: "NORD", 
-    g1_bonus: 0, 
-    g2_bonus: 0, 
-    g3_bonus: 0,
-    semi_bonus: 0, 
-    final_bonus: 0, 
+    g1_bonus: 0, //inutilizzati
+    g2_bonus: 0, //inutilizzati
+    g3_bonus: 0,//inutilizzati
+    semi_bonus: 0, //inutilizzati
+    final_bonus: 0, //inutilizzati
+
     chiosco_bonus: 0, 
+    classifica_bonus: 0,
     final_points: 0,
     chiosco_g1:0,
     chiosco_3v3:0,
@@ -229,7 +307,9 @@ const SUD25 = { ...rione_type,
     g3_bonus: 0,
     semi_bonus: 0, 
     final_bonus: 0, 
-    chiosco_bonus: 0, 
+
+    chiosco_bonus: 0,  
+    classifica_bonus: 0,
     final_points: 0,
     chiosco_g1:0,
     chiosco_3v3:0,
@@ -248,7 +328,9 @@ const WEST25 = { ...rione_type,
     g3_bonus: 0,
     semi_bonus: 0, 
     final_bonus: 0, 
-    chiosco_bonus: 0, 
+
+    chiosco_bonus: 0,  
+    classifica_bonus: 0,
     final_points: 0,
     chiosco_g1:0,
     chiosco_3v3:0,
@@ -267,7 +349,9 @@ const EST25 = { ...rione_type,
     g3_bonus: 0,
     semi_bonus: 0, 
     final_bonus: 0, 
-    chiosco_bonus: 0, 
+
+    chiosco_bonus: 0,  
+    classifica_bonus: 0,
     final_points: 0,
     chiosco_g1:0,
     chiosco_3v3:0,
@@ -279,7 +363,7 @@ const EST25 = { ...rione_type,
     chiosco_final:0,
     chiosco_tot:0 
 };
-
+//BIRRE CHIOSCO
 NORD25.chiosco_3v3 = 0;
 SUD25.chiosco_3v3 = 0;
 WEST25.chiosco_3v3 = 0;
@@ -319,13 +403,15 @@ NORD25.chiosco_final = 0;
 SUD25.chiosco_final = 0;
 WEST25.chiosco_final = 0;
 EST25.chiosco_final = 0;
+// end BIRRE CHIOSCO
 
-
-//creazione array rioni e calcolo totale birre al chiosco
+//creazione array rioni e calcolo totale birre al chiosco e calcolo totale bonus classifica
 const rioni25 = [NORD25,SUD25,EST25,WEST25];
 for (let rione of rioni25){
     rione.chiosco_tot = rione.chiosco_3v3 + rione.chiosco_martedi + rione.chiosco_g1 + rione.chiosco_g2 + rione.chiosco_g3 + rione.chiosco_semi + rione.chiosco_td3 + rione.chiosco_final;
+    rione.final_points = rione.chiosco_bonus + rione.classifica_bonus;
 }
+
 
 // Definizione Rioni
 const NORD = NORD24;
@@ -856,40 +942,40 @@ const WEST = WEST24;
 
 //qui si potrebbe fare uno script che prende il copia da excel (FG800) e fa gli array, anche chatGPT lo fa da solo
 MassimilianoMoretti24.stats_td3 = [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0];
-AndreaMoretti24.stats_td3 = [1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0];
+AndreaMoretti24.stats_td3 = [1, 0, 1, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0];
 LarryTrevisan24.stats_td3 = [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 AlessandroCostantini24.stats_td3 = [1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 MatteoMargarit24.stats_td3 = [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-MauroCuridori24.stats_td3 = [1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0];
+MauroCuridori24.stats_td3 = [1, 0, 1, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0];
 ChristianZanet24.stats_td3 = [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-GiacomoPiacentini24.stats_td3 = [1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0];
+GiacomoPiacentini24.stats_td3 = [1, 0, 1, 1, 2, 2, 3, 0, 0, 0, 0, 0, 0];
 GiovanniDalFarra24.stats_td3 = [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 MiracleObichukwu24.stats_td3 = [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 LucaDellaLonga24.stats_td3 = [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 AlessandroRojatti24.stats_td3 = [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 MicheleGorasso24.stats_td3 = [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 GiacomoFerigo24.stats_td3 = [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-UmbertoNobile24.stats_td3 = [1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0];
+UmbertoNobile24.stats_td3 = [1, 0, 1, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0];
 DevinChiarcos24.stats_td3 = [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0];
 ValentinoCigainero24.stats_td3 = [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 MicheleDeAnna24.stats_td3 = [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 DavideParon24.stats_td3 = [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0];
 AlessioFurlan24.stats_td3 = [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 MichaelMargarit24.stats_td3 = [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-SebastianoTonizzo24.stats_td3 = [1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0];
+SebastianoTonizzo24.stats_td3 = [1, 0, 1, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0];
 DanieleGanzit24.stats_td3 = [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 GiacomoSilvestri24.stats_td3 = [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0];
 VittorioGri24.stats_td3 = [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0];
 VittorioBasso24.stats_td3 = [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-AlessandroRizzi24.stats_td3 = [1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0];
+AlessandroRizzi24.stats_td3 = [1, 0, 1, 1, 2, 2, 3, 1, 0, 0, 0, 0, 0];
 MassimoBaldassi24.stats_td3 = [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-GabrieleMiani24.stats_td3 = [1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 3];
+GabrieleMiani24.stats_td3 = [1, 0, 1, 1, 2, 2, 3, 0, 0, 1, 0, 0, 3];
 MarcoMarchetti24.stats_td3 = [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-MarcoLombardo24.stats_td3 = [1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 5];
+MarcoLombardo24.stats_td3 = [1, 0, 1, 1, 2, 2, 0, 0, 0, 0, 0, 0, 5];
 MicheleVendrame24.stats_td3 = [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 LorenzoSchinella24.stats_td3 = [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 GioeleTudini24.stats_td3 = [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-FilippoPasquon24.stats_td3 = [1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0];
+FilippoPasquon24.stats_td3 = [1, 0, 1, 1, 2, 2, 0, 0, 0, 0, 0, 0, 0];
 TommasoMartello24.stats_td3 = [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0];
 MarcoRizzi24.stats_td3 = [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 DavidGaspardo24.stats_td3 = [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -899,7 +985,7 @@ SimoneMartinelli24.stats_td3 = [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 GiacomoSpagnolo24.stats_td3 = [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0];
 DavideFaurlin24.stats_td3 = [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 GiovanniTonizzo24.stats_td3 = [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1];
-AlessandroSant24.stats_td3 = [1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0];
+AlessandroSant24.stats_td3 = [1, 0, 1, 1, 2, 2, 3, 0, 0, 0, 0, 1, 0];
 MatteoBazzaro24.stats_td3 = [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 AlessandroSantin24.stats_td3 = [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0];
 AlessandroGalassi24.stats_td3 = [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -914,7 +1000,7 @@ GiovanniZanin24.stats_td3 = [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 EnricoSant24.stats_td3 = [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 StefanoPolano24.stats_td3 = [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0];
 MarcoPolo24.stats_td3 = [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-MarcoSerrao24.stats_td3 = [1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0];
+MarcoSerrao24.stats_td3 = [1, 0, 1, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0];
 WilliamIob24.stats_td3 = [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0];
 DavideBroggi24.stats_td3 = [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 AlexMicottis24.stats_td3 = [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -939,7 +1025,7 @@ MattiaMasotti24.stats_td3 = [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 
 //fatti da script pulisci_class_esistente.py che finisce in init_fantateam_js:
-MassimilianoMoretti24.stats_final = [12, 4, 5, 1, 6, 1, 4, 3, 3, 6, 3, 1, 2, 0, 0, 0, 0, 1, 1];
+MassimilianoMoretti24.stats_final = [12, 4, 5, 1, 6, 1, 4, 3, 3, 6, 3, 1, 2, 0, 0, 0, 0, 1, 6];
 AndreaMoretti24.stats_final = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0];
 LarryTrevisan24.stats_final = [23, 7, 5, 3, 1, 0, 0, 2, 1, 3, 1, 1, 2, 3, 0, 0, 0, 1, 0];
 AlessandroCostantini24.stats_final = [3, 0, 5, 1, 4, 0, 0, 2, 0, 2, 0, 0, 1, 0, 0, 0, 0, 1, 0];
@@ -1031,7 +1117,10 @@ RiccardoSchinella24.stats_final = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
     //                   0    1       2        3       4       5       6     7    8    9    10     11     12
     // td3_stats=    [part, nopart, passa1, passa2, passa3, passa4, finale, 3rd, 2nd, 1st, 0su10, ciab, altri meme]
     // const td3Weights = [1,   -5,      1,       1,      2,      2,     3,     5,   10,  20,  -2,    1  ,    1     ]; // 2024
-    const td3Weights = [1,   -5,      1,       2,      3,      4,     5,     10,  20,  30,  -2,    1  ,    1    ]; // 2025
+    // CI SONO BONUS EXTRA PER PASSAGGIO DA PRIMO O DA ULTIMO: array rimane lo stesso ma i pesi li metto a 1 per ogni round,
+    // poi li vario come se fossero una stats multipla per chi passa, chi passa per primo e chi per ultimo
+    // esempio: passaggio al terzo turno +2, passaggio da primo +3 -> 5 su "terzo turno"
+    const td3Weights = [1,   -5,      1,       1,      1,      1,     1,     10,  20,  30,  -2,    2  ,    1    ]; // 2025
     
     // Calcola g1 per ogni giocatore
     for (let player of players24) { //da copiare questo for ogni anno con l' anno giusto
@@ -1152,44 +1241,81 @@ RiccardoSchinella24.stats_final = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
     }
 
     //FINALE punteggi medi calcolati con excel e messi dentro a mano PER SUD E ESt (non hanno giocato in finale24)
-SimoneMartinelli24.final = Math.round(-0.88 * 100) / 100;
-GiacomoSpagnolo24.final = Math.round(6.38 * 100) / 100;
-DavideFaurlin24.final = Math.round(0.38 * 100) / 100;
-GiovanniTonizzo24.final = Math.round(0.50 * 100) / 100;
-AlessandroSant24.final = Math.round(3.94 * 100) / 100;
-MatteoBazzaro24.final = Math.round(0.56 * 100) / 100;
-AlessandroSantin24.final = Math.round(1.50 * 100) / 100;
-AlessandroGalassi24.final = Math.round(0.63 * 100) / 100;
-PietroSoramel24.final = Math.round(9.19 * 100) / 100;
-FilippoAgnoluzzi24.final = Math.round(1.38 * 100) / 100;
-EmanueleDaneluzzi24.final = Math.round(3.69 * 100) / 100;
-LucaSoramel24.final = Math.round(4.44 * 100) / 100;
-PaoloZorzi24.final = Math.round(2.13 * 100) / 100;
-ChristianFedrizzi24.final = Math.round(0.94 * 100) / 100;
-FilippoSappa24.final = Math.round(20.13 * 100) / 100;
-GiovanniZanin24.final = Math.round(6.31 * 100) / 100;
-EnricoSant24.final = Math.round(4.19 * 100) / 100;
-StefanoPolano24.final = Math.round(2.08 * 100) / 100;
-MarcoPolo24.final = Math.round(2.44 * 100) / 100;
-MarcoSerrao24.final = Math.round(13.88 * 100) / 100;
-WilliamIob24.final = Math.round(6.44 * 100) / 100;
-DavideBroggi24.final = Math.round(3.38 * 100) / 100;
-AlexMicottis24.final = Math.round(2.31 * 100) / 100;
-MassimilianoRossi24.final = Math.round(6.75 * 100) / 100;
-MassimoMasotti24.final = Math.round(1.19 * 100) / 100;
-EugenioDeTina24.final = Math.round(1.94 * 100) / 100;
-LucaAnedda24.final = Math.round(4.00 * 100) / 100;
-DenisVanin24.final = Math.round(3.63 * 100) / 100;
-ThomasBaracetti24.final = Math.round(1.75 * 100) / 100;
-LucaGemo24.final = Math.round(1.38 * 100) / 100;
-DiegoNata24.final = Math.round(22.00 * 100) / 100;
-MattiaRoiatti24.final = Math.round(4.13 * 100) / 100;
-EdoardoPicogna24.final = Math.round(0.75 * 100) / 100;
-MauroPerina24.final = Math.round(2.00 * 100) / 100;
-LorenzoMoro24.final = Math.round(2.44 * 100) / 100;
-GionaTell24.final = Math.round(1.50 * 100) / 100;
-IacopoPivetta24.final = Math.round(1.31 * 100) / 100;
-MattiaMasotti24.final = Math.round(8.75 * 100) / 100;
+SimoneMartinelli24.final= Math.round((SimoneMartinelli24.g1+SimoneMartinelli24.g2+SimoneMartinelli24.g3+SimoneMartinelli24.semi)*100/4)/100;
+GiacomoSpagnolo24.final = Math.round((GiacomoSpagnolo24.g1 + GiacomoSpagnolo24.g2 + GiacomoSpagnolo24.g3 + GiacomoSpagnolo24.semi) * 100 / 4) / 100;
+DavideFaurlin24.final = Math.round((DavideFaurlin24.g1 + DavideFaurlin24.g2 + DavideFaurlin24.g3 + DavideFaurlin24.semi) * 100 / 4) / 100;
+GiovanniTonizzo24.final = Math.round((GiovanniTonizzo24.g1 + GiovanniTonizzo24.g2 + GiovanniTonizzo24.g3 + GiovanniTonizzo24.semi) * 100 / 4) / 100;
+AlessandroSant24.final = Math.round((AlessandroSant24.g1 + AlessandroSant24.g2 + AlessandroSant24.g3 + AlessandroSant24.semi) * 100 / 4) / 100;
+MatteoBazzaro24.final = Math.round((MatteoBazzaro24.g1 + MatteoBazzaro24.g2 + MatteoBazzaro24.g3 + MatteoBazzaro24.semi) * 100 / 4) / 100;
+AlessandroSantin24.final = Math.round((AlessandroSantin24.g1 + AlessandroSantin24.g2 + AlessandroSantin24.g3 + AlessandroSantin24.semi) * 100 / 4) / 100;
+AlessandroGalassi24.final = Math.round((AlessandroGalassi24.g1 + AlessandroGalassi24.g2 + AlessandroGalassi24.g3 + AlessandroGalassi24.semi) * 100 / 4) / 100;
+PietroSoramel24.final = Math.round((PietroSoramel24.g1 + PietroSoramel24.g2 + PietroSoramel24.g3 + PietroSoramel24.semi) * 100 / 4) / 100;
+FilippoAgnoluzzi24.final = Math.round((FilippoAgnoluzzi24.g1 + FilippoAgnoluzzi24.g2 + FilippoAgnoluzzi24.g3 + FilippoAgnoluzzi24.semi) * 100 / 4) / 100;
+EmanueleDaneluzzi24.final = Math.round((EmanueleDaneluzzi24.g1 + EmanueleDaneluzzi24.g2 + EmanueleDaneluzzi24.g3 + EmanueleDaneluzzi24.semi) * 100 / 4) / 100;
+LucaSoramel24.final = Math.round((LucaSoramel24.g1 + LucaSoramel24.g2 + LucaSoramel24.g3 + LucaSoramel24.semi) * 100 / 4) / 100;
+PaoloZorzi24.final = Math.round((PaoloZorzi24.g1 + PaoloZorzi24.g2 + PaoloZorzi24.g3 + PaoloZorzi24.semi) * 100 / 4) / 100;
+ChristianFedrizzi24.final = Math.round((ChristianFedrizzi24.g1 + ChristianFedrizzi24.g2 + ChristianFedrizzi24.g3 + ChristianFedrizzi24.semi) * 100 / 4) / 100;
+FilippoSappa24.final = Math.round((FilippoSappa24.g1 + FilippoSappa24.g2 + FilippoSappa24.g3 + FilippoSappa24.semi) * 100 / 4) / 100;
+GiovanniZanin24.final = Math.round((GiovanniZanin24.g1 + GiovanniZanin24.g2 + GiovanniZanin24.g3 + GiovanniZanin24.semi) * 100 / 4) / 100;
+EnricoSant24.final = Math.round((EnricoSant24.g1 + EnricoSant24.g2 + EnricoSant24.g3 + EnricoSant24.semi) * 100 / 4) / 100;
+StefanoPolano24.final = Math.round((StefanoPolano24.g1 + StefanoPolano24.g2 + StefanoPolano24.g3 + StefanoPolano24.semi) * 100 / 4) / 100;
+MarcoPolo24.final = Math.round((MarcoPolo24.g1 + MarcoPolo24.g2 + MarcoPolo24.g3 + MarcoPolo24.semi) * 100 / 4) / 100;
+MarcoSerrao24.final = Math.round((MarcoSerrao24.g1 + MarcoSerrao24.g2 + MarcoSerrao24.g3 + MarcoSerrao24.semi) * 100 / 4) / 100;
+WilliamIob24.final = Math.round((WilliamIob24.g1 + WilliamIob24.g2 + WilliamIob24.g3 + WilliamIob24.semi) * 100 / 4) / 100;
+DavideBroggi24.final = Math.round((DavideBroggi24.g1 + DavideBroggi24.g2 + DavideBroggi24.g3 + DavideBroggi24.semi) * 100 / 4) / 100;
+AlexMicottis24.final = Math.round((AlexMicottis24.g1 + AlexMicottis24.g2 + AlexMicottis24.g3 + AlexMicottis24.semi) * 100 / 4) / 100;
+MassimilianoRossi24.final = Math.round((MassimilianoRossi24.g1 + MassimilianoRossi24.g2 + MassimilianoRossi24.g3 + MassimilianoRossi24.semi) * 100 / 4) / 100;
+MassimoMasotti24.final = Math.round((MassimoMasotti24.g1 + MassimoMasotti24.g2 + MassimoMasotti24.g3 + MassimoMasotti24.semi) * 100 / 4) / 100;
+EugenioDeTina24.final = Math.round((EugenioDeTina24.g1 + EugenioDeTina24.g2 + EugenioDeTina24.g3 + EugenioDeTina24.semi) * 100 / 4) / 100;
+LucaAnedda24.final = Math.round((LucaAnedda24.g1 + LucaAnedda24.g2 + LucaAnedda24.g3 + LucaAnedda24.semi) * 100 / 4) / 100;
+DenisVanin24.final = Math.round((DenisVanin24.g1 + DenisVanin24.g2 + DenisVanin24.g3 + DenisVanin24.semi) * 100 / 4) / 100;
+ThomasBaracetti24.final = Math.round((ThomasBaracetti24.g1 + ThomasBaracetti24.g2 + ThomasBaracetti24.g3 + ThomasBaracetti24.semi) * 100 / 4) / 100;
+LucaGemo24.final = Math.round((LucaGemo24.g1 + LucaGemo24.g2 + LucaGemo24.g3 + LucaGemo24.semi) * 100 / 4) / 100;
+DiegoNata24.final = Math.round((DiegoNata24.g1 + DiegoNata24.g2 + DiegoNata24.g3 + DiegoNata24.semi) * 100 / 4) / 100;
+MattiaRoiatti24.final = Math.round((MattiaRoiatti24.g1 + MattiaRoiatti24.g2 + MattiaRoiatti24.g3 + MattiaRoiatti24.semi) * 100 / 4) / 100;
+EdoardoPicogna24.final = Math.round((EdoardoPicogna24.g1 + EdoardoPicogna24.g2 + EdoardoPicogna24.g3 + EdoardoPicogna24.semi) * 100 / 4) / 100;
+MauroPerina24.final = Math.round((MauroPerina24.g1 + MauroPerina24.g2 + MauroPerina24.g3 + MauroPerina24.semi) * 100 / 4) / 100;
+LorenzoMoro24.final = Math.round((LorenzoMoro24.g1 + LorenzoMoro24.g2 + LorenzoMoro24.g3 + LorenzoMoro24.semi) * 100 / 4) / 100;
+GionaTell24.final = Math.round((GionaTell24.g1 + GionaTell24.g2 + GionaTell24.g3 + GionaTell24.semi) * 100 / 4) / 100;
+IacopoPivetta24.final = Math.round((IacopoPivetta24.g1 + IacopoPivetta24.g2 + IacopoPivetta24.g3 + IacopoPivetta24.semi) * 100 / 4) / 100;
+MattiaMasotti24.final = Math.round((MattiaMasotti24.g1 + MattiaMasotti24.g2 + MattiaMasotti24.g3 + MattiaMasotti24.semi) * 100 / 4) / 100;
+// SimoneMartinelli24.final = Math.round(-0.88 * 100) / 100; //fatto il conto a mano con somma/4 meglio
+// DavideFaurlin24.final = Math.round(0.38 * 100) / 100;
+// GiovanniTonizzo24.final = Math.round(0.50 * 100) / 100;
+// AlessandroSant24.final = Math.round(3.94 * 100) / 100;
+// MatteoBazzaro24.final = Math.round(0.56 * 100) / 100;
+// AlessandroSantin24.final = Math.round(1.50 * 100) / 100;
+// AlessandroGalassi24.final = Math.round(0.63 * 100) / 100;
+// PietroSoramel24.final = Math.round(9.19 * 100) / 100;
+// FilippoAgnoluzzi24.final = Math.round(1.38 * 100) / 100;
+// EmanueleDaneluzzi24.final = Math.round(3.69 * 100) / 100;
+// LucaSoramel24.final = Math.round(4.44 * 100) / 100;
+// PaoloZorzi24.final = Math.round(2.13 * 100) / 100;
+// ChristianFedrizzi24.final = Math.round(0.94 * 100) / 100;
+// FilippoSappa24.final = Math.round(20.13 * 100) / 100;
+// GiovanniZanin24.final = Math.round(6.31 * 100) / 100;
+// EnricoSant24.final = Math.round(4.19 * 100) / 100;
+// StefanoPolano24.final = Math.round(2.08 * 100) / 100;
+// MarcoPolo24.final = Math.round(2.44 * 100) / 100;
+// MarcoSerrao24.final = Math.round(13.88 * 100) / 100;
+// WilliamIob24.final = Math.round(6.44 * 100) / 100;
+// DavideBroggi24.final = Math.round(3.38 * 100) / 100;
+// AlexMicottis24.final = Math.round(2.31 * 100) / 100;
+// MassimilianoRossi24.final = Math.round(6.75 * 100) / 100;
+// MassimoMasotti24.final = Math.round(1.19 * 100) / 100;
+// EugenioDeTina24.final = Math.round(1.94 * 100) / 100;
+// LucaAnedda24.final = Math.round(4.00 * 100) / 100;
+// DenisVanin24.final = Math.round(3.63 * 100) / 100;
+// ThomasBaracetti24.final = Math.round(1.75 * 100) / 100;
+// LucaGemo24.final = Math.round(1.38 * 100) / 100;
+// DiegoNata24.final = Math.round(22.00 * 100) / 100;
+// MattiaRoiatti24.final = Math.round(4.13 * 100) / 100;
+// EdoardoPicogna24.final = Math.round(0.75 * 100) / 100;
+// MauroPerina24.final = Math.round(2.00 * 100) / 100;
+// LorenzoMoro24.final = Math.round(2.44 * 100) / 100;
+// GionaTell24.final = Math.round(1.50 * 100) / 100;
+// IacopoPivetta24.final = Math.round(1.31 * 100) / 100;
+// MattiaMasotti24.final = Math.round(8.75 * 100) / 100;
 
 // Ciclo for per calcolare player.tot per ogni giocatore
 for (let i = 0; i < players24.length; i++) {
