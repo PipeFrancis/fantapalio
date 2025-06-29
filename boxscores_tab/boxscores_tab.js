@@ -1,5 +1,5 @@
 // Importa player_type e players dal modulo data.js
-import { player_type, players, td3Weights, players24, players25 } from '../data250629_1854.js';
+import { player_type, players, td3Weights, players24, players25 } from '../data250629_1911.js';
 console.log("inizio boxscore js"); // inizio
 
 
@@ -631,36 +631,37 @@ populateTable_g1("EST", players);
 populateTable_g1("SUD", players);
 populateTable_g1("WEST", players);
 
-// players.sort((a, b) => b.g2 - a.g2);
-// populateTable_g2("NORD", players);
-// populateTable_g2("EST", players);
-// populateTable_g2("SUD", players);
-// populateTable_g2("WEST", players);
+players.sort((a, b) => b.g2 - a.g2);
+populateTable_g2("NORD", players);
+populateTable_g2("EST", players);
+populateTable_g2("SUD", players);
+populateTable_g2("WEST", players);
 
-// players.sort((a, b) => b.g3 - a.g3);
-// populateTable_g3("NORD", players);
-// populateTable_g3("EST", players);
-// populateTable_g3("SUD", players);
-// populateTable_g3("WEST", players);
+players.sort((a, b) => b.g3 - a.g3);
+populateTable_g3("NORD", players);
+populateTable_g3("EST", players);
+populateTable_g3("SUD", players);
+populateTable_g3("WEST", players);
 
-// players.sort((a, b) => b.semi - a.semi);
-// populateTable_semi("NORD", players);
-// populateTable_semi("EST", players);
-// populateTable_semi("SUD", players);
-// populateTable_semi("WEST", players);
+players.sort((a, b) => b.semi - a.semi);
+populateTable_semi("NORD", players);
+populateTable_semi("EST", players);
+populateTable_semi("SUD", players);
+populateTable_semi("WEST", players);
 
+
+
+//players.sort((a, b) => b.tot - a.tot); //inutile questa penso
 players.sort((a, b) => b.td3 - a.td3);
-
-//players.sort((a, b) => b.tot - a.tot);
 populateTable_td3("WEST", players);
 populateTable_td3("NORD", players);
 populateTable_td3("EST", players);
 populateTable_td3("SUD", players);
 
 //ATTENZIONE: AGGIUNTO 24 DOPO "players" nelle prossime righe (indentate) PER LASCIARE INFO DEL 2024 ANCHE A INIZIO PALIO 2025
-        players24.sort((a, b) => b.final - a.final); 
-        populateTable_final("NORD", players24);
-        populateTable_final("WEST", players24);
+        // players24.sort((a, b) => b.final - a.final); 
+        // populateTable_final("NORD", players24);
+        // populateTable_final("WEST", players24);
 
         players24.sort((a, b) => (b.tot-b.td3) - (a.tot-a.td3));
         populateTable_avg("WEST", players24);
@@ -669,9 +670,9 @@ populateTable_td3("SUD", players);
         populateTable_avg("SUD", players24);
 
 
-// players.sort((a, b) => b.final - a.final); 
-// populateTable_final("NORD", players);
-// populateTable_final("WEST", players);
+players.sort((a, b) => b.final - a.final); 
+populateTable_final("NORD", players);
+populateTable_final("WEST", players);
 
 // players.sort((a, b) => (b.tot-b.td3) - (a.tot-a.td3));
 // populateTable_avg("WEST", players);
