@@ -1,5 +1,5 @@
 // Importa player_type e players dal modulo data.js
-import { player_type, players, td3Weights, players24, players25 } from '../data250629_1911.js';
+import { player_type, players, td3Weights, players24, players25 } from '../data250629_1916.js';
 console.log("inizio boxscore js"); // inizio
 
 
@@ -643,11 +643,6 @@ populateTable_g3("EST", players);
 populateTable_g3("SUD", players);
 populateTable_g3("WEST", players);
 
-players.sort((a, b) => b.semi - a.semi);
-populateTable_semi("NORD", players);
-populateTable_semi("EST", players);
-populateTable_semi("SUD", players);
-populateTable_semi("WEST", players);
 
 
 
@@ -673,6 +668,12 @@ populateTable_td3("SUD", players);
 players.sort((a, b) => b.final - a.final); 
 populateTable_final("NORD", players);
 populateTable_final("WEST", players);
+
+players.sort((a, b) => b.semi - a.semi);
+populateTable_semi("NORD", players);
+populateTable_semi("EST", players);
+populateTable_semi("SUD", players);
+populateTable_semi("WEST", players);
 
 // players.sort((a, b) => (b.tot-b.td3) - (a.tot-a.td3));
 // populateTable_avg("WEST", players);
