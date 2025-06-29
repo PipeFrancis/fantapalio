@@ -6,7 +6,7 @@ def is_valid_line(row):
     game = row[0].strip().upper()
     if not game.startswith(('G', 'SEMI', 'TD3', 'FINAL')):
         return False
-    if "TOT" in row[3] or not row[3] or not row[4].isdigit():
+    if "TOT" in row[3] or not row[3] or not row[4].isdigit(): # attenzione quindi primo valore dopo nome deve essere pieno non vuoto (mettere zeri)
         return False
     if "PDK Weights" in row[3]:
         return False
