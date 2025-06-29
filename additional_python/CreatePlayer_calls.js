@@ -30,6 +30,7 @@ const AlessandroGalassi25 = createPlayer("Alessandro Galassi", 4, "SUD", 0);
 const PaoloZorzi25 = createPlayer("Paolo Zorzi", 4, "SUD", 0);
 const CristianFedrizzi25 = createPlayer("Cristian Fedrizzi", 4, "SUD", 0);
 const GabrieleAzzarone25 = createPlayer("Gabriele Azzarone", 4, "SUD", 0);
+const FilippoAgnoluzzi25 = createPlayer("Filippo Agnoluzzi", 4, "SUD", 0);
 const GabrieleIndri25 = createPlayer("Gabriele Indri", 10, "EST", 0);
 const MarcoSerrao25 = createPlayer("Marco Serrao", 9, "EST", 0);
 const WilliamIob25 = createPlayer("William Iob", 7, "EST", 0);
@@ -105,6 +106,7 @@ const players25 = [
     PaoloZorzi25,
     CristianFedrizzi25,
     GabrieleAzzarone25,
+    FilippoAgnoluzzi25,
     GabrieleIndri25,
     MarcoSerrao25,
     WilliamIob25,
@@ -181,6 +183,7 @@ const players25 = [
 //PaoloZorzi25.stats_g1 =           []; //
 //CristianFedrizzi25.stats_g1 =     []; //
 //GabrieleAzzarone25.stats_g1 =     []; //
+//FilippoAgnoluzzi25.stats_g1 =     []; //
 //GabrieleIndri25.stats_g1 =        []; //
 //MarcoSerrao25.stats_g1 =          []; //
 //WilliamIob25.stats_g1 =           []; //
