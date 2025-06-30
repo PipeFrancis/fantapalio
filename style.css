@@ -478,7 +478,7 @@ footer {
     border-radius: 5px;
     color: var(--main-color2);
     padding-bottom:20px;
-    background-color: white;
+    background-color:var(--main-color3);
 
 }
 @media (max-width: 768px) {
