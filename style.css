@@ -668,6 +668,7 @@ footer {
 }
 .avviso_title{
     color: var(--main-color3);
+    font-weight: bolder;
 }
 
 td { /* tutto serve per sfondo immagine*/
