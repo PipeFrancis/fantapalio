@@ -118,10 +118,10 @@ a button {
     font-size: 18px;
     font-weight: bolder;
     border-radius: 8px;
-    background-color: var(--main-color1);
+    background-color: var(--main-color3);
     font-family: 'Poppins', sans-serif;
     /* color: white; */
-    color: var(--main-color3);
+    color: var(--main-color1);
     border: none;
     cursor: pointer;
 }
@@ -727,7 +727,8 @@ td { /* tutto serve per sfondo immagine*/
     border-radius: 8px;
     font-family: 'Poppins', sans-serif;
     /* color: white; */
-    color: var(--main-color1);
+    color: var(--main-color3);
+    background-color: var(--main-color1);
     border: none;
     cursor: pointer;
     /* background: radial-gradient(
@@ -738,7 +739,7 @@ td { /* tutto serve per sfondo immagine*/
     #d6249f 60%,     
     #285AEB 90%      
   ); */
-    background-color: var(--main-color3);
+    
 }
 
 .headerlogo {
