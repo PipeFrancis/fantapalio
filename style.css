@@ -124,7 +124,6 @@ a button {
     font-family: 'Poppins', sans-serif;
     color: white;
     /* color: var(--main-color3); */
-    border: none;
     cursor: pointer;
 }
 
