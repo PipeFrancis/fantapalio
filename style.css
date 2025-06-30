@@ -1,7 +1,4 @@
 :root {
-    /* arancione */
-    /* --main-color1:rgb(204, 92, 0);  */
-    /* --main-color2:rgb(6, 1, 87); */
 
     /* grigio scuro */
     --main-color1:rgb(78, 78, 78);
@@ -9,7 +6,8 @@
     /*--main-color2:rgb(200, 200, 160);*/
     --main-color2:black;
 
-    --main-color3:rgb(240,232,168);
+    /* arancione */
+    --main-color3:rgb(255,136,10);
 
     --nord-color1:rgb(255, 50, 50);
     --nord-color2:rgb(0, 0, 0);
@@ -127,7 +125,7 @@ a button {
 }
 
 a button:hover {
-    background-color: var(--main-color2);
+    background-color: var(--main-color3);
 }
 
 .dropdown {
@@ -475,7 +473,7 @@ footer {
     margin-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    border: 2px solid var(--main-color2);
+    border: 2px solid var(--main-color1);
     border-radius: 5px;
     color: var(--main-color2);
     padding-bottom:20px;
@@ -657,7 +655,7 @@ footer {
     margin-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    border: 2px solid var(--main-color2);
+    border: 2px solid var(--main-color1);
     border-radius: 5px;
     color: var(--main-color2);
     padding-bottom:20px;
@@ -713,9 +711,8 @@ td { /* tutto serve per sfondo immagine*/
     border-radius: 8px;
     /* background-color: var(--main-color1); */
     background-color: purple; 
-    font-family: 'Poppins', sans-serif !important;
+    font-family: 'Poppins', sans-serif;
     color: white;
-    /*color: var(--main-color2);*/
     border: none;
     cursor: pointer;
 }
