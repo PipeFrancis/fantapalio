@@ -738,7 +738,7 @@ td { /* tutto serve per sfondo immagine*/
     #d6249f 60%,     
     #285AEB 90%      
   ); */
-    background-color: var(main-color3);
+    background-color: var(--main-color3);
 }
 
 .headerlogo {
