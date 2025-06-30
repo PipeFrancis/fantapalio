@@ -127,9 +127,11 @@ a button {
     cursor: pointer;
     box-shadow: none;
 }
-
 a button:hover {
     background-color: var(--main-color2);
+}
+a button:focus {
+    outline: none;
 }
 
 .dropdown {
