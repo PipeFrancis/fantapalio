@@ -740,7 +740,7 @@ td { /* tutto serve per sfondo immagine*/
     color: var(--main-color1);
     background-color: var(--main-color3);
     border: 3px solid white;
-    border-color: var(--main-color1);
+    /* border-color: var(--main-color1); */
     cursor: pointer;
     /* background: radial-gradient(
     circle at 30% 107%,
