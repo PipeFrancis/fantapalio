@@ -666,6 +666,10 @@ footer {
     background-color: white;
     /* background-color:var(--main-color3); */
 }
+.avviso_title{
+    color: var(--main-color3);
+}
+
 td { /* tutto serve per sfondo immagine*/
     background-color: white;/* sfondo per non fare trasparente*/
     color: black;
