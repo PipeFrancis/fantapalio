@@ -118,14 +118,14 @@ a button {
     border-radius: 8px;
     background-color: var(--main-color1);
     font-family: 'Poppins', sans-serif;
-    color: white;
-    /* color: var(--main-color3); */
+    /* color: white; */
+    color: var(--main-color3);
     border: none;
     cursor: pointer;
 }
 
 a button:hover {
-    background-color: var(--main-color3);
+    background-color: var(--main-color2);
 }
 
 .dropdown {
