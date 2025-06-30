@@ -725,18 +725,19 @@ td { /* tutto serve per sfondo immagine*/
     font-size: 18px;
     border-radius: 8px;
     font-family: 'Poppins', sans-serif;
-    color: white;
-    /* color: var(--main-color3); */
+    /* color: white; */
+    color: var(--main-color1);
     border: none;
     cursor: pointer;
-    background: radial-gradient(
+    /* background: radial-gradient(
     circle at 30% 107%,
-    #fdf497 0%,      /* yellow */
+    #fdf497 0%,      
     #fdf497 5%,
-    #fd5949 45%,     /* orange/red */
-    #d6249f 60%,     /* pink/purple */
-    #285AEB 90%      /* blue */
-  );
+    #fd5949 45%,    
+    #d6249f 60%,     
+    #285AEB 90%      
+  ); */
+    background-color: var(main-color3);
 }
 
 .headerlogo {
