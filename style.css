@@ -118,7 +118,7 @@ a button {
     font-size: 18px;
     font-weight: bolder;
     border-radius: 8px;
-    border-width: 2px;
+    border-width: 5px;
     border-color: var(--main-color3);
     background-color: var(--main-color1);
     font-family: 'Poppins', sans-serif;
