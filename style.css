@@ -741,4 +741,5 @@ td { /* tutto serve per sfondo immagine*/
 .headerlogo {
     display: block;
     margin: 0 auto;
+    height: 100px;
 }
