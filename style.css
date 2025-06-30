@@ -696,7 +696,8 @@ td { /* tutto serve per sfondo immagine*/
 
 .highlighted-text {
   color: white;
-  background-color: black;
+  /* background-color: black; */
+  background-color: var(--main-color1);
   padding: 0.2em 0.4em;
   border-radius: 0.2em;
 }
