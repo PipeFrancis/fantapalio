@@ -737,3 +737,8 @@ td { /* tutto serve per sfondo immagine*/
     #285AEB 90%      /* blue */
   );
 }
+
+.headerlogo {
+    display: block;
+    margin: 0 auto;
+}
