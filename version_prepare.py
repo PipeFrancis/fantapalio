@@ -4,8 +4,8 @@ import shutil
 #                  DA CAMBIARE QUESTE 2
 
 # Constants for old and new timestamps
-OLD_TIMESTAMP = "250630_2208"  # replace with the old timestamp
-NEW_TIMESTAMP = "250630_2232"  # update timestamp
+OLD_TIMESTAMP = "250630_2232"  # replace with the old timestamp
+NEW_TIMESTAMP = "250630_2256"  # update timestamp
 #################################################################################
 
 # List of files to update (add any .html, .js, etc. you need)
