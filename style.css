@@ -119,7 +119,7 @@ a button {
     font-weight: bolder;
     border-radius: 8px;
     border-width: 3px;
-    border-style: solid;
+    border-style: outset;
     border-color: var(--main-color3);
     background-color: var(--main-color1);
     font-family: 'Poppins', sans-serif;
@@ -480,7 +480,7 @@ footer {
     margin-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    border: 2px solid var(--main-color1);
+    border: 3px solid white;
     border-radius: 5px;
     color: var(--main-color2);
     padding-bottom:20px;
@@ -662,7 +662,7 @@ footer {
     margin-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    border: 3px solid var(--main-color3);
+    border: 3px outset var(--main-color3);
     border-radius: 5px;
     color: var(--main-color1);
     padding-bottom:20px;
@@ -740,7 +740,7 @@ td { /* tutto serve per sfondo immagine*/
     /* color: white; */
     color: var(--main-color1);
     background-color: var(--main-color3);
-    border: 3px solid white;
+    border: 3px outset white;
     /* border-color: var(--main-color1); */
     cursor: pointer;
     /* background: radial-gradient(
