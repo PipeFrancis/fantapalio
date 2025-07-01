@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players25 } from '../data250702_0012.js';
+import { players25 } from '../data250702_0025.js';
 const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -186,8 +186,8 @@ function populatePlayersList() {
             const playerCard = document.createElement('div');
             playerCard.classList.add('player-card1', `cardclass${player.team}`);
             playerCard.innerHTML = `
-                <p>${player.name}</p>
-                <p>${player.team} &emsp; $${player.cost}</p>
+                <p><b>${player.name}</b></p>
+                <p><b>${player.team}</b> &emsp; <b>$${player.cost}</b></p>
             `;
             playerCard.addEventListener('click', () => addPlayer(player));
             playersContainer.appendChild(playerCard);
