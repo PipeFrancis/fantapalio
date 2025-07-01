@@ -1,4 +1,4 @@
-import { rioni25 } from '../data250630_2307.js';
+import { rioni25 } from '../data250701_2337.js';
 
 window.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector('.team-cards-container1');
@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
         card.classList.add('team-card1', `cardclass${rione.name}`);
 
         card.innerHTML = `
-            <h2>${rione.chiosco_tot}</h2>
+            <h2>${rione.chiosco_tot}🍺</h2>
             <p>${rione.name}</p>
         `;
 
