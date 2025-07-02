@@ -480,11 +480,11 @@ footer {
     margin-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    border: 3px solid white;
+    border: 3px solid var(--main-color3);
     border-radius: 5px;
     color: var(--main-color2);
     padding-bottom:20px;
-    background-color:var(--main-color3);
+    background-color:white;
 
 }
 @media (max-width: 768px) {
