@@ -3,7 +3,7 @@ import {
     player_type,
     players,
     td3Weights
-} from '../data250703_0024.js';
+} from '../data250703_0025.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     const playerCardsContainer = document.getElementById('playerCardsContainer');

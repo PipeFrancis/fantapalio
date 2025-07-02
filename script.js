@@ -1,4 +1,4 @@
-import { fantateams } from './data250703_0024.js';
+import { fantateams } from './data250703_0025.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("teamDetails");
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <p>Semifinale: ${player.semi}</p>
                 <p>Tiro da 3: ${player.td3}</p>
                 <p>Finale: ${player.final}</p>
-                <p class="total">Totale: <span class="totalpointsindex">${player.tot}</span></p>
+                <p class="total">Totale:<br><span class="totalpointsindex">${player.tot}</span></p>
             `;
             teamCardsContainer.appendChild(card);
         });
