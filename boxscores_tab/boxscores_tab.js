@@ -1,5 +1,5 @@
 // Importa player_type e players dal modulo data.js
-import { player_type, players, td3Weights, players24, players25 } from '../data250702_2229.js';
+import { player_type, players, td3Weights, players24, players25 } from '../data250703_0006.js';
 console.log("inizio boxscore js"); // inizio
 
 
