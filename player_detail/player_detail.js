@@ -3,7 +3,7 @@
 // se si cambiano array di stats è da cambiare anche questo codice
 
 
-import { players, pdkWeights, td3Weights } from '../data250706_1748.js';
+import { players, pdkWeights, td3Weights } from '../data250706_1807.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("playerDetails");
@@ -46,15 +46,22 @@ document.addEventListener("DOMContentLoaded", function() {
         // Pulisci il contenitore delle schede
         playerStatsContainer.innerHTML = '';
 
+        const headerContainer = document.createElement('div');
+        headerContainer.classList.add('player-stats-header');
+
+
         // Crea e aggiungi l'intestazione con il nome del giocatore
         const playerNameHeader = document.createElement('h3');
         playerNameHeader.innerHTML = `${selectedPlayer.name}<br>#${selectedPlayer.number} ${selectedPlayer.team}`;
-        playerStatsContainer.appendChild(playerNameHeader);
+        headerContainer.appendChild(playerNameHeader);
         
         // Crea e aggiungi l'intestazione con il totale del giocatore
         const playerTotalHeader = document.createElement('h3');
         playerTotalHeader.innerHTML = `Totale: <span class="totalpointsindex">${selectedPlayer.tot}</span>`;
-        playerStatsContainer.appendChild(playerTotalHeader);
+        headerContainer.appendChild(playerTotalHeader);
+
+        // Aggiungi il contenitore delle intestazioni
+        playerStatsContainer.appendChild(headerContainer);
 
         const formatValue = (value) => (value > 0 ? `+${value}` : value);
 
@@ -116,11 +123,22 @@ document.addEventListener("DOMContentLoaded", function() {
         };
 
         // Aggiungi schede per ogni partita
-        playerStatsContainer.appendChild(createGameCard('G1', selectedPlayer.g1, selectedPlayer.stats_g1));
-        playerStatsContainer.appendChild(createGameCard('G2', selectedPlayer.g2, selectedPlayer.stats_g2));
-        playerStatsContainer.appendChild(createGameCard('G3', selectedPlayer.g3, selectedPlayer.stats_g3));
-        playerStatsContainer.appendChild(createGameCard('Semifinale', selectedPlayer.semi, selectedPlayer.stats_semi));
-        playerStatsContainer.appendChild(createGameCard_td3('Tiro da 3', selectedPlayer.td3, selectedPlayer.stats_td3));
-        playerStatsContainer.appendChild(createGameCard('Finale', selectedPlayer.final, selectedPlayer.stats_final));
+        // playerStatsContainer.appendChild(createGameCard('G1', selectedPlayer.g1, selectedPlayer.stats_g1));
+        // playerStatsContainer.appendChild(createGameCard('G2', selectedPlayer.g2, selectedPlayer.stats_g2));
+        // playerStatsContainer.appendChild(createGameCard('G3', selectedPlayer.g3, selectedPlayer.stats_g3));
+        // playerStatsContainer.appendChild(createGameCard('Semifinale', selectedPlayer.semi, selectedPlayer.stats_semi));
+        // playerStatsContainer.appendChild(createGameCard_td3('Tiro da 3', selectedPlayer.td3, selectedPlayer.stats_td3));
+        // playerStatsContainer.appendChild(createGameCard('Finale', selectedPlayer.final, selectedPlayer.stats_final));
+        const cardsContainer = document.createElement('div');
+        cardsContainer.classList.add('player-stats-cards');
+
+        cardsContainer.appendChild(createGameCard('G1', selectedPlayer.g1, selectedPlayer.stats_g1));
+        cardsContainer.appendChild(createGameCard('G2', selectedPlayer.g2, selectedPlayer.stats_g2));
+        cardsContainer.appendChild(createGameCard('G3', selectedPlayer.g3, selectedPlayer.stats_g3));
+        cardsContainer.appendChild(createGameCard('Semifinale', selectedPlayer.semi, selectedPlayer.stats_semi));
+        cardsContainer.appendChild(createGameCard_td3('Tiro da 3', selectedPlayer.td3, selectedPlayer.stats_td3));
+        cardsContainer.appendChild(createGameCard('Finale', selectedPlayer.final, selectedPlayer.stats_final));
+
+        playerStatsContainer.appendChild(cardsContainer);
     });
 });
