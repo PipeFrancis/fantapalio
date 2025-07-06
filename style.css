@@ -13,7 +13,7 @@
     --nord-color2:rgb(0, 0, 0);
 
     --west-color1:rgb(0, 0, 0);
-    --west-color2:rgb(255, 213, 0);
+    --west-color2:rgb(255, 221, 0);
 
     --est-color1:rgb(4, 0, 218);
     --est-color2:rgb(255, 26, 26);
@@ -557,16 +557,16 @@ footer {
 }
 
 .cardclasssoftWEST{
-    border: 6px solid var(--west-color1);
+    border: 8px solid var(--west-color2);
 }
 .cardclasssoftNORD{
-    border: 6px solid var(--nord-color1);
+    border: 8px solid var(--nord-color1);
 }
 .cardclasssoftSUD{
-    border: 6px solid var(--sud-color2);
+    border: 8px solid var(--sud-color2);
 }
 .cardclasssoftEST{
-    border: 6px solid var(--est-color1);
+    border: 8px solid var(--est-color1);
 }
 
 
