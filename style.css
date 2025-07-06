@@ -14,6 +14,7 @@
 
     --west-color1:rgb(0, 0, 0);
     --west-color2:rgb(255, 221, 0);
+    --west-color3:rgb(157, 137, 4);
 
     --est-color1:rgb(4, 0, 218);
     --est-color2:rgb(255, 26, 26);
@@ -557,7 +558,7 @@ footer {
 }
 
 .cardclasssoftWEST{
-    border: 8px solid var(--west-color2);
+    border: 8px solid var(--west-color3);
 }
 .cardclasssoftNORD{
     border: 8px solid var(--nord-color1);
