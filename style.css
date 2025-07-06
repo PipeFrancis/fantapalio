@@ -806,3 +806,6 @@ td { /* tutto serve per sfondo immagine*/
 .team_ranking_pdk{
     color: var(--main-color3);
 }
+.orange_text{
+    color: var(--main-color3);
+}
