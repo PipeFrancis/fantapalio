@@ -1,4 +1,4 @@
-import { fantateams } from './data250706_2314.js';
+import { fantateams } from './data250706_2317.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("teamDetails");
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <h3>Rione: ${selectedTeam.rione.name}</h3>
             <p>Punti classifica: ${selectedTeam.rione.classifica_bonus}</p>
             <p>Punti coppa chiosco: ${selectedTeam.rione.chiosco_bonus}</p>
-            <p class="total">Punti totali: ${selectedTeam.rione.final_points}</p>
+            <p class="total">Totale: ${selectedTeam.rione.final_points}</p>
         `;
         teamCardsContainer.appendChild(rioneCard);
 
