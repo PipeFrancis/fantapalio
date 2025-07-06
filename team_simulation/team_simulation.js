@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players25 } from '../data250706_2054.js';
+import { players25 } from '../data250706_2101.js';
 const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -76,7 +76,7 @@ function renderTeam() {
 
                 // // commented to separate link and "ricordateli bene, poi"
                 // const newSignupLink = document.createElement('a');
-                // newSignupLink.href = "https://docs.google.com/forms/d/e/1FAIpQLSe4ToqMLof15p-CZQlmB4QbkBucHzkcrlioZyYbulH1Z-WxjQ/viewform?usp=dialog";
+                // newSignupLink.href = "https://docs.google.com/forms/d/e/1FAIpQLSe3fKik12LNEV4ZggWzvRN1ueC6tBCAwZVzjOINZ7etyKp91A/viewform?usp=header";
                 // newSignupLink.target = "_blank";
                 // newSignupLink.textContent = "ricordateli bene, poi iscrivi la squadra";
                 // newSignupLink.id = 'signupLink';
@@ -96,7 +96,7 @@ function renderTeam() {
                 // Create the link
                 const signupLink = document.createElement('a');
                 signupLink.classList.add('registrationlink');
-                signupLink.href = "https://docs.google.com/forms/d/e/1FAIpQLSe4ToqMLof15p-CZQlmB4QbkBucHzkcrlioZyYbulH1Z-WxjQ/viewform?usp=dialog";
+                signupLink.href = "https://docs.google.com/forms/d/e/1FAIpQLSe3fKik12LNEV4ZggWzvRN1ueC6tBCAwZVzjOINZ7etyKp91A/viewform?usp=header";
                 signupLink.target = "_blank";
                 signupLink.textContent = 'compila il modulo di iscrizione';
                 signupLink.id = 'signupLink';
@@ -285,7 +285,7 @@ window.onload = () => {
 //                 teamContainer.parentNode.insertBefore(newValidMessage, teamContainer);
 
 //                 const newSignupLink = document.createElement('a');
-//                 newSignupLink.href = "https://docs.google.com/forms/d/e/1FAIpQLSe4ToqMLof15p-CZQlmB4QbkBucHzkcrlioZyYbulH1Z-WxjQ/viewform?usp=dialog";
+//                 newSignupLink.href = "https://docs.google.com/forms/d/e/1FAIpQLSe3fKik12LNEV4ZggWzvRN1ueC6tBCAwZVzjOINZ7etyKp91A/viewform?usp=header";
 //                 newSignupLink.target = "_blank";
 //                 newSignupLink.textContent = "iscrivi la squadra";
 //                 newSignupLink.id = 'signupLink';

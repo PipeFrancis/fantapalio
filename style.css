@@ -803,3 +803,6 @@ td { /* tutto serve per sfondo immagine*/
 .rules_bonusmalus{
     color: var(--main-color3);
 }
+.team_ranking_pdk{
+    color: var(--main-color3);
+}

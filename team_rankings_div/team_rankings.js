@@ -2,7 +2,7 @@ import {
     fantateam_type,
     NORD, SUD, EST, WEST,
     fantateams
-} from '../data250706_2054.js';
+} from '../data250706_2101.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     const teamCardsContainer = document.getElementById('teamCardsContainer');
@@ -20,19 +20,19 @@ document.addEventListener('DOMContentLoaded', function() {
         card.classList.add('team-card', `cardclasssoft${team.rione.name}`);
 
         const playerInfoHTML = `
-            <div class="player-info"> ${players[0].name} (${players[0].tot})</div>
-            <div class="player-info"> ${players[1].name} (${players[1].tot})</div>
-            <div class="player-info"> ${players[2].name} (${players[2].tot})</div>
-            <div class="player-info"> ${players[3].name} (${players[3].tot})</div>
-            <div class="player-info"> ${players[4].name} (${players[4].tot})</div>
+            <div class="player-info"> ${players[0].name} (<span class="team_ranking_pdk">${players[0].tot}</span>)</div>
+            <div class="player-info"> ${players[1].name} (<span class="team_ranking_pdk">${players[1].tot}</span>)</div>
+            <div class="player-info"> ${players[2].name} (<span class="team_ranking_pdk">${players[2].tot}</span>)</div>
+            <div class="player-info"> ${players[3].name} (<span class="team_ranking_pdk">${players[3].tot}</span>)</div>
+            <div class="player-info"> ${players[4].name} (<span class="team_ranking_pdk">${players[4].tot}</span>)</div>
         `;
 
         card.innerHTML = `
             <div class="team-card-header">${index + 1}. ${team.name}</div>
             <div class="team-card-body">
-                <div class="punteggio-info"><strong>${team.tot_team.toFixed(2)}</strong></div>
+                <div class="punteggio-info" class="team_ranking_pdk"><strong>${team.tot_team.toFixed(2)}</strong></div>
                 ${playerInfoHTML}
-                <div>${team.rione.name} (${team.rione.final_points})</div>
+                <div>${team.rione.name} (<span class="team_ranking_pdk">${team.rione.final_points}</span>)</div>
             </div>
         `;
         teamCardsContainer.appendChild(card);
