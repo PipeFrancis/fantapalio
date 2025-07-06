@@ -11,6 +11,7 @@
 
     --nord-color1:rgb(255, 50, 50);
     --nord-color2:rgb(0, 0, 0);
+    --nord-color3:rgb(157, 0, 0);
 
     --west-color1:rgb(0, 0, 0);
     --west-color2:rgb(255, 221, 0);
@@ -561,7 +562,7 @@ footer {
     border: 8px solid var(--west-color3);
 }
 .cardclasssoftNORD{
-    border: 8px solid var(--nord-color1);
+    border: 8px solid var(--nord-color3);
 }
 .cardclasssoftSUD{
     border: 8px solid var(--sud-color2);
