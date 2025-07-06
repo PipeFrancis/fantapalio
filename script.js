@@ -1,4 +1,4 @@
-import { fantateams } from './data250706_2309.js';
+import { fantateams } from './data250706_2314.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("teamDetails");
@@ -75,14 +75,14 @@ document.addEventListener("DOMContentLoaded", function() {
         totalCard.classList.add('team-card1','totalteamcard');
         totalCard.innerHTML = `
             <h3>Totale squadra</h3>
-            <p>Prezzo totale: ${selectedTeam.total_cost}</p>
-            <p>G1: ${selectedTeam.tot_g1}</p>
-            <p>G2: ${selectedTeam.tot_g2}</p>
-            <p>G3: ${selectedTeam.tot_g3}</p>
-            <p>Semifinale: ${selectedTeam.tot_semi}</p>
-            <p>Tiro da 3: ${selectedTeam.tot_td3}</p>
-            <p>Finale: ${selectedTeam.tot_final}</p>
-            <p class="total">Totale:<br><span class="totalpointsindex">${selectedTeam.tot_team}</span></p>
+            <p>Prezzo totale: ${selectedTeam.total_cost}$</p>
+            <p>G1: <span class="orange_text">${selectedTeam.tot_g1}</span></p>
+            <p>G2: <span class="orange_text">${selectedTeam.tot_g2}</span></p>
+            <p>G3: <span class="orange_text">${selectedTeam.tot_g3}</span></p>
+            <p>Semifinale: <span class="orange_text">${selectedTeam.tot_semi}</span></p>
+            <p>Tiro da 3: <span class="orange_text">${selectedTeam.tot_td3}</span></p>
+            <p>Finale: <span class="orange_text">${selectedTeam.tot_final}</span></p>
+            <p class="total">Totale:<br><span class="totalpointsindex orange_text">${selectedTeam.tot_team}</span></p>
         `;
         totalCard.classList.add('bold-card');
         teamCardsContainer.appendChild(totalCard);
