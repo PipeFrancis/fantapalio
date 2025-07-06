@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players25 } from '../data250706_2126.js';
+import { players25 } from '../data250706_2157.js';
 const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -91,8 +91,8 @@ function renderTeam() {
                 messageContainerLink.classList.add('highlighted-text');
 
                 // Add plain text
-                const plainTextB4link = document.createTextNode('Non hai ancora registrato la squadra. <span class="orange_text">Ricordati</span> i giocatori selezionati e ');
-
+                // const plainTextB4link = document.createTextNode('Non hai ancora registrato la squadra. <span class="orange_text">Ricordati</span> i giocatori selezionati e ');
+                messageContainerLink.innerHTML = 'Non hai ancora registrato la squadra. <span class="orange_text">Ricordati</span> i giocatori selezionati e ';
                 // Create the link
                 const signupLink = document.createElement('a');
                 signupLink.classList.add('registrationlink');
@@ -102,7 +102,7 @@ function renderTeam() {
                 signupLink.id = 'signupLink';
 
                 // Append text and link to the container
-                messageContainerLink.appendChild(plainTextB4link);
+                // messageContainerLink.appendChild(plainTextB4link);
                 messageContainerLink.appendChild(signupLink);
 
                 // Insert the container after the valid message
