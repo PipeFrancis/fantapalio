@@ -1,6 +1,6 @@
 import {
     players,pdkWeights, td3Weights
-} from '../data250707_2352.js';
+} from '../data250708_0006.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const playerCardsContainer = document.getElementById('playerCardsContainer');
@@ -58,7 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
             card.classList.add('player-card', `cardclass${selectedPlayer.team}`);
             let statsHtml = `
                 <h3>${index + 1}. ${selectedPlayer.name}</h3>
-                <p>Totale: <span class="totalpointsindex">${score}</span></p>
+                <p>#${selectedPlayer.number}</p>
+                <p>Totale: <span class="totalpointsindex">${score}</span></p><br>
             `;
 
             if (stats[0] !== 0) statsHtml += `<p>Partecipazione: <strong>${formatValue(stats[0] * td3Weights[0])}</strong></p>`;
@@ -94,13 +95,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create player cards
         sortedPlayers.forEach((player, index) => {
 
-            const card = document.createElement('div');
-            card.classList.add('player-card', `cardclass${player.team}`);
+            // const card = document.createElement('div');
+            // card.classList.add('player-card', `cardclass${player.team}`);
 
-            card.innerHTML = `
-                <h3>${index + 1}. ${player.name}</h3>
-                <p><strong>${player[sortKey] ?? 0}</strong></p>
-            `; // useless
+            // card.innerHTML = `
+            //     <h3>${index + 1}. ${player.name}</h3>
+            //     <p><strong>${player[sortKey] ?? 0}</strong></p>
+            // `; // useless
 
             // extra start
             let game_sortKey = "tot";
@@ -124,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     game_sortKey = "stats_final";
                     break;
                 default:
-                    game_sortKey = "tot";  // fallback to total score if none matched
+                    game_sortKey = "tot";  // fallback to total score if none matched (in this case game_sortKey won't be used)
                     break;
             }
             console.log(sortKey, game_sortKey);
