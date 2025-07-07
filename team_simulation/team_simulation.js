@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players25 } from '../data250707_0909.js';
+import { players25 } from '../data250707_1321.js';
 const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -54,6 +54,7 @@ function renderTeam() {
     const validMessage = document.getElementById('validMessage');
     const signupLink = document.getElementById('signupLink');
     const textb4link = document.getElementById('textb4link');
+    const messageContainer = document.getElementById('messageContainerLink');
 
     if (selectedPlayers.length === 0) {
         teamContainer.innerHTML = '<p><em>Team vuoto</em></p>';
@@ -65,6 +66,9 @@ function renderTeam() {
         }
         if (textb4link) {
             textb4link.remove();
+        }
+        if (messageContainer) {
+            messageContainer.remove();
         }
     } else {
         if (selectedPlayers.length === 5) {
@@ -93,6 +97,7 @@ function renderTeam() {
                  // Create container for the message
                 const messageContainerLink = document.createElement('p');
                 messageContainerLink.classList.add('highlighted-text');
+                messageContainerLink.id = 'messageContainerLink';
 
                 // Add plain text
                 // const plainTextB4link = document.createTextNode('Non hai ancora registrato la squadra. <span class="orange_text">Ricordati</span> i giocatori selezionati e ');
@@ -125,6 +130,9 @@ function renderTeam() {
             }
             if (textb4link) {
                 textb4link.remove();
+            }
+            if (messageContainer) {
+                messageContainer.remove();
             }
         }
 
