@@ -1,6 +1,6 @@
 import {
     players,pdkWeights, td3Weights
-} from '../data250707_2351.js';
+} from '../data250707_2352.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const playerCardsContainer = document.getElementById('playerCardsContainer');
