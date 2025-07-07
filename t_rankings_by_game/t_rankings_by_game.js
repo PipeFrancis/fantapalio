@@ -55,8 +55,13 @@ document.addEventListener('DOMContentLoaded', function() {
             'finale': 'tot_final',
             'totale': 'tot_team'
         };
-        const sortKey = sortKeyMap[selectedValue] || 'tot_team';
+        const sortKey = sortKeyMap[selectedValue];
+        if (!sortKey) {
+            console.error(`No mapping found for selected value: ${selectedValue}`);
+            return;
+        }
         renderTeams(sortKey);
+
 
         console.log(sortKey);
 
