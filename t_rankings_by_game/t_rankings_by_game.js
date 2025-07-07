@@ -50,9 +50,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const card = document.createElement('div');
             card.classList.add('team-card', `cardclasssoft${team.rione.name}`);
 
-            const playerInfoHTML = players.map(player =>
-                `<div class="player-info"> ${player.name} (<span class="team_ranking_pdk">${player[p_sortKey]}</span>)</div>`
-            ).join('');
+            
+            let playerInfoHTML = "";
+
+            // Loop through players and build the HTML string
+            players.forEach(player => {
+                playerInfoHTML += `<div class="player-info"> ${player.name} (<span class="team_ranking_pdk">${player[p_sortKey]}</span>)</div>`;
+            });
+
 
             card.innerHTML = `
                 <div class="team-card-header">${index + 1}. ${team.name}</div>
