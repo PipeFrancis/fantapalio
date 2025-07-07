@@ -1,0 +1,61 @@
+import {
+    fantateam_type,
+    NORD, SUD, EST, WEST,
+    fantateams
+} from '../data250707_1321.js';
+
+document.addEventListener('DOMContentLoaded', function() {
+    const teamCardsContainer = document.getElementById('teamCardsContainer');
+    const sortSelect = document.getElementById('sortSelect');
+
+    function renderTeams(sortKey = 'tot_team') {
+        // Clear container
+        teamCardsContainer.innerHTML = '';
+
+        // Sort teams
+        const sortedTeams = [...fantateams].sort((a, b) => b[sortKey] - a[sortKey]);
+
+        // Render cards
+        sortedTeams.forEach((team, index) => {
+            const players = [team.p1, team.p2, team.p3, team.p4, team.p5];
+            players.sort((a, b) => b.tot - a.tot);
+
+            const card = document.createElement('div');
+            card.classList.add('team-card', `cardclasssoft${team.rione.name}`);
+
+            const playerInfoHTML = players.map(player =>
+                `<div class="player-info"> ${player.name} (<span class="team_ranking_pdk">${player.tot}</span>)</div>`
+            ).join('');
+
+            card.innerHTML = `
+                <div class="team-card-header">${index + 1}. ${team.name}</div>
+                <div class="team-card-body">
+                    <div class="punteggio-info team_ranking_pdk"><strong>${team[sortKey].toFixed(2)}</strong></div>
+                    ${playerInfoHTML}
+                    <div>${team.rione.name} (<span class="team_ranking_pdk">${team.rione.final_points}</span>)</div>
+                </div>
+            `;
+            teamCardsContainer.appendChild(card);
+        });
+    }
+
+    // Initial render
+    renderTeams();
+
+    // Change sort on dropdown selection
+    sortSelect.addEventListener('change', (e) => {
+        const selectedValue = e.target.value;
+        const sortKeyMap = {
+            'g1': 'tot_g1',
+            'g2': 'tot_g2',
+            'g3': 'tot_g3',
+            'semifinale': 'tot_semi',
+            'td3': 'tot_td3',
+            'finale': 'tot_final',
+            'totale': 'tot_team'
+        };
+        const sortKey = sortKeyMap[selectedValue] || 'tot_team';
+        renderTeams(sortKey);
+
+    });
+});
