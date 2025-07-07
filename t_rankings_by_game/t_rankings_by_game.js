@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Sort teams
         const sortedTeams = [...fantateams].sort((a, b) => b[sortKey] - a[sortKey]);
+        console.log(sortedTeams);
 
         // Render cards
         sortedTeams.forEach((team, index) => {
@@ -56,6 +57,8 @@ document.addEventListener('DOMContentLoaded', function() {
         };
         const sortKey = sortKeyMap[selectedValue] || 'tot_team';
         renderTeams(sortKey);
+
+        console.log(sortKey);
 
     });
 });
