@@ -2282,8 +2282,8 @@ const fantateams25 = [ft1, ft5, ft6, ft8, ft9, ft10, ft11, ft12];
     //   ];
       
     
-    const fantateams = fantateams24;
-    const players = players24;
+    const fantateams = fantateams25;
+    const players = players25;
     //Esporta i tipi di dati per renderli disponibili agli altri script
     export {
         player_type,
