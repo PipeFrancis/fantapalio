@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // // Old working version with no stats:
 // import {
 //     players
-// } from '../data250707_2241.js';
+// } from '../data250708_0011.js';
 
 // document.addEventListener('DOMContentLoaded', () => {
 //     const playerCardsContainer = document.getElementById('playerCardsContainer');
