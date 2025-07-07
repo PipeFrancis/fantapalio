@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const sortedTeams = [...fantateams].sort((a, b) => b[sortKey] - a[sortKey]);
         console.log(sortedTeams);
 
-        const p_sortKey = "tot";
+        let p_sortKey = "tot";
         switch (sortKey) {
             case "tot_g1":
                 p_sortKey = "g1";
