@@ -4,8 +4,8 @@ import shutil
 #                  DA CAMBIARE QUESTE 2
 
 # Constants for old and new timestamps
-OLD_TIMESTAMP = "250707_2330"  # replace with the old timestamp
-NEW_TIMESTAMP = "250707_2338"  # update timestamp
+OLD_TIMESTAMP = "250707_2338"  # replace with the old timestamp
+NEW_TIMESTAMP = "250707_2339"  # update timestamp
 #################################################################################
 
 # List of files to update (add any .html, .js, etc. you need)
@@ -37,7 +37,7 @@ target_files = [
     "registration/registration.js",
     "coppachiosco/coppachiosco.js",
     "meme_p_rankings/meme_p_rankings.js",
-    "t_rankings_by_game/t_rankings_by_game.js"
+    "t_rankings_by_game/t_rankings_by_game.js",
     "p_rankings_by_game/p_rankings_by_game.js"
 
 ]
