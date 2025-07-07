@@ -1,6 +1,6 @@
 import {
     players,pdkWeights, td3Weights
-} from '../data250707_2339.js';
+} from '../data250707_2346.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const playerCardsContainer = document.getElementById('playerCardsContainer');
@@ -23,9 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const formatValue = (value) => (value > 0 ? `+${value}` : value);
 
         // Funzione per creare una scheda partita
-        const createGameCard = (selectedPlayer, score, stats, index) => {
+        const createGameCard = (selectedPlayer, score, stats, index) => { // attenzione funzioni leggermente modificate rispetto che in player detail
             const card = document.createElement('div');
-            card.classList.add('game-card', `cardclass${selectedPlayer.team}`);
+            card.classList.add('player-card', `cardclass${selectedPlayer.team}`);
             let statsHtml = `
                 <h3>${index + 1}. ${selectedPlayer.name}</h3>
                 <p>Totale: <span class="totalpointsindex">${score}</span></p>
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Funzione per creare una scheda partita specifica per "Tiro da 3"
         const createGameCard_td3 = (selectedPlayer, score, stats, index) => {
             const card = document.createElement('div');
-            card.classList.add('game-card', `cardclass${selectedPlayer.team}`);
+            card.classList.add('player-card', `cardclass${selectedPlayer.team}`);
             let statsHtml = `
                 <h3>${index + 1}. ${selectedPlayer.name}</h3>
                 <p>Totale: <span class="totalpointsindex">${score}</span></p>
