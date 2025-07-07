@@ -17,82 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     function renderPlayers(sortKey) {
-        playerCardsContainer.innerHTML = '';
-
-        // Sort players by selected key
-        const sortedPlayers = players.slice().sort((a, b) => {
-            const aVal = a[sortKey] ?? 0;
-            const bVal = b[sortKey] ?? 0;
-            return bVal - aVal;
-        });
-
-        // Create player cards
-        sortedPlayers.forEach((player, index) => {
-
-            const card = document.createElement('div');
-            card.classList.add('player-card', `cardclass${player.team}`);
-
-            card.innerHTML = `
-                <p>${index + 1}. ${player.name}<p>
-                <p><strong>${player[sortKey] ?? 0}</strong></p>
-            `;
-
-            // extra start
-            let game_sortKey = "tot";
-            switch (sortKey) {
-                case "g1":
-                    game_sortKey = "stats_g1";
-                    break;
-                case "g2":
-                    game_sortKey = "stats_g2";
-                    break;
-                case "g3":
-                    game_sortKey = "stats_g3";
-                    break;
-                case "semi":
-                    game_sortKey = "stats_semi";
-                    break;
-                case "td3":
-                    game_sortKey = "stats_td3";
-                    break;
-                case "final":
-                    game_sortKey = "stats_final";
-                    break;
-                default:
-                    game_sortKey = "tot";  // fallback to total score if none matched
-                    break;
-            }
-            console.log(sortKey, game_sortKey);
-            if (sortKey != "tot" && sortKey != "td3"){ // creates card with all stats for that game
-                const createdCard = createGameCard(player,player[sortKey],player[game_sortKey]);
-                playerCardsContainer.appendChild(createdCard);
-
-            }else if (sortKey == "td3"){
-                const createdCard = createGameCard_td3(player,player[sortKey],player[game_sortKey]);
-                playerCardsContainer.appendChild(createdCard);
-
-            }else if (sortKey == "tot"){ // creates card with all games totals only
-                const createdCard = document.createElement('div');
-                createdCard.classList.add('player-card',`cardclass${player.team}`);
-                createdCard.innerHTML = `
-                    <h3>${index + 1}. ${player.name}</h3>
-                    <p>#${player.number}</p>
-                    <p>Prezzo: ${player.cost}</p>
-                    <p class="total">${player.tot.toFixed(2)}</p>
-                    <p>G1: ${player.g1}</p>
-                    <p>G2: ${player.g2}</p>
-                    <p>G3: ${player.g3}</p>
-                    <p>Semifinale: ${player.semi}</p>
-                    <p>Tiro da 3: ${player.td3}</p>
-                    <p>Finale: ${player.final}</p>
-                `;
-                playerCardsContainer.appendChild(createdCard);
-
-            }
-            // extra end
-
-            // playerCardsContainer.appendChild(card);
-        });
 
         // start extra
 
@@ -156,6 +80,86 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         // end extra
+
+        
+        playerCardsContainer.innerHTML = '';
+
+        // Sort players by selected key
+        const sortedPlayers = players.slice().sort((a, b) => {
+            const aVal = a[sortKey] ?? 0;
+            const bVal = b[sortKey] ?? 0;
+            return bVal - aVal;
+        });
+
+        // Create player cards
+        sortedPlayers.forEach((player, index) => {
+
+            const card = document.createElement('div');
+            card.classList.add('player-card', `cardclass${player.team}`);
+
+            card.innerHTML = `
+                <p>${index + 1}. ${player.name}</p>
+                <p><strong>${player[sortKey] ?? 0}</strong></p>
+            `;
+
+            // extra start
+            let game_sortKey = "tot";
+            switch (sortKey) {
+                case "g1":
+                    game_sortKey = "stats_g1";
+                    break;
+                case "g2":
+                    game_sortKey = "stats_g2";
+                    break;
+                case "g3":
+                    game_sortKey = "stats_g3";
+                    break;
+                case "semi":
+                    game_sortKey = "stats_semi";
+                    break;
+                case "td3":
+                    game_sortKey = "stats_td3";
+                    break;
+                case "final":
+                    game_sortKey = "stats_final";
+                    break;
+                default:
+                    game_sortKey = "tot";  // fallback to total score if none matched
+                    break;
+            }
+            console.log(sortKey, game_sortKey);
+            if (sortKey != "tot" && sortKey != "td3"){ // creates card with all stats for that game
+                const createdCard = createGameCard(player,player[sortKey],player[game_sortKey]);
+                playerCardsContainer.appendChild(createdCard);
+
+            }else if (sortKey == "td3"){
+                const createdCard = createGameCard_td3(player,player[sortKey],player[game_sortKey]);
+                playerCardsContainer.appendChild(createdCard);
+
+            }else if (sortKey == "tot"){ // creates card with all games totals only
+                const createdCard = document.createElement('div');
+                createdCard.classList.add('player-card',`cardclass${player.team}`);
+                createdCard.innerHTML = `
+                    <h3>${index + 1}. ${player.name}</h3>
+                    <p>#${player.number}</p>
+                    <p>Prezzo: ${player.cost}</p>
+                    <p class="total">${player.tot.toFixed(2)}</p>
+                    <p>G1: ${player.g1}</p>
+                    <p>G2: ${player.g2}</p>
+                    <p>G3: ${player.g3}</p>
+                    <p>Semifinale: ${player.semi}</p>
+                    <p>Tiro da 3: ${player.td3}</p>
+                    <p>Finale: ${player.final}</p>
+                `;
+                playerCardsContainer.appendChild(createdCard);
+
+            }
+            // extra end
+
+            // playerCardsContainer.appendChild(card);
+        });
+
+        
 
     }
 
