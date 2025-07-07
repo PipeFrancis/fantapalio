@@ -1,6 +1,6 @@
 import {
     players,pdkWeights, td3Weights
-} from '../data250708_0006.js';
+} from '../data250708_0008.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const playerCardsContainer = document.getElementById('playerCardsContainer');
@@ -28,7 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
             card.classList.add('player-card', `cardclass${selectedPlayer.team}`);
             let statsHtml = `
                 <h3>${index + 1}. ${selectedPlayer.name}</h3>
-                <p>Totale: <span class="totalpointsindex">${score}</span></p>
+                <p>#${selectedPlayer.number}</p>
+                <p>Totale: <span class="totalpointsindex">${score}</span></p><br>
             `;
             
             // Mette dentro solo stats non nulle
