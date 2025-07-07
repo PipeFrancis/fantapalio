@@ -23,11 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const formatValue = (value) => (value > 0 ? `+${value}` : value);
 
         // Funzione per creare una scheda partita
-        const createGameCard = (selectedPlayer, score, stats) => {
+        const createGameCard = (selectedPlayer, score, stats, index) => {
             const card = document.createElement('div');
             card.classList.add('game-card', `cardclass${selectedPlayer.team}`);
             let statsHtml = `
-                <h3>${selectedPlayer.name}</h3>
+                <h3>${index + 1}. ${selectedPlayer.name}</h3>
                 <p>Totale: <span class="totalpointsindex">${score}</span></p>
             `;
             
@@ -53,11 +53,11 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         // Funzione per creare una scheda partita specifica per "Tiro da 3"
-        const createGameCard_td3 = (selectedPlayer, score, stats) => {
+        const createGameCard_td3 = (selectedPlayer, score, stats, index) => {
             const card = document.createElement('div');
             card.classList.add('game-card', `cardclass${selectedPlayer.team}`);
             let statsHtml = `
-                <h3>${selectedPlayer.name}</h3>
+                <h3>${index + 1}. ${selectedPlayer.name}</h3>
                 <p>Totale: <span class="totalpointsindex">${score}</span></p>
             `;
 
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // end extra
 
-        
+
         playerCardsContainer.innerHTML = '';
 
         // Sort players by selected key
@@ -98,9 +98,9 @@ document.addEventListener('DOMContentLoaded', () => {
             card.classList.add('player-card', `cardclass${player.team}`);
 
             card.innerHTML = `
-                <p>${index + 1}. ${player.name}</p>
+                <h3>${index + 1}. ${player.name}</h3>
                 <p><strong>${player[sortKey] ?? 0}</strong></p>
-            `;
+            `; // useless
 
             // extra start
             let game_sortKey = "tot";
@@ -129,11 +129,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             console.log(sortKey, game_sortKey);
             if (sortKey != "tot" && sortKey != "td3"){ // creates card with all stats for that game
-                const createdCard = createGameCard(player,player[sortKey],player[game_sortKey]);
+                const createdCard = createGameCard(player,player[sortKey],player[game_sortKey], index);
                 playerCardsContainer.appendChild(createdCard);
 
             }else if (sortKey == "td3"){
-                const createdCard = createGameCard_td3(player,player[sortKey],player[game_sortKey]);
+                const createdCard = createGameCard_td3(player,player[sortKey],player[game_sortKey], index);
                 playerCardsContainer.appendChild(createdCard);
 
             }else if (sortKey == "tot"){ // creates card with all games totals only
