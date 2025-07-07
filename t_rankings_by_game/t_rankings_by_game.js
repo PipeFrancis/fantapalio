@@ -16,6 +16,32 @@ document.addEventListener('DOMContentLoaded', function() {
         const sortedTeams = [...fantateams].sort((a, b) => b[sortKey] - a[sortKey]);
         console.log(sortedTeams);
 
+        const p_sortKey = "tot";
+        switch (sortKey) {
+            case "tot_g1":
+                p_sortKey = "g1";
+                break;
+            case "tot_g2":
+                p_sortKey = "g2";
+                break;
+            case "tot_g3":
+                p_sortKey = "g3";
+                break;
+            case "tot_semi":
+                p_sortKey = "semi";
+                break;
+            case "tot_td3":
+                p_sortKey = "td3";
+                break;
+            case "tot_final":
+                p_sortKey = "final";
+                break;
+            default:
+                p_sortKey = "tot";  // fallback to total score if none matched
+                break;
+        }
+        
+
         // Render cards
         sortedTeams.forEach((team, index) => {
             const players = [team.p1, team.p2, team.p3, team.p4, team.p5];
@@ -25,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
             card.classList.add('team-card', `cardclasssoft${team.rione.name}`);
 
             const playerInfoHTML = players.map(player =>
-                `<div class="player-info"> ${player.name} (<span class="team_ranking_pdk">${player.tot}</span>)</div>`
+                `<div class="player-info"> ${player.name} (<span class="team_ranking_pdk">${player[p_sortKey]}</span>)</div>`
             ).join('');
 
             card.innerHTML = `
