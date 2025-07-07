@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players25 } from '../data250707_0902.js';
+import { players25 } from '../data250707_0906.js';
 const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -53,6 +53,7 @@ function renderTeam() {
 
     const validMessage = document.getElementById('validMessage');
     const signupLink = document.getElementById('signupLink');
+    const textb4link = document.getElementById('textb4link');
 
     if (selectedPlayers.length === 0) {
         teamContainer.innerHTML = '<p><em>Team vuoto</em></p>';
@@ -61,6 +62,9 @@ function renderTeam() {
         }
         if (signupLink) {
             signupLink.remove();
+        }
+        if (textb4link) {
+            textb4link.remove();
         }
     } else {
         if (selectedPlayers.length === 5) {
