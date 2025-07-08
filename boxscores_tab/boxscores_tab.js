@@ -1,5 +1,5 @@
 // Importa player_type e players dal modulo data.js
-import { player_type, players, td3Weights, players24, players25 } from '../data250708_2232.js';
+import { player_type, players, td3Weights, players24, players25 } from '../data250708_2236.js';
 console.log("inizio boxscore js"); // inizio
 
 
@@ -639,13 +639,13 @@ players24.sort((a, b) => (b.tot-b.td3) - (a.tot-a.td3)); // sort without td3 sta
 
 
 
-players.sort((a, b) => b.g1 - a.g1);
-// Chiamata alla funzione per popolare le tabelle per ciascun team
-populateTable_g1("NORD", players);
-// Popola le tabelle per EST, SUD e WEST allo stesso modo
-populateTable_g1("EST", players);
-populateTable_g1("SUD", players);
-populateTable_g1("WEST", players);
+// players.sort((a, b) => b.g1 - a.g1);
+// // Chiamata alla funzione per popolare le tabelle per ciascun team
+// populateTable_g1("NORD", players);
+// // Popola le tabelle per EST, SUD e WEST allo stesso modo
+// populateTable_g1("EST", players);
+// populateTable_g1("SUD", players);
+// populateTable_g1("WEST", players);
 
 // players.sort((a, b) => b.g2 - a.g2);
 // populateTable_g2("NORD", players);
