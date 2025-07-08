@@ -64,14 +64,33 @@ def process_row(row, align_width=40):
 
     return f"{player}.{game} =      {stats}; //"
 
+
+
+# def convert_csv_to_js(input_file, output_file):
+#     with open(input_file, encoding='utf-8-sig', newline='') as csvfile, \
+#          open(output_file, 'w', encoding='utf-8') as jsfile:
+#         reader = csv.reader((line.replace('\u00A0', ' ') for line in csvfile))
+#         for row in reader:
+#             if is_valid_line(row):
+#                 js_line = process_row(row)
+#                 jsfile.write(js_line + "\n")
+
+# new function to add blank lines between games
 def convert_csv_to_js(input_file, output_file):
     with open(input_file, encoding='utf-8-sig', newline='') as csvfile, \
          open(output_file, 'w', encoding='utf-8') as jsfile:
-        reader = csv.reader(csvfile)
+        reader = csv.reader((line.replace('\u00A0', ' ') for line in csvfile))
+        prev_game = None
         for row in reader:
             if is_valid_line(row):
+                current_game = normalize_game_label(row[0])
+                if current_game != prev_game:
+                    if prev_game is not None:
+                        jsfile.write("\n\n")  # Add spacing before a new block
+                    jsfile.write(f"// {current_game}\n")  # Add comment label
                 js_line = process_row(row)
                 jsfile.write(js_line + "\n")
+                prev_game = current_game
 
 # Example usage
 convert_csv_to_js("stats_from_gsheet_StatsScript.csv", "Stats_script_output.js")
