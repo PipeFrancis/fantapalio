@@ -811,3 +811,6 @@ td { /* tutto serve per sfondo immagine*/
 .orange_text{
     color: var(--main-color3);
 }
+.team_simulation_message{
+    font-size: 30px;
+}
