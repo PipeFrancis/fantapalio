@@ -749,6 +749,7 @@ td { /* tutto serve per sfondo immagine*/
 
 .totalteamcard{
     color: black;
+    border: 6px solid var(--main-color3);
 }
 
 .valid-message{
