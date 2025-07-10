@@ -408,7 +408,6 @@ footer {
     padding: 20px;
     width: calc(100% - 10px); /* Full width with padding adjustment */
     max-width: 400px;
-    min-width: 200px;
     box-sizing: border-box;
 }
 
@@ -693,6 +692,7 @@ footer {
     padding: 15px;
     margin: 10px;
     max-width: 600px;
+    min-width: 200px;
 }
 
 .game-card h3 {
