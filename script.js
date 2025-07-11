@@ -1,4 +1,4 @@
-import { fantateams , what_day_is_it} from './data250711_2050.js';
+import { fantateams , what_day_is_it} from './data250711_2052.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("teamDetails");
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 `<p>#${player.number}</p>`
             }
 
-            html +=`<p>Prezzo: ${player.cost}</p>`;
+            html +=`<p>Prezzo: $${player.cost}</p>`;
 
             if (what_day_is_it >= 1) {
                 html += `<p>G1: ${player.g1}</p>`;
