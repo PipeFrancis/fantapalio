@@ -1,6 +1,6 @@
 import {
     players,pdkWeights, td3Weights, what_day_is_it
-} from '../data250711_2114.js';
+} from '../data250711_2116.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const playerCardsContainer = document.getElementById('playerCardsContainer');
@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // // Old working version with no stats:
 // import {
 //     players
-// } from '../data250711_2114.js';
+// } from '../data250711_2116.js';
 
 // document.addEventListener('DOMContentLoaded', () => {
 //     const playerCardsContainer = document.getElementById('playerCardsContainer');
