@@ -2,8 +2,9 @@ import {
     pdkWeights,
     player_type,
     players,
-    td3Weights
-} from '../data250711_2046.js';
+    td3Weights,
+    what_day_is_it
+} from '../data250711_2047.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     const playerCardsContainer = document.getElementById('playerCardsContainer');
