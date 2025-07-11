@@ -1,4 +1,4 @@
-import { fantateams , what_day_is_it} from './data250711_2103.js';
+import { fantateams , what_day_is_it} from './data250711_2112.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("teamDetails");
@@ -82,9 +82,9 @@ document.addEventListener("DOMContentLoaded", function() {
             if (what_day_is_it >= 6) {
                 html += `<p>Finale: ${player.final}</p>`;
             }
-
-            html += `<p class="total">Totale:<br><span class="totalpointsindex">${player.tot}</span></p>`;
-
+            if (what_day_is_it >= 1) {
+                html += `<p class="total">Totale:<br><span class="totalpointsindex">${player.tot}</span></p>`;
+            }
             card.innerHTML = html;
             teamCardsContainer.appendChild(card);
         });
