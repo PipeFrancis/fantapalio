@@ -1,5 +1,5 @@
 // Importa player_type e players dal modulo data.js
-import { player_type, players, td3Weights, players24, players25, what_day_it_is, team_not_in_final_1, team_not_in_final_2 } from '../data250711_1934.js';
+import { player_type, players, td3Weights, players24, players25, what_day_is_it, team_not_in_final_1, team_not_in_final_2 } from '../data250711_1945.js';
 console.log("inizio boxscore js"); // inizio
 
 
@@ -638,7 +638,7 @@ players24.sort((a, b) => (b.tot-b.td3) - (a.tot-a.td3)); // sort without td3 sta
 
 
 
-if (what_day_it_is >= 1){
+if (what_day_is_it >= 1){
 players.sort((a, b) => b.g1 - a.g1);
     // Chiamata alla funzione per popolare le tabelle per ciascun team
     populateTable_g1("NORD", players);
@@ -647,35 +647,35 @@ players.sort((a, b) => b.g1 - a.g1);
     populateTable_g1("SUD", players);
     populateTable_g1("WEST", players);
 }
-if (what_day_it_is >= 2){
+if (what_day_is_it >= 2){
     players.sort((a, b) => b.g2 - a.g2);
     populateTable_g2("NORD", players);
     populateTable_g2("EST", players);
     populateTable_g2("SUD", players);
     populateTable_g2("WEST", players);
 }
-if (what_day_it_is >= 3){
+if (what_day_is_it >= 3){
     players.sort((a, b) => b.g3 - a.g3);
     populateTable_g3("NORD", players);
     populateTable_g3("EST", players);
     populateTable_g3("SUD", players);
     populateTable_g3("WEST", players);
 }
-if (what_day_it_is >= 4){
+if (what_day_is_it >= 4){
     players.sort((a, b) => b.semi - a.semi);
     populateTable_semi("NORD", players);
     populateTable_semi("EST", players);
     populateTable_semi("SUD", players);
     populateTable_semi("WEST", players);
 }
-if (what_day_it_is >= 5){
+if (what_day_is_it >= 5){
     players.sort((a, b) => b.td3 - a.td3);
     populateTable_td3("WEST", players);
     populateTable_td3("NORD", players);
     populateTable_td3("EST", players);
     populateTable_td3("SUD", players);
 }
-if (what_day_it_is >= 6){
+if (what_day_is_it >= 6){
     players.sort((a, b) => b.final - a.final); 
     populateTable_final("NORD", players);
     populateTable_final("WEST", players);

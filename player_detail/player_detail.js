@@ -3,7 +3,7 @@
 // se si cambiano array di stats è da cambiare anche questo codice
 
 
-import { players, pdkWeights, td3Weights } from '../data250711_1934.js';
+import { players, pdkWeights, td3Weights, what_day_is_it } from '../data250711_1945.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("playerDetails");
@@ -132,12 +132,18 @@ document.addEventListener("DOMContentLoaded", function() {
         const cardsContainer = document.createElement('div');
         cardsContainer.classList.add('player-stats-cards');
 
-        cardsContainer.appendChild(createGameCard('G1', selectedPlayer.g1, selectedPlayer.stats_g1));
-        cardsContainer.appendChild(createGameCard('G2', selectedPlayer.g2, selectedPlayer.stats_g2));
-        cardsContainer.appendChild(createGameCard('G3', selectedPlayer.g3, selectedPlayer.stats_g3));
-        cardsContainer.appendChild(createGameCard('Semifinale', selectedPlayer.semi, selectedPlayer.stats_semi));
-        cardsContainer.appendChild(createGameCard_td3('Tiro da 3', selectedPlayer.td3, selectedPlayer.stats_td3));
-        cardsContainer.appendChild(createGameCard('Finale', selectedPlayer.final, selectedPlayer.stats_final));
+        if(what_day_is_it >= 1) // domenica g1 fatta
+            cardsContainer.appendChild(createGameCard('G1', selectedPlayer.g1, selectedPlayer.stats_g1));
+        if(what_day_is_it >= 2) // lunedì g2 fatto
+            cardsContainer.appendChild(createGameCard('G2', selectedPlayer.g2, selectedPlayer.stats_g2));
+        if(what_day_is_it >= 3) // mercoledì g3 fatto
+            cardsContainer.appendChild(createGameCard('G3', selectedPlayer.g3, selectedPlayer.stats_g3));
+        if(what_day_is_it >= 4) // giovedì semi fatto
+            cardsContainer.appendChild(createGameCard('Semifinale', selectedPlayer.semi, selectedPlayer.stats_semi));
+        if(what_day_is_it >= 5) // venerdì td3 fatto
+            cardsContainer.appendChild(createGameCard_td3('Tiro da 3', selectedPlayer.td3, selectedPlayer.stats_td3));
+        if(what_day_is_it >= 6) // sabato finale fatto
+            cardsContainer.appendChild(createGameCard('Finale', selectedPlayer.final, selectedPlayer.stats_final));
 
         playerStatsContainer.appendChild(cardsContainer);
     });
