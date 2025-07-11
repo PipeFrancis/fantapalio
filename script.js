@@ -1,4 +1,4 @@
-import { fantateams , what_day_is_it} from './data250711_2059.js';
+import { fantateams , what_day_is_it} from './data250711_2101.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("teamDetails");
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
             let html = `<h3>${player.name}</h3>`;
 
             if (what_day_is_it >= 1) { // quando sappiamo i numeri allora escono (dopo domenica)
-                `<p>#${player.number}</p>`
+                html += `<p>#${player.number}</p>`
             }
 
             html +=`<p>$${player.cost}</p>`;
