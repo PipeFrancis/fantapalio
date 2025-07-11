@@ -92,12 +92,19 @@ document.addEventListener("DOMContentLoaded", function() {
         // Aggiungi la scheda per il rione
         const rioneCard = document.createElement('div');
         rioneCard.classList.add('team-card1', `cardclass${selectedTeam.rione.name}`);
-        rioneCard.innerHTML = `
+        let rioneHtml =  `
             <h3>Rione: ${selectedTeam.rione.name}</h3>
-            <p>Punti classifica: ${selectedTeam.rione.classifica_bonus}</p>
-            <p>Punti coppa chiosco: ${selectedTeam.rione.chiosco_bonus}</p>
-            <p class="total">Totale: ${selectedTeam.rione.final_points}</p>
-        `;
+            `
+        if (what_day_is_it>=1){
+            rioneHtml +=`
+                <p>Punti classifica: ${selectedTeam.rione.classifica_bonus}</p>
+                <p>Punti coppa chiosco: ${selectedTeam.rione.chiosco_bonus}</p>
+                <p class="total">Totale: ${selectedTeam.rione.final_points}</p>
+            `;
+        }
+         
+        rioneCard.innerHTML = rioneHtml;
+          
         teamCardsContainer.appendChild(rioneCard);
 
         if (what_day_is_it >= 1) { // team total card solo dopo la prima sera
