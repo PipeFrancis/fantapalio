@@ -1,4 +1,4 @@
-import { fantateams , what_day_is_it} from './data250711_2112.js';
+import { fantateams , what_day_is_it} from './data250711_2114.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("teamDetails");
@@ -137,11 +137,11 @@ document.addEventListener("DOMContentLoaded", function() {
         if (what_day_is_it >= 6) {
             totalHtml += `<p>Finale: <span class="orange_text">${selectedTeam.tot_final}</span></p>`;
         }
-
-        totalHtml += `
-            <p class="total">Totale:<br><span class="totalpointsindex orange_text">${selectedTeam.tot_team}</span></p>
-        `;
-
+        if (what_day_is_it >= 1) {
+            totalHtml += `
+                <p class="total">Totale:<br><span class="totalpointsindex orange_text">${selectedTeam.tot_team}</span></p>
+            `;
+        }
         totalCard.innerHTML = totalHtml;
         totalCard.classList.add('bold-card');
         teamCardsContainer.appendChild(totalCard);
