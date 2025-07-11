@@ -1,4 +1,4 @@
-import { fantateams , what_day_is_it} from './data250711_2031.js';
+import { fantateams , what_day_is_it} from './data250711_2037.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("teamDetails");
