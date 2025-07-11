@@ -1938,7 +1938,7 @@ const players25 = [
     }
 
     // what day is it : variabile che tiene conto di che stats sono state messe dentro (in automatico) e quindi sa che giorno è per il sito
-    // viene usato in: boxscore tab (popolazione tabelle)FATTO, player detail (elementi)FATTO, team detail (stampa), player rankings (stampa), meme rankings (stampa)
+    // viene usato in: boxscore tab (popolazione tabelle)FATTO, player detail (elementi)FATTO, team detail (stampa)FATTO, player rankings (stampa), meme rankings (stampa)
      let what_day_is_it = 0;
     // 0: fino a domenica (no stats)
     // 1: lunedì (stats domenica)

@@ -141,18 +141,46 @@ document.addEventListener('DOMContentLoaded', () => {
             }else if (sortKey == "tot"){ // creates card with all games totals only
                 const createdCard = document.createElement('div');
                 createdCard.classList.add('player-card',`cardclass${player.team}`);
-                createdCard.innerHTML = `
+                // createdCard.innerHTML = `
+                //     <h3>${index + 1}. ${player.name}</h3>
+                //     <p>#${player.number}</p>
+                //     <p>Prezzo: ${player.cost}</p>
+                //     <p class="total">${player.tot.toFixed(2)}</p>
+                //     <p>G1: ${player.g1}</p>
+                //     <p>G2: ${player.g2}</p>
+                //     <p>G3: ${player.g3}</p>
+                //     <p>Semifinale: ${player.semi}</p>
+                //     <p>Tiro da 3: ${player.td3}</p>
+                //     <p>Finale: ${player.final}</p>
+                // `;
+                let createdHtml = `
                     <h3>${index + 1}. ${player.name}</h3>
                     <p>#${player.number}</p>
                     <p>Prezzo: ${player.cost}</p>
                     <p class="total">${player.tot.toFixed(2)}</p>
-                    <p>G1: ${player.g1}</p>
-                    <p>G2: ${player.g2}</p>
-                    <p>G3: ${player.g3}</p>
-                    <p>Semifinale: ${player.semi}</p>
-                    <p>Tiro da 3: ${player.td3}</p>
-                    <p>Finale: ${player.final}</p>
                 `;
+
+                if (what_day_is_it >= 1) {
+                    createdHtml += `<p>G1: ${player.g1}</p>`;
+                }
+                if (what_day_is_it >= 2) {
+                    createdHtml += `<p>G2: ${player.g2}</p>`;
+                }
+                if (what_day_is_it >= 3) {
+                    createdHtml += `<p>G3: ${player.g3}</p>`;
+                }
+                if (what_day_is_it >= 4) {
+                    createdHtml += `<p>Semifinale: ${player.semi}</p>`;
+                }
+                if (what_day_is_it >= 5) {
+                    createdHtml += `<p>Tiro da 3: ${player.td3}</p>`;
+                }
+                if (what_day_is_it >= 6) {
+                    createdHtml += `<p>Finale: ${player.final}</p>`;
+                }
+
+                createdCard.innerHTML = createdHtml;
+                
                 playerCardsContainer.appendChild(createdCard);
 
             }
