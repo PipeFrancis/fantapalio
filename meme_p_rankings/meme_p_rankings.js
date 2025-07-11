@@ -3,7 +3,7 @@ import {
     player_type,
     players,
     td3Weights
-} from '../data250711_2039.js';
+} from '../data250711_2043.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     const playerCardsContainer = document.getElementById('playerCardsContainer');
@@ -15,16 +15,43 @@ document.addEventListener('DOMContentLoaded', function() {
     sortedPlayers.forEach((player, index) => {
         const card = document.createElement('div');
         card.classList.add('player-card', `cardclass${player.team}`);
-        card.innerHTML = `
+        // card.innerHTML = `
+        //     <h3>${index + 1}. ${player.name}</h3>
+        //     <p>G1: ${player.stats_g1[18]*pdkWeights[18]}</p>
+        //     <p>G2: ${player.stats_g2[18]*pdkWeights[18]}</p>
+        //     <p>G3: ${player.stats_g3[18]*pdkWeights[18]}</p>
+        //     <p>Semifinale: ${player.stats_semi[18]*pdkWeights[18]}</p>
+        //     <p>Tiro da 3: ${player.stats_td3[11]*td3Weights[11]+player.stats_td3[12]*td3Weights[12]}</p>
+        //     <p>Finale: ${player.stats_final[18]*pdkWeights[18]}</p>
+        //     <p class="total">Punti meme: ${player.meme_tot}</p>
+        // `;
+        let cardHtml = `
             <h3>${index + 1}. ${player.name}</h3>
-            <p>G1: ${player.stats_g1[18]*pdkWeights[18]}</p>
-            <p>G2: ${player.stats_g2[18]*pdkWeights[18]}</p>
-            <p>G3: ${player.stats_g3[18]*pdkWeights[18]}</p>
-            <p>Semifinale: ${player.stats_semi[18]*pdkWeights[18]}</p>
-            <p>Tiro da 3: ${player.stats_td3[11]*td3Weights[11]+player.stats_td3[12]*td3Weights[12]}</p>
-            <p>Finale: ${player.stats_final[18]*pdkWeights[18]}</p>
-            <p class="total">Punti meme: ${player.meme_tot}</p>
         `;
+
+        if (what_day_is_it >= 1) {
+            cardHtml += `<p>G1: ${(player.stats_g1[18] * pdkWeights[18])}</p>`;
+        }
+        if (what_day_is_it >= 2) {
+            cardHtml += `<p>G2: ${(player.stats_g2[18] * pdkWeights[18])}</p>`;
+        }
+        if (what_day_is_it >= 3) {
+            cardHtml += `<p>G3: ${(player.stats_g3[18] * pdkWeights[18])}</p>`;
+        }
+        if (what_day_is_it >= 4) {
+            cardHtml += `<p>Semifinale: ${(player.stats_semi[18] * pdkWeights[18])}</p>`;
+        }
+        if (what_day_is_it >= 5) {
+            const td3_meme_tot_temp = player.stats_td3[11] * td3Weights[11] + player.stats_td3[12] * td3Weights[12];
+            cardHtml += `<p>Tiro da 3: ${td3_meme_tot_temp}</p>`;
+        }
+        if (what_day_is_it >= 6) {
+            cardHtml += `<p>Finale: ${(player.stats_final[18] * pdkWeights[18])}</p>`;
+        }
+
+        cardHtml += `<p class="total">Punti meme: ${player.meme_tot}</p>`;
+
+        card.innerHTML = cardHtml;
         playerCardsContainer.appendChild(card);
     });
 });
