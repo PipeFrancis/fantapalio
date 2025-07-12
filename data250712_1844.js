@@ -2450,12 +2450,30 @@ const ft118 = createFantateam(118, "Crauti e brovada", SUD, [FilippoSappa25, Mar
 const ft119 = createFantateam(119, "SPORTING BUBA", EST, [MattiaAnedda25, LucaDellaLonga25, LarryTrevisan25, MarcoComisso25, AndreaMoretti25]);
 const ft120 = createFantateam(120, "La Puledra", EST, [AndreaMoretti25, UmbertoNobile25, ValentinoCigainero25, PietroSoramel25, EdoardoPicogna25]);
 const ft121 = createFantateam(121, "BI-COMPONENTI", WEST, [GiacomoPiacentini25, LucaDellaLonga25, GabrieleIndri25, MattiaRoiatti25, AlessandroCostantini25]);
+const ft122 = createFantateam(122, "Il Tirel", NORD, [MarcoLombardo25, VittorioBasso25, AlessandroSantin25, GiacomoPiacentini25, AlessandroCostantini25]);
+const ft123 = createFantateam(123, "I bigulin", NORD, [UmbertoNobile25, AlessandroCostantini25, VittorioBasso25, AlessandroGalassi25, EnricoBravin25]);
+const ft124 = createFantateam(124, "Sandiocan", EST, [GabrieleIndri25, WilliamIob25, MauroPerina25, MattiaRoiatti25, GiovanniTonizzo25]);
+const ft125 = createFantateam(125, "Letsgoski", NORD, [VittorioGri25, AlessandroCostantini25, GiovanniTonizzo25, LarryTrevisan25, LucaSoramel25]);
+// >30 // // dup // const ft126 = createFantateam(126, "NonCapiscodiPallacanestro", NORD, [UmbertoNobile25, FrancescoSchiavone25, UmbertoNobile25, GiovanniZanin25, StefanoPolano25]);
+const ft127 = createFantateam(127, "Maika Team shqiperia", NORD, [UmbertoNobile25, MarcoSerrao25, MarcoRizzi25, MatteoBazzaro25, MiracleObichukwu25]);
+const ft128 = createFantateam(128, "i savanna ", SUD, [GabrieleMiani25, GabrieleAzzarone25, GiacomoFerigo25, EdoardoPicogna25, GiovanniDalFarra25]);
+const ft129 = createFantateam(129, "Friuliantincendi ", NORD, [VittorioBasso25, GiacomoPiacentini25, AlessandroCostantini25, EdoardoPicogna25, MattiaMasotti25]);
+const ft130 = createFantateam(130, "the drunkEST", EST, [GiacomoPiacentini25, FilippoPasquon25, VittorioBasso25, MattiaMasotti25, EdoardoPicogna25]);
+const ft131 = createFantateam(131, "Rebibbia Rockets", NORD, [FrancescoSchiavone25, UmbertoNobile25, MattiaMasotti25, MattiaRoiatti25, PietroSoramel25]);
+const ft132 = createFantateam(132, "Skibidi boppi", WEST, [AlessandroRizzi25, AlessandroCostantini25, MicheleDeAnna25, EdoardoPicogna25, MattiaRoiatti25]);
+const ft133 = createFantateam(133, "Rane", SUD, [VittorioBasso25, AlessandroCostantini25, GiacomoPiacentini25, MattiaMasotti25, AlessandroSantin25]);
+const ft134 = createFantateam(134, "Aleari", SUD, [VittorioBasso25, AlessandroRizzi25, MattiaMasotti25, AlessandroSantin25, GiacomoPiacentini25]);
+const ft135 = createFantateam(135, "2009", SUD, [FilippoAgnoluzzi25, PaoloZorzi25, AlessandroSantin25, AlessandroSant25, AlessandroRizzi25]);
+const ft136 = createFantateam(136, "le baddies", WEST, [GabrieleIndri25, EmanueleDaneluzzi25, EdoardoPicogna25, VittorioBasso25, LucaGrillo25]);
+const ft137 = createFantateam(137, "Duca squad", EST, [LarryTrevisan25, AndreaMoretti25, EdoardoPicogna25, EmanueleDaneluzzi25, MarcoLombardo25]);
+const ft138 = createFantateam(138, "i fruts del super one ", EST, [EnricoBravin25, MiracleObichukwu25, AlessandroCostantini25, AlessandroSant25, MattiaMasotti25]);
+const ft139 = createFantateam(139, "Prostatas", NORD, [UmbertoNobile25, EdoardoPicogna25, FilippoPasquon25, GiovanniDalFarra25, PietroSoramel25]);
 
 const fantateams25 = [ft6, ft8, ft9, ft10, ft11, ft12, ft13, ft14, ft15, ft16, ft17, ft18, ft19, ft20, ft21, ft22, ft23, ft24, ft25, ft26, ft27, ft29, ft30, 
      ft31, ft32, ft33, ft34, ft35, ft36, ft37, ft38, ft39, ft40, ft41, ft42, ft43, ft44, ft45, ft46, ft47, ft48, ft49, ft50, ft51, ft53, ft54, ft55, ft56, ft57, ft58, ft59, ft60, 
      ft61, ft62, ft63, ft64, ft65, ft66, ft67, ft68, ft70, ft71, ft72, ft73, ft74, ft75, ft76, ft77, ft78, ft79, ft80, ft82, ft83, ft84, ft85, ft86, ft87, ft88, ft89, ft90, 
      ft91, ft92, ft93, ft94, ft95, ft96, ft97, ft98, ft99, ft100, ft101, ft102, ft103, ft105, ft106, ft107, ft108, ft110, ft111, ft112, ft113, ft114, ft115, ft116, ft117, ft118, ft119, ft120,
-     ft121
+     ft121, ft122, ft123, ft124, ft125, ft127, ft128, ft129, ft130, ft131, ft132, ft133, ft134, ft135, ft136, ft137, ft138, ft139
     
     ];
 
