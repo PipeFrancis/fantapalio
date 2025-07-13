@@ -2,7 +2,7 @@ import {
     fantateam_type,
     NORD, SUD, EST, WEST,
     fantateams
-} from '../data250713_1744.js';
+} from '../data250713_1750.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     const teamCardsContainer = document.getElementById('teamCardsContainer');
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
 
         card.innerHTML = `
-            <div class="team-card-header">${index + 1}. ${team.name}</div>
+            <div class="team_rankings_team-card-header">${index + 1}. ${team.name}</div>
             <div class="team_rankings_team-card-body">
                 <div class="punteggio-info team_ranking_pdk"><strong>${team.tot_team.toFixed(2)}</strong></div>
                 ${playerInfoHTML}

@@ -308,7 +308,7 @@ footer {
 }
 
 /* Intestazioni e informazioni */
-.team-card-header {
+.team_rankings_team-card-header {
     font-size: 1.5em;
     margin-bottom: 8px;
 }
@@ -335,7 +335,7 @@ footer {
 
 /* Stili specifici per mobile */
 @media screen and (max-width: 768px) {
-    .team-card-header {
+    .team_rankings_team-card-header {
         font-size: 1.2em;
     }
 
