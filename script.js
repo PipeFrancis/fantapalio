@@ -1,4 +1,4 @@
-import { fantateams , what_day_is_it} from './data250713_1728.js';
+import { fantateams , what_day_is_it} from './data250713_1744.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("teamDetails");
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
         players.forEach(player => {
             // Crea una nuova scheda
             const card = document.createElement('div');
-            card.classList.add('team-card1', `cardclass${player.team}`);
+            card.classList.add('team_detail_team-card1', `cardclass${player.team}`);
             // Usa encodeURIComponent per gestire caratteri speciali nel nome
             // card.innerHTML = `
             //     <h3>${player.name}</a></h3>
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Aggiungi la scheda per il rione
         const rioneCard = document.createElement('div');
-        rioneCard.classList.add('team-card1', `cardclass${selectedTeam.rione.name}`);
+        rioneCard.classList.add('team_detail_team-card1', `cardclass${selectedTeam.rione.name}`);
         let rioneHtml =  `
             <h3>Rione: ${selectedTeam.rione.name}</h3>
             `
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (what_day_is_it >= 1) { // team total card solo dopo la prima sera
             // Aggiungi la scheda per i totali del team
             const totalCard = document.createElement('div');
-            totalCard.classList.add('team-card1','totalteamcard');
+            totalCard.classList.add('team_detail_team-card1','totalteamcard');
             // totalCard.innerHTML = `
             //     <h3>Totale squadra</h3>
             //     <p>Prezzo totale: ${selectedTeam.total_cost}$</p>

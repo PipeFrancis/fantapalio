@@ -1,4 +1,4 @@
-import { players } from '../data250713_1728.js';
+import { players } from '../data250713_1744.js';
 console.log("inizio registration.js");
 
 // Group players by their team
@@ -70,6 +70,6 @@ for (const team in teams) {
     title.textContent = team;
     container.appendChild(title);
 
-    const teamTable = createTable(team, teams[team]);
-    container.appendChild(teamTable);
+    const registration_teamTable = createTable(team, teams[team]);
+    container.appendChild(registration_teamTable);
 }

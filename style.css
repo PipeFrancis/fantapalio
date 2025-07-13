@@ -62,7 +62,8 @@ body, html {
   color: white;
 }
 
-.background {
+/* used in all pages */
+.background { 
   position: fixed;
   top: 0;
   left: 0;
@@ -76,6 +77,7 @@ body, html {
   z-index: -1; /* Send it behind the content */
 }
 
+/* used in all pages */
 .content {
   position: relative;
   z-index: 1;
@@ -97,6 +99,7 @@ body, html {
     z-index: -1;
 } */
 
+/* used in all pages */
 header {
     background-color: var(--main-color1);
     /* color: white; */
@@ -141,6 +144,7 @@ a {
     text-decoration: none;
 }
 
+/* used in all pages */
 a button {
     display: block;
     width: 250px;
@@ -166,6 +170,7 @@ a button:focus {
     outline: none;
 }
 
+/* used in all pages */
 .dropdown {
     display: block;
     width: 200px;
@@ -186,20 +191,21 @@ footer {
     bottom: 0;
 }
 
-.table-container {
+/* .table-container {
     margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Altezza del viewport */
-}
+    height: 100vh;
+} */
 
-#teamTable {
+
+#registration_teamTable {
     width: 80%; /* Larghezza desiderata della tabella */
     /* Altri stili desiderati per la tabella */
 }
 
-#teamTable th, #teamTable td {
+#registration_teamTable th, #registration_teamTable td {
     padding: 8px; /* Padding per le celle */
     text-align: center; /* Testo centrato nelle celle */
 }
@@ -207,32 +213,32 @@ footer {
     font-weight: bold;
 }
 /* Stile per la tabella */
-.table-container-player-rankings {
+/* .table-container-player-rankings {
     width: 65%;
     margin: auto;
-}
+} */
 
-#playerTable {
+/* #playerTable {
     
-    border-collapse: collapse; /* Combina i bordi delle celle */
-}
+    border-collapse: collapse; 
+} */
 
-#playerTable th, #playerTable td {
-    padding: 5px; /* Aggiunge spazio interno (padding) a tutte le celle */
-    text-align: center; /* Centra il testo nelle celle */
-}
-
+/* #playerTable th, #playerTable td {
+    padding: 5px; 
+    text-align: center;
+} */
+/* 
 .table-container-team-rankings {
     width: 90%;
     margin: auto;
-}
+} */
 
-#teamTable {
+#registration_teamTable {
     
     border-collapse: collapse; /* Combina i bordi delle celle */
 }
 
-#teamTable th, #teamTable td {
+#registration_teamTable th, #registration_teamTable td {
     padding: 5px; /* Aggiunge spazio interno (padding) a tutte le celle */
     text-align: center; /* Centra il testo nelle celle */
 }
@@ -249,21 +255,21 @@ footer {
 }
 
 /* Celle della tabella */
-#teamTable th, #teamTable td {
+#registration_teamTable th, #registration_teamTable td {
     padding: 8px; /* Aggiunge spazio interno alle celle */
     text-align: left; /* Allinea il testo a sinistra */
     font-size: 0.8em; /* Imposta una dimensione del testo di base */
 }
 
 /* Intestazioni della tabella */
-#teamTable th {
+#registration_teamTable th {
     background-color: #f2f2f2; /* Aggiunge uno sfondo alle intestazioni */
 }
 
 /* Stili specifici per mobile */
 @media screen and (max-width: 768px) {
     /* Dimensioni del testo */
-    #teamTable th, #teamTable td {
+    #registration_teamTable th, #registration_teamTable td {
         font-size: 0.8em; /* Riduce la dimensione del testo per schermi piccoli */
         text-align: center; 
     }
@@ -288,8 +294,9 @@ footer {
     padding: 16px;
 }
 
+
 /* Scheda */
-.team-card {
+.team_rankings_team-card{
     background-color: #f9f9f9;
     color: black;
     border: 1px solid #ddd;
@@ -306,20 +313,20 @@ footer {
     margin-bottom: 8px;
 }
 
-.team-card-body {
+.team_rankings_team-card-body {
     font-size: 1em;
 }
 
-.team-card .bold {
+.team_rankings_team-card.bold {
     font-weight: bold;
 }
 
-.team-card .player-info {
+.team_rankings_team-card.player-info {
     font-size: 0.9em;
     margin-bottom: 4px;
 }
 
-.team-card .punteggio-info {
+.team_rankings_team-card.punteggio-info {
     font-size: 0.9em;
     margin-bottom: 5px;
     margin-top: 5px;
@@ -332,11 +339,11 @@ footer {
         font-size: 1.2em;
     }
 
-    .team-card-body {
+    .team_rankings_team-card-body {
         font-size: 0.9em;
     }
 
-    .team-card .player-info {
+    .team_rankings_team-card.player-info {
         font-size: 0.8em;
     }
 }
@@ -392,7 +399,7 @@ footer {
 
 
 /* Styles for team cards */
-.team-cards-container1 {
+.team_detail_team-cards-container1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -400,7 +407,7 @@ footer {
     margin: 20px;
 }
 
-.team-card1 {
+.team_detail_team-card1 {
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -411,35 +418,35 @@ footer {
     box-sizing: border-box;
 }
 
-.team-card1 h3 {
+.team_detail_team-card1 h3 {
     margin-top: 0;
     font-size: 24px;
     font-weight: bold;
 }
-.team-card h3 {
+.team_rankings_team-cardh3 {
     margin-top: 0;
     font-size: 30px;
     font-weight: bold;
 }
 
-.team-card1 p {
+.team_detail_team-card1 p {
     margin: 3px 0;
     font-size: 20px;
 }
 
-.team-card1 .total {
+.team_detail_team-card1 .total {
     font-weight: bold;
     font-size: 1.8em;
 }
 
 @media (min-width: 600px) {
-    .team-card1 {
+    .team_detail_team-card1 {
         width: calc(50% - 40px); /* Two cards per row on medium screens */
     }
 }
 
 @media (min-width: 900px) {
-    .team-card1 {
+    .team_detail_team-card1 {
         width: calc(33.333% - 40px); /* Three cards per row on large screens */
     }
 }
