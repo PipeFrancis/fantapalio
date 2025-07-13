@@ -296,7 +296,7 @@ footer {
 
 
 /* Scheda */
-.team_rankings_team-card{
+.team-card{
     background-color: #f9f9f9;
     color: black;
     border: 1px solid #ddd;
@@ -308,25 +308,25 @@ footer {
 }
 
 /* Intestazioni e informazioni */
-.team_rankings_team-card-header {
+.team-card-header {
     font-size: 1.5em;
     margin-bottom: 8px;
 }
 
-.team_rankings_team-card-body {
+.team-card-body {
     font-size: 1em;
 }
 
-.team_rankings_team-card.bold {
+.team-card.bold {
     font-weight: bold;
 }
 
-.team_rankings_team-card.player-info {
+.team-card.player-info {
     font-size: 0.9em;
     margin-bottom: 4px;
 }
 
-.team_rankings_team-card.punteggio-info {
+.team-card.punteggio-info {
     font-size: 0.9em;
     margin-bottom: 5px;
     margin-top: 5px;
@@ -335,15 +335,15 @@ footer {
 
 /* Stili specifici per mobile */
 @media screen and (max-width: 768px) {
-    .team_rankings_team-card-header {
+    .team-card-header {
         font-size: 1.2em;
     }
 
-    .team_rankings_team-card-body {
+    .team-card-body {
         font-size: 0.9em;
     }
 
-    .team_rankings_team-card.player-info {
+    .team-card.player-info {
         font-size: 0.8em;
     }
 }
@@ -423,7 +423,7 @@ footer {
     font-size: 24px;
     font-weight: bold;
 }
-.team_rankings_team-cardh3 {
+.team-cardh3 {
     margin-top: 0;
     font-size: 30px;
     font-weight: bold;
