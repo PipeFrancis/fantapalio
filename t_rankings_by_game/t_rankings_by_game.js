@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
             card.innerHTML = `
-                <div class="team_rankings_team-card-header">${index + 1}. ${team.name}</div>
+                <div class="team-card-header">${index + 1}. ${team.name}</div>
                 <div class="team-card-body">
                     <div class="punteggio-info team_ranking_pdk"><strong>${team[sortKey].toFixed(2)}</strong></div>
                     ${playerInfoHTML}

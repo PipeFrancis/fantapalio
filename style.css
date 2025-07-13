@@ -309,12 +309,12 @@ footer {
 
 /* Intestazioni e informazioni */
 .team-card-header {
-    font-size: 1.5em;
+    font-size: 2em;
     margin-bottom: 8px;
 }
 
 .team-card-body {
-    font-size: 1em;
+    font-size: 1.5em;
 }
 
 .team-card.bold {
@@ -322,12 +322,11 @@ footer {
 }
 
 .team-card.player-info {
-    font-size: 0.9em;
+    font-size: 1.2em;
     margin-bottom: 4px;
 }
 
 .team-card.punteggio-info {
-    font-size: 0.9em;
     margin-bottom: 5px;
     margin-top: 5px;
     font-size: 3em;
@@ -336,15 +335,15 @@ footer {
 /* Stili specifici per mobile */
 @media screen and (max-width: 768px) {
     .team-card-header {
-        font-size: 1.2em;
+        font-size: 2em;
     }
 
     .team-card-body {
-        font-size: 0.9em;
+        font-size: 1.5em;
     }
 
     .team-card.player-info {
-        font-size: 0.8em;
+        font-size: 1.2em;
     }
 }
 
@@ -423,7 +422,7 @@ footer {
     font-size: 24px;
     font-weight: bold;
 }
-.team-cardh3 {
+.team-card h3 {
     margin-top: 0;
     font-size: 30px;
     font-weight: bold;
