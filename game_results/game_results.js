@@ -1,6 +1,6 @@
 import {
   game_results_array   
-} from '../data250713_1715.js';
+} from '../data250713_1728.js';
 
 const teamClassMap = {
   'SUD': 'score_sud',
@@ -10,13 +10,21 @@ const teamClassMap = {
 };
 
 // Create a mapping of game labels by index if needed
-const gamedayLabels = [
-  "Domenica (G1)",
-  "Lunedì (G2)",
-  "Mercoledì (G3)",
-  "Giovedì (Semifinali)",
-  "Sabato (Finale)"
-];
+// const gamedayLabels = [
+//   "Domenica (G1)",
+//   "Lunedì (G2)",
+//   "Mercoledì (G3)",
+//   "Giovedì (Semifinali)",
+//   "Sabato (Finale)"
+// ];
+
+const gamedayLabelMap = {
+  g1: "Domenica (G1)",
+  g2: "Lunedì (G2)",
+  g3: "Mercoledì (G3)",
+  semi: "Giovedì (Semifinali)",
+  final: "Sabato (Finale)"
+};
 
 function createGameScoreDiv(homeTeam, homeScore, awayTeam, awayScore) {
   const gameScoreDiv = document.createElement('div');
@@ -43,7 +51,12 @@ function renderGameResults() {
   game_results_array.forEach((gameDayData, index) => {
     const gameDayTitle = document.createElement('p');
     gameDayTitle.className = 'gameday';
-    gameDayTitle.textContent = gamedayLabels[index] || `Giorno ${index + 1}`;
+
+
+    const label = gamedayLabelMap[gameDayData.game_results_day?.toLowerCase()] || `Giorno ${index + 1}`;
+    gameDayTitle.textContent = label;
+
+    // gameDayTitle.textContent = gamedayLabels[index] || `Giorno ${index + 1}`;
 
     // results_container.appendChild(gameDayTitle);
 
