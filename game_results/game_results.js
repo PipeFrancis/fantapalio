@@ -38,14 +38,14 @@ function createGameScoreDiv(homeTeam, homeScore, awayTeam, awayScore) {
 
 function renderGameResults() {
 //   const main = document.querySelector('main');
-  const main = document.getElementById('game_results_container');
+  const results_container = document.getElementById('game_results_container');
 
   game_results_array.forEach((gameDayData, index) => {
     const gameDayTitle = document.createElement('p');
     gameDayTitle.className = 'gameday';
     gameDayTitle.textContent = gamedayLabels[index] || `Giorno ${index + 1}`;
 
-    main.appendChild(gameDayTitle);
+    // results_container.appendChild(gameDayTitle);
 
     // Match A
     const matchA = createGameScoreDiv(
@@ -54,14 +54,14 @@ function renderGameResults() {
       gameDayData.match_A_away_team,
       gameDayData.match_A_away_score
     );
-    main.appendChild(matchA);
+    // results_container.appendChild(matchA);
 
     // Divider (optional: e.g. dash)
     const divider = document.createElement('div');
     divider.textContent = '-';
     divider.style.textAlign = 'center';
     divider.style.margin = '0.5em 0';
-    main.appendChild(divider);
+    // results_container.appendChild(divider);
 
     // Match B
     const matchB = createGameScoreDiv(
@@ -70,7 +70,19 @@ function renderGameResults() {
       gameDayData.match_B_away_team,
       gameDayData.match_B_away_score
     );
-    main.appendChild(matchB);
+    // results_container.appendChild(matchB);
+
+    const gameDayBlock = document.createElement('div');
+    gameDayBlock.className = 'gameday-block';
+
+    // Then append elements to this block instead of directly to `main`
+    gameDayBlock.appendChild(gameDayTitle);
+    gameDayBlock.appendChild(matchA);
+    gameDayBlock.appendChild(divider);
+    gameDayBlock.appendChild(matchB);
+
+    results_container.appendChild(gameDayBlock);
+
   });
 }
 

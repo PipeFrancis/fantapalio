@@ -816,3 +816,7 @@ td { /* tutto serve per sfondo immagine*/
 .team_simulation_message{
     font-size: 13px;
 }
+
+.gameday-block {
+  margin-bottom: 5rem; /* or any space you prefer */
+}
