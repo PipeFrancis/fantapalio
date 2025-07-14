@@ -2,7 +2,7 @@ import {
     fantateam_type,
     NORD, SUD, EST, WEST,
     fantateams
-} from '../data250714_1901.js';
+} from '../data250714_1904.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     const teamCardsContainer = document.getElementById('teamCardsContainer');
@@ -58,7 +58,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 playerInfoHTML += `<div class="player-info"> ${player.name} (<span class="team_ranking_pdk">${player[p_sortKey]}</span>)</div>`;
             });
 
-
+            if (index == 0) {
+                team.name += ' 👑';
+            }
             card.innerHTML = `
                 <div class="team-card-header"><span class="orange_text">${index + 1}.</span> ${team.name}</div>
                 <div class="team-card-body">
