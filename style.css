@@ -385,7 +385,7 @@ footer {
 }
 .player-card .total_memes {
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 @media (min-width: 600px) {
