@@ -1,5 +1,5 @@
 // Importa player_type e players dal modulo data.js
-import { player_type, players, td3Weights, players24, players25, what_day_is_it, team_not_in_final_1, team_not_in_final_2 } from '../data250714_0839.js';
+import { player_type, players, td3Weights, players24, players25, what_day_is_it, team_not_in_final_1, team_not_in_final_2 } from '../data250714_0850.js';
 console.log("inizio boxscore js"); // inizio
 
 
@@ -627,13 +627,13 @@ function populateTable_td3(team, players) {
 
 
 
-// 2024 stats:
-// usa players24
-players24.sort((a, b) => (b.tot-b.td3) - (a.tot-a.td3)); // sort without td3 stats
-        populateTable_avg("WEST", players24,1); // third argument is "isinfinal"
-        populateTable_avg("NORD", players24,1);
-        populateTable_avg("EST", players24,0);
-        populateTable_avg("SUD", players24,0);
+// // 2024 stats:
+// // usa players24
+// players24.sort((a, b) => (b.tot-b.td3) - (a.tot-a.td3)); // sort without td3 stats
+//         populateTable_avg("WEST", players24,1); // third argument is "isinfinal"
+//         populateTable_avg("NORD", players24,1);
+//         populateTable_avg("EST", players24,0);
+//         populateTable_avg("SUD", players24,0);
 
 
 
