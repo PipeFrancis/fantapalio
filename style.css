@@ -820,6 +820,10 @@ td { /* tutto serve per sfondo immagine*/
 .team_ranking_pdk{
     color: var(--main-color3);
 }
+.team_ranking_pdk_tot{
+    color: var(--main-color3);
+    font-size: 2em;
+}
 .orange_text{
     color: var(--main-color3);
 }
