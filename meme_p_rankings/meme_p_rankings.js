@@ -4,7 +4,7 @@ import {
     players,
     td3Weights,
     what_day_is_it
-} from '../data250714_1359.js';
+} from '../data250714_1400.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     const playerCardsContainer = document.getElementById('playerCardsContainer');
