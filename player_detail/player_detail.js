@@ -3,7 +3,7 @@
 // se si cambiano array di stats è da cambiare anche questo codice
 
 
-import { players, pdkWeights, td3Weights, what_day_is_it } from '../data250714_1904.js';
+import { players, pdkWeights, td3Weights, what_day_is_it } from '../data250714_1939.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("playerDetails");
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Crea e aggiungi l'intestazione con il nome del giocatore
         const playerNameHeader = document.createElement('h3');
-        playerNameHeader.innerHTML = `${selectedPlayer.name}<br>#${selectedPlayer.number} ${selectedPlayer.team}`;
+        playerNameHeader.innerHTML = `${selectedPlayer.name}<br>#${selectedPlayer.number} ${selectedPlayer.team}<br>${selectedPlayer.cost}`;
         headerContainer.appendChild(playerNameHeader);
         
         // Crea e aggiungi l'intestazione con il totale del giocatore
