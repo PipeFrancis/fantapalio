@@ -1,4 +1,4 @@
-import { fantateams , what_day_is_it} from './data250715_1254.js';
+import { fantateams , what_day_is_it} from './data250715_1301.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("teamDetails");
@@ -53,10 +53,12 @@ document.addEventListener("DOMContentLoaded", function() {
             //     <p>Finale: <span class="orange_text">${selectedTeam.tot_final}</span></p>
             //     <p class="total">Totale:<br><span class="totalpointsindex orange_text">${selectedTeam.tot_team}</span></p>
             // `;
-            let totalHtml = `
+            
+             let totalHtml = `
                 <h3>Totale squadra</h3>
-                <p>Prezzo totale: ${selectedTeam.total_cost}$</p>
+                <p>Posizione in classifica:<br><span class="orange_text">${selectedTeam.team_position_total}°</span></p>
             `;
+                // <p>Prezzo totale: ${selectedTeam.total_cost}$</p>
 
             if (what_day_is_it >= 1) {
                 totalHtml += `<p>G1: <span class="orange_text">${selectedTeam.tot_g1}</span></p>`;
