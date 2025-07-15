@@ -1,4 +1,4 @@
-import { fantateams , what_day_is_it} from './data250715_1246.js';
+import { fantateams , what_day_is_it} from './data250715_1254.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("teamDetails");
@@ -37,6 +37,54 @@ document.addEventListener("DOMContentLoaded", function() {
             players.push(selectedTeam['p' + i]);
         }
         players.sort((a, b) => b.tot - a.tot);
+
+        if (what_day_is_it >= 1) { // team total card solo dopo la prima sera
+            // Aggiungi la scheda per i totali del team
+            const totalCard = document.createElement('div');
+            totalCard.classList.add('team_detail_team-card1','totalteamcard');
+            // totalCard.innerHTML = `
+            //     <h3>Totale squadra</h3>
+            //     <p>Prezzo totale: ${selectedTeam.total_cost}$</p>
+            //     <p>G1: <span class="orange_text">${selectedTeam.tot_g1}</span></p>
+            //     <p>G2: <span class="orange_text">${selectedTeam.tot_g2}</span></p>
+            //     <p>G3: <span class="orange_text">${selectedTeam.tot_g3}</span></p>
+            //     <p>Semifinale: <span class="orange_text">${selectedTeam.tot_semi}</span></p>
+            //     <p>Tiro da 3: <span class="orange_text">${selectedTeam.tot_td3}</span></p>
+            //     <p>Finale: <span class="orange_text">${selectedTeam.tot_final}</span></p>
+            //     <p class="total">Totale:<br><span class="totalpointsindex orange_text">${selectedTeam.tot_team}</span></p>
+            // `;
+            let totalHtml = `
+                <h3>Totale squadra</h3>
+                <p>Prezzo totale: ${selectedTeam.total_cost}$</p>
+            `;
+
+            if (what_day_is_it >= 1) {
+                totalHtml += `<p>G1: <span class="orange_text">${selectedTeam.tot_g1}</span></p>`;
+            }
+            if (what_day_is_it >= 2) {
+                totalHtml += `<p>G2: <span class="orange_text">${selectedTeam.tot_g2}</span></p>`;
+            }
+            if (what_day_is_it >= 3) {
+                totalHtml += `<p>G3: <span class="orange_text">${selectedTeam.tot_g3}</span></p>`;
+            }
+            if (what_day_is_it >= 4) {
+                totalHtml += `<p>Semifinale: <span class="orange_text">${selectedTeam.tot_semi}</span></p>`;
+            }
+            if (what_day_is_it >= 5) {
+                totalHtml += `<p>Tiro da 3: <span class="orange_text">${selectedTeam.tot_td3}</span></p>`;
+            }
+            if (what_day_is_it >= 6) {
+                totalHtml += `<p>Finale: <span class="orange_text">${selectedTeam.tot_final}</span></p>`;
+            }
+            
+            totalHtml += `
+                <p class="total">Totale:<br><span class="totalpointsindex orange_text">${selectedTeam.tot_team}</span></p>
+            `;
+
+            totalCard.innerHTML = totalHtml;
+            totalCard.classList.add('bold-card');
+            teamCardsContainer.appendChild(totalCard);
+        }   // mette prima card totali
 
         // Aggiungi le schede per i giocatori p1, p2, p3, p4, p5 del team selezionato
         players.forEach(player => {
@@ -107,52 +155,6 @@ document.addEventListener("DOMContentLoaded", function() {
           
         teamCardsContainer.appendChild(rioneCard);
 
-        if (what_day_is_it >= 1) { // team total card solo dopo la prima sera
-            // Aggiungi la scheda per i totali del team
-            const totalCard = document.createElement('div');
-            totalCard.classList.add('team_detail_team-card1','totalteamcard');
-            // totalCard.innerHTML = `
-            //     <h3>Totale squadra</h3>
-            //     <p>Prezzo totale: ${selectedTeam.total_cost}$</p>
-            //     <p>G1: <span class="orange_text">${selectedTeam.tot_g1}</span></p>
-            //     <p>G2: <span class="orange_text">${selectedTeam.tot_g2}</span></p>
-            //     <p>G3: <span class="orange_text">${selectedTeam.tot_g3}</span></p>
-            //     <p>Semifinale: <span class="orange_text">${selectedTeam.tot_semi}</span></p>
-            //     <p>Tiro da 3: <span class="orange_text">${selectedTeam.tot_td3}</span></p>
-            //     <p>Finale: <span class="orange_text">${selectedTeam.tot_final}</span></p>
-            //     <p class="total">Totale:<br><span class="totalpointsindex orange_text">${selectedTeam.tot_team}</span></p>
-            // `;
-            let totalHtml = `
-                <h3>Totale squadra</h3>
-                <p>Prezzo totale: ${selectedTeam.total_cost}$</p>
-            `;
-
-            if (what_day_is_it >= 1) {
-                totalHtml += `<p>G1: <span class="orange_text">${selectedTeam.tot_g1}</span></p>`;
-            }
-            if (what_day_is_it >= 2) {
-                totalHtml += `<p>G2: <span class="orange_text">${selectedTeam.tot_g2}</span></p>`;
-            }
-            if (what_day_is_it >= 3) {
-                totalHtml += `<p>G3: <span class="orange_text">${selectedTeam.tot_g3}</span></p>`;
-            }
-            if (what_day_is_it >= 4) {
-                totalHtml += `<p>Semifinale: <span class="orange_text">${selectedTeam.tot_semi}</span></p>`;
-            }
-            if (what_day_is_it >= 5) {
-                totalHtml += `<p>Tiro da 3: <span class="orange_text">${selectedTeam.tot_td3}</span></p>`;
-            }
-            if (what_day_is_it >= 6) {
-                totalHtml += `<p>Finale: <span class="orange_text">${selectedTeam.tot_final}</span></p>`;
-            }
-            
-            totalHtml += `
-                <p class="total">Totale:<br><span class="totalpointsindex orange_text">${selectedTeam.tot_team}</span></p>
-            `;
-
-            totalCard.innerHTML = totalHtml;
-            totalCard.classList.add('bold-card');
-            teamCardsContainer.appendChild(totalCard);
-        }
+        
     });
 });
