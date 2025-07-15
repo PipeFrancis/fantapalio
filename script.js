@@ -1,4 +1,4 @@
-import { fantateams , what_day_is_it} from './data250715_1301.js';
+import { fantateams , what_day_is_it} from './data250715_1305.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("teamDetails");
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
             
              let totalHtml = `
                 <h3>Totale squadra</h3>
-                <p>Posizione in classifica:<br><span class="orange_text">${selectedTeam.team_position_total}°</span></p>
+                <p><span class="orange_text">${selectedTeam.team_position_total}°</span> in classifica</p>
             `;
                 // <p>Prezzo totale: ${selectedTeam.total_cost}$</p>
 
