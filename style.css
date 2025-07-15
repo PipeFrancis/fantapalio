@@ -840,3 +840,6 @@ td { /* tutto serve per sfondo immagine*/
 .gameday-block {
   margin-bottom: 10rem; /* or any space you prefer */
 }
+.big_emoji{
+    font-size: 2em;
+}
