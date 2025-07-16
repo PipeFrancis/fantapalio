@@ -843,3 +843,7 @@ td { /* tutto serve per sfondo immagine*/
 .big_emoji{
     font-size: 2em;
 }
+.margin_top_and_bottom{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}

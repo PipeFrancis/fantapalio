@@ -4,7 +4,7 @@ import {
     players,
     td3Weights,
     what_day_is_it
-} from '../data250715_1931.js';
+} from '../data250716_1902.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     const playerCardsContainer = document.getElementById('playerCardsContainer');
@@ -26,9 +26,16 @@ document.addEventListener('DOMContentLoaded', function() {
         //     <p>Finale: ${player.stats_final[18]*pdkWeights[18]}</p>
         //     <p class="total">Punti meme: ${player.meme_tot}</p>
         // `;
-        let cardHtml = `
-            <h3>${index + 1}. ${player.name}</h3>
-        `;
+        let cardHtml = ``
+        if(index == 0){
+            cardHtml = `
+                <h3><span class="big_emoji">🤡</span><br>${player.name}</h3>
+            `;
+        }else{
+            cardHtml = `
+                <h3>${index + 1}. ${player.name}</h3>
+            `;
+        }
 
         if (what_day_is_it >= 1) {
             cardHtml += `<p>G1: ${(player.stats_g1[18] * pdkWeights[18])}</p>`;
