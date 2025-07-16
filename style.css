@@ -856,7 +856,7 @@ td { /* tutto serve per sfondo immagine*/
     margin: 0 auto;
 }
 /* On smaller screens (mobile) */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
     .fanta_gonfalone_24 img {
         width: 90%;
     }
