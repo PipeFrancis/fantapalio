@@ -847,3 +847,17 @@ td { /* tutto serve per sfondo immagine*/
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
+.fanta_gonfalone_24 img {
+    width: 100%;
+    max-width: 600px; /* Optional: limits size on large screens */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+/* On smaller screens (mobile) */
+@media screen and (max-width: 768px) {
+    .fanta_gonfalone_24 img {
+        width: 80%;
+    }
+}
