@@ -26,6 +26,7 @@ target_files = [
     "rules/rules.html",
     "t_rankings_by_game/t_rankings_by_game.html",
     "p_rankings_by_game/p_rankings_by_game.html",
+    "hall_of_fame/hall_of_fame.html",
 
     "script.js",
     "boxscores/boxscores.js",
