@@ -845,7 +845,7 @@ td { /* tutto serve per sfondo immagine*/
 }
 .margin_top_and_bottom{
     margin-top: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .fanta_gonfalone_24 img {
@@ -860,4 +860,11 @@ td { /* tutto serve per sfondo immagine*/
     .fanta_gonfalone_24 img {
         width: 90%;
     }
+}
+.hof_stemmi_container{
+    display: flex;
+    justify-content: center;
+}
+.hof_stemma{
+    max-width: 200px;
 }
