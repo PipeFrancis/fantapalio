@@ -861,10 +861,22 @@ td { /* tutto serve per sfondo immagine*/
         width: 90%;
     }
 }
-.hof_stemmi_container{
+.hof_stemmi_container {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* centers the whole group */
+    gap: 40px; /* custom spacing between logos */
+    flex-wrap: wrap; /* allows wrap on smaller screens */
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-.hof_stemma{
-    max-width: 200px;
+
+.hof_stemma {
+    flex: 0 0 auto; /* prevent logos from shrinking */
+    max-width: 150px;
+}
+
+.hof_stemma img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
