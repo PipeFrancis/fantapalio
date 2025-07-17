@@ -861,17 +861,21 @@ td { /* tutto serve per sfondo immagine*/
         width: 90%;
     }
 }
+ /*STEMMI HOF */
+
 .hof_stemmi_container {
     display: flex;
-    justify-content: center; /* centers the whole group */
-    gap: 40px; /* custom spacing between logos */
-    flex-wrap: wrap; /* allows wrap on smaller screens */
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: nowrap; /* Keep them on the same line */
+    overflow-x: auto;   /* Allow horizontal scroll on very small screens if needed */
     margin-top: 20px;
     margin-bottom: 20px;
+    padding: 0 10px;
 }
 
 .hof_stemma {
-    flex: 0 0 auto; /* prevent logos from shrinking */
+    flex: 0 0 auto;
     max-width: 150px;
 }
 
@@ -879,4 +883,15 @@ td { /* tutto serve per sfondo immagine*/
     width: 100%;
     height: auto;
     display: block;
+}
+
+/* Responsive adjustment for smaller screens */
+@media screen and (max-width: 600px) {
+    .hof_stemma {
+        max-width: 80px; /* Smaller logos on mobile */
+    }
+
+    .hof_stemmi_container {
+        gap: 20px; /* Smaller gap between logos on mobile */
+    }
 }
