@@ -72,7 +72,14 @@ const rione_type = {
     chiosco_semi:0,
     chiosco_td3:0,
     chiosco_final:0,
-    chiosco_tot:0
+    chiosco_tot:0,
+
+    g1: 0, //utilizzati per classifica team by game
+    g2: 0, //utilizzati per classifica team by game
+    g3: 0,//utilizzati per classifica team by game
+    semi: 0, //utilizzati per classifica team by game
+    td3: 0, //utilizzati per classifica team by game
+    final: 0 //utilizzati per classifica team by game
     
 };
 
@@ -430,6 +437,8 @@ const EST25 = { ...rione_type,
     semi_bonus: 0, //inutilizzati
     final_bonus: 0, //inutilizzati
 
+
+
     chiosco_bonus: 0,  
     classifica_bonus: 0,
     final_points: 0,
@@ -481,15 +490,13 @@ EST25.chiosco_semi = 1860 - 1300; // 560
 SUD25.chiosco_semi = 1298 - 1075; // 223
 NORD25.chiosco_semi = 1136 - 875; // 261
 
-NORD25.chiosco_td3 = 0;
-SUD25.chiosco_td3 = 0;
-WEST25.chiosco_td3 = 0;
-EST25.chiosco_td3 = 0;
+    // manca td3 skippato dato preciso
 
-NORD25.chiosco_final = 0;
-SUD25.chiosco_final = 0;
-WEST25.chiosco_final = 0;
-EST25.chiosco_final = 0;
+WEST25.chiosco_final = 2730 - 1791;
+EST25.chiosco_final = 2970 - 1860;
+SUD25.chiosco_final = 1934 - 1298;
+NORD25.chiosco_final = 1848 - 1136;
+
 // end BIRRE CHIOSCO
 
 // BONUS COPPA CHIOSCO PIAZZAMENTO RIONI
@@ -501,7 +508,7 @@ EST25.chiosco_bonus = 10;
 // BONUS CLASSIFICA RIONI
 NORD25.classifica_bonus = 10;
 SUD25.classifica_bonus = 5;
-WEST25.classifica_bonus = 10;
+WEST25.classifica_bonus = 20;
 EST25.classifica_bonus = 10;
 
 //creazione array rioni e calcolo totale birre al chiosco e calcolo totale bonus classifica

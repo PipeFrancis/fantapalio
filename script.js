@@ -1,4 +1,4 @@
-import { fantateams , what_day_is_it} from './data250721_0023.js';
+import { fantateams , what_day_is_it} from './data250722_1904.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("teamDetails");
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 totalHtml += `<p>Tiro da 3: <span class="orange_text">${selectedTeam.tot_td3}</span></p>`;
             }
             if (what_day_is_it >= 6) {
-                totalHtml += `<p>Finale: <span class="orange_text">${selectedTeam.tot_final}</span></p>`;
+                totalHtml += `<p>Finale: <span class="orange_text">${selectedTeam.tot_final.toFixed(2)}</span></p>`;
             }
             
             totalHtml += `

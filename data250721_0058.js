@@ -490,15 +490,13 @@ EST25.chiosco_semi = 1860 - 1300; // 560
 SUD25.chiosco_semi = 1298 - 1075; // 223
 NORD25.chiosco_semi = 1136 - 875; // 261
 
-NORD25.chiosco_td3 = 0;
-SUD25.chiosco_td3 = 0;
-WEST25.chiosco_td3 = 0;
-EST25.chiosco_td3 = 0;
+    // manca td3 skippato dato preciso
 
-NORD25.chiosco_final = 0;
-SUD25.chiosco_final = 0;
-WEST25.chiosco_final = 0;
-EST25.chiosco_final = 0;
+WEST25.chiosco_final = 2729 - 1791;
+EST25.chiosco_final = 2933 - 1860;
+SUD25.chiosco_final = 1912 - 1298;
+NORD25.chiosco_final = 1820 - 1136;
+
 // end BIRRE CHIOSCO
 
 // BONUS COPPA CHIOSCO PIAZZAMENTO RIONI
@@ -510,7 +508,7 @@ EST25.chiosco_bonus = 10;
 // BONUS CLASSIFICA RIONI
 NORD25.classifica_bonus = 10;
 SUD25.classifica_bonus = 5;
-WEST25.classifica_bonus = 10;
+WEST25.classifica_bonus = 20;
 EST25.classifica_bonus = 10;
 
 //creazione array rioni e calcolo totale birre al chiosco e calcolo totale bonus classifica
