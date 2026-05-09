@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players25 } from '../data260509_1442.js';
+import { players25 } from '../data260509_1452.js';
 const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -248,7 +248,7 @@ window.onload = () => {
 };
 
 //NEW26
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbye7p9Qix7zoN0bv4jJqCRtVcaXzo1PgXT-F3G8rIoHK8bCACCKJPGZUyeFxZ6JCuWZUA/exec"; 
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwjLSR5j-Bc6N48bcjMzgMJ8NVS-dWiHPSYjSwRr7K_aCalo1lgmoHHg6602_BxKDtyoQ/exec"; 
 
 //NEW26
 async function submitTeam() {
