@@ -932,3 +932,42 @@ td { /* tutto serve per sfondo immagine*/
     color: #999;
     font-style: italic;
 }
+
+#user-info-container {
+    background-color: #2c3e50; /* Replace with your preferred color */
+    padding: 25px;
+    border-radius: 12px;
+    margin: 20px auto;
+    max-width: 500px;
+    
+    /* This makes everything stack vertically */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between each element */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Styling the text "prompts" before the inputs */
+.info-prompt {
+    margin: 0;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Ensure inputs and selects take up the full width */
+#user-info-container input, 
+#user-info-container select {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    width: 100%;
+    box-sizing: border-box; /* Crucial so padding doesn't push width past 100% */
+}
+
+/* The submit button (which we append later via JS) will also follow this flex layout */
+.submit-team-button {
+    width: 100%;
+    cursor: pointer;
+}

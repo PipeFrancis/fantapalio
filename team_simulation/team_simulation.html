@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@300&display=swap" rel="stylesheet">
     <title>Crea Squadra</title>
     <link rel="icon" href="../fantapalio_icon.png">
-    <link rel="stylesheet" href="../style.css?v=260509_1342">
+    <link rel="stylesheet" href="../style.css?v=260509_1357">
 </head>
 <body>
     <div class="background"></div>
@@ -20,8 +20,8 @@
     <main>
         
         <div class="container">
-            <p class="highlighted-text team_simulation_message">Seleziona <b>5</b> giocatori e il rione di appartenenza, hai <b>30$</b> a disposizione.
-                <br>Poi, inserisci il nome della squadra, la tua email, il tuo Nome e Cognome, e indica se ci sarai alla finale per le premiazioni.                
+            <p class="highlighted-text team_simulation_message">Seleziona <b>5</b> giocatori, hai <b>30$</b> a disposizione.
+                <br>Poi, inserisci il tuo rione di appartenenza, il nome della squadra, la tua email, il tuo Nome e Cognome, e indica se ci sarai alla finale per le premiazioni.                
                 <br>Hai tempo fino a <b>domenica sera alle 20:00</b>.
             </p>
             
@@ -35,41 +35,41 @@
                 <p><em>Team vuoto</em></p>
             </div>
             <div id="user-info">
-                <!-- 1. Rione Selection -->
-                <label for="rioneInput">Rione:</label>
-                <select id="rioneInput">
-                    <option value="" disabled selected>Seleziona Rione</option>
-                    <option value="NORD">NORD</option>
-                    <option value="SUD">SUD</option>
-                    <option value="EST">EST</option>
-                    <option value="WEST">WEST</option>
-                </select>
+                <div id="user-info-container">
+                    <!-- 1. Rione Selection -->
+                    <p class="info-prompt">Seleziona il tuo Rione:</p>
+                    <select id="rioneInput">
+                        <option value="" disabled selected>Scegli...</option>
+                        <option value="NORD">NORD</option>
+                        <option value="SUD">SUD</option>
+                        <option value="EST">EST</option>
+                        <option value="WEST">WEST</option>
+                    </select>
 
-                <!-- 2. Team Name -->
-                <label for="teamNameInput">Nome della Squadra:</label>
-                <input type="text" id="teamNameInput" placeholder="Inserisci nome team" class="form-input">
+                    <!-- 2. Team Name -->
+                    <input type="text" id="teamNameInput" placeholder="Nome fantasquadra" class="form-input">
 
-                <!-- 3. Email -->
-                <label for="emailInput">Email:</label>
-                <input type="email" id="emailInput" placeholder="latua@email.com" class="form-input">
+                    <!-- 3. Email -->
+                    <input type="email" id="emailInput" placeholder="La tua email" class="form-input">
 
-                <!-- 4. Nome e Cognome -->
-                <label for="fullNameInput">Nome e Cognome:</label>
-                <input type="text" id="fullNameInput" placeholder="Mario Rossi" class="form-input">
+                    <!-- 4. Nome e Cognome -->
+                    <input type="text" id="fullNameInput" placeholder="Nome Cognome" class="form-input">
 
-                <!-- 5. Presence Selection -->
-                <label for="attendanceInput">Sarai presente alle premiazioni finali sabato 18 luglio?</label>
-                <select id="attendanceInput">
-                    <option value="SI">Sì</option>
-                    <option value="NO">No</option>
-                </select>
+                    <p class="info-prompt">Nome, Cognome e e-mail saranno utilizzati solo nel caso vincessi il FantaPalio per la consegna del premio simbolico. Tutti i tuoi dati personali saranno eliminati alla fine della settimana del Palio dei Rioni.</p>
+                    <!-- 5. Presence Selection -->
+                    <p class="info-prompt">Sarai presente alle premiazioni finali sabato 18 luglio?</p>
+                    <select id="attendanceInput">
+                        <option value="SI">Sì</option>
+                        <option value="NO">No</option>
+                    </select>
+                </div>
             </div>
             
         </div>
         <div class="button-container">
             <a href="../index.html"><button class="rectangle-button">Indietro</button></a>
         </div>
-        <script type="module" src="team_simulation.js?v=260509_1342"></script>
+        <script type="module" src="team_simulation.js?v=260509_1357"></script>
     </main>
     <!--
     <footer>
