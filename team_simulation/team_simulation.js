@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players25 } from '../data260509_1316.js';
+import { players25 } from '../data260509_1318.js';
 const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -131,7 +131,7 @@ function renderTeam() {
                 // NEW 26 Inside your if (selectedPlayers.length === 5) block:
                 const submitBtn = document.createElement('button');
                 submitBtn.id = 'submitTeamBtn';
-                submitBtn.textContent = '<b>Invia Squadra<b><br>e attendi il messaggio di conferma';
+                submitBtn.textContent = 'Invia Squadra e aspetta il messaggio di conferma';
                 submitBtn.classList.add('submit-team-button'); // Use your existing button style
                 submitBtn.style.marginTop = '20px';
                 submitBtn.addEventListener('click', submitTeam);
@@ -275,7 +275,7 @@ async function submitTeam() {
     // Show a loading state
     const submitBtn = document.getElementById('submitTeamBtn');
     submitBtn.disabled = true;
-    submitBtn.textContent = "Invio in corso...";
+    submitBtn.textContent = "Invio in corso, aspetta...";
 
     try {
         // We use mode: 'no-cors' for Google Apps Script to avoid browser blocks
