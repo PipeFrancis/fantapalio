@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players25 } from '../data260509_1246.js';
+import { players25 } from '../data260509_1257.js';
 const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -58,6 +58,7 @@ function renderTeam() {
     const textb4link = document.getElementById('textb4link');
     const submitBtn = document.getElementById('submitTeamBtn');
     const messageContainer = document.getElementById('messageContainerLink');
+    const userInfo = document.getElementById('user-info'); 
 
     if (selectedPlayers.length === 0) {
         teamContainer.innerHTML = '<p><em>Team vuoto</em></p>';
@@ -135,7 +136,8 @@ function renderTeam() {
                 submitBtn.style.marginTop = '20px';
                 submitBtn.addEventListener('click', submitTeam);
 
-                newValidMessage.parentNode.insertBefore(submitBtn, newValidMessage.nextSibling);
+                // newValidMessage.parentNode.insertBefore(submitBtn, newValidMessage.nextSibling); old was putting it before the info requests
+                userInfo.appendChild(newSubmitBtn);
             }
         } else {
             if (validMessage) {
