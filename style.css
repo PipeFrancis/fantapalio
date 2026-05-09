@@ -984,16 +984,16 @@ td { /* tutto serve per sfondo immagine*/
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
-    background-color: #34495e; /* Default dark color */
-    color: white;
+    background-color: white; /* Default dark color */
+    color: var(--main-color1); 
     transition: all 0.2s ease;
 }
 
 /* Individual Rione Colors (matching your cards) */
-.btn-nord:hover, .btn-nord.active { background-color: #2980b9; border-color: white; }
-.btn-sud:hover, .btn-sud.active { background-color: #c0392b; border-color: white; }
-.btn-est:hover, .btn-est.active { background-color: #27ae60; border-color: white; }
-.btn-west:hover, .btn-west.active { background-color: #f39c12; border-color: white; }
+.btn-nord:hover, .btn-nord.active { background-color:  var(--nord-color1); border-color: var(--nord-color2);  color: var(--nord-color2); }
+.btn-west:hover, .btn-west.active { background-color:  var(--west-color1); border-color: var(--west-color2);  color: var(--west-color2); }
+.btn-est:hover, .btn-est.active { background-color:  var(--est-color1); border-color: var(--est-color2);  color: var(--est-color3); }
+.btn-sud:hover, .btn-sud.active { background-color:  var(--sud-color1); border-color: var(--sud-color2);  color: var(--sud-color3); }
 
 /* Dim the buttons that aren't selected */
 .rione-btn.inactive {
