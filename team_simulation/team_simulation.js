@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players25 } from '../data260509_1402.js';
+import { players25 } from '../data260509_1414.js';
 const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -248,7 +248,7 @@ window.onload = () => {
 };
 
 //NEW26
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyXgZKySkkNLQkWiiRegHkpqVR7U-isr819qXJuVoDOSNqooHuX7yvxzWIAY7jzPWQw1w/exec"; 
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxgnqWTpPWeCZFEQjvRznjY_I2Jb1AJlaNfWcZ5RzJ3qG3oLevFHbZ8jp2daT8S4H7H6Q/exec"; 
 
 //NEW26
 async function submitTeam() {
@@ -281,7 +281,7 @@ async function submitTeam() {
 
     const submitBtn = document.getElementById('submitTeamBtn');
     submitBtn.disabled = true;
-    submitBtn.textContent = "Invio in corso...";
+    submitBtn.textContent = "Invio in corso, aspetta...";
 
     try {
         await fetch(SCRIPT_URL, {
@@ -292,7 +292,7 @@ async function submitTeam() {
             body: JSON.stringify(payload)
         });
         
-        alert("Squadra registrata con successo!");
+        alert("Squadra registrata con successo, ti arriverà una email di conferma!");
         window.location.reload(); 
     } catch (error) {
         console.error("Error!", error);
