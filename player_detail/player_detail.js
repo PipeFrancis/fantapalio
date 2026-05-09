@@ -3,7 +3,7 @@
 // se si cambiano array di stats è da cambiare anche questo codice
 
 
-import { players, pdkWeights, td3Weights, what_day_is_it, td3_bonus_passadaprimoultimo } from '../data260509_1642.js';
+import { players, pdkWeights, td3Weights, what_day_is_it, td3_bonus_passadaprimoultimo } from '../data260509_1645.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("playerDetails");
