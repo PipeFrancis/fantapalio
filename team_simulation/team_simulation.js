@@ -1,11 +1,13 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players25 } from '../data260509_1234.js';
+import { players25 } from '../data260509_1246.js';
 const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
 let selectedPlayers = [];
 let totalCost = 0;
 const maxCredits = 30; // Massimo credito disponibile per il team
+
+const formlinkused = 0;
 
 // Funzione per aggiungere un giocatore al team
 function addPlayer(player) {
@@ -97,34 +99,34 @@ function renderTeam() {
                 
                 // newValidMessage.parentNode.insertBefore(newSignupLink, newValidMessage.nextSibling);
 
+                if(formlinkused) {
+                    // Create container for the message
+                    const messageContainerLink = document.createElement('p');
+                    messageContainerLink.classList.add('highlighted-text');
+                    messageContainerLink.id = 'messageContainerLink';
 
-                 // Create container for the message
-                const messageContainerLink = document.createElement('p');
-                messageContainerLink.classList.add('highlighted-text');
-                messageContainerLink.id = 'messageContainerLink';
+                    // Add plain text
+                    // const plainTextB4link = document.createTextNode('Non hai ancora registrato la squadra. <span class="orange_text">Ricordati</span> i giocatori selezionati e ');
+                    const textb4link = document.createElement('span');
+                    textb4link.id = 'textb4link';
+                    textb4link.innerHTML = 'Non hai ancora registrato la squadra. <span class="orange_text">Ricordati</span> i giocatori selezionati e ';
+                    // messageContainerLink.innerHTML = 'Non hai ancora registrato la squadra. <span class="orange_text">Ricordati</span> i giocatori selezionati e ';
+                    // Create the link
+                    const signupLink = document.createElement('a');
+                    signupLink.classList.add('registrationlink');
+                    signupLink.href = "https://docs.google.com/forms/d/e/1FAIpQLSe3fKik12LNEV4ZggWzvRN1ueC6tBCAwZVzjOINZ7etyKp91A/viewform?usp=header";
+                    signupLink.target = "_blank";
+                    signupLink.textContent = 'compila il modulo di iscrizione';
+                    signupLink.id = 'signupLink';
 
-                // Add plain text
-                // const plainTextB4link = document.createTextNode('Non hai ancora registrato la squadra. <span class="orange_text">Ricordati</span> i giocatori selezionati e ');
-                const textb4link = document.createElement('span');
-                textb4link.id = 'textb4link';
-                textb4link.innerHTML = 'Non hai ancora registrato la squadra. <span class="orange_text">Ricordati</span> i giocatori selezionati e ';
-                // messageContainerLink.innerHTML = 'Non hai ancora registrato la squadra. <span class="orange_text">Ricordati</span> i giocatori selezionati e ';
-                // Create the link
-                const signupLink = document.createElement('a');
-                signupLink.classList.add('registrationlink');
-                signupLink.href = "https://docs.google.com/forms/d/e/1FAIpQLSe3fKik12LNEV4ZggWzvRN1ueC6tBCAwZVzjOINZ7etyKp91A/viewform?usp=header";
-                signupLink.target = "_blank";
-                signupLink.textContent = 'compila il modulo di iscrizione';
-                signupLink.id = 'signupLink';
-
-                // Append text and link to the container
-                // messageContainerLink.appendChild(plainTextB4link);
-                messageContainerLink.appendChild(textb4link);
-                messageContainerLink.appendChild(signupLink);
-
-                // Insert the container after the valid message
-                newValidMessage.parentNode.insertBefore(messageContainerLink, newValidMessage.nextSibling);
-
+                    // Append text and link to the container
+                    // messageContainerLink.appendChild(plainTextB4link);
+                    messageContainerLink.appendChild(textb4link);
+                    messageContainerLink.appendChild(signupLink);
+                
+                    // Insert the container after the valid message
+                    newValidMessage.parentNode.insertBefore(messageContainerLink, newValidMessage.nextSibling);
+                }
                 // NEW 26 Inside your if (selectedPlayers.length === 5) block:
                 const submitBtn = document.createElement('button');
                 submitBtn.id = 'submitTeamBtn';

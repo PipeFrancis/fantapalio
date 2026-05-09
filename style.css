@@ -903,3 +903,32 @@ td { /* tutto serve per sfondo immagine*/
     height: auto;
     display: block;
 }
+/* NEW26 forms for nomesquadra, email, nomecognome */
+.form-input {
+    display: block;
+    width: 280px; /* Slightly wider than the button for better typing space */
+    max-width: 90%;
+    margin: 15px auto; /* Centers them and adds space between fields */
+    padding: 12px 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid var(--main-color3); /* Matching your button border */
+    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency looks nice on backgrounds */
+    color: #333;
+    outline: none; /* Removes the default blue highlight */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* This makes the field "glow" when the user clicks inside it */
+.form-input:focus {
+    border-color: var(--main-color1);
+    box-shadow: 0 0 8px rgba(var(--main-color1-rgb), 0.3); 
+    background-color: #ffffff;
+}
+
+/* Styling the placeholder text */
+.form-input::placeholder {
+    color: #999;
+    font-style: italic;
+}
