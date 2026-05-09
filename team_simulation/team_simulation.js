@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players25 } from '../data260509_1218.js';
+import { players25 } from '../data260509_1225.js';
 const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -54,6 +54,7 @@ function renderTeam() {
     const validMessage = document.getElementById('validMessage');
     const signupLink = document.getElementById('signupLink');
     const textb4link = document.getElementById('textb4link');
+    const submitBtn = document.getElementById('submitTeamBtn');
     const messageContainer = document.getElementById('messageContainerLink');
 
     if (selectedPlayers.length === 0) {
@@ -128,7 +129,7 @@ function renderTeam() {
                 const submitBtn = document.createElement('button');
                 submitBtn.id = 'submitTeamBtn';
                 submitBtn.textContent = 'Invia Squadra';
-                submitBtn.classList.add('rectangle-button'); // Use your existing button style
+                submitBtn.classList.add('submit-team-button'); // Use your existing button style
                 submitBtn.style.marginTop = '20px';
                 submitBtn.addEventListener('click', submitTeam);
 
