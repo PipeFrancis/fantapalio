@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players25 } from '../data260509_1452.js';
+import { players25 } from '../data260509_1603.js';
 const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -7,7 +7,8 @@ let selectedPlayers = [];
 let totalCost = 0;
 const maxCredits = 30; // Massimo credito disponibile per il team
 
-const formlinkused = 0;
+const formlinkused = 1;
+const directregistration = 1;
 
 // Funzione per aggiungere un giocatore al team
 function addPlayer(player) {
@@ -128,16 +129,18 @@ function renderTeam() {
                     // Insert the container after the valid message
                     newValidMessage.parentNode.insertBefore(messageContainerLink, newValidMessage.nextSibling);
                 }
-                // NEW 26 Inside your if (selectedPlayers.length === 5) block:
-                const submitBtn = document.createElement('button');
-                submitBtn.id = 'submitTeamBtn';
-                submitBtn.textContent = 'Invia Squadra e aspetta il messaggio di conferma';
-                submitBtn.classList.add('submit-team-button'); // Use your existing button style
-                submitBtn.style.marginTop = '20px';
-                submitBtn.addEventListener('click', submitTeam);
+                if(directregistration) {
+                    // NEW 26 Inside your if (selectedPlayers.length === 5) block:
+                    const submitBtn = document.createElement('button');
+                    submitBtn.id = 'submitTeamBtn';
+                    submitBtn.textContent = 'Invia Squadra e aspetta il messaggio di conferma';
+                    submitBtn.classList.add('submit-team-button'); // Use your existing button style
+                    submitBtn.style.marginTop = '20px';
+                    submitBtn.addEventListener('click', submitTeam);
 
-                // newValidMessage.parentNode.insertBefore(submitBtn, newValidMessage.nextSibling); old was putting it before the info requests
-                userInfo.appendChild(submitBtn);
+                    // newValidMessage.parentNode.insertBefore(submitBtn, newValidMessage.nextSibling); old was putting it before the info requests
+                    userInfo.appendChild(submitBtn);
+                }
             }
         } else {
             if (validMessage) {
