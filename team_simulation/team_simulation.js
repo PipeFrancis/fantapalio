@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players25 } from '../data260509_1632.js';
+import { players25 } from '../data260509_1642.js';
 const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -282,8 +282,28 @@ async function submitTeam() {
     const attendance = document.getElementById('attendanceInput').value;
 
     // Validation check for all fields
-    if (!rione || !teamName || !email || !fullName) {
-        alert("Per favore, compila tutti i campi richiesti.");
+    // if (!rione || !teamName || !email || !fullName || !attendance) {
+    //     alert("Per favore, compila tutti i campi richiesti, forse manca il rione.");
+    //     return;
+    // }
+    if (!rione) {
+        alert("Per favore, compila tutti i campi richiesti, forse manca il rione.");
+        return;
+    }
+    if (!teamName || teamName.trim() === "") {
+        alert("Per favore, compila tutti i campi richiesti, forse manca il nome della squadra.");
+        return;
+    }
+    if (!email || !email.includes("@")) {
+        alert("Per favore, compila tutti i campi richiesti, forse manca l' email.");
+        return;
+    }
+    if (!fullName || fullName.trim() === "") {
+       alert("Per favore, compila tutti i campi richiesti, forse mancano nome e cognome.");
+        return;
+    }
+    if (!attendance) {
+        alert("Per favore, indica se ci sarai alle premiazioni dopo la finale.");
         return;
     }
 

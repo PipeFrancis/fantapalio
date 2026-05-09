@@ -981,7 +981,7 @@ td { /* tutto serve per sfondo immagine*/
 .rione-btn {
     padding: 15px;
     border: 2px solid transparent;
-    border-radius: 8px;
+    border-radius: 20px;
     font-weight: bold;
     cursor: pointer;
     background-color: white; /* Default dark color */
