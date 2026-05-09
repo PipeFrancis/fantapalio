@@ -1,7 +1,7 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players25 } from '../data260509_1054.js';
+import { players25 } from '../data260509_1150.js';
 const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
-
+// https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
 let selectedPlayers = [];
 let totalCost = 0;
@@ -120,6 +120,16 @@ function renderTeam() {
 
                 // Insert the container after the valid message
                 newValidMessage.parentNode.insertBefore(messageContainerLink, newValidMessage.nextSibling);
+
+                // NEW 26 Inside your if (selectedPlayers.length === 5) block:
+                const submitBtn = document.createElement('button');
+                submitBtn.id = 'submitTeamBtn';
+                submitBtn.textContent = 'Invia Squadra';
+                submitBtn.classList.add('rectangle-button'); // Use your existing button style
+                submitBtn.style.marginTop = '20px';
+                submitBtn.addEventListener('click', submitTeam);
+
+                newValidMessage.parentNode.insertBefore(submitBtn, newValidMessage.nextSibling);
             }
         } else {
             if (validMessage) {
@@ -226,7 +236,56 @@ window.onload = () => {
     populatePlayersList();
 };
 
+//NEW26
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec"; 
 
+//NEW26
+async function submitTeam() {
+    const teamName = document.getElementById('teamNameInput').value;
+    const email = document.getElementById('emailInput').value;
+
+    if (!teamName || !email) {
+        alert("Per favore, inserisci il nome del team e la tua email.");
+        return;
+    }
+
+    if (selectedPlayers.length !== 5) {
+        alert("Devi selezionare esattamente 5 giocatori.");
+        return;
+    }
+
+    const payload = {
+        teamName: teamName,
+        email: email,
+        players: selectedPlayers,
+        totalCost: totalCost
+    };
+
+    // Show a loading state
+    const submitBtn = document.getElementById('submitTeamBtn');
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Invio in corso...";
+
+    try {
+        // We use mode: 'no-cors' for Google Apps Script to avoid browser blocks
+        await fetch(SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors', 
+            cache: 'no-cache',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        });
+        
+        alert("Squadra registrata con successo!");
+        // Optional: redirect or clear the team
+        window.location.reload(); 
+    } catch (error) {
+        console.error("Error!", error);
+        alert("Errore durante l'invio. Riprova.");
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Invia Squadra";
+    }
+}
 
 
 
