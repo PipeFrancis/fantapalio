@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players25 } from '../data260509_1603.js';
+import { players25 } from '../data260509_1623.js';
 const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -248,6 +248,26 @@ function populatePlayersList() {
 // Inizializza la pagina
 window.onload = () => {
     populatePlayersList();
+
+    // --- NEW RIONE BUTTON LOGIC ---
+    const rioneButtons = document.querySelectorAll('.rione-btn');
+    const hiddenInput = document.getElementById('rioneInput');
+
+    rioneButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove 'active' class from all buttons
+            rioneButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add 'active' class to the clicked button
+            this.classList.add('active');
+
+            // Update the hidden input value for the submit function
+            hiddenInput.value = this.getAttribute('data-rione');
+            
+            // Optional: log to console to verify it's working
+            console.log("Rione selezionato:", hiddenInput.value);
+        });
+    });
 };
 
 //NEW26

@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@300&display=swap" rel="stylesheet">
     <title>Crea Squadra</title>
     <link rel="icon" href="../fantapalio_icon.png">
-    <link rel="stylesheet" href="../style.css?v=260509_1603">
+    <link rel="stylesheet" href="../style.css?v=260509_1623">
 </head>
 <body>
     <div class="background"></div>
@@ -38,14 +38,23 @@
             <div id="user-info">
                 <div id="user-info-container">
                     <!-- 1. Rione Selection -->
-                    <p class="info-prompt">Rione di appartenenza (se sei di Codroipo, scegli il tuo rione. I non codroipesi possono scegliere in base alla posizione geografica della residenza rispetto a Codroipo).</p>
+                    <!-- <p class="info-prompt">Rione di appartenenza (se sei di Codroipo, scegli il tuo rione. I non codroipesi possono scegliere in base alla posizione geografica della residenza rispetto a Codroipo).</p>
                     <select id="rioneInput">
                         <option value="" disabled selected>Scegli...</option>
                         <option value="NORD">NORD</option>
                         <option value="SUD">WEST</option>
                         <option value="EST">EST</option>
                         <option value="WEST">SUD</option>
-                    </select>
+                    </select> -->
+                    <p class="info-prompt">Rione di appartenenza (se sei di Codroipo, scegli il tuo rione. I non codroipesi possono scegliere in base alla posizione geografica della residenza rispetto a Codroipo).</p>
+                    <div id="rione-selector-grid">
+                        <button type="button" class="rione-btn btn-nord" data-rione="NORD">NORD</button>
+                        <button type="button" class="rione-btn btn-sud" data-rione="SUD">SUD</button>
+                        <button type="button" class="rione-btn btn-est" data-rione="EST">EST</button>
+                        <button type="button" class="rione-btn btn-west" data-rione="WEST">WEST</button>
+                    </div>
+                    <!-- Hidden input to store the value for your submitTeam function -->
+                    <input type="hidden" id="rioneInput" value="">
 
                     <!-- 2. Team Name -->
                     <input type="text" id="teamNameInput" placeholder="Nome fantasquadra" class="form-input">
@@ -70,7 +79,7 @@
         <div class="button-container">
             <a href="../index.html"><button class="rectangle-button">Indietro</button></a>
         </div>
-        <script type="module" src="team_simulation.js?v=260509_1603"></script>
+        <script type="module" src="team_simulation.js?v=260509_1623"></script>
     </main>
     <!--
     <footer>

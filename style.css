@@ -971,3 +971,32 @@ td { /* tutto serve per sfondo immagine*/
     width: 100%;
     cursor: pointer;
 }
+#rione-selector-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.rione-btn {
+    padding: 15px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #34495e; /* Default dark color */
+    color: white;
+    transition: all 0.2s ease;
+}
+
+/* Individual Rione Colors (matching your cards) */
+.btn-nord:hover, .btn-nord.active { background-color: #2980b9; border-color: white; }
+.btn-sud:hover, .btn-sud.active { background-color: #c0392b; border-color: white; }
+.btn-est:hover, .btn-est.active { background-color: #27ae60; border-color: white; }
+.btn-west:hover, .btn-west.active { background-color: #f39c12; border-color: white; }
+
+/* Dim the buttons that aren't selected */
+.rione-btn.inactive {
+    opacity: 0.5;
+    filter: grayscale(0.5);
+}
