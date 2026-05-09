@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@300&display=swap" rel="stylesheet">
     <title>Crea Squadra</title>
     <link rel="icon" href="../fantapalio_icon.png">
-    <link rel="stylesheet" href="../style.css?v=260509_1318">
+    <link rel="stylesheet" href="../style.css?v=260509_1342">
 </head>
 <body>
     <div class="background"></div>
@@ -34,16 +34,42 @@
                 <!-- Qui verranno aggiunti dinamicamente i giocatori selezionati -->
                 <p><em>Team vuoto</em></p>
             </div>
-            <div id="user-info" style="margin-top: 20px;">
-                <input type="text" id="teamNameInput" placeholder="Nome della Squadra" class="form-input">
-                <input type="email" id="emailInput" placeholder="La tua Email" class="form-input">
+            <div id="user-info">
+                <!-- 1. Rione Selection -->
+                <label for="rioneInput">Rione:</label>
+                <select id="rioneInput">
+                    <option value="" disabled selected>Seleziona Rione</option>
+                    <option value="NORD">NORD</option>
+                    <option value="SUD">SUD</option>
+                    <option value="EST">EST</option>
+                    <option value="WEST">WEST</option>
+                </select>
+
+                <!-- 2. Team Name -->
+                <label for="teamNameInput">Nome della Squadra:</label>
+                <input type="text" id="teamNameInput" placeholder="Inserisci nome team" class="form-input">
+
+                <!-- 3. Email -->
+                <label for="emailInput">Email:</label>
+                <input type="email" id="emailInput" placeholder="latua@email.com" class="form-input">
+
+                <!-- 4. Nome e Cognome -->
+                <label for="fullNameInput">Nome e Cognome:</label>
+                <input type="text" id="fullNameInput" placeholder="Mario Rossi" class="form-input">
+
+                <!-- 5. Presence Selection -->
+                <label for="attendanceInput">Sarai presente alle premiazioni finali sabato 18 luglio?</label>
+                <select id="attendanceInput">
+                    <option value="SI">Sì</option>
+                    <option value="NO">No</option>
+                </select>
             </div>
             
         </div>
         <div class="button-container">
             <a href="../index.html"><button class="rectangle-button">Indietro</button></a>
         </div>
-        <script type="module" src="team_simulation.js?v=260509_1318"></script>
+        <script type="module" src="team_simulation.js?v=260509_1342"></script>
     </main>
     <!--
     <footer>

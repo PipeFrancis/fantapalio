@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players25 } from '../data260509_1318.js';
+import { players25 } from '../data260509_1342.js';
 const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -248,15 +248,19 @@ window.onload = () => {
 };
 
 //NEW26
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec"; 
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyXgZKySkkNLQkWiiRegHkpqVR7U-isr819qXJuVoDOSNqooHuX7yvxzWIAY7jzPWQw1w/exec"; 
 
 //NEW26
 async function submitTeam() {
+    const rione = document.getElementById('rioneInput').value;
     const teamName = document.getElementById('teamNameInput').value;
     const email = document.getElementById('emailInput').value;
+    const fullName = document.getElementById('fullNameInput').value;
+    const attendance = document.getElementById('attendanceInput').value;
 
-    if (!teamName || !email) {
-        alert("Per favore, inserisci il nome del team e la tua email.");
+    // Validation check for all fields
+    if (!rione || !teamName || !email || !fullName) {
+        alert("Per favore, compila tutti i campi richiesti.");
         return;
     }
 
@@ -266,19 +270,20 @@ async function submitTeam() {
     }
 
     const payload = {
+        rione: rione,
         teamName: teamName,
         email: email,
-        players: selectedPlayers,
+        fullName: fullName,
+        attendance: attendance,
+        players: selectedPlayers.map(p => p.name), // Just names for the sheet
         totalCost: totalCost
     };
 
-    // Show a loading state
     const submitBtn = document.getElementById('submitTeamBtn');
     submitBtn.disabled = true;
-    submitBtn.textContent = "Invio in corso, aspetta...";
+    submitBtn.textContent = "Invio in corso...";
 
     try {
-        // We use mode: 'no-cors' for Google Apps Script to avoid browser blocks
         await fetch(SCRIPT_URL, {
             method: 'POST',
             mode: 'no-cors', 
@@ -288,7 +293,6 @@ async function submitTeam() {
         });
         
         alert("Squadra registrata con successo!");
-        // Optional: redirect or clear the team
         window.location.reload(); 
     } catch (error) {
         console.error("Error!", error);
