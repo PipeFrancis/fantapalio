@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players25 } from '../data260526_2241.js';
+import { players25 } from '../data260526_2252.js';
 const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -276,7 +276,7 @@ window.onload = () => {
 };
 
 //NEW26
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwjLSR5j-Bc6N48bcjMzgMJ8NVS-dWiHPSYjSwRr7K_aCalo1lgmoHHg6602_BxKDtyoQ/exec"; 
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzwUaTw0COjgjKWbNqwZNf2JpApkq0a-xhB-sHub-3vQgCCuD4zJosdMsMJFyslWWs/exec"; 
 
 //NEW26
 async function submitTeam() {
@@ -323,7 +323,8 @@ async function submitTeam() {
         email: email,
         fullName: fullName,
         attendance: attendance,
-        players: selectedPlayers.map(p => p.name), // Just names for the sheet
+        // Inviamo sia il nome che il costo per ogni giocatore
+        players: selectedPlayers.map(p => ({ name: p.name, cost: p.cost })), 
         totalCost: totalCost
     };
 
