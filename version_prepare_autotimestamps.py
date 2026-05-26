@@ -37,37 +37,41 @@ target_files = [
     "game_results/game_results.js",
 ]
 
-# --- STEP 1: AUTOMATICALLY FIND THE OLD TIMESTAMP ---
+# --- STEP 1: DEBUG VERSION WITH FILE TRACKING ---
 print("Scanning files to detect the old timestamp...")
 timestamp_counts = {}
-# Regex to match the YYMMDD_hhmm pattern (6 digits, underscore, 4 digits)
-timestamp_pattern = re.compile(r"\b\d{6}_\d{4}\b")
+timestamp_pattern = re.compile(r"\d{6}_\d{4}")  # Removed \b to catch everything
 
 for file_path in target_files:
     if os.path.exists(file_path):
         with open(file_path, "r", encoding="utf-8") as f:
             content = f.read()
             matches = timestamp_pattern.findall(content)
-            # Track unique timestamps found *per file* to avoid inflating counts
-            for match in set(matches):
-                timestamp_counts[match] = timestamp_counts.get(match, 0) + 1
 
-# Filter timestamps that appear in more than 10 files
-valid_old_timestamps = [
-    ts for ts, count in timestamp_counts.items() if count > 10
-]
+            if matches:
+                # Track unique timestamps per file
+                for match in set(matches):
+                    timestamp_counts[match] = (
+                        timestamp_counts.get(match, 0) + 1
+                    )
+                    # --- THIS IS THE NEW PRINT LINE ---
+                    print(
+                        f"✅ Found '{match}' in: {file_path} (Total files with this TS: {timestamp_counts[match]})"
+                    )
+            else:
+                print(
+                    f"   (No timestamp pattern found in existing file: {file_path})"
+                )
+    else:
+        print(f"❌ (File physically missing on disk: {file_path})")
 
-if not valid_old_timestamps:
-    print(
-        "❌ Error: Could not automatically determine the old timestamp."
-    )
-    print("No timestamp pattern found in more than 10 files.")
+if not timestamp_counts:
+    print("\n❌ Error: No timestamps found anywhere.")
     exit()
 
-# If multiple patterns match, pick the one that appeared the most
 OLD_TIMESTAMP = max(timestamp_counts, key=timestamp_counts.get)
 print(
-    f"Found old timestamp: '{OLD_TIMESTAMP}' (present in {timestamp_counts[OLD_TIMESTAMP]} files)"
+    f"\nFound old timestamp: '{OLD_TIMESTAMP}' (present in {timestamp_counts[OLD_TIMESTAMP]} files)"
 )
 
 
