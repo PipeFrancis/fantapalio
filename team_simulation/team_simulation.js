@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players25 } from '../data260526_2302.js';
+import { players25 } from '../data260526_2307.js';
 const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -135,17 +135,19 @@ function renderTeam() {
                     newValidMessage.parentNode.insertBefore(messageContainerLink, newValidMessage.nextSibling);
                 }
                 if(directregistration) {
-                    // NEW 26 Inside your if (selectedPlayers.length === 5) block:
-                    const submitBtn = document.createElement('button');
-                    submitBtn.id = 'submitTeamBtn';
-                    submitBtn.textContent = 'Invia Squadra e aspetta il messaggio di conferma';
-                    submitBtn.classList.add('submit-team-button'); // Use your existing button style
-                    submitBtn.style.marginTop = '20px';
-                    submitBtn.addEventListener('click', submitTeam);
+                // NEW 26 Inside your if (selectedPlayers.length === 5) block:
+                const submitBtn = document.createElement('button');
+                submitBtn.id = 'submitTeamBtn';
+                submitBtn.textContent = 'Invia Squadra e aspetta il messaggio di conferma';
+                submitBtn.classList.add('submit-team-button'); // Use your existing button style
+                submitBtn.style.marginTop = '20px';
+                submitBtn.addEventListener('click', submitTeam);
 
-                    // newValidMessage.parentNode.insertBefore(submitBtn, newValidMessage.nextSibling); old was putting it before the info requests
+                // Safety check: Only append if userInfo element actually exists on the page
+                if (userInfo) {
                     userInfo.appendChild(submitBtn);
                 }
+            }
             }
         } else {
             if (validMessage) {
@@ -254,6 +256,14 @@ function populatePlayersList() {
 window.onload = () => {
     populatePlayersList();
 
+    // --- REMOVE USER INFO FORM IF DIRECT REGISTRATION IS DISABLED ---
+    if (!directregistration) {
+        const userInfo = document.getElementById('user-info');
+        if (userInfo) {
+            userInfo.remove(); // Removes the <div id="user-info"> and all its inputs from the DOM
+        }
+    }
+    
     // --- NEW RIONE BUTTON LOGIC ---
     const rioneButtons = document.querySelectorAll('.rione-btn');
     const hiddenInput = document.getElementById('rioneInput');
