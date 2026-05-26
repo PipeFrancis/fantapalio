@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players25 } from '../data260526_2252.js';
+import { players25 } from '../data260526_2300.js';
 const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -7,7 +7,7 @@ let selectedPlayers = [];
 let totalCost = 0;
 const maxCredits = 30; // Massimo credito disponibile per il team
 
-const formlinkused = 1;
+const formlinkused = 0;
 const directregistration = 1;
 
 // Funzione per aggiungere un giocatore al team
