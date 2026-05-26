@@ -969,7 +969,7 @@ td { /* tutto serve per sfondo immagine*/
 
 /* The submit button (which we append later via JS) will also follow this flex layout */
 .submit-team-button {
-    width: 100%;
+    /* width: 100%; */
     cursor: pointer;
 }
 #rione-selector-grid {
