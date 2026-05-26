@@ -1,5 +1,5 @@
 // Importa player_type e players dal modulo data.js
-import { player_type, players, td3Weights, players24, players25, what_day_is_it, team_not_in_final_1, team_not_in_final_2 } from '../data260526_2330.js';
+import { player_type, players, td3Weights, players24, players25, what_day_is_it, team_not_in_final_1, team_not_in_final_2 } from '../data260526_2332.js';
 console.log("inizio boxscore js"); // inizio
 
 
@@ -511,7 +511,7 @@ function populateTable_totals(team, players) {
         if (player.team === team) {
             let playerRow = '<tr>';
             playerRow += `<td>${player.name}</td>`;
-            playerRow += `<td><strong>${((player.g1 + player.g2 + player.g3 + player.semi + player.final)).toFixed(1)}</strong></td>`; // TOT
+            playerRow += `<td><strong>${((player.g1 + player.g2 + player.g3 + player.semi + player.final)).toFixed(0)}</strong></td>`; // TOT
             playerRow += `<td>${((player.stats_g1[0] + player.stats_g2[0] + player.stats_g3[0] + player.stats_semi[0] + player.stats_final[0]) ).toFixed(0)}</td>`; // PTS
             playerRow += `<td>${((player.stats_g1[9] + player.stats_g2[9] + player.stats_g3[9] + player.stats_semi[9] + player.stats_final[9]) ).toFixed(0)}</td>`; // REB
             playerRow += `<td>${((player.stats_g1[10] + player.stats_g2[10] + player.stats_g3[10] + player.stats_semi[10] + player.stats_final[10]) ).toFixed(0)}</td>`; // ASS
