@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players25 } from '../data260526_2340.js';
+import { players25 } from '../data260601_1911.js';
 const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -87,7 +87,7 @@ function renderTeam() {
         if (selectedPlayers.length === 5) {
             if (!validMessage) {
                 const newValidMessage = document.createElement('p');
-                newValidMessage.textContent = 'VALIDO';
+                newValidMessage.textContent = 'VALIDO, continua sotto';
                 newValidMessage.classList.add('highlighted-text');
                 newValidMessage.classList.add('valid-message');
                 // newValidMessage.style.color = 'green';
