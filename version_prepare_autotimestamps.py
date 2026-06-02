@@ -20,6 +20,7 @@ target_files = [
     "meme_p_rankings/meme_p_rankings.html",
     "rules/rules.html",
     "t_rankings_by_game/t_rankings_by_game.html",
+    "t_rankings_by_league/t_rankings_by_league.html",
     "p_rankings_by_game/p_rankings_by_game.html",
     "hall_of_fame/hall_of_fame.html",
     "script.js",
