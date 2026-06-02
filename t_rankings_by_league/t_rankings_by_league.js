@@ -2,7 +2,7 @@ import {
     fantateam_type,
     NORD, SUD, EST, WEST,
     fantateams
-} from '../data260602_2201.js';
+} from '../data260602_2205.js';
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -81,26 +81,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 `cardclasssoft${team.rione.name}`
             );
 
-            if (index === 0) {
-                card.innerHTML = `
-                    <div class="team-card-header">
-                        <span class="big_emoji">👑</span><br>
-                        ${team.name}
-                    </div>
-                    <div class="team-card-body">
-                        <div class="punteggio-info team_ranking_pdk_tot">
-                            <strong>${team.tot_team.toFixed(2)}</strong>
-                        </div>
-                        ${playerInfoHTML}
-                        <div>
-                            ${team.rione.name}
-                            (<span class="team_ranking_pdk">
-                                ${team.rione.final_points}
-                            </span>)
-                        </div>
-                    </div>
-                `;
-            } else {
+            // if (index === 0) {
+            //     card.innerHTML = `
+            //         <div class="team-card-header">
+            //             <span class="big_emoji">👑</span><br>
+            //             ${team.name}
+            //         </div>
+            //         <div class="team-card-body">
+            //             <div class="punteggio-info team_ranking_pdk_tot">
+            //                 <strong>${team.tot_team.toFixed(2)}</strong>
+            //             </div>
+            //             ${playerInfoHTML}
+            //             <div>
+            //                 ${team.rione.name}
+            //                 (<span class="team_ranking_pdk">
+            //                     ${team.rione.final_points}
+            //                 </span>)
+            //             </div>
+            //         </div>
+            //     `;
+            // } else {
                 card.innerHTML = `
                     <div class="team-card-header">
                         <span class="orange_text">${index + 1}.</span>
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                     </div>
                 `;
-            }
+            // }
 
             teamCardsContainer.appendChild(card);
         });
