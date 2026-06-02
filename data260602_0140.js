@@ -102,6 +102,7 @@ const fantateam_type = {
     tot_final: 0.0,
     tot_team: 0.0,
     team_position_total: 0,
+    league_name: "Nome Lega",
 };
 
 // definizione tipo game_results
@@ -352,6 +353,86 @@ const MattiaLanna25 = createPlayer("Mattia Lanna", 4, "WEST", 0);
 const EmanueleCorleone25 = createPlayer("Emanuele Corleone", 4, "WEST", 0);
 const MatteoMargarit25 = createPlayer("Matteo Margarit", 6, "WEST", 26);
 
+//CREAZIONE GIOCATORI 2026
+const GabrieleMiani26 = createPlayer("Gabriele Miani", 13, "NORD", 14);
+const DavidGaspardo26 = createPlayer("David Gaspardo", 9, "NORD", 5);
+const AlessandroRizzi26 = createPlayer("Alessandro Rizzi", 7, "NORD", 6);
+const MarcoLombardo26 = createPlayer("Marco Lombardo", 7, "NORD", 15);
+const FilippoPasquon26 = createPlayer("Filippo Pasquon", 6, "NORD", 2);
+const VittorioGri26 = createPlayer("Vittorio Gri", 5, "NORD", 7);
+const VittorioBasso26 = createPlayer("Vittorio Basso", 6, "NORD", 8);
+const DanieleGanzit26 = createPlayer("Daniele Ganzit", 5, "NORD", 18);
+const GiacomoSilvestri26 = createPlayer("Giacomo Silvestri", 5, "NORD", 9);
+const MicheleVendrame26 = createPlayer("Michele Vendrame", 5, "NORD", 11);
+const MarcoRizzi26 = createPlayer("Marco Rizzi", 4, "NORD", 10);
+const AntonioGri26 = createPlayer("Antonio Gri", 4, "NORD", 3);
+const FrancescoSchiavone26 = createPlayer("Francesco Schiavone", 4, "NORD", 0);
+const NicolaCollavini26 = createPlayer("Nicola Collavini", 4, "NORD", 1);
+const EnricoBravin26 = createPlayer("Enrico Bravin", 4, "NORD", 16);
+const LeonardoTirelli26 = createPlayer("Leonardo Tirelli", 4, "NORD", 0);
+const FilippoSappa26 = createPlayer("Filippo Sappa", 10, "SUD", 13);
+const AlessandroSant26 = createPlayer("Alessandro Sant", 8, "SUD", 7);
+const GiovanniZanin26 = createPlayer("Giovanni Zanin", 8, "SUD", 19);
+const GiacomoSpagnolo26 = createPlayer("Giacomo Spagnolo", 6, "SUD", 12);
+const PietroSoramel26 = createPlayer("Pietro Soramel", 6, "SUD", 16);
+const GiovanniTonizzo26 = createPlayer("Giovanni Tonizzo", 5, "SUD", 5);
+const EmanueleDaneluzzi26 = createPlayer("Emanuele Daneluzzi", 5, "SUD", 10);
+const LucaSoramel26 = createPlayer("Luca Soramel", 5, "SUD", 2);
+const StefanoPolano26 = createPlayer("Stefano Polano", 5, "SUD", 17);
+const JacopoTomasini26 = createPlayer("Jacopo Tomasini", 5, "SUD", 4);
+const MarcoComisso26 = createPlayer("Marco Comisso", 5, "SUD", 14);
+const DavideFaurlin26 = createPlayer("Davide Faurlin", 4, "SUD", 18);
+const MatteoBazzaro26 = createPlayer("Matteo Bazzaro", 4, "SUD", 6);
+const AlessandroSantin26 = createPlayer("Alessandro Santin", 5, "SUD", 11);
+const AlessandroGalassi26 = createPlayer("Alessandro Galassi", 4, "SUD", 15);
+const PaoloZorzi26 = createPlayer("Paolo Zorzi", 4, "SUD", 9);
+const CristianFedrizzi26 = createPlayer("Cristian Fedrizzi", 5, "SUD", 3);
+const GabrieleAzzarone26 = createPlayer("Gabriele Azzarone", 4, "SUD", 8);
+const FilippoAgnoluzzi26 = createPlayer("Filippo Agnoluzzi", 5, "SUD", 1);
+const GabrieleIndri26 = createPlayer("Gabriele Indri", 10, "EST", 18);
+const MarcoSerrao26 = createPlayer("Marco Serrao", 9, "EST", 8);
+const WilliamIob26 = createPlayer("William Iob", 7, "EST", 12);
+const MattiaMasotti26 = createPlayer("Mattia Masotti", 7, "EST", 13);
+const MassimilianoRossi26 = createPlayer("Massimiliano Rossi", 6, "EST", 25);
+const EnricoSant26 = createPlayer("Enrico Sant", 6, "EST", 0);
+const EugenioDeTina26 = createPlayer("Eugenio De Tina", 5, "EST", 9);
+const EdoardoPicogna26 = createPlayer("Edoardo Picogna", 5, "EST", 14);
+const LorenzoMoro26 = createPlayer("Lorenzo moro", 5, "EST", 17);
+const DavideBroggi26 = createPlayer("Davide Broggi", 4, "EST", 11);
+const AlexMicottis26 = createPlayer("Alex Micottis", 4, "EST", 21);
+const MassimoMasotti26 = createPlayer("Massimo Masotti", 4, "EST", 3);
+const ThomasBaracetti26 = createPlayer("Thomas Baracetti", 4, "EST", 10);
+const LucaGemo26 = createPlayer("Luca Gemo", 4, "EST", 6);
+const MattiaRoiatti26 = createPlayer("Mattia Roiatti", 4, "EST", 23);
+const MauroPerina26 = createPlayer("Mauro Perina", 4, "EST", 1);
+const MatteoGrillo26 = createPlayer("Matteo Grillo", 4, "EST", 4);
+const EmanueleStorace26 = createPlayer("Emanuele Storace", 4, "EST", 7);
+const LucaGrillo26 = createPlayer("Luca Grillo", 4, "EST", 24);
+const MattiaAnedda26 = createPlayer("Mattia Anedda", 4, "EST", 5);
+const SamuelMasotti26 = createPlayer("Samuel Masotti", 4, "EST", 2);
+const DenisVanin26 = createPlayer("Denis Vanin", 4, "EST", 22);
+const MarcoPolo26 = createPlayer("Marco Polo", 4, "EST", 20);
+const MassimilianoMoretti26 = createPlayer("Massimiliano Moretti", 11, "WEST", 22);
+const UmbertoNobile26 = createPlayer("Umberto Nobile", 9, "WEST", 15);
+const LarryTrevisan26 = createPlayer("Larry Trevisan", 8, "WEST", 23);
+const AlessandroCostantini26 = createPlayer("Alessandro Costantini", 7, "WEST", 17);
+const MicheleDeAnna26 = createPlayer("Michele De Anna", 7, "WEST", 20);
+const ChristianZanet26 = createPlayer("Christian Zanet", 6, "WEST", 4);
+const AndreaMoretti26 = createPlayer("Andrea Moretti", 5, "WEST", 24);
+const GiacomoPiacentini26 = createPlayer("Giacomo Piacentini", 5, "WEST", 14);
+const MicheleGorasso26 = createPlayer("Michele Gorasso", 5, "WEST", 25);
+const ValentinoCigainero26 = createPlayer("Valentino Cigainero", 5, "WEST", 13);
+const GiovanniDalFarra26 = createPlayer("Giovanni Dal Farra", 4, "WEST", 7);
+const MiracleObichukwu26 = createPlayer("Miracle Obichukwu", 4, "WEST", 5);
+const LucaDellaLonga26 = createPlayer("Luca Della Longa", 4, "WEST", 3);
+const GiacomoFerigo26 = createPlayer("Giacomo Ferigo", 4, "WEST", 16);
+const DavideParon26 = createPlayer("Davide Paron", 4, "WEST", 7);
+const AlessioFurlan26 = createPlayer("Alessio Furlan", 4, "WEST", 10);
+const MichaelMargarit26 = createPlayer("Michael Margarit", 4, "WEST", 19);
+const SebastianoTonizzo26 = createPlayer("Sebastiano Tonizzo", 4, "WEST", 9);
+const MattiaLanna26 = createPlayer("Mattia Lanna", 4, "WEST", 0);
+const EmanueleCorleone26 = createPlayer("Emanuele Corleone", 4, "WEST", 0);
+const MatteoMargarit26 = createPlayer("Matteo Margarit", 6, "WEST", 26);
 
 // se si crea nuovo giocatore:
 // - aggiungere riga qua
@@ -1796,7 +1877,89 @@ MatteoMargarit25.stats_final            =      [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1,
 // -----------------------------------------------------------------------------------------------
 //                        CREAZIONE ARRAY players E CALCOLO PUNTEGGI FANTA
 // ----------------------------------------------------------------------------------------------- 
- 
+     // 2026: da inserire tutti i players qua sotto dentro array
+const players26 = [
+    GabrieleMiani26,
+    DavidGaspardo26,
+    AlessandroRizzi26,
+    MarcoLombardo26,
+    FilippoPasquon26,
+    VittorioGri26,
+    VittorioBasso26,
+    DanieleGanzit26,
+    GiacomoSilvestri26,
+    MicheleVendrame26,
+    MarcoRizzi26,
+    AntonioGri26,
+    FrancescoSchiavone26,
+    NicolaCollavini26,
+    EnricoBravin26,
+    LeonardoTirelli26,
+    FilippoSappa26,
+    AlessandroSant26,
+    GiovanniZanin26,
+    GiacomoSpagnolo26,
+    PietroSoramel26,
+    GiovanniTonizzo26,
+    EmanueleDaneluzzi26,
+    LucaSoramel26,
+    StefanoPolano26,
+    JacopoTomasini26,
+    MarcoComisso26,
+    DavideFaurlin26,
+    MatteoBazzaro26,
+    AlessandroSantin26,
+    AlessandroGalassi26,
+    PaoloZorzi26,
+    CristianFedrizzi26,
+    GabrieleAzzarone26,
+    FilippoAgnoluzzi26,
+    GabrieleIndri26,
+    MarcoSerrao26,
+    WilliamIob26,
+    MattiaMasotti26,
+    MassimilianoRossi26,
+    EnricoSant26,
+    EugenioDeTina26,
+    EdoardoPicogna26,
+    LorenzoMoro26,
+    DavideBroggi26,
+    AlexMicottis26,
+    MassimoMasotti26,
+    ThomasBaracetti26,
+    LucaGemo26,
+    MattiaRoiatti26,
+    MauroPerina26,
+    MatteoGrillo26,
+    EmanueleStorace26,
+    LucaGrillo26,
+    MattiaAnedda26,
+    SamuelMasotti26,
+    DenisVanin26,
+    MarcoPolo26,
+    MassimilianoMoretti26,
+    UmbertoNobile26,
+    LarryTrevisan26,
+    AlessandroCostantini26,
+    MicheleDeAnna26,
+    ChristianZanet26,
+    AndreaMoretti26,
+    GiacomoPiacentini26,
+    MicheleGorasso26,
+    ValentinoCigainero26,
+    GiovanniDalFarra26,
+    MiracleObichukwu26,
+    LucaDellaLonga26,
+    GiacomoFerigo26,
+    DavideParon26,
+    AlessioFurlan26,
+    MichaelMargarit26,
+    SebastianoTonizzo26,
+    MattiaLanna26,
+    EmanueleCorleone26,
+    MatteoMargarit26
+];
+
     // 2025: da inserire tutti i players qua sotto dentro array
 const players25 = [
     GabrieleMiani25,
@@ -2431,6 +2594,197 @@ const ft2024_ft151 = createFantateam(151, "qwerty", EST, [GionaTell24, LorenzoMo
 
 // const fantateams25 = [ft1, ft5, ft6, ft8, ft9, ft10, ft11, ft12];
 
+// const ft2025_ft1 = createFantateam(1, "ProvaUff1", NORD, [DavidGaspardo25, MarcoLombardo25, AlessioFurlan25, AlessandroGalassi25, SebastianoTonizzo25]);
+// const ft2025_ft2 = createFantateam(2, "Prov2uff", SUD, [FilippoAgnoluzzi25, GabrieleAzzarone25, PaoloZorzi25, MatteoBazzaro25, AlessandroSantin25]);
+// const ft2025_ft3 = createFantateam(3, "Competitiva dai", WEST, [GabrieleMiani25, AlessioFurlan25, MarcoRizzi25, AlessandroSantin25, MattiaRoiatti25]);
+// const ft2025_ft4 = createFantateam(4, "Prova 1", NORD, [AlessandroRizzi25, LeonardoTirelli25, GiacomoPiacentini25, WilliamIob25, CristianFedrizzi25]);
+// const ft2025_ft5 = createFantateam(5, "Prova4uff", SUD, [NicolaCollavini25, GiovanniZanin25, MicheleDeAnna25, MattiaMasotti25, GabrieleAzzarone25]);
+const ft2025_ft6 = createFantateam(6, "Wutang ", SUD, [VittorioBasso25, AlessioFurlan25, EdoardoPicogna25, UmbertoNobile25, PietroSoramel25]);
+// squadra 2 volte // const ft2025_ft7 = createFantateam(7, "Paperelle Gay ", EST, [WilliamIob25, AlessandroCostantini25, GiacomoSilvestri25, EdoardoPicogna25, FilippoPasquon25]);
+const ft2025_ft8 = createFantateam(8, "Las Ratas ", NORD, [MarcoRizzi25, MattiaAnedda25, AlessandroSant25, GabrieleIndri25, MattiaRoiatti25]);
+const ft2025_ft9 = createFantateam(9, "Paperelle Gay ", EST, [WilliamIob25, AlessandroCostantini25, GiacomoSilvestri25, FilippoPasquon25, EdoardoPicogna25]);
+const ft2025_ft10 = createFantateam(10, "michele de anna LPE", SUD, [GiacomoSilvestri25, MicheleDeAnna25, ValentinoCigainero25, MattiaRoiatti25, GabrieleAzzarone25]);
+const ft2025_ft11 = createFantateam(11, "The CUMmunists", SUD, [LarryTrevisan25, AlessandroSant25, MarcoRizzi25, EnricoSant25, AlessioFurlan25]);
+const ft2025_ft12 = createFantateam(12, "Maso", EST, [VittorioBasso25, AlessandroCostantini25, MattiaMasotti25, EdoardoPicogna25, AlessandroSantin25]);
+const ft2025_ft13 = createFantateam(13, "Brigitte Bordeaux ", NORD, [DavidGaspardo25, UmbertoNobile25, AlessioFurlan25, MichaelMargarit25, MattiaRoiatti25]);
+const ft2025_ft14 = createFantateam(14, "CBA DR3", EST, [EnricoBravin25, ValentinoCigainero25, WilliamIob25, EdoardoPicogna25, EmanueleDaneluzzi25]);
+const ft2025_ft15 = createFantateam(15, "Famiglia Diesel", NORD, [EnricoBravin25, MarcoRizzi25, MattiaAnedda25, EmanueleStorace25, GabrieleAzzarone25]);
+const ft2025_ft16 = createFantateam(16, "I sacchi della lidl", WEST, [FilippoPasquon25, GabrieleAzzarone25, EdoardoPicogna25, MarcoSerrao25, PietroSoramel25]);
+const ft2025_ft17 = createFantateam(17, "Est..abirra dov'è?!", EST, [WilliamIob25, MarcoSerrao25, GiacomoSilvestri25, EdoardoPicogna25, MauroPerina25]);
+const ft2025_ft18 = createFantateam(18, "Super Chicche ", WEST, [GabrieleMiani25, VittorioGri25, MatteoGrillo25, MiracleObichukwu25, GabrieleAzzarone25]);
+const ft2025_ft19 = createFantateam(19, "Sburrobirra", WEST, [AlessandroRizzi25, MarcoRizzi25, MattiaAnedda25, MicheleDeAnna25, MattiaRoiatti25]);
+const ft2025_ft20 = createFantateam(20, "Limonando", NORD, [AlessandroRizzi25, AlessandroCostantini25, EdoardoPicogna25, WilliamIob25, DavideFaurlin25]);
+const ft2025_ft21 = createFantateam(21, "Glassati", EST, [GiacomoSilvestri25, EmanueleDaneluzzi25, MassimilianoRossi25, MarcoSerrao25, AndreaMoretti25]);
+const ft2025_ft22 = createFantateam(22, "giorginaaaa", EST, [EdoardoPicogna25, UmbertoNobile25, EnricoBravin25, EmanueleDaneluzzi25, PietroSoramel25]);
+const ft2025_ft23 = createFantateam(23, "Fucina dei Molini LTD", SUD, [MassimilianoMoretti25, MiracleObichukwu25, AlessandroRizzi25, MatteoGrillo25, AlessandroGalassi25]);
+const ft2025_ft24 = createFantateam(24, "Bomboclat", NORD, [FilippoPasquon25, UmbertoNobile25, MiracleObichukwu25, PietroSoramel25, EdoardoPicogna25]);
+const ft2025_ft25 = createFantateam(25, "Granchi aviatori", WEST, [AlessioFurlan25, GabrieleIndri25, DavideBroggi25, MattiaRoiatti25, AlessandroSant25]);
+const ft2025_ft26 = createFantateam(26, "(•) (•)", EST, [MarcoSerrao25, MicheleDeAnna25, MattiaAnedda25, EdoardoPicogna25, EmanueleDaneluzzi25]);
+const ft2025_ft27 = createFantateam(27, "Pandamonio", WEST, [UmbertoNobile25, PietroSoramel25, AlessandroCostantini25, NicolaCollavini25, MattiaRoiatti25]);
+// non la vuole // const ft2025_ft28 = createFantateam(28, "West-Capone", WEST, [AlessandroSant25, ChristianZanet25, GiovanniDalFarra25, MattiaMasotti25, GiacomoPiacentini25]);
+const ft2025_ft29 = createFantateam(29, "Vul bighe no cjavei", NORD, [FilippoPasquon25, MicheleDeAnna25, WilliamIob25, EdoardoPicogna25, EmanueleDaneluzzi25]);
+const ft2025_ft30 = createFantateam(30, "Oklahoma city tinder", WEST, [FilippoPasquon25, EnricoBravin25, UmbertoNobile25, MattiaMasotti25, MattiaRoiatti25]);
+const ft2025_ft31 = createFantateam(31, "Veri Occidentali", WEST, [VittorioBasso25, ValentinoCigainero25, WilliamIob25, DavideBroggi25, AlessandroSant25]);
+const ft2025_ft32 = createFantateam(32, "BOMBOLA HILLS", EST, [VittorioBasso25, GiacomoSilvestri25, AlessioFurlan25, GabrieleIndri25, LucaSoramel25]);
+const ft2025_ft33 = createFantateam(33, "Pangri il chillato", EST, [MarcoRizzi25, MattiaAnedda25, PietroSoramel25, GiovanniTonizzo25, UmbertoNobile25]);
+const ft2025_ft34 = createFantateam(34, "Team Birrogeno", SUD, [UmbertoNobile25, DavidGaspardo25, MattiaRoiatti25, LucaGemo25, MattiaAnedda25]);
+const ft2025_ft35 = createFantateam(35, "BAIRA", WEST, [UmbertoNobile25, VittorioBasso25, MattiaMasotti25, GiacomoFerigo25, MiracleObichukwu25]);
+const ft2025_ft36 = createFantateam(36, "Gabro's Team", WEST, [MarcoRizzi25, UmbertoNobile25, MarcoSerrao25, MatteoBazzaro25, PaoloZorzi25]);
+const ft2025_ft37 = createFantateam(37, "Palpeggio, Arresto e Tiro", WEST, [AlessandroRizzi25, ChristianZanet25, MattiaMasotti25, MattiaRoiatti25, PietroSoramel25]);
+const ft2025_ft38 = createFantateam(38, "ilpiaceglialtri", WEST, [AlessandroRizzi25, GiacomoPiacentini25, VittorioBasso25, MattiaMasotti25, GiovanniTonizzo25]);
+const ft2025_ft39 = createFantateam(39, "Rionedelbanano ahahcapnonesiste FC", WEST, [GabrieleMiani25, MarcoRizzi25, MattiaRoiatti25, ValentinoCigainero25, LucaGemo25]);
+const ft2025_ft40 = createFantateam(40, "I Pulcini", SUD, [GiacomoSpagnolo25, GabrieleAzzarone25, VittorioGri25, LarryTrevisan25, MattiaMasotti25]);
+const ft2025_ft41 = createFantateam(41, "Palio in tuta", NORD, [UmbertoNobile25, MarcoRizzi25, MattiaMasotti25, PietroSoramel25, MattiaRoiatti25]);
+const ft2025_ft42 = createFantateam(42, "Udinese", NORD, [UmbertoNobile25, MarcoSerrao25, GiacomoFerigo25, GabrieleAzzarone25, EnricoBravin25]);
+const ft2025_ft43 = createFantateam(43, "33033", WEST, [VittorioBasso25, LarryTrevisan25, MicheleGorasso25, MassimoMasotti25, MattiaRoiatti25]);
+const ft2025_ft44 = createFantateam(44, "BOMBOCLAT", NORD, [UmbertoNobile25, MarcoSerrao25, EnricoBravin25, MattiaRoiatti25, GiovanniDalFarra25]);
+const ft2025_ft45 = createFantateam(45, "Girasole", NORD, [FilippoPasquon25, UmbertoNobile25, EnricoBravin25, AlessandroCostantini25, AlexMicottis25]);
+const ft2025_ft46 = createFantateam(46, "FantaBoys", SUD, [UmbertoNobile25, MarcoSerrao25, LucaDellaLonga25, AlessandroGalassi25, MarcoRizzi25]);
+const ft2025_ft47 = createFantateam(47, "Gli scugnizzi ciclisti", WEST, [FilippoPasquon25, UmbertoNobile25, GiovanniTonizzo25, AlessioFurlan25, ChristianZanet25]);
+const ft2025_ft48 = createFantateam(48, "Biscotto di Codroipo", SUD, [GabrieleAzzarone25, FilippoSappa25, ValentinoCigainero25, EdoardoPicogna25, VittorioBasso25]);
+const ft2025_ft49 = createFantateam(49, "bEST of kiosko", EST, [UmbertoNobile25, FilippoPasquon25, EdoardoPicogna25, GiacomoPiacentini25, ValentinoCigainero25]);
+const ft2025_ft50 = createFantateam(50, "Pampa Mentality", SUD, [FilippoPasquon25, EmanueleDaneluzzi25, DavideBroggi25, ChristianZanet25, UmbertoNobile25]);
+const ft2025_ft51 = createFantateam(51, "Cleo", EST, [SamuelMasotti25, MassimilianoMoretti25, EnricoBravin25, EdoardoPicogna25, PietroSoramel25]);
+// >30 // const ft2025_ft52 = createFantateam(52, "SamusFC", SUD, [LarryTrevisan25, DavidGaspardo25, GabrieleMiani25, MarcoRizzi25, EdoardoPicogna25]);
+const ft2025_ft53 = createFantateam(53, "Massimi's fans", WEST, [VittorioBasso25, MarcoRizzi25, MassimilianoMoretti25, AndreaMoretti25, MiracleObichukwu25]);
+const ft2025_ft54 = createFantateam(54, "Max Verstappen ", NORD, [AlessandroRizzi25, MarcoRizzi25, MattiaMasotti25, LarryTrevisan25, GiovanniDalFarra25]);
+const ft2025_ft55 = createFantateam(55, "FASIOOOLLL ", EST, [AlessandroSant25, MattiaMasotti25, AndreaMoretti25, MarcoRizzi25, PietroSoramel25]);
+const ft2025_ft56 = createFantateam(56, "Vino_Di_L.A.?", NORD, [VittorioGri25, AlessandroCostantini25, GiovanniDalFarra25, FilippoSappa25, MattiaRoiatti25]);
+const ft2025_ft57 = createFantateam(57, "LovPaola", SUD, [DanieleGanzit25, MassimilianoMoretti25, PietroSoramel25, MattiaRoiatti25, MattiaAnedda25]);
+const ft2025_ft58 = createFantateam(58, "Renault clio 1.200 320cv turbodisel", SUD, [EmanueleDaneluzzi25, EdoardoPicogna25, AlessandroCostantini25, EnricoBravin25, UmbertoNobile25]);
+const ft2025_ft59 = createFantateam(59, "Dream team", NORD, [MicheleDeAnna25, NicolaCollavini25, VittorioBasso25, GiacomoPiacentini25, MicheleVendrame25]);
+const ft2025_ft60 = createFantateam(60, "Black diamond", SUD, [UmbertoNobile25, VittorioBasso25, EdoardoPicogna25, ValentinoCigainero25, EmanueleDaneluzzi25]);
+const ft2025_ft61 = createFantateam(61, "Atomico", NORD, [MicheleDeAnna25, AlessandroCostantini25, GiovanniDalFarra25, AlessandroRizzi25, GiacomoPiacentini25]);
+const ft2025_ft62 = createFantateam(62, "Batu", NORD, [AlessandroRizzi25, AlessandroCostantini25, PietroSoramel25, LucaSoramel25, EugenioDeTina25]);
+const ft2025_ft63 = createFantateam(63, "Le bimbe di Wasa", WEST, [NicolaCollavini25, FilippoSappa25, AlessandroSant25, MattiaAnedda25, EmanueleCorleone25]);
+const ft2025_ft64 = createFantateam(64, "Los Palios ", NORD, [AlessandroRizzi25, AlessandroCostantini25, GiacomoPiacentini25, EnricoBravin25, WilliamIob25]);
+const ft2025_ft65 = createFantateam(65, "SamusFC", SUD, [AlessandroRizzi25, LarryTrevisan25, AlessandroCostantini25, MichaelMargarit25, FrancescoSchiavone25]);
+const ft2025_ft66 = createFantateam(66, "La Margy", WEST, [UmbertoNobile25, GiacomoPiacentini25, MarcoRizzi25, MattiaMasotti25, GiovanniTonizzo25]);
+const ft2025_ft67 = createFantateam(67, "Tis pompi nei", WEST, [DavidGaspardo25, AlessandroCostantini25, ChristianZanet25, MattiaRoiatti25, AlessandroGalassi25]);
+const ft2025_ft68 = createFantateam(68, "Trevi BC", SUD, [MarcoLombardo25, VittorioBasso25, GiacomoPiacentini25, EugenioDeTina25, PietroSoramel25]);
+// dup // const ft2025_ft69 = createFantateam(69, "annapepe", SUD, [GiacomoFerigo25, MarcoSerrao25, MarcoSerrao25, AlessandroGalassi25, LucaGemo25]);
+const ft2025_ft70 = createFantateam(70, "ShakerShakur", WEST, [DavidGaspardo25, FilippoPasquon25, MassimilianoRossi25, EmanueleCorleone25, GiovanniTonizzo25]);
+const ft2025_ft71 = createFantateam(71, "Libertas Canaja", WEST, [UmbertoNobile25, MarcoLombardo25, PietroSoramel25, AlessioFurlan25, DavideBroggi25]);
+const ft2025_ft72 = createFantateam(72, "vertical kings", NORD, [VittorioBasso25, UmbertoNobile25, GiovanniDalFarra25, GiacomoFerigo25, MattiaMasotti25]);
+const ft2025_ft73 = createFantateam(73, "Magno", NORD, [VittorioBasso25, UmbertoNobile25, EnricoBravin25, GiacomoFerigo25, MattiaMasotti25]);
+const ft2025_ft74 = createFantateam(74, "CoppaCHIOSC", SUD, [UmbertoNobile25, LucaDellaLonga25, MattiaRoiatti25, AlessandroSant25, GiacomoSilvestri25]);
+const ft2025_ft75 = createFantateam(75, "I mici da Kinshasa", NORD, [AlessandroRizzi25, UmbertoNobile25, VittorioBasso25, EnricoBravin25, MarcoRizzi25]);
+const ft2025_ft76 = createFantateam(76, "Stifupifu ", NORD, [AlessandroRizzi25, MassimilianoMoretti25, MarcoRizzi25, EnricoBravin25, NicolaCollavini25]);
+const ft2025_ft77 = createFantateam(77, "miracolati", WEST, [MassimilianoMoretti25, PietroSoramel25, AlessandroGalassi25, EdoardoPicogna25, EnricoBravin25]);
+const ft2025_ft78 = createFantateam(78, "4 scarsi e 1 bravin", EST, [SamuelMasotti25, MattiaMasotti25, EnricoBravin25, UmbertoNobile25, VittorioBasso25]);
+const ft2025_ft79 = createFantateam(79, "LEGENDARY team", NORD, [MarcoLombardo25, VittorioBasso25, UmbertoNobile25, DavideFaurlin25, AlessandroGalassi25]);
+const ft2025_ft80 = createFantateam(80, "M.A.S.T.E.", NORD, [MarcoLombardo25, FilippoSappa25, MarcoRizzi25, MichaelMargarit25, VittorioGri25]);
+// >30 // // dup // const ft2025_ft81 = createFantateam(81, "susto", WEST, [LarryTrevisan25, LucaSoramel25, GiovanniTonizzo25, LarryTrevisan25, EdoardoPicogna25]);
+const ft2025_ft82 = createFantateam(82, "PALLA A SPICCHI", NORD, [MarcoLombardo25, UmbertoNobile25, MiracleObichukwu25, MassimilianoRossi25, MattiaLanna25]);
+const ft2025_ft83 = createFantateam(83, "Cestino infiammato", WEST, [UmbertoNobile25, VittorioBasso25, EdoardoPicogna25, GiacomoPiacentini25, AlessandroSantin25]);
+const ft2025_ft84 = createFantateam(84, "Passariano Pistons", EST, [GabrieleIndri25, LarryTrevisan25, MiracleObichukwu25, MarcoRizzi25, GiovanniDalFarra25]);
+const ft2025_ft85 = createFantateam(85, "Atletico ma non troppo", EST, [UmbertoNobile25, GiacomoSilvestri25, AlessandroCostantini25, EdoardoPicogna25, MattiaAnedda25]);
+const ft2025_ft86 = createFantateam(86, "annapepe", SUD, [UmbertoNobile25, MarcoSerrao25, LucaGemo25, AlessandroGalassi25, GiacomoFerigo25]);
+const ft2025_ft87 = createFantateam(87, "Trallallero", EST, [VittorioBasso25, EnricoBravin25, UmbertoNobile25, AlexMicottis25, MattiaMasotti25]);
+const ft2025_ft88 = createFantateam(88, "Slam drunk ", WEST, [FilippoPasquon25, UmbertoNobile25, EmanueleCorleone25, MassimilianoRossi25, AlessandroSantin25]);
+const ft2025_ft89 = createFantateam(89, "La mia squadra", WEST, [VittorioBasso25, MassimilianoMoretti25, SebastianoTonizzo25, FilippoAgnoluzzi25, ThomasBaracetti25]);
+const ft2025_ft90 = createFantateam(90, "THESTARS", WEST, [UmbertoNobile25, FilippoPasquon25, MattiaMasotti25, AlessandroGalassi25, GiovanniDalFarra25]);
+const ft2025_ft91 = createFantateam(91, "baxbanny ", WEST, [GiacomoFerigo25, UmbertoNobile25, VittorioBasso25, FilippoAgnoluzzi25, FilippoPasquon25]);
+const ft2025_ft92 = createFantateam(92, "IChicchirichì ", EST, [UmbertoNobile25, AlessandroSant25, GiacomoSilvestri25, MattiaAnedda25, MattiaRoiatti25]);
+const ft2025_ft93 = createFantateam(93, "Annaffiatoi", WEST, [UmbertoNobile25, GiacomoPiacentini25, GiacomoSilvestri25, AlessandroGalassi25, MattiaMasotti25]);
+const ft2025_ft94 = createFantateam(94, "PITON STOPPA TUTTI", WEST, [AlessandroRizzi25, LarryTrevisan25, GiacomoPiacentini25, LucaSoramel25, EdoardoPicogna25]);
+const ft2025_ft95 = createFantateam(95, "Pesi Massimi ", SUD, [PietroSoramel25, MattiaMasotti25, MattiaRoiatti25, GiacomoPiacentini25, LarryTrevisan25]);
+const ft2025_ft96 = createFantateam(96, "Sai che odio il Sud", NORD, [MicheleVendrame25, EnricoBravin25, UmbertoNobile25, MattiaMasotti25, EdoardoPicogna25]);
+const ft2025_ft97 = createFantateam(97, "susto", WEST, [EdoardoPicogna25, LarryTrevisan25, MarcoRizzi25, AndreaMoretti25, GiovanniTonizzo25]);
+const ft2025_ft98 = createFantateam(98, "Straight Outta Codroipo", NORD, [DavidGaspardo25, AlessandroRizzi25, AlessioFurlan25, EdoardoPicogna25, GiovanniTonizzo25]);
+const ft2025_ft99 = createFantateam(99, "I ragazzi di San Patrignano", SUD, [AlessandroRizzi25, AlessandroCostantini25, MassimilianoRossi25, GiovanniTonizzo25, LucaSoramel25]);
+const ft2025_ft100 = createFantateam(100, "Le caprette", WEST, [MassimilianoMoretti25, MattiaAnedda25, GiovanniTonizzo25, AndreaMoretti25, LucaSoramel25]);
+const ft2025_ft101 = createFantateam(101, "BettaZul", EST, [AlessandroRizzi25, AlessandroCostantini25, ChristianZanet25, AlexMicottis25, PietroSoramel25]);
+const ft2025_ft102 = createFantateam(102, "201l", EST, [SamuelMasotti25, NicolaCollavini25, FrancescoSchiavone25, MattiaLanna25, EmanueleCorleone25]);
+const ft2025_ft103 = createFantateam(103, "martapride", NORD, [UmbertoNobile25, FrancescoSchiavone25, MattiaLanna25, FilippoAgnoluzzi25, GiovanniZanin25]);
+// >30 // const ft2025_ft104 = createFantateam(104, "Sofiapride", NORD, [FrancescoSchiavone25, MattiaLanna25, FilippoAgnoluzzi25, MarcoSerrao25, DavidGaspardo25]);
+const ft2025_ft105 = createFantateam(105, "IGOR MITI", WEST, [MassimilianoMoretti25, AlessandroCostantini25, ThomasBaracetti25, SebastianoTonizzo25, MarcoRizzi25]);
+const ft2025_ft106 = createFantateam(106, "FLP", WEST, [MassimilianoMoretti25, VittorioBasso25, EdoardoPicogna25, SebastianoTonizzo25, MarcoRizzi25]);
+const ft2025_ft107 = createFantateam(107, "Bombola chachacha parlamidelsudamericaaa", NORD, [AlessandroRizzi25, MicheleDeAnna25, VittorioBasso25, EnricoBravin25, PietroSoramel25]);
+const ft2025_ft108 = createFantateam(108, "PPT", NORD, [VittorioGri25, MarcoRizzi25, LarryTrevisan25, PietroSoramel25, AlessandroCostantini25]);
+// >30 // const ft2025_ft109 = createFantateam(109, "babbagalli", NORD, [DavidGaspardo25, FrancescoSchiavone25, MattiaLanna25, MarcoSerrao25, FilippoAgnoluzzi25]);
+const ft2025_ft110 = createFantateam(110, "GL89", SUD, [GiovanniZanin25, UmbertoNobile25, MichaelMargarit25, FrancescoSchiavone25, StefanoPolano25]);
+const ft2025_ft111 = createFantateam(111, "Dark polo genk ", EST, [FilippoPasquon25, UmbertoNobile25, GiovanniDalFarra25, ChristianZanet25, EdoardoPicogna25]);
+const ft2025_ft112 = createFantateam(112, "Chiosk-trotters", WEST, [MassimilianoMoretti25, LucaSoramel25, PietroSoramel25, LucaDellaLonga25, FrancescoSchiavone25]);
+const ft2025_ft113 = createFantateam(113, "SIAMO TUTTI EST ", EST, [GabrieleIndri25, MattiaMasotti25, MattiaAnedda25, MattiaRoiatti25, LucaSoramel25]);
+const ft2025_ft114 = createFantateam(114, "Azzano boh X", SUD, [FilippoPasquon25, GabrieleIndri25, AlessioFurlan25, PietroSoramel25, MarcoRizzi25]);
+const ft2025_ft115 = createFantateam(115, "mi sa che piove ", EST, [AlessandroRizzi25, LarryTrevisan25, ChristianZanet25, EdoardoPicogna25, EmanueleStorace25]);
+const ft2025_ft116 = createFantateam(116, "I messicani dell'Est", EST, [GabrieleMiani25, VittorioGri25, MattiaRoiatti25, MiracleObichukwu25, MattiaAnedda25]);
+const ft2025_ft117 = createFantateam(117, "Lavigiliadapolo ", EST, [UmbertoNobile25, MicheleDeAnna25, GiacomoSilvestri25, LucaDellaLonga25, LucaSoramel25]);
+const ft2025_ft118 = createFantateam(118, "Crauti e brovada", SUD, [FilippoSappa25, MarcoRizzi25, MattiaAnedda25, AlessandroSant25, EmanueleCorleone25]);
+const ft2025_ft119 = createFantateam(119, "SPORTING BUBA", EST, [MattiaAnedda25, LucaDellaLonga25, LarryTrevisan25, MarcoComisso25, AndreaMoretti25]);
+const ft2025_ft120 = createFantateam(120, "La Puledra", EST, [AndreaMoretti25, UmbertoNobile25, ValentinoCigainero25, PietroSoramel25, EdoardoPicogna25]);
+const ft2025_ft121 = createFantateam(121, "BI-COMPONENTI", WEST, [GiacomoPiacentini25, LucaDellaLonga25, GabrieleIndri25, MattiaRoiatti25, AlessandroCostantini25]);
+const ft2025_ft122 = createFantateam(122, "Il Tirel", NORD, [MarcoLombardo25, VittorioBasso25, AlessandroSantin25, GiacomoPiacentini25, AlessandroCostantini25]);
+const ft2025_ft123 = createFantateam(123, "I bigulin", NORD, [UmbertoNobile25, AlessandroCostantini25, VittorioBasso25, AlessandroGalassi25, EnricoBravin25]);
+const ft2025_ft124 = createFantateam(124, "Sandiocan", EST, [GabrieleIndri25, WilliamIob25, MauroPerina25, MattiaRoiatti25, GiovanniTonizzo25]);
+const ft2025_ft125 = createFantateam(125, "Letsgoski", NORD, [VittorioGri25, AlessandroCostantini25, GiovanniTonizzo25, LarryTrevisan25, LucaSoramel25]);
+const ft2025_ft126 = createFantateam(126, "NonCapiscodiPallacanestro", NORD, [UmbertoNobile25, FrancescoSchiavone25, LeonardoTirelli25, GiovanniZanin25, StefanoPolano25]);
+const ft2025_ft127 = createFantateam(127, "Maika Team shqiperia", NORD, [UmbertoNobile25, MarcoSerrao25, MarcoRizzi25, MatteoBazzaro25, MiracleObichukwu25]);
+const ft2025_ft128 = createFantateam(128, "i savanna ", SUD, [GabrieleMiani25, GabrieleAzzarone25, GiacomoFerigo25, EdoardoPicogna25, GiovanniDalFarra25]);
+const ft2025_ft129 = createFantateam(129, "Friuliantincendi ", NORD, [VittorioBasso25, GiacomoPiacentini25, AlessandroCostantini25, EdoardoPicogna25, MattiaMasotti25]);
+const ft2025_ft130 = createFantateam(130, "the drunkEST", EST, [GiacomoPiacentini25, FilippoPasquon25, VittorioBasso25, MattiaMasotti25, EdoardoPicogna25]);
+const ft2025_ft131 = createFantateam(131, "Rebibbia Rockets", NORD, [FrancescoSchiavone25, UmbertoNobile25, MattiaMasotti25, MattiaRoiatti25, PietroSoramel25]);
+const ft2025_ft132 = createFantateam(132, "Skibidi boppi", WEST, [AlessandroRizzi25, AlessandroCostantini25, MicheleDeAnna25, EdoardoPicogna25, MattiaRoiatti25]);
+const ft2025_ft133 = createFantateam(133, "Rane", SUD, [VittorioBasso25, AlessandroCostantini25, GiacomoPiacentini25, MattiaMasotti25, AlessandroSantin25]);
+const ft2025_ft134 = createFantateam(134, "Aleari", SUD, [VittorioBasso25, AlessandroRizzi25, MattiaMasotti25, AlessandroSantin25, GiacomoPiacentini25]);
+const ft2025_ft135 = createFantateam(135, "2009", SUD, [FilippoAgnoluzzi25, PaoloZorzi25, AlessandroSantin25, AlessandroSant25, AlessandroRizzi25]);
+const ft2025_ft136 = createFantateam(136, "le baddies", WEST, [GabrieleIndri25, EmanueleDaneluzzi25, EdoardoPicogna25, VittorioBasso25, LucaGrillo25]);
+const ft2025_ft137 = createFantateam(137, "Duca squad", EST, [LarryTrevisan25, AndreaMoretti25, EdoardoPicogna25, EmanueleDaneluzzi25, MarcoLombardo25]);
+const ft2025_ft138 = createFantateam(138, "i fruts del super one ", EST, [EnricoBravin25, MiracleObichukwu25, AlessandroCostantini25, AlessandroSant25, MattiaMasotti25]);
+const ft2025_ft139 = createFantateam(139, "Prostatas", NORD, [UmbertoNobile25, EdoardoPicogna25, FilippoPasquon25, GiovanniDalFarra25, PietroSoramel25]);
+const ft2025_ft140 = createFantateam(140, "PipeFrancis", NORD, [MarcoLombardo25, GiacomoPiacentini25, PietroSoramel25, AlessandroSantin25, MattiaMasotti25]);
+const ft2025_ft141 = createFantateam(141, "Palio sleepers", SUD, [GiovanniZanin25, GiacomoSpagnolo25, CristianFedrizzi25, LorenzoMoro25, EnricoSant25]);
+const ft2025_ft142 = createFantateam(142, "Too old for this shit", NORD, [LarryTrevisan25, MatteoGrillo25, FilippoSappa25, MarcoRizzi25, LeonardoTirelli25]);
+const ft2025_ft143 = createFantateam(143, "TantoPerFare", NORD, [UmbertoNobile25, VittorioBasso25, GiacomoPiacentini25, EdoardoPicogna25, AlessandroSantin25]);
+const ft2025_ft144 = createFantateam(144, "Legrottaglie ", NORD, [UmbertoNobile25, AlessandroCostantini25, LucaGemo25, MattiaRoiatti25, FilippoPasquon25]);
+const ft2025_ft145 = createFantateam(145, "IL LATO GIUSTO DI VIALE DUODO", NORD, [MarcoComisso25, GabrieleMiani25, AntonioGri25, LeonardoTirelli25, DavideParon25]);
+const ft2025_ft146 = createFantateam(146, "Vamo raga", SUD, [MarcoLombardo25, VittorioBasso25, MattiaRoiatti25, PietroSoramel25, AlessandroCostantini25]);
+const ft2025_ft147 = createFantateam(147, "Granchietti", WEST, [GabrieleIndri25, AlessioFurlan25, AlessandroCostantini25, LucaSoramel25, MarcoRizzi25]);
+// c'è gia // const ft2025_ft148 = createFantateam(148, "Granchietti ", WEST, [MarcoRizzi25, AlessandroCostantini25, AlessioFurlan25, GabrieleIndri25, LucaSoramel25]);
+const ft2025_ft149 = createFantateam(149, "VittoGriMVP", NORD, [VittorioGri25, AlessandroRizzi25, LarryTrevisan25, EdoardoPicogna25, GiovanniTonizzo25]);
+const ft2025_ft150 = createFantateam(150, "Livio", SUD, [AlessandroRizzi25, PietroSoramel25, LucaSoramel25, AndreaMoretti25, AlessandroCostantini25]);
+const ft2025_ft151 = createFantateam(151, "Est Pippi io le trecce", EST, [GabrieleMiani25, MichaelMargarit25, MattiaRoiatti25, MattiaAnedda25, LucaSoramel25]);
+const ft2025_ft152 = createFantateam(152, "PC - Palio Civico", NORD, [MassimilianoMoretti25, AlessandroRizzi25, AlessioFurlan25, SebastianoTonizzo25, AntonioGri25]);
+const ft2025_ft153 = createFantateam(153, "Le Fantadive💅", EST, [NicolaCollavini25, AlessandroSant25, DavideFaurlin25, GabrieleIndri25, MattiaAnedda25]);
+const ft2025_ft154 = createFantateam(154, "Disagiati ", SUD, [LeonardoTirelli25, UmbertoNobile25, MattiaAnedda25, GiovanniZanin25, MarcoComisso25]);
+const ft2025_ft155 = createFantateam(155, "Patrik Arcato", NORD, [GabrieleMiani25, MiracleObichukwu25, EugenioDeTina25, DavideFaurlin25, MarcoRizzi25]);
+const ft2025_ft156 = createFantateam(156, "Vabbé skibidiboppi e forza West", WEST, [UmbertoNobile25, MiracleObichukwu25, AlessandroRizzi25, MattiaRoiatti25, PietroSoramel25]);
+const ft2025_ft157 = createFantateam(157, "Skibidi boppy", NORD, [VittorioGri25, UmbertoNobile25, MattiaRoiatti25, GiovanniZanin25, AlessioFurlan25]);
+const ft2025_ft158 = createFantateam(158, "Slamcesca ", EST, [ChristianZanet25, VittorioGri25, GabrieleIndri25, MiracleObichukwu25, GiovanniTonizzo25]);
+const ft2025_ft159 = createFantateam(159, "IGOR MITI", WEST, [MassimilianoMoretti25, AlessandroCostantini25, ThomasBaracetti25, SebastianoTonizzo25, MarcoRizzi25]);
+const ft2025_ft160 = createFantateam(160, "Canestrelli", NORD, [UmbertoNobile25, VittorioGri25, MattiaRoiatti25, GiovanniTonizzo25, MattiaMasotti25]);
+const ft2025_ft161 = createFantateam(161, "Zoo_Rehab", WEST, [UmbertoNobile25, VittorioBasso25, EdoardoPicogna25, GiovanniTonizzo25, AndreaMoretti25]);
+const ft2025_ft162 = createFantateam(162, "Est puzzoni", SUD, [GabrieleMiani25, MiracleObichukwu25, FilippoAgnoluzzi25, MattiaAnedda25, MarcoRizzi25]);
+const ft2025_ft163 = createFantateam(163, "Imbarazzanti ma mai imbarazzati", WEST, [LarryTrevisan25, VittorioBasso25, GiacomoPiacentini25, MattiaMasotti25, DavideFaurlin25]);
+const ft2025_ft164 = createFantateam(164, "Le rane… quelle vere", NORD, [VittorioGri25, MarcoLombardo25, AlessandroCostantini25, LucaSoramel25, GiacomoSpagnolo25]);
+const ft2025_ft165 = createFantateam(165, "Random", SUD, [UmbertoNobile25, ChristianZanet25, EdoardoPicogna25, AlessandroSantin25, MicheleVendrame25]);
+const ft2025_ft166 = createFantateam(166, "Est Est Est", EST, [FilippoPasquon25, VittorioBasso25, GiacomoPiacentini25, MattiaMasotti25, EdoardoPicogna25]);
+const ft2025_ft167 = createFantateam(167, "Simone Cengarle è bello", NORD, [DavidGaspardo25, UmbertoNobile25, MarcoRizzi25, AntonioGri25, GiovanniDalFarra25]);
+const ft2025_ft168 = createFantateam(168, "Est the best...", EST, [MattiaMasotti25, SamuelMasotti25, LucaGrillo25, GabrieleIndri25, EdoardoPicogna25]);
+const ft2025_ft169 = createFantateam(169, "IRIS", EST, [SamuelMasotti25, EdoardoPicogna25, MarcoSerrao25, MattiaMasotti25, GiacomoPiacentini25]);
+const ft2025_ft170 = createFantateam(170, "Scartizan Codroipo ", NORD, [MarcoRizzi25, EnricoBravin25, FilippoSappa25, AlessandroCostantini25, GiacomoPiacentini25]);
+const ft2025_ft171 = createFantateam(171, "🚨", EST, [GabrieleIndri25, DanieleGanzit25, StefanoPolano25, JacopoTomasini25, MicheleGorasso25]);
+const ft2025_ft172 = createFantateam(172, "Angel bricks", SUD, [GiacomoSilvestri25, MarcoSerrao25, WilliamIob25, MattiaRoiatti25, JacopoTomasini25]);
+// dup // const ft2025_ft173 = createFantateam(173, "est", EST, [GabrieleMiani25, DavideParon25, DavideParon25, ThomasBaracetti25, FilippoAgnoluzzi25]);
+const ft2025_ft174 = createFantateam(174, "Governo Ladrone", SUD, [GiovanniZanin25, GiacomoPiacentini25, MassimilianoRossi25, MarcoComisso25, PietroSoramel25]);
+const ft2025_ft175 = createFantateam(175, "i paguri ", WEST, [FilippoSappa25, AlessioFurlan25, GiovanniDalFarra25, MarcoLombardo25, EdoardoPicogna25]);
+const ft2025_ft176 = createFantateam(176, "Miani Heat", NORD, [VittorioBasso25, AlessandroSantin25, MarcoRizzi25, CristianFedrizzi25, FilippoSappa25]);
+const ft2025_ft177 = createFantateam(177, "PaLions", WEST, [AlessandroRizzi25, AlessandroCostantini25, MiracleObichukwu25, EnricoSant25, PietroSoramel25]);
+// >30 // const ft2025_ft178 = createFantateam(178, "Birrareal", EST, [GabrieleMiani25, VittorioBasso25, MicheleDeAnna25, MattiaRoiatti25, EdoardoPicogna25]);
+const ft2025_ft179 = createFantateam(179, "Splash Boys ", WEST, [AlessandroRizzi25, AlessandroCostantini25, MiracleObichukwu25, EnricoSant25, PietroSoramel25]);
+const ft2025_ft180 = createFantateam(180, "Santinobilimoretti", NORD, [MarcoLombardo25, GiacomoSilvestri25, UmbertoNobile25, LucaSoramel25, MichaelMargarit25]);
+const ft2025_ft181 = createFantateam(181, "Giorgio", WEST, [LarryTrevisan25, FilippoPasquon25, AlessandroGalassi25, AlessandroSant25, DavideParon25]);
+const ft2025_ft182 = createFantateam(182, "TUNA FISH", SUD, [VittorioBasso25, GabrieleIndri25, GiovanniTonizzo25, GiacomoPiacentini25, GabrieleAzzarone25]);
+const ft2025_ft183 = createFantateam(183, "Saranno Cirrosi", WEST, [MassimilianoMoretti25, MarcoRizzi25, AndreaMoretti25, EugenioDeTina25, GiovanniTonizzo25]);
+const ft2025_ft184 = createFantateam(184, "Visca", EST, [UmbertoNobile25, MattiaMasotti25, PietroSoramel25, EmanueleCorleone25, MattiaLanna25]);
+const ft2025_ft185 = createFantateam(185, "Culi foresti", EST, [MarcoSerrao25, MicheleGorasso25, MattiaMasotti25, LucaDellaLonga25, JacopoTomasini25]);
+// a mano:
+const ft2025_ft186 = createFantateam(186, "Chiedi scusa alla pallacanestro", SUD, [UmbertoNobile25, PietroSoramel25, MassimilianoRossi25, EnricoBravin25, GiacomoPiacentini25]);
+// const ft2025_ft187 = createFantateam(187, "Squadra di costa", SUD, [UmbertoNobile25, PietroSoramel25, MassimilianoRossi25, FilippoAgnoluzzi25, MarcoRizzi25]);
+const ft2025_ft188 = createFantateam(188, "Birrareal", EST, [GabrieleMiani25, MattiaAnedda25, LucaGemo25, MattiaRoiatti25, EdoardoPicogna25]);
+
+
 // const ft1 = createFantateam(1, "ProvaUff1", NORD, [DavidGaspardo25, MarcoLombardo25, AlessioFurlan25, AlessandroGalassi25, SebastianoTonizzo25]);
 // const ft2 = createFantateam(2, "Prov2uff", SUD, [FilippoAgnoluzzi25, GabrieleAzzarone25, PaoloZorzi25, MatteoBazzaro25, AlessandroSantin25]);
 // const ft3 = createFantateam(3, "Competitiva dai", WEST, [GabrieleMiani25, AlessioFurlan25, MarcoRizzi25, AlessandroSantin25, MattiaRoiatti25]);
@@ -2621,7 +2975,16 @@ const ft186 = createFantateam(186, "Chiedi scusa alla pallacanestro", SUD, [Umbe
 // const ft187 = createFantateam(187, "Squadra di costa", SUD, [UmbertoNobile25, PietroSoramel25, MassimilianoRossi25, FilippoAgnoluzzi25, MarcoRizzi25]);
 const ft188 = createFantateam(188, "Birrareal", EST, [GabrieleMiani25, MattiaAnedda25, LucaGemo25, MattiaRoiatti25, EdoardoPicogna25]);
 
-const fantateams25 = [ft6, ft8, ft9, ft10, ft11, ft12, ft13, ft14, ft15, ft16, ft164, ft17, ft18, ft19, ft20, ft21, ft22, ft23, ft24, ft25, ft26, ft27, ft29, ft30, 
+
+ft188.league_name = "lega1";
+ft179.league_name = "lega2";
+ft180.league_name = "lega1";
+ft182.league_name = "lega2";
+ft183.league_name = "lega1";
+ft184.league_name = "lega2";
+ft185.league_name = "lega1";
+
+const fantateams26 = [ft6, ft8, ft9, ft10, ft11, ft12, ft13, ft14, ft15, ft16, ft164, ft17, ft18, ft19, ft20, ft21, ft22, ft23, ft24, ft25, ft26, ft27, ft29, ft30, 
      ft31, ft32, ft33, ft34, ft35, ft36, ft37, ft38, ft39, ft40, ft41, ft42, ft43, ft44, ft45, ft46, ft47, ft48, ft49, ft50, ft51, ft53, ft54, ft55, ft56, ft57, ft58, ft59, ft60, 
      ft61, ft62, ft63, ft64, ft65, ft66, ft67, ft68, ft70, ft71, ft72, ft73, ft74, ft75, ft76, ft77, ft78, ft79, ft80, ft82, ft83, ft84, ft85, ft86, ft87, ft88, ft89, ft90, 
      ft91, ft92, ft93, ft94, ft95, ft96, ft97, ft98, ft99, ft100, ft101, ft102, ft103, ft105, ft106, ft107, ft108, ft110, ft111, ft112, ft113, ft114, ft115, ft116, ft117, ft118, ft119, ft120, 
@@ -2630,6 +2993,15 @@ const fantateams25 = [ft6, ft8, ft9, ft10, ft11, ft12, ft13, ft14, ft15, ft16, f
      ft181, ft182, ft183, ft184, ft185, ft186, ft188, ft126
     ];
 
+
+const fantateams25 = [ft2025_ft6, ft2025_ft8, ft2025_ft9, ft2025_ft10, ft2025_ft11, ft2025_ft12, ft2025_ft13, ft2025_ft14, ft2025_ft15, ft2025_ft16, ft2025_ft164, ft2025_ft17, ft2025_ft18, ft2025_ft19, ft2025_ft20, ft2025_ft21, ft2025_ft22, ft2025_ft23, ft2025_ft24, ft2025_ft25, ft2025_ft26, ft2025_ft27, ft2025_ft29, ft2025_ft30, 
+     ft2025_ft31, ft2025_ft32, ft2025_ft33, ft2025_ft34, ft2025_ft35, ft2025_ft36, ft2025_ft37, ft2025_ft38, ft2025_ft39, ft2025_ft40, ft2025_ft41, ft2025_ft42, ft2025_ft43, ft2025_ft44, ft2025_ft45, ft2025_ft46, ft2025_ft47, ft2025_ft48, ft2025_ft49, ft2025_ft50, ft2025_ft51, ft2025_ft53, ft2025_ft54, ft2025_ft55, ft2025_ft56, ft2025_ft57, ft2025_ft58, ft2025_ft59, ft2025_ft60, 
+     ft2025_ft61, ft2025_ft62, ft2025_ft63, ft2025_ft64, ft2025_ft65, ft2025_ft66, ft2025_ft67, ft2025_ft68, ft2025_ft70, ft2025_ft71, ft2025_ft72, ft2025_ft73, ft2025_ft74, ft2025_ft75, ft2025_ft76, ft2025_ft77, ft2025_ft78, ft2025_ft79, ft2025_ft80, ft2025_ft82, ft2025_ft83, ft2025_ft84, ft2025_ft85, ft2025_ft86, ft2025_ft87, ft2025_ft88, ft2025_ft89, ft2025_ft90, 
+     ft2025_ft91, ft2025_ft92, ft2025_ft93, ft2025_ft94, ft2025_ft95, ft2025_ft96, ft2025_ft97, ft2025_ft98, ft2025_ft99, ft2025_ft100, ft2025_ft101, ft2025_ft102, ft2025_ft103, ft2025_ft105, ft2025_ft106, ft2025_ft107, ft2025_ft108, ft2025_ft110, ft2025_ft111, ft2025_ft112, ft2025_ft113, ft2025_ft114, ft2025_ft115, ft2025_ft116, ft2025_ft117, ft2025_ft118, ft2025_ft119, ft2025_ft120, 
+     ft2025_ft121, ft2025_ft122, ft2025_ft123, ft2025_ft124, ft2025_ft125, ft2025_ft127, ft2025_ft128, ft2025_ft129, ft2025_ft130, ft2025_ft131, ft2025_ft132, ft2025_ft133, ft2025_ft134, ft2025_ft135, ft2025_ft136, ft2025_ft137, ft2025_ft138, ft2025_ft139, ft2025_ft140, ft2025_ft141, ft2025_ft142, ft2025_ft143, ft2025_ft144, ft2025_ft145, ft2025_ft146, ft2025_ft147, ft2025_ft149, ft2025_ft150, 
+     ft2025_ft151, ft2025_ft152, ft2025_ft153, ft2025_ft154, ft2025_ft155, ft2025_ft156, ft2025_ft157, ft2025_ft158, ft2025_ft159, ft2025_ft160, ft2025_ft161, ft2025_ft162, ft2025_ft163, ft2025_ft165, ft2025_ft166, ft2025_ft167, ft2025_ft168, ft2025_ft169, ft2025_ft170, ft2025_ft171, ft2025_ft172, ft2025_ft174, ft2025_ft175, ft2025_ft176, ft2025_ft177, ft2025_ft179, ft2025_ft180,
+     ft2025_ft181, ft2025_ft182, ft2025_ft183, ft2025_ft184, ft2025_ft185, ft2025_ft186, ft2025_ft188, ft2025_ft126
+    ];
 
 const fantateams24 = [
     ft2024_ft1, ft2024_ft2, ft2024_ft3, ft2024_ft4, ft2024_ft5, ft2024_ft6, ft2024_ft7, ft2024_ft8, ft2024_ft9, ft2024_ft10, 
@@ -2669,7 +3041,7 @@ const fantateams24 = [
         // ft2025_ft151, ft2025_ft152, ft2025_ft153
     //   ];
       
-    const fantateams = fantateams25;
+    const fantateams = fantateams26;
     const players = players25;
 
     const sorted_fantateams = [...fantateams].sort((a, b) => b.tot_team - a.tot_team);
