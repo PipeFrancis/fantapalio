@@ -3030,20 +3030,23 @@ const fantateams26 = [ft6, ft8, ft9, ft10, ft11, ft12, ft13, ft14, ft15, ft16, f
      ft181, ft182, ft183, ft184, ft185, ft186, ft188, ft126
     ];
 
-
-for (const team of fantateams) {  // inserisce in ogni team 2026 la lega del rione
+for (const team of fantateams26) { // inserisce in ogni team 2026 la lega del rione
 
     if (!Array.isArray(team.league_names)) {
         team.league_names = [];
     }
 
-    const league = team.rione.name;
+    const league =
+        team.rione === NORD ? "NORD" :
+        team.rione === SUD  ? "SUD"  :
+        team.rione === EST  ? "EST"  :
+        team.rione === WEST ? "WEST" :
+        null;
 
-    if (league && !team.league_names.includes(league)) {
+    if (league) {
         team.league_names.push(league);
     }
     console.log(`Team ${team.name} is in league(s): ${team.league_names.join(", ")}`);
-
 }
 
 
