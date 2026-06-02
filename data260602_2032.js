@@ -3046,8 +3046,7 @@ for (const team of fantateams26) { // assegna lega a ogni squadra in base al rio
         // 3. If it already has it, we do nothing.
     }
 
-    // console.log(`Team ${team.name} is in league(s): ${team.league_names?.join(", ") || ""}`);
-
+    
     if(team.name =="Scartizan Codroipo"){team.league_names.push("Gruppo Bello")}
     if(team.name =="Skibidi boppy"){team.league_names.push("Gruppo Bello")}
     if(team.name =="Vabbé skibidiboppi e forza West"){team.league_names.push("Gruppo Bello")}
@@ -3063,6 +3062,10 @@ for (const team of fantateams26) { // assegna lega a ogni squadra in base al rio
     if(team.name =="PPT"){team.league_names.push("Gruppo Bello")}
     if(team.name =="Miani Heat"){team.league_names.push("Gruppo Bello")}
     if(team.name =="I pupazzoni"){team.league_names.push("Gruppo Bello")} // non c'è
+
+
+    
+    // console.log(`Team ${team.name} is in league(s): ${team.league_names?.join(", ") || ""}`);
 }
 
       
