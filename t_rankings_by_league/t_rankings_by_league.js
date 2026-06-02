@@ -2,7 +2,7 @@ import {
     fantateam_type,
     NORD, SUD, EST, WEST,
     fantateams
-} from '../data260602_2154.js';
+} from '../data260602_2201.js';
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -13,11 +13,32 @@ document.addEventListener('DOMContentLoaded', function() {
     // Build league dropdown
     //--------------------------------------------------
 
+    // 1. Define your custom priority order
+    const priorityOrder = ["GENERALE", "NORD", "EST", "SUD", "WEST"];
+
     const leagues = [...new Set(
         fantateams
             .flatMap(team => team.league_names || [])
             .filter(name => name && name.trim() !== '')
-    )].sort();
+    )]
+    .sort((a, b) => {
+        const indexA = priorityOrder.indexOf(a);
+        const indexB = priorityOrder.indexOf(b);
+
+        // Case 1: Both leagues are in the priority list -> sort by priority order
+        if (indexA !== -1 && indexB !== -1) {
+            return indexA - indexB;
+        }
+
+        // Case 2: Only 'a' is a priority league -> 'a' comes first
+        if (indexA !== -1) return -1;
+
+        // Case 3: Only 'b' is a priority league -> 'b' comes first
+        if (indexB !== -1) return 1;
+
+        // Case 4: Neither are priority leagues -> sort alphabetically
+        return a.localeCompare(b);
+    });
 
     leagues.forEach(league => {
         const option = document.createElement('option');
