@@ -3030,7 +3030,7 @@ const fantateams26 = [ft6, ft8, ft9, ft10, ft11, ft12, ft13, ft14, ft15, ft16, f
      ft181, ft182, ft183, ft184, ft185, ft186, ft188, ft126
     ];
 
-for (const team of fantateams26) {
+for (const team of fantateams26) { // assegna lega a ogni squadra in base al rione
     const league = team.rione?.name; // Safely get the rione name
 
     if (league) {
@@ -3046,7 +3046,29 @@ for (const team of fantateams26) {
         // 3. If it already has it, we do nothing.
     }
 
-    console.log(`Team ${team.name} is in league(s): ${team.league_names?.join(", ") || ""}`);
+    
+    if(team.name =="Scartizan Codroipo"){team.league_names.push("Gruppo Bello")}
+    if(team.name =="Skibidi boppy"){team.league_names.push("Gruppo Bello")}
+    if(team.name =="Vabbé skibidiboppi e forza West"){team.league_names.push("Gruppo Bello")}
+    if(team.name =="Le rane… quelle vere"){team.league_names.push("Gruppo Bello")}
+    if(team.name =="Est puzzoni"){team.league_names.push("Gruppo Bello")}
+    if(team.name =="I messicani dell'Est"){team.league_names.push("Gruppo Bello")}
+    if(team.name =="PipeFrancis"){team.league_names.push("Gruppo Bello")}
+    if(team.name =="Super Chicche"){team.league_names.push("Gruppo Bello")}
+    if(team.name =="letsgoski"){team.league_names.push("Gruppo Bello")}
+    if(team.name =="Slamcesca"){team.league_names.push("Gruppo Bello")}
+    if(team.name =="Passariano Pistons"){team.league_names.push("Gruppo Bello")}
+    if(team.name =="Est Pippi io le trecce"){team.league_names.push("Gruppo Bello")}
+    if(team.name =="PPT"){team.league_names.push("Gruppo Bello")}
+    if(team.name =="Miani Heat"){team.league_names.push("Gruppo Bello")}
+    if(team.name =="I pupazzoni"){team.league_names.push("Gruppo Bello")} // non c'è
+
+
+
+
+
+    
+    // console.log(`Team ${team.name} is in league(s): ${team.league_names?.join(", ") || ""}`);
 }
 
       

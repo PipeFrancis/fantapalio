@@ -3067,8 +3067,8 @@ for (const team of fantateams26) { // assegna lega a ogni squadra in base al rio
 
 
 
-    
-    // console.log(`Team ${team.name} is in league(s): ${team.league_names?.join(", ") || ""}`);
+
+    console.log(`Team ${team.name} is in league(s): ${team.league_names?.join(", ") || ""}`);
 }
 
       
