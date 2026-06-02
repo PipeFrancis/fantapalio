@@ -2,7 +2,7 @@ import {
     fantateam_type,
     NORD, SUD, EST, WEST,
     fantateams
-} from '../260602_1904.js';
+} from '../260602_1914.js';
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const leagues = [...new Set(
         fantateams
-            .map(team => team.league_name)
+            .flatMap(team => team.league_names || [])
             .filter(name => name && name.trim() !== '')
     )].sort();
 
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         teamCardsContainer.innerHTML = '';
 
         const filteredTeams = fantateams
-            .filter(team => team.league_name === selectedLeague)
+            .filter(team => team.league_names?.includes(selectedLeague))
             .sort((a, b) => b.tot_team - a.tot_team);
 
         filteredTeams.forEach((team, index) => {
