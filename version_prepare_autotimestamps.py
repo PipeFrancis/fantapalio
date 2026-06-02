@@ -34,6 +34,7 @@ target_files = [
     "coppachiosco/coppachiosco.js",
     "meme_p_rankings/meme_p_rankings.js",
     "t_rankings_by_game/t_rankings_by_game.js",
+    "t_rankings_by_league/t_rankings_by_league.js",
     "p_rankings_by_game/p_rankings_by_game.js",
     "game_results/game_results.js",
 ]
