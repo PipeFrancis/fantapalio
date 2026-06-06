@@ -616,7 +616,28 @@ const WEST = WEST25;
 
 // -----------------------------------------------------------------------------------------------
 //                                        STATS PARTITE   
-// ----------------------------------------------------------------------------------------------- 
+// -----------------------------------------------------------------------------------------------
+
+const PTS   = 0;
+const T2P   = 1;
+const T2PX  = 2;
+const T3P   = 3;
+const T3PX  = 4;
+const FT    = 5;
+const FTX   = 6;
+const DREB  = 7;
+const OREB  = 8;
+const REB   = 9;
+const AST   = 10;
+const TO    = 11;
+const STL   = 12;
+const BLK   = 13;
+const EXP   = 14;
+const DD    = 15;
+const TD    = 16;
+const WIN   = 17;
+const MEME  = 18;
+
     //questo commentone da non cancellare che serve per averli vuoti prima di riempirli
     // //                               | | | | | | | | | | | | | | | | | | | 
     // //     gx_stats =             [PTS, 2Px,3Px,FTx, OR, ASS,ST,EXP,TD,Meme]
