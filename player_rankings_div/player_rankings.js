@@ -2,7 +2,7 @@ import {
     player_type,
     players,
     what_day_is_it
-} from '../data260608_0017.js';
+} from '../data260608_0019.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     const playerCardsContainer = document.getElementById('playerCardsContainer');
