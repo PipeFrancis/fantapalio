@@ -630,7 +630,7 @@ footer {
     }
 }
 .player-card1 p {
-    margin: 8px 2px;   /* Riduce il margine sopra e sotto a 4px (e 0 a destra/sinistra) */
+    margin: 8px 6px;   /* Riduce il margine sopra e sotto a 4px (e 0 a destra/sinistra) */
 }
 
 
