@@ -623,12 +623,14 @@ footer {
     flex: 1 0 calc(25% - 10px); /* Calc con spazi tra i bordi */
     max-width: 200px; /* Larghezza massima delle card */
     box-sizing: border-box; /* Rispetta il box model */
-    margin: 8px 0;
 }
 @media (max-width: 768px) {
     .player-card1 {
         flex: 1 0 calc(50% - 10px); /* Due card per riga su schermi più piccoli */
     }
+}
+.player-card1 p {
+    margin: 8px 0;   /* Riduce il margine sopra e sotto a 4px (e 0 a destra/sinistra) */
 }
 
 
