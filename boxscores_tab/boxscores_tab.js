@@ -1,5 +1,27 @@
 // Importa player_type e players dal modulo data.js
-import { player_type, players, td3Weights, players24, players25, what_day_is_it, team_not_in_final_1, team_not_in_final_2 } from '../data260607_2342.js';
+import { player_type, players, td3Weights, players24, players25, 
+    what_day_is_it, 
+    team_not_in_final_1, team_not_in_final_2,
+    PTS   ,
+    T2P   ,
+    T2PX  ,
+    T3P   ,
+    T3PX  ,
+    FT    ,
+    FTX   ,
+    DREB  ,
+    OREB  ,
+    REB   ,
+    AST   ,
+    TO    ,
+    STL   ,
+    BLK   ,
+    EXP   ,
+    DD    ,
+    TD    ,
+    WIN   ,
+    MEME  ,
+} from '../data260607_2359.js';
 console.log("inizio boxscore js"); // inizio
 
 
@@ -49,47 +71,47 @@ function populateTable_g1(team, players) {
             let playerRow = '<tr>';
             playerRow += `<td>${player.name}</td>`; // "giocatore"
             playerRow += `<td><strong>${player.g1}</strong></td>`; // "TOT"
-            playerRow += `<td>${player.stats_g1[0]}</td>`; // "PTS"
-            playerRow += `<td>${player.stats_g1[9]}</td>`; // "REB"
-            playerRow += `<td>${player.stats_g1[10]}</td>`; // "AST"
-            playerRow += `<td>${player.stats_g1[12]}</td>`; // "STL"
-            playerRow += `<td>${player.stats_g1[13]}</td>`; // "BLK"
-            playerRow += `<td>${player.stats_g1[18]}</td>`; // "Meme"
-            playerRow += `<td>${player.stats_g1[11]}</td>`; // "TO"
-            playerRow += `<td>${player.stats_g1[8]}</td>`; // "OREB"
-            playerRow += `<td>${player.stats_g1[7]}</td>`; // "DREB"
-            playerRow += `<td>${player.stats_g1[1]}</td>`; // "2PM"
-            playerRow += `<td>${player.stats_g1[1] + player.stats_g1[2]}</td>`; // "2PA"
-            playerRow += `<td>${calculatePercentage(player.stats_g1[1], player.stats_g1[1] + player.stats_g1[2])}</td>`; // "2P%"
-            playerRow += `<td>${player.stats_g1[3]}</td>`; // "3PM"
-            playerRow += `<td>${player.stats_g1[3] + player.stats_g1[4]}</td>`;// "3PA"
-            playerRow += `<td>${calculatePercentage(player.stats_g1[3], player.stats_g1[3] + player.stats_g1[4])}</td>`; // "3P%"
-            playerRow += `<td>${player.stats_g1[5]}</td>`; // "FTM"
-            playerRow += `<td>${player.stats_g1[5] + player.stats_g1[6]}</td>`; // "FTA"
-            playerRow += `<td>${calculatePercentage(player.stats_g1[5], player.stats_g1[5] + player.stats_g1[6])}</td>`; // "FT%"
-            playerRow += `<td>${player.stats_g1[14]}</td>`; // "EXP"
+            playerRow += `<td>${player.stats_g1[PTS]}</td>`; // "PTS"
+            playerRow += `<td>${player.stats_g1[REB]}</td>`; // "REB"
+            playerRow += `<td>${player.stats_g1[AST]}</td>`; // "AST"
+            playerRow += `<td>${player.stats_g1[STL]}</td>`; // "STL"
+            playerRow += `<td>${player.stats_g1[BLK]}</td>`; // "BLK"
+            playerRow += `<td>${player.stats_g1[MEME]}</td>`; // "Meme"
+            playerRow += `<td>${player.stats_g1[TO]}</td>`; // "TO"
+            playerRow += `<td>${player.stats_g1[OREB]}</td>`; // "OREB"
+            playerRow += `<td>${player.stats_g1[DREB]}</td>`; // "DREB"
+            playerRow += `<td>${player.stats_g1[T2P]}</td>`; // "2PM"
+            playerRow += `<td>${player.stats_g1[T2P] + player.stats_g1[T2PX]}</td>`; // "2PA"
+            playerRow += `<td>${calculatePercentage(player.stats_g1[T2P], player.stats_g1[T2P] + player.stats_g1[T2PX])}</td>`; // "2P%"
+            playerRow += `<td>${player.stats_g1[T3P]}</td>`; // "3PM"
+            playerRow += `<td>${player.stats_g1[T3P] + player.stats_g1[T3PX]}</td>`;// "3PA"
+            playerRow += `<td>${calculatePercentage(player.stats_g1[T3P], player.stats_g1[T3P] + player.stats_g1[T3PX])}</td>`; // "3P%"
+            playerRow += `<td>${player.stats_g1[FT]}</td>`; // "FTM"
+            playerRow += `<td>${player.stats_g1[FT] + player.stats_g1[FTX]}</td>`; // "FTA"
+            playerRow += `<td>${calculatePercentage(player.stats_g1[FT], player.stats_g1[FT] + player.stats_g1[FTX])}</td>`; // "FT%"
+            playerRow += `<td>${player.stats_g1[EXP]}</td>`; // "EXP"
 
 
             // playerRow += `<td>${player.name}</td>`; // "giocatore"
-            // playerRow += `<td>${player.stats_g1[0]}</td>`; // "PTS"
-            // playerRow += `<td>${player.stats_g1[9]}</td>`; // "REB"
-            // playerRow += `<td>${player.stats_g1[7]}</td>`; // "DREB"
-            // playerRow += `<td>${player.stats_g1[8]}</td>`; // "OREB"
-            // playerRow += `<td>${player.stats_g1[10]}</td>`; // "AST"
-            // playerRow += `<td>${player.stats_g1[12]}</td>`; // "STL"
-            // playerRow += `<td>${player.stats_g1[13]}</td>`; // "BLK"
-            // playerRow += `<td>${player.stats_g1[11]}</td>`; // "TO"
-            // playerRow += `<td>${player.stats_g1[1]}</td>`; // "2PM"
-            // playerRow += `<td>${player.stats_g1[1] + player.stats_g1[2]}</td>`; // "2PA"
-            // playerRow += `<td>${calculatePercentage(player.stats_g1[1], player.stats_g1[1] + player.stats_g1[2])}</td>`; // "2P%"
-            // playerRow += `<td>${player.stats_g1[3]}</td>`; // "3PM"
-            // playerRow += `<td>${player.stats_g1[3] + player.stats_g1[4]}</td>`;// "3PA"
-            // playerRow += `<td>${calculatePercentage(player.stats_g1[3], player.stats_g1[3] + player.stats_g1[4])}</td>`; // "3P%"
-            // playerRow += `<td>${player.stats_g1[5]}</td>`; // "FTM"
-            // playerRow += `<td>${player.stats_g1[5] + player.stats_g1[6]}</td>`; // "FTA"
-            // playerRow += `<td>${calculatePercentage(player.stats_g1[5], player.stats_g1[5] + player.stats_g1[6])}</td>`; // "FT%"
-            // playerRow += `<td>${player.stats_g1[14]}</td>`; // "EXP"
-            // playerRow += `<td>${player.stats_g1[18]}</td>`; // "Meme"
+            // playerRow += `<td>${player.stats_g1[PTS]}</td>`; // "PTS"
+            // playerRow += `<td>${player.stats_g1[REB]}</td>`; // "REB"
+            // playerRow += `<td>${player.stats_g1[DREB]}</td>`; // "DREB"
+            // playerRow += `<td>${player.stats_g1[OREB]}</td>`; // "OREB"
+            // playerRow += `<td>${player.stats_g1[AST]}</td>`; // "AST"
+            // playerRow += `<td>${player.stats_g1[STL]}</td>`; // "STL"
+            // playerRow += `<td>${player.stats_g1[BLK]}</td>`; // "BLK"
+            // playerRow += `<td>${player.stats_g1[TO]}</td>`; // "TO"
+            // playerRow += `<td>${player.stats_g1[T2P]}</td>`; // "2PM"
+            // playerRow += `<td>${player.stats_g1[T2P] + player.stats_g1[T2PX]}</td>`; // "2PA"
+            // playerRow += `<td>${calculatePercentage(player.stats_g1[T2P], player.stats_g1[T2P] + player.stats_g1[T2PX])}</td>`; // "2P%"
+            // playerRow += `<td>${player.stats_g1[T3P]}</td>`; // "3PM"
+            // playerRow += `<td>${player.stats_g1[T3P] + player.stats_g1[T3PX]}</td>`;// "3PA"
+            // playerRow += `<td>${calculatePercentage(player.stats_g1[T3P], player.stats_g1[T3P] + player.stats_g1[T3PX])}</td>`; // "3P%"
+            // playerRow += `<td>${player.stats_g1[FT]}</td>`; // "FTM"
+            // playerRow += `<td>${player.stats_g1[FT] + player.stats_g1[FTX]}</td>`; // "FTA"
+            // playerRow += `<td>${calculatePercentage(player.stats_g1[FT], player.stats_g1[FT] + player.stats_g1[FTX])}</td>`; // "FT%"
+            // playerRow += `<td>${player.stats_g1[EXP]}</td>`; // "EXP"
+            // playerRow += `<td>${player.stats_g1[MEME]}</td>`; // "Meme"
             // playerRow += `<td><strong>${player.g1}</strong></td>`; // "TOT"
             
             playerRow += '</tr>';
@@ -139,25 +161,25 @@ function populateTable_g2(team, players) {
 
             playerRow += `<td>${player.name}</td>`; // "giocatore"
             playerRow += `<td><strong>${player.g2}</strong></td>`; // "TOT"
-            playerRow += `<td>${player.stats_g2[0]}</td>`; // "PTS"
-            playerRow += `<td>${player.stats_g2[9]}</td>`; // "REB"
-            playerRow += `<td>${player.stats_g2[10]}</td>`; // "AST"
-            playerRow += `<td>${player.stats_g2[12]}</td>`; // "STL"
-            playerRow += `<td>${player.stats_g2[13]}</td>`; // "BLK"
-            playerRow += `<td>${player.stats_g2[18]}</td>`; // "Meme"
-            playerRow += `<td>${player.stats_g2[11]}</td>`; // "TO"
-            playerRow += `<td>${player.stats_g2[8]}</td>`; // "OREB"
-            playerRow += `<td>${player.stats_g2[7]}</td>`; // "DREB"
-            playerRow += `<td>${player.stats_g2[1]}</td>`; // "2PM"
-            playerRow += `<td>${player.stats_g2[1] + player.stats_g2[2]}</td>`; // "2PA"
-            playerRow += `<td>${calculatePercentage(player.stats_g2[1], player.stats_g2[1] + player.stats_g2[2])}</td>`; // "2P%"
-            playerRow += `<td>${player.stats_g2[3]}</td>`; // "3PM"
-            playerRow += `<td>${player.stats_g2[3] + player.stats_g2[4]}</td>`;// "3PA"
-            playerRow += `<td>${calculatePercentage(player.stats_g2[3], player.stats_g2[3] + player.stats_g2[4])}</td>`; // "3P%"
-            playerRow += `<td>${player.stats_g2[5]}</td>`; // "FTM"
-            playerRow += `<td>${player.stats_g2[5] + player.stats_g2[6]}</td>`; // "FTA"
-            playerRow += `<td>${calculatePercentage(player.stats_g2[5], player.stats_g2[5] + player.stats_g2[6])}</td>`; // "FT%"
-            playerRow += `<td>${player.stats_g2[14]}</td>`; // "EXP"
+            playerRow += `<td>${player.stats_g2[PTS]}</td>`; // "PTS"
+            playerRow += `<td>${player.stats_g2[REB]}</td>`; // "REB"
+            playerRow += `<td>${player.stats_g2[AST]}</td>`; // "AST"
+            playerRow += `<td>${player.stats_g2[STL]}</td>`; // "STL"
+            playerRow += `<td>${player.stats_g2[BLK]}</td>`; // "BLK"
+            playerRow += `<td>${player.stats_g2[MEME]}</td>`; // "Meme"
+            playerRow += `<td>${player.stats_g2[TO]}</td>`; // "TO"
+            playerRow += `<td>${player.stats_g2[OREB]}</td>`; // "OREB"
+            playerRow += `<td>${player.stats_g2[DREB]}</td>`; // "DREB"
+            playerRow += `<td>${player.stats_g2[T2P]}</td>`; // "2PM"
+            playerRow += `<td>${player.stats_g2[T2P] + player.stats_g2[T2PX]}</td>`; // "2PA"
+            playerRow += `<td>${calculatePercentage(player.stats_g2[T2P], player.stats_g2[T2P] + player.stats_g2[T2PX])}</td>`; // "2P%"
+            playerRow += `<td>${player.stats_g2[T3P]}</td>`; // "3PM"
+            playerRow += `<td>${player.stats_g2[T3P] + player.stats_g2[T3PX]}</td>`;// "3PA"
+            playerRow += `<td>${calculatePercentage(player.stats_g2[T3P], player.stats_g2[T3P] + player.stats_g2[T3PX])}</td>`; // "3P%"
+            playerRow += `<td>${player.stats_g2[FT]}</td>`; // "FTM"
+            playerRow += `<td>${player.stats_g2[FT] + player.stats_g2[FTX]}</td>`; // "FTA"
+            playerRow += `<td>${calculatePercentage(player.stats_g2[FT], player.stats_g2[FT] + player.stats_g2[FTX])}</td>`; // "FT%"
+            playerRow += `<td>${player.stats_g2[EXP]}</td>`; // "EXP"
 
             playerRow += '</tr>';
             tableBody.innerHTML += playerRow;
@@ -204,25 +226,25 @@ function populateTable_g3(team, players) {
            
             playerRow += `<td>${player.name}</td>`; // "giocatore"
             playerRow += `<td><strong>${player.g3}</strong></td>`; // "TOT"
-            playerRow += `<td>${player.stats_g3[0]}</td>`; // "PTS"
-            playerRow += `<td>${player.stats_g3[9]}</td>`; // "REB"
-            playerRow += `<td>${player.stats_g3[10]}</td>`; // "AST"
-            playerRow += `<td>${player.stats_g3[12]}</td>`; // "STL"
-            playerRow += `<td>${player.stats_g3[13]}</td>`; // "BLK"
-            playerRow += `<td>${player.stats_g3[18]}</td>`; // "Meme"
-            playerRow += `<td>${player.stats_g3[11]}</td>`; // "TO"
-            playerRow += `<td>${player.stats_g3[8]}</td>`; // "OREB"
-            playerRow += `<td>${player.stats_g3[7]}</td>`; // "DREB"
-            playerRow += `<td>${player.stats_g3[1]}</td>`; // "2PM"
-            playerRow += `<td>${player.stats_g3[1] + player.stats_g3[2]}</td>`; // "2PA"
-            playerRow += `<td>${calculatePercentage(player.stats_g3[1], player.stats_g3[1] + player.stats_g3[2])}</td>`; // "2P%"
-            playerRow += `<td>${player.stats_g3[3]}</td>`; // "3PM"
-            playerRow += `<td>${player.stats_g3[3] + player.stats_g3[4]}</td>`;// "3PA"
-            playerRow += `<td>${calculatePercentage(player.stats_g3[3], player.stats_g3[3] + player.stats_g3[4])}</td>`; // "3P%"
-            playerRow += `<td>${player.stats_g3[5]}</td>`; // "FTM"
-            playerRow += `<td>${player.stats_g3[5] + player.stats_g3[6]}</td>`; // "FTA"
-            playerRow += `<td>${calculatePercentage(player.stats_g3[5], player.stats_g3[5] + player.stats_g3[6])}</td>`; // "FT%"
-            playerRow += `<td>${player.stats_g3[14]}</td>`; // "EXP"
+            playerRow += `<td>${player.stats_g3[PTS]}</td>`; // "PTS"
+            playerRow += `<td>${player.stats_g3[REB]}</td>`; // "REB"
+            playerRow += `<td>${player.stats_g3[AST]}</td>`; // "AST"
+            playerRow += `<td>${player.stats_g3[STL]}</td>`; // "STL"
+            playerRow += `<td>${player.stats_g3[BLK]}</td>`; // "BLK"
+            playerRow += `<td>${player.stats_g3[MEME]}</td>`; // "Meme"
+            playerRow += `<td>${player.stats_g3[TO]}</td>`; // "TO"
+            playerRow += `<td>${player.stats_g3[OREB]}</td>`; // "OREB"
+            playerRow += `<td>${player.stats_g3[DREB]}</td>`; // "DREB"
+            playerRow += `<td>${player.stats_g3[T2P]}</td>`; // "2PM"
+            playerRow += `<td>${player.stats_g3[T2P] + player.stats_g3[T2PX]}</td>`; // "2PA"
+            playerRow += `<td>${calculatePercentage(player.stats_g3[T2P], player.stats_g3[T2P] + player.stats_g3[T2PX])}</td>`; // "2P%"
+            playerRow += `<td>${player.stats_g3[T3P]}</td>`; // "3PM"
+            playerRow += `<td>${player.stats_g3[T3P] + player.stats_g3[T3PX]}</td>`;// "3PA"
+            playerRow += `<td>${calculatePercentage(player.stats_g3[T3P], player.stats_g3[T3P] + player.stats_g3[T3PX])}</td>`; // "3P%"
+            playerRow += `<td>${player.stats_g3[FT]}</td>`; // "FTM"
+            playerRow += `<td>${player.stats_g3[FT] + player.stats_g3[FTX]}</td>`; // "FTA"
+            playerRow += `<td>${calculatePercentage(player.stats_g3[FT], player.stats_g3[FT] + player.stats_g3[FTX])}</td>`; // "FT%"
+            playerRow += `<td>${player.stats_g3[EXP]}</td>`; // "EXP"
 
             playerRow += '</tr>';
             tableBody.innerHTML += playerRow;
@@ -269,25 +291,25 @@ function populateTable_semi(team, players) {
             
             playerRow += `<td>${player.name}</td>`; // "giocatore"
             playerRow += `<td><strong>${player.semi}</strong></td>`; // "TOT"
-            playerRow += `<td>${player.stats_semi[0]}</td>`; // "PTS"
-            playerRow += `<td>${player.stats_semi[9]}</td>`; // "REB"
-            playerRow += `<td>${player.stats_semi[10]}</td>`; // "AST"
-            playerRow += `<td>${player.stats_semi[12]}</td>`; // "STL"
-            playerRow += `<td>${player.stats_semi[13]}</td>`; // "BLK"
-            playerRow += `<td>${player.stats_semi[18]}</td>`; // "Meme"
-            playerRow += `<td>${player.stats_semi[11]}</td>`; // "TO"
-            playerRow += `<td>${player.stats_semi[8]}</td>`; // "OREB"
-            playerRow += `<td>${player.stats_semi[7]}</td>`; // "DREB"
-            playerRow += `<td>${player.stats_semi[1]}</td>`; // "2PM"
-            playerRow += `<td>${player.stats_semi[1] + player.stats_semi[2]}</td>`; // "2PA"
-            playerRow += `<td>${calculatePercentage(player.stats_semi[1], player.stats_semi[1] + player.stats_semi[2])}</td>`; // "2P%"
-            playerRow += `<td>${player.stats_semi[3]}</td>`; // "3PM"
-            playerRow += `<td>${player.stats_semi[3] + player.stats_semi[4]}</td>`;// "3PA"
-            playerRow += `<td>${calculatePercentage(player.stats_semi[3], player.stats_semi[3] + player.stats_semi[4])}</td>`; // "3P%"
-            playerRow += `<td>${player.stats_semi[5]}</td>`; // "FTM"
-            playerRow += `<td>${player.stats_semi[5] + player.stats_semi[6]}</td>`; // "FTA"
-            playerRow += `<td>${calculatePercentage(player.stats_semi[5], player.stats_semi[5] + player.stats_semi[6])}</td>`; // "FT%"
-            playerRow += `<td>${player.stats_semi[14]}</td>`; // "EXP"
+            playerRow += `<td>${player.stats_semi[PTS]}</td>`; // "PTS"
+            playerRow += `<td>${player.stats_semi[REB]}</td>`; // "REB"
+            playerRow += `<td>${player.stats_semi[AST]}</td>`; // "AST"
+            playerRow += `<td>${player.stats_semi[STL]}</td>`; // "STL"
+            playerRow += `<td>${player.stats_semi[BLK]}</td>`; // "BLK"
+            playerRow += `<td>${player.stats_semi[MEME]}</td>`; // "Meme"
+            playerRow += `<td>${player.stats_semi[TO]}</td>`; // "TO"
+            playerRow += `<td>${player.stats_semi[OREB]}</td>`; // "OREB"
+            playerRow += `<td>${player.stats_semi[DREB]}</td>`; // "DREB"
+            playerRow += `<td>${player.stats_semi[T2P]}</td>`; // "2PM"
+            playerRow += `<td>${player.stats_semi[T2P] + player.stats_semi[T2PX]}</td>`; // "2PA"
+            playerRow += `<td>${calculatePercentage(player.stats_semi[T2P], player.stats_semi[T2P] + player.stats_semi[T2PX])}</td>`; // "2P%"
+            playerRow += `<td>${player.stats_semi[T3P]}</td>`; // "3PM"
+            playerRow += `<td>${player.stats_semi[T3P] + player.stats_semi[T3PX]}</td>`;// "3PA"
+            playerRow += `<td>${calculatePercentage(player.stats_semi[T3P], player.stats_semi[T3P] + player.stats_semi[T3PX])}</td>`; // "3P%"
+            playerRow += `<td>${player.stats_semi[FT]}</td>`; // "FTM"
+            playerRow += `<td>${player.stats_semi[FT] + player.stats_semi[FTX]}</td>`; // "FTA"
+            playerRow += `<td>${calculatePercentage(player.stats_semi[FT], player.stats_semi[FT] + player.stats_semi[FTX])}</td>`; // "FT%"
+            playerRow += `<td>${player.stats_semi[EXP]}</td>`; // "EXP"
 
             playerRow += '</tr>';
             tableBody.innerHTML += playerRow;
@@ -335,25 +357,25 @@ function populateTable_final(team, players) {
             
                                                                         playerRow += `<td>${player.name}</td>`; // "giocatore"
                                                                         playerRow += `<td><strong>${player.final}</strong></td>`; // "TOT"
-                                                                        playerRow += `<td>${player.stats_final[0]}</td>`; // "PTS"
-                                                                        playerRow += `<td>${player.stats_final[9]}</td>`; // "REB"
-                                                                        playerRow += `<td>${player.stats_final[10]}</td>`; // "AST"
-                                                                        playerRow += `<td>${player.stats_final[12]}</td>`; // "STL"
-                                                                        playerRow += `<td>${player.stats_final[13]}</td>`; // "BLK"
-                                                                        playerRow += `<td>${player.stats_final[18]}</td>`; // "Meme"
-                                                                        playerRow += `<td>${player.stats_final[11]}</td>`; // "TO"
-                                                                        playerRow += `<td>${player.stats_final[8]}</td>`; // "OREB"
-                                                                        playerRow += `<td>${player.stats_final[7]}</td>`; // "DREB"
-                                                                        playerRow += `<td>${player.stats_final[1]}</td>`; // "2PM"
-                                                                        playerRow += `<td>${player.stats_final[1] + player.stats_final[2]}</td>`; // "2PA"
-                                                                        playerRow += `<td>${calculatePercentage(player.stats_final[1], player.stats_final[1] + player.stats_final[2])}</td>`; // "2P%"
-                                                                        playerRow += `<td>${player.stats_final[3]}</td>`; // "3PM"
-                                                                        playerRow += `<td>${player.stats_final[3] + player.stats_final[4]}</td>`;// "3PA"
-                                                                        playerRow += `<td>${calculatePercentage(player.stats_final[3], player.stats_final[3] + player.stats_final[4])}</td>`; // "3P%"
-                                                                        playerRow += `<td>${player.stats_final[5]}</td>`; // "FTM"
-                                                                        playerRow += `<td>${player.stats_final[5] + player.stats_final[6]}</td>`; // "FTA"
-                                                                        playerRow += `<td>${calculatePercentage(player.stats_final[5], player.stats_final[5] + player.stats_final[6])}</td>`; // "FT%"
-                                                                        playerRow += `<td>${player.stats_final[14]}</td>`; // "EXP"
+                                                                        playerRow += `<td>${player.stats_final[PTS]}</td>`; // "PTS"
+                                                                        playerRow += `<td>${player.stats_final[REB]}</td>`; // "REB"
+                                                                        playerRow += `<td>${player.stats_final[AST]}</td>`; // "AST"
+                                                                        playerRow += `<td>${player.stats_final[STL]}</td>`; // "STL"
+                                                                        playerRow += `<td>${player.stats_final[BLK]}</td>`; // "BLK"
+                                                                        playerRow += `<td>${player.stats_final[MEME]}</td>`; // "Meme"
+                                                                        playerRow += `<td>${player.stats_final[TO]}</td>`; // "TO"
+                                                                        playerRow += `<td>${player.stats_final[OREB]}</td>`; // "OREB"
+                                                                        playerRow += `<td>${player.stats_final[DREB]}</td>`; // "DREB"
+                                                                        playerRow += `<td>${player.stats_final[T2P]}</td>`; // "2PM"
+                                                                        playerRow += `<td>${player.stats_final[T2P] + player.stats_final[T2PX]}</td>`; // "2PA"
+                                                                        playerRow += `<td>${calculatePercentage(player.stats_final[T2P], player.stats_final[T2P] + player.stats_final[T2PX])}</td>`; // "2P%"
+                                                                        playerRow += `<td>${player.stats_final[T3P]}</td>`; // "3PM"
+                                                                        playerRow += `<td>${player.stats_final[T3P] + player.stats_final[T3PX]}</td>`;// "3PA"
+                                                                        playerRow += `<td>${calculatePercentage(player.stats_final[T3P], player.stats_final[T3P] + player.stats_final[T3PX])}</td>`; // "3P%"
+                                                                        playerRow += `<td>${player.stats_final[FT]}</td>`; // "FTM"
+                                                                        playerRow += `<td>${player.stats_final[FT] + player.stats_final[FTX]}</td>`; // "FTA"
+                                                                        playerRow += `<td>${calculatePercentage(player.stats_final[FT], player.stats_final[FT] + player.stats_final[FTX])}</td>`; // "FT%"
+                                                                        playerRow += `<td>${player.stats_final[EXP]}</td>`; // "EXP"
 
             playerRow += '</tr>';
             tableBody.innerHTML += playerRow;
@@ -401,34 +423,34 @@ function populateTable_avg(team, players, isinfinal) {
                 let playerRow = '<tr>';
                 playerRow += `<td>${player.name}</td>`;
                 playerRow += `<td><strong>${((player.g1 + player.g2 + player.g3 + player.semi + player.final)/ 5).toFixed(1)}</strong></td>`; //TOT
-                playerRow += `<td>${((player.stats_g1[0] + player.stats_g2[0] + player.stats_g3[0] + player.stats_semi[0] + player.stats_final[0]) / 5).toFixed(1)}</td>`; //PTS
-                playerRow += `<td>${((player.stats_g1[9] + player.stats_g2[9] + player.stats_g3[9] + player.stats_semi[9] + player.stats_final[9]) / 5).toFixed(1)}</td>`; //REB
-                playerRow += `<td>${((player.stats_g1[10] + player.stats_g2[10] + player.stats_g3[10] + player.stats_semi[10] + player.stats_final[10]) / 5).toFixed(1)}</td>`; // AST
-                playerRow += `<td>${((player.stats_g1[12] + player.stats_g2[12] + player.stats_g3[12] + player.stats_semi[12] + player.stats_final[12]) / 5).toFixed(1)}</td>`; // STL
-                playerRow += `<td>${((player.stats_g1[13] + player.stats_g2[13] + player.stats_g3[13] + player.stats_semi[13] + player.stats_final[13]) / 5).toFixed(1)}</td>`; // BLK 
-                playerRow += `<td>${((player.stats_g1[18] + player.stats_g2[18] + player.stats_g3[18] + player.stats_semi[18] + player.stats_final[18]) / 5).toFixed(1)}</td>`;  //Meme
-                playerRow += `<td>${((player.stats_g1[11] + player.stats_g2[11] + player.stats_g3[11] + player.stats_semi[11] + player.stats_final[11]) / 5).toFixed(1)}</td>`; // TO
-                playerRow += `<td>${((player.stats_g1[8] + player.stats_g2[8] + player.stats_g3[8] + player.stats_semi[8] + player.stats_final[8]) / 5).toFixed(1)}</td>`; // OREB
-                playerRow += `<td>${((player.stats_g1[7] + player.stats_g2[7] + player.stats_g3[7] + player.stats_semi[7] + player.stats_final[7]) / 5).toFixed(1)}</td>`; // DREB
-                playerRow += `<td>${((player.stats_g1[1] + player.stats_g2[1] + player.stats_g3[1] + player.stats_semi[1] + player.stats_final[1]) / 5).toFixed(1)}</td>`; // 2PM
-                playerRow += `<td>${(((player.stats_g1[1] + player.stats_g2[1] + player.stats_g3[1] + player.stats_semi[1] + player.stats_final[1]) / 5) + ((player.stats_g1[2] + player.stats_g2[2] + player.stats_g3[2] + player.stats_semi[2] + player.stats_final[2]) / 5)).toFixed(1)}</td>`; // 2PA
+                playerRow += `<td>${((player.stats_g1[PTS] + player.stats_g2[PTS] + player.stats_g3[PTS] + player.stats_semi[PTS] + player.stats_final[PTS]) / 5).toFixed(1)}</td>`; //PTS
+                playerRow += `<td>${((player.stats_g1[REB] + player.stats_g2[REB] + player.stats_g3[REB] + player.stats_semi[REB] + player.stats_final[REB]) / 5).toFixed(1)}</td>`; //REB
+                playerRow += `<td>${((player.stats_g1[AST] + player.stats_g2[AST] + player.stats_g3[AST] + player.stats_semi[AST] + player.stats_final[AST]) / 5).toFixed(1)}</td>`; // AST
+                playerRow += `<td>${((player.stats_g1[STL] + player.stats_g2[STL] + player.stats_g3[STL] + player.stats_semi[STL] + player.stats_final[STL]) / 5).toFixed(1)}</td>`; // STL
+                playerRow += `<td>${((player.stats_g1[BLK] + player.stats_g2[BLK] + player.stats_g3[BLK] + player.stats_semi[BLK] + player.stats_final[BLK]) / 5).toFixed(1)}</td>`; // BLK 
+                playerRow += `<td>${((player.stats_g1[MEME] + player.stats_g2[MEME] + player.stats_g3[MEME] + player.stats_semi[MEME] + player.stats_final[MEME]) / 5).toFixed(1)}</td>`;  //Meme
+                playerRow += `<td>${((player.stats_g1[TO] + player.stats_g2[TO] + player.stats_g3[TO] + player.stats_semi[TO] + player.stats_final[TO]) / 5).toFixed(1)}</td>`; // TO
+                playerRow += `<td>${((player.stats_g1[OREB] + player.stats_g2[OREB] + player.stats_g3[OREB] + player.stats_semi[OREB] + player.stats_final[OREB]) / 5).toFixed(1)}</td>`; // OREB
+                playerRow += `<td>${((player.stats_g1[DREB] + player.stats_g2[DREB] + player.stats_g3[DREB] + player.stats_semi[DREB] + player.stats_final[DREB]) / 5).toFixed(1)}</td>`; // DREB
+                playerRow += `<td>${((player.stats_g1[T2P] + player.stats_g2[T2P] + player.stats_g3[T2P] + player.stats_semi[T2P] + player.stats_final[T2P]) / 5).toFixed(1)}</td>`; // 2PM
+                playerRow += `<td>${(((player.stats_g1[T2P] + player.stats_g2[T2P] + player.stats_g3[T2P] + player.stats_semi[T2P] + player.stats_final[T2P]) / 5) + ((player.stats_g1[T2PX] + player.stats_g2[T2PX] + player.stats_g3[T2PX] + player.stats_semi[T2PX] + player.stats_final[T2PX]) / 5)).toFixed(1)}</td>`; // 2PA
                 playerRow += `<td>${calculatePercentage(
-                    (player.stats_g1[1] + player.stats_g2[1] + player.stats_g3[1] + player.stats_semi[1] + player.stats_final[1]) / 5,
-                    ((player.stats_g1[1] + player.stats_g2[1] + player.stats_g3[1] + player.stats_semi[1] + player.stats_final[1]) / 5) + ((player.stats_g1[2] + player.stats_g2[2] + player.stats_g3[2] + player.stats_semi[2] + player.stats_final[2]) / 5) // 2P%
+                    (player.stats_g1[T2P] + player.stats_g2[T2P] + player.stats_g3[T2P] + player.stats_semi[T2P] + player.stats_final[T2P]) / 5,
+                    ((player.stats_g1[T2P] + player.stats_g2[T2P] + player.stats_g3[T2P] + player.stats_semi[T2P] + player.stats_final[T2P]) / 5) + ((player.stats_g1[T2PX] + player.stats_g2[T2PX] + player.stats_g3[T2PX] + player.stats_semi[T2PX] + player.stats_final[T2PX]) / 5) // 2P%
                 )}</td>`;
-                playerRow += `<td>${((player.stats_g1[3] + player.stats_g2[3] + player.stats_g3[3] + player.stats_semi[3] + player.stats_final[3]) / 5).toFixed(1)}</td>`; // 3PM
-                playerRow += `<td>${(((player.stats_g1[3] + player.stats_g2[3] + player.stats_g3[3] + player.stats_semi[3] + player.stats_final[3]) / 5) + ((player.stats_g1[4] + player.stats_g2[4] + player.stats_g3[4] + player.stats_semi[4] + player.stats_final[4]) / 5)).toFixed(1)}</td>`; //3PA
+                playerRow += `<td>${((player.stats_g1[T3P] + player.stats_g2[T3P] + player.stats_g3[T3P] + player.stats_semi[T3P] + player.stats_final[T3P]) / 5).toFixed(1)}</td>`; // 3PM
+                playerRow += `<td>${(((player.stats_g1[T3P] + player.stats_g2[T3P] + player.stats_g3[T3P] + player.stats_semi[T3P] + player.stats_final[T3P]) / 5) + ((player.stats_g1[T3PX] + player.stats_g2[T3PX] + player.stats_g3[T3PX] + player.stats_semi[T3PX] + player.stats_final[T3PX]) / 5)).toFixed(1)}</td>`; //3PA
                 playerRow += `<td>${calculatePercentage(
-                    (player.stats_g1[3] + player.stats_g2[3] + player.stats_g3[3] + player.stats_semi[3] + player.stats_final[3]) / 5,
-                    ((player.stats_g1[3] + player.stats_g2[3] + player.stats_g3[3] + player.stats_semi[3] + player.stats_final[3]) / 5) + ((player.stats_g1[4] + player.stats_g2[4] + player.stats_g3[4] + player.stats_semi[4] + player.stats_final[4]) / 5) //3P%
+                    (player.stats_g1[T3P] + player.stats_g2[T3P] + player.stats_g3[T3P] + player.stats_semi[T3P] + player.stats_final[T3P]) / 5,
+                    ((player.stats_g1[T3P] + player.stats_g2[T3P] + player.stats_g3[T3P] + player.stats_semi[T3P] + player.stats_final[T3P]) / 5) + ((player.stats_g1[T3PX] + player.stats_g2[T3PX] + player.stats_g3[T3PX] + player.stats_semi[T3PX] + player.stats_final[T3PX]) / 5) //3P%
                 )}</td>`;
-                playerRow += `<td>${((player.stats_g1[5] + player.stats_g2[5] + player.stats_g3[5] + player.stats_semi[5] + player.stats_final[5]) / 5).toFixed(1)}</td>`; //FTM
-                playerRow += `<td>${(((player.stats_g1[5] + player.stats_g2[5] + player.stats_g3[5] + player.stats_semi[5] + player.stats_final[5]) / 5) + ((player.stats_g1[6] + player.stats_g2[6] + player.stats_g3[6] + player.stats_semi[6] + player.stats_final[6]) / 5)).toFixed(1)}</td>`; //FTA
+                playerRow += `<td>${((player.stats_g1[FT] + player.stats_g2[FT] + player.stats_g3[FT] + player.stats_semi[FT] + player.stats_final[FT]) / 5).toFixed(1)}</td>`; //FTM
+                playerRow += `<td>${(((player.stats_g1[FT] + player.stats_g2[FT] + player.stats_g3[FT] + player.stats_semi[FT] + player.stats_final[FT]) / 5) + ((player.stats_g1[FTX] + player.stats_g2[FTX] + player.stats_g3[FTX] + player.stats_semi[FTX] + player.stats_final[FTX]) / 5)).toFixed(1)}</td>`; //FTA
                 playerRow += `<td>${calculatePercentage(
-                    (player.stats_g1[5] + player.stats_g2[5] + player.stats_g3[5] + player.stats_semi[5] + player.stats_final[5]) / 5,
-                    ((player.stats_g1[5] + player.stats_g2[5] + player.stats_g3[5] + player.stats_semi[5] + player.stats_final[5]) / 5) + ((player.stats_g1[6] + player.stats_g2[6] + player.stats_g3[6] + player.stats_semi[6] + player.stats_final[6]) / 5) //FT%
+                    (player.stats_g1[FT] + player.stats_g2[FT] + player.stats_g3[FT] + player.stats_semi[FT] + player.stats_final[FT]) / 5,
+                    ((player.stats_g1[FT] + player.stats_g2[FT] + player.stats_g3[FT] + player.stats_semi[FT] + player.stats_final[FT]) / 5) + ((player.stats_g1[FTX] + player.stats_g2[FTX] + player.stats_g3[FTX] + player.stats_semi[FTX] + player.stats_final[FTX]) / 5) //FT%
                 )}</td>`;
-                playerRow += `<td>${((player.stats_g1[14] + player.stats_g2[14] + player.stats_g3[14] + player.stats_semi[14] + player.stats_final[14]) / 5).toFixed(1)}</td>`; //EXP
+                playerRow += `<td>${((player.stats_g1[EXP] + player.stats_g2[EXP] + player.stats_g3[EXP] + player.stats_semi[EXP] + player.stats_final[EXP]) / 5).toFixed(1)}</td>`; //EXP
                 playerRow += '</tr>';
                 tableBody.innerHTML += playerRow;
             }else{ //team = "SUD" o "EST", isinfinal = 0, 
@@ -436,34 +458,34 @@ function populateTable_avg(team, players, isinfinal) {
 
                 playerRow += `<td>${player.name}</td>`; // NO FINAL STATS COUNTED (THEY ARE ZERO, MEME COULD BE NOT ZERO BUT WOULD NOT BE INGAME MEME)
                 playerRow += `<td><strong>${((player.g1 + player.g2 + player.g3 + player.semi)/ 4).toFixed(1)}</strong></td>`; // TOT
-                playerRow += `<td>${((player.stats_g1[0] + player.stats_g2[0] + player.stats_g3[0] + player.stats_semi[0]) / 4).toFixed(1)}</td>`; // PTS
-                playerRow += `<td>${((player.stats_g1[9] + player.stats_g2[9] + player.stats_g3[9] + player.stats_semi[9]) / 4).toFixed(1)}</td>`; // REB
-                playerRow += `<td>${((player.stats_g1[10] + player.stats_g2[10] + player.stats_g3[10] + player.stats_semi[10]) / 4).toFixed(1)}</td>`; // AST
-                playerRow += `<td>${((player.stats_g1[12] + player.stats_g2[12] + player.stats_g3[12] + player.stats_semi[12]) / 4).toFixed(1)}</td>`; // STL
-                playerRow += `<td>${((player.stats_g1[13] + player.stats_g2[13] + player.stats_g3[13] + player.stats_semi[13]) / 4).toFixed(1)}</td>`; // BLK
-                playerRow += `<td>${((player.stats_g1[18] + player.stats_g2[18] + player.stats_g3[18] + player.stats_semi[18]) / 4).toFixed(1)}</td>`; // Meme
-                playerRow += `<td>${((player.stats_g1[11] + player.stats_g2[11] + player.stats_g3[11] + player.stats_semi[11]) / 4).toFixed(1)}</td>`; // TO
-                playerRow += `<td>${((player.stats_g1[8] + player.stats_g2[8] + player.stats_g3[8] + player.stats_semi[8]) / 4).toFixed(1)}</td>`; // OREB
-                playerRow += `<td>${((player.stats_g1[7] + player.stats_g2[7] + player.stats_g3[7] + player.stats_semi[7]) / 4).toFixed(1)}</td>`; // DREB
-                playerRow += `<td>${((player.stats_g1[1] + player.stats_g2[1] + player.stats_g3[1] + player.stats_semi[1]) / 4).toFixed(1)}</td>`; // 2PM
-                playerRow += `<td>${(((player.stats_g1[1] + player.stats_g2[1] + player.stats_g3[1] + player.stats_semi[1]) / 4) + ((player.stats_g1[2] + player.stats_g2[2] + player.stats_g3[2] + player.stats_semi[2]) / 4)).toFixed(1)}</td>`; // 2PA
+                playerRow += `<td>${((player.stats_g1[PTS] + player.stats_g2[PTS] + player.stats_g3[PTS] + player.stats_semi[PTS]) / 4).toFixed(1)}</td>`; // PTS
+                playerRow += `<td>${((player.stats_g1[REB] + player.stats_g2[REB] + player.stats_g3[REB] + player.stats_semi[REB]) / 4).toFixed(1)}</td>`; // REB
+                playerRow += `<td>${((player.stats_g1[AST] + player.stats_g2[AST] + player.stats_g3[AST] + player.stats_semi[AST]) / 4).toFixed(1)}</td>`; // AST
+                playerRow += `<td>${((player.stats_g1[STL] + player.stats_g2[STL] + player.stats_g3[STL] + player.stats_semi[STL]) / 4).toFixed(1)}</td>`; // STL
+                playerRow += `<td>${((player.stats_g1[BLK] + player.stats_g2[BLK] + player.stats_g3[BLK] + player.stats_semi[BLK]) / 4).toFixed(1)}</td>`; // BLK
+                playerRow += `<td>${((player.stats_g1[MEME] + player.stats_g2[MEME] + player.stats_g3[MEME] + player.stats_semi[MEME]) / 4).toFixed(1)}</td>`; // Meme
+                playerRow += `<td>${((player.stats_g1[TO] + player.stats_g2[TO] + player.stats_g3[TO] + player.stats_semi[TO]) / 4).toFixed(1)}</td>`; // TO
+                playerRow += `<td>${((player.stats_g1[OREB] + player.stats_g2[OREB] + player.stats_g3[OREB] + player.stats_semi[OREB]) / 4).toFixed(1)}</td>`; // OREB
+                playerRow += `<td>${((player.stats_g1[DREB] + player.stats_g2[DREB] + player.stats_g3[DREB] + player.stats_semi[DREB]) / 4).toFixed(1)}</td>`; // DREB
+                playerRow += `<td>${((player.stats_g1[T2P] + player.stats_g2[T2P] + player.stats_g3[T2P] + player.stats_semi[T2P]) / 4).toFixed(1)}</td>`; // 2PM
+                playerRow += `<td>${(((player.stats_g1[T2P] + player.stats_g2[T2P] + player.stats_g3[T2P] + player.stats_semi[T2P]) / 4) + ((player.stats_g1[T2PX] + player.stats_g2[T2PX] + player.stats_g3[T2PX] + player.stats_semi[T2PX]) / 4)).toFixed(1)}</td>`; // 2PA
                 playerRow += `<td>${calculatePercentage(
-                    (player.stats_g1[1] + player.stats_g2[1] + player.stats_g3[1] + player.stats_semi[1]) / 4,
-                    ((player.stats_g1[1] + player.stats_g2[1] + player.stats_g3[1] + player.stats_semi[1]) / 4) + ((player.stats_g1[2] + player.stats_g2[2] + player.stats_g3[2] + player.stats_semi[2]) / 4) // 2P%
+                    (player.stats_g1[T2P] + player.stats_g2[T2P] + player.stats_g3[T2P] + player.stats_semi[T2P]) / 4,
+                    ((player.stats_g1[T2P] + player.stats_g2[T2P] + player.stats_g3[T2P] + player.stats_semi[T2P]) / 4) + ((player.stats_g1[T2PX] + player.stats_g2[T2PX] + player.stats_g3[T2PX] + player.stats_semi[T2PX]) / 4) // 2P%
                 )}</td>`;
-                playerRow += `<td>${((player.stats_g1[3] + player.stats_g2[3] + player.stats_g3[3] + player.stats_semi[3]) / 4).toFixed(1)}</td>`; // 3PM
-                playerRow += `<td>${(((player.stats_g1[3] + player.stats_g2[3] + player.stats_g3[3] + player.stats_semi[3]) / 4) + ((player.stats_g1[4] + player.stats_g2[4] + player.stats_g3[4] + player.stats_semi[4]) / 4)).toFixed(1)}</td>`; //3PA
+                playerRow += `<td>${((player.stats_g1[T3P] + player.stats_g2[T3P] + player.stats_g3[T3P] + player.stats_semi[T3P]) / 4).toFixed(1)}</td>`; // 3PM
+                playerRow += `<td>${(((player.stats_g1[T3P] + player.stats_g2[T3P] + player.stats_g3[T3P] + player.stats_semi[T3P]) / 4) + ((player.stats_g1[T3PX] + player.stats_g2[T3PX] + player.stats_g3[T3PX] + player.stats_semi[T3PX]) / 4)).toFixed(1)}</td>`; //3PA
                 playerRow += `<td>${calculatePercentage(
-                    (player.stats_g1[3] + player.stats_g2[3] + player.stats_g3[3] + player.stats_semi[3]) / 4,
-                    ((player.stats_g1[3] + player.stats_g2[3] + player.stats_g3[3] + player.stats_semi[3]) / 4) + ((player.stats_g1[4] + player.stats_g2[4] + player.stats_g3[4] + player.stats_semi[4]) / 4) // 3P%
+                    (player.stats_g1[T3P] + player.stats_g2[T3P] + player.stats_g3[T3P] + player.stats_semi[T3P]) / 4,
+                    ((player.stats_g1[T3P] + player.stats_g2[T3P] + player.stats_g3[T3P] + player.stats_semi[T3P]) / 4) + ((player.stats_g1[T3PX] + player.stats_g2[T3PX] + player.stats_g3[T3PX] + player.stats_semi[T3PX]) / 4) // 3P%
                 )}</td>`;
-                playerRow += `<td>${((player.stats_g1[5] + player.stats_g2[5] + player.stats_g3[5] + player.stats_semi[5]) / 4).toFixed(1)}</td>`; // FTM
-                playerRow += `<td>${(((player.stats_g1[5] + player.stats_g2[5] + player.stats_g3[5] + player.stats_semi[5]) / 4) + ((player.stats_g1[6] + player.stats_g2[6] + player.stats_g3[6] + player.stats_semi[6]) / 4)).toFixed(1)}</td>`; //FTA
+                playerRow += `<td>${((player.stats_g1[FT] + player.stats_g2[FT] + player.stats_g3[FT] + player.stats_semi[FT]) / 4).toFixed(1)}</td>`; // FTM
+                playerRow += `<td>${(((player.stats_g1[FT] + player.stats_g2[FT] + player.stats_g3[FT] + player.stats_semi[FT]) / 4) + ((player.stats_g1[FTX] + player.stats_g2[FTX] + player.stats_g3[FTX] + player.stats_semi[FTX]) / 4)).toFixed(1)}</td>`; //FTA
                 playerRow += `<td>${calculatePercentage(
-                    (player.stats_g1[5] + player.stats_g2[5] + player.stats_g3[5] + player.stats_semi[5]) / 4,
-                    ((player.stats_g1[5] + player.stats_g2[5] + player.stats_g3[5] + player.stats_semi[5]) / 4) + ((player.stats_g1[6] + player.stats_g2[6] + player.stats_g3[6] + player.stats_semi[6]) / 4) // FT%
+                    (player.stats_g1[FT] + player.stats_g2[FT] + player.stats_g3[FT] + player.stats_semi[FT]) / 4,
+                    ((player.stats_g1[FT] + player.stats_g2[FT] + player.stats_g3[FT] + player.stats_semi[FT]) / 4) + ((player.stats_g1[FTX] + player.stats_g2[FTX] + player.stats_g3[FTX] + player.stats_semi[FTX]) / 4) // FT%
                 )}</td>`;
-                playerRow += `<td>${((player.stats_g1[14] + player.stats_g2[14] + player.stats_g3[14] + player.stats_semi[14]) / 4).toFixed(1)}</td>`; // EXP
+                playerRow += `<td>${((player.stats_g1[EXP] + player.stats_g2[EXP] + player.stats_g3[EXP] + player.stats_semi[EXP]) / 4).toFixed(1)}</td>`; // EXP
                 playerRow += '</tr>';
                 tableBody.innerHTML += playerRow;
             }
@@ -512,34 +534,34 @@ function populateTable_totals(team, players) {
             let playerRow = '<tr>';
             playerRow += `<td>${player.name}</td>`;
             playerRow += `<td><strong>${((player.g1 + player.g2 + player.g3 + player.semi + player.final)).toFixed(0)}</strong></td>`; // TOT
-            playerRow += `<td>${((player.stats_g1[0] + player.stats_g2[0] + player.stats_g3[0] + player.stats_semi[0] + player.stats_final[0]) ).toFixed(0)}</td>`; // PTS
-            playerRow += `<td>${((player.stats_g1[9] + player.stats_g2[9] + player.stats_g3[9] + player.stats_semi[9] + player.stats_final[9]) ).toFixed(0)}</td>`; // REB
-            playerRow += `<td>${((player.stats_g1[10] + player.stats_g2[10] + player.stats_g3[10] + player.stats_semi[10] + player.stats_final[10]) ).toFixed(0)}</td>`; // ASS
-            playerRow += `<td>${((player.stats_g1[12] + player.stats_g2[12] + player.stats_g3[12] + player.stats_semi[12] + player.stats_final[12]) ).toFixed(0)}</td>`; // STE
-            playerRow += `<td>${((player.stats_g1[13] + player.stats_g2[13] + player.stats_g3[13] + player.stats_semi[13] + player.stats_final[13]) ).toFixed(0)}</td>`; // BLK
-            playerRow += `<td>${((player.stats_g1[18] + player.stats_g2[18] + player.stats_g3[18] + player.stats_semi[18] + player.stats_final[18]) ).toFixed(0)}</td>`; // MEME
-            playerRow += `<td>${((player.stats_g1[11] + player.stats_g2[11] + player.stats_g3[11] + player.stats_semi[11] + player.stats_final[11]) ).toFixed(0)}</td>`; // TO
-            playerRow += `<td>${((player.stats_g1[8] + player.stats_g2[8] + player.stats_g3[8] + player.stats_semi[8] + player.stats_final[8]) ).toFixed(0)}</td>`; // OREB
-            playerRow += `<td>${((player.stats_g1[7] + player.stats_g2[7] + player.stats_g3[7] + player.stats_semi[7] + player.stats_final[7]) ).toFixed(0)}</td>`; // DREB
-            playerRow += `<td>${((player.stats_g1[1] + player.stats_g2[1] + player.stats_g3[1] + player.stats_semi[1] + player.stats_final[1]) ).toFixed(0)}</td>`;
-            playerRow += `<td>${(((player.stats_g1[1] + player.stats_g2[1] + player.stats_g3[1] + player.stats_semi[1] + player.stats_final[1]) ) + ((player.stats_g1[2] + player.stats_g2[2] + player.stats_g3[2] + player.stats_semi[2] + player.stats_final[2]) )).toFixed(0)}</td>`;
+            playerRow += `<td>${((player.stats_g1[PTS] + player.stats_g2[PTS] + player.stats_g3[PTS] + player.stats_semi[PTS] + player.stats_final[PTS]) ).toFixed(0)}</td>`; // PTS
+            playerRow += `<td>${((player.stats_g1[REB] + player.stats_g2[REB] + player.stats_g3[REB] + player.stats_semi[REB] + player.stats_final[REB]) ).toFixed(0)}</td>`; // REB
+            playerRow += `<td>${((player.stats_g1[AST] + player.stats_g2[AST] + player.stats_g3[AST] + player.stats_semi[AST] + player.stats_final[AST]) ).toFixed(0)}</td>`; // ASS
+            playerRow += `<td>${((player.stats_g1[STL] + player.stats_g2[STL] + player.stats_g3[STL] + player.stats_semi[STL] + player.stats_final[STL]) ).toFixed(0)}</td>`; // STE
+            playerRow += `<td>${((player.stats_g1[BLK] + player.stats_g2[BLK] + player.stats_g3[BLK] + player.stats_semi[BLK] + player.stats_final[BLK]) ).toFixed(0)}</td>`; // BLK
+            playerRow += `<td>${((player.stats_g1[MEME] + player.stats_g2[MEME] + player.stats_g3[MEME] + player.stats_semi[MEME] + player.stats_final[MEME]) ).toFixed(0)}</td>`; // MEME
+            playerRow += `<td>${((player.stats_g1[TO] + player.stats_g2[TO] + player.stats_g3[TO] + player.stats_semi[TO] + player.stats_final[TO]) ).toFixed(0)}</td>`; // TO
+            playerRow += `<td>${((player.stats_g1[OREB] + player.stats_g2[OREB] + player.stats_g3[OREB] + player.stats_semi[OREB] + player.stats_final[OREB]) ).toFixed(0)}</td>`; // OREB
+            playerRow += `<td>${((player.stats_g1[DREB] + player.stats_g2[DREB] + player.stats_g3[DREB] + player.stats_semi[DREB] + player.stats_final[DREB]) ).toFixed(0)}</td>`; // DREB
+            playerRow += `<td>${((player.stats_g1[T2P] + player.stats_g2[T2P] + player.stats_g3[T2P] + player.stats_semi[T2P] + player.stats_final[T2P]) ).toFixed(0)}</td>`;
+            playerRow += `<td>${(((player.stats_g1[T2P] + player.stats_g2[T2P] + player.stats_g3[T2P] + player.stats_semi[T2P] + player.stats_final[T2P]) ) + ((player.stats_g1[T2PX] + player.stats_g2[T2PX] + player.stats_g3[T2PX] + player.stats_semi[T2PX] + player.stats_final[T2PX]) )).toFixed(0)}</td>`;
             playerRow += `<td>${calculatePercentage(
-                (player.stats_g1[1] + player.stats_g2[1] + player.stats_g3[1] + player.stats_semi[1] + player.stats_final[1]) ,
-                ((player.stats_g1[1] + player.stats_g2[1] + player.stats_g3[1] + player.stats_semi[1] + player.stats_final[1]) ) + ((player.stats_g1[2] + player.stats_g2[2] + player.stats_g3[2] + player.stats_semi[2] + player.stats_final[2]) )
+                (player.stats_g1[T2P] + player.stats_g2[T2P] + player.stats_g3[T2P] + player.stats_semi[T2P] + player.stats_final[T2P]) ,
+                ((player.stats_g1[T2P] + player.stats_g2[T2P] + player.stats_g3[T2P] + player.stats_semi[T2P] + player.stats_final[T2P]) ) + ((player.stats_g1[T2PX] + player.stats_g2[T2PX] + player.stats_g3[T2PX] + player.stats_semi[T2PX] + player.stats_final[T2PX]) )
             )}</td>`;
-            playerRow += `<td>${((player.stats_g1[3] + player.stats_g2[3] + player.stats_g3[3] + player.stats_semi[3] + player.stats_final[3]) ).toFixed(0)}</td>`;
-            playerRow += `<td>${(((player.stats_g1[3] + player.stats_g2[3] + player.stats_g3[3] + player.stats_semi[3] + player.stats_final[3]) ) + ((player.stats_g1[4] + player.stats_g2[4] + player.stats_g3[4] + player.stats_semi[4] + player.stats_final[4]) )).toFixed(0)}</td>`;
+            playerRow += `<td>${((player.stats_g1[T3P] + player.stats_g2[T3P] + player.stats_g3[T3P] + player.stats_semi[T3P] + player.stats_final[T3P]) ).toFixed(0)}</td>`;
+            playerRow += `<td>${(((player.stats_g1[T3P] + player.stats_g2[T3P] + player.stats_g3[T3P] + player.stats_semi[T3P] + player.stats_final[T3P]) ) + ((player.stats_g1[T3PX] + player.stats_g2[T3PX] + player.stats_g3[T3PX] + player.stats_semi[T3PX] + player.stats_final[T3PX]) )).toFixed(0)}</td>`;
             playerRow += `<td>${calculatePercentage(
-                (player.stats_g1[3] + player.stats_g2[3] + player.stats_g3[3] + player.stats_semi[3] + player.stats_final[3]) ,
-                ((player.stats_g1[3] + player.stats_g2[3] + player.stats_g3[3] + player.stats_semi[3] + player.stats_final[3]) ) + ((player.stats_g1[4] + player.stats_g2[4] + player.stats_g3[4] + player.stats_semi[4] + player.stats_final[4]) )
+                (player.stats_g1[T3P] + player.stats_g2[T3P] + player.stats_g3[T3P] + player.stats_semi[T3P] + player.stats_final[T3P]) ,
+                ((player.stats_g1[T3P] + player.stats_g2[T3P] + player.stats_g3[T3P] + player.stats_semi[T3P] + player.stats_final[T3P]) ) + ((player.stats_g1[T3PX] + player.stats_g2[T3PX] + player.stats_g3[T3PX] + player.stats_semi[T3PX] + player.stats_final[T3PX]) )
             )}</td>`;
-            playerRow += `<td>${((player.stats_g1[5] + player.stats_g2[5] + player.stats_g3[5] + player.stats_semi[5] + player.stats_final[5]) ).toFixed(0)}</td>`;
-            playerRow += `<td>${(((player.stats_g1[5] + player.stats_g2[5] + player.stats_g3[5] + player.stats_semi[5] + player.stats_final[5]) ) + ((player.stats_g1[6] + player.stats_g2[6] + player.stats_g3[6] + player.stats_semi[6] + player.stats_final[6]) )).toFixed(0)}</td>`;
+            playerRow += `<td>${((player.stats_g1[FT] + player.stats_g2[FT] + player.stats_g3[FT] + player.stats_semi[FT] + player.stats_final[FT]) ).toFixed(0)}</td>`;
+            playerRow += `<td>${(((player.stats_g1[FT] + player.stats_g2[FT] + player.stats_g3[FT] + player.stats_semi[FT] + player.stats_final[FT]) ) + ((player.stats_g1[FTX] + player.stats_g2[FTX] + player.stats_g3[FTX] + player.stats_semi[FTX] + player.stats_final[FTX]) )).toFixed(0)}</td>`;
             playerRow += `<td>${calculatePercentage(
-                (player.stats_g1[5] + player.stats_g2[5] + player.stats_g3[5] + player.stats_semi[5] + player.stats_final[5]) ,
-                ((player.stats_g1[5] + player.stats_g2[5] + player.stats_g3[5] + player.stats_semi[5] + player.stats_final[5]) ) + ((player.stats_g1[6] + player.stats_g2[6] + player.stats_g3[6] + player.stats_semi[6] + player.stats_final[6]) )
+                (player.stats_g1[FT] + player.stats_g2[FT] + player.stats_g3[FT] + player.stats_semi[FT] + player.stats_final[FT]) ,
+                ((player.stats_g1[FT] + player.stats_g2[FT] + player.stats_g3[FT] + player.stats_semi[FT] + player.stats_final[FT]) ) + ((player.stats_g1[FTX] + player.stats_g2[FTX] + player.stats_g3[FTX] + player.stats_semi[FTX] + player.stats_final[FTX]) )
             )}</td>`;
-            playerRow += `<td>${((player.stats_g1[14] + player.stats_g2[14] + player.stats_g3[14] + player.stats_semi[14] + player.stats_final[14]) ).toFixed(0)}</td>`;
+            playerRow += `<td>${((player.stats_g1[EXP] + player.stats_g2[EXP] + player.stats_g3[EXP] + player.stats_semi[EXP] + player.stats_final[EXP]) ).toFixed(0)}</td>`;
             playerRow += '</tr>';
             tableBody.innerHTML += playerRow;
             iheader++;
