@@ -614,7 +614,7 @@ footer {
     flex-wrap: wrap; /* Avvolgi le card se non ci sono abbastanza spazi orizzontali */
     justify-content: center; /* Centra le card orizzontalmente */
     gap: 10px; /* Spazio tra le card */
-    max-height: 300px; /* Altezza massima del contenitore */
+    max-height: 500px; /* Altezza massima del contenitore */
     overflow-y: auto; /* Abilita lo scrolling verticale se necessario */
     margin-bottom: 20px; /* Margine inferiore per separare il team dal contenitore giocatori */
 }
@@ -627,6 +627,9 @@ footer {
 @media (max-width: 768px) {
     .player-card1 {
         flex: 1 0 calc(50% - 10px); /* Due card per riga su schermi più piccoli */
+    }
+    .players-container {
+        max-height: 300px; /* Altezza massima del contenitore in mobile (stretta così si vede squadra che viene creata sotto */
     }
 }
 .player-card1 p {
