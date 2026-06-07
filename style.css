@@ -627,7 +627,7 @@ footer {
 @media (max-width: 768px) {
     .player-card1 {
         flex: 1 0 calc(50% - 10px); /* Due card per riga su schermi più piccoli */
-        margin: 2px;
+        margin: 0px;
     }
     .players-container {
         max-height: 300px; /* Altezza massima del contenitore in mobile (stretta così si vede squadra che viene creata sotto */
