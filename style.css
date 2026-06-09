@@ -640,7 +640,8 @@ footer {
 
 
 .small_h2 {
-    font-size: 0.8em; /* Riduce la dimensione del testo per il sottotitolo */
+    font-size: 0.5em; /* Riduce la dimensione del testo per il sottotitolo */
+    margin-top: 0;
 }
 
 .team-container {
