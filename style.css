@@ -642,6 +642,7 @@ footer {
 .small_h3 {
     font-size: 0.7em; /* Riduce la dimensione del testo per il sottotitolo */
     margin-top: 0;
+    margin-bottom: 0.2em;
 }
 
 .team-container {
