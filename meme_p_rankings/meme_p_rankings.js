@@ -23,7 +23,7 @@ import {
     TD    ,
     WIN   ,
     MEME  ,
-} from '../data260611_0003.js';
+} from '../data260611_0006.js';
 
 
 document.addEventListener('DOMContentLoaded', function() {
