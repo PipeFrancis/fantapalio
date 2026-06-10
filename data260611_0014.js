@@ -60,7 +60,9 @@ const rione_type = {
     g3_bonus: 0,
     semi_bonus: 0,
     final_bonus: 0,
+
     chiosco_bonus: 0,
+    classifica_bonus: 0,
 
     final_points: 0,
 
@@ -79,9 +81,36 @@ const rione_type = {
     g3: 0,//utilizzati per classifica team by game
     semi: 0, //utilizzati per classifica team by game
     td3: 0, //utilizzati per classifica team by game
-    final: 0 //utilizzati per classifica team by game
+    final: 0, //utilizzati per classifica team by game
+
+    coach_name: "Nome Coach",
+    coach_g1_stats: Array(2).fill(0), //2 valori, non_meme[0] e meme[1]
+    coach_g2_stats: Array(2).fill(0),
+    coach_g3_stats: Array(2).fill(0),
+    coach_semi_stats: Array(2).fill(0),
+    coach_td3_stats: Array(2).fill(0),
+    coach_final_stats: Array(2).fill(0),
+    coach_g1: 0, 
+    coach_g2: 0,
+    coach_g3: 0,
+    coach_semi: 0,
+    coach_td3: 0,
+    coach_final: 0,
+
+    coach_total: 0
+
+    // rione.final_points = rione.chiosco_bonus + rione.final_bonus
+    // dove vanno mostrati punteggio coach:
+    // 1. dettaglio squadra (index), mettendo sezone COACH dentro al rione, poi alla fine ci sarà sezione COACH con tutte le giornate + punti classifica + punti coppa chiosco. Non serve sezione coach_total perchè c'è già il totale di tutto ad ogni giornata
+    // 2. in team simulation sotto il nome dei rioni nella selezione
+    // 3. in regolamento
+    // 4. in t_ranking_by_game, mettere nella selezione tot il NORD - Ciccio De Colle (totale rione), mentre nelle altre giornate stessa cosa NORD - Ciccio De Colle (totale della giornata del rione).
+    // 5. stessa modifica di 4. nella pagina delle leghe
+    // Volendo si potrebbe avere il "dettaglio allenatori" come pagina, ma probabilmente è inutile, meglio evitare e il dettaglio di ogni giornata sarà comunque solo punti meme in pratica
+
     
 };
+const coachWeights = [1,1]; //non meme, meme
 
 // Definizione del tipo fantateam_type
 const fantateam_type = {
@@ -467,6 +496,7 @@ const NORD25 = { ...rione_type,
     chiosco_td3:0,
     chiosco_final:0,
     chiosco_tot:0 
+    
 };
 const SUD25 = { ...rione_type, 
     name: "SUD", 
@@ -592,13 +622,73 @@ SUD25.classifica_bonus = 5;
 WEST25.classifica_bonus = 20;
 EST25.classifica_bonus = 10;
 
+
+NORD25.coach_name="Ciccio De Colle";
+NORD25.coach_g1_stats=[1,3];
+NORD25.coach_g2_stats=[0,5];
+NORD25.coach_g3_stats=[1,7];
+
+SUD25.coach_name="Giovanni Zanin";
+SUD25.coach_g1_stats=[2,6];
+SUD25.coach_g2_stats=[5,0];
+SUD25.coach_g3_stats=[1,4];
+
+EST25.coach_name="Iacopo Pivetta";
+EST25.coach_g1_stats=[2,1];
+EST25.coach_g2_stats=[5,3];
+EST25.coach_g3_stats=[1,5];
+
+WEST25.coach_name="Alessandro Di Giusto";
+WEST25.coach_g1_stats=[0,3];
+WEST25.coach_g2_stats=[4,5];
+WEST25.coach_g3_stats=[8,1];
+
 //creazione array rioni e calcolo totale birre al chiosco e calcolo totale bonus classifica
 const rioni25 = [NORD25,SUD25,EST25,WEST25];
 for (let rione of rioni25){
+    rione.coach_g1 = rione.coach_g1_stats[0]*coachWeights[0]+rione.coach_g1_stats[1]*coachWeights[1];//toremove in 25
+    rione.coach_g2 = rione.coach_g2_stats[0]*coachWeights[0]+rione.coach_g2_stats[1]*coachWeights[1];//toremove in 25
+    rione.coach_g3 = rione.coach_g3_stats[0]*coachWeights[0]+rione.coach_g3_stats[1]*coachWeights[1];//toremove in 25
+    rione.coach_semi = rione.coach_semi_stats[0]*coachWeights[0]+rione.coach_semi_stats[1]*coachWeights[1];//toremove in 25
+    rione.coach_td3 = rione.coach_td3_stats[0]*coachWeights[0]+rione.coach_td3_stats[1]*coachWeights[1];//toremove in 25
+    rione.coach_final = rione.coach_final_stats[0]*coachWeights[0]+rione.coach_final_stats[1]*coachWeights[1];//toremove in 25
+    rione.coach_total = rione.coach_g1 + rione.coach_g2 + rione.coach_g3 + rione.coach_semi + rione.coach_td3 + rione.coach_final;//toremove in 25
     rione.chiosco_tot = rione.chiosco_3v3 + rione.chiosco_martedi + rione.chiosco_g1 + rione.chiosco_g2 + rione.chiosco_g3 + rione.chiosco_semi + rione.chiosco_td3 + rione.chiosco_final;
-    rione.final_points = rione.chiosco_bonus + rione.classifica_bonus;
+    rione.final_points = rione.chiosco_bonus + rione.classifica_bonus + rione.coach_total;//toremove coach total in 25
 }
 
+// Definizione Rioni 2026
+//final_points = totale punti posizionamento classifica, coppa chiosco e coach. final_bonus = bonus eventuale per la finale (non serve)
+const NORD26 = { ...rione_type, 
+    name: "NORD"
+    //altri campi rimangono a zero
+};
+const SUD26 = { ...rione_type, 
+    name: "SUD"
+    //altri campi rimangono a zero
+};
+const EST26 = { ...rione_type, 
+    name: "EST"
+    //altri campi rimangono a zero
+};
+const WEST26 = { ...rione_type, 
+    name: "WEST"
+    //altri campi rimangono a zero
+};
+
+//creazione array rioni e calcolo totale birre al chiosco e calcolo totale bonus classifica
+const rioni26 = [NORD26,SUD26,EST26,WEST26];
+for (let rione of rioni26){
+    rione.coach_g1 = rione.coach_g1_stats[0]*coachWeights[0]+rione.coach_g1_stats[1]*coachWeights[1];
+    rione.coach_g2 = rione.coach_g2_stats[0]*coachWeights[0]+rione.coach_g2_stats[1]*coachWeights[1];
+    rione.coach_g3 = rione.coach_g3_stats[0]*coachWeights[0]+rione.coach_g3_stats[1]*coachWeights[1];
+    rione.coach_semi = rione.coach_semi_stats[0]*coachWeights[0]+rione.coach_semi_stats[1]*coachWeights[1];
+    rione.coach_td3 = rione.coach_td3_stats[0]*coachWeights[0]+rione.coach_td3_stats[1]*coachWeights[1];
+    rione.coach_final = rione.coach_final_stats[0]*coachWeights[0]+rione.coach_final_stats[1]*coachWeights[1];
+    rione.coach_total = rione.coach_g1 + rione.coach_g2 + rione.coach_g3 + rione.coach_semi + rione.coach_td3 + rione.coach_final;
+    rione.chiosco_tot = rione.chiosco_3v3 + rione.chiosco_martedi + rione.chiosco_g1 + rione.chiosco_g2 + rione.chiosco_g3 + rione.chiosco_semi + rione.chiosco_td3 + rione.chiosco_final;
+    rione.final_points = rione.chiosco_bonus + rione.classifica_bonus + rione.coach_total;
+}
 
 // // Definizione Rioni
 
@@ -2346,7 +2436,7 @@ const players25 = [
     }
 
 
-    // FINALE PUNTEGGI MEDI CALCOLO AUTOMATICO
+    // FINALE 2024 PUNTEGGI MEDI CALCOLO AUTOMATICO
 SimoneMartinelli24.final= Math.round((SimoneMartinelli24.g1+SimoneMartinelli24.g2+SimoneMartinelli24.g3+SimoneMartinelli24.semi)*100/4)/100;
 GiacomoSpagnolo24.final = Math.round((GiacomoSpagnolo24.g1 + GiacomoSpagnolo24.g2 + GiacomoSpagnolo24.g3 + GiacomoSpagnolo24.semi) * 100 / 4) / 100;
 DavideFaurlin24.final = Math.round((DavideFaurlin24.g1 + DavideFaurlin24.g2 + DavideFaurlin24.g3 + DavideFaurlin24.semi) * 100 / 4) / 100;
@@ -3145,6 +3235,7 @@ for (const team of fantateams26) { // assegna lega a ogni squadra in base al rio
         TD    ,
         WIN   ,
         MEME  ,
+        coachWeights,
     };
 
 

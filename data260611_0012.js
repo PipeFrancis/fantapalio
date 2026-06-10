@@ -624,24 +624,24 @@ EST25.classifica_bonus = 10;
 
 
 NORD25.coach_name="Ciccio De Colle";
-NORD25.coach_g1_stats=[12,3];
-NORD25.coach_g2_stats=[15,5];
-NORD25.coach_g3_stats=[18,7];
+NORD25.coach_g1_stats=[1,3];
+NORD25.coach_g2_stats=[0,5];
+NORD25.coach_g3_stats=[1,7];
 
 SUD25.coach_name="Giovanni Zanin";
-SUD25.coach_g1_stats=[2,3];
-SUD25.coach_g2_stats=[5,5];
-SUD25.coach_g3_stats=[1,7];
+SUD25.coach_g1_stats=[2,6];
+SUD25.coach_g2_stats=[5,0];
+SUD25.coach_g3_stats=[1,4];
 
 EST25.coach_name="Iacopo Pivetta";
-EST25.coach_g1_stats=[12,31];
-EST25.coach_g2_stats=[15,53];
-EST25.coach_g3_stats=[18,75];
+EST25.coach_g1_stats=[2,1];
+EST25.coach_g2_stats=[5,3];
+EST25.coach_g3_stats=[1,5];
 
 WEST25.coach_name="Alessandro Di Giusto";
-WEST25.coach_g1_stats=[120,3];
+WEST25.coach_g1_stats=[0,3];
 WEST25.coach_g2_stats=[4,5];
-WEST25.coach_g3_stats=[8,71];
+WEST25.coach_g3_stats=[8,1];
 
 //creazione array rioni e calcolo totale birre al chiosco e calcolo totale bonus classifica
 const rioni25 = [NORD25,SUD25,EST25,WEST25];
