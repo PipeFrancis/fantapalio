@@ -1,4 +1,4 @@
-import { fantateams , what_day_is_it, coachWeights} from './data260610_2345.js';
+import { fantateams , what_day_is_it, coachWeights} from './data260610_2356.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("teamDetails");
@@ -149,22 +149,22 @@ document.addEventListener("DOMContentLoaded", function() {
             <h3>${selectedTeam.rione.coach_name}</h3>
             `
         if (what_day_is_it >= 1) {
-            rioneHtml += `<p>G1: ${selectedTeam.rione.coach_g1[0]*coachWeights[0]+selectedTeam.rione.coach_g1[1]*coachWeights[1]}</p>`;
+            rioneHtml += `<p>G1: ${selectedTeam.rione.coach_g1}</p>`;
         }
         if (what_day_is_it >= 2) {
-            rioneHtml += `<p>G2: ${selectedTeam.rione.coach_g2[0]*coachWeights[0]+selectedTeam.rione.coach_g2[1]*coachWeights[1]  }</p>`;
+            rioneHtml += `<p>G2: ${selectedTeam.rione.coach_g2}</p>`;
         }
         if (what_day_is_it >= 3) {
-            rioneHtml += `<p>G3: ${selectedTeam.rione.coach_g3[0]*coachWeights[0]+selectedTeam.rione.coach_g3[1]*coachWeights[1]  }</p>`;
+            rioneHtml += `<p>G3: ${selectedTeam.rione.coach_g3}</p>`;
         }
         if (what_day_is_it >= 4) {
-            rioneHtml += `<p>Semifinale: ${selectedTeam.rione.coach_semi[0]*coachWeights[0]+selectedTeam.rione.coach_semi[1]*coachWeights[1]  }</p>`;
+            rioneHtml += `<p>Semifinale: ${selectedTeam.rione.coach_semi}</p>`;
         }
         if (what_day_is_it >= 5) {
-            rioneHtml += `<p>Tiro da 3: ${selectedTeam.rione.coach_td3[0]*coachWeights[0]+selectedTeam.rione.coach_td3[1]*coachWeights[1]  }</p>`;
+            rioneHtml += `<p>Tiro da 3: ${selectedTeam.rione.coach_td3}</p>`;
         }
         if (what_day_is_it >= 6) {
-            rioneHtml += `<p>Finale: ${selectedTeam.rione.coach_final[0]*coachWeights[0]+selectedTeam.rione.coach_final[1]*coachWeights[1]  }</p>`;
+            rioneHtml += `<p>Finale: ${selectedTeam.rione.coach_final}</p>`;
         }
         if (what_day_is_it>=1){
             rioneHtml +=`

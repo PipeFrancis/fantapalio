@@ -2,7 +2,7 @@ import {
     fantateam_type,
     NORD, SUD, EST, WEST,
     fantateams
-} from '../data260610_2345.js';
+} from '../data260610_2356.js';
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -92,12 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <strong>${team.tot_team.toFixed(2)}</strong>
                         </div>
                         ${playerInfoHTML}
-                        <div>
-                            ${team.rione.name}
-                            (<span class="team_ranking_pdk">
-                                ${team.rione.final_points}
-                            </span>)
-                        </div>
+                        <div>${team.rione.name} - ${team.rione.coach_name} (<span class="team_ranking_pdk">${team.rione.final_points}</span>)</div>
                     </div>
                 `;
             } else {
@@ -111,12 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <strong>${team.tot_team.toFixed(2)}</strong>
                         </div>
                         ${playerInfoHTML}
-                        <div>
-                            ${team.rione.name}
-                            (<span class="team_ranking_pdk">
-                                ${team.rione.final_points}
-                            </span>)
-                        </div>
+                        <div>${team.rione.name} - ${team.rione.coach_name} (<span class="team_ranking_pdk">${team.rione.final_points}</span>)</div>
                     </div>
                 `;
             }
