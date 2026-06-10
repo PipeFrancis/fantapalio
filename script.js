@@ -1,4 +1,4 @@
-import { fantateams , what_day_is_it, coachWeights} from './data260610_2315.js';
+import { fantateams , what_day_is_it, coachWeights} from './data260610_2322.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("teamDetails");
@@ -169,8 +169,8 @@ document.addEventListener("DOMContentLoaded", function() {
         if (what_day_is_it>=1){
             rioneHtml +=`
                 <br>
-                <p><b>Punti classifica: ${selectedTeam.rione.classifica_bonus}</b></p>
-                <p><b>Punti coppa chiosco: ${selectedTeam.rione.chiosco_bonus}</b></p>
+                <p>Punti classifica: <b>${selectedTeam.rione.classifica_bonus}</b></p>
+                <p>Punti coppa chiosco: <b>${selectedTeam.rione.chiosco_bonus}</b></p>
                 <p class="total">Totale: ${selectedTeam.rione.final_points}</p>
             `;
         }
