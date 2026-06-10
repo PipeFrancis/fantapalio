@@ -646,15 +646,8 @@ WEST25.coach_g3=[8,71];
 //creazione array rioni e calcolo totale birre al chiosco e calcolo totale bonus classifica
 const rioni25 = [NORD25,SUD25,EST25,WEST25];
 for (let rione of rioni25){
-    rione.coach_g1 = rione.coach_g1_stats[0]*coachWeights[0]+rione.coach_g1_stats[1]*coachWeights[1];//toremove in 25
-    rione.coach_g2 = rione.coach_g2_stats[0]*coachWeights[0]+rione.coach_g2_stats[1]*coachWeights[1];//toremove in 25
-    rione.coach_g3 = rione.coach_g3_stats[0]*coachWeights[0]+rione.coach_g3_stats[1]*coachWeights[1];//toremove in 25
-    rione.coach_semi = rione.coach_semi_stats[0]*coachWeights[0]+rione.coach_semi_stats[1]*coachWeights[1];//toremove in 25
-    rione.coach_td3 = rione.coach_td3_stats[0]*coachWeights[0]+rione.coach_td3_stats[1]*coachWeights[1];//toremove in 25
-    rione.coach_final = rione.coach_final_stats[0]*coachWeights[0]+rione.coach_final_stats[1]*coachWeights[1];//toremove in 25
-    rione.coach_total = rione.coach_g1 + rione.coach_g2 + rione.coach_g3 + rione.coach_semi + rione.coach_td3 + rione.coach_final;//toremove in 25
     rione.chiosco_tot = rione.chiosco_3v3 + rione.chiosco_martedi + rione.chiosco_g1 + rione.chiosco_g2 + rione.chiosco_g3 + rione.chiosco_semi + rione.chiosco_td3 + rione.chiosco_final;
-    rione.final_points = rione.chiosco_bonus + rione.classifica_bonus + rione.coach_total;//toremove coach total in 25
+    rione.final_points = rione.chiosco_bonus + rione.classifica_bonus;
 }
 
 // Definizione Rioni 2026
@@ -685,7 +678,6 @@ for (let rione of rioni26){
     rione.coach_semi = rione.coach_semi_stats[0]*coachWeights[0]+rione.coach_semi_stats[1]*coachWeights[1];
     rione.coach_td3 = rione.coach_td3_stats[0]*coachWeights[0]+rione.coach_td3_stats[1]*coachWeights[1];
     rione.coach_final = rione.coach_final_stats[0]*coachWeights[0]+rione.coach_final_stats[1]*coachWeights[1];
-    rione.coach_total = rione.coach_g1 + rione.coach_g2 + rione.coach_g3 + rione.coach_semi + rione.coach_td3 + rione.coach_final;
     rione.chiosco_tot = rione.chiosco_3v3 + rione.chiosco_martedi + rione.chiosco_g1 + rione.chiosco_g2 + rione.chiosco_g3 + rione.chiosco_semi + rione.chiosco_td3 + rione.chiosco_final;
     rione.final_points = rione.chiosco_bonus + rione.classifica_bonus + rione.coach_total;
 }
