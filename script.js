@@ -1,4 +1,4 @@
-import { fantateams , what_day_is_it, coachWeights} from './data260610_2306.js';
+import { fantateams , what_day_is_it, coachWeights} from './data260610_2307.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("teamDetails");
@@ -143,8 +143,10 @@ document.addEventListener("DOMContentLoaded", function() {
         const rioneCard = document.createElement('div');
         rioneCard.classList.add('team_detail_team-card1', `cardclass${selectedTeam.rione.name}`);
         let rioneHtml =  `
-            <h3>Rione: ${selectedTeam.rione.name}</h3>
-            <h3>Coach: ${selectedTeam.rione.coach_name}</h3>
+            <p>Rione:</p>
+            <h3>${selectedTeam.rione.name}</h3>
+            <p>Coach:</p>
+            <h3>${selectedTeam.rione.coach_name}</h3>
             `
         if (what_day_is_it >= 1) {
             rioneHtml += `<p>Coach G1: ${selectedTeam.rione.coach_g1[0]*coachWeights[0]+selectedTeam.rione.coach_g1[1]*coachWeights[1]}</p>`;
