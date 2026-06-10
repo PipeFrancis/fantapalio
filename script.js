@@ -1,4 +1,4 @@
-import { fantateams , what_day_is_it, coachWeights} from './data260610_2309.js';
+import { fantateams , what_day_is_it, coachWeights} from './data260610_2315.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("teamDetails");
@@ -149,27 +149,28 @@ document.addEventListener("DOMContentLoaded", function() {
             <h3>${selectedTeam.rione.coach_name}</h3>
             `
         if (what_day_is_it >= 1) {
-            rioneHtml += `<p>Coach G1: ${selectedTeam.rione.coach_g1[0]*coachWeights[0]+selectedTeam.rione.coach_g1[1]*coachWeights[1]}</p>`;
+            rioneHtml += `<p>G1: ${selectedTeam.rione.coach_g1[0]*coachWeights[0]+selectedTeam.rione.coach_g1[1]*coachWeights[1]}</p>`;
         }
         if (what_day_is_it >= 2) {
-            rioneHtml += `<p>Coach G2: ${selectedTeam.rione.coach_g2[0]*coachWeights[0]+selectedTeam.rione.coach_g2[1]*coachWeights[1]  }</p>`;
+            rioneHtml += `<p>G2: ${selectedTeam.rione.coach_g2[0]*coachWeights[0]+selectedTeam.rione.coach_g2[1]*coachWeights[1]  }</p>`;
         }
         if (what_day_is_it >= 3) {
-            rioneHtml += `<p>Coach G3: ${selectedTeam.rione.coach_g3[0]*coachWeights[0]+selectedTeam.rione.coach_g3[1]*coachWeights[1]  }</p>`;
+            rioneHtml += `<p>G3: ${selectedTeam.rione.coach_g3[0]*coachWeights[0]+selectedTeam.rione.coach_g3[1]*coachWeights[1]  }</p>`;
         }
         if (what_day_is_it >= 4) {
-            rioneHtml += `<p>Coach Semifinale: ${selectedTeam.rione.coach_semi[0]*coachWeights[0]+selectedTeam.rione.coach_semi[1]*coachWeights[1]  }</p>`;
+            rioneHtml += `<p>Semifinale: ${selectedTeam.rione.coach_semi[0]*coachWeights[0]+selectedTeam.rione.coach_semi[1]*coachWeights[1]  }</p>`;
         }
         if (what_day_is_it >= 5) {
-            rioneHtml += `<p>Coach Tiro da 3: ${selectedTeam.rione.coach_td3[0]*coachWeights[0]+selectedTeam.rione.coach_td3[1]*coachWeights[1]  }</p>`;
+            rioneHtml += `<p>Tiro da 3: ${selectedTeam.rione.coach_td3[0]*coachWeights[0]+selectedTeam.rione.coach_td3[1]*coachWeights[1]  }</p>`;
         }
         if (what_day_is_it >= 6) {
-            rioneHtml += `<p>Coach Finale: ${selectedTeam.rione.coach_final[0]*coachWeights[0]+selectedTeam.rione.coach_final[1]*coachWeights[1]  }</p>`;
+            rioneHtml += `<p>Finale: ${selectedTeam.rione.coach_final[0]*coachWeights[0]+selectedTeam.rione.coach_final[1]*coachWeights[1]  }</p>`;
         }
         if (what_day_is_it>=1){
             rioneHtml +=`
-                <p>Punti classifica: ${selectedTeam.rione.classifica_bonus}</p>
-                <p>Punti coppa chiosco: ${selectedTeam.rione.chiosco_bonus}</p>
+                <br>
+                <p><b>Punti classifica: ${selectedTeam.rione.classifica_bonus}</b></p>
+                <p><b>Punti coppa chiosco: ${selectedTeam.rione.chiosco_bonus}</b></p>
                 <p class="total">Totale: ${selectedTeam.rione.final_points}</p>
             `;
         }
