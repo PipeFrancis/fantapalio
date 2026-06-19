@@ -677,7 +677,7 @@ const WEST26 = { ...rione_type,
     //altri campi rimangono a zero
 };
 
-//creazione array rioni e calcolo totale birre alt' chiosco e calcolo totali coach e punteggio totale finale
+//creazione array rioni e calcolo totale birre al chiosco e calcolo totali coach e punteggio totale finale
 const rioni26 = [NORD26,SUD26,EST26,WEST26];
 for (let rione of rioni26){
     rione.coach_g1 = rione.coach_g1_stats[0]*coachWeights[0]+rione.coach_g1_stats[1]*coachWeights[1];

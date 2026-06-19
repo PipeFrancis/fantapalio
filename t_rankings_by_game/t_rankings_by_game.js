@@ -2,7 +2,7 @@ import {
     fantateam_type,
     NORD, SUD, EST, WEST,
     fantateams
-} from '../data260619_0809.js';
+} from '../data260619_0811.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     const teamCardsContainer = document.getElementById('teamCardsContainer');
@@ -102,8 +102,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="team-card-header"><span class="orange_text">${index + 1}.</span> ${team.name}</div>
                         <div class="team-card-body">
                             <div class="punteggio-info team_ranking_pdk_tot"><strong>${team[sortKey].toFixed(2)}</strong></div>
-                            <div class="player-info"><b>${team.rione.name}</b> + Coach ${team.rione.coach_name} (<span class="team_ranking_pdk">${team.rione[coach_sortKey]}</span>)</div>
                             ${playerInfoHTML}
+                            <div class="player-info"><b>${team.rione.name}</b> + Coach ${team.rione.coach_name} (<span class="team_ranking_pdk">${team.rione[coach_sortKey]}</span>)</div>
                         </div>
                     `;
                 }
