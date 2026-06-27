@@ -21,7 +21,7 @@ import { player_type, players, td3Weights, players24, players25,
     TD    ,
     WIN   ,
     MEME  ,
-} from '../data260619_0846.js';
+} from '../data260627_1022.js';
 console.log("inizio boxscore js"); // inizio
 
 

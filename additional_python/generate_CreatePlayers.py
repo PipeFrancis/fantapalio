@@ -1,10 +1,10 @@
 import csv
 
 def format_variable_name(name: str) -> str:
-    return ''.join(word.capitalize() for word in name.split()) + "25"
+    return ''.join(word.capitalize() for word in name.split()) + "26"
 
-input_file = "players25_CreatePlayerScript.csv"
-output_file = "CreatePlayer_calls.js"
+input_file = "createPlayers_input.csv"
+output_file = "CreatePlayer_calls26.js"
 
 with open(input_file, newline='', encoding='utf-8') as file:
     reader = csv.reader(file)
@@ -31,11 +31,11 @@ with open(input_file, newline='', encoding='utf-8') as file:
         var_name = format_variable_name(name)
         player_vars.append(var_name)
         player_lines.append(
-            f'const {var_name} = createPlayer("{name}", {number}, "{zone}", {extra_value});'
+            f'const {var_name} = createPlayer("{name}", {number}, "{zone}", "{extra_value}");'
         )
 
-# players25 array
-player_array = "const players25 = [\n    " + ",\n    ".join(player_vars) + "\n];\n"
+# players26 array
+player_array = "const players26 = [\n    " + ",\n    ".join(player_vars) + "\n];\n"
 
 # Compute max length of the left part like "//VarName.stats_g1 = "
 left_parts = [f'//{var_name}.stats_g1 = ' for var_name in player_vars]
@@ -53,16 +53,16 @@ with open(output_file, 'w', encoding='utf-8') as js_file:
     js_file.write(player_array + "\n\n")
     js_file.write("\n".join(stats_lines) + "\n")
 
-print(f"✅ Successfully wrote {len(player_lines)} player lines with fallback values, players25 array, and aligned stats_g1 lines to {output_file}.")
+print(f"✅ Successfully wrote {len(player_lines)} player lines with fallback values, players26 array, and aligned stats_g1 lines to {output_file}.")
 
 
 # # This one does not have the numero di maglia, always puts 0
 # import csv
 
 # def format_variable_name(name: str) -> str:
-#     return ''.join(word.capitalize() for word in name.split()) + "25"
+#     return ''.join(word.capitalize() for word in name.split()) + "26"
 
-# input_file = "players25_CreatePlayerScript.csv"
+# input_file = "players26_CreatePlayerScript.csv"
 # output_file = "CreatePlayer_calls.js"
 
 # with open(input_file, newline='', encoding='utf-8') as file:
@@ -80,8 +80,8 @@ print(f"✅ Successfully wrote {len(player_lines)} player lines with fallback va
 #                 f'const {var_name} = createPlayer("{name}", {number}, "{zone}", 0);'
 #             )
 
-# # players25 array
-# player_array = "const players25 = [\n    " + ",\n    ".join(player_vars) + "\n];\n"
+# # players26 array
+# player_array = "const players26 = [\n    " + ",\n    ".join(player_vars) + "\n];\n"
 
 # # Compute max length of the left part like "//VarName.stats_g1 = "
 # left_parts = [f'//{var_name}.stats_g1 = ' for var_name in player_vars]
@@ -99,5 +99,5 @@ print(f"✅ Successfully wrote {len(player_lines)} player lines with fallback va
 #     js_file.write(player_array + "\n\n")
 #     js_file.write("\n".join(stats_lines) + "\n")
 
-# print(f"✅ Successfully wrote {len(player_lines)} player lines, players25 array, and aligned stats_g1 lines to {output_file}.")
+# print(f"✅ Successfully wrote {len(player_lines)} player lines, players26 array, and aligned stats_g1 lines to {output_file}.")
 
