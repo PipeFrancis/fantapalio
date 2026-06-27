@@ -35,7 +35,7 @@ def normalize_game_label(label):
 
 def format_player_name(name):
     clean = name.replace(u'\u00A0', ' ').replace(u'\xa0', ' ').strip()
-    return ''.join(word.capitalize() for word in clean.split()) + "25"
+    return ''.join(word.capitalize() for word in clean.split()) + "26"
 
 def process_row(row, align_width=40):
     game_type = row[0].strip().lower()
@@ -93,6 +93,6 @@ def convert_csv_to_js(input_file, output_file):
                 prev_game = current_game
 
 # Example usage
-convert_csv_to_js("stats_from_gsheet_StatsScript.csv", "Stats_script_output.js")
+convert_csv_to_js("gamestats_players26.csv", "Stats_script_output.js")
 
 print(f"✅ Successfully wrote the JS insert stats lines.")
