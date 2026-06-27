@@ -3086,7 +3086,7 @@ const players25 = [
             }
         }
     }
-    console.log("what day is it? ", what_day_is_it);
+    console.log("what day it is? ", what_day_is_it);
     if (team_not_in_final_1 == "NOT_YET_KNOWN" && what_day_is_it >= 6){
         if (final_flag_EST == 0){
             team_not_in_final_1 = "EST";
