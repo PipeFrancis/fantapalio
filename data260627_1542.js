@@ -707,25 +707,25 @@ const WEST26 = { ...rione_type,
 };
 
 // --------------------  STATISTICHE COACH/RIONI 2026
-NORD26.coach_name="Ciccio De Colle";
-NORD26.coach_g1_stats=[1,3];
-NORD26.coach_g2_stats=[0,5];
-NORD26.coach_g3_stats=[1,7];
+// NORD26.coach_name="Ciccio De Colle";
+// NORD26.coach_g1_stats=[1,3];
+// NORD26.coach_g2_stats=[0,5];
+// NORD26.coach_g3_stats=[1,7];
 
-SUD26.coach_name="Giovanni Zanin";
-SUD26.coach_g1_stats=[2,6];
-SUD26.coach_g2_stats=[5,0];
-SUD26.coach_g3_stats=[1,4];
+// SUD26.coach_name="Giovanni Zanin";
+// SUD26.coach_g1_stats=[2,6];
+// SUD26.coach_g2_stats=[5,0];
+// SUD26.coach_g3_stats=[1,4];
 
-EST26.coach_name="Emanuele Storace";
-EST26.coach_g1_stats=[2,1];
-EST26.coach_g2_stats=[5,3];
-EST26.coach_g3_stats=[1,5];
+// EST26.coach_name="Iacopo Pivetta";
+// EST26.coach_g1_stats=[2,1];
+// EST26.coach_g2_stats=[5,3];
+// EST26.coach_g3_stats=[1,5];
 
-WEST26.coach_name="Alessandro Di Giusto";
-WEST26.coach_g1_stats=[0,3];
-WEST26.coach_g2_stats=[4,5];
-WEST26.coach_g3_stats=[8,1];
+// WEST26.coach_name="Alessandro Di Giusto";
+// WEST26.coach_g1_stats=[0,3];
+// WEST26.coach_g2_stats=[4,5];
+// WEST26.coach_g3_stats=[8,1];
 
 //creazione array rioni e calcolo totale birre al chiosco e calcolo totali coach e punteggio totale finale
 const rioni26 = [NORD26,SUD26,EST26,WEST26];
@@ -3086,7 +3086,7 @@ const players25 = [
             }
         }
     }
-    console.log("what day is it? ", what_day_is_it);
+    console.log("what day it is? ", what_day_is_it);
     if (team_not_in_final_1 == "NOT_YET_KNOWN" && what_day_is_it >= 6){
         if (final_flag_EST == 0){
             team_not_in_final_1 = "EST";
