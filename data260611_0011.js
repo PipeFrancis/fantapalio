@@ -2250,7 +2250,7 @@ const players25 = [
         player.final = sumProduct(player.stats_final, pdkWeights);
 
         //                      somma di tutti i meme [18]                                                                                                                   somma ciabatte                    somma altri meme td3
-        player.meme_tot = pdkWeights[18]*(player.stats_g1[MEME] + player.stats_g2[MEME] + player.stats_g3[MEME] + player.stats_semi[MEME] + player.stats_final[MEME]) + td3Weights[11]*player.stats_td3[11] + td3Weights[12]*player.stats_td3[12];
+        player.meme_tot = pdkWeights[MEME]*(player.stats_g1[MEME] + player.stats_g2[MEME] + player.stats_g3[MEME] + player.stats_semi[MEME] + player.stats_final[MEME]) + stats_td3[TD3_CIAB]*player.stats_td3[TD3_CIAB] + stats_td3[TD3_ALTRI_MEME]*player.stats_td3[TD3_ALTRI_MEME];
     }
 
   // Calcola g1 per ogni giocatore
@@ -2309,7 +2309,7 @@ const players25 = [
         player.stats_final[TD] = countGreaterThanNineFinal >= 3 ? 1 : 0;
         player.final = sumProduct(player.stats_final, pdkWeights);
         //                      somma di tutti i meme [18]                                                                                                                   somma ciabatte                    somma altri meme td3
-        player.meme_tot = pdkWeights[18]*(player.stats_g1[MEME] + player.stats_g2[MEME] + player.stats_g3[MEME] + player.stats_semi[MEME] + player.stats_final[MEME]) + td3Weights[11]*player.stats_td3[11] + td3Weights[12]*player.stats_td3[12];
+        player.meme_tot = pdkWeights[MEME]*(player.stats_g1[MEME] + player.stats_g2[MEME] + player.stats_g3[MEME] + player.stats_semi[MEME] + player.stats_final[MEME]) + stats_td3[TD3_CIAB]*player.stats_td3[TD3_CIAB] + stats_td3[TD3_ALTRI_MEME]*player.stats_td3[TD3_ALTRI_MEME];
    
     }
 
@@ -2339,7 +2339,7 @@ const players25 = [
         if (player.team == team_compute_avg_1 || player.team == team_compute_avg_2){
             player.final= Math.round((player.g1 + player.g2 + player.g3 + player.semi)*100/4)/100;
             console.log(player.name, player.final, player.stats_final[MEME]);
-            player.final = player.final + player.stats_final[MEME]*pdkWeights[18]; // aggiunge eventuali punti meme in final
+            player.final = player.final + player.stats_final[MEME]*pdkWeights[MEME]; // aggiunge eventuali punti meme in final
             
             console.log("calcolato stats final medie: ", player.name, player.final, player.stats_final[MEME]);
         }
@@ -2361,7 +2361,7 @@ const players25 = [
             what_day_is_it = 4;
             console.log(what_day_is_it);
         }
-        if (what_day_is_it < 5 && player.stats_td3[0] != 0) {
+        if (what_day_is_it < 5 && player.stats_td3[TD3_PARTECIPA] != 0) {
             what_day_is_it = 5;
             console.log(what_day_is_it);
         }

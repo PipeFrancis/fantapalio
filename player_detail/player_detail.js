@@ -3,7 +3,7 @@
 // se si cambiano array di stats è da cambiare anche questo codice
 
 
-import { players, pdkWeights, td3Weights, what_day_is_it, td3_bonus_passadaprimoultimo } from '../data260627_1022.js';
+import { players, pdkWeights, td3Weights, what_day_is_it, td3_bonus_passadaprimoultimo } from '../data260627_1114.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("playerDetails");
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const formatValue = (value) => (value > 0 ? `+${value}` : value);
 
         // Funzione per creare una scheda partita
-        const createGameCard = (game, score, stats) => {
+        const createGameCard = (game, score, game_stats) => {
             const card = document.createElement('div');
             card.classList.add('game-card', `cardclass${selectedPlayer.team}`);
             let statsHtml = `
@@ -78,28 +78,28 @@ document.addEventListener("DOMContentLoaded", function() {
             `;
 
             // Mette dentro solo stats non nulle
-            if (stats[0] !== 0) statsHtml += `<p>Punti: <strong>${formatValue(stats[0] * pdkWeights[0])}</strong> (${stats[0]} PTS)</p>`;
-            if (stats[7] !== 0) statsHtml += `<p>Rimbalzi difensivi: <strong>${formatValue(stats[7] * pdkWeights[7])}</strong> (${stats[7]} DR)</p>`;
-            if (stats[8] !== 0) statsHtml += `<p>Rimbalzi offensivi: <strong>${formatValue(stats[8] * pdkWeights[8])}</strong> (${stats[8]} OR)</p>`;
-            if (stats[10] !== 0) statsHtml += `<p>Assist: <strong>${formatValue(stats[10] * pdkWeights[10])}</strong> (${stats[10]} AST)</p>`;
-            if (stats[12] !== 0) statsHtml += `<p>Palle recuperate: <strong>${formatValue(stats[12] * pdkWeights[12])}</strong> (${stats[12]} STL)</p>`;
-            if (stats[11] !== 0) statsHtml += `<p>Palle perse: <strong>${formatValue(stats[11] * pdkWeights[11])}</strong> (${stats[11]} TO)</p>`;
-            if (stats[13] !== 0) statsHtml += `<p>Stoppate: <strong>${formatValue(stats[13] * pdkWeights[13])}</strong> (${stats[13]} BLK)</p>`;
-            if (stats[3] !== 0) statsHtml += `<p>Triple segnate: <strong>${formatValue(stats[3] * pdkWeights[3])}</strong> (${stats[3]} 3PM)</p>`;
-            if (stats[2] !== 0 || stats[4] !== 0) statsHtml += `<p>Tiri sbagliati: <strong>${formatValue((stats[2] * pdkWeights[2]) + (stats[4] * pdkWeights[4]))}</strong> (${stats[2]+ stats[4]} miss)</p>`;
-            if (stats[6] !== 0) statsHtml += `<p>Tiri liberi sbagliati: <strong>${formatValue(stats[6] * pdkWeights[6])}</strong> (${stats[6]} miss)</p>`;
-            if (stats[15] !== 0) statsHtml += `<p>Doppia doppia: <strong>${formatValue(stats[15] * pdkWeights[15])}</strong></p>`;
-            if (stats[16] !== 0) statsHtml += `<p>Tripla doppia: <strong>${formatValue(stats[16] * pdkWeights[16])}</strong></p>`;
-            if (stats[14] !== 0) statsHtml += `<p>Espulsione: <strong>${formatValue(stats[14] * pdkWeights[14])}</strong></p>`;
-            if (stats[17] !== 0) statsHtml += `<p>Vittoria: <strong>${formatValue(stats[17] * pdkWeights[17])}</strong></p>`;
-            if (stats[18] !== 0) statsHtml += `<p>Punti meme: <strong>${formatValue(stats[18] * pdkWeights[18])}</strong></p>`;
+            if (game_stats[PTS] !== 0) statsHtml += `<p>Punti: <strong>${formatValue(game_stats[PTS] * pdkWeights[PTS])}</strong> (${game_stats[PTS]} PTS)</p>`;
+            if (game_stats[DREB] !== 0) statsHtml += `<p>Rimbalzi difensivi: <strong>${formatValue(game_stats[DREB] * pdkWeights[DREB])}</strong> (${game_stats[DREB]} DR)</p>`;
+            if (game_stats[OREB] !== 0) statsHtml += `<p>Rimbalzi offensivi: <strong>${formatValue(game_stats[OREB] * pdkWeights[OREB])}</strong> (${game_stats[OREB]} OR)</p>`;
+            if (game_stats[AST] !== 0) statsHtml += `<p>Assist: <strong>${formatValue(game_stats[AST] * pdkWeights[AST])}</strong> (${game_stats[AST]} AST)</p>`;
+            if (game_stats[STL] !== 0) statsHtml += `<p>Palle recuperate: <strong>${formatValue(game_stats[STL] * pdkWeights[STL])}</strong> (${game_stats[STL]} STL)</p>`;
+            if (game_stats[TO] !== 0) statsHtml += `<p>Palle perse: <strong>${formatValue(game_stats[TO] * pdkWeights[TO])}</strong> (${game_stats[TO]} TO)</p>`;
+            if (game_stats[BLK] !== 0) statsHtml += `<p>Stoppate: <strong>${formatValue(game_stats[BLK] * pdkWeights[BLK])}</strong> (${game_stats[BLK]} BLK)</p>`;
+            if (game_stats[T3P] !== 0) statsHtml += `<p>Triple segnate: <strong>${formatValue(game_stats[T3P] * pdkWeights[T3P])}</strong> (${game_stats[T3P]} 3PM)</p>`;
+            if (game_stats[T2PX] !== 0 || game_stats[T3PX] !== 0) statsHtml += `<p>Tiri sbagliati: <strong>${formatValue((game_stats[T2PX] * pdkWeights[T2PX]) + (game_stats[T3PX] * pdkWeights[T3PX]))}</strong> (${game_stats[T2PX]+ game_stats[T3PX]} miss)</p>`;
+            if (game_stats[FTX] !== 0) statsHtml += `<p>Tiri liberi sbagliati: <strong>${formatValue(game_stats[FTX] * pdkWeights[FTX])}</strong> (${game_stats[FTX]} miss)</p>`;
+            if (game_stats[DD] !== 0) statsHtml += `<p>Doppia doppia: <strong>${formatValue(game_stats[DD] * pdkWeights[DD])}</strong></p>`;
+            if (game_stats[TD] !== 0) statsHtml += `<p>Tripla doppia: <strong>${formatValue(game_stats[TD] * pdkWeights[TD])}</strong></p>`;
+            if (game_stats[EXP] !== 0) statsHtml += `<p>Espulsione: <strong>${formatValue(game_stats[EXP] * pdkWeights[EXP])}</strong></p>`;
+            if (game_stats[WIN] !== 0) statsHtml += `<p>Vittoria: <strong>${formatValue(game_stats[WIN] * pdkWeights[WIN])}</strong></p>`;
+            if (game_stats[MEME] !== 0) statsHtml += `<p>Punti meme: <strong>${formatValue(game_stats[MEME] * pdkWeights[MEME])}</strong></p>`;
 
             card.innerHTML = statsHtml;
             return card;
         };
 
         // Funzione per creare una scheda partita specifica per "Tiro da 3"
-        const createGameCard_td3 = (game, score, stats) => {
+        const createGameCard_td3 = (game, score, stats_td3) => {
             const card = document.createElement('div');
             card.classList.add('game-card', `cardclass${selectedPlayer.team}`);
             let statsHtml = `
@@ -107,29 +107,29 @@ document.addEventListener("DOMContentLoaded", function() {
                 <p>Totale: <span class="totalpointsindex">${score}</span></p>
             `;
 
-            if (stats[0] !== 0) statsHtml += `<p>Partecipazione: <strong>${formatValue(stats[0] * td3Weights[0])}</strong></p>`;
-            if (stats[1] !== 0) statsHtml += `<p>Non partecipa: <strong>${formatValue(stats[1] * td3Weights[1])}</strong></p>`;
-            if (stats[2] !== 0 && stats[2] != td3_bonus_passadaprimoultimo) statsHtml += `<p>Passa al 2° turno: <strong>${formatValue(stats[2] * td3Weights[2])}</strong></p>`;
-            if (stats[2] !== 0 && stats[2] == td3_bonus_passadaprimoultimo) statsHtml += `<p>Passa al 2° turno: <strong>${formatValue(stats[2] * td3Weights[2])}</strong> (da primo o ultimo classificato)</p>`;
-            if (stats[2] !== 0 && stats[3] != td3_bonus_passadaprimoultimo) statsHtml += `<p>Passa al 3° turno: <strong>${formatValue(stats[3] * td3Weights[3])}</strong></p>`;
-            if (stats[2] !== 0 && stats[3] == td3_bonus_passadaprimoultimo) statsHtml += `<p>Passa al 3° turno: <strong>${formatValue(stats[3] * td3Weights[3])}</strong> (da primo o ultimo classificato)</p>`;
-            if (stats[2] !== 0 && stats[4] != td3_bonus_passadaprimoultimo) statsHtml += `<p>Passa al 4° turno: <strong>${formatValue(stats[4] * td3Weights[4])}</strong></p>`;
-            if (stats[2] !== 0 && stats[4] == td3_bonus_passadaprimoultimo) statsHtml += `<p>Passa al 4° turno: <strong>${formatValue(stats[4] * td3Weights[4])}</strong> (da primo o ultimo classificato)</p>`;
-            if (stats[2] !== 0 && stats[5] != td3_bonus_passadaprimoultimo) statsHtml += `<p>Arriva in semifinale: <strong>${formatValue(stats[5] * td3Weights[5])}</strong></p>`;
-            if (stats[2] !== 0 && stats[5] == td3_bonus_passadaprimoultimo) statsHtml += `<p>Arriva in semifinale: <strong>${formatValue(stats[5] * td3Weights[5])}</strong> (da primo o ultimo classificato)</p>`;
-            if (stats[2] !== 0 && stats[6] != td3_bonus_passadaprimoultimo) statsHtml += `<p>Arriva in finale: <strong>${formatValue(stats[6] * td3Weights[6])}</strong></p>`;
-            if (stats[2] !== 0 && stats[6] == td3_bonus_passadaprimoultimo) statsHtml += `<p>Arriva in finale: <strong>${formatValue(stats[6] * td3Weights[6])}</strong> (da primo o ultimo classificato)</p>`;
-            // if (stats[2] !== 0) statsHtml += `<p>Passa al 2° turno: <strong>${formatValue(stats[2] * td3Weights[2])}</strong></p>`;
-            // if (stats[3] !== 0) statsHtml += `<p>Passa al 3° turno: <strong>${formatValue(stats[3] * td3Weights[3])}</strong></p>`;
-            // if (stats[4] !== 0) statsHtml += `<p>Passa al 4° turno: <strong>${formatValue(stats[4] * td3Weights[4])}</strong></p>`;
-            // if (stats[5] !== 0) statsHtml += `<p>Arriva in semifinale: <strong>${formatValue(stats[5] * td3Weights[5])}</strong></p>`;
-            // if (stats[6] !== 0) statsHtml += `<p>Arriva in finale: <strong>${formatValue(stats[6] * td3Weights[6])}</strong></p>`;
-            if (stats[7] !== 0) statsHtml += `<p>Terzo classificato: <strong>${formatValue(stats[7] * td3Weights[7])}</strong></p>`;
-            if (stats[8] !== 0) statsHtml += `<p>Secondo classificato: <strong>${formatValue(stats[8] * td3Weights[8])}</strong></p>`;
-            if (stats[9] !== 0) statsHtml += `<p>Primo classificato: <strong>${formatValue(stats[9] * td3Weights[9])}</strong></p>`;
-            if (stats[10] !== 0) statsHtml += `<p>0 su 10 da 3: <strong>${formatValue(stats[10] * td3Weights[10])}</strong></p>`;
-            if (stats[11] !== 0) statsHtml += `<p>Tira in ciabatte: <strong>${formatValue(stats[11] * td3Weights[11])}</strong></p>`;
-            if (stats[12] !== 0) statsHtml += `<p>Altri punti meme: <strong>${formatValue(stats[12] * td3Weights[12])}</strong></p>`;
+            if (stats_td3[TD3_PARTECIPA] !== 0) statsHtml += `<p>Partecipazione: <strong>${formatValue(stats_td3[TD3_PARTECIPA]*td3Weights[TD3_PARTECIPA])}</strong></p>`;
+            if (stats_td3[TD3_NONPARTECIPA] !== 0) statsHtml += `<p>Non partecipa: <strong>${formatValue(stats_td3[TD3_NONPARTECIPA]*td3Weights[TD3_NONPARTECIPA])}</strong></p>`;
+            if (stats_td3[TD3_PASSA1] !== 0 && stats_td3[TD3_PASSA1] != td3_bonus_passadaprimoultimo) statsHtml += `<p>Passa al 2° turno: <strong>${formatValue(stats_td3[TD3_PASSA1]*td3Weights[TD3_PASSA1])}</strong></p>`;
+            if (stats_td3[TD3_PASSA1] !== 0 && stats_td3[TD3_PASSA1] == td3_bonus_passadaprimoultimo) statsHtml += `<p>Passa al 2° turno: <strong>${formatValue(stats_td3[TD3_PASSA1]*td3Weights[TD3_PASSA1])}</strong> (da primo o ultimo classificato)</p>`;
+            if (stats_td3[TD3_PASSA1] !== 0 && stats_td3[TD3_PASSA2] != td3_bonus_passadaprimoultimo) statsHtml += `<p>Passa al 3° turno: <strong>${formatValue(stats_td3[TD3_PASSA2]*td3Weights[TD3_PASSA2])}</strong></p>`;
+            if (stats_td3[TD3_PASSA1] !== 0 && stats_td3[TD3_PASSA2] == td3_bonus_passadaprimoultimo) statsHtml += `<p>Passa al 3° turno: <strong>${formatValue(stats_td3[TD3_PASSA2]*td3Weights[TD3_PASSA2])}</strong> (da primo o ultimo classificato)</p>`;
+            if (stats_td3[TD3_PASSA1] !== 0 && stats_td3[TD3_PASSA3] != td3_bonus_passadaprimoultimo) statsHtml += `<p>Passa al 4° turno: <strong>${formatValue(stats_td3[TD3_PASSA3]*td3Weights[TD3_PASSA3])}</strong></p>`;
+            if (stats_td3[TD3_PASSA1] !== 0 && stats_td3[TD3_PASSA3] == td3_bonus_passadaprimoultimo) statsHtml += `<p>Passa al 4° turno: <strong>${formatValue(stats_td3[TD3_PASSA3]*td3Weights[TD3_PASSA3])}</strong> (da primo o ultimo classificato)</p>`;
+            if (stats_td3[TD3_PASSA1] !== 0 && stats_td3[TD3_PASSA4] != td3_bonus_passadaprimoultimo) statsHtml += `<p>Arriva in semifinale: <strong>${formatValue(stats_td3[TD3_PASSA4]*td3Weights[TD3_PASSA4])}</strong></p>`;
+            if (stats_td3[TD3_PASSA1] !== 0 && stats_td3[TD3_PASSA4] == td3_bonus_passadaprimoultimo) statsHtml += `<p>Arriva in semifinale: <strong>${formatValue(stats_td3[TD3_PASSA4]*td3Weights[TD3_PASSA4])}</strong> (da primo o ultimo classificato)</p>`;
+            if (stats_td3[TD3_PASSA1] !== 0 && stats_td3[TD3_PASSA5] != td3_bonus_passadaprimoultimo) statsHtml += `<p>Arriva in finale: <strong>${formatValue(stats_td3[TD3_PASSA5]*td3Weights[TD3_FINALE])}</strong></p>`;
+            if (stats_td3[TD3_PASSA1] !== 0 && stats_td3[TD3_PASSA5] == td3_bonus_passadaprimoultimo) statsHtml += `<p>Arriva in finale: <strong>${formatValue(stats_td3[TD3_PASSA5]*td3Weights[TD3_FINALE])}</strong> (da primo o ultimo classificato)</p>`;
+            // if (stats_td3[TD3_PASSA1] !== 0) statsHtml += `<p>Passa al 2° turno: <strong>${formatValue(stats_td3[TD3_PASSA1]*td3Weights[TD3_PASSA1])}</strong></p>`;
+            // if (stats_td3[TD3_PASSA2] !== 0) statsHtml += `<p>Passa al 3° turno: <strong>${formatValue(stats_td3[TD3_PASSA2]*td3Weights[TD3_PASSA2])}</strong></p>`;
+            // if (stats_td3[TD3_PASSA3] !== 0) statsHtml += `<p>Passa al 4° turno: <strong>${formatValue(stats_td3[TD3_PASSA3]*td3Weights[TD3_PASSA3])}</strong></p>`;
+            // if (stats_td3[TD3_PASSA4] !== 0) statsHtml += `<p>Arriva in semifinale: <strong>${formatValue(stats_td3[TD3_PASSA4]*td3Weights[TD3_PASSA4])}</strong></p>`;
+            // if (stats_td3[TD3_PASSA5] !== 0) statsHtml += `<p>Arriva in finale: <strong>${formatValue(stats_td3[TD3_PASSA5]*td3Weights[TD3_FINALE])}</strong></p>`;
+            if (stats_td3[TD3_3RD] !== 0) statsHtml += `<p>Terzo classificato: <strong>${formatValue(stats_td3[TD3_3RD]*td3Weights[TD3_3RD])}</strong></p>`;
+            if (stats_td3[TD3_2ND] !== 0) statsHtml += `<p>Secondo classificato: <strong>${formatValue(stats_td3[TD3_2ND]*td3Weights[TD3_2ND])}</strong></p>`;
+            if (stats_td3[TD3_1ST] !== 0) statsHtml += `<p>Primo classificato: <strong>${formatValue(stats_td3[TD3_1ST]*td3Weights[TD3_1ST])}</strong></p>`;
+            if (stats_td3[TD3_0SU10] !== 0) statsHtml += `<p>0 su 10 da 3: <strong>${formatValue(stats_td3[TD3_0SU10]*td3Weights[TD3_0SU10])}</strong></p>`;
+            if (stats_td3[TD3_CIAB] !== 0) statsHtml += `<p>Tira in ciabatte: <strong>${formatValue(stats_td3[TD3_CIAB]*td3Weights[TD3_CIAB])}</strong></p>`;
+            if (stats_td3[TD3_ALTRI_MEME] !== 0) statsHtml += `<p>Altri punti meme: <strong>${formatValue(stats_td3[TD3_ALTRI_MEME]*td3Weights[TD3_ALTRI_MEME])}</strong></p>`;
 
             card.innerHTML = statsHtml;
             return card;

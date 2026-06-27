@@ -21,7 +21,7 @@ import { player_type, players, td3Weights, players24, players25,
     TD    ,
     WIN   ,
     MEME  ,
-} from '../data260627_1022.js';
+} from '../data260627_1114.js';
 console.log("inizio boxscore js"); // inizio
 
 
@@ -600,40 +600,40 @@ function populateTable_td3(team, players) {
             //giocatore
             playerRow += `<td>${player.name}</td>`;
             //partecipazione
-            if(player.stats_td3[0] == 1){
-                playerRow += `<td>${player.stats_td3[0]*td3Weights[0]}</td>`;
+            if(player.stats_td3[TD3_PARTECIPA] == 1){
+                playerRow += `<td>${player.stats_td3[TD3_PARTECIPA]*td3Weights[TD3_PARTECIPA]}</td>`;
             }else{
-                playerRow += `<td>${player.stats_td3[1]*td3Weights[1]}</td>`;
+                playerRow += `<td>${player.stats_td3[TD3_NONPARTECIPA]*td3Weights[TD3_NONPARTECIPA]}</td>`;
             }
             
             //secondo turno
-            playerRow += `<td>${player.stats_td3[2]*td3Weights[2]}</td>`;
+            playerRow += `<td>${player.stats_td3[TD3_PASSA1]*td3Weights[TD3_PASSA1]}</td>`;
             //terzo turno
-            playerRow += `<td>${player.stats_td3[3]*td3Weights[3]}</td>`;
+            playerRow += `<td>${player.stats_td3[TD3_PASSA2]*td3Weights[TD3_PASSA2]}</td>`;
             //quarto turno
-            playerRow += `<td>${player.stats_td3[4]*td3Weights[4]}</td>`;
+            playerRow += `<td>${player.stats_td3[TD3_PASSA3]*td3Weights[TD3_PASSA3]}</td>`;
             //quinto turno
-            playerRow += `<td>${player.stats_td3[5]*td3Weights[5]}</td>`;
+            playerRow += `<td>${player.stats_td3[TD3_PASSA4]*td3Weights[TD3_PASSA4]}</td>`;
             //finale 
-            playerRow += `<td>${player.stats_td3[6]*td3Weights[6]}</td>`;
+            playerRow += `<td>${player.stats_td3[TD3_FINALE]*td3Weights[TD3_FINALE]}</td>`;
             //posizionamento
-            if(player.stats_td3[7] == 0 && player.stats_td3[8] == 0 && player.stats_td3[9] == 0){ //non nei primi 3
-                playerRow += `<td>${player.stats_td3[9]*td3Weights[9]}</td>`; //zero qui
+            if(player.stats_td3[TD3_3RD] == 0 && player.stats_td3[TD3_2ND] == 0 && player.stats_td3[TD3_1ST] == 0){ //non nei primi 3
+                playerRow += `<td>${player.stats_td3[TD3_1ST]*td3Weights[TD3_1ST]}</td>`; //zero qui
             }else{
-                if (player.stats_td3[7] == 1){
-                    playerRow += `<td>3° : ${player.stats_td3[7]*td3Weights[7]}</td>`;//+5
-                }else if (player.stats_td3[8] == 1){
-                    playerRow += `<td>2° : ${player.stats_td3[8]*td3Weights[8]}</td>`;//+10
+                if (player.stats_td3[TD3_3RD] == 1){
+                    playerRow += `<td>3° : ${player.stats_td3[TD3_3RD]*td3Weights[TD3_3RD]}</td>`;//+5
+                }else if (player.stats_td3[TD3_2ND] == 1){
+                    playerRow += `<td>2° : ${player.stats_td3[TD3_2ND]*td3Weights[TD3_2ND]}</td>`;//+10
                 }else{
-                    playerRow += `<td>1° : ${player.stats_td3[9]*td3Weights[9]}</td>`;//+20
+                    playerRow += `<td>1° : ${player.stats_td3[TD3_1ST]*td3Weights[TD3_1ST]}</td>`;//+20
                 }
             }
             //0 su 10
-            playerRow += `<td>${player.stats_td3[10]*td3Weights[10]}</td>`;
+            playerRow += `<td>${player.stats_td3[TD3_0SU10]*td3Weights[TD3_0SU10]}</td>`;
             //Ciabatte
-            playerRow += `<td>${player.stats_td3[11]*td3Weights[11]}</td>`;
+            playerRow += `<td>${player.stats_td3[TD3_CIAB]*td3Weights[TD3_CIAB]}</td>`;
             //Altri meme
-            playerRow += `<td>${player.stats_td3[12]*td3Weights[12]}</td>`;
+            playerRow += `<td>${player.stats_td3[TD3_ALTRI_MEME]*td3Weights[TD3_ALTRI_MEME]}</td>`;
             //totale td3
             playerRow += `<td><strong>${player.td3}</strong></td>`;
             tableBody.innerHTML += playerRow;
