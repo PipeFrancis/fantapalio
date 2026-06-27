@@ -36,7 +36,7 @@ import { players, pdkWeights, td3Weights, what_day_is_it, td3_bonus_passadaprimo
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260627_1300.js';
+} from '../data260627_1304.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("playerDetails");
@@ -150,13 +150,13 @@ document.addEventListener("DOMContentLoaded", function() {
             if (stats_td3[TD3_PASSA1] !== 0 && stats_td3[TD3_PASSA3] == td3_bonus_passadaprimoultimo) statsHtml += `<p>Passa al 4° turno: <strong>${formatValue(stats_td3[TD3_PASSA3]*td3Weights[TD3_PASSA3])}</strong> (da primo o ultimo classificato)</p>`;
             if (stats_td3[TD3_PASSA1] !== 0 && stats_td3[TD3_PASSA4] != td3_bonus_passadaprimoultimo) statsHtml += `<p>Arriva in semifinale: <strong>${formatValue(stats_td3[TD3_PASSA4]*td3Weights[TD3_PASSA4])}</strong></p>`;
             if (stats_td3[TD3_PASSA1] !== 0 && stats_td3[TD3_PASSA4] == td3_bonus_passadaprimoultimo) statsHtml += `<p>Arriva in semifinale: <strong>${formatValue(stats_td3[TD3_PASSA4]*td3Weights[TD3_PASSA4])}</strong> (da primo o ultimo classificato)</p>`;
-            if (stats_td3[TD3_PASSA1] !== 0 && stats_td3[TD3_PASSA5] != td3_bonus_passadaprimoultimo) statsHtml += `<p>Arriva in finale: <strong>${formatValue(stats_td3[TD3_PASSA5]*td3Weights[TD3_FINALE])}</strong></p>`;
-            if (stats_td3[TD3_PASSA1] !== 0 && stats_td3[TD3_PASSA5] == td3_bonus_passadaprimoultimo) statsHtml += `<p>Arriva in finale: <strong>${formatValue(stats_td3[TD3_PASSA5]*td3Weights[TD3_FINALE])}</strong> (da primo o ultimo classificato)</p>`;
+            if (stats_td3[TD3_PASSA1] !== 0 && stats_td3[TD3_FINALE] != td3_bonus_passadaprimoultimo) statsHtml += `<p>Arriva in finale: <strong>${formatValue(stats_td3[TD3_FINALE]*td3Weights[TD3_FINALE])}</strong></p>`;
+            if (stats_td3[TD3_PASSA1] !== 0 && stats_td3[TD3_FINALE] == td3_bonus_passadaprimoultimo) statsHtml += `<p>Arriva in finale: <strong>${formatValue(stats_td3[TD3_FINALE]*td3Weights[TD3_FINALE])}</strong> (da primo o ultimo classificato)</p>`;
             // if (stats_td3[TD3_PASSA1] !== 0) statsHtml += `<p>Passa al 2° turno: <strong>${formatValue(stats_td3[TD3_PASSA1]*td3Weights[TD3_PASSA1])}</strong></p>`;
             // if (stats_td3[TD3_PASSA2] !== 0) statsHtml += `<p>Passa al 3° turno: <strong>${formatValue(stats_td3[TD3_PASSA2]*td3Weights[TD3_PASSA2])}</strong></p>`;
             // if (stats_td3[TD3_PASSA3] !== 0) statsHtml += `<p>Passa al 4° turno: <strong>${formatValue(stats_td3[TD3_PASSA3]*td3Weights[TD3_PASSA3])}</strong></p>`;
             // if (stats_td3[TD3_PASSA4] !== 0) statsHtml += `<p>Arriva in semifinale: <strong>${formatValue(stats_td3[TD3_PASSA4]*td3Weights[TD3_PASSA4])}</strong></p>`;
-            // if (stats_td3[TD3_PASSA5] !== 0) statsHtml += `<p>Arriva in finale: <strong>${formatValue(stats_td3[TD3_PASSA5]*td3Weights[TD3_FINALE])}</strong></p>`;
+            // if (stats_td3[TD3_FINALE] !== 0) statsHtml += `<p>Arriva in finale: <strong>${formatValue(stats_td3[TD3_FINALE]*td3Weights[TD3_FINALE])}</strong></p>`;
             if (stats_td3[TD3_3RD] !== 0) statsHtml += `<p>Terzo classificato: <strong>${formatValue(stats_td3[TD3_3RD]*td3Weights[TD3_3RD])}</strong></p>`;
             if (stats_td3[TD3_2ND] !== 0) statsHtml += `<p>Secondo classificato: <strong>${formatValue(stats_td3[TD3_2ND]*td3Weights[TD3_2ND])}</strong></p>`;
             if (stats_td3[TD3_1ST] !== 0) statsHtml += `<p>Primo classificato: <strong>${formatValue(stats_td3[TD3_1ST]*td3Weights[TD3_1ST])}</strong></p>`;
