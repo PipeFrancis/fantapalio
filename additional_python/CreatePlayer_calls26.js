@@ -20,6 +20,7 @@ const ThomasGrillo26 = createPlayer("Thomas Grillo", 4, "NORD", "12");
 const LuigiValentino26 = createPlayer("Luigi Valentino", 4, "NORD", "24");
 const AlessandroParona26 = createPlayer("Alessandro Parona", 4, "NORD", "10");
 const FilippoSappa26 = createPlayer("Filippo Sappa", 8, "SUD", "8");
+const GiovanniZanin26 = createPlayer("Giovanni Zanin", 7, "SUD", "3");
 const GiacomoSpagnolo26 = createPlayer("Giacomo Spagnolo", 7, "SUD", "27");
 const PietroSoramel26 = createPlayer("Pietro Soramel", 7, "SUD", "0");
 const GiovanniTonizzo26 = createPlayer("Giovanni Tonizzo", 6, "SUD", "5");
@@ -36,7 +37,6 @@ const MarcoComisso26 = createPlayer("Marco Comisso", 4, "SUD", "21");
 const MatteoBazzaro26 = createPlayer("Matteo Bazzaro", 4, "SUD", "6");
 const AlessandroGalassi26 = createPlayer("Alessandro Galassi", 4, "SUD", "17");
 const NicholasBruno26 = createPlayer("Nicholas Bruno", 4, "SUD", "13");
-const GiovanniZanin26 = createPlayer("Giovanni Zanin", 105, "SUD", "3");
 const GabrieleIndri26 = createPlayer("Gabriele Indri", 10, "EST", "3");
 const MarcoSerrao26 = createPlayer("Marco Serrao", 8, "EST", "8");
 const WilliamIob26 = createPlayer("William Iob", 8, "EST", "12");
@@ -73,11 +73,11 @@ const AlessioFurlan26 = createPlayer("Alessio Furlan", 6, "WEST", "10");
 const GiacomoPiacentini26 = createPlayer("Giacomo Piacentini", 5, "WEST", "1");
 const ValentinoCigainero26 = createPlayer("Valentino Cigainero", 5, "WEST", "30");
 const MatteoMargarit26 = createPlayer("Matteo Margarit", 5, "WEST", "22");
+const DavideParon26 = createPlayer("Davide Paron", 5, "WEST", "33");
 const GiovanniDalFarra26 = createPlayer("Giovanni Dal Farra", 4, "WEST", "17");
 const MiracleObichukwu26 = createPlayer("Miracle Obichukwu", 4, "WEST", "6");
 const LucaDellaLonga26 = createPlayer("Luca Della Longa", 4, "WEST", "11");
 const GiacomoFerigo26 = createPlayer("Giacomo Ferigo", 4, "WEST", "27");
-const DavideParon26 = createPlayer("Davide Paron", 4, "WEST", "33");
 const MichaelMargarit26 = createPlayer("Michael Margarit", 4, "WEST", "9");
 const SebastianoTonizzo26 = createPlayer("Sebastiano Tonizzo", 4, "WEST", "88");
 const MattiaLanna26 = createPlayer("Mattia Lanna", 4, "WEST", "45");
@@ -110,6 +110,7 @@ const players26 = [
     LuigiValentino26,
     AlessandroParona26,
     FilippoSappa26,
+    GiovanniZanin26,
     GiacomoSpagnolo26,
     PietroSoramel26,
     GiovanniTonizzo26,
@@ -126,7 +127,6 @@ const players26 = [
     MatteoBazzaro26,
     AlessandroGalassi26,
     NicholasBruno26,
-    GiovanniZanin26,
     GabrieleIndri26,
     MarcoSerrao26,
     WilliamIob26,
@@ -163,11 +163,11 @@ const players26 = [
     GiacomoPiacentini26,
     ValentinoCigainero26,
     MatteoMargarit26,
+    DavideParon26,
     GiovanniDalFarra26,
     MiracleObichukwu26,
     LucaDellaLonga26,
     GiacomoFerigo26,
-    DavideParon26,
     MichaelMargarit26,
     SebastianoTonizzo26,
     MattiaLanna26,
@@ -201,6 +201,7 @@ const players26 = [
 //LuigiValentino26.stats_g1 =       []; //
 //AlessandroParona26.stats_g1 =     []; //
 //FilippoSappa26.stats_g1 =         []; //
+//GiovanniZanin26.stats_g1 =        []; //
 //GiacomoSpagnolo26.stats_g1 =      []; //
 //PietroSoramel26.stats_g1 =        []; //
 //GiovanniTonizzo26.stats_g1 =      []; //
@@ -217,7 +218,6 @@ const players26 = [
 //MatteoBazzaro26.stats_g1 =        []; //
 //AlessandroGalassi26.stats_g1 =    []; //
 //NicholasBruno26.stats_g1 =        []; //
-//GiovanniZanin26.stats_g1 =        []; //
 //GabrieleIndri26.stats_g1 =        []; //
 //MarcoSerrao26.stats_g1 =          []; //
 //WilliamIob26.stats_g1 =           []; //
@@ -254,11 +254,11 @@ const players26 = [
 //GiacomoPiacentini26.stats_g1 =    []; //
 //ValentinoCigainero26.stats_g1 =   []; //
 //MatteoMargarit26.stats_g1 =       []; //
+//DavideParon26.stats_g1 =          []; //
 //GiovanniDalFarra26.stats_g1 =     []; //
 //MiracleObichukwu26.stats_g1 =     []; //
 //LucaDellaLonga26.stats_g1 =       []; //
 //GiacomoFerigo26.stats_g1 =        []; //
-//DavideParon26.stats_g1 =          []; //
 //MichaelMargarit26.stats_g1 =      []; //
 //SebastianoTonizzo26.stats_g1 =    []; //
 //MattiaLanna26.stats_g1 =          []; //
