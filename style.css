@@ -1031,7 +1031,7 @@ td { /* tutto serve per sfondo immagine*/
     
     /* MODIFICHE PER SPOSTARLO SOPRA IL DITO */
     transform: translateY(-100%); /* Sposta il rettangolo sopra il punto di ancoraggio */
-    margin-top: -15px;            /* Crea uno spazio di sicurezza dal dito */
+    margin-top: -30px;            /* Crea uno spazio di sicurezza dal dito */
 }
 
 .player-history-popup-title {
