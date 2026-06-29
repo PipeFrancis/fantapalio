@@ -35,7 +35,7 @@ import { player_type, players, td3Weights, players24, players25,
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260629_2226.js';
+} from '../data260629_2241.js';
 console.log("inizio boxscore js"); // inizio
 
 
@@ -660,6 +660,10 @@ function populateTable_td3(team, players) {
     // tableBody.innerHTML += headerRow;
 }
 
+function getDayResults(dayTag) {
+    return game_results2025_array.find(res => res.game_results_day === dayTag);
+}
+
 
 
 
@@ -676,6 +680,15 @@ function populateTable_td3(team, players) {
 
 if (what_day_is_it >= 1){
     document.getElementById("boxscore-section-g1").style.display = "block";
+    const res = getDayResults("g1");
+    if (res) {
+        document.getElementById("boxscore-score-g11").textContent = `${res.match_A_home_team} ${res.match_A_home_score} - ${res.match_A_away_score} ${res.match_A_away_team}`;
+        document.getElementById("boxscore-score-g11-team1").textContent = `${res.match_A_home_team}`;
+        document.getElementById("boxscore-score-g11-team2").textContent = `${res.match_A_away_team}`;
+        document.getElementById("boxscore-score-g12").textContent = `${res.match_B_home_team} ${res.match_B_home_score} - ${res.match_B_away_score} ${res.match_B_away_team}`;
+        document.getElementById("boxscore-score-g12-team1").textContent = `${res.match_B_home_team}`;
+        document.getElementById("boxscore-score-g12-team2").textContent = `${res.match_B_away_team}`;
+    }
     players.sort((a, b) => b.g1 - a.g1);
     // Chiamata alla funzione per popolare le tabelle per ciascun team
     populateTable_g1("NORD", players);
@@ -686,6 +699,15 @@ if (what_day_is_it >= 1){
 }
 if (what_day_is_it >= 2){
     document.getElementById("boxscore-section-g2").style.display = "block";
+    const res = getDayResults("g2");
+    if (res) {
+        document.getElementById("boxscore-score-g21").textContent = `${res.match_A_home_team} ${res.match_A_home_score} - ${res.match_A_away_score} ${res.match_A_away_team}`;
+        document.getElementById("boxscore-score-g21-team1").textContent = `${res.match_A_home_team}`;
+        document.getElementById("boxscore-score-g21-team2").textContent = `${res.match_A_away_team}`;
+        document.getElementById("boxscore-score-g22").textContent = `${res.match_B_home_team} ${res.match_B_home_score} - ${res.match_B_away_score} ${res.match_B_away_team}`;
+        document.getElementById("boxscore-score-g22-team1").textContent = `${res.match_B_home_team}`;
+        document.getElementById("boxscore-score-g22-team2").textContent = `${res.match_B_away_team}`;
+    }
     players.sort((a, b) => b.g2 - a.g2);
     populateTable_g2("NORD", players);
     populateTable_g2("EST", players);
@@ -694,6 +716,15 @@ if (what_day_is_it >= 2){
 }
 if (what_day_is_it >= 3){
     document.getElementById("boxscore-section-g3").style.display = "block";
+    const res = getDayResults("g3");
+    if (res) {
+        document.getElementById("boxscore-score-g31").textContent = `${res.match_A_home_team} ${res.match_A_home_score} - ${res.match_A_away_score} ${res.match_A_away_team}`;
+        document.getElementById("boxscore-score-g31-team1").textContent = `${res.match_A_home_team}`;
+        document.getElementById("boxscore-score-g31-team2").textContent = `${res.match_A_away_team}`;
+        document.getElementById("boxscore-score-g32").textContent = `${res.match_B_home_team} ${res.match_B_home_score} - ${res.match_B_away_score} ${res.match_B_away_team}`;
+        document.getElementById("boxscore-score-g32-team1").textContent = `${res.match_B_home_team}`;
+        document.getElementById("boxscore-score-g32-team2").textContent = `${res.match_B_away_team}`;
+    }
     players.sort((a, b) => b.g3 - a.g3);
     populateTable_g3("NORD", players);
     populateTable_g3("EST", players);
@@ -702,6 +733,15 @@ if (what_day_is_it >= 3){
 }
 if (what_day_is_it >= 4){
     document.getElementById("boxscore-section-semi").style.display = "block";
+    const res = getDayResults("semi");
+    if (res) {
+        document.getElementById("boxscore-score-semi1").textContent = `${res.match_A_home_team} ${res.match_A_home_score} - ${res.match_A_away_score} ${res.match_A_away_team}`;
+        document.getElementById("boxscore-score-semi1-team1").textContent = `${res.match_A_home_team}`;
+        document.getElementById("boxscore-score-semi1-team2").textContent = `${res.match_A_away_team}`;
+        document.getElementById("boxscore-score-semi2").textContent = `${res.match_B_home_team} ${res.match_B_home_score} - ${res.match_B_away_score} ${res.match_B_away_team}`;
+        document.getElementById("boxscore-score-semi2-team1").textContent = `${res.match_B_home_team}`;
+        document.getElementById("boxscore-score-semi2-team2").textContent = `${res.match_B_away_team}`;
+    }
     players.sort((a, b) => b.semi - a.semi);
     populateTable_semi("NORD", players);
     populateTable_semi("EST", players);
@@ -718,6 +758,12 @@ if (what_day_is_it >= 5){
 }
 if (what_day_is_it >= 6){
     document.getElementById("boxscore-section-final").style.display = "block";
+    const res = getDayResults("final");
+    if (res) {
+        document.getElementById("boxscore-score-final").textContent = `${res.match_A_home_team} ${res.match_A_home_score} - ${res.match_A_away_score} ${res.match_A_away_team}`;
+        document.getElementById("boxscore-score-final-team1").textContent = `${res.match_A_home_team}`;
+        document.getElementById("boxscore-score-final-team2").textContent = `${res.match_A_away_team}`;
+    }
     players.sort((a, b) => b.final - a.final); 
     populateTable_final("NORD", players);
     populateTable_final("WEST", players);
