@@ -3186,9 +3186,6 @@ GionaTell24.final = Math.round((GionaTell24.g1 + GionaTell24.g2 + GionaTell24.g3
 IacopoPivetta24.final = Math.round((IacopoPivetta24.g1 + IacopoPivetta24.g2 + IacopoPivetta24.g3 + IacopoPivetta24.semi) * 100 / 4) / 100;
 MattiaMasotti24.final = Math.round((MattiaMasotti24.g1 + MattiaMasotti24.g2 + MattiaMasotti24.g3 + MattiaMasotti24.semi) * 100 / 4) / 100;
 
-for (let player of players25) { // questo c'è per lo storico sennò non si calcola il final degli anni scorsi per chi non ha giocato la finale
-    compute_average_finals(player,"SUD","EST");
-}
 
 // Ciclo for per calcolare player.tot per ogni giocatore
 for (let i = 0; i < players24.length; i++) {
