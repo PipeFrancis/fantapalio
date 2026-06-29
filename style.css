@@ -1030,7 +1030,7 @@ td { /* tutto serve per sfondo immagine*/
     padding: 12px 16px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
     max-width: 280px;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     pointer-events: none; /* Evita che il popup interferisca con i tocchi successivi */
     
     /* MODIFICHE PER SPOSTARLO SOPRA IL DITO */
