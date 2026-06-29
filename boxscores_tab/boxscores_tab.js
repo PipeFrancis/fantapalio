@@ -35,7 +35,7 @@ import { player_type, players, td3Weights, players24, players25,
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260629_2241.js';
+} from '../data260629_2242.js';
 console.log("inizio boxscore js"); // inizio
 
 
@@ -661,7 +661,7 @@ function populateTable_td3(team, players) {
 }
 
 function getDayResults(dayTag) {
-    return game_results2025_array.find(res => res.game_results_day === dayTag);
+    return game_results_array.find(res => res.game_results_day === dayTag);
 }
 
 
