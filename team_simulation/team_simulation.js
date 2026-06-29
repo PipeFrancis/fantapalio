@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260629_2343.js';
+import { players, player_history_array } from '../data260629_2358.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -33,37 +33,27 @@ function cancelPress() {
     clearTimeout(pressTimer);
 }
 function showPlayerPopup(player, event) {
-    // Rimuovi un eventuale popup precedente rimasto appeso
     removeActivePopup();
 
-    // Cerca la storia del giocatore nell'array storico
     const history = player_history_array.find(h => h.name === player.name);
-
-    // Se non troviamo una storia per questo giocatore, possiamo mostrare un messaggio di default
     const hasHistory = !!history;
 
-    // Creiamo il rettangolo (div)
     const popup = document.createElement('div');
     popup.classList.add('player-history-popup');
 
-    // Costruiamo il contenuto dinamicamente controllando se i dati ci sono
-    let htmlContent = `<h4 class="popup-title"><b>${player.name}</b></h4>`;
+    // Usiamo le tue nuove classi aggiornate!
+    let htmlContent = `<h4 class="player-history-popup-title"><b>${player.name}</b></h4>`;
 
     if (hasHistory) {
-        // Controllo Tot 24
         if (history.tot_24 && history.tot_24 > 0) {
-            htmlContent += `<div class="popup-row"><b>Tot '24:</b> ${history.tot_24} <span style="font-size:0.85em; color:#777;">(Avg: ${history.avg_24 || 0})</span></div>`;
+            htmlContent += `<div class="player-history-popup-row"><b>Tot '24:</b> ${history.tot_24} <span style="font-size:0.85em; color:#777;">(Avg: ${history.avg_24 || 0})</span></div>`;
         }
-        // Controllo Tot 25
         if (history.tot_25 && history.tot_25 > 0) {
-            htmlContent += `<div class="popup-row"><b>Tot '25:</b> ${history.tot_25} <span style="font-size:0.85em; color:#777;">(Avg: ${history.avg_25 || 0})</span></div>`;
+            htmlContent += `<div class="player-history-popup-row"><b>Tot '25:</b> ${history.tot_25} <span style="font-size:0.85em; color:#777;">(Avg: ${history.avg_25 || 0})</span></div>`;
         }
-        // Controllo Note
         if (history.note && history.note.trim() !== "") {
-            htmlContent += `<div class="popup-note">"${history.note}"</div>`;
+            htmlContent += `<div class="player-history-popup-note">"${history.note}"</div>`;
         }
-        
-        // Se c'è il giocatore ma non ha nessuno di questi tre campi compilati
         if (!history.tot_24 && !history.tot_25 && (!history.note || history.note.trim() === "")) {
             htmlContent += `<p style="font-size:0.9em; margin:0;">Nessun dato storico rilevante.</p>`;
         }
@@ -75,8 +65,7 @@ function showPlayerPopup(player, event) {
     document.body.appendChild(popup);
     activePopup = popup;
 
-    // ---- POSIZIONAMENTO DEL RETTANGOLO ----
-    // Otteniamo le coordinate del tocco o del click
+    // ---- NUOVO POSIZIONAMENTO ----
     let clientX = 0;
     let clientY = 0;
 
@@ -88,15 +77,17 @@ function showPlayerPopup(player, event) {
         clientY = event.clientY;
     }
 
-    // Posizioniamo il popup leggermente spostato rispetto al dito/cursore (es. 15px sopra e a destra)
-    // per evitare che il dito stesso lo copra su mobile
-    popup.style.left = `${clientX + 15}px`;
-    popup.style.top = `${clientY - 40}px`;
+    // Centriamo il popup orizzontalmente rispetto al dito/cursore spostandolo a sinistra di metà della sua larghezza massima
+    popup.style.left = `${clientX - 140}px`; 
+    // Il 'top' ora è esattamente il punto del tocco. Il CSS si occuperà di spingerlo in alto.
+    popup.style.top = `${clientY}px`;
 
-    // Evitiamo che il popup esca dal bordo destro dello schermo
+    // Controlli per evitare che esca dallo schermo lateralmente
     const popupRect = popup.getBoundingClientRect();
-    if (clientX + 15 + popupRect.width > window.innerWidth) {
-        popup.style.left = `${clientX - popupRect.width - 15}px`;
+    if (popupRect.left < 10) {
+        popup.style.left = '10px'; // Troppo a sinistra
+    } else if (popupRect.right > window.innerWidth - 10) {
+        popup.style.left = `${window.innerWidth - popupRect.width - 10}px`; // Troppo a destra
     }
 }
 
@@ -288,7 +279,7 @@ function renderTeam() {
                 }
                 removePlayer(index);
             });
-            
+
             playerCard.addEventListener('mousedown', (e) => startPress(e, player));
             playerCard.addEventListener('mouseup', () => { cancelPress(); removeActivePopup(); });
             playerCard.addEventListener('mouseleave', () => { cancelPress(); removeActivePopup(); });
