@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players } from '../data260629_2321.js';
+import { players, player_history_array } from '../data260629_2343.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -9,6 +9,105 @@ const maxCredits = 30; // Massimo credito disponibile per il team
 
 const formlinkused = 0; // se 1, mostra il link al modulo google forms, se 0 non lo mostra e lascia solo il form diretto (e nasconde il messaggio con il link)
 const directregistration = !formlinkused; // se 1, mostra il form di registrazione diretto, se 0 mostra solo il link al modulo google forms (e nasconde il form diretto)
+
+// HISTORY POPUP
+let pressTimer;
+let isLongPress = false;
+let activePopup = null;
+
+function startPress(e, player) {
+    // Se è un click destro, non fare nulla
+    if (e.type === 'mousedown' && e.button !== 0) return;
+
+    isLongPress = false;
+
+    // Fai partire il timer (500 millisecondi)
+    pressTimer = setTimeout(() => {
+        isLongPress = true;
+        showPlayerPopup(player, e);
+    }, 500);
+}
+
+function cancelPress() {
+    // Se l'utente rilascia prima dei 500ms, annulla il timer
+    clearTimeout(pressTimer);
+}
+function showPlayerPopup(player, event) {
+    // Rimuovi un eventuale popup precedente rimasto appeso
+    removeActivePopup();
+
+    // Cerca la storia del giocatore nell'array storico
+    const history = player_history_array.find(h => h.name === player.name);
+
+    // Se non troviamo una storia per questo giocatore, possiamo mostrare un messaggio di default
+    const hasHistory = !!history;
+
+    // Creiamo il rettangolo (div)
+    const popup = document.createElement('div');
+    popup.classList.add('player-history-popup');
+
+    // Costruiamo il contenuto dinamicamente controllando se i dati ci sono
+    let htmlContent = `<h4 class="popup-title"><b>${player.name}</b></h4>`;
+
+    if (hasHistory) {
+        // Controllo Tot 24
+        if (history.tot_24 && history.tot_24 > 0) {
+            htmlContent += `<div class="popup-row"><b>Tot '24:</b> ${history.tot_24} <span style="font-size:0.85em; color:#777;">(Avg: ${history.avg_24 || 0})</span></div>`;
+        }
+        // Controllo Tot 25
+        if (history.tot_25 && history.tot_25 > 0) {
+            htmlContent += `<div class="popup-row"><b>Tot '25:</b> ${history.tot_25} <span style="font-size:0.85em; color:#777;">(Avg: ${history.avg_25 || 0})</span></div>`;
+        }
+        // Controllo Note
+        if (history.note && history.note.trim() !== "") {
+            htmlContent += `<div class="popup-note">"${history.note}"</div>`;
+        }
+        
+        // Se c'è il giocatore ma non ha nessuno di questi tre campi compilati
+        if (!history.tot_24 && !history.tot_25 && (!history.note || history.note.trim() === "")) {
+            htmlContent += `<p style="font-size:0.9em; margin:0;">Nessun dato storico rilevante.</p>`;
+        }
+    } else {
+        htmlContent += `<p style="font-size:0.9em; margin:0;">Nessun dato storico trovato per questo giocatore.</p>`;
+    }
+
+    popup.innerHTML = htmlContent;
+    document.body.appendChild(popup);
+    activePopup = popup;
+
+    // ---- POSIZIONAMENTO DEL RETTANGOLO ----
+    // Otteniamo le coordinate del tocco o del click
+    let clientX = 0;
+    let clientY = 0;
+
+    if (event.touches && event.touches.length > 0) {
+        clientX = event.touches[0].clientX;
+        clientY = event.touches[0].clientY;
+    } else {
+        clientX = event.clientX;
+        clientY = event.clientY;
+    }
+
+    // Posizioniamo il popup leggermente spostato rispetto al dito/cursore (es. 15px sopra e a destra)
+    // per evitare che il dito stesso lo copra su mobile
+    popup.style.left = `${clientX + 15}px`;
+    popup.style.top = `${clientY - 40}px`;
+
+    // Evitiamo che il popup esca dal bordo destro dello schermo
+    const popupRect = popup.getBoundingClientRect();
+    if (clientX + 15 + popupRect.width > window.innerWidth) {
+        popup.style.left = `${clientX - popupRect.width - 15}px`;
+    }
+}
+
+// Funzione di utility per distruggere il popup
+function removeActivePopup() {
+    if (activePopup) {
+        activePopup.remove();
+        activePopup = null;
+    }
+}
+// HISTORY END (of starting stuff, then used in other following functions)
 
 // Funzione per aggiungere un giocatore al team
 function addPlayer(player) {
@@ -176,7 +275,29 @@ function renderTeam() {
                 <p><b>${player.team}</b> &emsp; <b>$${player.cost}</b></p>
             `;
             // Aggiungi un evento per rimuovere il giocatore cliccando sulla card
-            playerCard.addEventListener('click', () => removePlayer(index));
+            // playerCard.addEventListener('click', () => removePlayer(index));
+            // Vecchio codice: playerCard.addEventListener('click', () => addPlayer(player)); // qui non c'era add player ma riman eil remove playre
+            // Sostituiscilo con questo blocco di eventi:
+            // 1. Gestione Click normale (scatta solo se NON è stato un long press)
+            playerCard.addEventListener('click', (e) => {
+                if (isLongPress) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    isLongPress = false; // Reset
+                    return;
+                }
+                removePlayer(index);
+            });
+            
+            playerCard.addEventListener('mousedown', (e) => startPress(e, player));
+            playerCard.addEventListener('mouseup', () => { cancelPress(); removeActivePopup(); });
+            playerCard.addEventListener('mouseleave', () => { cancelPress(); removeActivePopup(); });
+
+            playerCard.addEventListener('touchstart', (e) => startPress(e, player), { passive: true });
+            playerCard.addEventListener('touchend', () => { cancelPress(); removeActivePopup(); });
+            playerCard.addEventListener('touchmove', () => { cancelPress(); removeActivePopup(); });
+
+
             teamContainer.appendChild(playerCard);
         });
     }
@@ -239,7 +360,27 @@ function populatePlayersList() {
                 <p><b>${player.name}</b></p>
                 <p><b>${player.team}</b> &emsp; <b>$${player.cost}</b></p>
             `;
-            playerCard.addEventListener('click', () => addPlayer(player));
+            // Vecchio codice: playerCard.addEventListener('click', () => addPlayer(player));
+            // Sostituiscilo con questo blocco di eventi:
+            // 1. Gestione Click normale (scatta solo se NON è stato un long press)
+            playerCard.addEventListener('click', (e) => {
+                if (isLongPress) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    isLongPress = false; // Reset
+                    return;
+                }
+                addPlayer(player);
+            });
+            playerCard.addEventListener('mousedown', (e) => startPress(e, player));
+            playerCard.addEventListener('mouseup', () => { cancelPress(); removeActivePopup(); });
+            playerCard.addEventListener('mouseleave', () => { cancelPress(); removeActivePopup(); });
+
+            playerCard.addEventListener('touchstart', (e) => startPress(e, player), { passive: true });
+            playerCard.addEventListener('touchend', () => { cancelPress(); removeActivePopup(); });
+            playerCard.addEventListener('touchmove', () => { cancelPress(); removeActivePopup(); });
+
+
             playersContainer.appendChild(playerCard);
         });
     });
@@ -284,6 +425,12 @@ window.onload = () => {
         });
     });
 };
+
+// CHIUSURA GLOBALE SICURA DEL POPUP DELLA HISTORY
+window.addEventListener('click', () => removeActivePopup());
+window.addEventListener('touchstart', (e) => {
+    if (!e.target.closest('.player-card1')) removeActivePopup();
+}, { passive: true });
 
 //NEW26
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzwUaTw0COjgjKWbNqwZNf2JpApkq0a-xhB-sHub-3vQgCCuD4zJosdMsMJFyslWWs/exec";
@@ -361,4 +508,3 @@ async function submitTeam() {
         submitBtn.textContent = "Invia Squadra";
     }
 }
-
