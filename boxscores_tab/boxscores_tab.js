@@ -2,6 +2,7 @@
 import { player_type, players, td3Weights, players24, players25, 
     what_day_is_it, 
     team_not_in_final_1, team_not_in_final_2,
+        game_results_array,
         PTS   ,
         T2P   ,
         T2PX  ,
@@ -34,7 +35,7 @@ import { player_type, players, td3Weights, players24, players25,
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260628_1923.js';
+} from '../data260629_2223.js';
 console.log("inizio boxscore js"); // inizio
 
 
@@ -674,7 +675,8 @@ function populateTable_td3(team, players) {
 
 
 if (what_day_is_it >= 1){
-players.sort((a, b) => b.g1 - a.g1);
+    document.getElementById("boxscore-section-g1").style.display = "block";
+    players.sort((a, b) => b.g1 - a.g1);
     // Chiamata alla funzione per popolare le tabelle per ciascun team
     populateTable_g1("NORD", players);
     // Popola le tabelle per EST, SUD e WEST allo stesso modo
@@ -683,6 +685,7 @@ players.sort((a, b) => b.g1 - a.g1);
     populateTable_g1("WEST", players);
 }
 if (what_day_is_it >= 2){
+    document.getElementById("boxscore-section-g2").style.display = "block";
     players.sort((a, b) => b.g2 - a.g2);
     populateTable_g2("NORD", players);
     populateTable_g2("EST", players);
@@ -690,6 +693,7 @@ if (what_day_is_it >= 2){
     populateTable_g2("WEST", players);
 }
 if (what_day_is_it >= 3){
+    document.getElementById("boxscore-section-g3").style.display = "block";
     players.sort((a, b) => b.g3 - a.g3);
     populateTable_g3("NORD", players);
     populateTable_g3("EST", players);
@@ -697,6 +701,7 @@ if (what_day_is_it >= 3){
     populateTable_g3("WEST", players);
 }
 if (what_day_is_it >= 4){
+    document.getElementById("boxscore-section-semi").style.display = "block";
     players.sort((a, b) => b.semi - a.semi);
     populateTable_semi("NORD", players);
     populateTable_semi("EST", players);
@@ -704,6 +709,7 @@ if (what_day_is_it >= 4){
     populateTable_semi("WEST", players);
 }
 if (what_day_is_it >= 5){
+    document.getElementById("boxscore-section-td3").style.display = "block";
     players.sort((a, b) => b.td3 - a.td3);
     populateTable_td3("WEST", players);
     populateTable_td3("NORD", players);
@@ -711,6 +717,7 @@ if (what_day_is_it >= 5){
     populateTable_td3("SUD", players);
 }
 if (what_day_is_it >= 6){
+    document.getElementById("boxscore-section-final").style.display = "block";
     players.sort((a, b) => b.final - a.final); 
     populateTable_final("NORD", players);
     populateTable_final("WEST", players);
