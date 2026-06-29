@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260629_2358.js';
+import { players, player_history_array } from '../data260629_2359.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -46,16 +46,16 @@ function showPlayerPopup(player, event) {
 
     if (hasHistory) {
         if (history.tot_24 && history.tot_24 > 0) {
-            htmlContent += `<div class="player-history-popup-row"><b>Tot '24:</b> ${history.tot_24} <span style="font-size:0.85em; color:#777;">(Avg: ${history.avg_24 || 0})</span></div>`;
+            htmlContent += `<div class="player-history-popup-row"><b>Tot palio 2024:</b> ${history.tot_24} <span style="font-size:0.85em; color:#777;">(Avg: ${history.avg_24 || 0})</span></div>`;
         }
         if (history.tot_25 && history.tot_25 > 0) {
-            htmlContent += `<div class="player-history-popup-row"><b>Tot '25:</b> ${history.tot_25} <span style="font-size:0.85em; color:#777;">(Avg: ${history.avg_25 || 0})</span></div>`;
+            htmlContent += `<div class="player-history-popup-row"><b>Tot palio 2025:</b> ${history.tot_25} <span style="font-size:0.85em; color:#777;">(Avg: ${history.avg_25 || 0})</span></div>`;
         }
         if (history.note && history.note.trim() !== "") {
             htmlContent += `<div class="player-history-popup-note">"${history.note}"</div>`;
         }
         if (!history.tot_24 && !history.tot_25 && (!history.note || history.note.trim() === "")) {
-            htmlContent += `<p style="font-size:0.9em; margin:0;">Nessun dato storico rilevante.</p>`;
+            htmlContent += `<p style="font-size:0.9em; margin:0;">Nessun dato storico.</p>`;
         }
     } else {
         htmlContent += `<p style="font-size:0.9em; margin:0;">Nessun dato storico trovato per questo giocatore.</p>`;
