@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260630_2256.js';
+import { players, player_history_array } from '../data260630_2306.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -50,7 +50,9 @@ function cancelPress(e) {
         logMobile("CANCEL PRESS");
     
 
-    clearTimeout(pressTimer);
+     if (!isLongPress) {
+        clearTimeout(pressTimer);
+    }
 
     if (isLongPress && e && e.type === 'touchend') {
         console.log("BLOCKING GHOST CLICK");
@@ -59,6 +61,7 @@ function cancelPress(e) {
         if (e.cancelable) e.preventDefault();
     }
 }
+
 
 function showPlayerPopup(player, event) {
     // Chiudiamo il popup attivo direttamente senza azzerare isLongPress
@@ -466,6 +469,7 @@ window.addEventListener('touchstart', (e) => {
 // NUOVO: Se l'utente si muove (scrolla), cancelliamo IMMEDIATAMENTE il timer in corso
 // Questo evita che lo scroll blocchi il long press successivo!
 window.addEventListener('touchmove', () => {
+    logMobile("GLOBAL TOUCHMOVE -> killing timer");
     clearTimeout(pressTimer);
 }, { passive: true });
 
