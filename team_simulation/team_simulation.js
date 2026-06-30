@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260630_0802.js';
+import { players, player_history_array } from '../data260630_0805.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -15,20 +15,17 @@ let pressTimer;
 let isLongPress = false;
 let activePopup = null;
 
+// HISTORY POPUP
+let pressTimer;
+let isLongPress = false;
+let activePopup = null;
+
 function startPress(e, player) {
     // Se è un click destro del mouse, non fare nulla
     if (e.type === 'mousedown' && e.button !== 0) return;
 
-    // Se è un evento touch (mobile), blocchiamo l'emulazione del mouse (evita click fantasma)
-    if (e.type === 'touchstart') {
-        // Non usiamo preventDefault qui altrimenti blocchiamo lo scroll della pagina,
-        // ma marchiamo che siamo su mobile
-        clearTimeout(pressTimer);
-    } else {
-        // Su desktop puliamo comunque il timer precedente
-        clearTimeout(pressTimer);
-    }
-
+    // Svuota e resetta AGGRESSIVAMENTE i timer precedenti prima di iniziare un nuovo tocco
+    clearTimeout(pressTimer);
     isLongPress = false;
 
     // Fai partire il timer (500 millisecondi)
@@ -46,13 +43,14 @@ function cancelPress(e) {
     if (isLongPress && e && e.type === 'touchend') {
         if (e.cancelable) e.preventDefault(); 
     }
-
-    if (!activePopup) {
-        isLongPress = false;
-    }
 }
+
 function showPlayerPopup(player, event) {
-    removeActivePopup();
+    // Chiudiamo il popup attivo direttamente senza azzerare isLongPress
+    if (activePopup) {
+        activePopup.remove();
+        activePopup = null;
+    }
 
     const history = player_history_array.find(h => h.name === player.name);
     const hasHistory = !!history;
@@ -60,20 +58,16 @@ function showPlayerPopup(player, event) {
     const popup = document.createElement('div');
     popup.classList.add('player-history-popup');
 
-    // Usiamo le tue nuove classi aggiornate!
     let htmlContent = `<h4 class="player-history-popup-title"><b>${player.name}</b></h4>`;
 
     if (hasHistory) {
         if (history.tot_25 && history.tot_25 > 0) {
-            // htmlContent += `<div class="player-history-popup-row">Tot palio 2025: <b>${history.tot_25}</b> <span style="font-size:0.85em; color:#777;">(Avg: ${history.avg_25 || 0})</span></div>`;
             htmlContent += `<div class="player-history-popup-row">Tot 2025: <b class="orange_text">${history.tot_25}</b></div>`;
         }
         if (history.tot_25 && history.tot_25 < 0) {
-            // htmlContent += `<div class="player-history-popup-row">Tot palio 2025: <b>${history.tot_25}</b> <span style="font-size:0.85em; color:#777;">(Avg: ${history.avg_25 || 0})</span></div>`;
             htmlContent += `<div class="player-history-popup-row">Tot 2025: <b class="orange_text">1</b></div>`;
         }
         if (history.tot_24 && history.tot_24 > 0) {
-            // htmlContent += `<div class="player-history-popup-row"><b>Tot palio 2024:</b> ${history.tot_24} <span style="font-size:0.85em; color:#777;">(Avg: ${history.avg_24 || 0})</span></div>`;
             htmlContent += `<div class="player-history-popup-row">Tot 2024: <b class="orange_text">${history.tot_24}</b></div>`;
         }
         if (history.note && history.note.trim() !== "") {
@@ -90,7 +84,6 @@ function showPlayerPopup(player, event) {
     document.body.appendChild(popup);
     activePopup = popup;
 
-    // ---- NUOVO POSIZIONAMENTO ----
     let clientX = 0;
     let clientY = 0;
 
@@ -102,27 +95,25 @@ function showPlayerPopup(player, event) {
         clientY = event.clientY;
     }
 
-    // Centriamo il popup orizzontalmente rispetto al dito/cursore spostandolo a sinistra di metà della sua larghezza massima
     popup.style.left = `${clientX - 140}px`; 
-    // Il 'top' ora è esattamente il punto del tocco. Il CSS si occuperà di spingerlo in alto.
     popup.style.top = `${clientY}px`;
 
-    // Controlli per evitare che esca dallo schermo lateralmente
     const popupRect = popup.getBoundingClientRect();
     if (popupRect.left < 10) {
-        popup.style.left = '10px'; // Troppo a sinistra
+        popup.style.left = '10px';
     } else if (popupRect.right > window.innerWidth - 10) {
-        popup.style.left = `${window.innerWidth - popupRect.width - 10}px`; // Troppo a destra
+        popup.style.left = `${window.innerWidth - popupRect.width - 10}px`;
     }
 }
 
-// Funzione di utility per distruggere il popup
+// Funzione di utility per distruggere il popup quando si rilascia il dito o si clicca fuori
 function removeActivePopup() {
     if (activePopup) {
         activePopup.remove();
         activePopup = null;
-        isLongPress = false; // Reset immediato dello stato alla chiusura
     }
+    // Resettiamo lo stato solo quando l'azione d'interazione è conclusa globalmente
+    isLongPress = false; 
 }
 // HISTORY END (of starting stuff, then used in other following functions)
 
