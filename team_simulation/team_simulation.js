@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260630_2233.js';
+import { players, player_history_array } from '../data260630_2241.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -414,9 +414,9 @@ function populatePlayersList() {
             playerCard.addEventListener('mouseleave', (e) => { cancelPress(e); removeActivePopup(); });
 
             // 3. Eventi Mobile (Touch) - PASSIVE: FALSE è fondamentale qui per permettere il preventDefault
-            playerCard.addEventListener('touchstart', (e) => startPress(e, player), { passive: true });
-            playerCard.addEventListener('touchend', (e) => { cancelPress(e); removeActivePopup(); }, { passive: false });
-            playerCard.addEventListener('touchmove', (e) => { cancelPress(e); removeActivePopup(); });
+            playerCard.addEventListener('touchstart', (e) => startPress(e, player), { passive: false });
+            playerCard.addEventListener('touchend', (e) => { cancelPress(e); removeActivePopup(); console.log("touchend");}, { passive: false });
+            playerCard.addEventListener('touchmove', (e) => { cancelPress(e); removeActivePopup(); console.log("touchmove"); });
 
             playersContainer.appendChild(playerCard);
         });
