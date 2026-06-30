@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260630_2253.js';
+import { players, player_history_array } from '../data260630_2256.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -47,14 +47,14 @@ function cancelPress(e) {
         isLongPress,
         time: Date.now()
     });
-        logMobile("CANCEL PRESS" + player.name);
+        logMobile("CANCEL PRESS");
     
 
     clearTimeout(pressTimer);
 
     if (isLongPress && e && e.type === 'touchend') {
         console.log("BLOCKING GHOST CLICK");
-        logMobile("BLOCKING GHOST CLICK" + player.name);
+        logMobile("BLOCKING GHOST CLICK");
 
         if (e.cancelable) e.preventDefault();
     }
@@ -348,33 +348,6 @@ function updateCreditsCounter() {
     creditsCounter.textContent = `Hai ancora: ${maxCredits - totalCost}$`;
 }
 
-// // Funzione per popolare la lista dei giocatori disponibili, ORDINATI SOLO PER PREZZO E NON TEAM
-// function populatePlayersList() {
-//     const playersContainer = document.getElementById('playersContainer');
-//     playersContainer.innerHTML = '';
-
-//     // Sort players by cost descending before displaying
-//     players
-//     .slice() // Make a shallow copy, so you don't modify original "players"
-//     .sort((a, b) => b.cost - a.cost) // Sort descending by cost
-//     .forEach((player) => {
-//         const playerCard = document.createElement('div');
-//         playerCard.classList.add('player-card1', `cardclass${player.team}`);
-//         playerCard.innerHTML = `
-//             <p>${player.name}</p>
-//             <p>${player.team} &emsp; $${player.cost}</p>
-//         `;
-//         playerCard.addEventListener('click', () => addPlayer(player));
-//         playersContainer.appendChild(playerCard);
-//     });
-
-
-//     // Aggiungi l'elemento per i crediti rimanenti
-//     const creditsCounter = document.createElement('p');
-//     creditsCounter.id = 'creditsCounter';
-//     creditsCounter.textContent = `Hai ancora: ${maxCredits}$`;
-//     playersContainer.parentNode.insertBefore(creditsCounter, playersContainer.nextSibling);
-// }
 
 // Funzione per popolare la lista dei giocatori disponibili, ORDINATI SOLO PER TEAM E POI PREZZO
 function populatePlayersList() {
