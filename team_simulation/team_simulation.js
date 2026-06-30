@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260630_0041.js';
+import { players, player_history_array } from '../data260630_0753.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -16,9 +16,12 @@ let isLongPress = false;
 let activePopup = null;
 
 function startPress(e, player) {
-    // Se è un click destro, non fare nulla
     if (e.type === 'mousedown' && e.button !== 0) return;
 
+    // SICUREZZA: se c'era un timer attivo di un'altra card, lo distruggiamo subito
+    clearTimeout(pressTimer); 
+    
+    // Forziamo il reset dello stato prima di iniziare il nuovo tocco
     isLongPress = false;
 
     // Fai partire il timer (500 millisecondi)
@@ -29,8 +32,12 @@ function startPress(e, player) {
 }
 
 function cancelPress() {
-    // Se l'utente rilascia prima dei 500ms, annulla il timer
     clearTimeout(pressTimer);
+    // Se non è comparso il popup (quindi l'utente ha rilasciato prima dei 500ms), 
+    // resettiamo immediatamente lo stato di long press
+    if (!activePopup) {
+        isLongPress = false;
+    }
 }
 function showPlayerPopup(player, event) {
     removeActivePopup();
@@ -102,6 +109,7 @@ function removeActivePopup() {
     if (activePopup) {
         activePopup.remove();
         activePopup = null;
+        isLongPress = false; // <-- NUOVO: resetta lo stato quando il popup sparisce!
     }
 }
 // HISTORY END (of starting stuff, then used in other following functions)
