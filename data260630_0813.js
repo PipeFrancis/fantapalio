@@ -211,8 +211,8 @@ const game_results2026_g3 = createGameResults("SUD", 460, "EST", 440, "NORD", 63
 // const game_results2026_semi = createGameResults("NORD", 540, "SUD", 390, "WEST", 570, "EST", 540, "semi");
 // const game_results2026_final = createGameResults("WEST", 680, "NORD", 610, "NO", 0, "NO", 0, "final");
 const game_results2026_array = [
-    game_results2026_final,
-    game_results2026_semi,
+    // game_results2026_final,
+    // game_results2026_semi,
     game_results2026_g3,
     game_results2026_g2,
     game_results2026_g1
@@ -434,7 +434,7 @@ const DanieleGanzit26 = createPlayer("Daniele Ganzit", 5, "NORD", "11");
 const GiacomoSilvestri26 = createPlayer("Giacomo Silvestri", 5, "NORD", "3");
 const AntonioGri26 = createPlayer("Antonio Gri", 4, "NORD", "5");
 const FrancescoSchiavone26 = createPlayer("Francesco Schiavone", 4, "NORD", "69");
-const NicolaCollavini26 = createPlayer("Nicola Collavini", 4, "NORD", "44");
+const NicolaCollavini26 = createPlayer("Nicola Collavini", 4, "NORD", "44");
 const LeonardoTirelli26 = createPlayer("Leonardo Tirelli", 4, "NORD", "45");
 const MattiaCollavini26 = createPlayer("Mattia Collavini", 4, "NORD", "20");
 const JacopoLoPiccolo26 = createPlayer("Jacopo Lo Piccolo", 4, "NORD", "25");
@@ -442,7 +442,7 @@ const ThomasGrillo26 = createPlayer("Thomas Grillo", 4, "NORD", "12");
 const LuigiValentino26 = createPlayer("Luigi Valentino", 4, "NORD", "24");
 const AlessandroParona26 = createPlayer("Alessandro Parona", 4, "NORD", "10");
 const FilippoSappa26 = createPlayer("Filippo Sappa", 8, "SUD", "8");
-const GiovanniZanin26 = createPlayer("Giovanni Zanin", 7, "SUD", "3");
+const GiovanniZanin26 = createPlayer("Giovanni Zanin", 7, "SUD", "3");
 const GiacomoSpagnolo26 = createPlayer("Giacomo Spagnolo", 7, "SUD", "27");
 const PietroSoramel26 = createPlayer("Pietro Soramel", 7, "SUD", "0");
 const GiovanniTonizzo26 = createPlayer("Giovanni Tonizzo", 6, "SUD", "5");
@@ -467,7 +467,7 @@ const MassimilianoRossi26 = createPlayer("Massimiliano Rossi", 6, "EST", "5");
 const MattiaAnedda26 = createPlayer("Mattia Anedda", 6, "EST", "9");
 const EdoardoPicogna26 = createPlayer("Edoardo Picogna", 6, "EST", "21");
 const SamuelMasotti26 = createPlayer("Samuel Masotti", 5, "EST", "00");
-const DavideBroggi26 = createPlayer("Davide Broggi", 5, "EST", "13");
+const DavideBroggi26 = createPlayer("Davide Broggi", 5, "EST", "13");
 const EnricoSant26 = createPlayer("Enrico Sant", 5, "EST", "4");
 const EugenioDeTina26 = createPlayer("Eugenio De Tina", 5, "EST", "77");
 const ThomasBaracetti26 = createPlayer("Thomas Baracetti", 5, "EST", "26");
@@ -502,7 +502,7 @@ const LucaDellaLonga26 = createPlayer("Luca Della Longa", 4, "WEST", "11");
 const GiacomoFerigo26 = createPlayer("Giacomo Ferigo", 4, "WEST", "27");
 const MichaelMargarit26 = createPlayer("Michael Margarit", 4, "WEST", "9");
 const SebastianoTonizzo26 = createPlayer("Sebastiano Tonizzo", 4, "WEST", "88");
-const MattiaLanna26 = createPlayer("Mattia Lanna", 4, "WEST", "45");
+const MattiaLanna26 = createPlayer("Mattia Lanna", 4, "WEST", "45");
 const EmanueleCorleone26 = createPlayer("Emanuele Corleone", 4, "WEST", "24");
 const ChristianZanet26 = createPlayer("Christian Zanet", 4, "WEST", "5");
 const ThomasDriussi26 = createPlayer("Thomas Driussi", 4, "WEST", "0");
@@ -3186,6 +3186,9 @@ GionaTell24.final = Math.round((GionaTell24.g1 + GionaTell24.g2 + GionaTell24.g3
 IacopoPivetta24.final = Math.round((IacopoPivetta24.g1 + IacopoPivetta24.g2 + IacopoPivetta24.g3 + IacopoPivetta24.semi) * 100 / 4) / 100;
 MattiaMasotti24.final = Math.round((MattiaMasotti24.g1 + MattiaMasotti24.g2 + MattiaMasotti24.g3 + MattiaMasotti24.semi) * 100 / 4) / 100;
 
+for (let player of players25) { // questo c'è per lo storico sennò non si calcola il final degli anni scorsi per chi non ha giocato la finale
+    compute_average_finals(player,"SUD","EST");
+}
 
 // Ciclo for per calcolare player.tot per ogni giocatore
 for (let i = 0; i < players24.length; i++) {
@@ -3200,6 +3203,9 @@ for (let i = 0; i < players26.length; i++) {
     let player = players26[i];
     player.tot = Math.round((player.g1 + player.g2 + player.g3 + player.semi + player.td3 + player.final)*100)/100;
 };
+
+console.log(GiacomoSpagnolo25.tot);
+console.log(GiacomoSpagnolo25.final);
 
 
 
@@ -3234,23 +3240,19 @@ for (const p26 of players26) {
     // Find matching data in the maps (will be undefined if not found)
     const p25Match = players25_historyMap.get(p26.name);
     const p24Match = players24_historyMap.get(p26.name);
-
     // Create the new history object matching your fp_player_history_type structure
     const historyObj = {
         name: p26.name,
-        note: "", // Left empty as per your type definition
-        
+        note: "", // Left empty to be filled later if needed
         // 2025 Data
         tot_25: p25Match ? p25Match.tot : 0.0,
         avg_25: p25Match ? calculateAvg(p25Match) : 0.0,
         cost_25: p25Match ? p25Match.cost : 0,
-        
         // 2024 Data
         tot_24: p24Match ? p24Match.tot : 0.0,
         avg_24: p24Match ? calculateAvg(p24Match) : 0.0,
         cost_24: p24Match ? p24Match.cost : 0
     };
-
     // Push to your destination array
     player_history_array26.push(historyObj);
 }
@@ -3258,19 +3260,18 @@ for (const p26 of players26) {
 // Function to update a player's note in the array
 function updatePlayerNote(playerName, newNote) {
     const player = player_history_array26.find(p => p.name === playerName);
-    
     if (player) {
         player.note = newNote;
-        console.log(`Updated note for ${playerName}!`);
+        console.log(`Updated note for ${playerName}: ${newNote}`);
     } else {
         console.log(`Player "${playerName}" not found in history.`);
     }
 }
 
-// Example usage:
-updatePlayerNote("Gabriele Miani", "Injured in 2026, watch out.");
+updatePlayerNote("Gabriele Miani", "Non gioca quest'anno.");
 
 console.log(player_history_array26);
+const player_history_array = player_history_array26;
 
 // -----------------------------------------------------------------------------------------------
 //                                        CREAZIONE FANTATEAMS   
@@ -3846,6 +3847,7 @@ for (const team of fantateams26) { // assegna lega a ogni squadra in base al rio
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
+        player_history_array,
     };
 
 

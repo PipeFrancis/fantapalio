@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260630_0806.js';
+import { players, player_history_array } from '../data260630_0813.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -435,11 +435,19 @@ window.onload = () => {
 
 
 // CHIUSURA GLOBALE SICURA
+// Gestisce la chiusura su click
 window.addEventListener('click', () => removeActivePopup());
+// Gestisce il touch globale pulendo i residui
 window.addEventListener('touchstart', (e) => {
+    // Se tocchi fuori dalle card, chiudi il popup
     if (!e.target.closest('.player-card1')) {
         removeActivePopup();
     }
+}, { passive: true });
+// NUOVO: Se l'utente si muove (scrolla), cancelliamo IMMEDIATAMENTE il timer in corso
+// Questo evita che lo scroll blocchi il long press successivo!
+window.addEventListener('touchmove', () => {
+    clearTimeout(pressTimer);
 }, { passive: true });
 
 //NEW26
