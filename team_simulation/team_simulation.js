@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260630_2204.js';
+import { players, player_history_array } from '../data260630_2233.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -306,8 +306,12 @@ function renderTeam() {
 
                 if (isLongPress) {
                     console.log("CLICK BLOCKED BECAUSE LONG PRESS");
+                    console.log("Ignoring click after long press");
+
                     e.preventDefault();
                     e.stopPropagation();
+                    // return;
+                    setTimeout(removeActivePopup, 50);
                     return;
                 }
 
@@ -317,7 +321,7 @@ function renderTeam() {
 
             // 2. Eventi Desktop (Mouse)
             playerCard.addEventListener('mousedown', (e) => startPress(e, player));
-            playerCard.addEventListener('mouseup', (e) => { cancelPress(e); removeActivePopup(); });
+            playerCard.addEventListener('mouseup', (e) => { cancelPress(e); });
             playerCard.addEventListener('mouseleave', (e) => { cancelPress(e); removeActivePopup(); });
 
             // 3. Eventi Mobile (Touch) - PASSIVE: FALSE è fondamentale qui per permettere il preventDefault
@@ -392,9 +396,13 @@ function populatePlayersList() {
             // 1. Gestione Click normale
             playerCard.addEventListener('click', (e) => {
                 if (isLongPress) {
+                    console.log("Ignoring click after long press");
                     e.preventDefault();
                     e.stopPropagation();
-                    isLongPress = false; // Reset
+                    // isLongPress = false; // Reset
+                    // return;
+
+                    setTimeout(removeActivePopup, 50);
                     return;
                 }
                 addPlayer(player);
@@ -402,7 +410,7 @@ function populatePlayersList() {
 
             // 2. Eventi Desktop (Mouse)
             playerCard.addEventListener('mousedown', (e) => startPress(e, player));
-            playerCard.addEventListener('mouseup', (e) => { cancelPress(e); removeActivePopup(); });
+            playerCard.addEventListener('mouseup', (e) => { cancelPress(e); });
             playerCard.addEventListener('mouseleave', (e) => { cancelPress(e); removeActivePopup(); });
 
             // 3. Eventi Mobile (Touch) - PASSIVE: FALSE è fondamentale qui per permettere il preventDefault
