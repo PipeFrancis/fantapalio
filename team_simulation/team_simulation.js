@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260630_2322.js';
+import { players, player_history_array } from '../data260630_2326.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -335,7 +335,6 @@ function renderTeam() {
             // 2. Eventi Desktop (Mouse)
             playerCard.addEventListener('mousedown', (e) => startPress(e, player));
             playerCard.addEventListener('mouseup', (e) => { cancelPress(e); });
-            playerCard.addEventListener('mouseleave', (e) => { cancelPress(e); removeActivePopup(); });
 
             // 3. Eventi Mobile (Touch) - PASSIVE: FALSE è fondamentale qui per permettere il preventDefault
             playerCard.addEventListener('touchstart', (e) => startPress(e, player), { passive: true });
@@ -397,10 +396,9 @@ function populatePlayersList() {
             // 2. Eventi Desktop (Mouse)
             playerCard.addEventListener('mousedown', (e) => startPress(e, player));
             playerCard.addEventListener('mouseup', (e) => { cancelPress(e); });
-            // playerCard.addEventListener('mouseleave', (e) => { cancelPress(e); removeActivePopup(); });
 
             // 3. Eventi Mobile (Touch) - PASSIVE: FALSE è fondamentale qui per permettere il preventDefault
-            playerCard.addEventListener('touchstart', (e) => startPress(e, player), { passive: false });
+            playerCard.addEventListener('touchstart', (e) => startPress(e, player), { passive: true });
             playerCard.addEventListener('touchend', (e) => { 
                 cancelPress(e);
                 removeActivePopup();
