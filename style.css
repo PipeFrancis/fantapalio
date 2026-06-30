@@ -632,7 +632,7 @@ footer {
     -webkit-touch-callout: none; /* Disabilita il menu contestuale su iOS (copia/cerca) */
     /* Dice al browser di gestire i tocchi verticali per lo scroll, 
        ma di lasciare i tocchi singoli/lunghi immediatamente liberi a JavaScript */
-    touch-action: pan-y;
+    touch-action: manipulation;
 }
 @media (max-width: 768px) {
     .players-container {
