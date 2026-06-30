@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260630_0813.js';
+import { players, player_history_array } from '../data260630_2204.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -16,28 +16,41 @@ let isLongPress = false;
 let activePopup = null;
 
 
-function startPress(e, player) {
-    // Se è un click destro del mouse, non fare nulla
-    if (e.type === 'mousedown' && e.button !== 0) return;
 
-    // Svuota e resetta AGGRESSIVAMENTE i timer precedenti prima di iniziare un nuovo tocco
+function startPress(e, player) {
+    console.log("START PRESS", {
+        type: e.type,
+        player: player.name,
+        time: Date.now()
+    });
+
     clearTimeout(pressTimer);
     isLongPress = false;
 
-    // Fai partire il timer (500 millisecondi)
     pressTimer = setTimeout(() => {
+        console.log("LONG PRESS FIRED", {
+            player: player.name,
+            time: Date.now()
+        });
+
         isLongPress = true;
         showPlayerPopup(player, e);
+
     }, 500);
 }
 
 function cancelPress(e) {
+    console.log("CANCEL PRESS", {
+        type: e?.type,
+        isLongPress,
+        time: Date.now()
+    });
+
     clearTimeout(pressTimer);
-    
-    // Se stavamo facendo un long press e l'utente solleva il dito su mobile,
-    // blocchiamo il click fantasma successivo
+
     if (isLongPress && e && e.type === 'touchend') {
-        if (e.cancelable) e.preventDefault(); 
+        console.log("BLOCKING GHOST CLICK");
+        if (e.cancelable) e.preventDefault();
     }
 }
 
@@ -284,12 +297,21 @@ function renderTeam() {
             // Sostituiscilo con questo blocco di eventi:
             // 1. Gestione Click normale
             playerCard.addEventListener('click', (e) => {
+
+                console.log("CLICK EVENT", {
+                    player: player.name,
+                    isLongPress,
+                    time: Date.now()
+                });
+
                 if (isLongPress) {
+                    console.log("CLICK BLOCKED BECAUSE LONG PRESS");
                     e.preventDefault();
                     e.stopPropagation();
-                    isLongPress = false; // Reset
                     return;
                 }
+
+                console.log("NORMAL CLICK -> ADD/REMOVE");
                 removePlayer(index);
             });
 
