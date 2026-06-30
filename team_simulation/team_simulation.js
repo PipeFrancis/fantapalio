@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260630_0753.js';
+import { players, player_history_array } from '../data260630_0802.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -16,12 +16,19 @@ let isLongPress = false;
 let activePopup = null;
 
 function startPress(e, player) {
+    // Se è un click destro del mouse, non fare nulla
     if (e.type === 'mousedown' && e.button !== 0) return;
 
-    // SICUREZZA: se c'era un timer attivo di un'altra card, lo distruggiamo subito
-    clearTimeout(pressTimer); 
-    
-    // Forziamo il reset dello stato prima di iniziare il nuovo tocco
+    // Se è un evento touch (mobile), blocchiamo l'emulazione del mouse (evita click fantasma)
+    if (e.type === 'touchstart') {
+        // Non usiamo preventDefault qui altrimenti blocchiamo lo scroll della pagina,
+        // ma marchiamo che siamo su mobile
+        clearTimeout(pressTimer);
+    } else {
+        // Su desktop puliamo comunque il timer precedente
+        clearTimeout(pressTimer);
+    }
+
     isLongPress = false;
 
     // Fai partire il timer (500 millisecondi)
@@ -31,10 +38,15 @@ function startPress(e, player) {
     }, 500);
 }
 
-function cancelPress() {
+function cancelPress(e) {
     clearTimeout(pressTimer);
-    // Se non è comparso il popup (quindi l'utente ha rilasciato prima dei 500ms), 
-    // resettiamo immediatamente lo stato di long press
+    
+    // Se stavamo facendo un long press e l'utente solleva il dito su mobile,
+    // blocchiamo il click fantasma successivo
+    if (isLongPress && e && e.type === 'touchend') {
+        if (e.cancelable) e.preventDefault(); 
+    }
+
     if (!activePopup) {
         isLongPress = false;
     }
@@ -109,7 +121,7 @@ function removeActivePopup() {
     if (activePopup) {
         activePopup.remove();
         activePopup = null;
-        isLongPress = false; // <-- NUOVO: resetta lo stato quando il popup sparisce!
+        isLongPress = false; // Reset immediato dello stato alla chiusura
     }
 }
 // HISTORY END (of starting stuff, then used in other following functions)
@@ -283,7 +295,7 @@ function renderTeam() {
             // playerCard.addEventListener('click', () => removePlayer(index));
             // Vecchio codice: playerCard.addEventListener('click', () => addPlayer(player)); // qui non c'era add player ma riman eil remove playre
             // Sostituiscilo con questo blocco di eventi:
-            // 1. Gestione Click normale (scatta solo se NON è stato un long press)
+            // 1. Gestione Click normale
             playerCard.addEventListener('click', (e) => {
                 if (isLongPress) {
                     e.preventDefault();
@@ -294,14 +306,15 @@ function renderTeam() {
                 removePlayer(index);
             });
 
+            // 2. Eventi Desktop (Mouse)
             playerCard.addEventListener('mousedown', (e) => startPress(e, player));
-            playerCard.addEventListener('mouseup', () => { cancelPress(); removeActivePopup(); });
-            playerCard.addEventListener('mouseleave', () => { cancelPress(); removeActivePopup(); });
+            playerCard.addEventListener('mouseup', (e) => { cancelPress(e); removeActivePopup(); });
+            playerCard.addEventListener('mouseleave', (e) => { cancelPress(e); removeActivePopup(); });
 
+            // 3. Eventi Mobile (Touch) - PASSIVE: FALSE è fondamentale qui per permettere il preventDefault
             playerCard.addEventListener('touchstart', (e) => startPress(e, player), { passive: true });
-            playerCard.addEventListener('touchend', () => { cancelPress(); removeActivePopup(); });
-            playerCard.addEventListener('touchmove', () => { cancelPress(); removeActivePopup(); });
-
+            playerCard.addEventListener('touchend', (e) => { cancelPress(e); removeActivePopup(); }, { passive: false });
+            playerCard.addEventListener('touchmove', (e) => { cancelPress(e); removeActivePopup(); });
 
             teamContainer.appendChild(playerCard);
         });
@@ -367,7 +380,7 @@ function populatePlayersList() {
             `;
             // Vecchio codice: playerCard.addEventListener('click', () => addPlayer(player));
             // Sostituiscilo con questo blocco di eventi:
-            // 1. Gestione Click normale (scatta solo se NON è stato un long press)
+            // 1. Gestione Click normale
             playerCard.addEventListener('click', (e) => {
                 if (isLongPress) {
                     e.preventDefault();
@@ -377,14 +390,16 @@ function populatePlayersList() {
                 }
                 addPlayer(player);
             });
+
+            // 2. Eventi Desktop (Mouse)
             playerCard.addEventListener('mousedown', (e) => startPress(e, player));
-            playerCard.addEventListener('mouseup', () => { cancelPress(); removeActivePopup(); });
-            playerCard.addEventListener('mouseleave', () => { cancelPress(); removeActivePopup(); });
+            playerCard.addEventListener('mouseup', (e) => { cancelPress(e); removeActivePopup(); });
+            playerCard.addEventListener('mouseleave', (e) => { cancelPress(e); removeActivePopup(); });
 
+            // 3. Eventi Mobile (Touch) - PASSIVE: FALSE è fondamentale qui per permettere il preventDefault
             playerCard.addEventListener('touchstart', (e) => startPress(e, player), { passive: true });
-            playerCard.addEventListener('touchend', () => { cancelPress(); removeActivePopup(); });
-            playerCard.addEventListener('touchmove', () => { cancelPress(); removeActivePopup(); });
-
+            playerCard.addEventListener('touchend', (e) => { cancelPress(e); removeActivePopup(); }, { passive: false });
+            playerCard.addEventListener('touchmove', (e) => { cancelPress(e); removeActivePopup(); });
 
             playersContainer.appendChild(playerCard);
         });
@@ -431,10 +446,13 @@ window.onload = () => {
     });
 };
 
-// CHIUSURA GLOBALE SICURA DEL POPUP DELLA HISTORY
+
+// CHIUSURA GLOBALE SICURA
 window.addEventListener('click', () => removeActivePopup());
 window.addEventListener('touchstart', (e) => {
-    if (!e.target.closest('.player-card1')) removeActivePopup();
+    if (!e.target.closest('.player-card1')) {
+        removeActivePopup();
+    }
 }, { passive: true });
 
 //NEW26
