@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260630_2327.js';
+import { players, player_history_array } from '../data260630_2330.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -23,7 +23,7 @@ function startPress(e, player) {
         player: player.name,
         time: Date.now()
     });
-    logMobile("START PRESS " + player.name);
+    // logMobile("START PRESS " + player.name);
 
     clearTimeout(pressTimer);
     isLongPress = false;
@@ -33,7 +33,7 @@ function startPress(e, player) {
             player: player.name,
             time: Date.now()
         });
-        logMobile("LONG PRESS FIRED" + player.name);
+        // logMobile("LONG PRESS FIRED" + player.name);
 
         isLongPress = true;
         showPlayerPopup(player, e);
@@ -47,11 +47,7 @@ function cancelPress(e) {
         isLongPress,
         time: Date.now()
     });
-     logMobile(
-        "CANCEL PRESS type=" + 
-        (e ? e.type : "NO EVENT") +
-        " long=" + isLongPress
-    );
+    //  logMobile( "CANCEL PRESS type=" + (e ? e.type : "NO EVENT") + " long=" + isLongPress);
     
 
      if (!isLongPress) {
@@ -60,7 +56,7 @@ function cancelPress(e) {
 
     if (isLongPress && e && e.type === 'touchend') {
         console.log("BLOCKING GHOST CLICK");
-        logMobile("BLOCKING GHOST CLICK");
+        // logMobile("BLOCKING GHOST CLICK");
 
         if (e.cancelable) e.preventDefault();
     }
@@ -472,7 +468,7 @@ window.addEventListener('touchstart', (e) => {
 // NUOVO: Se l'utente si muove (scrolla), cancelliamo IMMEDIATAMENTE il timer in corso
 // Questo evita che lo scroll blocchi il long press successivo!
 window.addEventListener('touchmove', () => {
-    logMobile("GLOBAL TOUCHMOVE -> killing timer");
+    // logMobile("GLOBAL TOUCHMOVE -> killing timer");
     clearTimeout(pressTimer);
 }, { passive: true });
 
@@ -553,20 +549,22 @@ async function submitTeam() {
     }
 }
 
-const debug = document.createElement('div');
-debug.style.position='fixed';
-debug.style.bottom='0';
-debug.style.left='0';
-debug.style.right='0';
-debug.style.background='black';
-debug.style.color='lime';
-debug.style.zIndex='99999';
-debug.style.fontSize='12px';
-debug.style.maxHeight='150px';
-debug.style.overflow='auto';
 
-document.body.appendChild(debug);
+// DEBUG CONSOLE DIV ON MOBILE ANDROID (f12 not available there)
+// const debug = document.createElement('div');
+// debug.style.position='fixed';
+// debug.style.bottom='0';
+// debug.style.left='0';
+// debug.style.right='0';
+// debug.style.background='black';
+// debug.style.color='lime';
+// debug.style.zIndex='99999';
+// debug.style.fontSize='12px';
+// debug.style.maxHeight='150px';
+// debug.style.overflow='auto';
 
-function logMobile(msg) {
-    debug.innerHTML += msg + "<br>";
-}
+// document.body.appendChild(debug);
+
+// function logMobile(msg) {
+//     debug.innerHTML += msg + "<br>";
+// }
