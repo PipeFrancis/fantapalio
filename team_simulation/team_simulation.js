@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260630_2245.js';
+import { players, player_history_array } from '../data260630_2253.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -23,6 +23,7 @@ function startPress(e, player) {
         player: player.name,
         time: Date.now()
     });
+    logMobile("START PRESS " + player.name);
 
     clearTimeout(pressTimer);
     isLongPress = false;
@@ -32,6 +33,7 @@ function startPress(e, player) {
             player: player.name,
             time: Date.now()
         });
+        logMobile("LONG PRESS FIRED" + player.name);
 
         isLongPress = true;
         showPlayerPopup(player, e);
@@ -45,11 +47,15 @@ function cancelPress(e) {
         isLongPress,
         time: Date.now()
     });
+        logMobile("CANCEL PRESS" + player.name);
+    
 
     clearTimeout(pressTimer);
 
     if (isLongPress && e && e.type === 'touchend') {
         console.log("BLOCKING GHOST CLICK");
+        logMobile("BLOCKING GHOST CLICK" + player.name);
+
         if (e.cancelable) e.preventDefault();
     }
 }
@@ -415,7 +421,12 @@ function populatePlayersList() {
 
             // 3. Eventi Mobile (Touch) - PASSIVE: FALSE è fondamentale qui per permettere il preventDefault
             playerCard.addEventListener('touchstart', (e) => startPress(e, player), { passive: false });
-            playerCard.addEventListener('touchend', (e) => { cancelPress(e); removeActivePopup(); console.log("touchend");}, { passive: false });
+            playerCard.addEventListener('touchend', (e) => { 
+                cancelPress(e);
+                if (!isLongPress) {
+                    removeActivePopup();
+                }
+            }, { passive: false });
             playerCard.addEventListener('touchmove', (e) => { cancelPress(e); removeActivePopup(); console.log("touchmove"); });
 
             playersContainer.appendChild(playerCard);
@@ -466,7 +477,12 @@ window.onload = () => {
 
 // CHIUSURA GLOBALE SICURA
 // Gestisce la chiusura su click
-window.addEventListener('click', () => removeActivePopup());
+window.addEventListener('click', (e) => {
+    if (e.target.closest('.player-card1')) {
+        return;
+    }
+    removeActivePopup();
+});
 // Gestisce il touch globale pulendo i residui
 window.addEventListener('touchstart', (e) => {
     // Se tocchi fuori dalle card, chiudi il popup
@@ -555,4 +571,22 @@ async function submitTeam() {
         submitBtn.disabled = false;
         submitBtn.textContent = "Invia Squadra";
     }
+}
+
+const debug = document.createElement('div');
+debug.style.position='fixed';
+debug.style.bottom='0';
+debug.style.left='0';
+debug.style.right='0';
+debug.style.background='black';
+debug.style.color='lime';
+debug.style.zIndex='99999';
+debug.style.fontSize='12px';
+debug.style.maxHeight='150px';
+debug.style.overflow='auto';
+
+document.body.appendChild(debug);
+
+function logMobile(msg) {
+    debug.innerHTML += msg + "<br>";
 }
