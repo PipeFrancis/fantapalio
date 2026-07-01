@@ -623,7 +623,7 @@ footer {
     flex: 1 0 calc(25% - 10px); /* Calc con spazi tra i bordi */
     max-width: 200px; /* Larghezza massima delle card */
     box-sizing: border-box; /* Rispetta il box model */
-
+    
     /* Disabilita la selezione del testo e il menu contestuale nativo touch */
     -webkit-user-select: none;  /* Safari/Chrome Mobile */
     -moz-user-select: none;     /* Firefox Mobile */

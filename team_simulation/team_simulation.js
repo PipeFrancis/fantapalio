@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260701_2228.js';
+import { players, player_history_array } from '../data260701_2237.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -12,42 +12,57 @@ const directregistration = !formlinkused; // se 1, mostra il form di registrazio
 
 // HISTORY POPUP
 let pressTimer;
-let isLongPress = false;
+// let isLongPress = false;
 let activePopup = null;
 
-let ignoreNextClick = false;
+let pressStartTime = 0;
+let pressTimer = null;
+let pressedPlayer = null;
+let longPressTriggered = false;
 
+function onPointerDown(e, player) {
+    e.preventDefault(); // IMPORTANT (kills native long-press menu)
 
-function startPointerPress(e, player) {
-    e.preventDefault();
-
-    if (activePopup) {
-        removeActivePopup();
-    }
-    logMobile( "startPointerPress type=" + (e ? e.type : "NO EVENT") + " long=" + isLongPress);
-
-    clearTimeout(pressTimer);
-    isLongPress = false;
+    pressedPlayer = player;
+    longPressTriggered = false;
+    pressStartTime = Date.now();
 
     pressTimer = setTimeout(() => {
-        isLongPress = true;
-        ignoreNextClick = true;
+        longPressTriggered = true;
         showPlayerPopup(player, e);
     }, 500);
 }
 
-function endPointerPress(e) {
+function onPointerUp(e) {
     clearTimeout(pressTimer);
 
-    if (isLongPress) {
+    const duration = Date.now() - pressStartTime;
+
+    // LONG PRESS already fired → just cleanup
+    if (longPressTriggered) {
         removeActivePopup();
+        resetPress();
+        return;
     }
-}
-function cancelPointerPress(e) {
-    clearTimeout(pressTimer);
-    removeActivePopup();
+
+    // SHORT PRESS → select player
+    if (pressedPlayer && duration < 500) {
+        togglePlayer(pressedPlayer);
+    }
+
+    resetPress();
 }
 
+function onPointerCancel() {
+    clearTimeout(pressTimer);
+    resetPress();
+}
+
+function resetPress() {
+    pressedPlayer = null;
+    longPressTriggered = false;
+    pressStartTime = 0;
+}
 
 // function startPress(e, player) {
 //     console.log("START PRESS", {
@@ -164,8 +179,8 @@ function removeActivePopup() {
         activePopup.remove();
         activePopup = null;
     }
-    // Resettiamo lo stato solo quando l'azione d'interazione è conclusa globalmente
-    isLongPress = false; 
+    // // Resettiamo lo stato solo quando l'azione d'interazione è conclusa globalmente
+    // isLongPress = false; 
 }
 // HISTORY END (of starting stuff, then used in other following functions)
 
@@ -372,21 +387,21 @@ function renderTeam() {
             // playerCard.addEventListener('touchmove', (e) => { cancelPress(e); removeActivePopup(); });
             
             //POINTER EVENT STUFF START
-            playerCard.addEventListener('click', (e) => {
+            // playerCard.addEventListener('click', (e) => {
 
-                if (ignoreNextClick) {
-                    e.preventDefault();
-                    e.stopPropagation();
+            //     if (ignoreNextClick) {
+            //         e.preventDefault();
+            //         e.stopPropagation();
 
-                    ignoreNextClick = false;
-                    return;
-                }
+            //         ignoreNextClick = false;
+            //         return;
+            //     }
 
-                removePlayer(player);
-            });
-            playerCard.addEventListener('pointerdown', (e) => startPointerPress(e, player), { passive: false });
-            playerCard.addEventListener('pointerup', endPointerPress);
-            playerCard.addEventListener('pointercancel', cancelPointerPress);
+            //     removePlayer(player);
+            // });
+            playerCard.addEventListener('pointerdown', (e) => onPointerDown(e, player), { passive: false });
+            playerCard.addEventListener('pointerup', onPointerUp);
+            playerCard.addEventListener('pointercancel', onPointerCancel);
             //POINTER EVENT STUFF END
 
             teamContainer.appendChild(playerCard);
@@ -457,21 +472,21 @@ function populatePlayersList() {
             // });
 
             //POINTER EVENT STUFF START
-            playerCard.addEventListener('click', (e) => {
+            // playerCard.addEventListener('click', (e) => {
 
-                if (ignoreNextClick) {
-                    e.preventDefault();
-                    e.stopPropagation();
+            //     if (ignoreNextClick) {
+            //         e.preventDefault();
+            //         e.stopPropagation();
 
-                    ignoreNextClick = false;
-                    return;
-                }
+            //         ignoreNextClick = false;
+            //         return;
+            //     }
 
-                addPlayer(player);
-            });
-            playerCard.addEventListener('pointerdown', (e) => startPointerPress(e, player), { passive:false });
-            playerCard.addEventListener('pointerup', endPointerPress);
-            playerCard.addEventListener('pointercancel', cancelPointerPress);
+            //     addPlayer(player);
+            // });
+            playerCard.addEventListener('pointerdown', (e) => onPointerDown(e, player), { passive: false });
+            playerCard.addEventListener('pointerup', onPointerUp);
+            playerCard.addEventListener('pointercancel', onPointerCancel);
             //POINTER EVENT STUFF END
 
 
