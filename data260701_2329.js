@@ -720,10 +720,10 @@ if(coachTM >= 2){
     WEST26.coach_g2_stats   = [4,5];
 }
 if(coachTM >= 3){
-    NORD26.coach_g3_stats   = [1,7];
-    SUD26.coach_g3_stats    = [1,4];
-    EST26.coach_g3_stats    = [1,5];
-    WEST26.coach_g3_stats   = [8,1];
+    NORD26.coach_g3_stats   = [0,4];
+    SUD26.coach_g3_stats    = [3,0];
+    EST26.coach_g3_stats    = [1,4];
+    WEST26.coach_g3_stats   = [5,3];
 }
 if(coachTM >= 4){
     // NORD26.coach_g3_stats   = [1,7];
