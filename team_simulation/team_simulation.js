@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260701_2313.js';
+import { players, player_history_array } from '../data260701_2314.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -184,7 +184,7 @@ function addPlayer(player) {
     }
     // da capire se lasciare questo controllo o lasciarli arrivare in fondo da soli e poi devono cambiarne diversi quando si rendono conto
     if (totalCost + player.cost > maxCredits - 4 * (5 - (selectedPlayers.length + 1))) { // se i crediti che useresti > 4*(giocatori che mancano)
-        alert("Se prendessi questo non potresti completare la squadra, ti tocca rivedere la scelta.");
+        alert("Se prendessi questo non potresti completare la squadra, costa troppo.");
         return;
     }
 
