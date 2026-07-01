@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260701_2312.js';
+import { players, player_history_array } from '../data260701_2313.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -154,7 +154,7 @@ function showPlayerPopup(player, event) {
 
 // Funzione di utility per distruggere il popup quando si rilascia il dito o si clicca fuori
 function removeActivePopup() {
-    logMobile( "removeActivePopup");
+    // logMobile( "removeActivePopup");
 
     if (activePopup) {
         activePopup.remove();
@@ -509,20 +509,20 @@ async function submitTeam() {
 
 
 // DEBUG CONSOLE DIV ON MOBILE ANDROID (f12 not available there)
-const debug = document.createElement('div');
-debug.style.position='fixed';
-debug.style.bottom='0';
-debug.style.left='0';
-debug.style.right='0';
-debug.style.background='black';
-debug.style.color='lime';
-debug.style.zIndex='99999';
-debug.style.fontSize='12px';
-debug.style.maxHeight='150px';
-debug.style.overflow='auto';
+// const debug = document.createElement('div');
+// debug.style.position='fixed';
+// debug.style.bottom='0';
+// debug.style.left='0';
+// debug.style.right='0';
+// debug.style.background='black';
+// debug.style.color='lime';
+// debug.style.zIndex='99999';
+// debug.style.fontSize='12px';
+// debug.style.maxHeight='150px';
+// debug.style.overflow='auto';
 
-document.body.appendChild(debug);
+// document.body.appendChild(debug);
 
-function logMobile(msg) {
-    debug.innerHTML += msg + "<br>";
-}
+// function logMobile(msg) {
+//     debug.innerHTML += msg + "<br>";
+// }
