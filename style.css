@@ -796,14 +796,14 @@ td { /* tutto serve per sfondo immagine*/
   /* background-color: black; */
   background-color: var(--main-color1);
   padding: 0.2em 0.4em;
-  border-radius: 0.2em;
+  border-radius: 12px;
 }
 .highlighted-text2 {
   color: var(--main-color2);
   /* background-color: black; */
   background-color: white;
   padding: 0.2em 0.4em;
-  border-radius: 0.2em;
+  border-radius: 12px;
 }
 
 .totalteamcard{
