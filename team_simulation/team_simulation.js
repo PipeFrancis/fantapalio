@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260701_2153.js';
+import { players, player_history_array } from '../data260701_2157.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -19,7 +19,7 @@ let activePopup = null;
 function startPointerPress(e, player) {
     // prevents duplicate touch + mouse behavior
     e.preventDefault?.();
-
+    logMobile( "startPointerPress type=" + (e ? e.type : "NO EVENT") + " long=" + isLongPress);
     clearTimeout(pressTimer);
     isLongPress = false;
 
@@ -30,6 +30,7 @@ function startPointerPress(e, player) {
 }
 
 function endPointerPress(e) {
+    logMobile( "endPointerPress type=" + (e ? e.type : "NO EVENT") + " long=" + isLongPress);
     clearTimeout(pressTimer);
 }
 
@@ -595,23 +596,23 @@ async function submitTeam() {
 
 
 // DEBUG CONSOLE DIV ON MOBILE ANDROID (f12 not available there)
-// const debug = document.createElement('div');
-// debug.style.position='fixed';
-// debug.style.bottom='0';
-// debug.style.left='0';
-// debug.style.right='0';
-// debug.style.background='black';
-// debug.style.color='lime';
-// debug.style.zIndex='99999';
-// debug.style.fontSize='12px';
-// debug.style.maxHeight='150px';
-// debug.style.overflow='auto';
+const debug = document.createElement('div');
+debug.style.position='fixed';
+debug.style.bottom='0';
+debug.style.left='0';
+debug.style.right='0';
+debug.style.background='black';
+debug.style.color='lime';
+debug.style.zIndex='99999';
+debug.style.fontSize='12px';
+debug.style.maxHeight='150px';
+debug.style.overflow='auto';
 
-// document.body.appendChild(debug);
+document.body.appendChild(debug);
 
-// function logMobile(msg) {
-//     debug.innerHTML += msg + "<br>";
-// }
+function logMobile(msg) {
+    debug.innerHTML += msg + "<br>";
+}
 /**
  * ===========================
  * PLAYER SELECTION + LONG PRESS POPUP SYSTEM
