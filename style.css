@@ -798,6 +798,13 @@ td { /* tutto serve per sfondo immagine*/
   padding: 0.2em 0.4em;
   border-radius: 0.2em;
 }
+.highlighted-text2 {
+  color: var(--main-color2);
+  /* background-color: black; */
+  background-color: white;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+}
 
 .totalteamcard{
     color: black;
