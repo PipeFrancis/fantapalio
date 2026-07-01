@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260701_2201.js';
+import { players, player_history_array } from '../data260701_2208.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -17,9 +17,12 @@ let activePopup = null;
 
 
 function startPointerPress(e, player) {
-    // prevents duplicate touch + mouse behavior
-    e.preventDefault?.();
+
+    if (activePopup) {
+        removeActivePopup();
+    }
     logMobile( "startPointerPress type=" + (e ? e.type : "NO EVENT") + " long=" + isLongPress);
+
     clearTimeout(pressTimer);
     isLongPress = false;
 
@@ -520,6 +523,18 @@ window.onload = () => {
 //     // logMobile("GLOBAL TOUCHMOVE -> killing timer");
 //     clearTimeout(pressTimer);
 // }, { passive: true });
+
+//pointer change start
+window.addEventListener('click', (e) => {
+    if (!e.target.closest('.player-card1') &&
+        !e.target.closest('.player-history-popup')) {
+        removeActivePopup();
+    }
+});
+window.addEventListener('scroll', () => {
+    removeActivePopup();
+});
+//pointer change end
 
 //NEW26
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzwUaTw0COjgjKWbNqwZNf2JpApkq0a-xhB-sHub-3vQgCCuD4zJosdMsMJFyslWWs/exec";
