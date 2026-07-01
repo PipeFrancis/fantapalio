@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260701_2159.js';
+import { players, player_history_array } from '../data260701_2201.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -144,6 +144,8 @@ function showPlayerPopup(player, event) {
 
 // Funzione di utility per distruggere il popup quando si rilascia il dito o si clicca fuori
 function removeActivePopup() {
+    logMobile( "removeActivePopup type=" + (e ? e.type : "NO EVENT") + " long=" + isLongPress);
+
     if (activePopup) {
         activePopup.remove();
         activePopup = null;
@@ -358,6 +360,7 @@ function renderTeam() {
             //POINTER EVENT STUFF START
             playerCard.addEventListener('click', (e) => {
                 if (isLongPress) {
+                    
                     setTimeout(removeActivePopup, 50);
                     return;
                 }
@@ -438,6 +441,7 @@ function populatePlayersList() {
             //POINTER EVENT STUFF START
             playerCard.addEventListener('click', (e) => {
                 if (isLongPress) {
+
                     setTimeout(removeActivePopup, 50);
                     return;
                 }
