@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260701_2257.js';
+import { players, player_history_array } from '../data260701_2300.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -444,8 +444,7 @@ function renderTeam() {
 // Funzione per aggiornare i crediti rimanenti
 function updateCreditsCounter() {
     const creditsCounter = document.getElementById('creditsCounter');
-    // creditsCounter.textContent = `Hai ancora: ${maxCredits - totalCost}$`;
-    creditsCounter.innerHTML = `Hai ancora: <span class="orange_text">${maxCredits - totalCost}$</span>`;
+    creditsCounter.innerHTML = `Hai ancora: <b><span class="orange_text">${maxCredits - totalCost}$</span></b>`;
 }
 
 
@@ -531,8 +530,8 @@ function populatePlayersList() {
 
     const creditsCounter = document.createElement('p');
     creditsCounter.id = 'creditsCounter';
-    creditsCounter.classList.add('highlighted-text2')
-    creditsCounter.innerHTML = `Hai ancora: <span class="orange_text">${maxCredits}$</span>`;
+    creditsCounter.classList.add('highlighted-text')
+    creditsCounter.innerHTML = `Hai ancora: <b><span class="orange_text">${maxCredits}$</span></b>`;
     playersContainer.parentNode.insertBefore(creditsCounter, playersContainer.nextSibling);
 }
 
