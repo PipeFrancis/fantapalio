@@ -454,7 +454,7 @@ const JacopoTomasini26 = createPlayer("Jacopo Tomasini", 5, "SUD", "1");
 const PaoloZorzi26 = createPlayer("Paolo Zorzi", 5, "SUD", "19");
 const CristianFedrizzi26 = createPlayer("Cristian Fedrizzi", 5, "SUD", "14");
 const GabrieleAzzarone26 = createPlayer("Gabriele Azzarone", 5, "SUD", "10");
-const FilippoAgnoluzzi26 = createPlayer("Filippo Agnoluzzi", 4, "SUD", "2");
+const FilippoAgnoluzzi26 = createPlayer("Filippo Agnoluzzi", 5, "SUD", "2");
 const MarcoComisso26 = createPlayer("Marco Comisso", 4, "SUD", "21");
 const MatteoBazzaro26 = createPlayer("Matteo Bazzaro", 4, "SUD", "6");
 const AlessandroGalassi26 = createPlayer("Alessandro Galassi", 4, "SUD", "17");
@@ -467,7 +467,7 @@ const MassimilianoRossi26 = createPlayer("Massimiliano Rossi", 6, "EST", "5");
 const MattiaAnedda26 = createPlayer("Mattia Anedda", 6, "EST", "9");
 const EdoardoPicogna26 = createPlayer("Edoardo Picogna", 6, "EST", "21");
 const SamuelMasotti26 = createPlayer("Samuel Masotti", 5, "EST", "00");
-const DavideBroggi26 = createPlayer("Davide Broggi", 4, "EST", "13");
+const DavideBroggi26 = createPlayer("Davide Broggi", 5, "EST", "13");
 const EnricoSant26 = createPlayer("Enrico Sant", 5, "EST", "4");
 const EugenioDeTina26 = createPlayer("Eugenio De Tina", 5, "EST", "77");
 const ThomasBaracetti26 = createPlayer("Thomas Baracetti", 5, "EST", "26");
@@ -3784,7 +3784,7 @@ for (const team of fantateams26) { // assegna lega a ogni squadra in base al rio
         team.name == "PPT" ||
         team.name == "Miani Heat" ||
         team.name == "I pupazzoni" ||
-
+        
         team.name == "SOUTSASA" ||
         team.name == "Bugaz" ||
         team.name == "ESTASA" ||
