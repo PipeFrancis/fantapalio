@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260701_2209.js';
+import { players, player_history_array } from '../data260701_2220.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -15,6 +15,8 @@ let pressTimer;
 let isLongPress = false;
 let activePopup = null;
 
+let ignoreNextClick = false;
+
 
 function startPointerPress(e, player) {
 
@@ -28,13 +30,21 @@ function startPointerPress(e, player) {
 
     pressTimer = setTimeout(() => {
         isLongPress = true;
+        ignoreNextClick = true;
         showPlayerPopup(player, e);
     }, 500);
 }
 
 function endPointerPress(e) {
-    logMobile( "endPointerPress type=" + (e ? e.type : "NO EVENT") + " long=" + isLongPress);
     clearTimeout(pressTimer);
+
+    if (isLongPress) {
+        removeActivePopup();
+    }
+}
+function cancelPointerPress(e) {
+    clearTimeout(pressTimer);
+    removeActivePopup();
 }
 
 
@@ -362,16 +372,20 @@ function renderTeam() {
             
             //POINTER EVENT STUFF START
             playerCard.addEventListener('click', (e) => {
-                if (isLongPress) {
-                    
-                    setTimeout(removeActivePopup, 50);
+
+                if (ignoreNextClick) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    ignoreNextClick = false;
                     return;
                 }
-                removePlayer(index);
+
+                removePlayer(player);
             });
             playerCard.addEventListener('pointerdown', (e) => startPointerPress(e, player));
             playerCard.addEventListener('pointerup', endPointerPress);
-            playerCard.addEventListener('pointercancel', endPointerPress);
+            playerCard.addEventListener('pointercancel', cancelPointerPress);
             //POINTER EVENT STUFF END
 
             teamContainer.appendChild(playerCard);
@@ -443,16 +457,20 @@ function populatePlayersList() {
 
             //POINTER EVENT STUFF START
             playerCard.addEventListener('click', (e) => {
-                if (isLongPress) {
 
-                    setTimeout(removeActivePopup, 50);
+                if (ignoreNextClick) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    ignoreNextClick = false;
                     return;
                 }
+
                 addPlayer(player);
             });
             playerCard.addEventListener('pointerdown', (e) => startPointerPress(e, player));
             playerCard.addEventListener('pointerup', endPointerPress);
-            playerCard.addEventListener('pointercancel', endPointerPress);
+            playerCard.addEventListener('pointercancel', cancelPointerPress);
             //POINTER EVENT STUFF END
 
 
