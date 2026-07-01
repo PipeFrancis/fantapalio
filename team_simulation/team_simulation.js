@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260630_2330.js';
+import { players, player_history_array } from '../data260701_2153.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -16,51 +16,68 @@ let isLongPress = false;
 let activePopup = null;
 
 
-
-function startPress(e, player) {
-    console.log("START PRESS", {
-        type: e.type,
-        player: player.name,
-        time: Date.now()
-    });
-    // logMobile("START PRESS " + player.name);
+function startPointerPress(e, player) {
+    // prevents duplicate touch + mouse behavior
+    e.preventDefault?.();
 
     clearTimeout(pressTimer);
     isLongPress = false;
 
     pressTimer = setTimeout(() => {
-        console.log("LONG PRESS FIRED", {
-            player: player.name,
-            time: Date.now()
-        });
-        // logMobile("LONG PRESS FIRED" + player.name);
-
         isLongPress = true;
         showPlayerPopup(player, e);
-
     }, 500);
 }
 
-function cancelPress(e) {
-    console.log("CANCEL PRESS", {
-        type: e?.type,
-        isLongPress,
-        time: Date.now()
-    });
-    //  logMobile( "CANCEL PRESS type=" + (e ? e.type : "NO EVENT") + " long=" + isLongPress);
+function endPointerPress(e) {
+    clearTimeout(pressTimer);
+}
+
+
+// function startPress(e, player) {
+//     console.log("START PRESS", {
+//         type: e.type,
+//         player: player.name,
+//         time: Date.now()
+//     });
+//     // logMobile("START PRESS " + player.name);
+
+//     clearTimeout(pressTimer);
+//     isLongPress = false;
+
+//     pressTimer = setTimeout(() => {
+//         console.log("LONG PRESS FIRED", {
+//             player: player.name,
+//             time: Date.now()
+//         });
+//         // logMobile("LONG PRESS FIRED" + player.name);
+
+//         isLongPress = true;
+//         showPlayerPopup(player, e);
+
+//     }, 500);
+// }
+
+// function cancelPress(e) {
+//     console.log("CANCEL PRESS", {
+//         type: e?.type,
+//         isLongPress,
+//         time: Date.now()
+//     });
+//     //  logMobile( "CANCEL PRESS type=" + (e ? e.type : "NO EVENT") + " long=" + isLongPress);
     
 
-     if (!isLongPress) {
-        clearTimeout(pressTimer);
-    }
+//      if (!isLongPress) {
+//         clearTimeout(pressTimer);
+//     }
 
-    if (isLongPress && e && e.type === 'touchend') {
-        console.log("BLOCKING GHOST CLICK");
-        // logMobile("BLOCKING GHOST CLICK");
+//     if (isLongPress && e && e.type === 'touchend') {
+//         console.log("BLOCKING GHOST CLICK");
+//         // logMobile("BLOCKING GHOST CLICK");
 
-        if (e.cancelable) e.preventDefault();
-    }
-}
+//         if (e.cancelable) e.preventDefault();
+//     }
+// }
 
 
 function showPlayerPopup(player, event) {
@@ -305,37 +322,50 @@ function renderTeam() {
             // Vecchio codice: playerCard.addEventListener('click', () => addPlayer(player)); // qui non c'era add player ma riman eil remove playre
             // Sostituiscilo con questo blocco di eventi:
             // 1. Gestione Click normale
+            // playerCard.addEventListener('click', (e) => {
+
+            //     console.log("CLICK EVENT", {
+            //         player: player.name,
+            //         isLongPress,
+            //         time: Date.now()
+            //     });
+
+            //     if (isLongPress) {
+            //         console.log("CLICK BLOCKED BECAUSE LONG PRESS");
+            //         console.log("Ignoring click after long press");
+
+            //         e.preventDefault();
+            //         e.stopPropagation();
+            //         // return;
+            //         setTimeout(removeActivePopup, 50);
+            //         return;
+            //     }
+
+            //     console.log("NORMAL CLICK -> ADD/REMOVE");
+            //     removePlayer(index);
+            // });
+
+            // // 2. Eventi Desktop (Mouse)
+            // playerCard.addEventListener('mousedown', (e) => startPress(e, player));
+            // playerCard.addEventListener('mouseup', (e) => { cancelPress(e); });
+
+            // // 3. Eventi Mobile (Touch) - PASSIVE: FALSE è fondamentale qui per permettere il preventDefault
+            // playerCard.addEventListener('touchstart', (e) => startPress(e, player), { passive: false });
+            // playerCard.addEventListener('touchend', (e) => { cancelPress(e); removeActivePopup(); }, { passive: false });
+            // playerCard.addEventListener('touchmove', (e) => { cancelPress(e); removeActivePopup(); });
+            
+            //POINTER EVENT STUFF START
             playerCard.addEventListener('click', (e) => {
-
-                console.log("CLICK EVENT", {
-                    player: player.name,
-                    isLongPress,
-                    time: Date.now()
-                });
-
                 if (isLongPress) {
-                    console.log("CLICK BLOCKED BECAUSE LONG PRESS");
-                    console.log("Ignoring click after long press");
-
-                    e.preventDefault();
-                    e.stopPropagation();
-                    // return;
                     setTimeout(removeActivePopup, 50);
                     return;
                 }
-
-                console.log("NORMAL CLICK -> ADD/REMOVE");
                 removePlayer(index);
             });
-
-            // 2. Eventi Desktop (Mouse)
-            playerCard.addEventListener('mousedown', (e) => startPress(e, player));
-            playerCard.addEventListener('mouseup', (e) => { cancelPress(e); });
-
-            // 3. Eventi Mobile (Touch) - PASSIVE: FALSE è fondamentale qui per permettere il preventDefault
-            playerCard.addEventListener('touchstart', (e) => startPress(e, player), { passive: false });
-            playerCard.addEventListener('touchend', (e) => { cancelPress(e); removeActivePopup(); }, { passive: false });
-            playerCard.addEventListener('touchmove', (e) => { cancelPress(e); removeActivePopup(); });
+            playerCard.addEventListener('pointerdown', (e) => startPointerPress(e, player));
+            playerCard.addEventListener('pointerup', endPointerPress);
+            playerCard.addEventListener('pointercancel', endPointerPress);
+            //POINTER EVENT STUFF END
 
             teamContainer.appendChild(playerCard);
         });
@@ -372,37 +402,51 @@ function populatePlayersList() {
                 <p><b>${player.name}</b></p>
                 <p><b>${player.team}</b> &emsp; <b>$${player.cost}</b></p>
             `;
-            // Vecchio codice: playerCard.addEventListener('click', () => addPlayer(player));
-            // Sostituiscilo con questo blocco di eventi:
-            // 1. Gestione Click normale
+            // // Vecchio codice: playerCard.addEventListener('click', () => addPlayer(player));
+            // // Sostituiscilo con questo blocco di eventi:
+            // // 1. Gestione Click normale
+            // playerCard.addEventListener('click', (e) => {
+            //     if (isLongPress) {
+            //         console.log("Ignoring click after long press");
+            //         e.preventDefault();
+            //         e.stopPropagation();
+            //         // isLongPress = false; // Reset
+            //         // return;
+
+            //         setTimeout(removeActivePopup, 50);
+            //         return;
+            //     }
+            //     addPlayer(player);
+            // });
+
+            // // 2. Eventi Desktop (Mouse)
+            // playerCard.addEventListener('mousedown', (e) => startPress(e, player));
+            // playerCard.addEventListener('mouseup', (e) => { cancelPress(e); });
+
+            // // 3. Eventi Mobile (Touch) - PASSIVE: FALSE è fondamentale qui per permettere il preventDefault
+            // playerCard.addEventListener('touchstart', (e) => startPress(e, player), { passive: false });
+            // playerCard.addEventListener('touchend', (e) => { 
+            //     cancelPress(e);
+            //     removeActivePopup();
+            // }, { passive: false });
+            // playerCard.addEventListener('touchmove', (e) => {
+            //     cancelPress(e); 
+            //     removeActivePopup();
+            // });
+
+            //POINTER EVENT STUFF START
             playerCard.addEventListener('click', (e) => {
                 if (isLongPress) {
-                    console.log("Ignoring click after long press");
-                    e.preventDefault();
-                    e.stopPropagation();
-                    // isLongPress = false; // Reset
-                    // return;
-
                     setTimeout(removeActivePopup, 50);
                     return;
                 }
                 addPlayer(player);
             });
+            playerCard.addEventListener('pointerdown', (e) => startPointerPress(e, player));
+            playerCard.addEventListener('pointerup', endPointerPress);
+            playerCard.addEventListener('pointercancel', endPointerPress);
+            //POINTER EVENT STUFF END
 
-            // 2. Eventi Desktop (Mouse)
-            playerCard.addEventListener('mousedown', (e) => startPress(e, player));
-            playerCard.addEventListener('mouseup', (e) => { cancelPress(e); });
-
-            // 3. Eventi Mobile (Touch) - PASSIVE: FALSE è fondamentale qui per permettere il preventDefault
-            playerCard.addEventListener('touchstart', (e) => startPress(e, player), { passive: false });
-            playerCard.addEventListener('touchend', (e) => { 
-                cancelPress(e);
-                removeActivePopup();
-            }, { passive: false });
-            playerCard.addEventListener('touchmove', (e) => {
-                cancelPress(e); 
-                removeActivePopup();
-            });
 
             playersContainer.appendChild(playerCard);
         });
@@ -458,19 +502,19 @@ window.addEventListener('click', (e) => {
     }
     removeActivePopup();
 });
-// Gestisce il touch globale pulendo i residui
-window.addEventListener('touchstart', (e) => {
-    // Se tocchi fuori dalle card, chiudi il popup
-    if (!e.target.closest('.player-card1')) {
-        removeActivePopup();
-    }
-}, { passive: true });
-// NUOVO: Se l'utente si muove (scrolla), cancelliamo IMMEDIATAMENTE il timer in corso
-// Questo evita che lo scroll blocchi il long press successivo!
-window.addEventListener('touchmove', () => {
-    // logMobile("GLOBAL TOUCHMOVE -> killing timer");
-    clearTimeout(pressTimer);
-}, { passive: true });
+// // Gestisce il touch globale pulendo i residui
+// window.addEventListener('touchstart', (e) => {
+//     // Se tocchi fuori dalle card, chiudi il popup
+//     if (!e.target.closest('.player-card1')) {
+//         removeActivePopup();
+//     }
+// }, { passive: true });
+// // NUOVO: Se l'utente si muove (scrolla), cancelliamo IMMEDIATAMENTE il timer in corso
+// // Questo evita che lo scroll blocchi il long press successivo!
+// window.addEventListener('touchmove', () => {
+//     // logMobile("GLOBAL TOUCHMOVE -> killing timer");
+//     clearTimeout(pressTimer);
+// }, { passive: true });
 
 //NEW26
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzwUaTw0COjgjKWbNqwZNf2JpApkq0a-xhB-sHub-3vQgCCuD4zJosdMsMJFyslWWs/exec";
@@ -568,3 +612,98 @@ async function submitTeam() {
 // function logMobile(msg) {
 //     debug.innerHTML += msg + "<br>";
 // }
+/**
+ * ===========================
+ * PLAYER SELECTION + LONG PRESS POPUP SYSTEM
+ * ===========================
+ *
+ * OVERVIEW
+ * --------
+ * This script manages:
+ * 1. Player selection for a 5-player team with credit constraints
+ * 2. Long-press popup showing historical player data
+ * 3. Touch + mouse unified interaction system (mobile + desktop)
+ * 4. Dynamic DOM rendering of both available players and selected team
+ *
+ *
+ * CORE INTERACTION MODEL
+ * ----------------------
+ *
+ * Each player card supports THREE main interactions:
+ *
+ * 1) SHORT CLICK / TAP
+ *    - Desktop: mousedown + click
+ *    - Mobile: touchstart + touchend + click
+ *    - Action:
+ *        → Add player (available list)
+ *        → Remove player (team list)
+ *
+ *
+ * 2) LONG PRESS (≈ 500ms hold)
+ *    - Triggered via setTimeout in startPress()
+ *    - Starts on mousedown / touchstart
+ *    - If not interrupted for 500ms → showPlayerPopup()
+ *    - Used to display historical stats popup
+ *
+ *
+ * 3) CANCEL CONDITIONS (interrupt long press)
+ *    - Any of the following will cancel the pending long press:
+ *        → touchmove (finger movement)
+ *        → touchend (release before timer completes)
+ *        → mouseleave (desktop hover exit) //THIS WAS REMOVED
+ *        → global touchmove (scroll gestures)
+ *
+ *
+ * POPUP BEHAVIOR
+ * --------------
+ * - Created in showPlayerPopup()
+ * - Positioned near touch/mouse coordinates
+ * - Only one popup exists at a time (activePopup)
+ * - pointer-events: none ensures it does not block interactions
+ * - Removed on:
+ *      → clicking/tapping outside cards
+ *      → touch outside cards
+ *      → removing/closing interactions
+ *
+ *
+ * STATE MANAGEMENT
+ * ----------------
+ * - pressTimer: tracks the long-press timeout (500ms)
+ * - isLongPress:
+ *      true  → popup has been triggered
+ *      false → normal click behavior
+ * - activePopup: current DOM popup element
+ *
+ *
+ * IMPORTANT MOBILE BEHAVIOR NOTES (ANDROID / IOS)
+ * ----------------------------------------------
+ * Mobile browsers (especially Android Chrome) introduce:
+ *
+ * - Synthetic mouse events after touch (ghost clicks)
+ * - Unexpected mouseleave events on touch interactions
+ * - Gesture re-evaluation after long press
+ *
+ * Because of this:
+ *
+ * - "mouseleave" is NOT reliable on touch devices
+ * - touchend and click events may both fire after a tap
+ * - timing of cancelPress() is critical to avoid double actions
+ *
+ *
+ * TEAM LIMIT LOGIC
+ * -----------------
+ * - Max 5 players
+ * - Credit system (maxCredits)
+ * - Prevents invalid teams before submission
+ *
+ *
+ * KEY DESIGN GOAL
+ * ---------------
+ * Ensure identical behavior across:
+ * - Desktop mouse interaction
+ * - Mobile touch interaction
+ *
+ * while avoiding duplicate triggers (ghost clicks) and ensuring
+ * long press does not interfere with normal selection.
+ *
+ */
