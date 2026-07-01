@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260701_2238.js';
+import { players, player_history_array } from '../data260701_2247.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -14,21 +14,40 @@ const directregistration = !formlinkused; // se 1, mostra il form di registrazio
 // let isLongPress = false;
 let activePopup = null;
 
-let pressStartTime = 0;
 let pressTimer = null;
 let pressedPlayer = null;
+let pressedIndex = null;
+let pressMode = null; // "add" | "remove"
 let longPressTriggered = false;
+let pressStartTime = 0;
 
-function onPointerDown(e, player) {
-    e.preventDefault(); // IMPORTANT (kills native long-press menu)
+function onPointerDownAdd(e, player) {
+    e.preventDefault();
 
+    pressMode = "add";
     pressedPlayer = player;
+    pressedIndex = null;
+
+    startPressCommon(e);
+}
+
+function onPointerDownRemove(e, index, player) {
+    e.preventDefault();
+
+    pressMode = "remove";
+    pressedPlayer = player;
+    pressedIndex = index;
+
+    startPressCommon(e);
+}
+
+function startPressCommon(e) {
     longPressTriggered = false;
     pressStartTime = Date.now();
 
     pressTimer = setTimeout(() => {
         longPressTriggered = true;
-        showPlayerPopup(player, e);
+        showPlayerPopup(pressedPlayer, e);
     }, 500);
 }
 
@@ -37,16 +56,22 @@ function onPointerUp(e) {
 
     const duration = Date.now() - pressStartTime;
 
-    // LONG PRESS already fired → just cleanup
+    // LONG PRESS → only cleanup
     if (longPressTriggered) {
         removeActivePopup();
         resetPress();
         return;
     }
 
-    // SHORT PRESS → select player
-    if (pressedPlayer && duration < 500) {
-        togglePlayer(pressedPlayer);
+    // SHORT PRESS → action depends on mode
+    if (duration < 500) {
+        if (pressMode === "add") {
+            addPlayer(pressedPlayer);
+        }
+
+        if (pressMode === "remove") {
+            removePlayer(pressedIndex);
+        }
     }
 
     resetPress();
@@ -59,6 +84,8 @@ function onPointerCancel() {
 
 function resetPress() {
     pressedPlayer = null;
+    pressedIndex = null;
+    pressMode = null;
     longPressTriggered = false;
     pressStartTime = 0;
 }
@@ -398,7 +425,11 @@ function renderTeam() {
 
             //     removePlayer(player);
             // });
-            playerCard.addEventListener('pointerdown', (e) => onPointerDown(e, player), { passive: false });
+            playerCard.addEventListener(
+                "pointerdown",
+                (e) => onPointerDownRemove(e, index, player),
+                { passive: false }
+            );
             playerCard.addEventListener('pointerup', onPointerUp);
             playerCard.addEventListener('pointercancel', onPointerCancel);
             //POINTER EVENT STUFF END
@@ -483,7 +514,11 @@ function populatePlayersList() {
 
             //     addPlayer(player);
             // });
-            playerCard.addEventListener('pointerdown', (e) => onPointerDown(e, player), { passive: false });
+            playerCard.addEventListener(
+                "pointerdown",
+                (e) => onPointerDownAdd(e, player),
+                { passive: false }
+            );
             playerCard.addEventListener('pointerup', onPointerUp);
             playerCard.addEventListener('pointercancel', onPointerCancel);
             //POINTER EVENT STUFF END
