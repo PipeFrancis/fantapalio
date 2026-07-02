@@ -8,6 +8,7 @@
 
     /* arancione */
     --main-color3:rgb(255,109,10);
+    --main-color3light:rgb(255, 130, 46);
     /* --main-color3:rgb(000, 112, 255); */
     /* --main-color3:rgb(52, 221, 255); */
 
@@ -1072,4 +1073,7 @@ td { /* tutto serve per sfondo immagine*/
 }
 .orange_text{
     color: var(--main-color3);
+}
+.orange_text_light{
+    color: var(--main-color3light);
 }
