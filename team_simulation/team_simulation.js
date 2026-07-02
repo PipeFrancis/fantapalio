@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260702_0724.js';
+import { players, player_history_array } from '../data260702_0725.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -10,6 +10,7 @@ const maxCredits = 30; // Massimo credito disponibile per il team
 const formlinkused = 0; // se 1, mostra il link al modulo google forms, se 0 non lo mostra e lascia solo il form diretto (e nasconde il messaggio con il link)
 const directregistration = !formlinkused; // se 1, mostra il form di registrazione diretto, se 0 mostra solo il link al modulo google forms (e nasconde il form diretto)
 
+let debug = 0;
 // HISTORY POPUP
 let activePopup = null;
 
@@ -526,8 +527,9 @@ debug.style.zIndex='99999';
 debug.style.fontSize='12px';
 debug.style.maxHeight='150px';
 debug.style.overflow='auto';
-
-document.body.appendChild(debug);
+if (debug) {
+    document.body.appendChild(debug);
+}
 
 function logMobile(msg) {
     debug.innerHTML += msg + "<br>";
