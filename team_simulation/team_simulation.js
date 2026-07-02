@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260702_0725.js';
+import { players, player_history_array } from '../data260702_0728.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -10,7 +10,7 @@ const maxCredits = 30; // Massimo credito disponibile per il team
 const formlinkused = 0; // se 1, mostra il link al modulo google forms, se 0 non lo mostra e lascia solo il form diretto (e nasconde il messaggio con il link)
 const directregistration = !formlinkused; // se 1, mostra il form di registrazione diretto, se 0 mostra solo il link al modulo google forms (e nasconde il form diretto)
 
-let debug = 0;
+let debug_active = 1;
 // HISTORY POPUP
 let activePopup = null;
 
@@ -53,7 +53,7 @@ function startPressCommon(e) {
 
 function onPointerUp(e) {
     clearTimeout(pressTimer);
-    logMobile( ">onPonterUp, longPressTriggered: " + longPressTriggered + ", pressMode: " + pressMode + ", pressedPlayer: " + (pressedPlayer ? pressedPlayer.name : "null") + ", pressedIndex: " + pressedIndex);
+    logMobile( ">> onPointerUp, longPressTriggered: " + longPressTriggered + ", pressMode: " + pressMode + ", pressedPlayer: " + (pressedPlayer ? pressedPlayer.name : "null") + ", pressedIndex: " + pressedIndex);
 
     const duration = Date.now() - pressStartTime;
 
@@ -79,7 +79,7 @@ function onPointerUp(e) {
 }
 
 function onPointerCancel() {
-    logMobile( ">onPointerCancel");
+    logMobile( ">> onPointerCancel");
     removeActivePopup();
     clearTimeout(pressTimer);
     resetPress();
@@ -158,7 +158,7 @@ function showPlayerPopup(player, event) {
 
 // Funzione di utility per distruggere il popup quando si rilascia il dito o si clicca fuori
 function removeActivePopup() {
-    logMobile( ">removeActivePopup");
+    logMobile( ">> removeActivePopup");
 
     if (activePopup) {
         activePopup.remove();
@@ -426,12 +426,12 @@ window.onload = () => {
 window.addEventListener('click', (e) => {
     if (!e.target.closest('.player-card1') &&
         !e.target.closest('.player-history-popup')) {
-        logMobile( ">click target closest not player-card1 or player-history-popup");
+        logMobile( ">> click target closest not player-card1 or player-history-popup");
         removeActivePopup();
     }
 });
 window.addEventListener('scroll', () => {
-    logMobile( ">scroll");
+    logMobile( ">> scroll");
 
     removeActivePopup();
 });
@@ -527,7 +527,7 @@ debug.style.zIndex='99999';
 debug.style.fontSize='12px';
 debug.style.maxHeight='150px';
 debug.style.overflow='auto';
-if (debug) {
+if (debug_active) {
     document.body.appendChild(debug);
 }
 
