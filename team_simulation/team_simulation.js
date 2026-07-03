@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260704_0003.js';
+import { players, player_history_array } from '../data260704_0019.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -435,6 +435,11 @@ window.addEventListener('scroll', () => {
 
     removeActivePopup();
 });
+window.addEventListener("touchmove", () => {
+    logMobile( ">> touchmove");
+
+    removeActivePopup();
+}, { passive: true });
 //pointer change end
 
 //NEW26
