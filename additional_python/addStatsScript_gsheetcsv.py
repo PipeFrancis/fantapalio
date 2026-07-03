@@ -65,32 +65,115 @@ def process_row(row, align_width=40):
     return f"{player}.{game} =      {stats}; //"
 
 
+# ------------------------------------------------------------
+# NEW: Collect TOP rows (coach stats)
+# ------------------------------------------------------------
 
+def is_top_row(row):
+    """Return True only for the useful TOP rows (NORD/SUD/EST/WEST)."""
+    return (
+        len(row) > 10
+        and row[0].strip().upper() == "TOP"
+        and row[3].strip().upper() in ("NORD", "SUD", "EST", "WEST")
+    )
+
+
+def collect_top_stats(row, top_stats):
+    """
+    Save coach values from a TOP row.
+
+    CSV layout:
+    col 3 = Rione name
+    col 5..10 = G1,G2,G3,Semifinale,Td3,Finale
+    """
+    rione = row[3].strip().upper()
+
+    values = []
+    for i in range(5, 11):
+        if i < len(row) and row[i].strip().isdigit():
+            values.append(int(row[i]))
+        else:
+            values.append(0)
+
+    top_stats[rione] = values
+
+
+def write_top_js(jsfile, top_stats, align_width=28):
+    """
+    Append coachTM blocks at the end of the JS file.
+    """
+
+    games = [
+        ("g1", 1),
+        ("g2", 2),
+        ("g3", 3),
+        ("semi", 4),
+        ("td3", 5),
+        ("final", 6)
+    ]
+
+    jsfile.write("\n\n// Coach stats\n\n")
+
+    for game_name, coach_level in games:
+
+        jsfile.write(f"if(coachTM >= {coach_level}){{\n")
+
+        for rione in ("NORD", "SUD", "EST", "WEST"):
+
+            value = top_stats.get(rione, [0]*6)[coach_level-1]
+
+            var_name = f"{rione}26.coach_{game_name}_stats"
+            padding = " " * max(0, align_width - len(var_name))
+
+            jsfile.write(
+                f"    {var_name}{padding}= [0,{value}];\n"
+            )
+
+        jsfile.write("}\n")
+
+
+
+# # new function to add blank lines between games
 # def convert_csv_to_js(input_file, output_file):
 #     with open(input_file, encoding='utf-8-sig', newline='') as csvfile, \
 #          open(output_file, 'w', encoding='utf-8') as jsfile:
 #         reader = csv.reader((line.replace('\u00A0', ' ') for line in csvfile))
+#         prev_game = None
 #         for row in reader:
 #             if is_valid_line(row):
+#                 current_game = normalize_game_label(row[0])
+#                 if current_game != prev_game:
+#                     if prev_game is not None:
+#                         jsfile.write("\n\n")  # Add spacing before a new block
+#                     jsfile.write(f"// {current_game}\n")  # Add comment label
 #                 js_line = process_row(row)
 #                 jsfile.write(js_line + "\n")
+#                 prev_game = current_game
 
-# new function to add blank lines between games
 def convert_csv_to_js(input_file, output_file):
+    # NEW: store coach values while reading
+    top_stats = {}
     with open(input_file, encoding='utf-8-sig', newline='') as csvfile, \
          open(output_file, 'w', encoding='utf-8') as jsfile:
         reader = csv.reader((line.replace('\u00A0', ' ') for line in csvfile))
         prev_game = None
         for row in reader:
+            # NEW: collect TOP rows and skip them
+            if is_top_row(row):
+                collect_top_stats(row, top_stats)
+                continue
+            # Existing player processing
             if is_valid_line(row):
                 current_game = normalize_game_label(row[0])
                 if current_game != prev_game:
                     if prev_game is not None:
-                        jsfile.write("\n\n")  # Add spacing before a new block
-                    jsfile.write(f"// {current_game}\n")  # Add comment label
+                        jsfile.write("\n\n")
+                    jsfile.write(f"// {current_game}\n")
                 js_line = process_row(row)
                 jsfile.write(js_line + "\n")
                 prev_game = current_game
+        # NEW: append coach JS after all player stats
+        write_top_js(jsfile, top_stats)
 
 # Example usage
 convert_csv_to_js("gamestats_players26.csv", "Stats_script_output.js")

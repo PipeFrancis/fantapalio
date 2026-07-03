@@ -532,3 +532,43 @@ ChristianZanet26.stats_final            =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 ThomasDriussi26.stats_final             =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]; //
 AlessandroNarduzzi26.stats_final        =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
 KevinGigante26.stats_final              =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+
+
+// Coach stats
+
+if(coachTM >= 1){
+    NORD26.coach_g1_stats       = [0,12];
+    SUD26.coach_g1_stats        = [0,10];
+    EST26.coach_g1_stats        = [0,3];
+    WEST26.coach_g1_stats       = [0,7];
+}
+if(coachTM >= 2){
+    NORD26.coach_g2_stats       = [0,7];
+    SUD26.coach_g2_stats        = [0,5];
+    EST26.coach_g2_stats        = [0,8];
+    WEST26.coach_g2_stats       = [0,9];
+}
+if(coachTM >= 3){
+    NORD26.coach_g3_stats       = [0,4];
+    SUD26.coach_g3_stats        = [0,3];
+    EST26.coach_g3_stats        = [0,6];
+    WEST26.coach_g3_stats       = [0,9];
+}
+if(coachTM >= 4){
+    NORD26.coach_semi_stats     = [0,0];
+    SUD26.coach_semi_stats      = [0,0];
+    EST26.coach_semi_stats      = [0,0];
+    WEST26.coach_semi_stats     = [0,0];
+}
+if(coachTM >= 5){
+    NORD26.coach_td3_stats      = [0,0];
+    SUD26.coach_td3_stats       = [0,0];
+    EST26.coach_td3_stats       = [0,0];
+    WEST26.coach_td3_stats      = [0,0];
+}
+if(coachTM >= 6){
+    NORD26.coach_final_stats    = [0,0];
+    SUD26.coach_final_stats     = [0,0];
+    EST26.coach_final_stats     = [0,0];
+    WEST26.coach_final_stats    = [0,0];
+}
