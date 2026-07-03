@@ -3093,7 +3093,6 @@ const players25 = [
         if (what_day_is_it < 6 && player.stats_final[REB] != 0) {
             what_day_is_it = 6;
             console.log(what_day_is_it);
-            console.log(player.name, player.stats_final[REB]);
         }
         if (player.stats_final[REB] != 0) {
             if (final_is_in_flag == 0){
