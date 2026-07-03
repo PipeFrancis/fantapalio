@@ -3219,7 +3219,7 @@ for (let i = 0; i < players26.length; i++) {
 console.log(GiacomoSpagnolo25.tot);
 console.log(GiacomoSpagnolo25.final);
 
-
+console.log(DavidGaspardo26);
 
 
 // -----------------------------------------------------------------------------------------------
