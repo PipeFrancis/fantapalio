@@ -806,6 +806,10 @@ td { /* tutto serve per sfondo immagine*/
   padding: 0.2em 0.4em;
   border-radius: 12px;
 }
+#creditsCounter{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
 #your-team{
   margin-top: 5px;
 }
@@ -885,6 +889,7 @@ td { /* tutto serve per sfondo immagine*/
 
 .team_simulation_message{
     font-size: 13px;
+    margin-bottom: 5px;
 }
 
 .gameday-block {
