@@ -555,10 +555,10 @@ if(coachTM >= 3){
     WEST26.coach_g3_stats       = [0,9];
 }
 if(coachTM >= 4){
-    NORD26.coach_semi_stats     = [0,0];
-    SUD26.coach_semi_stats      = [0,0];
-    EST26.coach_semi_stats      = [0,0];
-    WEST26.coach_semi_stats     = [0,0];
+    NORD26.coach_semi_stats     = [0,5];
+    SUD26.coach_semi_stats      = [0,1];
+    EST26.coach_semi_stats      = [0,3];
+    WEST26.coach_semi_stats     = [0,6];
 }
 if(coachTM >= 5){
     NORD26.coach_td3_stats      = [0,0];
