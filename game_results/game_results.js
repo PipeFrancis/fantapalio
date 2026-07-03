@@ -1,6 +1,6 @@
 import {
   game_results_array   
-} from '../data260703_2129.js';
+} from '../data260703_2133.js';
 
 const teamClassMap = {
   'SUD': 'score_sud',
@@ -47,6 +47,7 @@ function createGameScoreDiv(homeTeam, homeScore, awayTeam, awayScore) {
 function renderGameResults() {
 //   const main = document.querySelector('main');
   const results_container = document.getElementById('game_results_container');
+  console.log(game_results_array);
 
   game_results_array.forEach((gameDayData, index) => {
     const gameDayTitle = document.createElement('p');
