@@ -2,7 +2,7 @@ import {
     fantateam_type,
     NORD, SUD, EST, WEST,
     fantateams
-} from '../data260703_2113.js';
+} from '../data260703_2123.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     const teamCardsContainer = document.getElementById('teamCardsContainer');
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="team-card-body">
                             <div class="punteggio-info team_ranking_pdk_tot"><strong>${team[sortKey].toFixed(2)}</strong></div>
                             ${playerInfoHTML}
-                            <div class="player-info"><b>${team.rione.name}</b> [Coach ${team.rione.coach_name}] (<span class="team_ranking_pdk">${team.rione.final_points}</span>)</div>
+                            <div class="player-info"><b>${team.rione.name}</b> [ ${team.rione.coach_name}] (<span class="team_ranking_pdk">${team.rione.final_points}</span>)</div>
                         </div>
                     `;
                 } else {
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="team-card-body">
                             <div class="punteggio-info team_ranking_pdk_tot"><strong>${team[sortKey].toFixed(2)}</strong></div>
                             ${playerInfoHTML}
-                            <div class="player-info"><b>${team.rione.name}</b> [Coach ${team.rione.coach_name}] (<span class="team_ranking_pdk">${team.rione[coach_sortKey]}</span>)</div>
+                            <div class="player-info"><b>${team.rione.name}</b> [ ${team.rione.coach_name}] (<span class="team_ranking_pdk">${team.rione[coach_sortKey]}</span>)</div>
                         </div>
                     `;
                 }
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="team-card-body">
                             <div class="punteggio-info team_ranking_pdk_tot"><strong>${team[sortKey].toFixed(2)}</strong></div>
                             ${playerInfoHTML}
-                            <div class="player-info"><b>${team.rione.name}</b> [Coach ${team.rione.coach_name}] (<span class="team_ranking_pdk">${team.rione[coach_sortKey]}</span>)</div>
+                            <div class="player-info"><b>${team.rione.name}</b> [ ${team.rione.coach_name}] (<span class="team_ranking_pdk">${team.rione[coach_sortKey]}</span>)</div>
                         </div>
                     `;
                 } else {
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="team-card-body">
                             <div class="punteggio-info team_ranking_pdk_tot"><strong>${team[sortKey].toFixed(2)}</strong></div>
                             ${playerInfoHTML}
-                            <div class="player-info"><b>${team.rione.name}</b> [Coach ${team.rione.coach_name}] (<span class="team_ranking_pdk">${team.rione[coach_sortKey]}</span>)</div>
+                            <div class="player-info"><b>${team.rione.name}</b> [ ${team.rione.coach_name}] (<span class="team_ranking_pdk">${team.rione[coach_sortKey]}</span>)</div>
                         </div>
                     `;
                 }
