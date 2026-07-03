@@ -823,6 +823,8 @@ td { /* tutto serve per sfondo immagine*/
 .valid-message{
     color:white;
     background-color: green;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 .registrationlink{
     text-decoration: underline;
