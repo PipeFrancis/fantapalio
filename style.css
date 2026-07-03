@@ -617,7 +617,7 @@ footer {
     gap: 10px; /* Spazio tra le card */
     max-height: 400px; /* Altezza massima del contenitore */
     overflow-y: auto; /* Abilita lo scrolling verticale se necessario */
-    margin-bottom: 20px; /* Margine inferiore per separare il team dal contenitore giocatori */
+    margin-bottom: 5px; /* Margine inferiore per separare il team dal contenitore giocatori */
 }
 
 .player-card1 {
