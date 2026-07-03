@@ -661,7 +661,7 @@ footer {
     flex-wrap: wrap; /* Avvolgi le card se necessario */
     justify-content: center; /* Centra le card orizzontalmente */
     gap: 10px; /* Spazio tra le card */
-    margin-top: 20px; /* Margine superiore */
+    margin-top: 5px; /* Margine superiore */
     /*border: 2px solid black;*/
 }
 
