@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260704_1542.js';
+import { players, player_history_array } from '../data260704_1549.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -24,17 +24,19 @@ let pressStartTime = 0;
 let startX = 0;
 let startY = 0;
 let activePointerId = null;
+let activeInteractionType = null;
 let pointerMoved = false;
+let gestureAborted = false;
+const useTouchEvents = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
 function onPointerDownAdd(e, player) {
     logMobile( ">> onPointerDownAdd" + player.name);
-
 
     pressMode = "add";
     pressedPlayer = player;
     pressedIndex = null;
 
-    startPressCommon(e);
+    startPressCommon(e.currentTarget, e.clientX, e.clientY, e.pointerId, 'pointer');
 }
 
 function onPointerDownRemove(e, index, player) {
@@ -44,58 +46,135 @@ function onPointerDownRemove(e, index, player) {
     pressedPlayer = player;
     pressedIndex = index;
 
-    startPressCommon(e);
+    startPressCommon(e.currentTarget, e.clientX, e.clientY, e.pointerId, 'pointer');
 }
 
-function startPressCommon(e) {
+function onTouchStartAdd(e, player) {
+    if (e.touches.length !== 1) {
+        return;
+    }
+
+    const touch = e.touches[0];
+    logMobile( ">> onTouchStartAdd" + player.name);
+
+    pressMode = "add";
+    pressedPlayer = player;
+    pressedIndex = null;
+
+    startPressCommon(e.currentTarget, touch.clientX, touch.clientY, touch.identifier, 'touch');
+}
+
+function onTouchStartRemove(e, index, player) {
+    if (e.touches.length !== 1) {
+        return;
+    }
+
+    const touch = e.touches[0];
+    logMobile( ">> onTouchStartRemove" + player.name);
+
+    pressMode = "remove";
+    pressedPlayer = player;
+    pressedIndex = index;
+
+    startPressCommon(e.currentTarget, touch.clientX, touch.clientY, touch.identifier, 'touch');
+}
+
+function startPressCommon(target, clientX, clientY, identifier, interactionType) {
     longPressTriggered = false;
     pressStartTime = Date.now();
     pointerMoved = false;
-    logMobile( ">> onPointerDownCommon");
+    gestureAborted = false;
+    activePointerId = identifier;
+    activeInteractionType = interactionType;
+    logMobile( ">> startPressCommon");
 
     // Salva la posizione iniziale del tocco/click
-    startX = e.clientX;
-    startY = e.clientY;
-    activePointerId = e.pointerId;
+    startX = clientX;
+    startY = clientY;
 
-    if (e.currentTarget && typeof e.currentTarget.setPointerCapture === 'function') {
+    if (interactionType === 'pointer' && target && typeof target.setPointerCapture === 'function') {
         try {
-            e.currentTarget.setPointerCapture(e.pointerId);
+            target.setPointerCapture(identifier);
         } catch (err) {
             logMobile(">> pointer capture failed: " + err.message);
         }
     }
 
     pressTimer = setTimeout(() => {
+        if (gestureAborted || !pressedPlayer) {
+            return;
+        }
         longPressTriggered = true;
-        showPlayerPopup(pressedPlayer, e);
+        showPlayerPopup(pressedPlayer, { clientX: startX, clientY: startY });
     }, 500);
 }
 
 function onPointerMove(e) {
-    if (activePointerId === null || e.pointerId !== activePointerId) {
+    if (activeInteractionType !== 'pointer' || activePointerId !== e.pointerId) {
         return;
     }
     logMobile(">> OnpointerMove");
 
-    const diffX = e.clientX - startX;
-    const diffY = e.clientY - startY;
+    handleMove(e.clientX, e.clientY, e.currentTarget, e.pointerId, 'pointer');
+}
+
+function onTouchMove(e) {
+    if (e.touches.length !== 1) {
+        return;
+    }
+
+    const touch = e.touches[0];
+    if (activeInteractionType !== 'touch' || activePointerId !== touch.identifier) {
+        return;
+    }
+
+    logMobile(">> OnTouchMove");
+    handleMove(touch.clientX, touch.clientY, e.currentTarget, touch.identifier, 'touch');
+}
+
+function handleMove(clientX, clientY, target, identifier, interactionType) {
+    const diffX = clientX - startX;
+    const diffY = clientY - startY;
     const distance = Math.sqrt(diffX * diffX + diffY * diffY);
 
     if (distance >= 10 && !pointerMoved) {
         pointerMoved = true;
+        gestureAborted = true;
         logMobile(">> pointer moved enough, cancelling pending tap/long press");
-        cancelPendingGesture(e);
+        cancelPendingGesture(target, identifier, interactionType);
     }
 }
 
 function onPointerUp(e) {
-    if (activePointerId !== null && e.pointerId !== activePointerId) {
+    if (activeInteractionType !== 'pointer' || activePointerId !== e.pointerId) {
         return;
     }
 
+    finalizeGesture(e.clientX, e.clientY, e.currentTarget, e.pointerId, 'pointer');
+}
+
+function onTouchEnd(e) {
+    if (e.changedTouches.length !== 1) {
+        return;
+    }
+
+    const touch = e.changedTouches[0];
+    if (activeInteractionType !== 'touch' || activePointerId !== touch.identifier) {
+        return;
+    }
+
+    finalizeGesture(touch.clientX, touch.clientY, e.currentTarget, touch.identifier, 'touch');
+}
+
+function finalizeGesture(clientX, clientY, target, identifier, interactionType) {
     clearTimeout(pressTimer);
-    logMobile( ">> onPointerUp, longPressTriggered: " + longPressTriggered + ", pressMode: " + pressMode + ", pressedPlayer: " + (pressedPlayer ? pressedPlayer.name : "null") + ", pressedIndex: " + pressedIndex);
+    logMobile( ">> finalizeGesture, longPressTriggered: " + longPressTriggered + ", pressMode: " + pressMode + ", pressedPlayer: " + (pressedPlayer ? pressedPlayer.name : "null") + ", pressedIndex: " + pressedIndex);
+
+    if (gestureAborted) {
+        removeActivePopup();
+        resetPress();
+        return;
+    }
 
     const duration = Date.now() - pressStartTime;
 
@@ -107,8 +186,8 @@ function onPointerUp(e) {
     }
 
     // Calcola lo spostamento totale
-    const diffX = e.clientX - startX;
-    const diffY = e.clientY - startY;
+    const diffX = clientX - startX;
+    const diffY = clientY - startY;
     const distance = Math.sqrt(diffX * diffX + diffY * diffY);
 
     // SHORT PRESS → eseguito solo se il dito NON si è spostato significativamente (soglia di 10px)
@@ -124,33 +203,50 @@ function onPointerUp(e) {
         logMobile(">> Tocco annullato: rilevato movimento/scroll di " + Math.round(distance) + "px");
     }
 
-    releasePointerCaptureIfNeeded(e);
+    if (interactionType === 'pointer') {
+        releasePointerCaptureIfNeeded(target, identifier);
+    }
     resetPress();
 }
 
 function onPointerCancel(e) {
-    if (activePointerId !== null && e.pointerId !== activePointerId) {
+    if (activeInteractionType !== 'pointer' || activePointerId !== e.pointerId) {
         return;
     }
 
-    logMobile( ">> onPointerCancel, no actions");
-    // logMobile( ">> onPointerCancel, clearing pending gesture");
-    // cancelPendingGesture(e);
+    gestureAborted = true;
+    logMobile( ">> onPointerCancel, clearing pending gesture");
+    cancelPendingGesture(e.currentTarget, e.pointerId, 'pointer');
 }
 
-function cancelPendingGesture(e) {
+function onTouchCancel(e) {
+    if (e.changedTouches.length !== 1) {
+        return;
+    }
+
+    const touch = e.changedTouches[0];
+    if (activeInteractionType !== 'touch' || activePointerId !== touch.identifier) {
+        return;
+    }
+
+    gestureAborted = true;
+    logMobile( ">> onTouchCancel, clearing pending gesture");
+    cancelPendingGesture(e.currentTarget, touch.identifier, 'touch');
+}
+
+function cancelPendingGesture(target, identifier, interactionType) {
     clearTimeout(pressTimer);
     removeActivePopup();
-    releasePointerCaptureIfNeeded(e);
+    if (interactionType === 'pointer') {
+        releasePointerCaptureIfNeeded(target, identifier);
+    }
     resetPress();
 }
 
-function releasePointerCaptureIfNeeded(e) {
-    logMobile( ">> releasePointerCaptureIfNeeded");
-
-    if (e.currentTarget && typeof e.currentTarget.releasePointerCapture === 'function') {
+function releasePointerCaptureIfNeeded(target, identifier) {
+    if (target && typeof target.releasePointerCapture === 'function') {
         try {
-            e.currentTarget.releasePointerCapture(e.pointerId);
+            target.releasePointerCapture(identifier);
         } catch (err) {
             logMobile(">> release pointer capture failed: " + err.message);
         }
@@ -164,7 +260,9 @@ function resetPress() {
     longPressTriggered = false;
     pressStartTime = 0;
     activePointerId = null;
+    activeInteractionType = null;
     pointerMoved = false;
+    gestureAborted = false;
 }
 
 
@@ -395,14 +493,25 @@ function renderTeam() {
                
                 <p><b>${player.team}</b> &emsp; <b>$${player.cost}</b></p>
             `;
-            playerCard.addEventListener(
-                "pointerdown",
-                (e) => onPointerDownRemove(e, index, player),
-                { passive: false }
-            );
-            playerCard.addEventListener('pointermove', onPointerMove);
-            playerCard.addEventListener('pointerup', onPointerUp);
-            playerCard.addEventListener('pointercancel', onPointerCancel);
+            if (useTouchEvents) {
+                playerCard.addEventListener(
+                    "touchstart",
+                    (e) => onTouchStartRemove(e, index, player),
+                    { passive: true }
+                );
+                playerCard.addEventListener('touchmove', onTouchMove, { passive: true });
+                playerCard.addEventListener('touchend', onTouchEnd, { passive: true });
+                playerCard.addEventListener('touchcancel', onTouchCancel, { passive: true });
+            } else {
+                playerCard.addEventListener(
+                    "pointerdown",
+                    (e) => onPointerDownRemove(e, index, player),
+                    { passive: false }
+                );
+                playerCard.addEventListener('pointermove', onPointerMove);
+                playerCard.addEventListener('pointerup', onPointerUp);
+                playerCard.addEventListener('pointercancel', onPointerCancel);
+            }
             playerCard.addEventListener("contextmenu", (e) => {e.preventDefault();}); // for not having context menu on chrome mobile emulation on PC
             //POINTER EVENT STUFF END
 
@@ -441,14 +550,25 @@ function populatePlayersList() {
                 <p><b>${player.name}</b></p>
                 <p><b>${player.team}</b> &emsp; <b>$${player.cost}</b></p>
             `;
-            playerCard.addEventListener(
-                "pointerdown",
-                (e) => onPointerDownAdd(e, player),
-                { passive: false }
-            );
-            playerCard.addEventListener('pointermove', onPointerMove);
-            playerCard.addEventListener('pointerup', onPointerUp);
-            playerCard.addEventListener('pointercancel', onPointerCancel);
+            if (useTouchEvents) {
+                playerCard.addEventListener(
+                    "touchstart",
+                    (e) => onTouchStartAdd(e, player),
+                    { passive: true }
+                );
+                playerCard.addEventListener('touchmove', onTouchMove, { passive: true });
+                playerCard.addEventListener('touchend', onTouchEnd, { passive: true });
+                playerCard.addEventListener('touchcancel', onTouchCancel, { passive: true });
+            } else {
+                playerCard.addEventListener(
+                    "pointerdown",
+                    (e) => onPointerDownAdd(e, player),
+                    { passive: false }
+                );
+                playerCard.addEventListener('pointermove', onPointerMove);
+                playerCard.addEventListener('pointerup', onPointerUp);
+                playerCard.addEventListener('pointercancel', onPointerCancel);
+            }
             playerCard.addEventListener("contextmenu", (e) => {e.preventDefault();}); // for not having context menu on chrome mobile emulation on PC
             //POINTER EVENT STUFF END
 
