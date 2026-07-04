@@ -258,7 +258,7 @@ function renderTeam() {
         if (selectedPlayers.length === 5) {
             if (!validMessage) {
                 const newValidMessage = document.createElement('p');
-                newValidMessage.textContent = 'VALIDA, continua sotto';
+                newValidMessage.textContent = 'VALIDA';
                 newValidMessage.classList.add('highlighted-text');
                 newValidMessage.classList.add('valid-message');
                 // newValidMessage.style.color = 'green';
