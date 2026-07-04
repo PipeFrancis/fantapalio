@@ -643,7 +643,7 @@ footer {
 .players-container::-webkit-scrollbar-thumb {
     background: var(--main-color3) !important; /* Un bell'arancione acceso (o usa il colore del tuo tema) */
     border-radius: 6px;
-    border: 2px solid #white !important;
+    border: 2px solid white !important;
 }
 /* Per Firefox (giusto per sicurezza) */
 .players-container {
