@@ -618,6 +618,8 @@ footer {
     max-height: 400px; /* Altezza massima del contenitore */
     overflow-y: auto; /* Abilita lo scrolling verticale se necessario */
     margin-bottom: 5px; /* Margine inferiore per separare il team dal contenitore giocatori */
+    gap: 5px; /* Spazio tra le card */
+
 }
 
 .player-card1 {
@@ -638,7 +640,6 @@ footer {
 @media (max-width: 768px) {
     .players-container {
         max-height: 33vh; /* 30% vieport height. Altezza massima del contenitore in mobile (stretta così si vede squadra che viene creata sotto */
-        gap: 4px; /* Spazio tra le card */
     }
     .player-card1 {
         flex: 1 0 calc(50% - 10px); /* Due card per riga su schermi più piccoli */
