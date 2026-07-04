@@ -624,9 +624,12 @@ footer {
     
     box-sizing: border-box;
 
-    /* Aggiungiamo un po' di spazio a destra per non far appiccicare le card alla barra */
-    padding-right: 4px;
-    border-right: 12px solid white !important;
+/* IL TRUCCO: Disegniamo una striscia bianca verticale di 12px sul bordo destro.
+       Essendo parte del background del DIV, il browser mobile la renderizza sempre, 
+       creando un binario bianco continuo perfetto da cima a fondo! */
+    background-image: linear-gradient(to left, #ffffff 12px, transparent 12px);
+    background-position: right top;
+    background-repeat: repeat-y;;
 }
 
 /* --- MODIFICHE MIRATE PER RENDERE LA BARRA ENORME E VISIBILE SU MOBILE --- */
