@@ -622,9 +622,11 @@ footer {
     touch-action: pan-y; /* Consente lo scroll verticale sul touch */
     -webkit-overflow-scrolling: touch; /* Scroll più fluido su iOS/Android */
     
-    /* Aggiungiamo un po' di spazio a destra per non far appiccicare le card alla barra */
-    padding-right: 12px; 
     box-sizing: border-box;
+
+    /* Aggiungiamo un po' di spazio a destra per non far appiccicare le card alla barra */
+    padding-right: 4px;
+    border-right: 12px solid #white !important;
 }
 
 /* --- MODIFICHE MIRATE PER RENDERE LA BARRA ENORME E VISIBILE SU MOBILE --- */
@@ -635,16 +637,13 @@ footer {
 }
 /* Il "binario" su cui scorre la barra */
 .players-container::-webkit-scrollbar-track {
-    background: white !important; /* Colore scuro di sfondo del binario (cambialo se hai uno sfondo diverso) */
-    border-radius: 6px;
-    box-shadow: inset 0 0 0px 9999px #ffffff !important;
-
+    background: transparent !important;
 }
 /* La barra vera e propria che l'utente trascina/vede */
 .players-container::-webkit-scrollbar-thumb {
     background: var(--main-color3) !important; /* Un bell'arancione acceso (o usa il colore del tuo tema) */
     border-radius: 6px;
-    border: 2px solid #ffffff !important;
+    border: 2px solid #white !important;
 }
 /* Per Firefox (giusto per sicurezza) */
 .players-container {
