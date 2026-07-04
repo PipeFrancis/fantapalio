@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260704_1640.js';
+import { players, player_history_array } from '../data260704_1641.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -137,10 +137,10 @@ function handleMove(clientX, clientY, target, identifier, interactionType) {
     const diffY = clientY - startY;
     const distance = Math.sqrt(diffX * diffX + diffY * diffY);
 
-    if (distance >= 30 && !pointerMoved) {
+    if (distance >= 100 && !pointerMoved) {
         pointerMoved = true;
         gestureAborted = true;
-        logMobile(">> pointer moved enough (over30px), cancelling pending tap/long press");
+        logMobile(">> pointer moved enough (over100px), cancelling pending tap/long press");
         cancelPendingGesture(target, identifier, interactionType);
     }
 }
