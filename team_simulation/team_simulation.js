@@ -21,6 +21,9 @@ let pressMode = null; // "add" | "remove"
 let longPressTriggered = false;
 let pressStartTime = 0;
 
+let startX = 0;
+let startY = 0;
+
 function onPointerDownAdd(e, player) {
     e.preventDefault();
 
@@ -45,6 +48,10 @@ function startPressCommon(e) {
     longPressTriggered = false;
     pressStartTime = Date.now();
 
+    // Salva la posizione iniziale del tocco/click
+    startX = e.clientX;
+    startY = e.clientY;
+
     pressTimer = setTimeout(() => {
         longPressTriggered = true;
         showPlayerPopup(pressedPlayer, e);
@@ -64,8 +71,13 @@ function onPointerUp(e) {
         return;
     }
 
-    // SHORT PRESS → action depends on mode
-    if (duration < 500) {
+    // Calcola lo spostamento totale
+    const diffX = e.clientX - startX;
+    const diffY = e.clientY - startY;
+    const distance = Math.sqrt(diffX * diffX + diffY * diffY);
+
+    // SHORT PRESS → eseguito solo se il dito NON si è spostato significativamente (soglia di 10px)
+    if (duration < 500 && distance < 10) {
         if (pressMode === "add") {
             addPlayer(pressedPlayer);
         }
@@ -73,6 +85,8 @@ function onPointerUp(e) {
         if (pressMode === "remove") {
             removePlayer(pressedIndex);
         }
+    } else if (distance >= 10) {
+        logMobile(">> Tocco annullato: rilevato movimento/scroll di " + Math.round(distance) + "px");
     }
 
     resetPress();
