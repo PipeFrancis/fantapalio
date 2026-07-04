@@ -612,25 +612,32 @@ footer {
 
 
 .players-container {
-    display: flex; /* Usa flexbox per disporre i giocatori su righe */
-    flex-wrap: wrap; /* Avvolgi le card se non ci sono abbastanza spazi orizzontali */
-    justify-content: center; /* Centra le card orizzontalmente */
-    max-height: 400px; /* Altezza massima del contenitore */
-    overflow-y: scroll; /* FORZA la presenza dello scrollbar invece di 'auto' */
-    margin-bottom: 5px; /* Margine inferiore per separare il team dal contenitore giocatori */
-    gap: 5px; /* Spazio tra le card */
-    touch-action: pan-y; /* Consente lo scroll verticale sul touch */
-    -webkit-overflow-scrolling: touch; /* Scroll più fluido su iOS/Android */
-    
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    max-height: 400px; 
+    overflow-y: scroll; 
+    margin-bottom: 5px; 
+    gap: 5px; 
+    touch-action: pan-y; 
+    -webkit-overflow-scrolling: touch; 
     box-sizing: border-box;
 
-/* IL TRUCCO: Disegniamo una striscia bianca verticale di 12px sul bordo destro.
-       Essendo parte del background del DIV, il browser mobile la renderizza sempre, 
-       creando un binario bianco continuo perfetto da cima a fondo! */
-    padding-right: 16px;
+    /* 1. TOGLIAMO il padding right problematico */
+    padding-right: 0px; 
+
+    /* 2. IL NUOVO TRUCCO: Un bordo trasparente crea una gabbia che respinge le card a sinistra. 
+       La barra di scorrimento mobile si posizionerà ESATTAMENTE sopra questo spazio di 16px. */
+    border-right: 16px solid transparent;
+
+    /* 3. Spostiamo la striscia bianca di 12px per farla combaciare al millimetro con la barra */
     background-image: linear-gradient(to left, #ffffff 12px, transparent 12px);
     background-position: right top;
-    background-repeat: repeat-y;;
+    background-repeat: repeat-y;
+    
+    /* Forza il background a estendersi anche sotto la zona del bordo (border-box) */
+    background-origin: border-box; 
+    background-clip: border-box; 
 }
 
 /* --- MODIFICHE MIRATE PER RENDERE LA BARRA ENORME E VISIBILE SU MOBILE --- */
