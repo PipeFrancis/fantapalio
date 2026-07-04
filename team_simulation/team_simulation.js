@@ -10,7 +10,7 @@ const maxCredits = 30; // Massimo credito disponibile per il team
 const formlinkused = 0; // se 1, mostra il link al modulo google forms, se 0 non lo mostra e lascia solo il form diretto (e nasconde il messaggio con il link)
 const directregistration = !formlinkused; // se 1, mostra il form di registrazione diretto, se 0 mostra solo il link al modulo google forms (e nasconde il form diretto)
 
-let debug_active = 0;
+let debug_active = 1;
 // HISTORY POPUP
 let activePopup = null;
 
