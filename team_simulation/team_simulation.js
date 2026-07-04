@@ -449,13 +449,13 @@ window.addEventListener('scroll', () => {
 
     removeActivePopup();
 });
-// window.addEventListener("touchmove", () => {
-//     // if(ActivePopup) {
-//         logMobile( ">> touchmove");
-//     // }
+window.addEventListener("touchmove", () => {
+    // if(ActivePopup) {
+        logMobile( ">> touchmove");
+    // }
 
-//     removeActivePopup();
-// }, { passive: true });
+    removeActivePopup();
+}, { passive: true });
 //pointer change end
 
 //NEW26
