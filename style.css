@@ -807,9 +807,6 @@ td { /* tutto serve per sfondo immagine*/
   padding: 0.2em 0.4em;
   border-radius: 12px;
 }
-.smaller-text{
-    font-size: 0.7rem;
-}
 #creditsCounter{
     margin-bottom: 5px;
     margin-top: 5px;
@@ -997,6 +994,9 @@ td { /* tutto serve per sfondo immagine*/
     font-size: 0.9rem;
     font-weight: bold;
     text-align: left;
+}
+.smaller-text{
+    font-size: 0.7rem;
 }
 
 /* Ensure inputs and selects take up the full width */
