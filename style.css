@@ -623,7 +623,7 @@ footer {
     -webkit-overflow-scrolling: touch; 
 
     box-sizing: content-box !important;
-    padding-right: 5px; /* Lasciamo 5px di spazio vuoto a destra */
+    padding-right: 8px; /* Lasciamo 5px di spazio vuoto a destra */
 
 }
 
