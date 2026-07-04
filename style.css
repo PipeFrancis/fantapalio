@@ -626,7 +626,7 @@ footer {
 
     /* Aggiungiamo un po' di spazio a destra per non far appiccicare le card alla barra */
     padding-right: 4px;
-    border-right: 12px solid #white !important;
+    border-right: 12px solid white !important;
 }
 
 /* --- MODIFICHE MIRATE PER RENDERE LA BARRA ENORME E VISIBILE SU MOBILE --- */
