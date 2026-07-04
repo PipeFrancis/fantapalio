@@ -635,19 +635,19 @@ footer {
 }
 /* Il "binario" su cui scorre la barra */
 .players-container::-webkit-scrollbar-track {
-    background: #1e1e1e !important; /* Colore scuro di sfondo del binario (cambialo se hai uno sfondo diverso) */
+    background: white !important; /* Colore scuro di sfondo del binario (cambialo se hai uno sfondo diverso) */
     border-radius: 6px;
 }
 /* La barra vera e propria che l'utente trascina/vede */
 .players-container::-webkit-scrollbar-thumb {
-    background: #ff7900 !important; /* Un bell'arancione acceso (o usa il colore del tuo tema) */
+    background: var(--main-color3) !important; /* Un bell'arancione acceso (o usa il colore del tuo tema) */
     border-radius: 6px;
     border: 2px solid #1e1e1e; /* Crea un piccolo stacco visivo all'interno del binario */
 }
 /* Per Firefox (giusto per sicurezza) */
 .players-container {
     scrollbar-width: auto; /* Evita il 'thin' così rimane bella cicciotta */
-    scrollbar-color: #ff7900 #1e1e1e;
+    scrollbar-color: var(--main-color3) white;
 }
 
 .player-card1 {
