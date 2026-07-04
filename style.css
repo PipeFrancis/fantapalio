@@ -627,6 +627,7 @@ footer {
 /* IL TRUCCO: Disegniamo una striscia bianca verticale di 12px sul bordo destro.
        Essendo parte del background del DIV, il browser mobile la renderizza sempre, 
        creando un binario bianco continuo perfetto da cima a fondo! */
+    padding-right: 16px;
     background-image: linear-gradient(to left, #ffffff 12px, transparent 12px);
     background-position: right top;
     background-repeat: repeat-y;;
