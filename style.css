@@ -621,34 +621,18 @@ footer {
     gap: 5px; 
     touch-action: pan-y; 
     -webkit-overflow-scrolling: touch; 
-    box-sizing: border-box;
 
-    /* 1. TOGLIAMO il padding right problematico */
-    padding-right: 0px; 
-
-    /* 2. IL NUOVO TRUCCO: Un bordo trasparente crea una gabbia che respinge le card a sinistra. 
-       La barra di scorrimento mobile si posizionerà ESATTAMENTE sopra questo spazio di 16px. */
-    border-right: 16px solid transparent;
-
-    /* 3. Spostiamo la striscia bianca di 12px per farla combaciare al millimetro con la barra */
-    background-image: linear-gradient(to left, #ffffff 12px, transparent 12px);
-    background-position: right top;
-    background-repeat: repeat-y;
-    
-    /* Forza il background a estendersi anche sotto la zona del bordo (border-box) */
-    background-origin: border-box; 
-    background-clip: border-box; 
 }
 
 /* --- MODIFICHE MIRATE PER RENDERE LA BARRA ENORME E VISIBILE SU MOBILE --- */
 /* Selettore per Chrome (Desktop e Android) + Safari (iOS) */
 .players-container::-webkit-scrollbar {
-    width: 12px !important; /* Spessore maggiorato per renderla visibile su Android/iOS */
+    width: 20px !important; /* Spessore maggiorato per renderla visibile su Android/iOS */
     display: block !important;
 }
-/* Il "binario" su cui scorre la barra */
+/* Il "binario" su cui scorre la barra, EDIT: è nascosto dalla foto sfondo :( */
 .players-container::-webkit-scrollbar-track {
-    background: transparent !important;
+    background: white !important;
 }
 /* La barra vera e propria che l'utente trascina/vede */
 .players-container::-webkit-scrollbar-thumb {
