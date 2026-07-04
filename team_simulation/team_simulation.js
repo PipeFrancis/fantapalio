@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260704_0921.js';
+import { players, player_history_array } from '../data260704_0941.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -10,35 +10,40 @@ const maxCredits = 30; // Massimo credito disponibile per il team
 const formlinkused = 0; // se 1, mostra il link al modulo google forms, se 0 non lo mostra e lascia solo il form diretto (e nasconde il messaggio con il link)
 const directregistration = !formlinkused; // se 1, mostra il form di registrazione diretto, se 0 mostra solo il link al modulo google forms (e nasconde il form diretto)
 
-let debug_active = 1;
+let debug_active = 0;
 // HISTORY POPUP
-let activePopup = null;
-
 let pressTimer = null;
+
 let pressedPlayer = null;
 let pressedIndex = null;
-let pressMode = null; // "add" | "remove"
-let longPressTriggered = false;
-let pressStartTime = 0;
+let pressMode = null;
+
+let startX = 0;
+let startY = 0;
+
+let gestureCancelled = false;
+let popupVisible = false;
+
+const MOVE_THRESHOLD = 8;
 
 function onPointerDownAdd(e, player) {
     e.preventDefault();
 
-    pressMode = "add";
     pressedPlayer = player;
     pressedIndex = null;
+    pressMode = "add";
 
-    startPressCommon(e);
+    startPress(e);
 }
 
 function onPointerDownRemove(e, index, player) {
     e.preventDefault();
 
-    pressMode = "remove";
     pressedPlayer = player;
     pressedIndex = index;
+    pressMode = "remove";
 
-    startPressCommon(e);
+    startPress(e);
 }
 
 function startPressCommon(e) {
@@ -51,46 +56,92 @@ function startPressCommon(e) {
     }, 500);
 }
 
-function onPointerUp(e) {
+function startPress(e) {
+
+    gestureCancelled = false;
+    popupVisible = false;
+
+    startX = e.clientX;
+    startY = e.clientY;
+
     clearTimeout(pressTimer);
-    logMobile( ">> onPointerUp, longPressTriggered: " + longPressTriggered + ", pressMode: " + pressMode + ", pressedPlayer: " + (pressedPlayer ? pressedPlayer.name : "null") + ", pressedIndex: " + pressedIndex);
 
-    const duration = Date.now() - pressStartTime;
+    pressTimer = setTimeout(() => {
 
-    // LONG PRESS → only cleanup
-    if (longPressTriggered) {
-        removeActivePopup();
+        if (gestureCancelled)
+            return;
+
+        popupVisible = true;
+        showPlayerPopup(pressedPlayer, e);
+
+    }, 500);
+}
+
+function onPointerMove(e) {
+
+    if (gestureCancelled)
+        return;
+
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+
+    if (Math.hypot(dx, dy) < MOVE_THRESHOLD)
+        return;
+    
+    logMobile("movement -> cancel gesture");
+
+    gestureCancelled = true;
+
+    clearTimeout(pressTimer);
+
+    removeActivePopup();
+}
+
+function onPointerUp() {
+
+    clearTimeout(pressTimer);
+
+    if (gestureCancelled) {
         resetPress();
         return;
     }
 
-    // SHORT PRESS → action depends on mode
-    if (duration < 500) {
-        if (pressMode === "add") {
-            addPlayer(pressedPlayer);
-        }
+    if (popupVisible) {
 
-        if (pressMode === "remove") {
-            removePlayer(pressedIndex);
-        }
+        removeActivePopup();
+        resetPress();
+        return;
+
     }
+
+    if (pressMode === "add")
+        addPlayer(pressedPlayer);
+
+    else if (pressMode === "remove")
+        removePlayer(pressedIndex);
 
     resetPress();
 }
 
 function onPointerCancel() {
-    logMobile( ">> onPointerCancel");
-    removeActivePopup();
+
     clearTimeout(pressTimer);
+
+    removeActivePopup();
+
     resetPress();
 }
 
 function resetPress() {
+
     pressedPlayer = null;
     pressedIndex = null;
     pressMode = null;
-    longPressTriggered = false;
-    pressStartTime = 0;
+
+    gestureCancelled = false;
+    popupVisible = false;
+
+    clearTimeout(pressTimer);
 }
 
 
@@ -321,15 +372,15 @@ function renderTeam() {
                
                 <p><b>${player.team}</b> &emsp; <b>$${player.cost}</b></p>
             `;
+
             playerCard.addEventListener(
                 "pointerdown",
-                (e) => onPointerDownRemove(e, index, player),
+                (e) => onPointerDownRemove(e, player),
                 { passive: false }
             );
-            playerCard.addEventListener('pointerup', onPointerUp);
-            playerCard.addEventListener('pointercancel', onPointerCancel);
-            playerCard.addEventListener("contextmenu", (e) => {e.preventDefault();}); // for not having context menu on chrome mobile emulation on PC
-            //POINTER EVENT STUFF END
+            playerCard.addEventListener("pointermove", onPointerMove);
+            playerCard.addEventListener("pointerup", onPointerUp);
+            playerCard.addEventListener("pointercancel", onPointerCancel);
 
             teamContainer.appendChild(playerCard);
         });
@@ -371,9 +422,9 @@ function populatePlayersList() {
                 (e) => onPointerDownAdd(e, player),
                 { passive: false }
             );
-            playerCard.addEventListener('pointerup', onPointerUp);
-            playerCard.addEventListener('pointercancel', onPointerCancel);
-            playerCard.addEventListener("contextmenu", (e) => {e.preventDefault();}); // for not having context menu on chrome mobile emulation on PC
+            playerCard.addEventListener("pointermove", onPointerMove);
+            playerCard.addEventListener("pointerup", onPointerUp);
+            playerCard.addEventListener("pointercancel", onPointerCancel);
             //POINTER EVENT STUFF END
 
 
@@ -430,18 +481,18 @@ window.addEventListener('click', (e) => {
         removeActivePopup();
     }
 });
-window.addEventListener('scroll', () => {
-    logMobile( ">> scroll");
+// window.addEventListener('scroll', () => {
+//     logMobile( ">> scroll");
 
-    removeActivePopup();
-});
-window.addEventListener("touchmove", () => {
-    // if(ActivePopup) {
-        logMobile( ">> touchmove");
-    // }
+//     removeActivePopup();
+// });
+// window.addEventListener("touchmove", () => {
+//     // if(ActivePopup) {
+//         logMobile( ">> touchmove");
+//     // }
 
-    removeActivePopup();
-}, { passive: true });
+//     removeActivePopup();
+// }, { passive: true });
 //pointer change end
 
 //NEW26
