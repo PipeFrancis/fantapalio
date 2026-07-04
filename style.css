@@ -620,7 +620,7 @@ footer {
     overflow-y: auto; /* Abilita lo scrolling verticale se necessario */
     margin-bottom: 5px; /* Margine inferiore per separare il team dal contenitore giocatori */
     gap: 5px; /* Spazio tra le card */
-    touch-action: pan-y; /* Consente lo scroll verticale sul touch */
+    touch-action: none; /* Consente lo scroll verticale sul touch */
     -webkit-overflow-scrolling: touch; /* Scroll più fluido su iOS/Android */
 }
 
@@ -636,7 +636,7 @@ footer {
     user-select: none;          /* Standard */
     -webkit-touch-callout: none; /* Disabilita il menu contestuale su iOS (copia/cerca) */
     /* Consente lo scroll verticale del contenitore ma lascia gestire i tap alle card */
-    touch-action: pan-y;
+    touch-action: none;
 }
 @media (max-width: 768px) {
     .players-container {
