@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260704_1508.js';
+import { players, player_history_array } from '../data260704_1517.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -23,6 +23,7 @@ let pressStartTime = 0;
 
 let startX = 0;
 let startY = 0;
+let activePointerId = null;
 
 function onPointerDownAdd(e, player) {
     e.preventDefault();
@@ -55,6 +56,15 @@ function startPressCommon(e) {
     // Salva la posizione iniziale del tocco/click
     startX = e.clientX;
     startY = e.clientY;
+    activePointerId = e.pointerId;
+
+    if (e.currentTarget && typeof e.currentTarget.setPointerCapture === 'function') {
+        try {
+            e.currentTarget.setPointerCapture(e.pointerId);
+        } catch (err) {
+            logMobile(">> pointer capture failed: " + err.message);
+        }
+    }
 
     pressTimer = setTimeout(() => {
         longPressTriggered = true;
@@ -63,6 +73,10 @@ function startPressCommon(e) {
 }
 
 function onPointerUp(e) {
+    if (activePointerId !== null && e.pointerId !== activePointerId) {
+        return;
+    }
+
     clearTimeout(pressTimer);
     logMobile( ">> onPointerUp, longPressTriggered: " + longPressTriggered + ", pressMode: " + pressMode + ", pressedPlayer: " + (pressedPlayer ? pressedPlayer.name : "null") + ", pressedIndex: " + pressedIndex);
 
@@ -93,14 +107,29 @@ function onPointerUp(e) {
         logMobile(">> Tocco annullato: rilevato movimento/scroll di " + Math.round(distance) + "px");
     }
 
+    releasePointerCaptureIfNeeded(e);
     resetPress();
 }
 
-function onPointerCancel() {
+function onPointerCancel(e) {
+    if (activePointerId !== null && e.pointerId !== activePointerId) {
+        return;
+    }
+
     logMobile( ">> onPointerCancel, no action");
-    // removeActivePopup();
-    // clearTimeout(pressTimer);
-    // resetPress();
+    clearTimeout(pressTimer);
+    releasePointerCaptureIfNeeded(e);
+    resetPress();
+}
+
+function releasePointerCaptureIfNeeded(e) {
+    if (e.currentTarget && typeof e.currentTarget.releasePointerCapture === 'function') {
+        try {
+            e.currentTarget.releasePointerCapture(e.pointerId);
+        } catch (err) {
+            logMobile(">> release pointer capture failed: " + err.message);
+        }
+    }
 }
 
 function resetPress() {
@@ -109,6 +138,7 @@ function resetPress() {
     pressMode = null;
     longPressTriggered = false;
     pressStartTime = 0;
+    activePointerId = null;
 }
 
 
