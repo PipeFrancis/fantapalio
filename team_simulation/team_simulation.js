@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260704_1529.js';
+import { players, player_history_array } from '../data260704_1534.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -24,9 +24,9 @@ let pressStartTime = 0;
 let startX = 0;
 let startY = 0;
 let activePointerId = null;
+let pointerMoved = false;
 
 function onPointerDownAdd(e, player) {
-    e.preventDefault();
     logMobile( ">> onPointerDownAdd" + player.name);
 
 
@@ -38,7 +38,6 @@ function onPointerDownAdd(e, player) {
 }
 
 function onPointerDownRemove(e, index, player) {
-    e.preventDefault();
     logMobile( ">> onPointerDownRemove" + player.name);
 
     pressMode = "remove";
@@ -51,6 +50,7 @@ function onPointerDownRemove(e, index, player) {
 function startPressCommon(e) {
     longPressTriggered = false;
     pressStartTime = Date.now();
+    pointerMoved = false;
     logMobile( ">> onPointerDownCommon");
 
     // Salva la posizione iniziale del tocco/click
@@ -70,6 +70,22 @@ function startPressCommon(e) {
         longPressTriggered = true;
         showPlayerPopup(pressedPlayer, e);
     }, 500);
+}
+
+function onPointerMove(e) {
+    if (activePointerId === null || e.pointerId !== activePointerId) {
+        return;
+    }
+
+    const diffX = e.clientX - startX;
+    const diffY = e.clientY - startY;
+    const distance = Math.sqrt(diffX * diffX + diffY * diffY);
+
+    if (distance >= 10 && !pointerMoved) {
+        pointerMoved = true;
+        logMobile(">> pointer moved enough, cancelling pending tap/long press");
+        cancelPendingGesture(e);
+    }
 }
 
 function onPointerUp(e) {
@@ -116,8 +132,13 @@ function onPointerCancel(e) {
         return;
     }
 
-    logMobile( ">> onPointerCancel, no action");
+    logMobile( ">> onPointerCancel, clearing pending gesture");
+    cancelPendingGesture(e);
+}
+
+function cancelPendingGesture(e) {
     clearTimeout(pressTimer);
+    removeActivePopup();
     releasePointerCaptureIfNeeded(e);
     resetPress();
 }
@@ -141,6 +162,7 @@ function resetPress() {
     longPressTriggered = false;
     pressStartTime = 0;
     activePointerId = null;
+    pointerMoved = false;
 }
 
 
@@ -376,6 +398,7 @@ function renderTeam() {
                 (e) => onPointerDownRemove(e, index, player),
                 { passive: false }
             );
+            playerCard.addEventListener('pointermove', onPointerMove);
             playerCard.addEventListener('pointerup', onPointerUp);
             playerCard.addEventListener('pointercancel', onPointerCancel);
             playerCard.addEventListener("contextmenu", (e) => {e.preventDefault();}); // for not having context menu on chrome mobile emulation on PC
@@ -421,6 +444,7 @@ function populatePlayersList() {
                 (e) => onPointerDownAdd(e, player),
                 { passive: false }
             );
+            playerCard.addEventListener('pointermove', onPointerMove);
             playerCard.addEventListener('pointerup', onPointerUp);
             playerCard.addEventListener('pointercancel', onPointerCancel);
             playerCard.addEventListener("contextmenu", (e) => {e.preventDefault();}); // for not having context menu on chrome mobile emulation on PC
