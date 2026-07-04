@@ -1,6 +1,6 @@
 import {
     players,pdkWeights, td3Weights, what_day_is_it, td3_bonus_passadaprimoultimo
-} from '../data260704_1522.js';
+} from '../data260704_1525.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const playerCardsContainer = document.getElementById('playerCardsContainer');
@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // // Old working version with no stats:
 // import {
 //     players
-// } from '../data260704_1522.js';
+// } from '../data260704_1525.js';
 
 // document.addEventListener('DOMContentLoaded', () => {
 //     const playerCardsContainer = document.getElementById('playerCardsContainer');
