@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260704_1500.js';
+import { players, player_history_array } from '../data260704_1508.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -50,7 +50,7 @@ function onPointerDownRemove(e, index, player) {
 function startPressCommon(e) {
     longPressTriggered = false;
     pressStartTime = Date.now();
-    logMobile( ">> onPointerDownCommon" + player.name);
+    logMobile( ">> onPointerDownCommon");
 
     // Salva la posizione iniziale del tocco/click
     startX = e.clientX;
