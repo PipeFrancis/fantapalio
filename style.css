@@ -622,6 +622,9 @@ footer {
     touch-action: pan-y; 
     -webkit-overflow-scrolling: touch; 
 
+    box-sizing: content-box !important;
+    padding-right: 25px; /* Lasciamo 25px di spazio vuoto a destra */
+
 }
 
 /* --- MODIFICHE MIRATE PER RENDERE LA BARRA ENORME E VISIBILE SU MOBILE --- */
