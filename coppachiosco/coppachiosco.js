@@ -1,4 +1,4 @@
-import { rioni25 } from '../data260706_0801.js';
+import { rioni25 } from '../data260706_0804.js';
 
 window.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector('.team_detail_team-cards-container1');

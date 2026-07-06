@@ -2835,7 +2835,7 @@ const players25 = [
     const td3Weights26 = [3,   -3,      1,       1,      1,      1,     1,     10,  20,  30,  -2,    3  ,    1    ]; // 2026
     const td3Weights = td3Weights26; // anno corrente (Alle altre pagine viene passato solo questo)
     const td3_bonus_passadaprimoultimo25 = 5; 
-    const td3_bonus_passadaprimo26 = 10; // viene usato nello stampa dettagli players
+    const td3_bonus_passadaprimo26 = 10; // ora controllo nei dettagli controlla che il
     const td3_bonus_passadaprimoultimo = td3_bonus_passadaprimo26;
     
     
