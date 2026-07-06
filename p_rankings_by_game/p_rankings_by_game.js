@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>#${selectedPlayer.number}</p>
                 <p>Totale: <span class="totalpointsindex">${score}</span></p><br>
             `;
-
+            console.log(stats_td3);
             if (stats_td3[TD3_PARTECIPA] !== 0) statsHtml += `<p>Partecipazione: <strong>${formatValue(stats_td3[TD3_PARTECIPA] * td3Weights[TD3_PARTECIPA])}</strong></p>`;
             if (stats_td3[TD3_NONPARTECIPA] !== 0) statsHtml += `<p>Non partecipa: <strong>${formatValue(stats_td3[TD3_NONPARTECIPA] * td3Weights[TD3_NONPARTECIPA])}</strong></p>`;
             if (stats_td3[TD3_PASSA1] !== 0 && stats_td3[TD3_PASSA1] != td3_bonus_passadaprimoultimo) statsHtml += `<p>Passa al 2° turno: <strong>${formatValue(stats_td3[TD3_PASSA1] * td3Weights[TD3_PASSA1])}</strong></p>`;
