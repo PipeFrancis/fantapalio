@@ -701,7 +701,7 @@ const WEST26 = { ...rione_type,
 };
 
 // --------------------  STATISTICHE COACH/RIONI 2026
-const coachTM = 6; //mettere a 6 per normale, mettere di meno per disattivare stats coach dopo una certa giornata
+const coachTM = 5; //mettere a 6 per normale, mettere di meno per disattivare stats coach dopo una certa giornata
 NORD26.coach_name="Ciccio De Colle";
 SUD26.coach_name="Mr. X";
 EST26.coach_name="Emanuele Storace";
@@ -734,10 +734,10 @@ if(coachTM >= 4){
     WEST26.coach_semi_stats     = [0,6];
 }
 if(coachTM >= 5){
-    NORD26.coach_td3_stats      = [0,0];
-    SUD26.coach_td3_stats       = [0,0];
-    EST26.coach_td3_stats       = [0,0];
-    WEST26.coach_td3_stats      = [0,0];
+    NORD26.coach_td3_stats      = [0,1];
+    SUD26.coach_td3_stats       = [0,1];
+    EST26.coach_td3_stats       = [0,3];
+    WEST26.coach_td3_stats      = [0,5];
 }
 if(coachTM >= 6){
     NORD26.coach_final_stats    = [0,0];
@@ -2069,24 +2069,6 @@ MatteoMargarit25.stats_final            =      [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1,
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // -----------------------------------------------------------------------------------------------
 // ---------------------------- STATS 2026 -------------------------------------------------------
 // -----------------------------------------------------------------------------------------------
@@ -2455,85 +2437,85 @@ AlessandroNarduzzi26.stats_semi         =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 KevinGigante26.stats_semi               =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
 
 
-// // stats_td3
-// DavidGaspardo26.stats_td3               =      [1, 0, 1, 2, 3, 0, 0, 0, 0, 0, 0, 1, 0]; //
-// AlessandroRizzi26.stats_td3             =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// MarcoLombardo26.stats_td3               =      [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// FilippoPasquon26.stats_td3              =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// VittorioGri26.stats_td3                 =      [1, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0, 1, 0]; //
-// VittorioBasso26.stats_td3               =      [1, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0, 1, 0]; //
-// GabrieleMiani26.stats_td3               =      [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]; //
-// EnricoBravin26.stats_td3                =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// LucaDonati26.stats_td3                  =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// MarcoRizzi26.stats_td3                  =      [1, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0, 1, 3]; //
-// DanieleGanzit26.stats_td3               =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// GiacomoSilvestri26.stats_td3            =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// AntonioGri26.stats_td3                  =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// FrancescoSchiavone26.stats_td3          =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// NicolaCollavini26.stats_td3             =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]; //
-// LeonardoTirelli26.stats_td3             =      [1, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// FilippoSappa26.stats_td3                =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]; //
-// GiovanniZanin26.stats_td3               =      [1, 0, 5, 2, 3, 3, 0, 0, 0, 0, 0, 0, 1]; //
-// GiacomoSpagnolo26.stats_td3             =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]; //
-// PietroSoramel26.stats_td3               =      [1, 0, 1, 2, 3, 5, 3, 1, 0, 0, 0, 1, 6]; //
-// GiovanniTonizzo26.stats_td3             =      [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2]; //
-// EmanueleDaneluzzi26.stats_td3           =      [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4]; //
-// LucaSoramel26.stats_td3                 =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1]; //
-// AlessandroSantin26.stats_td3            =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2]; //
-// StefanoPolano26.stats_td3               =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]; //
-// JacopoTomasini26.stats_td3              =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]; //
-// PaoloZorzi26.stats_td3                  =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]; //
-// CristianFedrizzi26.stats_td3            =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]; //
-// GabrieleAzzarone26.stats_td3            =      [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]; //
-// FilippoAgnoluzzi26.stats_td3            =      [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]; //
-// MarcoComisso26.stats_td3                =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]; //
-// MatteoBazzaro26.stats_td3               =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]; //
-// AlessandroGalassi26.stats_td3           =      [1, 0, 1, 2, 3, 3, 5, 0, 0, 0, 0, 0, 4]; //
-// NicholasBruno26.stats_td3               =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]; //
-// GabrieleIndri26.stats_td3               =      [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3]; //
-// MarcoSerrao26.stats_td3                 =      [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// WilliamIob26.stats_td3                  =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]; //
-// MattiaMasotti26.stats_td3               =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// MassimilianoRossi26.stats_td3           =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// MattiaAnedda26.stats_td3                =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// EdoardoPicogna26.stats_td3              =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// SamuelMasotti26.stats_td3               =      [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]; //
-// DavideBroggi26.stats_td3                =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// EnricoSant26.stats_td3                  =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// EugenioDeTina26.stats_td3               =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// ThomasBaracetti26.stats_td3             =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// AlexMicottis26.stats_td3                =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// MassimoMasotti26.stats_td3              =      [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// LucaGemo26.stats_td3                    =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// MauroPerina26.stats_td3                 =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// MatteoGrillo26.stats_td3                =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// LucaGrillo26.stats_td3                  =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// DenisVanin26.stats_td3                  =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// MarcoPolo26.stats_td3                   =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]; //
-// MarcoGemo26.stats_td3                   =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// GabrieleVecciolini26.stats_td3          =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// PietroGioeleGolizia26.stats_td3         =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// UmbertoNobile26.stats_td3               =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// MassimilianoMoretti26.stats_td3         =      [1, 0, 1, 2, 5, 3, 3, 0, 0, 0, 0, 0, 0]; //
-// LarryTrevisan26.stats_td3               =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// AlessandroCostantini26.stats_td3        =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3]; //
-// AlessandroSant26.stats_td3              =      [1, 0, 1, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// MicheleDeAnna26.stats_td3               =      [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// DevinChiarcos26.stats_td3               =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// AndreaMoretti26.stats_td3               =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 3]; //
-// AlessioFurlan26.stats_td3               =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// GiacomoPiacentini26.stats_td3           =      [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// ValentinoCigainero26.stats_td3          =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// MatteoMargarit26.stats_td3              =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// DavideParon26.stats_td3                 =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// GiovanniDalFarra26.stats_td3            =      [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]; //
-// MiracleObichukwu26.stats_td3            =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// LucaDellaLonga26.stats_td3              =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// GiacomoFerigo26.stats_td3               =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// MichaelMargarit26.stats_td3             =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]; //
-// SebastianoTonizzo26.stats_td3           =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// MattiaLanna26.stats_td3                 =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-// EmanueleCorleone26.stats_td3            =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+// stats_td3
+DavidGaspardo26.stats_td3               =      [1, 0, 3, 4, 5, 0, 0, 0, 0, 0, 0, 1, 0]; //
+AlessandroRizzi26.stats_td3             =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+MarcoLombardo26.stats_td3               =      [1, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+FilippoPasquon26.stats_td3              =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+VittorioGri26.stats_td3                 =      [1, 0, 3, 4, 0, 0, 0, 0, 0, 0, 0, 1, 0]; //
+VittorioBasso26.stats_td3               =      [1, 0, 3, 4, 0, 0, 0, 0, 0, 0, 0, 1, 0]; //
+GabrieleMiani26.stats_td3               =      [1, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]; //
+EnricoBravin26.stats_td3                =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+LucaDonati26.stats_td3                  =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+MarcoRizzi26.stats_td3                  =      [1, 0, 3, 4, 0, 0, 0, 0, 0, 0, 0, 1, 3]; //
+DanieleGanzit26.stats_td3               =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+GiacomoSilvestri26.stats_td3            =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+AntonioGri26.stats_td3                  =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+FrancescoSchiavone26.stats_td3          =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+NicolaCollavini26.stats_td3             =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]; //
+LeonardoTirelli26.stats_td3             =      [1, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+FilippoSappa26.stats_td3                =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]; //
+GiovanniZanin26.stats_td3               =      [1, 0, 3, 4, 5, 5, 0, 0, 0, 0, 0, 0, 1]; //
+GiacomoSpagnolo26.stats_td3             =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]; //
+PietroSoramel26.stats_td3               =      [1, 0, 3, 4, 5, 5, 5, 1, 0, 0, 0, 1, 6]; //
+GiovanniTonizzo26.stats_td3             =      [1, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2]; //
+EmanueleDaneluzzi26.stats_td3           =      [1, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4]; //
+LucaSoramel26.stats_td3                 =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1]; //
+AlessandroSantin26.stats_td3            =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2]; //
+StefanoPolano26.stats_td3               =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]; //
+JacopoTomasini26.stats_td3              =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]; //
+PaoloZorzi26.stats_td3                  =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]; //
+CristianFedrizzi26.stats_td3            =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]; //
+GabrieleAzzarone26.stats_td3            =      [1, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]; //
+FilippoAgnoluzzi26.stats_td3            =      [1, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]; //
+MarcoComisso26.stats_td3                =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]; //
+MatteoBazzaro26.stats_td3               =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]; //
+AlessandroGalassi26.stats_td3           =      [1, 0, 3, 4, 5, 5, 5, 0, 0, 0, 0, 0, 4]; //
+NicholasBruno26.stats_td3               =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]; //
+GabrieleIndri26.stats_td3               =      [1, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3]; //
+MarcoSerrao26.stats_td3                 =      [1, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+WilliamIob26.stats_td3                  =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]; //
+MattiaMasotti26.stats_td3               =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+MassimilianoRossi26.stats_td3           =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+MattiaAnedda26.stats_td3                =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+EdoardoPicogna26.stats_td3              =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+SamuelMasotti26.stats_td3               =      [1, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]; //
+DavideBroggi26.stats_td3                =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+EnricoSant26.stats_td3                  =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+EugenioDeTina26.stats_td3               =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+ThomasBaracetti26.stats_td3             =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+AlexMicottis26.stats_td3                =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+MassimoMasotti26.stats_td3              =      [1, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+LucaGemo26.stats_td3                    =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+MauroPerina26.stats_td3                 =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+MatteoGrillo26.stats_td3                =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+LucaGrillo26.stats_td3                  =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+DenisVanin26.stats_td3                  =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+MarcoPolo26.stats_td3                   =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]; //
+MarcoGemo26.stats_td3                   =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+GabrieleVecciolini26.stats_td3          =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+PietroGioeleGolizia26.stats_td3         =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+UmbertoNobile26.stats_td3               =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+MassimilianoMoretti26.stats_td3         =      [1, 0, 3, 4, 10, 5, 5, 0, 0, 0, 0, 0, 0]; //
+LarryTrevisan26.stats_td3               =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+AlessandroCostantini26.stats_td3        =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3]; //
+AlessandroSant26.stats_td3              =      [1, 0, 3, 4, 5, 0, 0, 0, 0, 0, 0, 0, 0]; //
+MicheleDeAnna26.stats_td3               =      [1, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+DevinChiarcos26.stats_td3               =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+AndreaMoretti26.stats_td3               =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 3]; //
+AlessioFurlan26.stats_td3               =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+GiacomoPiacentini26.stats_td3           =      [1, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+ValentinoCigainero26.stats_td3          =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+MatteoMargarit26.stats_td3              =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+DavideParon26.stats_td3                 =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+GiovanniDalFarra26.stats_td3            =      [1, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]; //
+MiracleObichukwu26.stats_td3            =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+LucaDellaLonga26.stats_td3              =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+GiacomoFerigo26.stats_td3               =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+MichaelMargarit26.stats_td3             =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]; //
+SebastianoTonizzo26.stats_td3           =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+MattiaLanna26.stats_td3                 =      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
+EmanueleCorleone26.stats_td3            =      [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
 
 
 // // stats_final
@@ -2625,7 +2607,6 @@ KevinGigante26.stats_semi               =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 // ThomasDriussi26.stats_final             =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]; //
 // AlessandroNarduzzi26.stats_final        =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
 // KevinGigante26.stats_final              =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-
 
 
 
@@ -2853,8 +2834,8 @@ const players25 = [
     const td3Weights25 = [1,   -5,      1,       1,      1,      1,     1,     10,  20,  30,  -2,    2  ,    1    ]; // 2025
     const td3Weights26 = [3,   -3,      1,       1,      1,      1,     1,     10,  20,  30,  -2,    3  ,    1    ]; // 2026
     const td3Weights = td3Weights26; // anno corrente (Alle altre pagine viene passato solo questo)
-    const td3_bonus_passadaprimoultimo25 = 5;
-    const td3_bonus_passadaprimoultimo26 = 1000; // questo va nei dettagli stats td3 nella stampa, con numero diverso dal bonus del passaggio viene ignorato
+    const td3_bonus_passadaprimoultimo25 = 5; 
+    const td3_bonus_passadaprimo26 = 10; // ora controllo nei dettagli controlla che il
     const td3_bonus_passadaprimoultimo = td3_bonus_passadaprimoultimo26;
     
     
