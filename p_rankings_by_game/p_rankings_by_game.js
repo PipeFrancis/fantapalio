@@ -1,6 +1,38 @@
 import {
-    players,pdkWeights, td3Weights, what_day_is_it, td3_bonus_passadaprimoultimo
-} from '../data260706_0807.js';
+    players,pdkWeights, td3Weights, what_day_is_it, td3_bonus_passadaprimoultimo,
+     PTS   ,
+    T2P   ,
+    T2PX  ,
+    T3P   ,
+    T3PX  ,
+    FT    ,
+    FTX   ,
+    DREB  ,
+    OREB  ,
+    REB   ,
+    AST   ,
+    TO    ,
+    STL   ,
+    BLK   ,
+    EXP   ,
+    DD    ,
+    TD    ,
+    WIN   ,
+    MEME  ,
+    TD3_PARTECIPA      ,
+    TD3_NONPARTECIPA   ,
+    TD3_PASSA1         ,
+    TD3_PASSA2         ,
+    TD3_PASSA3         ,
+    TD3_PASSA4         ,
+    TD3_FINALE         ,
+    TD3_3RD            ,
+    TD3_2ND            ,
+    TD3_1ST            ,
+    TD3_0SU10          ,
+    TD3_CIAB           ,
+    TD3_ALTRI_MEME     ,
+} from '../data260706_0801.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const playerCardsContainer = document.getElementById('playerCardsContainer');
@@ -221,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // // Old working version with no stats:
 // import {
 //     players
-// } from '../data260706_0807.js';
+// } from '../data260706_0801.js';
 
 // document.addEventListener('DOMContentLoaded', () => {
 //     const playerCardsContainer = document.getElementById('playerCardsContainer');
