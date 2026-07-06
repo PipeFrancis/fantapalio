@@ -36,7 +36,7 @@ import { players, pdkWeights, td3Weights, what_day_is_it, td3_bonus_passadaprimo
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260706_0812.js';
+} from '../data260706_0825.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("playerDetails");
@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <h3>${game}</h3>
                 <p>Totale: <span class="totalpointsindex">${score}</span></p>
             `;
-
+            console.log(stats_td3);
             if (stats_td3[TD3_PARTECIPA] !== 0) statsHtml += `<p>Partecipazione: <strong>${formatValue(stats_td3[TD3_PARTECIPA]*td3Weights[TD3_PARTECIPA])}</strong></p>`;
             if (stats_td3[TD3_NONPARTECIPA] !== 0) statsHtml += `<p>Non partecipa: <strong>${formatValue(stats_td3[TD3_NONPARTECIPA]*td3Weights[TD3_NONPARTECIPA])}</strong></p>`;
             if (stats_td3[TD3_PASSA1] !== 0 && stats_td3[TD3_PASSA1] != td3_bonus_passadaprimoultimo) statsHtml += `<p>Passa al 2° turno: <strong>${formatValue(stats_td3[TD3_PASSA1]*td3Weights[TD3_PASSA1])}</strong></p>`;
