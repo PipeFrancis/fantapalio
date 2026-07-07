@@ -1,16 +1,17 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260707_1739.js';
+import { players, player_history_array } from '../data260707_1747.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
 let selectedPlayers = [];
 let totalCost = 0;
 const maxCredits = 30; // Massimo credito disponibile per il team
+const sort_by_cost_only = 1; // 1 per ordinare solo per costo decrescente, 0 per raggruppare per team
 
 const formlinkused = 0; // se 1, mostra il link al modulo google forms, se 0 non lo mostra e lascia solo il form diretto (e nasconde il messaggio con il link)
 const directregistration = !formlinkused; // se 1, mostra il form di registrazione diretto, se 0 mostra solo il link al modulo google forms (e nasconde il form diretto)
 
-let debug_active = 1; // 1 per mostrare div nero con messaggi logMobile()
+let debug_active = 0; // 1 per mostrare div nero con messaggi logMobile()
 // HISTORY POPUP
 let activePopup = null;
 
@@ -530,56 +531,64 @@ function updateCreditsCounter() {
 
 
 // Funzione per popolare la lista dei giocatori disponibili, ORDINATI SOLO PER TEAM E POI PREZZO
+// Funzione per popolare la lista dei giocatori disponibili
 function populatePlayersList() {
     const playersContainer = document.getElementById('playersContainer');
     playersContainer.innerHTML = '';
 
-    // Group players by team
-    const teams = ['NORD', 'WEST', 'EST', 'SUD']; // Adjust if you have other team names
-    teams.forEach((teamName) => {
-        // Filter players belonging to the current team
-        const playersOfTeam = players
-            .filter(player => player.team === teamName)
-            .sort((a, b) => b.cost - a.cost); // Sort descending by cost inside the team
+    // Funzione interna per iniettare la card nel DOM (evita di duplicare il codice degli eventi)
+    function renderPlayerCard(player) {
+        const playerCard = document.createElement('div');
+        playerCard.classList.add('player-card1', `cardclass${player.team}`);
+        playerCard.innerHTML = `
+            <p><b>${player.name}</b></p>
+            <p><b>${player.team}</b> &emsp; <b>$${player.cost}</b></p>
+        `;
+        if (useTouchEvents) {
+            playerCard.addEventListener(
+                "touchstart",
+                (e) => onTouchStartAdd(e, player),
+                { passive: true }
+            );
+            playerCard.addEventListener('touchmove', onTouchMove, { passive: true });
+            playerCard.addEventListener('touchend', onTouchEnd, { passive: true });
+            playerCard.addEventListener('touchcancel', onTouchCancel, { passive: true });
+        } else {
+            playerCard.addEventListener(
+                "pointerdown",
+                (e) => onPointerDownAdd(e, player),
+                { passive: false }
+            );
+            playerCard.addEventListener('pointermove', onPointerMove);
+            playerCard.addEventListener('pointerup', onPointerUp);
+            playerCard.addEventListener('pointercancel', onPointerCancel);
+        }
+        playerCard.addEventListener("contextmenu", (e) => {e.preventDefault();});
 
-        // Now display players of this team
-        playersOfTeam.forEach((player) => {
-            const playerCard = document.createElement('div');
-            playerCard.classList.add('player-card1', `cardclass${player.team}`);
-            playerCard.innerHTML = `
-                <p><b>${player.name}</b></p>
-                <p><b>${player.team}</b> &emsp; <b>$${player.cost}</b></p>
-            `;
-            if (useTouchEvents) {
-                playerCard.addEventListener(
-                    "touchstart",
-                    (e) => onTouchStartAdd(e, player),
-                    { passive: true }
-                );
-                playerCard.addEventListener('touchmove', onTouchMove, { passive: true });
-                playerCard.addEventListener('touchend', onTouchEnd, { passive: true });
-                playerCard.addEventListener('touchcancel', onTouchCancel, { passive: true });
-            } else {
-                playerCard.addEventListener(
-                    "pointerdown",
-                    (e) => onPointerDownAdd(e, player),
-                    { passive: false }
-                );
-                playerCard.addEventListener('pointermove', onPointerMove);
-                playerCard.addEventListener('pointerup', onPointerUp);
-                playerCard.addEventListener('pointercancel', onPointerCancel);
-            }
-            playerCard.addEventListener("contextmenu", (e) => {e.preventDefault();}); // for not having context menu on chrome mobile emulation on PC
-            //POINTER EVENT STUFF END
+        playersContainer.appendChild(playerCard);
+    }
 
+    // LOGICA DI ORDINAMENTO BASATA SUL CONFIG
+    if (sort_by_cost_only) {
+        // Ordina TUTTI i giocatori per costo decrescente (senza distinzione di team)
+        const sortedPlayers = [...players].sort((a, b) => b.cost - a.cost);
+        sortedPlayers.forEach(player => renderPlayerCard(player));
+    } else {
+        // Vecchio comportamento: Raggruppati per Team e ordinati per costo all'interno del team
+        const teams = ['NORD', 'WEST', 'EST', 'SUD'];
+        teams.forEach((teamName) => {
+            const playersOfTeam = players
+                .filter(player => player.team === teamName)
+                .sort((a, b) => b.cost - a.cost);
 
-            playersContainer.appendChild(playerCard);
+            playersOfTeam.forEach(player => renderPlayerCard(player));
         });
-    });
+    }
 
+    // Contatore crediti finale (invariato)
     const creditsCounter = document.createElement('p');
     creditsCounter.id = 'creditsCounter';
-    creditsCounter.classList.add('highlighted-text')
+    creditsCounter.classList.add('highlighted-text');
     creditsCounter.innerHTML = `Hai ancora: <b><span class="orange_text_light">${maxCredits}$</span></b>`;
     playersContainer.parentNode.insertBefore(creditsCounter, playersContainer.nextSibling);
 }
