@@ -653,6 +653,9 @@ footer {
     flex: 1 0 calc(25% - 10px); /* Calc con spazi tra i bordi */
     max-width: 200px; /* Larghezza massima delle card */
     box-sizing: border-box; /* Rispetta il box model */
+
+    display: flex;
+    flex-direction: column;
     
     /* Disabilita la selezione del testo e il menu contestuale nativo touch */
     -webkit-user-select: none;  /* Safari/Chrome Mobile */
@@ -672,6 +675,9 @@ footer {
 }
 .player-card1 p {
     margin: 8px 6px;   /* PER I PARAGRAFI:Riduce il margine sopra e sotto a 4px (e 0 a destra/sinistra) */
+}
+.player-card1 p:last-child {
+    margin-top: auto;
 }
 
 
