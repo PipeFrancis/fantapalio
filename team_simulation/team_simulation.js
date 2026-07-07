@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260707_2054.js';
+import { players, player_history_array } from '../data260707_2058.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -550,6 +550,13 @@ function populatePlayersList() {
             <p><b>${player.name}</b></p>
             <p><b>${player.team}</b> &emsp; <b>$${player.cost}</b></p>
         `;
+        if(player.name === "Gabriele Miani") {
+            playerCard.innerHTML = `
+                <p><b>${player.name}</b> ⚠️</p>
+            
+                <p><b>${player.team}</b> &emsp; <b>$${player.cost}</b></p>
+        `;
+        }
         if (useTouchEvents) {
             playerCard.addEventListener(
                 "touchstart",
