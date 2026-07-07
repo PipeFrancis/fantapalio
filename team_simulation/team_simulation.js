@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260707_1752.js';
+import { players, player_history_array } from '../data260707_1922.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -14,7 +14,6 @@ const directregistration = !formlinkused; // se 1, mostra il form di registrazio
 let debug_active = 0; // 1 per mostrare div nero con messaggi logMobile()
 // HISTORY POPUP
 let activePopup = null;
-
 let pressTimer = null;
 let pressedPlayer = null;
 let pressedIndex = null;
@@ -492,7 +491,7 @@ function renderTeam() {
             playerCard.innerHTML = `
                 <p><b>${player.name}</b></p>
                
-                <p><b>${player.team}</b> &emsp; <b>$${player.cost}</b></p>
+                <p style="margin-bottom: 6px"><b>${player.team}</b> &emsp; <b>$${player.cost}</b></p>
             `;
             if (useTouchEvents) {
                 playerCard.addEventListener(
