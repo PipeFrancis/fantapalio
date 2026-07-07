@@ -1,10 +1,10 @@
-const DavidGaspardo26 = createPlayer("David Gaspardo", 9, "NORD", "19");
+const GabrieleMiani26 = createPlayer("Gabriele Miani", 10, "NORD", "4");
+const DavidGaspardo26 = createPlayer("David Gaspardo", 8, "NORD", "19");
 const AlessandroRizzi26 = createPlayer("Alessandro Rizzi", 8, "NORD", "6");
 const MarcoLombardo26 = createPlayer("Marco Lombardo", 7, "NORD", "78");
 const FilippoPasquon26 = createPlayer("Filippo Pasquon", 6, "NORD", "22");
 const VittorioGri26 = createPlayer("Vittorio Gri", 6, "NORD", "2");
 const VittorioBasso26 = createPlayer("Vittorio Basso", 6, "NORD", "8");
-const GabrieleMiani26 = createPlayer("Gabriele Miani", 6, "NORD", "4");
 const EnricoBravin26 = createPlayer("Enrico Bravin", 6, "NORD", "18");
 const LucaDonati26 = createPlayer("Luca Donati", 6, "NORD", "17");
 const MarcoRizzi26 = createPlayer("Marco Rizzi", 5, "NORD", "00");
@@ -22,7 +22,7 @@ const AlessandroParona26 = createPlayer("Alessandro Parona", 4, "NORD", "10");
 const FilippoSappa26 = createPlayer("Filippo Sappa", 8, "SUD", "8");
 const GiovanniZanin26 = createPlayer("Giovanni Zanin", 7, "SUD", "3");
 const GiacomoSpagnolo26 = createPlayer("Giacomo Spagnolo", 7, "SUD", "27");
-const PietroSoramel26 = createPlayer("Pietro Soramel", 7, "SUD", "0");
+const PietroSoramel26 = createPlayer("Pietro Soramel", 6, "SUD", "0");
 const GiovanniTonizzo26 = createPlayer("Giovanni Tonizzo", 6, "SUD", "5");
 const EmanueleDaneluzzi26 = createPlayer("Emanuele Daneluzzi", 6, "SUD", "31");
 const LucaSoramel26 = createPlayer("Luca Soramel", 6, "SUD", "12");
@@ -32,11 +32,12 @@ const JacopoTomasini26 = createPlayer("Jacopo Tomasini", 5, "SUD", "1");
 const PaoloZorzi26 = createPlayer("Paolo Zorzi", 5, "SUD", "19");
 const CristianFedrizzi26 = createPlayer("Cristian Fedrizzi", 5, "SUD", "14");
 const GabrieleAzzarone26 = createPlayer("Gabriele Azzarone", 5, "SUD", "10");
-const FilippoAgnoluzzi26 = createPlayer("Filippo Agnoluzzi", 5, "SUD", "2");
+const FilippoAgnoluzzi26 = createPlayer("Filippo Agnoluzzi", 4, "SUD", "2");
 const MarcoComisso26 = createPlayer("Marco Comisso", 4, "SUD", "21");
 const MatteoBazzaro26 = createPlayer("Matteo Bazzaro", 4, "SUD", "6");
 const AlessandroGalassi26 = createPlayer("Alessandro Galassi", 4, "SUD", "17");
 const NicholasBruno26 = createPlayer("Nicholas Bruno", 4, "SUD", "13");
+const BrunoMarchesi26 = createPlayer("Bruno Marchesi", 4, "SUD", "999");
 const GabrieleIndri26 = createPlayer("Gabriele Indri", 10, "EST", "3");
 const MarcoSerrao26 = createPlayer("Marco Serrao", 8, "EST", "8");
 const WilliamIob26 = createPlayer("William Iob", 8, "EST", "12");
@@ -45,7 +46,7 @@ const MassimilianoRossi26 = createPlayer("Massimiliano Rossi", 6, "EST", "5");
 const MattiaAnedda26 = createPlayer("Mattia Anedda", 6, "EST", "9");
 const EdoardoPicogna26 = createPlayer("Edoardo Picogna", 6, "EST", "21");
 const SamuelMasotti26 = createPlayer("Samuel Masotti", 5, "EST", "00");
-const DavideBroggi26 = createPlayer("Davide Broggi", 5, "EST", "13");
+const DavideBroggi26 = createPlayer("Davide Broggi", 4, "EST", "13");
 const EnricoSant26 = createPlayer("Enrico Sant", 5, "EST", "4");
 const EugenioDeTina26 = createPlayer("Eugenio De Tina", 5, "EST", "77");
 const ThomasBaracetti26 = createPlayer("Thomas Baracetti", 5, "EST", "26");
@@ -60,7 +61,6 @@ const MarcoPolo26 = createPlayer("Marco Polo", 4, "EST", "58");
 const MarcoGemo26 = createPlayer("Marco Gemo", 4, "EST", "72");
 const GabrieleVecciolini26 = createPlayer("Gabriele Vecciolini", 4, "EST", "33");
 const PietroGioeleGolizia26 = createPlayer("Pietro Gioele Golizia", 4, "EST", "11");
-const EmanueleStorace26 = createPlayer("Emanuele Storace", 100, "EST", "7");
 const UmbertoNobile26 = createPlayer("Umberto Nobile", 11, "WEST", "8");
 const MassimilianoMoretti26 = createPlayer("Massimiliano Moretti", 9, "WEST", "66");
 const LarryTrevisan26 = createPlayer("Larry Trevisan", 8, "WEST", "23");
@@ -88,13 +88,13 @@ const AlessandroNarduzzi26 = createPlayer("Alessandro Narduzzi", 4, "WEST", "14"
 const KevinGigante26 = createPlayer("Kevin Gigante", 4, "WEST", "37");
 
 const players26 = [
+    GabrieleMiani26,
     DavidGaspardo26,
     AlessandroRizzi26,
     MarcoLombardo26,
     FilippoPasquon26,
     VittorioGri26,
     VittorioBasso26,
-    GabrieleMiani26,
     EnricoBravin26,
     LucaDonati26,
     MarcoRizzi26,
@@ -127,6 +127,7 @@ const players26 = [
     MatteoBazzaro26,
     AlessandroGalassi26,
     NicholasBruno26,
+    BrunoMarchesi26,
     GabrieleIndri26,
     MarcoSerrao26,
     WilliamIob26,
@@ -150,7 +151,6 @@ const players26 = [
     MarcoGemo26,
     GabrieleVecciolini26,
     PietroGioeleGolizia26,
-    EmanueleStorace26,
     UmbertoNobile26,
     MassimilianoMoretti26,
     LarryTrevisan26,
@@ -179,13 +179,13 @@ const players26 = [
 ];
 
 
+//GabrieleMiani26.stats_g1 =        []; //
 //DavidGaspardo26.stats_g1 =        []; //
 //AlessandroRizzi26.stats_g1 =      []; //
 //MarcoLombardo26.stats_g1 =        []; //
 //FilippoPasquon26.stats_g1 =       []; //
 //VittorioGri26.stats_g1 =          []; //
 //VittorioBasso26.stats_g1 =        []; //
-//GabrieleMiani26.stats_g1 =        []; //
 //EnricoBravin26.stats_g1 =         []; //
 //LucaDonati26.stats_g1 =           []; //
 //MarcoRizzi26.stats_g1 =           []; //
@@ -218,6 +218,7 @@ const players26 = [
 //MatteoBazzaro26.stats_g1 =        []; //
 //AlessandroGalassi26.stats_g1 =    []; //
 //NicholasBruno26.stats_g1 =        []; //
+//BrunoMarchesi26.stats_g1 =        []; //
 //GabrieleIndri26.stats_g1 =        []; //
 //MarcoSerrao26.stats_g1 =          []; //
 //WilliamIob26.stats_g1 =           []; //
@@ -241,7 +242,6 @@ const players26 = [
 //MarcoGemo26.stats_g1 =            []; //
 //GabrieleVecciolini26.stats_g1 =   []; //
 //PietroGioeleGolizia26.stats_g1 =  []; //
-//EmanueleStorace26.stats_g1 =      []; //
 //UmbertoNobile26.stats_g1 =        []; //
 //MassimilianoMoretti26.stats_g1 =  []; //
 //LarryTrevisan26.stats_g1 =        []; //
