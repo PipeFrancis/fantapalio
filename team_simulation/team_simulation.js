@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260707_2135.js';
+import { players, player_history_array } from '../data260707_2151.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -325,6 +325,12 @@ function showPlayerPopup(player, event) {
         popup.style.left = '10px';
     } else if (popupRect.right > window.innerWidth - 10) {
         popup.style.left = `${window.innerWidth - popupRect.width - 10}px`;
+    }
+
+    if (popupRect.top < 10) {
+        popup.style.top = '10px';
+    } else if (popupRect.bottom > window.innerHeight - 10) {
+        popup.style.top = `${window.innerHeight - popupRect.height - 10}px`;
     }
 }
 
@@ -663,7 +669,6 @@ window.addEventListener('scroll', () => {
 //pointer change end
 
 //NEW26
-// const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzwUaTw0COjgjKWbNqwZNf2JpApkq0a-xhB-sHub-3vQgCCuD4zJosdMsMJFyslWWs/exec";
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzwUaTw0COjgjKWbNqwZNf2JpApkq0a-xhB-sHub-3vQgCCuD4zJosdMsMJFyslWWs/exec";
 
 
