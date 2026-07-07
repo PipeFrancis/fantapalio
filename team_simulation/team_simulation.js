@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260707_2223.js';
+import { players, player_history_array } from '../data260707_2229.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -321,17 +321,19 @@ function showPlayerPopup(player, event) {
     popup.style.top = `${clientY}px`;
 
     const popupRect = popup.getBoundingClientRect();
+    const popupHeight = popupRect.height;
+
     if (popupRect.left < 10) {
         popup.style.left = '10px';
     } else if (popupRect.right > window.innerWidth - 10) {
         popup.style.left = `${window.innerWidth - popupRect.width - 10}px`;
     }
 
-    if (popupRect.top < 10) {
-        popup.style.top = '10px';
-    } else if (popupRect.bottom > window.innerHeight - 10) {
-        popup.style.top = `${window.innerHeight - popupRect.height - 10}px`;
-    }
+    const visibleTop = Math.min(
+        Math.max(10, clientY - popupHeight - 50),
+        window.innerHeight - popupHeight - 10
+    );
+    popup.style.top = `${visibleTop + popupHeight + 50}px`;
 }
 
 // Funzione di utility per distruggere il popup quando si rilascia il dito o si clicca fuori
