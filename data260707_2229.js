@@ -3283,7 +3283,7 @@ function updatePlayerNote(playerName, newNote) {
 
 updatePlayerNote("Vittorio Basso", "Salta le prime due");
 updatePlayerNote("Filippo Sappa", "Salta almeno la prima");
-updatePlayerNote("Gabriele Miani", "Non gioca quest'anno");
+updatePlayerNote("Gabriele Miani", "IN TEORIA Non gioca quest'anno");
 updatePlayerNote("Christian Zanet", "Non gioca quest'anno");
 // updatePlayerNote("Matteo Bazzaro", "Non gioca quest'anno");
 // updatePlayerNote("Filippo Agnoluzzi", "Non gioca quest'anno");
