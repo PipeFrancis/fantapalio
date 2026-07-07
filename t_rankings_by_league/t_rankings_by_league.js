@@ -2,7 +2,7 @@ import {
     fantateam_type,
     NORD, SUD, EST, WEST,
     fantateams
-} from '../data260707_2116.js';
+} from '../data260707_2119.js';
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="team-card-body">
                         <div class="punteggio-info team_ranking_pdk_tot"><strong>${team.tot_team.toFixed(2)}</strong></div>
                         ${playerInfoHTML}
-                        <div class="player-info"><b>${team.rione.name}</b> [ ${team.rione.coach_name}] (<span class="team_ranking_pdk">${team.rione.final_points}</span>)</div>
+                        <div class="player-info"><b>${team.rione.name}</b> [${team.rione.coach_name}] (<span class="team_ranking_pdk">${team.rione.final_points}</span>)</div>
                     </div>
                 `;
             } else {
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="team-card-body">
                         <div class="punteggio-info team_ranking_pdk_tot"><strong>${team.tot_team.toFixed(2)}</strong></div>
                         ${playerInfoHTML}
-                        <div class="player-info"><b>${team.rione.name}</b> [ ${team.rione.coach_name}] (<span class="team_ranking_pdk">${team.rione.final_points}</span>)</div>
+                        <div class="player-info"><b>${team.rione.name}</b> [${team.rione.coach_name}] (<span class="team_ranking_pdk">${team.rione.final_points}</span>)</div>
                     </div>
                 `;
             }

@@ -701,9 +701,9 @@ const WEST26 = { ...rione_type,
 
 // --------------------  STATISTICHE COACH/RIONI 2026
 const coachTM = 5; //mettere a 6 per normale, mettere di meno per disattivare stats coach dopo una certa giornata
-NORD26.coach_name="Ciccio De Colle";
-SUD26.coach_name="Mr. X";
-EST26.coach_name="Emanuele Storace";
+NORD26.coach_name="Alessandro Zamparini";
+SUD26.coach_name="Mister X";
+EST26.coach_name="Mister J";
 WEST26.coach_name="Alessandro Di Giusto";
 
 // Coach stats
