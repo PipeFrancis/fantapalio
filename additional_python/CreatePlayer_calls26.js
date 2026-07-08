@@ -1,4 +1,4 @@
-const GabrieleMiani26 = createPlayer("Gabriele Miani", 10, "NORD", "4");
+const GabrieleMiani26 = createPlayer("Gabriele Miani", 12, "NORD", "4");
 const DavidGaspardo26 = createPlayer("David Gaspardo", 8, "NORD", "19");
 const AlessandroRizzi26 = createPlayer("Alessandro Rizzi", 8, "NORD", "6");
 const MarcoLombardo26 = createPlayer("Marco Lombardo", 7, "NORD", "78");
@@ -12,7 +12,7 @@ const DanieleGanzit26 = createPlayer("Daniele Ganzit", 5, "NORD", "11");
 const GiacomoSilvestri26 = createPlayer("Giacomo Silvestri", 5, "NORD", "3");
 const AntonioGri26 = createPlayer("Antonio Gri", 4, "NORD", "5");
 const FrancescoSchiavone26 = createPlayer("Francesco Schiavone", 4, "NORD", "69");
-const NicolaCollavini26 = createPlayer("Nicola Collavini", 4, "NORD", "44");
+const NicolaCollavini26 = createPlayer("Nicola Collavini", 4, "NORD", "44");
 const LeonardoTirelli26 = createPlayer("Leonardo Tirelli", 4, "NORD", "45");
 const MattiaCollavini26 = createPlayer("Mattia Collavini", 4, "NORD", "20");
 const JacopoLoPiccolo26 = createPlayer("Jacopo Lo Piccolo", 4, "NORD", "25");
@@ -20,7 +20,7 @@ const ThomasGrillo26 = createPlayer("Thomas Grillo", 4, "NORD", "12");
 const LuigiValentino26 = createPlayer("Luigi Valentino", 4, "NORD", "24");
 const AlessandroParona26 = createPlayer("Alessandro Parona", 4, "NORD", "10");
 const FilippoSappa26 = createPlayer("Filippo Sappa", 8, "SUD", "8");
-const GiovanniZanin26 = createPlayer("Giovanni Zanin", 7, "SUD", "3");
+const GiovanniZanin26 = createPlayer("Giovanni Zanin", 7, "SUD", "3");
 const GiacomoSpagnolo26 = createPlayer("Giacomo Spagnolo", 7, "SUD", "27");
 const PietroSoramel26 = createPlayer("Pietro Soramel", 6, "SUD", "0");
 const GiovanniTonizzo26 = createPlayer("Giovanni Tonizzo", 6, "SUD", "5");
@@ -34,9 +34,8 @@ const CristianFedrizzi26 = createPlayer("Cristian Fedrizzi", 5, "SUD", "14");
 const GabrieleAzzarone26 = createPlayer("Gabriele Azzarone", 5, "SUD", "10");
 const FilippoAgnoluzzi26 = createPlayer("Filippo Agnoluzzi", 4, "SUD", "2");
 const MarcoComisso26 = createPlayer("Marco Comisso", 4, "SUD", "21");
-const MatteoBazzaro26 = createPlayer("Matteo Bazzaro", 4, "SUD", "6");
 const AlessandroGalassi26 = createPlayer("Alessandro Galassi", 4, "SUD", "17");
-const NicholasBruno26 = createPlayer("Nicholas Bruno", 4, "SUD", "13");
+const NicholasComisso26 = createPlayer("Nicholas Comisso", 4, "SUD", "13");
 const BrunoMarchesi26 = createPlayer("Bruno Marchesi", 4, "SUD", "999");
 const GabrieleIndri26 = createPlayer("Gabriele Indri", 10, "EST", "3");
 const MarcoSerrao26 = createPlayer("Marco Serrao", 8, "EST", "8");
@@ -46,7 +45,7 @@ const MassimilianoRossi26 = createPlayer("Massimiliano Rossi", 6, "EST", "5");
 const MattiaAnedda26 = createPlayer("Mattia Anedda", 6, "EST", "9");
 const EdoardoPicogna26 = createPlayer("Edoardo Picogna", 6, "EST", "21");
 const SamuelMasotti26 = createPlayer("Samuel Masotti", 5, "EST", "00");
-const DavideBroggi26 = createPlayer("Davide Broggi", 4, "EST", "13");
+const DavideBroggi26 = createPlayer("Davide Broggi", 5, "EST", "13");
 const EnricoSant26 = createPlayer("Enrico Sant", 5, "EST", "4");
 const EugenioDeTina26 = createPlayer("Eugenio De Tina", 5, "EST", "77");
 const ThomasBaracetti26 = createPlayer("Thomas Baracetti", 5, "EST", "26");
@@ -80,7 +79,7 @@ const LucaDellaLonga26 = createPlayer("Luca Della Longa", 4, "WEST", "11");
 const GiacomoFerigo26 = createPlayer("Giacomo Ferigo", 4, "WEST", "27");
 const MichaelMargarit26 = createPlayer("Michael Margarit", 4, "WEST", "9");
 const SebastianoTonizzo26 = createPlayer("Sebastiano Tonizzo", 4, "WEST", "88");
-const MattiaLanna26 = createPlayer("Mattia Lanna", 4, "WEST", "45");
+const MattiaLanna26 = createPlayer("Mattia Lanna", 4, "WEST", "45");
 const EmanueleCorleone26 = createPlayer("Emanuele Corleone", 4, "WEST", "24");
 const ChristianZanet26 = createPlayer("Christian Zanet", 4, "WEST", "5");
 const ThomasDriussi26 = createPlayer("Thomas Driussi", 4, "WEST", "0");
@@ -124,9 +123,8 @@ const players26 = [
     GabrieleAzzarone26,
     FilippoAgnoluzzi26,
     MarcoComisso26,
-    MatteoBazzaro26,
     AlessandroGalassi26,
-    NicholasBruno26,
+    NicholasComisso26,
     BrunoMarchesi26,
     GabrieleIndri26,
     MarcoSerrao26,
@@ -215,9 +213,8 @@ const players26 = [
 //GabrieleAzzarone26.stats_g1 =     []; //
 //FilippoAgnoluzzi26.stats_g1 =     []; //
 //MarcoComisso26.stats_g1 =         []; //
-//MatteoBazzaro26.stats_g1 =        []; //
 //AlessandroGalassi26.stats_g1 =    []; //
-//NicholasBruno26.stats_g1 =        []; //
+//NicholasComisso26.stats_g1 =      []; //
 //BrunoMarchesi26.stats_g1 =        []; //
 //GabrieleIndri26.stats_g1 =        []; //
 //MarcoSerrao26.stats_g1 =          []; //
