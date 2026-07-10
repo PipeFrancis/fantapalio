@@ -801,6 +801,9 @@ footer {
     color: var(--main-color3);
     font-weight: bolder;
 }
+.small_text_avviso{
+    font-size: 0.7em;
+}
 
 td { /* tutto serve per sfondo immagine*/
     background-color: white;/* sfondo per non fare trasparente*/
