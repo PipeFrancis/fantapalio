@@ -666,7 +666,7 @@ footer {
 }
 @media (max-width: 768px) {
     .players-container {
-        max-height: 33vh; /* 30% vieport height. Altezza massima del contenitore in mobile (stretta così si vede squadra che viene creata sotto */
+        max-height: 40vh; /* 30% vieport height. Altezza massima del contenitore in mobile (stretta così si vede squadra che viene creata sotto */
     }
     .player-card1 {
         flex: 1 0 calc(50% - 10px); /* Due card per riga su schermi più piccoli */
