@@ -32,7 +32,7 @@ import {
     TD3_0SU10          ,
     TD3_CIAB           ,
     TD3_ALTRI_MEME     ,
-} from '../data260711_0044.js';
+} from '../data260711_0046.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const playerCardsContainer = document.getElementById('playerCardsContainer');
@@ -252,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // // Old working version with no stats:
 // import {
 //     players
-// } from '../data260711_0044.js';
+// } from '../data260711_0046.js';
 
 // document.addEventListener('DOMContentLoaded', () => {
 //     const playerCardsContainer = document.getElementById('playerCardsContainer');
