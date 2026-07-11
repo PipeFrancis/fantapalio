@@ -3587,55 +3587,11 @@ const ft47 = createFantateam(47, "I ragazzi", NORD, [EnricoBravin26, MarcoRizzi2
 const ft48 = createFantateam(48, "Sacchi della lidl", WEST, [GiacomoSpagnolo26, EnricoBravin26, GiacomoPiacentini26, MarcoRizzi26, MattiaMasotti26]);
 const ft49 = createFantateam(49, "Gnaquez", SUD, [VittorioBasso26, PietroSoramel26, LucaDellaLonga26, MarcoSerrao26, LucaSoramel26]);
 const ft50 = createFantateam(50, "Sblurp", EST, [SebastianoTonizzo26, AlessandroNarduzzi26, ThomasDriussi26, PietroGioeleGolizia26, BrunoMarchesi26]);
-const ft51 = createFantateam(51, "Le palle di Cristicchi", SUD, [MattiaMasotti26, AlessandroSantin26, AndreaMoretti26, VittorioBasso26, ValentinoCigainero26]);
-const ft52 = createFantateam(52, "I Chicchirichì", EST, [AlessandroCostantini26, MattiaAnedda26, PietroSoramel26, ValentinoCigainero26, MarcoRizzi26]);
-const ft53 = createFantateam(53, "(•) (•)", EST, [ValentinoCigainero26, MattiaAnedda26, EmanueleDaneluzzi26, EnricoBravin26, MicheleDeAnna26]);
-const ft54 = createFantateam(54, "Hope", NORD, [FilippoPasquon26, EnricoBravin26, ValentinoCigainero26, MarcoSerrao26, CristianFedrizzi26]);
-const ft55 = createFantateam(55, "CiccioGainer", NORD, [LarryTrevisan26, AlessandroSant26, LucaDonati26, MiracleObichukwu26, GiacomoSilvestri26]);
-const ft56 = createFantateam(56, "Astro fa rima con NORD", NORD, [ValentinoCigainero26, MarcoRizzi26, EnricoBravin26, VittorioBasso26, AlessandroCostantini26]);
-const ft57 = createFantateam(57, "Team Bombe", SUD, [GabrieleIndri26, FilippoPasquon26, DevinChiarcos26, MarcoGemo26, MarcoComisso26]);
-const ft58 = createFantateam(58, "Ranuncoli", EST, [WilliamIob26, GiacomoSilvestri26, MiracleObichukwu26, DavidGaspardo26, ValentinoCigainero26]);
-const ft59 = createFantateam(59, "Arturo", WEST, [MattiaAnedda26, MicheleDeAnna26, MarcoRizzi26, AlessandroCostantini26, LucaDellaLonga26]);
-const ft60 = createFantateam(60, "I Fantastici Astici", EST, [VittorioBasso26, LarryTrevisan26, SamuelMasotti26, MattiaMasotti26, GiovanniDalFarra26]);
-const ft61 = createFantateam(61, "In teoria non gioca", EST, [GabrieleMiani26, PietroSoramel26, AlessandroGalassi26, ChristianZanet26, AlexMicottis26]);
-const ft62 = createFantateam(62, "A volte dorme di più lo sveglio che il dormiente", NORD, [UmbertoNobile26, MarcoRizzi26, MarcoGemo26, SebastianoTonizzo26, LucaDonati26]);
-const ft63 = createFantateam(63, "FantaCod", WEST, [GabrieleMiani26, KevinGigante26, AlessandroSantin26, MarcoGemo26, FilippoAgnoluzzi26]);
-const ft64 = createFantateam(64, "Fanta palio 2", NORD, [DavideParon26, KevinGigante26, GabrieleMiani26, LeonardoTirelli26, SebastianoTonizzo26]);
-const ft65 = createFantateam(65, "Nonmelosospiegare", WEST, [UmbertoNobile26, GiacomoPiacentini26, EmanueleDaneluzzi26, SebastianoTonizzo26, AlexMicottis26]);
-const ft66 = createFantateam(66, "Robe di gas", EST, [VittorioBasso26, MattiaMasotti26, DevinChiarcos26, MicheleDeAnna26, AlessandroGalassi26]);
-const ft67 = createFantateam(67, "Stifupifu", NORD, [AlessandroRizzi26, MarcoRizzi26, MassimilianoMoretti26, GiacomoFerigo26, LeonardoTirelli26]);
-const ft68 = createFantateam(68, "Miracolati", WEST, [MassimilianoMoretti26, MicheleDeAnna26, GiacomoSilvestri26, AlessandroGalassi26, EnricoSant26]);
-const ft69 = createFantateam(69, "NUMERI1", WEST, [UmbertoNobile26, BrunoMarchesi26, VittorioBasso26, GiacomoSilvestri26, EmanueleCorleone26]);
-// const ft70 = createFantateam(70, "P4", SUD, [BrunoMarchesi26, AlessandroGalassi26, NicholasComisso26, MarcoComisso26, FilippoAgnoluzzi26]);
-const ft71 = createFantateam(71, "Bella di Tabella", EST, [MarcoSerrao26, AlessandroSantin26, MarcoPolo26, AlessandroRizzi26, GiacomoFerigo26]);
-const ft72 = createFantateam(72, "CHE BROCCHI!!!!!", NORD, [LucaDonati26, LeonardoTirelli26, UmbertoNobile26, ValentinoCigainero26, GiovanniDalFarra26]);
-const ft73 = createFantateam(73, "Air ball Codroipo", EST, [LarryTrevisan26, MattiaMasotti26, MarcoGemo26, FilippoPasquon26, GiacomoPiacentini26]);
-const ft74 = createFantateam(74, "Asd Rivolto", NORD, [FrancescoSchiavone26, VittorioBasso26, DevinChiarcos26, MattiaMasotti26, CristianFedrizzi26]);
-const ft75 = createFantateam(75, "Piac e i meme", WEST, [GiacomoPiacentini26, MicheleDeAnna26, AlessandroRizzi26, MarcoRizzi26, ValentinoCigainero26]);
-const ft76 = createFantateam(76, "cestiti anonimi", SUD, [GiacomoPiacentini26, MassimilianoMoretti26, EdoardoPicogna26, GabrieleAzzarone26, MarcoRizzi26]);
-const ft77 = createFantateam(77, "La mia squadra", WEST, [MiracleObichukwu26, PaoloZorzi26, LarryTrevisan26, VittorioBasso26, MarcoLombardo26]);
-const ft78 = createFantateam(78, "BB", WEST, [WilliamIob26, GiacomoSilvestri26, ValentinoCigainero26, LucaGemo26, AlessandroCostantini26]);
-const ft79 = createFantateam(79, "Pizzeria da Hermes", NORD, [MarcoSerrao26, MarcoRizzi26, MicheleDeAnna26, AlexMicottis26, EmanueleDaneluzzi26]);
-const ft80 = createFantateam(80, "Fajitas", EST, [AlessandroRizzi26, MarcoRizzi26, DevinChiarcos26, MattiaMasotti26, FilippoAgnoluzzi26]);
-const ft81 = createFantateam(81, "Cuti mica cutolo🔪", NORD, [EnricoBravin26, MattiaMasotti26, GiacomoSpagnolo26, PaoloZorzi26, MarcoRizzi26]);
-const ft82 = createFantateam(82, "Sai che odio il Sud II", NORD, [MattiaAnedda26, EnricoBravin26, ValentinoCigainero26, MicheleDeAnna26, FilippoPasquon26]);
-const ft83 = createFantateam(83, "I due fantapalio genitori", EST, [AlessandroCostantini26, DavideBroggi26, GabrieleAzzarone26, WilliamIob26, GiacomoFerigo26]);
-const ft84 = createFantateam(84, "Bevi che è palio", NORD, [UmbertoNobile26, EmanueleDaneluzzi26, MiracleObichukwu26, EnricoSant26, FilippoAgnoluzzi26]);
-const ft85 = createFantateam(85, "PallaGOnestro", WEST, [UmbertoNobile26, ValentinoCigainero26, StefanoPolano26, MiracleObichukwu26, MarcoRizzi26]);
-const ft86 = createFantateam(86, "Westfallo", WEST, [EnricoBravin26, DevinChiarcos26, GiacomoSpagnolo26, PietroSoramel26, GiacomoSilvestri26]);
-const ft87 = createFantateam(87, "Space cake, tutti fatti!!!", WEST, [PietroSoramel26, VittorioBasso26, LucaDonati26, ValentinoCigainero26, EdoardoPicogna26]);
-const ft88 = createFantateam(88, "I messicani dell'EST", EST, [MarcoLombardo26, MattiaMasotti26, GiacomoPiacentini26, FilippoAgnoluzzi26, AlessandroSant26]);
-const ft89 = createFantateam(89, "SBAM!!!!!", WEST, [EmanueleDaneluzzi26, LarryTrevisan26, VittorioBasso26, FilippoPasquon26, FilippoAgnoluzzi26]);
 
 const fantateams26 = [
-  ft4, ft5, ft6, ft7, ft8, ft9, ft10, ft11, ft12, ft13, ft14, ft15, ft16, ft17, ft18, ft19, ft20, ft21, ft22, ft23, ft24, ft25, ft26, ft27, ft28, ft29,  
-  ft31, ft32, ft33, ft34, ft35, ft36, ft37, ft38, ft39, ft40, ft41, ft42, ft43, ft44, ft45, ft46, ft47, ft48, ft49, ft50, ft51, ft52, ft53, ft54, ft55, ft56, ft57, ft58, ft59, ft60, 
-  ft61, ft62, ft63, ft64, ft65, ft66, ft67, ft68, ft69, ft71, ft72, ft73, ft74, ft75, ft76, ft77, ft78, ft79, ft80, ft81, ft82, ft83, ft84, ft85, ft86, ft87, ft88, ft89
+  ft4, ft5, ft6, ft7, ft8, ft9, ft10, ft11, ft12, ft13, ft14, ft15, ft16, ft17, ft18, ft19, ft20, ft21, ft22, ft23, ft24, ft25, ft26, ft27, ft28, ft29,
+  ft31, ft32, ft33, ft34, ft35, ft36, ft37, ft38, ft39, ft40, ft41, ft42, ft43, ft44, ft45, ft46, ft47, ft48, ft49, ft50
 ];
-
-// cancellare ft1, ft2, ft3, ft30, ft70
-
-
 
 // ft7.league_names = ["lega1","lega2"];
 // ft6.league_names = ["lega2"];
