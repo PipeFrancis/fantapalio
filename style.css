@@ -651,25 +651,25 @@ footer {
 .cardclasssoftWEST {
     border: 10px solid var(--west-color3);
     background-image: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,0.85) 90%),
-                url('./images/carte2026/WEST.svg');
+                url('./images/carte2026/WEST-cropped.svg');
 }
 
 .cardclasssoftNORD {
     border: 10px solid var(--nord-color3);
     background-image: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,0.85) 90%),
-                url('./images/carte2026/NORD.svg');
+                url('./images/carte2026/NORD-cropped.svg');
 }
 
 .cardclasssoftSUD {
     border: 10px solid var(--sud-color2);
     background-image: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,0.85) 90%),
-                url('./images/carte2026/SUD.svg');
+                url('./images/carte2026/SUD-cropped.svg');
 }
 
 .cardclasssoftEST {
     border: 10px solid var(--est-color1);
     background-image: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,0.85) 90%),
-                url('./images/carte2026/EST.svg');
+                url('./images/carte2026/EST-cropped.svg');
 }
 
 
