@@ -3655,7 +3655,7 @@ const ft115 = createFantateam(115, "I Pupazzi", NORD, [MarcoRizzi26, LucaDonati2
 const ft116 = createFantateam(116, "PagaSalvador", EST, [EdoardoPicogna26, AlessandroSantin26, GabrieleIndri26, MichaelMargarit26, AntonioGri26]);
 const ft117 = createFantateam(117, "Stavo meglio a SUD", SUD, [FilippoSappa26, MattiaAnedda26, MiracleObichukwu26, FilippoPasquon26, EmanueleDaneluzzi26]);
 const ft118 = createFantateam(118, "Didi", WEST, [DavideParon26, MatteoMargarit26, SebastianoTonizzo26, EmanueleCorleone26, ThomasDriussi26]);
-// const ft119 = createFantateam(119, "Kabubi", WEST, [GiacomoPiacentini26, FilippoAgnoluzzi26, MassimilianoMoretti26, AlessandroSantin26, DevinChiarcos26]);
+const ft119 = createFantateam(119, "Kabubi", WEST, [GiacomoPiacentini26, FilippoAgnoluzzi26, MassimilianoMoretti26, AlessandroSantin26, DevinChiarcos26]);
 const ft120 = createFantateam(120, "Didi", WEST, [DavideParon26, SebastianoTonizzo26, KevinGigante26, EmanueleCorleone26, ThomasDriussi26]);
 const ft121 = createFantateam(121, "Kabubi", NORD, [MassimilianoMoretti26, DevinChiarcos26, GiacomoPiacentini26, AlessandroSantin26, FilippoAgnoluzzi26]);
 const ft122 = createFantateam(122, "Ciao", SUD, [KevinGigante26, ThomasDriussi26, JacopoTomasini26, AlessandroGalassi26, EdoardoPicogna26]);
@@ -3676,12 +3676,12 @@ const fantateams26 = [
   ft4, ft5, ft6, ft7, ft8, ft9, ft10, ft11, ft12, ft13, ft14, ft15, ft16, ft17, ft18, ft19, ft20, ft21, ft22, ft23, ft24, ft25, ft26, ft27, ft28, ft29, 
   ft31, ft32, ft33, ft34, ft35, ft36, ft37, ft38, ft39, ft40, ft41, ft42, ft43, ft44, ft45, ft46, ft47, ft48, ft49, ft50, ft51, ft52, ft53, ft54, ft55, ft56, ft57, ft58, ft59, ft60, 
   ft61, ft62, ft63, ft64, ft65, ft66, ft67, ft68, ft69, ft71, ft72, ft73, ft74, ft76, ft77, ft78, ft79, ft80, ft81, ft82, ft83, ft84, ft85, ft87, ft90, 
-  ft91, ft92, ft93, ft94, ft95, ft96, ft97, ft99, ft100, ft101, ft102, ft103, ft105, ft106, ft107, ft108, ft109, ft110, ft111, ft112, ft113, ft114, ft115, ft116, ft117, ft118, ft120, 
-  ft121, ft122, ft123, ft124, ft127, ft128, ft129, ft130, ft131, ft132, ft133, ft134
+  ft91, ft92, ft93, ft94, ft95, ft96, ft97, ft99, ft100, ft101, ft102, ft103, ft105, ft106, ft107, ft108, ft109, ft110, ft111, ft112, ft113, ft114, ft115, ft116, ft117, ft118, ft119, ft120, 
+  ft121, ft122, ft123, ft124, ft126, ft127, ft128, ft129, ft130, ft131, ft132, ft133, ft134
 ];
 
 // 2026: cancellare ft1, ft2, ft3, ft30, ft70, ft75, ft86, ft88, ft89, ft98,
-//                  ft104, ft119, ft125, ft126
+//                  ft104, ft125, ft126
 
 
 
