@@ -319,20 +319,39 @@ footer {
 
 /* Scheda */
 .team-card{
-    background-color: #f9f9f9;
-    color: black;
+    /* background-color: #f9f9f9; */
+    /* color: black; */
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 16px;
+    /* padding: 16px; */
     width: 100%;
     max-width: 400px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+
+
+    color: white;
+    padding: 24px 16px 16px 16px;
+
+    aspect-ratio: 1 / 1.4142;
+    /* 2. BACKGROUND BEHAVIOR */
+    background-size: cover;
+    background-position: center;
+    
+    /* 3. ALIGN CONTENT TO THE BOTTOM */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    box-sizing: border-box;
+
 }
 
 /* Intestazioni e informazioni */
 .team-card-header {
     font-size: 1.5em;
     margin-bottom: 8px;
+
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 .team-card-body {
@@ -590,19 +609,29 @@ footer {
     border-radius: 12px;
 }
 
-.cardclasssoftWEST{
+.cardclasssoftWEST {
     border: 10px solid var(--west-color3);
-}
-.cardclasssoftNORD{
-    border: 10px solid var(--nord-color3);
-}
-.cardclasssoftSUD{
-    border: 10px solid var(--sud-color2);
-}
-.cardclasssoftEST{
-    border: 10px solid var(--est-color1);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,0.85) 90%),
+                url('../images/carte2026/WEST.svg');
 }
 
+.cardclasssoftNORD {
+    border: 10px solid var(--nord-color3);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,0.85) 90%),
+                url('../images/carte2026/NORD.svg');
+}
+
+.cardclasssoftSUD {
+    border: 10px solid var(--sud-color2);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,0.85) 90%),
+                url('../images/carte2026/SUD.svg');
+}
+
+.cardclasssoftEST {
+    border: 10px solid var(--est-color1);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,0.85) 90%),
+                url('../images/carte2026/EST.svg');
+}
 
 
 
