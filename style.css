@@ -368,7 +368,7 @@ footer {
     
     /* 1. TEXT BORDER (Stroke) */
     /* Adjust '1.5px' to make the black outline thicker or thinner */
-    -webkit-text-stroke: 1.5px black; 
+    -webkit-text-stroke: 1px black; 
     
     /* 2. TEXT SHADOW (Backup glow for smooth rendering) */
     /* This fills in the gaps and keeps the font looking smooth */
@@ -377,7 +377,7 @@ footer {
     /* Your existing smooth background blend */
     padding: 15px 10px; 
     background: linear-gradient(
-        to bottom, 
+        to bottom,
         rgba(0, 0, 0, 0) 0%, 
         rgba(0, 0, 0, 0.4) 40%, 
         rgba(0, 0, 0, 0.4) 70%, 

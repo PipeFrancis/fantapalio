@@ -2,7 +2,7 @@ import {
     fantateam_type,
     NORD, SUD, EST, WEST,
     fantateams
-} from '../data260712_1347.js';
+} from '../data260712_1349.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     const teamCardsContainer = document.getElementById('teamCardsContainer');
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (index == 0) {
                 if (p_sortKey == "tot") {
                     card.innerHTML = `
-                        <div class="team-card-header"><span class="big_emoji">👑</span><br>${team.name}</div>
+                        <div class="team-card-header"><span class="big_emoji">👑</span><br><b>${team.name}</b></div>
                         <div class="team-card-body">
                             <div class="punteggio-info team_ranking_pdk_tot"><strong>${team[sortKey].toFixed(2)}</strong></div>
                             ${playerInfoHTML}
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     `;
                 } else {
                     card.innerHTML = `
-                        <div class="team-card-header"><span class="big_emoji">👑</span><br>${team.name}</div>
+                        <div class="team-card-header"><span class="big_emoji">👑</span><br><b>${team.name}</b></div>
                         <div class="team-card-body">
                             <div class="punteggio-info team_ranking_pdk_tot"><strong>${team[sortKey].toFixed(2)}</strong></div>
                             ${playerInfoHTML}
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 if (p_sortKey == "tot"){
                     card.innerHTML = `
-                        <div class="team-card-header"><span class="orange_text">${index + 1}.</span> ${team.name}</div>
+                        <div class="team-card-header"><span class="orange_text">${index + 1}.</span> <b>${team.name}</b></div>
                         <div class="team-card-body">
                             <div class="punteggio-info team_ranking_pdk_tot"><strong>${team[sortKey].toFixed(2)}</strong></div>
                             ${playerInfoHTML}
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     `;
                 } else {
                     card.innerHTML = `
-                        <div class="team-card-header"><span class="orange_text">${index + 1}.</span> ${team.name}</div>
+                        <div class="team-card-header"><span class="orange_text">${index + 1}.</span> <b>${team.name}</b></div>
                         <div class="team-card-body">
                             <div class="punteggio-info team_ranking_pdk_tot"><strong>${team[sortKey].toFixed(2)}</strong></div>
                             ${playerInfoHTML}
