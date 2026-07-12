@@ -323,7 +323,7 @@ footer {
     /* color: black; */
     border: 1px solid #ddd;
     border-radius: 8px;
-    /* padding: 16px; */
+    padding: 16px;
     width: 100%;
     max-width: 400px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -331,23 +331,25 @@ footer {
 
 
     color: white;
-    padding: 24px 16px 16px 16px;
 
-    aspect-ratio: 1 / 1.4142;
-    /* 2. BACKGROUND BEHAVIOR */
-    background-size: cover;
-    background-position: center;
-    
-    /* 3. ALIGN CONTENT TO THE BOTTOM */
+    /* Perfect aspect ratio for portrait A4/ISO geometry */
+    aspect-ratio: 1 / 1.4142; 
+    box-sizing: border-box;
+
+    /* LAYOUT CONTROL */
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; 
-    box-sizing: border-box;
+    justify-content: space-between; /* Pushes header to top, body to bottom */
+
+    /* BACKGROUND FIXES */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
 
 }
 
 /* Intestazioni e informazioni */
-.team-card-header {
+/* .team-card-header {
     font-size: 1.5em;
     margin-bottom: 8px;
 
@@ -356,6 +358,27 @@ footer {
 
 .team-card-body {
     font-size: 1.2em;
+} */
+ /* Protected Text Box at the TOP (Header) */
+.team-card-header {
+    font-size: 1.5em;
+    padding: 12px;
+    border-radius: 6px;
+    /* Dark background that gently fades at the edges */
+    background: radial-gradient(circle, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.4) 70%, rgba(0,0,0,0) 100%);
+    color: white;
+    text-align: center;
+}
+
+/* Protected Text Box at the BOTTOM (Body text) */
+.team-card-body {
+    font-size: 1.2em;
+    padding: 12px;
+    border-radius: 6px;
+    /* Soft dark background only behind the text pool */
+    background: rgba(0, 0, 0, 0.55); 
+    box-shadow: 0 0 15px rgba(0,0,0,0.55); /* Creates a soft blur fade around the box */
+    color: white;
 }
 
 .team-card.bold {
