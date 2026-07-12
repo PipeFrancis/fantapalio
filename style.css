@@ -18,15 +18,15 @@
 
     --west-color1:rgb(0, 0, 0);
     --west-color2:rgb(255, 221, 0);
-    --west-color3:rgb(210, 182, 0);
+    --west-color3:rgb(230, 195, 0);
 
-    --est-color1:rgb(4, 0, 218);
-    --est-color2:rgb(255, 26, 26);
+    --est-color1:rgb(48, 69, 165);
+    --est-color2:rgb(214, 18, 18);
     --est-color3:rgb(255, 255,255);
 
     --sud-color1:rgb(255, 255, 255);
-    --sud-color2:rgb(34, 145, 0);
-    --sud-color3:red;
+    --sud-color2:rgb(44, 104, 47);
+    --sud-color3:rgb(192, 27, 27);
 
 }
 /* 
