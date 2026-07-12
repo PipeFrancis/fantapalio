@@ -3089,6 +3089,7 @@ updatePlayerNote("Christian Zanet", "Non gioca quest'anno");
 // updatePlayerNote("Matteo Bazzaro", "Non gioca quest'anno");
 updatePlayerNote("Filippo Agnoluzzi", "Non gioca quest'anno");
 // updatePlayerNote("Davide Broggi", "Non gioca quest'anno");
+updatePlayerNote("Marco Lombardo", "Salta la prima e forse anche altre partite");
 
 console.log(player_history_array26);
 const player_history_array = player_history_array26;

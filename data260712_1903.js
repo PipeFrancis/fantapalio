@@ -3089,6 +3089,7 @@ updatePlayerNote("Christian Zanet", "Non gioca quest'anno");
 // updatePlayerNote("Matteo Bazzaro", "Non gioca quest'anno");
 updatePlayerNote("Filippo Agnoluzzi", "Non gioca quest'anno");
 // updatePlayerNote("Davide Broggi", "Non gioca quest'anno");
+updatePlayerNote("Marco Lombardo", "Salta la prima e forse anche altre partite");
 
 console.log(player_history_array26);
 const player_history_array = player_history_array26;
@@ -3681,7 +3682,7 @@ const fantateams26 = [
 ];
 
 // 2026: cancellare ft1, ft2, ft3, ft30, ft70, ft75, ft86, ft88, ft89, ft98,
-//                  ft104, ft119, ft125, ft126
+//                  ft104, ft125, ft126
 
 
 
