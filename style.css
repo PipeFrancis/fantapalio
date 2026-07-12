@@ -366,13 +366,14 @@ footer {
     text-align: center;
     color: white;
     padding: 15px 10px; 
+    padding-bottom:30px;
     
     /* 1. Your exact original vertical gradient */
     background: linear-gradient(
         to bottom, 
         rgba(0, 0, 0, 1) 0%, 
-        rgba(0, 0, 0, 0.7) 20%, 
-        rgba(0, 0, 0, 0.5) 80%, 
+        rgba(0, 0, 0, 0.7) 30%, 
+        rgba(0, 0, 0, 0.5) 70%, 
         rgba(0, 0, 0, 0) 100%
     );
 
