@@ -3656,7 +3656,7 @@ const fantateams26 = [
   ft91, ft92, ft93, ft94, ft95, ft96, ft97, ft99, ft100, ft101, ft102, ft103, ft105, ft106, ft107, ft108, ft109, ft110, ft111
 ];
 
-// cancellare ft1, ft2, ft3, ft30, ft70, ft75, ft98, ft104
+// 2026: cancellare ft1, ft2, ft3, ft30, ft70, ft75, ft98, ft104
 
 
 
