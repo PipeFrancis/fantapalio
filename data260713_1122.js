@@ -720,12 +720,13 @@ NORD26.coach_name="Alessandro Zamparini";
 SUD26.coach_name="Mister X";
 EST26.coach_name="Mister J";
 WEST26.coach_name="Alessandro Di Giusto";
+
 // Coach stats
 
 if(coachTM >= 1){
     NORD26.coach_g1_stats       = [0,3];
     SUD26.coach_g1_stats        = [0,1];
-    EST26.coach_g1_stats        = [0,5];
+    EST26.coach_g1_stats        = [0,4];
     WEST26.coach_g1_stats       = [0,6];
 }
 if(coachTM >= 2){
@@ -1892,7 +1893,7 @@ MatteoMargarit25.stats_final            =      [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1,
 // -----------------------------------------------------------------------------------------------
 
 // stats_g1
-GabrieleMiani26.stats_g1                =      [0, 2, 0, 1, 1, 2, 2, 8, 3, 0, 1, 3, 1, 0, 0, 0, 0, 1, 12]; //
+GabrieleMiani26.stats_g1                =      [0, 2, 0, 1, 1, 2, 2, 8, 3, 0, 1, 3, 1, 0, 0, 0, 0, 1, 15]; //
 DavidGaspardo26.stats_g1                =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]; //
 AlessandroRizzi26.stats_g1              =      [0, 0, 0, 2, 4, 0, 0, 6, 1, 0, 1, 0, 0, 2, 0, 0, 0, 1, 2]; //
 MarcoLombardo26.stats_g1                =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]; //
@@ -1916,8 +1917,8 @@ AlessandroParona26.stats_g1             =      [0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0,
 FilippoSappa26.stats_g1                 =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
 GiovanniZanin26.stats_g1                =      [0, 1, 1, 0, 3, 2, 1, 6, 0, 0, 0, 4, 1, 0, 0, 0, 0, 0, 2]; //
 GiacomoSpagnolo26.stats_g1              =      [0, 0, 2, 1, 0, 0, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0]; //
-PietroSoramel26.stats_g1                =      [0, 0, 1, 1, 2, 0, 0, 1, 1, 0, 0, 3, 0, 0, 0, 0, 0, 0, 1]; //
-GiovanniTonizzo26.stats_g1              =      [0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 2]; //
+PietroSoramel26.stats_g1                =      [0, 0, 1, 1, 2, 0, 0, 1, 1, 0, 0, 3, 0, 0, 0, 0, 0, 0, 4]; //
+GiovanniTonizzo26.stats_g1              =      [0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 5]; //
 EmanueleDaneluzzi26.stats_g1            =      [0, 0, 2, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]; //
 LucaSoramel26.stats_g1                  =      [0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1]; //
 AlessandroSantin26.stats_g1             =      [0, 0, 2, 0, 1, 0, 0, 3, 0, 0, 0, 2, 1, 1, 0, 0, 0, 0, 2]; //
@@ -1955,7 +1956,7 @@ MarcoGemo26.stats_g1                    =      [0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0,
 GabrieleVecciolini26.stats_g1           =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6]; //
 PietroGioeleGolizia26.stats_g1          =      [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 6]; //
 UmbertoNobile26.stats_g1                =      [0, 1, 0, 1, 2, 0, 0, 2, 0, 0, 2, 1, 1, 0, 0, 0, 0, 1, 1]; //
-MassimilianoMoretti26.stats_g1          =      [0, 3, 4, 0, 0, 1, 2, 5, 0, 0, 4, 2, 0, 0, 0, 0, 0, 1, 13]; //
+MassimilianoMoretti26.stats_g1          =      [0, 3, 4, 0, 0, 1, 2, 5, 0, 0, 4, 2, 0, 0, 0, 0, 0, 1, 10]; //
 LarryTrevisan26.stats_g1                =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2]; //
 AlessandroCostantini26.stats_g1         =      [0, 0, 0, 0, 2, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0]; //
 AlessandroSant26.stats_g1               =      [0, 0, 0, 1, 2, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 3]; //
@@ -2341,13 +2342,6 @@ AlessandroNarduzzi26.stats_final        =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 KevinGigante26.stats_final              =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
 
 
-
-
-
-
-
-
-
 // -----------------------------------------------------------------------------------------------
 //                        CREAZIONE ARRAY players E CALCOLO PUNTEGGI FANTA
 // ----------------------------------------------------------------------------------------------- 
@@ -2556,7 +2550,7 @@ const players25 = [
     // gx_stats =      [PTS, 2P, 2Px, 3P, 3Px, FT, FTx, DR, OR, Rtot, ASS, TO,  ST,  BL, EXP, DD, TD, Win, Meme]
     const pdkWeights24 = [1, 0, -0.75, 0.5, -0.75, 0, -0.5, 1, 1.25,  0, 1.5, -1, 1.5, 1.5, -3,  3,  6,   2,  1]; // 2024
     const pdkWeights25 = [1, 0, -0.5, 0.5, -0.5, 0, -0.5, 1, 1.5,  0,    2, -1,  2,    2, -3,  5,   10,   2,  1]; // 2025
-    const pdkWeights26 = [1, 0, -0.5, 0.5, -0.5, 0, -0.5, 1, 1.5,  0,    2, -1,  2,    2, -3,  5,   10,   2,  1]; // 2026
+    const pdkWeights26 = [1, 0, -0.5,   0, -0.5, 0, -0.5, 1, 1.5,  0,    2, -1,  2,    2, -3,  5,   10,   2,  1]; // 2026
     const pdkWeights = pdkWeights26; // anno corrente (Alle altre pagine viene passato solo questo)
     //                   0    1       2        3       4       5       6     7    8    9    10     11     12
     // td3_stats=    [part, nopart, passa1, passa2, passa3, passa4, finale, 3rd, 2nd, 1st, 0su10, ciab, altri meme]
@@ -3071,7 +3065,7 @@ const ft2024_ft17 = createFantateam(17, "Melinda", NORD, [PietroSoramel24, LucaS
 const ft2024_ft18 = createFantateam(18, "Winxclub", EST, [AlessioFurlan24, MassimilianoMoretti24, LucaSoramel24, PietroSoramel24, LucaAnedda24]);
 const ft2024_ft19 = createFantateam(19, "tnerb", SUD, [MassimilianoMoretti24, GiovanniTonizzo24, PietroSoramel24, MarcoPolo24, GiacomoSpagnolo24]);
 const ft2024_ft20 = createFantateam(20, "Prime time players", WEST, [LarryTrevisan24, MarcoSerrao24, UmbertoNobile24, FilippoPasquon24, LorenzoMoro24]);
-const ft2024_ft21 = createFantateam(21, "Golden Cod Cepe’s Warriors", SUD, [AntonioGri24, GiovanniZanin24, MiracleObichukwu24, FilippoSappa24, GiovanniTonizzo24]);
+const ft2024_ft21 = createFantateam(21, "Golden Cod Cepe's Warriors", SUD, [AntonioGri24, GiovanniZanin24, MiracleObichukwu24, FilippoSappa24, GiovanniTonizzo24]);
 const ft2024_ft22 = createFantateam(22, "sustovich", WEST, [MiracleObichukwu24, MassimilianoMoretti24, LucaSoramel24, AndreaMoretti24, PietroSoramel24]);
 const ft2024_ft23 = createFantateam(23, "Groviscrazia", WEST, [PietroSoramel24, LucaSoramel24, MiracleObichukwu24, MicheleVendrame24, MassimilianoMoretti24]);
 const ft2024_ft24 = createFantateam(24, "DEVIN", WEST, [MassimilianoMoretti24, GiacomoPiacentini24, DevinChiarcos24, VittorioBasso24, FilippoPasquon24]);
@@ -3585,88 +3579,79 @@ const ft130 = createFantateam(130, "SIMPLY THE BEST", NORD, [LuigiValentino26, K
 const ft131 = createFantateam(131, "Ax", EST, [WilliamIob26, MarcoSerrao26, EdoardoPicogna26, DenisVanin26, EmanueleCorleone26]);
 const ft132 = createFantateam(132, "Le rane… quelle vere", NORD, [VittorioGri26, AlessandroCostantini26, MarcoPolo26, LucaSoramel26, MattiaAnedda26]);
 const ft133 = createFantateam(133, "Tubi", NORD, [AlessandroRizzi26, LarryTrevisan26, MatteoMargarit26, MarcoRizzi26, ChristianZanet26]);
-// const ft134 = createFantateam(134, "101% PALIO", WEST, [MassimilianoMoretti26, LucaDellaLonga26, MarcoRizzi26, ValentinoCigainero26, MattiaMasotti26]);
-const ft135 = createFantateam(135, "Le bimbe di Wasa", WEST, [LarryTrevisan26, EmanueleCorleone26, MattiaAnedda26, MarcoComisso26, MicheleDeAnna26]);
-const ft136 = createFantateam(136, "BAMBALAU", WEST, [MicheleDeAnna26, AlessioFurlan26, LucaSoramel26, MattiaAnedda26, MarcoRizzi26]);
-const ft137 = createFantateam(137, "Barzottini", WEST, [UmbertoNobile26, MicheleDeAnna26, MiracleObichukwu26, MarcoComisso26, GiovanniDalFarra26]);
-const ft138 = createFantateam(138, "The bughiners🐸", SUD, [UmbertoNobile26, ValentinoCigainero26, LucaSoramel26, MarcoComisso26, MiracleObichukwu26]);
-const ft139 = createFantateam(139, "101% Palio", WEST, [MarcoRizzi26, MassimilianoMoretti26, LucaDellaLonga26, ValentinoCigainero26, MattiaMasotti26]);
-const ft140 = createFantateam(140, "Paliosmash", WEST, [GabrieleIndri26, MarcoRizzi26, EmanueleCorleone26, MarcoPolo26, AlessandroSant26]);
-const ft141 = createFantateam(141, "I mici da kinshasa", NORD, [AlessandroRizzi26, EnricoBravin26, MattiaMasotti26, MarcoRizzi26, AlessandroGalassi26]);
-const ft142 = createFantateam(142, "Trova l'intruso", EST, [MarcoGemo26, LucaGemo26, StefanoPolano26, MarcoSerrao26, MattiaMasotti26]);
-const ft143 = createFantateam(143, "SettimanaSanta", NORD, [GiovanniZanin26, FilippoSappa26, MarcoRizzi26, ValentinoCigainero26, EnricoSant26]);
-const ft144 = createFantateam(144, "Non lo so x2", WEST, [MassimilianoMoretti26, LarryTrevisan26, GiacomoFerigo26, MatteoMargarit26, LucaDellaLonga26]);
-const ft145 = createFantateam(145, "I figli di Raj", SUD, [PietroSoramel26, AlessandroRizzi26, AlessandroCostantini26, AlexMicottis26, NicholasComisso26]);
-const ft146 = createFantateam(146, "Trevi BC", SUD, [AlessandroSant26, VittorioBasso26, EdoardoPicogna26, GiacomoSpagnolo26, KevinGigante26]);
-const ft147 = createFantateam(147, "Incredibile", EST, [DevinChiarcos26, MattiaAnedda26, EmanueleDaneluzzi26, MicheleDeAnna26, MarcoRizzi26]);
-const ft148 = createFantateam(148, "I Buzzoli", EST, [GabrieleIndri26, MicheleDeAnna26, AlexMicottis26, ValentinoCigainero26, MarcoComisso26]);
-const ft149 = createFantateam(149, "Fc Skudrinje", NORD, [GabrieleMiani26, ValentinoCigainero26, GiacomoFerigo26, MarcoRizzi26, EmanueleCorleone26]);
-const ft150 = createFantateam(150, "Gabry12", WEST, [MassimilianoMoretti26, SamuelMasotti26, DavideParon26, NicolaCollavini26, MassimilianoRossi26]);
-const ft151 = createFantateam(151, "Fc Skudrinje", NORD, [GabrieleMiani26, MarcoRizzi26, ValentinoCigainero26, EmanueleCorleone26, GiacomoFerigo26]);
-const ft152 = createFantateam(152, "Bocadillos", WEST, [AndreaMoretti26, DavidGaspardo26, MassimilianoRossi26, PietroSoramel26, ChristianZanet26]);
-const ft153 = createFantateam(153, "Scartizan Cod", SUD, [VittorioGri26, AlessandroCostantini26, DenisVanin26, DevinChiarcos26, AlessandroSantin26]);
-const ft154 = createFantateam(154, "Esteri", EST, [GabrieleIndri26, GiacomoSpagnolo26, GabrieleAzzarone26, MiracleObichukwu26, MassimoMasotti26]);
-const ft155 = createFantateam(155, "little gay boys", SUD, [WilliamIob26, DavidGaspardo26, ChristianZanet26, DevinChiarcos26, MassimoMasotti26]);
-const ft156 = createFantateam(156, "Ghisamuel", EST, [MattiaMasotti26, SamuelMasotti26, FilippoPasquon26, VittorioBasso26, DevinChiarcos26]);
-const ft157 = createFantateam(157, "Tonno", NORD, [MassimilianoMoretti26, GiacomoPiacentini26, AlessandroSantin26, MarcoRizzi26, CristianFedrizzi26]);
-const ft158 = createFantateam(158, "Margy", WEST, [UmbertoNobile26, MarcoRizzi26, MattiaAnedda26, MiracleObichukwu26, AlessandroGalassi26]);
-const ft159 = createFantateam(159, "Bagnichimici", EST, [FilippoSappa26, MattiaMasotti26, GiacomoPiacentini26, MatteoMargarit26, GiacomoSilvestri26]);
-const ft160 = createFantateam(160, "Zoo_Rehab", WEST, [VittorioBasso26, MassimilianoMoretti26, AlessandroSantin26, ValentinoCigainero26, AntonioGri26]);
-const ft161 = createFantateam(161, "Irisamatt masottis", EST, [MarcoGemo26, MassimoMasotti26, SamuelMasotti26, MattiaMasotti26, AlessandroCostantini26]);
-const ft162 = createFantateam(162, "PalomaPaloma", WEST, [UmbertoNobile26, LucaSoramel26, EmanueleCorleone26, MiracleObichukwu26, ValentinoCigainero26]);
-const ft163 = createFantateam(163, "Air Ball Academy", NORD, [MicheleDeAnna26, MarcoSerrao26, AlessandroSantin26, ValentinoCigainero26, AntonioGri26]);
-const ft164 = createFantateam(164, "Zero fantasia", EST, [MassimilianoMoretti26, VittorioBasso26, MarcoRizzi26, MattiaAnedda26, LucaDellaLonga26]);
-const ft165 = createFantateam(165, "A nord siamo nerd", NORD, [VittorioBasso26, UmbertoNobile26, MatteoMargarit26, SebastianoTonizzo26, FilippoAgnoluzzi26]);
-const ft166 = createFantateam(166, "Palle ESTrose", EST, [GabrieleIndri26, CristianFedrizzi26, MattiaAnedda26, ValentinoCigainero26, MiracleObichukwu26]);
-const ft167 = createFantateam(167, "Zontane n’altra", EST, [GabrieleIndri26, AlessandroCostantini26, GiacomoFerigo26, AlexMicottis26, LucaDellaLonga26]);
-const ft168 = createFantateam(168, "EST the BEST", EST, [VittorioBasso26, EnricoBravin26, MicheleDeAnna26, ValentinoCigainero26, EdoardoPicogna26]);
-const ft169 = createFantateam(169, "Ginger", NORD, [UmbertoNobile26, EnricoBravin26, EmanueleCorleone26, GiacomoSilvestri26, AlessandroGalassi26]);
-const ft170 = createFantateam(170, ".", NORD, [VittorioBasso26, DevinChiarcos26, MassimoMasotti26, MattiaCollavini26, DavidGaspardo26]);
-const ft171 = createFantateam(171, "Che gran GioCatta", EST, [UmbertoNobile26, VittorioGri26, NicholasComisso26, PietroGioeleGolizia26, EnricoSant26]);
-const ft172 = createFantateam(172, "G I JOE", WEST, [GiacomoPiacentini26, UmbertoNobile26, GiacomoSilvestri26, MarcoComisso26, MatteoMargarit26]);
-const ft173 = createFantateam(173, "Zontane n’altra", EST, [GabrieleIndri26, AlessandroCostantini26, AlexMicottis26, GiacomoFerigo26, LucaDellaLonga26]);
-const ft174 = createFantateam(174, "Winx club", EST, [VittorioGri26, MarcoRizzi26, AlessandroSant26, LucaSoramel26, MattiaAnedda26]);
-const ft175 = createFantateam(175, "Rivis Apricots", NORD, [VittorioGri26, UmbertoNobile26, MatteoGrillo26, FilippoAgnoluzzi26, GiacomoSilvestri26]);
-const ft176 = createFantateam(176, "GinTonic", WEST, [KevinGigante26, MicheleDeAnna26, UmbertoNobile26, AlessandroGalassi26, FrancescoSchiavone26]);
-const ft177 = createFantateam(177, "dream team", SUD, [VittorioBasso26, UmbertoNobile26, GiacomoFerigo26, MarcoRizzi26, MarcoPolo26]);
-const ft178 = createFantateam(178, "Scatta il crampo", WEST, [MarcoRizzi26, MassimilianoMoretti26, DevinChiarcos26, GabrieleAzzarone26, ValentinoCigainero26]);
-const ft179 = createFantateam(179, "Atletico Madrink", SUD, [UmbertoNobile26, SamuelMasotti26, GiacomoSilvestri26, PaoloZorzi26, MarcoComisso26]);
-const ft180 = createFantateam(180, "Stonedbrother", WEST, [MassimilianoMoretti26, PietroSoramel26, ValentinoCigainero26, GabrieleAzzarone26, DavideBroggi26]);
-const ft181 = createFantateam(181, "Bea$t", WEST, [AlessandroRizzi26, AlessandroSant26, PietroSoramel26, MarcoPolo26, MarcoRizzi26]);
-const ft182 = createFantateam(182, "Colla's n****s", NORD, [MiracleObichukwu26, MicheleDeAnna26, VittorioBasso26, GabrieleAzzarone26, DevinChiarcos26]);
-const ft183 = createFantateam(183, "Chiengers", SUD, [EnricoBravin26, UmbertoNobile26, MarcoGemo26, EmanueleCorleone26, CristianFedrizzi26]);
-const ft184 = createFantateam(184, "Depstiaccoppo", WEST, [LarryTrevisan26, MicheleDeAnna26, ValentinoCigainero26, DevinChiarcos26, GiacomoFerigo26]);
-const ft185 = createFantateam(185, "Paliobestchoice", NORD, [MattiaAnedda26, EdoardoPicogna26, MassimilianoMoretti26, GabrieleAzzarone26, MatteoGrillo26]);
-const ft186 = createFantateam(186, "Le rane di Rivis", NORD, [MattiaAnedda26, StefanoPolano26, EdoardoPicogna26, MassimilianoMoretti26, MarcoComisso26]);
-const ft187 = createFantateam(187, "misto anedda", EST, [MattiaAnedda26, LarryTrevisan26, MattiaMasotti26, MattiaLanna26, LeonardoTirelli26]);
-const ft188 = createFantateam(188, "pirlasv", NORD, [GabrieleMiani26, MarcoRizzi26, ThomasDriussi26, AlessandroNarduzzi26, MiracleObichukwu26]);
-const ft189 = createFantateam(189, "No Scottie Solo Pippen", WEST, [JacopoLoPiccolo26, UmbertoNobile26, MiracleObichukwu26, MattiaMasotti26, ChristianZanet26]);
-const ft190 = createFantateam(190, "I messicani dell' Est", EST, [MassimoMasotti26, MattiaMasotti26, GiacomoSilvestri26, AlessandroCostantini26, PietroSoramel26]);
-const ft191 = createFantateam(191, "Edoparon05*", WEST, [UmbertoNobile26, DavideParon26, EmanueleCorleone26, PaoloZorzi26, NicholasComisso26]);
-const ft192 = createFantateam(192, "Non conosco nessuno*", NORD, [UmbertoNobile26, MassimilianoRossi26, CristianFedrizzi26, AntonioGri26, EmanueleCorleone26]);
-const ft193 = createFantateam(193, "!Birradamezzo¡*", EST, [WilliamIob26, GiovanniTonizzo26, MattiaLanna26, AlessandroRizzi26, AntonioGri26]);
-const ft194 = createFantateam(194, "Gin tonic 2.0*", EST, [GabrieleAzzarone26, GabrieleIndri26, MattiaLanna26, VittorioBasso26, LucaGrillo26]);
-const ft195 = createFantateam(195, "leocrema ciliegia*", NORD, [DavideParon26, MiracleObichukwu26, EmanueleCorleone26, NicholasComisso26, MattiaMasotti26]);
-const ft196 = createFantateam(196, "bigulin 2*", NORD, [UmbertoNobile26, GiacomoPiacentini26, MarcoRizzi26, CristianFedrizzi26, NicolaCollavini26]);
-const ft197 = createFantateam(197, "Mariute*", NORD, [LeonardoTirelli26, MassimilianoMoretti26, GiacomoPiacentini26, AlessandroSantin26, DevinChiarcos26]);
-const ft198 = createFantateam(198, "Denidaky*", WEST, [MassimilianoMoretti26, AlessandroSant26, DevinChiarcos26, GiovanniDalFarra26, GiacomoFerigo26]);
-const ft199 = createFantateam(199, "I bambocci *", EST, [GabrieleMiani26, MiracleObichukwu26, EmanueleCorleone26, LucaDonati26, LucaGemo26]);
-const ft200 = createFantateam(200, "Didii*", WEST, [DavideParon26, SamuelMasotti26, EmanueleCorleone26, SebastianoTonizzo26, UmbertoNobile26]);
-const ft201 = createFantateam(201, "I birronipancioni*", WEST, [UmbertoNobile26, DavideParon26, KevinGigante26, EmanueleCorleone26, NicholasComisso26]);
-const ft202 = createFantateam(202, "Palio Sleepers", NORD, [DanieleGanzit26, ThomasGrillo26, EugenioDeTina26, ThomasBaracetti26, MauroPerina26]);
+const ft134 = createFantateam(134, "Le bimbe di Wasa", WEST, [LarryTrevisan26, EmanueleCorleone26, MattiaAnedda26, MarcoComisso26, MicheleDeAnna26]);
+const ft135 = createFantateam(135, "BAMBALAU", WEST, [MicheleDeAnna26, AlessioFurlan26, LucaSoramel26, MattiaAnedda26, MarcoRizzi26]);
+const ft136 = createFantateam(136, "Barzottini", WEST, [UmbertoNobile26, MicheleDeAnna26, MiracleObichukwu26, MarcoComisso26, GiovanniDalFarra26]);
+const ft137 = createFantateam(137, "The bughiners🐸", SUD, [UmbertoNobile26, ValentinoCigainero26, LucaSoramel26, MarcoComisso26, MiracleObichukwu26]);
+const ft138 = createFantateam(138, "101% Palio", WEST, [MarcoRizzi26, MassimilianoMoretti26, LucaDellaLonga26, ValentinoCigainero26, MattiaMasotti26]);
+const ft139 = createFantateam(139, "Paliosmash", WEST, [GabrieleIndri26, MarcoRizzi26, EmanueleCorleone26, MarcoPolo26, AlessandroSant26]);
+const ft140 = createFantateam(140, "I mici da kinshasa", NORD, [AlessandroRizzi26, EnricoBravin26, MattiaMasotti26, MarcoRizzi26, AlessandroGalassi26]);
+const ft141 = createFantateam(141, "Trova l'intruso", EST, [MarcoGemo26, LucaGemo26, StefanoPolano26, MarcoSerrao26, MattiaMasotti26]);
+const ft142 = createFantateam(142, "SettimanaSanta", NORD, [GiovanniZanin26, FilippoSappa26, MarcoRizzi26, ValentinoCigainero26, EnricoSant26]);
+const ft143 = createFantateam(143, "Non lo so x2", WEST, [MassimilianoMoretti26, LarryTrevisan26, GiacomoFerigo26, MatteoMargarit26, LucaDellaLonga26]);
+const ft144 = createFantateam(144, "I figli di Raj", SUD, [PietroSoramel26, AlessandroRizzi26, AlessandroCostantini26, AlexMicottis26, NicholasComisso26]);
+const ft145 = createFantateam(145, "Trevi BC", SUD, [AlessandroSant26, VittorioBasso26, EdoardoPicogna26, GiacomoSpagnolo26, KevinGigante26]);
+const ft146 = createFantateam(146, "Incredibile", EST, [DevinChiarcos26, MattiaAnedda26, EmanueleDaneluzzi26, MicheleDeAnna26, MarcoRizzi26]);
+const ft147 = createFantateam(147, "I Buzzoli", EST, [GabrieleIndri26, MicheleDeAnna26, AlexMicottis26, ValentinoCigainero26, MarcoComisso26]);
+const ft148 = createFantateam(148, "Gabry12", WEST, [MassimilianoMoretti26, SamuelMasotti26, DavideParon26, NicolaCollavini26, MassimilianoRossi26]);
+const ft149 = createFantateam(149, "Fc Skudrinje", NORD, [GabrieleMiani26, MarcoRizzi26, ValentinoCigainero26, EmanueleCorleone26, GiacomoFerigo26]);
+const ft150 = createFantateam(150, "Bocadillos", WEST, [AndreaMoretti26, DavidGaspardo26, MassimilianoRossi26, PietroSoramel26, ChristianZanet26]);
+const ft151 = createFantateam(151, "Scartizan Cod", SUD, [VittorioGri26, AlessandroCostantini26, DenisVanin26, DevinChiarcos26, AlessandroSantin26]);
+const ft152 = createFantateam(152, "Esteri", EST, [GabrieleIndri26, GiacomoSpagnolo26, GabrieleAzzarone26, MiracleObichukwu26, MassimoMasotti26]);
+const ft153 = createFantateam(153, "little gay boys", SUD, [WilliamIob26, DavidGaspardo26, ChristianZanet26, DevinChiarcos26, MassimoMasotti26]);
+const ft154 = createFantateam(154, "Ghisamuel", EST, [MattiaMasotti26, SamuelMasotti26, FilippoPasquon26, VittorioBasso26, DevinChiarcos26]);
+const ft155 = createFantateam(155, "Tonno", NORD, [MassimilianoMoretti26, GiacomoPiacentini26, AlessandroSantin26, MarcoRizzi26, CristianFedrizzi26]);
+const ft156 = createFantateam(156, "Margy", WEST, [UmbertoNobile26, MarcoRizzi26, MattiaAnedda26, MiracleObichukwu26, AlessandroGalassi26]);
+const ft157 = createFantateam(157, "Bagnichimici", EST, [FilippoSappa26, MattiaMasotti26, GiacomoPiacentini26, MatteoMargarit26, GiacomoSilvestri26]);
+const ft158 = createFantateam(158, "Zoo_Rehab", WEST, [VittorioBasso26, MassimilianoMoretti26, AlessandroSantin26, ValentinoCigainero26, AntonioGri26]);
+const ft159 = createFantateam(159, "Irisamatt masottis", EST, [MarcoGemo26, MassimoMasotti26, SamuelMasotti26, MattiaMasotti26, AlessandroCostantini26]);
+const ft160 = createFantateam(160, "PalomaPaloma", WEST, [UmbertoNobile26, LucaSoramel26, EmanueleCorleone26, MiracleObichukwu26, ValentinoCigainero26]);
+const ft161 = createFantateam(161, "Air Ball Academy", NORD, [MicheleDeAnna26, MarcoSerrao26, AlessandroSantin26, ValentinoCigainero26, AntonioGri26]);
+const ft162 = createFantateam(162, "Zero fantasia", EST, [MassimilianoMoretti26, VittorioBasso26, MarcoRizzi26, MattiaAnedda26, LucaDellaLonga26]);
+const ft163 = createFantateam(163, "A nord siamo nerd", NORD, [VittorioBasso26, UmbertoNobile26, MatteoMargarit26, SebastianoTonizzo26, FilippoAgnoluzzi26]);
+const ft164 = createFantateam(164, "Palle ESTrose", EST, [GabrieleIndri26, CristianFedrizzi26, MattiaAnedda26, ValentinoCigainero26, MiracleObichukwu26]);
+const ft165 = createFantateam(165, "EST the BEST", EST, [VittorioBasso26, EnricoBravin26, MicheleDeAnna26, ValentinoCigainero26, EdoardoPicogna26]);
+const ft166 = createFantateam(166, "Ginger", NORD, [UmbertoNobile26, EnricoBravin26, EmanueleCorleone26, GiacomoSilvestri26, AlessandroGalassi26]);
+const ft167 = createFantateam(167, ".", NORD, [VittorioBasso26, DevinChiarcos26, MassimoMasotti26, MattiaCollavini26, DavidGaspardo26]);
+const ft168 = createFantateam(168, "Che gran GioCatta", EST, [UmbertoNobile26, VittorioGri26, NicholasComisso26, PietroGioeleGolizia26, EnricoSant26]);
+const ft169 = createFantateam(169, "G I JOE", WEST, [GiacomoPiacentini26, UmbertoNobile26, GiacomoSilvestri26, MarcoComisso26, MatteoMargarit26]);
+const ft170 = createFantateam(170, "Zontane n'altra", EST, [GabrieleIndri26, AlessandroCostantini26, AlexMicottis26, GiacomoFerigo26, LucaDellaLonga26]);
+const ft171 = createFantateam(171, "Winx club", EST, [VittorioGri26, MarcoRizzi26, AlessandroSant26, LucaSoramel26, MattiaAnedda26]);
+const ft172 = createFantateam(172, "Rivis Apricots", NORD, [VittorioGri26, UmbertoNobile26, MatteoGrillo26, FilippoAgnoluzzi26, GiacomoSilvestri26]);
+const ft173 = createFantateam(173, "GinTonic", WEST, [KevinGigante26, MicheleDeAnna26, UmbertoNobile26, AlessandroGalassi26, FrancescoSchiavone26]);
+const ft174 = createFantateam(174, "dream team", SUD, [VittorioBasso26, UmbertoNobile26, GiacomoFerigo26, MarcoRizzi26, MarcoPolo26]);
+const ft175 = createFantateam(175, "Scatta il crampo", WEST, [MarcoRizzi26, MassimilianoMoretti26, DevinChiarcos26, GabrieleAzzarone26, ValentinoCigainero26]);
+const ft176 = createFantateam(176, "Atletico Madrink", SUD, [UmbertoNobile26, SamuelMasotti26, GiacomoSilvestri26, PaoloZorzi26, MarcoComisso26]);
+const ft177 = createFantateam(177, "Stonedbrother", WEST, [MassimilianoMoretti26, PietroSoramel26, ValentinoCigainero26, GabrieleAzzarone26, DavideBroggi26]);
+const ft178 = createFantateam(178, "Bea$t", WEST, [AlessandroRizzi26, AlessandroSant26, PietroSoramel26, MarcoPolo26, MarcoRizzi26]);
+const ft179 = createFantateam(179, "Colla's n****s", NORD, [MiracleObichukwu26, MicheleDeAnna26, VittorioBasso26, GabrieleAzzarone26, DevinChiarcos26]);
+const ft180 = createFantateam(180, "Chiengers", SUD, [EnricoBravin26, UmbertoNobile26, MarcoGemo26, EmanueleCorleone26, CristianFedrizzi26]);
+const ft181 = createFantateam(181, "Depstiaccoppo", WEST, [LarryTrevisan26, MicheleDeAnna26, ValentinoCigainero26, DevinChiarcos26, GiacomoFerigo26]);
+const ft182 = createFantateam(182, "Paliobestchoice", NORD, [MattiaAnedda26, EdoardoPicogna26, MassimilianoMoretti26, GabrieleAzzarone26, MatteoGrillo26]);
+const ft183 = createFantateam(183, "Le rane di Rivis", NORD, [MattiaAnedda26, StefanoPolano26, EdoardoPicogna26, MassimilianoMoretti26, MarcoComisso26]);
+const ft184 = createFantateam(184, "misto anedda", EST, [MattiaAnedda26, LarryTrevisan26, MattiaMasotti26, MattiaLanna26, LeonardoTirelli26]);
+const ft185 = createFantateam(185, "pirlasv", NORD, [GabrieleMiani26, MarcoRizzi26, ThomasDriussi26, AlessandroNarduzzi26, MiracleObichukwu26]);
+const ft186 = createFantateam(186, "No Scottie Solo Pippen", WEST, [JacopoLoPiccolo26, UmbertoNobile26, MiracleObichukwu26, MattiaMasotti26, ChristianZanet26]);
+const ft187 = createFantateam(187, "I messicani dell' Est", EST, [MassimoMasotti26, MattiaMasotti26, GiacomoSilvestri26, AlessandroCostantini26, PietroSoramel26]);
+const ft188 = createFantateam(188, "Edoparon05", WEST, [UmbertoNobile26, DavideParon26, EmanueleCorleone26, PaoloZorzi26, NicholasComisso26]);
+const ft189 = createFantateam(189, "Non conosco nessuno", NORD, [UmbertoNobile26, MassimilianoRossi26, CristianFedrizzi26, AntonioGri26, EmanueleCorleone26]);
+const ft190 = createFantateam(190, "!Birradamezzo¡", EST, [WilliamIob26, GiovanniTonizzo26, MattiaLanna26, AlessandroRizzi26, AntonioGri26]);
+const ft191 = createFantateam(191, "Gin tonic 2.0", EST, [GabrieleAzzarone26, GabrieleIndri26, MattiaLanna26, VittorioBasso26, LucaGrillo26]);
+const ft192 = createFantateam(192, "leocrema ciliegia", NORD, [DavideParon26, MiracleObichukwu26, EmanueleCorleone26, NicholasComisso26, MattiaMasotti26]);
+const ft193 = createFantateam(193, "Denidaky", WEST, [MassimilianoMoretti26, AlessandroSant26, DevinChiarcos26, GiovanniDalFarra26, GiacomoFerigo26]);
+const ft194 = createFantateam(194, "Didii", WEST, [DavideParon26, SamuelMasotti26, EmanueleCorleone26, SebastianoTonizzo26, UmbertoNobile26]);
+const ft195 = createFantateam(195, "I birronipancioni", WEST, [UmbertoNobile26, DavideParon26, KevinGigante26, EmanueleCorleone26, NicholasComisso26]);
+const ft196 = createFantateam(196, "Palio Sleepers", NORD, [DanieleGanzit26, ThomasGrillo26, EugenioDeTina26, ThomasBaracetti26, MauroPerina26]);
 
 const fantateams26 = [
   ft1, ft2, ft3, ft4, ft5, ft6, ft7, ft8, ft9, ft10, ft11, ft12, ft13, ft14, ft15, ft16, ft17, ft18, ft19, ft20, ft21, ft22, ft23, ft24, ft25, ft26, ft27, ft28, ft29, ft30, 
   ft31, ft32, ft33, ft34, ft35, ft36, ft37, ft38, ft39, ft40, ft41, ft42, ft43, ft44, ft45, ft46, ft47, ft48, ft49, ft50, ft51, ft52, ft53, ft54, ft55, ft56, ft57, ft58, ft59, ft60, 
   ft61, ft62, ft63, ft64, ft65, ft66, ft67, ft68, ft69, ft70, ft71, ft72, ft73, ft74, ft75, ft76, ft77, ft78, ft79, ft80, ft81, ft82, ft83, ft84, ft85, ft86, ft87, ft88, ft89, ft90, 
   ft91, ft92, ft93, ft94, ft95, ft96, ft97, ft98, ft99, ft100, ft101, ft102, ft103, ft104, ft105, ft106, ft107, ft108, ft109, ft110, ft111, ft112, ft113, ft114, ft115, ft116, ft117, ft118, ft119, ft120, 
-  ft121, ft122, ft123, ft124, ft125, ft126, ft127, ft128, ft129, ft130, ft131, ft132, ft133,        ft135, ft136, ft137, ft138, ft139, ft140, ft141, ft142, ft143, ft144, ft145, ft146, ft147, ft148, ft149, ft150, 
+  ft121, ft122, ft123, ft124, ft125, ft126, ft127, ft128, ft129, ft130, ft131, ft132, ft133, ft134, ft135, ft136, ft137, ft138, ft139, ft140, ft141, ft142, ft143, ft144, ft145, ft146, ft147, ft148, ft149, ft150, 
   ft151, ft152, ft153, ft154, ft155, ft156, ft157, ft158, ft159, ft160, ft161, ft162, ft163, ft164, ft165, ft166, ft167, ft168, ft169, ft170, ft171, ft172, ft173, ft174, ft175, ft176, ft177, ft178, ft179, ft180, 
-  ft181, ft182, ft183, ft184, ft185, ft186, ft187, ft188, ft189, ft190, ft191, ft192, ft193, ft194, ft195, ft196, ft197, ft198, ft199, ft200, ft201, ft202
+  ft181, ft182, ft183, ft184, ft185, ft186, ft187, ft188, ft189, ft190, ft191, ft192, ft193, ft194, ft195, ft196
 ];
-
-// 2026: cancellare ft1, ft2, ft3, ft15, ft30, ft70, ft75, ft86, ft88, ft89, ft98,
-//                  ft104, ft125, ft126
 // PULITI SU GSHEET INIZIALE
 
 
