@@ -1,4 +1,4 @@
-import { fantateams , what_day_is_it, coachWeights} from './data260713_0322.js';
+import { fantateams , what_day_is_it, coachWeights} from './data260713_0323.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("teamDetails");
@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <p>Punti coppa chiosco: <b>${selectedTeam.rione.chiosco_bonus}</b></p>
             `;
         }
-        if (what_day_is_it >= 6) {
+        if (what_day_is_it >= 1) {
             rioneHtml += `<p class="total">Totale: ${selectedTeam.rione.final_points}</p>`;
         }
                         
