@@ -32,7 +32,7 @@ import {
     TD3_0SU10          ,
     TD3_CIAB           ,
     TD3_ALTRI_MEME     ,
-} from '../data260713_0326.js';
+} from '../data260713_0328.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const playerCardsContainer = document.getElementById('playerCardsContainer');
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (game_stats[STL] !== 0) statsHtml += `<p>Palle recuperate: <strong>${formatValue(game_stats[STL] * pdkWeights[STL])}</strong> (${game_stats[STL]} STL)</p>`;
             if (game_stats[TO] !== 0) statsHtml += `<p>Palle perse: <strong>${formatValue(game_stats[TO] * pdkWeights[TO])}</strong> (${game_stats[TO]} TO)</p>`;
             if (game_stats[BLK] !== 0) statsHtml += `<p>Stoppate: <strong>${formatValue(game_stats[BLK] * pdkWeights[BLK])}</strong> (${game_stats[BLK]} BLK)</p>`;
-            if (game_stats[T3P] !== 0) statsHtml += `<p>Triple segnate: <strong>${formatValue(game_stats[T3P] * pdkWeights[T3P])}</strong> (${game_stats[T3P]} 3PM)</p>`;
+            // if (game_stats[T3P] !== 0) statsHtml += `<p>Triple segnate: <strong>${formatValue(game_stats[T3P] * pdkWeights[T3P])}</strong> (${game_stats[T3P]} 3PM)</p>`;
             if (game_stats[T2PX] !== 0 || game_stats[T3PX] !== 0) statsHtml += `<p>Tiri sbagliati: <strong>${formatValue((game_stats[T2PX] * pdkWeights[T2PX]) + (game_stats[T3PX] * pdkWeights[T3PX]))}</strong> (${game_stats[T2PX]+ game_stats[T3PX]} miss)</p>`;
             if (game_stats[FTX] !== 0) statsHtml += `<p>Tiri liberi sbagliati: <strong>${formatValue(game_stats[FTX] * pdkWeights[FTX])}</strong> (${game_stats[FTX]} miss)</p>`;
             if (game_stats[DD] !== 0) statsHtml += `<p>Doppia doppia: <strong>${formatValue(game_stats[DD] * pdkWeights[DD])}</strong></p>`;
@@ -252,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // // Old working version with no stats:
 // import {
 //     players
-// } from '../data260713_0326.js';
+// } from '../data260713_0328.js';
 
 // document.addEventListener('DOMContentLoaded', () => {
 //     const playerCardsContainer = document.getElementById('playerCardsContainer');
