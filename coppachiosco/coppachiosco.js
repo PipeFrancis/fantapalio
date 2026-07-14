@@ -1,10 +1,10 @@
-import { rioni25 } from '../data260715_0007.js';
+import { rioni } from '../data260715_0010.js';
 
 window.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector('.team_detail_team-cards-container1');
 
-    // Sort the rioni25 array in descending order by chiosco_tot
-    const sortedRioni = [...rioni25].sort((a, b) => b.chiosco_tot - a.chiosco_tot);
+    // Sort the rioni array in descending order by chiosco_tot
+    const sortedRioni = [...rioni].sort((a, b) => b.chiosco_tot - a.chiosco_tot);
 
     sortedRioni.forEach(rione => {
         const card = document.createElement('div');
