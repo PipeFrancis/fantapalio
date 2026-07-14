@@ -836,7 +836,7 @@ const NORD = NORD26;
 const SUD  = SUD26;
 const EST  = EST26;
 const WEST = WEST26;
-const rioni = rioni26
+const rioni = rioni26;
 // 
 
 // -----------------------------------------------------------------------------------------------
