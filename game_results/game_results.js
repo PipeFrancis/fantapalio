@@ -1,6 +1,6 @@
 import {
   game_results_array   
-} from '../data260714_0159.js';
+} from '../data260714_0203.js';
 
 const teamClassMap = {
   'SUD': 'score_sud',
@@ -104,3 +104,4 @@ function renderGameResults() {
 
 // Run after DOM is ready
 window.addEventListener('DOMContentLoaded', renderGameResults);
+console.log(game_results_array);
