@@ -1,6 +1,6 @@
 import {
   game_results_array   
-} from '../data260714_2014.js';
+} from '../data260715_0007.js';
 
 const teamClassMap = {
   'SUD': 'score_sud',
