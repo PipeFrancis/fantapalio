@@ -269,7 +269,7 @@ KevinGigante26.stats_g3                 =      [0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0,
 
 
 // stats_semi
-GabrieleMiani26.stats_semi              =      [0, 1, 1, 1, 4, 6, 0, 7, 6, 0, 0, 3, 2, 0, 0, 0, 0, 1, 11]; //
+GabrieleMiani26.stats_semi              =      [0, 1, 1, 1, 4, 6, 0, 7, 6, 0, 0, 3, 2, 0, 0, 0, 0, 1, 14]; //
 DavidGaspardo26.stats_semi              =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]; //
 AlessandroRizzi26.stats_semi            =      [0, 3, 1, 0, 3, 2, 1, 0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 1, 3]; //
 MarcoLombardo26.stats_semi              =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]; //
@@ -277,8 +277,8 @@ FilippoPasquon26.stats_semi             =      [0, 1, 6, 2, 3, 1, 1, 3, 2, 0, 0,
 VittorioGri26.stats_semi                =      [0, 2, 3, 0, 2, 0, 0, 10, 3, 0, 2, 3, 2, 2, 0, 0, 0, 1, 13]; //
 VittorioBasso26.stats_semi              =      [0, 3, 3, 0, 2, 0, 1, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]; //
 EnricoBravin26.stats_semi               =      [0, 1, 0, 0, 1, 0, 0, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 13]; //
-LucaDonati26.stats_semi                 =      [0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 0, 0, 0, 0, 1, 1]; //
-MarcoRizzi26.stats_semi                 =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4]; //
+LucaDonati26.stats_semi                 =      [0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 0, 0, 0, 0, 1, 4]; //
+MarcoRizzi26.stats_semi                 =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 7]; //
 DanieleGanzit26.stats_semi              =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]; //
 GiacomoSilvestri26.stats_semi           =      [0, 2, 3, 0, 1, 0, 0, 3, 1, 0, 2, 0, 1, 0, 1, 0, 0, 1, 0]; //
 AntonioGri26.stats_semi                 =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]; //
@@ -308,7 +308,7 @@ MarcoComisso26.stats_semi               =      [0, 2, 2, 1, 2, 0, 0, 2, 0, 0, 1,
 AlessandroGalassi26.stats_semi          =      [0, 1, 2, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0]; //
 NicholasComisso26.stats_semi            =      [0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2]; //
 BrunoMarchesi26.stats_semi              =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
-GabrieleIndri26.stats_semi              =      [0, 5, 3, 0, 3, 0, 0, 1, 0, 0, 5, 2, 0, 0, 0, 0, 0, 0, 1]; //
+GabrieleIndri26.stats_semi              =      [0, 5, 3, 0, 3, 0, 0, 1, 0, 0, 5, 2, 0, 0, 0, 0, 0, 0, 4]; //
 MarcoSerrao26.stats_semi                =      [0, 0, 1, 0, 3, 3, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 1]; //
 WilliamIob26.stats_semi                 =      [0, 5, 2, 0, 0, 1, 1, 3, 2, 0, 0, 0, 2, 1, 0, 0, 0, 0, 3]; //
 MattiaMasotti26.stats_semi              =      [0, 3, 2, 1, 0, 2, 5, 2, 3, 0, 4, 1, 2, 0, 0, 0, 0, 0, 2]; //
@@ -326,13 +326,13 @@ LucaGemo26.stats_semi                   =      [0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0,
 MauroPerina26.stats_semi                =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
 MatteoGrillo26.stats_semi               =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]; //
 LucaGrillo26.stats_semi                 =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]; //
-DenisVanin26.stats_semi                 =      [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3]; //
+DenisVanin26.stats_semi                 =      [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6]; //
 MarcoPolo26.stats_semi                  =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
 MarcoGemo26.stats_semi                  =      [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 2]; //
 GabrieleVecciolini26.stats_semi         =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //
 PietroGioeleGolizia26.stats_semi        =      [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 2]; //
 UmbertoNobile26.stats_semi              =      [0, 5, 3, 3, 3, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]; //
-MassimilianoMoretti26.stats_semi        =      [0, 6, 2, 0, 1, 0, 5, 10, 4, 0, 6, 2, 5, 2, 0, 0, 0, 1, 2]; //
+MassimilianoMoretti26.stats_semi        =      [0, 6, 2, 0, 1, 0, 5, 10, 4, 0, 6, 2, 5, 2, 0, 0, 0, 1, 14]; //
 LarryTrevisan26.stats_semi              =      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]; //
 AlessandroCostantini26.stats_semi       =      [0, 4, 2, 0, 3, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 4]; //
 AlessandroSant26.stats_semi             =      [0, 0, 0, 1, 3, 1, 0, 5, 0, 0, 2, 2, 1, 0, 0, 0, 0, 1, 3]; //
@@ -470,8 +470,8 @@ if(coachTM >= 3){
 }
 if(coachTM >= 4){
     NORD26.coach_semi_stats     = [0,0];
-    SUD26.coach_semi_stats      = [0,16];
-    EST26.coach_semi_stats      = [0,1];
+    SUD26.coach_semi_stats      = [0,19];
+    EST26.coach_semi_stats      = [0,4];
     WEST26.coach_semi_stats     = [0,9];
 }
 if(coachTM >= 5){
