@@ -36,7 +36,7 @@ import { players, pdkWeights, td3Weights, what_day_is_it, td3_bonus_passadaprimo
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260717_1059.js';
+} from '../data260717_1112.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("playerDetails");
