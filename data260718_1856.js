@@ -722,12 +722,15 @@ EST26.chiosco_g3     =  911 - 700;
 SUD26.chiosco_g3     =  708 - 530; 
 NORD26.chiosco_g3    =  576 - 458; 
 
-// WEST26.chiosco_semi = 1791 - 1180; 
-// EST26.chiosco_semi = 1860 - 1300; 
-// SUD26.chiosco_semi = 1298 - 1075; 
-// NORD26.chiosco_semi = 1136 - 875; 
+WEST26.chiosco_semi = 963  - 726; 
+EST26.chiosco_semi = 1258   - 911; 
+SUD26.chiosco_semi = 882   - 708; 
+NORD26.chiosco_semi = 897  - 576; 
 
-    // manca td3 skippato dato preciso
+WEST26.chiosco_semi = 1320  - 963; 
+EST26.chiosco_semi = 1680   - 1258; 
+SUD26.chiosco_semi = 1210   - 882; 
+NORD26.chiosco_semi = 1270  - 897; 
 
 // WEST26.chiosco_final = 2730 - 1791;
 // EST26.chiosco_final = 2970 - 1860;
