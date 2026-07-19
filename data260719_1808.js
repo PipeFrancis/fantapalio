@@ -734,10 +734,10 @@ SUD26.chiosco_td3 = 1210   - 882;
 NORD26.chiosco_td3 = 1270  - 897; 
  
 
-WEST26.chiosco_final = 1456 - 1320;
-EST26.chiosco_final = 1914 - 1680;
-SUD26.chiosco_final = 1400 - 1210;
-NORD26.chiosco_final = 1503 - 1270;
+WEST26.chiosco_final = 1617 - 1320;
+EST26.chiosco_final = 1994 - 1680;
+SUD26.chiosco_final = 1495 - 1210;
+NORD26.chiosco_final = 1674 - 1270;
 
 // end BIRRE CHIOSCO
 
