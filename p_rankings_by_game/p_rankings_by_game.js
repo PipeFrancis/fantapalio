@@ -32,7 +32,7 @@ import {
     TD3_0SU10          ,
     TD3_CIAB           ,
     TD3_ALTRI_MEME     ,
-} from '../data260719_1601.js';
+} from '../data260719_1612.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const playerCardsContainer = document.getElementById('playerCardsContainer');
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let statsHtml = `
                 <h3>${index + 1}. ${selectedPlayer.name}</h3>
                 <p>#${selectedPlayer.number}</p>
-                <p>Totale: <span class="totalpointsindex">${score}</span></p><br>
+                <p>Totale: <span class="totalpointsindex">${score.toFixed(2)}</span></p><br>
             `;
             
             // Mette dentro solo stats non nulle
@@ -252,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // // Old working version with no stats:
 // import {
 //     players
-// } from '../data260719_1601.js';
+// } from '../data260719_1612.js';
 
 // document.addEventListener('DOMContentLoaded', () => {
 //     const playerCardsContainer = document.getElementById('playerCardsContainer');
