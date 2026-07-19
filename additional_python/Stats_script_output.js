@@ -571,7 +571,7 @@ if(coachTM >= 5){
     WEST26.coach_td3_stats      = [0,0];
 }
 if(coachTM >= 6){
-    NORD26.coach_final_stats    = [0,0];
+    NORD26.coach_final_stats    = [0,-3];
     SUD26.coach_final_stats     = [0,0];
     EST26.coach_final_stats     = [0,0];
     WEST26.coach_final_stats    = [0,0];
