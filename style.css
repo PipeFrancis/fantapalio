@@ -705,7 +705,10 @@ footer {
     color: var(--est-color1);
     border-radius: 25px;
 }
-.cardselectedEST .cardselectedWEST .cardselectedNORD .cardselectedSUD{
+.cardselectedEST,
+.cardselectedWEST,
+.cardselectedNORD,
+.cardselectedSUD{
     background-color: var(--main-color3);
     border: 6px solid var(--main-color2);
     color: var(--main-color4);
