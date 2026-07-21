@@ -710,7 +710,7 @@ footer {
 .cardselectedNORD,
 .cardselectedSUD{
     background-color: var(--main-color3);
-    border: 6px solid var(--main-color4);
+    border: 8px solid var(--main-color4);
     color: var(--main-color4);
 }
 
