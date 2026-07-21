@@ -971,6 +971,7 @@ td { /* tutto serve per sfondo immagine*/
 #your-team{
   margin-top: 5px;
   margin-bottom: 5px;
+  border: 3px solid var(--main-color4);
 }
 
 .totalteamcard{
