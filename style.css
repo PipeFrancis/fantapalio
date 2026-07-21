@@ -680,7 +680,30 @@ footer {
                 url('./images/carte2026/EST-cropped.svg');
 }
 
-
+.cardselectedWEST{
+    background-color: var(--west-color2);
+    border: 6px solid var(--west-color1);
+    color: var(--west-color1);
+    border-radius: 25px;
+}
+.cardselectedNORD{
+    background-color: var(--nord-color2);
+    border: 6px solid var(--nord-color1);
+    color: var(--nord-color1);
+    border-radius: 25px;
+}
+.cardselectedSUD{
+    background-color: var(--sud-color2);
+    border: 6px solid var(--sud-color1);
+    color: var(--sud-color1);
+    border-radius: 25px;
+}
+.cardselectedEST{
+    background-color: var(--est-color3);
+    border: 6px solid var(--est-color2);
+    color: var(--est-color1);
+    border-radius: 25px;
+}
 
 
 

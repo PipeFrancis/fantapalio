@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260721_2003.js';
+import { players, player_history_array } from '../data260721_1950.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -376,11 +376,6 @@ function addPlayer(player) {
     selectedPlayers.push(player);
     totalCost += player.cost;
 
-    const cardInList = document.querySelector(`#playersContainer [data-player-name="${CSS.escape(player.name)}"]`);
-    if (cardInList) {
-        cardInList.classList.add(`cardselected${player.team}`);
-    }
-
     // Aggiorna l'interfaccia del team
     renderTeam();
     updateCreditsCounter();
@@ -390,11 +385,7 @@ function addPlayer(player) {
 function removePlayer(index) {
     const removedPlayer = selectedPlayers.splice(index, 1)[0];
     totalCost -= removedPlayer.cost;
-    
-    const cardInList = document.querySelector(`#playersContainer [data-player-name="${CSS.escape(removedPlayer.name)}"]`);
-    if (cardInList) {
-        cardInList.classList.remove(`cardselected${removedPlayer.team}`);
-    }       
+
     // Aggiorna l'interfaccia del team
     renderTeam();
     updateCreditsCounter();
@@ -570,10 +561,6 @@ function populatePlayersList() {
     function renderPlayerCard(player) {
         const playerCard = document.createElement('div');
         playerCard.classList.add('player-card1', `cardclass${player.team}`);
-        
-        // Store the player's identifier directly on the DOM element dataset
-        playerCard.dataset.playerName = player.name;
-        
         playerCard.innerHTML = `
             <p><b>${player.name}</b></p>
             <p><b>${player.team}</b> &emsp; <b>$${player.cost}</b></p>
