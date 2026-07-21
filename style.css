@@ -749,14 +749,20 @@ footer {
     scrollbar-color: var(--main-color3) white;
 }
 
-#creditsCounter { /*aggiunto tutto per avere credits counter che vola sopra*/
+#creditsCounter {
     position: sticky;
-    top: 0; /* Si aggancia alla cima dello schermo durante lo scroll */
-    z-index: 100; /* Assicura che rimanga sopra alle card dei giocatori */
-    background-color: #1a1a1a; /* Imposta uno sfondo solido (adatta il colore al tuo tema) per non far vedere le card sotto in trasparenza */
-    padding: 10px 0;
+    top: 0;
+    z-index: 100;
+    background-color: var(--main-color1); /* Imposta lo sfondo del tuo sito */
+    padding: 10px 15px;
     margin: 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Un leggero'ombra per dare l'effetto "fluttuante" */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+/* Stile speciale per quando la squadra è completa e valida */
+#creditsCounter.is-valid {
+    background-color: green; /* Es. uno sfondo leggermente verdastro per dare risalto */
 }
 
 .player-card1 {
