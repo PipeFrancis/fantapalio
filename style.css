@@ -771,7 +771,7 @@ footer {
 
 /* Stile speciale per quando la squadra è completa e valida */
 #creditsCounter.is-valid {
-    background-color: rgb(0, 206, 0); /* Es. uno sfondo leggermente verdastro per dare risalto */
+    background-color: green; /* Es. uno sfondo leggermente verdastro per dare risalto */
 }
 
 .player-card1 {

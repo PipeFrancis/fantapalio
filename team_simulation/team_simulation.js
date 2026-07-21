@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260721_2143.js';
+import { players, player_history_array } from '../data260721_2146.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -565,7 +565,7 @@ function updateCreditsCounter() {
     if (selectedPlayers.length === 5) {
         // Quando ci sono 5 giocatori: sostituisce il contatore crediti
         creditsCounter.classList.add('is-valid');
-        creditsCounter.innerHTML = `✅ <b><span class="green_text">VALIDA</span></b> - Totale: <b><span class="orange_text_light">$${totalCost}</span></b>`;
+        creditsCounter.innerHTML = `✅ <b><span class="green_text">VALIDA</span></b> - Totale: <b>$${totalCost}/30</b>`;
     } else {
         // Quando ci sono meno di 5 giocatori: mostra i crediti rimanenti
         creditsCounter.classList.remove('is-valid');
