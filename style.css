@@ -959,9 +959,8 @@ td { /* tutto serve per sfondo immagine*/
   border-radius: 12px;
 }
 .highlighted-text2 {
-  color: var(--main-color2);
-  /* background-color: black; */
-  background-color: white;
+  color: var(--main-color4);
+  background-color: var(--main-color3);
   padding: 0.2em 0.4em;
   border-radius: 12px;
 }
