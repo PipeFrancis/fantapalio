@@ -714,14 +714,15 @@ footer {
     display: flex; 
     flex-wrap: wrap; 
     justify-content: center; 
-    max-height: 400px; 
-    overflow-y: scroll; 
+    /* max-height: 400px;  removed for no scroll inside*/
+    /* overflow-y: scroll;  removed for no scroll inside*/
     margin-bottom: 5px; 
     gap: 5px; 
     touch-action: pan-y; 
-    -webkit-overflow-scrolling: touch; 
+    /* -webkit-overflow-scrolling: touch;  removed for no scroll inside*/
 
-    box-sizing: content-box !important;
+    /* box-sizing: content-box !important; changed for no scroll inside*/ 
+    box-sizing: border-box;
     padding-right: 8px; /* Lasciamo 5px di spazio vuoto a destra */
 
 }
