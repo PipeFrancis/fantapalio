@@ -1,5 +1,5 @@
 // Importa l'array di giocatori dal modulo esterno
-import { players, player_history_array } from '../data260721_2049.js';
+import { players, player_history_array } from '../data260721_2053.js';
 // const players=players25; // messo questo, da updeateare ogni anno ma sticazzi
 // https://script.google.com/macros/s/AKfycbxajrln9ImXrubissUw8sgeGcYdDOspUAdrA_RlRzNsPzM05lt4mB_h7rd5h91hB8q-Hg/exec
 // Variabili globali per tenere traccia dei giocatori selezionati e dei crediti totali
@@ -347,27 +347,31 @@ function removeActivePopup() {
 }
 // HISTORY END (of starting stuff, then used in other following functions)
 
-// Funzione per aggiungere un giocatore al team
+// Funzione per aggiungere o rimuovere (toggle) un giocatore nel team
 function addPlayer(player) {
-    // Verifica se il numero di giocatori selezionati ha raggiunto il limite di 5
+    // 1. Controlla se il giocatore è già presente nel team
+    const existingIndex = selectedPlayers.findIndex(p => p.name === player.name);
+
+    // Se è già stato selezionato, lo rimuoviamo ed usciamo
+    if (existingIndex !== -1) {
+        removePlayer(existingIndex);
+        return;
+    }
+
+    // 2. Verifica se il numero di giocatori selezionati ha raggiunto il limite di 5
     if (selectedPlayers.length >= 5) {
         alert("Hai già selezionato il numero massimo di giocatori.");
         return;
     }
 
-    // Verifica se il giocatore è già presente nel team
-    if (selectedPlayers.some(p => p.name === player.name)) {
-        alert("Questo giocatore è già stato selezionato.");
-        return;
-    }
-
-    // Verifica se il totale dei crediti supera il limite
+    // 3. Verifica se il totale dei crediti supera il limite
     if (totalCost + player.cost > maxCredits) {
         alert("Hai già speso troppo per prendere questo giocatore.");
         return;
     }
-    // da capire se lasciare questo controllo o lasciarli arrivare in fondo da soli e poi devono cambiarne diversi quando si rendono conto
-    if (totalCost + player.cost > maxCredits - 4 * (5 - (selectedPlayers.length + 1))) { // se i crediti che useresti > 4*(giocatori che mancano)
+
+    // 4. Verifica se rimangono abbastanza crediti per completare la rosa (almeno 4 crediti a giocatore)
+    if (totalCost + player.cost > maxCredits - 4 * (5 - (selectedPlayers.length + 1))) {
         alert("Se prendessi questo non potresti completare la squadra, costa troppo.");
         return;
     }

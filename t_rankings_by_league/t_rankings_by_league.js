@@ -2,7 +2,7 @@ import {
     fantateam_type,
     NORD, SUD, EST, WEST,
     fantateams
-} from '../data260721_2049.js';
+} from '../data260721_2053.js';
 
 document.addEventListener('DOMContentLoaded', function() {
 
