@@ -208,8 +208,9 @@ const game_results2026_g1 = createGameResults("NORD", 58, "EST", 48, "SUD", 21, 
 const game_results2026_g2 = createGameResults("NORD", 37, "SUD", 38, "EST", 47, "WEST", 50, "g2");
 const game_results2026_g3 = createGameResults("SUD", 55, "EST", 61, "NORD", 48, "WEST", 67, "g3");
 const game_results2026_semi = createGameResults("WEST", 69, "SUD", 56, "NORD", 53, "EST", 45, "semi");
-// const game_results2026_final = createGameResults("WEST", 680, "NORD", 610, "NO", 0, "NO", 0, "final");
+const game_results2026_final = createGameResults("WEST", 59, "NORD", 55, "NO", 0, "NO", 0, "final");
 const game_results2026_array = [
+    game_results2026_final,
     game_results2026_semi,
     game_results2026_g3,
     game_results2026_g2,
