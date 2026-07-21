@@ -749,6 +749,16 @@ footer {
     scrollbar-color: var(--main-color3) white;
 }
 
+#creditsCounter { /*aggiunto tutto per avere credits counter che vola sopra*/
+    position: sticky;
+    top: 0; /* Si aggancia alla cima dello schermo durante lo scroll */
+    z-index: 100; /* Assicura che rimanga sopra alle card dei giocatori */
+    background-color: #1a1a1a; /* Imposta uno sfondo solido (adatta il colore al tuo tema) per non far vedere le card sotto in trasparenza */
+    padding: 10px 0;
+    margin: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Un leggero'ombra per dare l'effetto "fluttuante" */
+}
+
 .player-card1 {
     flex: 1 0 calc(25% - 10px); /* Calc con spazi tra i bordi */
     max-width: 200px; /* Larghezza massima delle card */
