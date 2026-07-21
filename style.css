@@ -11,6 +11,7 @@
     --main-color3light:rgb(255, 130, 46);
     /* --main-color3:rgb(000, 112, 255); */
     /* --main-color3:rgb(52, 221, 255); */
+    --main-color4:white;
 
     --nord-color1:rgb(255, 50, 50);
     --nord-color2:rgb(0, 0, 0);
@@ -703,6 +704,11 @@ footer {
     border: 6px solid var(--est-color2);
     color: var(--est-color1);
     border-radius: 25px;
+}
+.cardselectedEST .cardselectedWEST .cardselectedNORD .cardselectedSUD{
+    background-color: var(--main-color3);
+    border: 6px solid var(--main-color2);
+    color: var(--main-color4);
 }
 
 
