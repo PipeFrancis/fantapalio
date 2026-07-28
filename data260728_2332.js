@@ -152,12 +152,12 @@ const rione_type = {
 
     coach_total: 0,
 
-    coach_g1_memestats = [],
-    coach_g2_memestats = [],
-    coach_g3_memestats = [],
-    coach_semi_memestats = [],
-    coach_td3_memestats = [],
-    coach_final_memestats = []
+    coach_g1_memestats: [],
+    coach_g2_memestats: [],
+    coach_g3_memestats: [],
+    coach_semi_memestats: [],
+    coach_td3_memestats: [],
+    coach_final_memestats: []
 
     // rione.final_points = rione.chiosco_bonus + rione.final_bonus
     // dove vanno mostrati punteggio coach:
