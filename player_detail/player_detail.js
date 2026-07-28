@@ -36,7 +36,7 @@ import { players, pdkWeights, td3Weights, what_day_is_it, td3_bonus_passadaprimo
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260728_2349.js';
+} from '../data260728_2350.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("playerDetails");
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (game_stats[TD] !== 0) statsHtml += `<p>Tripla doppia: <strong>${formatValue(game_stats[TD] * pdkWeights[TD])}</strong></p>`;
             if (game_stats[EXP] !== 0) statsHtml += `<p>Espulsione: <strong>${formatValue(game_stats[EXP] * pdkWeights[EXP])}</strong></p>`;
             if (game_stats[WIN] !== 0) statsHtml += `<p>Vittoria: <strong>${formatValue(game_stats[WIN] * pdkWeights[WIN])}</strong></p>`;
-            if (game_stats[MEME] !== 0) statsHtml += `<p>Punti meme: <strong>${formatValue(game_stats[MEME] * pdkWeights[MEME])}</strong></p>`;
+            // if (game_stats[MEME] !== 0) statsHtml += `<p>Punti meme: <strong>${formatValue(game_stats[MEME] * pdkWeights[MEME])}</strong></p>`;
 
              // --- Dynamic Meme Stats Loop ---
             if (Array.isArray(memestats) && memestats.length > 0) {
