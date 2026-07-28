@@ -36,7 +36,7 @@ import { players, pdkWeights, td3Weights, what_day_is_it, td3_bonus_passadaprimo
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260728_2347.js';
+} from '../data260728_2349.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("playerDetails");
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const formatValue = (value) => (value > 0 ? `+${value}` : value);
 
         // Funzione per creare una scheda partita
-        const createGameCard = (game, score, game_stats) => {
+        const createGameCard = (game, score, game_stats, memestats) => {
             const card = document.createElement('div');
             card.classList.add('game-card', `cardclass${selectedPlayer.team}`);
             let statsHtml = `
@@ -127,6 +127,15 @@ document.addEventListener("DOMContentLoaded", function() {
             if (game_stats[WIN] !== 0) statsHtml += `<p>Vittoria: <strong>${formatValue(game_stats[WIN] * pdkWeights[WIN])}</strong></p>`;
             if (game_stats[MEME] !== 0) statsHtml += `<p>Punti meme: <strong>${formatValue(game_stats[MEME] * pdkWeights[MEME])}</strong></p>`;
 
+             // --- Dynamic Meme Stats Loop ---
+            if (Array.isArray(memestats) && memestats.length > 0) {
+                memestats.forEach(meme => {
+                    // Title tooltip uses description if available
+                    // const descriptionTitle = meme.memestat_description ? ` title="${meme.memestat_description}"` : '';
+                    statsHtml += `<p>${meme.memestat_name}: <strong>${formatValue(meme.memestat_points)}</strong></p>`;
+                });
+            }
+            
             card.innerHTML = statsHtml;
             return card;
         };
@@ -159,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (stats_td3[TD3_1ST] !== 0) statsHtml += `<p>Primo classificato: <strong>${formatValue(stats_td3[TD3_1ST]*td3Weights[TD3_1ST])}</strong></p>`;
             if (stats_td3[TD3_0SU10] !== 0) statsHtml += `<p>0 su 10 da 3: <strong>${formatValue(stats_td3[TD3_0SU10]*td3Weights[TD3_0SU10])}</strong></p>`;
             if (stats_td3[TD3_CIAB] !== 0) statsHtml += `<p>Tira in ciabatte: <strong>${formatValue(stats_td3[TD3_CIAB]*td3Weights[TD3_CIAB])}</strong></p>`;
-            if (stats_td3[TD3_ALTRI_MEME] !== 0) statsHtml += `<p>Altri punti meme: <strong>${formatValue(stats_td3[TD3_ALTRI_MEME]*td3Weights[TD3_ALTRI_MEME])}</strong></p>`;
+            // if (stats_td3[TD3_ALTRI_MEME] !== 0) statsHtml += `<p>Altri punti meme: <strong>${formatValue(stats_td3[TD3_ALTRI_MEME]*td3Weights[TD3_ALTRI_MEME])}</strong></p>`;
 
             // --- Dynamic Meme Stats Loop ---
             if (Array.isArray(memestats_td3) && memestats_td3.length > 0) {
@@ -185,17 +194,17 @@ document.addEventListener("DOMContentLoaded", function() {
         cardsContainer.classList.add('player-stats-cards');
 
         if(what_day_is_it >= 1) // domenica g1 fatta
-            cardsContainer.appendChild(createGameCard('G1', selectedPlayer.g1, selectedPlayer.stats_g1));
+            cardsContainer.appendChild(createGameCard('G1', selectedPlayer.g1, selectedPlayer.stats_g1, selectedPlayer.memestats_g1));
         if(what_day_is_it >= 2) // lunedì g2 fatto
-            cardsContainer.appendChild(createGameCard('G2', selectedPlayer.g2, selectedPlayer.stats_g2));
+            cardsContainer.appendChild(createGameCard('G2', selectedPlayer.g2, selectedPlayer.stats_g2, selectedPlayer.memestats_g2));
         if(what_day_is_it >= 3) // mercoledì g3 fatto
-            cardsContainer.appendChild(createGameCard('G3', selectedPlayer.g3, selectedPlayer.stats_g3));
+            cardsContainer.appendChild(createGameCard('G3', selectedPlayer.g3, selectedPlayer.stats_g3, selectedPlayer.memestats_g3));
         if(what_day_is_it >= 4) // giovedì semi fatto
-            cardsContainer.appendChild(createGameCard('Semifinale', selectedPlayer.semi, selectedPlayer.stats_semi));
+            cardsContainer.appendChild(createGameCard('Semifinale', selectedPlayer.semi, selectedPlayer.stats_semi, selectedPlayer.memestats_semi));
         if(what_day_is_it >= 5) // venerdì td3 fatto
             cardsContainer.appendChild(createGameCard_td3('Tiro da 3', selectedPlayer.td3, selectedPlayer.stats_td3, selectedPlayer.memestats_td3));
         if(what_day_is_it >= 6) // sabato finale fatto
-            cardsContainer.appendChild(createGameCard('Finale', selectedPlayer.final, selectedPlayer.stats_final));
+            cardsContainer.appendChild(createGameCard('Finale', selectedPlayer.final, selectedPlayer.stats_final, selectedPlayer.memestats_final));
 
         playerStatsContainer.appendChild(cardsContainer);
     });
