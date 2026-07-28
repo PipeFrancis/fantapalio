@@ -750,20 +750,44 @@ for (let rione of rioni25){
 // Definizione Rioni 2026
 //final_points = totale punti posizionamento classifica, coppa chiosco e coach. final_bonus = bonus eventuale per la finale (non serve)
 const NORD26 = { ...rione_type, 
-    name: "NORD"
+    name: "NORD",
     //altri campi rimangono a zero
+    coach_g1_memestats: [],
+    coach_g2_memestats: [],
+    coach_g3_memestats: [],
+    coach_semi_memestats: [],
+    coach_td3_memestats: [],
+    coach_final_memestats: []
 };
 const SUD26 = { ...rione_type, 
-    name: "SUD"
+    name: "SUD",
     //altri campi rimangono a zero
+    coach_g1_memestats: [],
+    coach_g2_memestats: [],
+    coach_g3_memestats: [],
+    coach_semi_memestats: [],
+    coach_td3_memestats: [],
+    coach_final_memestats: []
 };
 const EST26 = { ...rione_type, 
-    name: "EST"
-    //altri campi rimangono a zero
+    name: "EST",
+    //altri campi rimangono a zero    
+    coach_g1_memestats: [],
+    coach_g2_memestats: [],
+    coach_g3_memestats: [],
+    coach_semi_memestats: [],
+    coach_td3_memestats: [],
+    coach_final_memestats: []
 };
 const WEST26 = { ...rione_type, 
-    name: "WEST"
+    name: "WEST",
     //altri campi rimangono a zero
+    coach_g1_memestats: [],
+    coach_g2_memestats: [],
+    coach_g3_memestats: [],
+    coach_semi_memestats: [],
+    coach_td3_memestats: [],
+    coach_final_memestats: []
 };
 
 WEST26.chiosco_g1 = 330;
