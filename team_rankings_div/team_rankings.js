@@ -2,7 +2,7 @@ import {
     fantateam_type,
     NORD, SUD, EST, WEST,
     fantateams
-} from '../data260728_2358.js';
+} from '../data260730_2258.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     const teamCardsContainer = document.getElementById('teamCardsContainer');

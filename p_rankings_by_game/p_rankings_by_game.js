@@ -32,7 +32,7 @@ import {
     TD3_0SU10          ,
     TD3_CIAB           ,
     TD3_ALTRI_MEME     ,
-} from '../data260728_2358.js';
+} from '../data260730_2258.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const playerCardsContainer = document.getElementById('playerCardsContainer');
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const formatValue = (value) => (value > 0 ? `+${value}` : value);
 
         // Funzione per creare una scheda partita
-        const createGameCard = (selectedPlayer, score, game_stats, index) => { // attenzione funzioni leggermente modificate rispetto che in player detail
+        const createGameCard = (selectedPlayer, score, game_stats, index, memestats) => { // attenzione funzioni leggermente modificate rispetto che in player detail
             const card = document.createElement('div');
             card.classList.add('player-card', `cardclass${selectedPlayer.team}`);
             let statsHtml = `
@@ -81,12 +81,21 @@ document.addEventListener('DOMContentLoaded', () => {
             if (game_stats[WIN] !== 0) statsHtml += `<p>Vittoria: <strong>${formatValue(game_stats[WIN] * pdkWeights[WIN])}</strong></p>`;
             if (game_stats[MEME] !== 0) statsHtml += `<p>Punti meme: <strong>${formatValue(game_stats[MEME] * pdkWeights[MEME])}</strong></p>`;
 
+             // --- Dynamic Meme Stats Loop ---
+            if (Array.isArray(memestats) && memestats.length > 0) {
+                memestats.forEach(meme => {
+                    // Title tooltip uses description if available
+                    // const descriptionTitle = meme.memestat_description ? ` title="${meme.memestat_description}"` : '';
+                    statsHtml += `<p>${meme.memestat_name}: <strong>${formatValue(meme.memestat_points)}</strong></p>`;
+                });
+            }
+
             card.innerHTML = statsHtml;
             return card;
         };
 
         // Funzione per creare una scheda partita specifica per "Tiro da 3"
-        const createGameCard_td3 = (selectedPlayer, score, stats_td3, index) => {
+        const createGameCard_td3 = (selectedPlayer, score, stats_td3, index, memestats_td3) => {
             const card = document.createElement('div');
             card.classList.add('player-card', `cardclass${selectedPlayer.team}`);
             let statsHtml = `
@@ -116,8 +125,16 @@ document.addEventListener('DOMContentLoaded', () => {
             if (stats_td3[TD3_0SU10] !== 0) statsHtml += `<p>0 su 10 da 3: <strong>${formatValue(stats_td3[TD3_0SU10] * td3Weights[TD3_0SU10])}</strong></p>`;
             if (stats_td3[TD3_CIAB] !== 0) statsHtml += `<p>Tira in ciabatte: <strong>${formatValue(stats_td3[TD3_CIAB] * td3Weights[TD3_CIAB])}</strong></p>`;
             if (stats_td3[TD3_ALTRI_MEME] !== 0) statsHtml += `<p>Altri punti meme: <strong>${formatValue(stats_td3[TD3_ALTRI_MEME] * td3Weights[TD3_ALTRI_MEME])}</strong></p>`;
-
             card.innerHTML = statsHtml;
+
+             // --- Dynamic Meme Stats Loop ---
+            if (Array.isArray(memestats_td3) && memestats_td3.length > 0) {
+                memestats_td3.forEach(meme => {
+                    // Title tooltip uses description if available
+                    // const descriptionTitle = meme.memestat_description ? ` title="${meme.memestat_description}"` : '';
+                    statsHtml += `<p>${meme.memestat_name}: <strong>${formatValue(meme.memestat_points)}</strong></p>`;
+                });
+            }
             return card;
         };
 
@@ -170,12 +187,28 @@ document.addEventListener('DOMContentLoaded', () => {
                     break;
             }
             console.log(sortKey, game_sortKey);
-            if (sortKey != "tot" && sortKey != "td3"){ // creates card with all stats for that game
-                const createdCard = createGameCard(player,player[sortKey],player[game_sortKey], index);
+            if (sortKey == "g1"){ 
+                const createdCard = createGameCard(player,player[sortKey],player[game_sortKey], index, player.memestats_g1);
+                playerCardsContainer.appendChild(createdCard);
+
+            }else if (sortKey == "g2"){ 
+                const createdCard = createGameCard(player,player[sortKey],player[game_sortKey], index, player.memestats_g2);
+                playerCardsContainer.appendChild(createdCard);
+
+            }else if (sortKey == "g3"){ 
+                const createdCard = createGameCard(player,player[sortKey],player[game_sortKey], index, player.memestats_g3);
+                playerCardsContainer.appendChild(createdCard);
+
+            }else if (sortKey == "semi"){ 
+                const createdCard = createGameCard(player,player[sortKey],player[game_sortKey], index, player.memestats_semi);
+                playerCardsContainer.appendChild(createdCard);
+
+            }else if (sortKey == "final"){ 
+                const createdCard = createGameCard(player,player[sortKey],player[game_sortKey], index, player.memestats_final);
                 playerCardsContainer.appendChild(createdCard);
 
             }else if (sortKey == "td3"){
-                const createdCard = createGameCard_td3(player,player[sortKey],player[game_sortKey], index);
+                const createdCard = createGameCard_td3(player,player[sortKey],player[game_sortKey], index, player.memestats_td3);
                 playerCardsContainer.appendChild(createdCard);
 
             }else if (sortKey == "tot"){ // creates card with all games totals only
@@ -247,67 +280,4 @@ document.addEventListener('DOMContentLoaded', () => {
         renderPlayers(sortKey);
     });
 });
-
-
-// // Old working version with no stats:
-// import {
-//     players
-// } from '../data260728_2358.js';
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     const playerCardsContainer = document.getElementById('playerCardsContainer');
-//     const sortSelect = document.getElementById('sortSelect');
-
-//     const valueToKeyMap = {
-//         'totale': 'tot',
-//         'g1': 'g1',
-//         'g2': 'g2',
-//         'g3': 'g3',
-//         'semifinale': 'semi',
-//         'td3': 'td3',
-//         'finale': 'final'
-//     };
-
-//     function renderPlayers(sortKey) {
-//         playerCardsContainer.innerHTML = '';
-
-//         // Sort players by selected key
-//         const sortedPlayers = players.slice().sort((a, b) => {
-//             const aVal = a[sortKey] ?? 0;
-//             const bVal = b[sortKey] ?? 0;
-//             return bVal - aVal;
-//         });
-
-//         // Create player cards
-//         sortedPlayers.forEach((player, index) => {
-
-//             const card = document.createElement('div');
-//             card.classList.add('player-card', `cardclass${player.team}`);
-
-//             card.innerHTML = `
-//                 <p>${index + 1}. ${player.name}<p>
-//                 <p><strong>${player[sortKey] ?? 0}</strong></p>
-//             `;
-
-//             playerCardsContainer.appendChild(card);
-//         });
-
-       
-
-//     }
-
-//     // Initial render with 'totale'
-//     renderPlayers('tot');
-
-//     // Handle dropdown change
-//     sortSelect.addEventListener('change', (e) => {
-//         const selectedValue = e.target.value;
-//         const sortKey = valueToKeyMap[selectedValue];
-//         if (!sortKey) {
-//             console.error(`Invalid sort key: ${selectedValue}`);
-//             return;
-//         }
-//         renderPlayers(sortKey);
-//     });
-// });
 
