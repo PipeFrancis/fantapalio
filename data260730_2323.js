@@ -90,9 +90,6 @@ function addMemeStatCoach(rione, gameKey, name, description, points) {
     memestat_points: points
   };
 
-  if(memeStat.memestat_name == "Birra offerta" && memeStat.memestat_points > 3) memeStat.memestat_name = "Birre offerte";
-  if(memeStat.memestat_name == "Birra in panca" && memeStat.memestat_points > 1) memeStat.memestat_name = "Birre in panca";
-
   // Dynamically target the right game day (e.g., 'memestats_g1')
   const targetArray = `memestats_${gameKey}`;
   
