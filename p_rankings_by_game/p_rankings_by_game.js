@@ -32,7 +32,7 @@ import {
     TD3_0SU10          ,
     TD3_CIAB           ,
     TD3_ALTRI_MEME     ,
-} from '../data260730_2258.js';
+} from '../data260730_2302.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const playerCardsContainer = document.getElementById('playerCardsContainer');
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (game_stats[TD] !== 0) statsHtml += `<p>Tripla doppia: <strong>${formatValue(game_stats[TD] * pdkWeights[TD])}</strong></p>`;
             if (game_stats[EXP] !== 0) statsHtml += `<p>Espulsione: <strong>${formatValue(game_stats[EXP] * pdkWeights[EXP])}</strong></p>`;
             if (game_stats[WIN] !== 0) statsHtml += `<p>Vittoria: <strong>${formatValue(game_stats[WIN] * pdkWeights[WIN])}</strong></p>`;
-            if (game_stats[MEME] !== 0) statsHtml += `<p>Punti meme: <strong>${formatValue(game_stats[MEME] * pdkWeights[MEME])}</strong></p>`;
+            // if (game_stats[MEME] !== 0) statsHtml += `<p>Punti meme: <strong>${formatValue(game_stats[MEME] * pdkWeights[MEME])}</strong></p>`;
 
              // --- Dynamic Meme Stats Loop ---
             if (Array.isArray(memestats) && memestats.length > 0) {
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (stats_td3[TD3_1ST] !== 0) statsHtml += `<p>Primo classificato: <strong>${formatValue(stats_td3[TD3_1ST] * td3Weights[TD3_1ST])}</strong></p>`;
             if (stats_td3[TD3_0SU10] !== 0) statsHtml += `<p>0 su 10 da 3: <strong>${formatValue(stats_td3[TD3_0SU10] * td3Weights[TD3_0SU10])}</strong></p>`;
             if (stats_td3[TD3_CIAB] !== 0) statsHtml += `<p>Tira in ciabatte: <strong>${formatValue(stats_td3[TD3_CIAB] * td3Weights[TD3_CIAB])}</strong></p>`;
-            if (stats_td3[TD3_ALTRI_MEME] !== 0) statsHtml += `<p>Altri punti meme: <strong>${formatValue(stats_td3[TD3_ALTRI_MEME] * td3Weights[TD3_ALTRI_MEME])}</strong></p>`;
+            // if (stats_td3[TD3_ALTRI_MEME] !== 0) statsHtml += `<p>Altri punti meme: <strong>${formatValue(stats_td3[TD3_ALTRI_MEME] * td3Weights[TD3_ALTRI_MEME])}</strong></p>`;
             card.innerHTML = statsHtml;
 
              // --- Dynamic Meme Stats Loop ---

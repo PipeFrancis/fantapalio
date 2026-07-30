@@ -19,7 +19,7 @@ def normalize_game_code(label):
     """Normalizes the game tag for the function parameter (e.g., 'G1' -> 'g1')"""
     return label.strip().lower()
 
-COACH_VAR_MAP = {
+COACH_VAR_MAP = { # lo script li tratta come players quindi ci attacca il 26 dietro, con questo fa lo swap e capisce che finisce la squadra
     "AlessandroZamparini26": "NORD26",   
     "MisterJ26": "EST26",  
     "MisterX26": "SUD26",  
