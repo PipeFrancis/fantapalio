@@ -37,7 +37,7 @@ import { groupedPlayersHistoricalData,
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260731_2059.js';
+} from '../data260731_2100.js';
 
 // Helper to safely calculate shooting percentages
 function calculatePercentage(numerator, denominator) {
@@ -68,7 +68,7 @@ function renderPlayerHistoryTable(playerHistoryArray) {
 
     // Updated headers: Added "Partite Giocate" right after "TOT"
     const headers = [
-        "Anno/Squadra", "TOT", "Partite Giocate", "PTS", "REB", "AST", "STL", "BLK", "Meme", "TO", 
+        "Anno - Squadra", "TOT", "Partite Giocate", "PTS", "REB", "AST", "STL", "BLK", "Meme", "TO", 
         "OREB", "DREB", "2PM", "2PA", "2P%", "3PM", "3PA", "3P%", "FTM", "FTA", "FT%", "EXP", "TD3"
     ];
 
