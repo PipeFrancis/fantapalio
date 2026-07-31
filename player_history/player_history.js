@@ -117,7 +117,7 @@ function renderPlayerHistoryChart(playerHistoryArray) {
             labels: labels,
             datasets: [
                 {
-                    label: 'Punti Restanti',
+                    label: 'Altri',
                     data: restData,
                     backgroundColor: grayColor,
                     stack: 'totalPoints',
