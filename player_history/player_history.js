@@ -92,26 +92,22 @@ const roundedWhiteBackgroundPlugin = {
 };
 
 // Variable to keep track of the Chart instance (needed to destroy/re-render on selection change)
-let historyChartInstance = null;
+let chartInstance = null;
 
 function renderPlayerHistoryChart(playerHistoryArray) {
     const canvas = document.getElementById("playerHistoryChart");
     if (!canvas) return;
 
-    // Destroy existing chart instance to prevent duplicate rendering bugs
     if (chartInstance) {
         chartInstance.destroy();
     }
 
     if (!playerHistoryArray || playerHistoryArray.length === 0) return;
 
-    // Prepare labels (Years) and datasets
     const labels = playerHistoryArray.map(record => record.year || record.team);
-    
     const memeData = playerHistoryArray.map(record => record.meme_tot || 0);
     const restData = playerHistoryArray.map(record => Math.max(0, (record.tot || 0) - (record.meme_tot || 0)));
 
-    // Retrieve colors from CSS variables
     const orangeColor = getCssVariable('--color-orange', '#ff8c00');
     const grayColor = getCssVariable('--color-gray', '#888888');
 
@@ -124,49 +120,50 @@ function renderPlayerHistoryChart(playerHistoryArray) {
                     label: 'Punti Restanti',
                     data: restData,
                     backgroundColor: grayColor,
-                    stack: 'totalPoints', // Stacks this dataset together with 'Meme'
+                    stack: 'totalPoints',
                 },
                 {
                     label: 'Meme',
                     data: memeData,
                     backgroundColor: orangeColor,
-                    stack: 'totalPoints', // Stacks this dataset on top
+                    stack: 'totalPoints',
                 }
             ]
         },
+        plugins: [roundedWhiteBackgroundPlugin], // Re-attached plugin here
         options: {
             responsive: true,
             maintainAspectRatio: false,
             scales: {
                 x: {
-                    stacked: true, // Enables stacked mode on X axis
+                    stacked: true,
                     grid: {
-                        color: 'rgba(255, 255, 255, 0.1)'
+                        color: 'rgba(0, 0, 0, 0.05)'
                     },
                     ticks: {
-                        color: '#fff'
+                        color: '#333333'
                     }
                 },
                 y: {
-                    stacked: true, // Enables stacked mode on Y axis
+                    stacked: true,
                     beginAtZero: true,
                     title: {
                         display: true,
                         text: 'Punti Totali',
-                        color: '#fff'
+                        color: '#333333'
                     },
                     grid: {
-                        color: 'rgba(255, 255, 255, 0.1)'
+                        color: 'rgba(0, 0, 0, 0.05)'
                     },
                     ticks: {
-                        color: '#fff'
+                        color: '#333333'
                     }
                 }
             },
             plugins: {
                 legend: {
                     labels: {
-                        color: '#fff'
+                        color: '#333333'
                     }
                 },
                 tooltip: {
@@ -184,6 +181,7 @@ function renderPlayerHistoryChart(playerHistoryArray) {
         }
     });
 }
+
 function renderPlayerHistoryTable(playerHistoryArray) {
     const tableContainer = document.getElementById("playerHistoryContainer");
     
