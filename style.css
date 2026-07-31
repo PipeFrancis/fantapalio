@@ -876,6 +876,15 @@ footer {
     overflow-x: auto;
 }
 
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    height: 350px;
+    margin: 20px auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
 
 .player-stats-container{
     display: flex;
