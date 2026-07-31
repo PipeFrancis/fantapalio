@@ -37,7 +37,7 @@ import { groupedPlayersHistoricalData,
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260731_2101.js';
+} from '../data260731_2103.js';
 
 // Helper to safely calculate shooting percentages
 function calculatePercentage(numerator, denominator) {
@@ -68,8 +68,8 @@ function renderPlayerHistoryTable(playerHistoryArray) {
 
     // Updated headers: Added "Partite Giocate" right after "TOT"
     const headers = [
-        "Anno - Squadra", "TOT", "GP", "PTS", "REB", "AST", "STL", "BLK", "Meme", "TO", 
-        "OREB", "DREB", "2PM", "2PA", "2P%", "3PM", "3PA", "3P%", "FTM", "FTA", "FT%", "EXP", "TD3"
+        "Anno - Squadra", "TOT", "Meme", "TD3", "GP", "PTS", "REB", "AST", "STL", "BLK", "TO", 
+        "OREB", "DREB", "2PM", "2PA", "2P%", "3PM", "3PA", "3P%", "FTM", "FTA", "FT%", "EXP"
     ];
 
     let html = `<table class="${tableClass}"><thead><tr>`;
@@ -121,13 +121,14 @@ function renderPlayerHistoryTable(playerHistoryArray) {
         html += `<tr>`;
         html += `<td><strong>${yearDisplay}</strong></td>`;
         html += `<td><strong>${(record.tot || 0).toFixed(0)}</strong></td>`;
+        html += `<td>${(record.meme_tot || 0).toFixed(0)}</td>`;
+        html += `<td>${calculatedTd3.toFixed(0)}</td>`;
         html += `<td>${record.games_played ?? 0}</td>`; // Partite Giocate column
         html += `<td>${pts.toFixed(0)}</td>`;
         html += `<td>${reb.toFixed(0)}</td>`;
         html += `<td>${ast.toFixed(0)}</td>`;
         html += `<td>${stl.toFixed(0)}</td>`;
         html += `<td>${blk.toFixed(0)}</td>`;
-        html += `<td>${(record.meme_tot || 0).toFixed(0)}</td>`;
         html += `<td>${to.toFixed(0)}</td>`;
         html += `<td>${oreb.toFixed(0)}</td>`;
         html += `<td>${dreb.toFixed(0)}</td>`;
@@ -141,7 +142,6 @@ function renderPlayerHistoryTable(playerHistoryArray) {
         html += `<td>${fta.toFixed(0)}</td>`;
         html += `<td>${calculatePercentage(ft, fta)}</td>`;
         html += `<td>${exp.toFixed(0)}</td>`;
-        html += `<td>${calculatedTd3.toFixed(0)}</td>`;
         html += `</tr>`;
     });
 
