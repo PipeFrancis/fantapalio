@@ -3,7 +3,8 @@
 // se si cambiano array di stats è da cambiare anche questo codice
 
 
-import { players, pdkWeights, td3Weights, what_day_is_it, td3_bonus_passadaprimoultimo,
+import { groupedPlayersHistoricalData, 
+    players, pdkWeights, td3Weights, what_day_is_it, td3_bonus_passadaprimoultimo,
         PTS   ,
         T2P   ,
         T2PX  ,
@@ -39,32 +40,56 @@ import { players, pdkWeights, td3Weights, what_day_is_it, td3_bonus_passadaprimo
 } from '../data260731_1855.js';
 
 document.addEventListener("DOMContentLoaded", function() {
-    const select = document.getElementById("playerDetails");
-    const playerStatsContainer = document.getElementById("playerStatsContainer");
+    const select = document.getElementById("playerHistorySelect");
+    const playerStatsContainer = document.getElementById("playerHistoryContainer");
 
-    // Raggruppa i giocatori per team e ordina all'interno di ogni gruppo
     const teams = ["WEST", "NORD", "EST", "SUD"];
-    const groupedPlayers = teams.map(team => {
+
+    // 1. Group the player arrays by their LATEST team and sort them by LATEST cost
+    const groupedByTeam = teams.map(team => {
+        const teamPlayers = groupedPlayersHistoricalData
+            .filter(historyArray => {
+                // Get the last record in the history array (latest year)
+                const latestRecord = historyArray[historyArray.length - 1];
+                return latestRecord && latestRecord.team === team;
+            })
+            .sort((a, b) => {
+                // Sort by the latest year's cost (descending)
+                const costA = a[a.length - 1].cost || 0;
+                const costB = b[b.length - 1].cost || 0;
+                return costB - costA;
+            });
+
         return {
             team: team,
-            players: players.filter(player => player.team === team).sort((a, b) => b.cost - a.cost)
+            players: teamPlayers
         };
     });
 
-    // Rimuovi eventuali opzioni esistenti
+    // 2. Clear existing options
     select.innerHTML = '';
 
-    // Aggiungi nuove opzioni
-    groupedPlayers.forEach(group => {
-        // Aggiungi un gruppo di opzioni per ogni team
+    // 3. Populate options using optgroup for team separators
+    groupedByTeam.forEach(group => {
+        if (group.players.length === 0) return; // Skip empty teams if any
+
         const optGroup = document.createElement('optgroup');
         optGroup.label = group.team;
-        group.players.forEach((player, index) => {
+
+        group.players.forEach(playerHistory => {
+            const latestRecord = playerHistory[playerHistory.length - 1];
             const opt = document.createElement('option');
-            opt.value = players.indexOf(player); // Usa l'indice del giocatore nell'array originale
-            opt.textContent = player.name;
+
+            // Find the index of this player's array in groupedPlayersHistoricalData
+            // so we can reference it when the user selects this option later
+            const masterIndex = groupedPlayersHistoricalData.indexOf(playerHistory);
+            
+            opt.value = masterIndex; 
+            opt.textContent = latestRecord.name;
+
             optGroup.appendChild(opt);
         });
+
         select.appendChild(optGroup);
     });
 

@@ -79,7 +79,7 @@ function addMemeStat(player, gameKey, name, description, points) {
     player[targetArray].push(memeStat);
     
     // Optional: Keep the meme_tot updated automatically
-    player.meme_tot += points;
+    // player.meme_tot += points; questi sono aggiornati nel ciclo sui playersXX che fa le doppie doppie ecc
   }
 }
 
