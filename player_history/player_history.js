@@ -96,75 +96,94 @@ let historyChartInstance = null;
 
 function renderPlayerHistoryChart(playerHistoryArray) {
     const canvas = document.getElementById("playerHistoryChart");
-    if (!canvas || !playerHistoryArray || playerHistoryArray.length === 0) return;
+    if (!canvas) return;
 
-    // X-axis labels (Team/Year per record)
-    const labels = playerHistoryArray.map(record => record.team || "N/A");
-    const totData = playerHistoryArray.map(record => record.tot || 0);
-    const memeData = playerHistoryArray.map(record => record.meme_tot || 0);
-
-    // Destroy existing chart instance before drawing new one
-    if (historyChartInstance) {
-        historyChartInstance.destroy();
+    // Destroy existing chart instance to prevent duplicate rendering bugs
+    if (chartInstance) {
+        chartInstance.destroy();
     }
 
-    const ctx = canvas.getContext("2d");
+    if (!playerHistoryArray || playerHistoryArray.length === 0) return;
 
-    historyChartInstance = new Chart(ctx, {
-        type: 'bar', // Restored bar chart type
+    // Prepare labels (Years) and datasets
+    const labels = playerHistoryArray.map(record => record.year || record.team);
+    
+    const memeData = playerHistoryArray.map(record => record.meme_tot || 0);
+    const restData = playerHistoryArray.map(record => Math.max(0, (record.tot || 0) - (record.meme_tot || 0)));
+
+    // Retrieve colors from CSS variables
+    const orangeColor = getCssVariable('--color-orange', '#ff8c00');
+    const grayColor = getCssVariable('--color-gray', '#888888');
+
+    chartInstance = new Chart(canvas, {
+        type: 'bar',
         data: {
             labels: labels,
             datasets: [
                 {
-                    label: 'TOT Points',
-                    data: totData,
-                    backgroundColor: grayColor, // Gray for TOT
-                    borderColor: grayColor,
-                    borderWidth: 1
+                    label: 'Punti Restanti',
+                    data: restData,
+                    backgroundColor: grayColor,
+                    stack: 'totalPoints', // Stacks this dataset together with 'Meme'
                 },
                 {
-                    label: 'Meme Points',
+                    label: 'Meme',
                     data: memeData,
-                    backgroundColor: orangeColor, // Orange for Meme
-                    borderColor: orangeColor,
-                    borderWidth: 1
+                    backgroundColor: orangeColor,
+                    stack: 'totalPoints', // Stacks this dataset on top
                 }
             ]
         },
         options: {
             responsive: true,
             maintainAspectRatio: false,
-            layout: {
-                padding: 20
+            scales: {
+                x: {
+                    stacked: true, // Enables stacked mode on X axis
+                    grid: {
+                        color: 'rgba(255, 255, 255, 0.1)'
+                    },
+                    ticks: {
+                        color: '#fff'
+                    }
+                },
+                y: {
+                    stacked: true, // Enables stacked mode on Y axis
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Punti Totali',
+                        color: '#fff'
+                    },
+                    grid: {
+                        color: 'rgba(255, 255, 255, 0.1)'
+                    },
+                    ticks: {
+                        color: '#fff'
+                    }
+                }
             },
             plugins: {
                 legend: {
                     labels: {
-                        color: darkTextColor, // Black/Dark text
-                        font: { size: 13, weight: '600' }
+                        color: '#fff'
                     }
                 },
                 tooltip: {
-                    backgroundColor: 'rgba(20, 20, 20, 0.9)',
-                    titleColor: '#ffffff',
-                    bodyColor: '#ffffff'
-                }
-            },
-            scales: {
-                x: {
-                    ticks: { color: darkTextColor, font: { weight: '500' } },
-                    grid: { color: 'rgba(0, 0, 0, 0.06)' }
-                },
-                y: {
-                    ticks: { color: darkTextColor, font: { weight: '500' } },
-                    grid: { color: 'rgba(0, 0, 0, 0.06)' }
+                    callbacks: {
+                        footer: function(tooltipItems) {
+                            let total = 0;
+                            tooltipItems.forEach(item => {
+                                total += item.raw;
+                            });
+                            return 'TOT: ' + total.toFixed(0);
+                        }
+                    }
                 }
             }
-        },
-        plugins: [roundedWhiteBackgroundPlugin]
+        }
     });
 }
-
 function renderPlayerHistoryTable(playerHistoryArray) {
     const tableContainer = document.getElementById("playerHistoryContainer");
     
