@@ -32,7 +32,7 @@ import { groupedPlayersHistoricalData,
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260801_0152.js';
+} from '../data260801_0156.js';
 
 // Global variable to keep track of the Chart instance
 // let chartInstance = null;
@@ -104,6 +104,21 @@ function renderPlayerHistoryChart(playerHistoryArray) {
 
     if (!playerHistoryArray || playerHistoryArray.length === 0) return;
 
+    // for having thicker bars for good players:
+    // 1. Find the highest single-year total score for this specific player
+    const maxScore = Math.max(...playerHistoryArray.map(r => r.tot || 0));
+    // 2. Set your min/max score thresholds for bar thickness scaling
+    const MIN_BENCHMARK = 20;  // Scores <= 20 get the thinnest bars
+    const MAX_BENCHMARK = 200; // Scores >= 200 get the thickest bars
+    // 3. Clamp the score within the benchmark range
+    const clampedScore = Math.min(Math.max(maxScore, MIN_BENCHMARK), MAX_BENCHMARK);
+    // 4. Calculate dynamic percentage between 0.25 (thin) and 0.85 (thick)
+    const minBarPct = 0.25;
+    const maxBarPct = 0.85;
+    const dynamicBarPct = minBarPct + (
+        (clampedScore - MIN_BENCHMARK) / (MAX_BENCHMARK - MIN_BENCHMARK)
+    ) * (maxBarPct - minBarPct);
+
     const labels = playerHistoryArray.map(record => record.year || record.team);
     const memeData = playerHistoryArray.map(record => record.meme_tot || 0);
     const restData = playerHistoryArray.map(record => Math.max(0, (record.tot || 0) - (record.meme_tot || 0)));
@@ -121,16 +136,16 @@ function renderPlayerHistoryChart(playerHistoryArray) {
                     data: restData,
                     backgroundColor: grayColor,
                     stack: 'totalPoints',
-                    barPercentage: 0.5,       // <-- Reduces individual bar thickness (0.0 to 1.0)
-                    categoryPercentage: 0.6   // <-- Reduces available width per category (0.0 to 1.0)
+                    barPercentage: dynamicBarPct,       // <-- Applied dynamically here!
+                    categoryPercentage: 0.8
                 },
                 {
                     label: 'Meme',
                     data: memeData,
                     backgroundColor: orangeColor,
                     stack: 'totalPoints',
-                    barPercentage: 0.5,       // <-- Reduces individual bar thickness (0.0 to 1.0)
-                    categoryPercentage: 0.6   // <-- Reduces available width per category (0.0 to 1.0)
+                    barPercentage: dynamicBarPct,       // <-- Applied dynamically here!
+                    categoryPercentage: 0.8
                 }
             ]
         },
