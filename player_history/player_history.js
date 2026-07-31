@@ -37,7 +37,7 @@ import { groupedPlayersHistoricalData,
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260731_1910.js';
+} from '../data260731_1912.js';
 
 // Helper to safely calculate shooting percentages
 function calculatePercentage(numerator, denominator) {
