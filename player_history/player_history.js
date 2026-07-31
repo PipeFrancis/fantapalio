@@ -1,6 +1,4 @@
-// questo prima fa un po di robe per generare la tendina coi player elencati per rione
-// poi genera le cards una per ogni partita con le stats non nulle (calcolando ogni contributo di stats)
-// se si cambiano array di stats è da cambiare anche questo codice
+
 
 
 import { groupedPlayersHistoricalData, 
@@ -37,7 +35,7 @@ import { groupedPlayersHistoricalData,
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260731_1925.js';
+} from '../data260731_1929.js';
 
 // Helper to safely calculate shooting percentages
 function calculatePercentage(numerator, denominator) {
