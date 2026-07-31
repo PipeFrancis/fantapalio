@@ -32,16 +32,8 @@ import { groupedPlayersHistoricalData,
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260731_2115.js';
+} from '../data260731_2121.js';
 
-// Global variable to keep track of the Chart instance
-let chartInstance = null;
-
-// Helper to get CSS variable values from computed styles
-function getCssVariable(varName, fallbackColor) {
-    const value = getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
-    return value || fallbackColor;
-}
 
 // Helper to safely calculate shooting percentages
 function calculatePercentage(numerator, denominator) {
@@ -57,96 +49,112 @@ function getStatSum(record, statIndex) {
     }, 0);
 }
 
-function renderPlayerHistoryChart(playerHistoryArray) {
-    const canvas = document.getElementById("playerHistoryChart");
-    if (!canvas) return;
+// Global variable to keep track of the Chart instance
+let chartInstance = null;
 
-    // Destroy existing chart instance to prevent duplicate rendering bugs
-    if (chartInstance) {
-        chartInstance.destroy();
+// Helper to get CSS variables or fall back to default RGB values
+function getCssVariable(varName, defaultValue) {
+    const value = getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
+    return value ? value : defaultValue;
+}
+
+const orangeColor = getCssVariable('--main-color3', 'rgb(255, 109, 10)');
+const grayColor = getCssVariable('--main-color1', 'rgb(78, 78, 78)');
+const darkTextColor = '#1a1a1a'; // Dark color for text and axis labels
+
+// Custom plugin to draw a white container with rounded corners behind the chart
+const roundedWhiteBackgroundPlugin = {
+    id: 'customCanvasBackgroundImage',
+    beforeDraw: (chart) => {
+        const { ctx, width, height } = chart;
+        const cornerRadius = 16; // Adjust corner roundness here
+
+        ctx.save();
+        ctx.fillStyle = '#ffffff'; // White background
+        
+        // Draw rounded rectangle
+        ctx.beginPath();
+        ctx.roundRect(0, 0, width, height, cornerRadius);
+        ctx.fill();
+        
+        // Add subtle shadow for depth
+        ctx.shadowColor = 'rgba(0, 0, 0, 0.08)';
+        ctx.shadowBlur = 12;
+        ctx.shadowOffsetY = 4;
+        
+        ctx.restore();
     }
+};
 
-    if (!playerHistoryArray || playerHistoryArray.length === 0) return;
-
-    // Prepare labels (Years) and datasets (Rest of TOT and Meme)
-    const labels = playerHistoryArray.map(record => record.year || record.team);
-    
-    const memeData = playerHistoryArray.map(record => record.meme_tot || 0);
-    const restData = playerHistoryArray.map(record => Math.max(0, (record.tot || 0) - (record.meme_tot || 0)));
-
-    // Retrieve colors from CSS variables (replace '--color-orange' and '--color-gray' with your actual CSS variable names)
-    const orangeColor = getCssVariable('--main-color3', 'rgb(255,109,10)');
-    const grayColor = getCssVariable('--main-color1', 'rgb(78, 78, 78)');
-
-    chartInstance = new Chart(canvas, {
-        type: 'bar',
-        data: {
-            labels: labels,
-            datasets: [
-                {
-                    label: 'Punti Restanti',
-                    data: restData,
-                    backgroundColor: grayColor,
-                    borderRadius: 4
-                },
-                {
-                    label: 'Meme',
-                    data: memeData,
-                    backgroundColor: orangeColor,
-                    borderRadius: 4
-                }
-            ]
+// Chart Configuration
+const chartConfig = {
+    type: 'line', // or 'bar' depending on your chart choice
+    data: {
+        labels: ['2024', '2025', '2026'],
+        datasets: [
+            {
+                label: 'TOT Points',
+                data: [120, 145, 160], // Pass selected player data dynamically
+                borderColor: orangeColor,
+                backgroundColor: orangeColor,
+                borderWidth: 3,
+                tension: 0.3
+            },
+            {
+                label: 'Meme Points',
+                data: [15, 22, 18],
+                borderColor: grayColor,
+                backgroundColor: grayColor,
+                borderWidth: 2,
+                tension: 0.3
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        layout: {
+            padding: 20 // Padding inside the white rounded box
         },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            scales: {
-                x: {
-                    stacked: true,
-                    grid: {
-                        color: 'rgba(255, 255, 255, 0.1)'
-                    },
-                    ticks: {
-                        color: '#fff'
-                    }
-                },
-                y: {
-                    stacked: true,
-                    beginAtZero: true,
-                    title: {
-                        display: true,
-                        text: 'Punti',
-                        color: '#fff'
-                    },
-                    grid: {
-                        color: 'rgba(255, 255, 255, 0.1)'
-                    },
-                    ticks: {
-                        color: '#fff'
+        plugins: {
+            legend: {
+                labels: {
+                    color: darkTextColor, // Legend text in dark gray/black
+                    font: {
+                        size: 13,
+                        weight: '600'
                     }
                 }
             },
-            plugins: {
-                legend: {
-                    labels: {
-                        color: '#fff'
-                    }
+            tooltip: {
+                backgroundColor: 'rgba(20, 20, 20, 0.9)',
+                titleColor: '#ffffff',
+                bodyColor: '#ffffff'
+            }
+        },
+        scales: {
+            x: {
+                ticks: {
+                    color: darkTextColor, // X-axis label text color
+                    font: { weight: '500' }
                 },
-                tooltip: {
-                    callbacks: {
-                        footer: function(tooltipItems) {
-                            let total = 0;
-                            tooltipItems.forEach(item => {
-                                total += item.raw;
-                            });
-                            return 'TOT: ' + total.toFixed(0);
-                        }
-                    }
+                grid: {
+                    color: 'rgba(0, 0, 0, 0.06)' // Subtle light gray gridlines
+                }
+            },
+            y: {
+                ticks: {
+                    color: darkTextColor, // Y-axis label text color
+                    font: { weight: '500' }
+                },
+                grid: {
+                    color: 'rgba(0, 0, 0, 0.06)'
                 }
             }
         }
-    });
-}
+    },
+    plugins: [roundedWhiteBackgroundPlugin]
+};
 
 function renderPlayerHistoryTable(playerHistoryArray) {
     const tableContainer = document.getElementById("playerHistoryContainer");
@@ -335,7 +343,7 @@ document.addEventListener("DOMContentLoaded", function() {
 //         TD3_0SU10          ,
 //         TD3_CIAB           ,
 //         TD3_ALTRI_MEME     ,
-// } from '../data260731_2115.js';
+// } from '../data260731_2121.js';
 
 // // Helper to safely calculate shooting percentages
 // function calculatePercentage(numerator, denominator) {
