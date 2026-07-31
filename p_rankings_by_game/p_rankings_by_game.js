@@ -32,7 +32,7 @@ import {
     TD3_0SU10          ,
     TD3_CIAB           ,
     TD3_ALTRI_MEME     ,
-} from '../data260731_2054.js';
+} from '../data260731_2059.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const playerCardsContainer = document.getElementById('playerCardsContainer');

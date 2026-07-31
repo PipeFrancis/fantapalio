@@ -37,7 +37,7 @@ import { groupedPlayersHistoricalData,
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260731_2054.js';
+} from '../data260731_2059.js';
 
 // Helper to safely calculate shooting percentages
 function calculatePercentage(numerator, denominator) {
@@ -114,6 +114,9 @@ function renderPlayerHistoryTable(playerHistoryArray) {
 
         // Fallback display if 'year' property isn't present
         const yearDisplay = record.year ? `${record.year} - ${record.team}` : record.team;
+        if (record.name == "Alessandro Sant" && yearDisplay == "2026 - WEST") {
+            yearDisplay = "2026 - WEST 🐍"
+        }
 
         html += `<tr>`;
         html += `<td><strong>${yearDisplay}</strong></td>`;
