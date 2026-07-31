@@ -121,16 +121,20 @@ function renderPlayerHistoryChart(playerHistoryArray) {
                     data: restData,
                     backgroundColor: grayColor,
                     stack: 'totalPoints',
+                    barPercentage: 0.5,       // <-- Reduces individual bar thickness (0.0 to 1.0)
+                    categoryPercentage: 0.6   // <-- Reduces available width per category (0.0 to 1.0)
                 },
                 {
                     label: 'Meme',
                     data: memeData,
                     backgroundColor: orangeColor,
                     stack: 'totalPoints',
+                    barPercentage: 0.5,       // <-- Reduces individual bar thickness (0.0 to 1.0)
+                    categoryPercentage: 0.6   // <-- Reduces available width per category (0.0 to 1.0)
                 }
             ]
         },
-        plugins: [roundedWhiteBackgroundPlugin], // Re-attached plugin here
+        plugins: [roundedWhiteBackgroundPlugin], 
         options: {
             responsive: true,
             maintainAspectRatio: false,
@@ -167,6 +171,8 @@ function renderPlayerHistoryChart(playerHistoryArray) {
                     }
                 },
                 tooltip: {
+                    mode: 'index',        // <-- CRITICAL: Forces tooltip to include ALL datasets at the touched X position
+                    intersect: false,    // <-- Makes touching mobile bars much easier without precise taps
                     callbacks: {
                         footer: function(tooltipItems) {
                             let total = 0;
