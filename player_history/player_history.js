@@ -66,8 +66,9 @@ function renderPlayerHistoryTable(playerHistoryArray) {
     const latestTeam = latestRecord.team || "WEST"; 
     const tableClass = `boxscore-table${latestTeam}`;
 
+    // Updated headers: Added "Partite Giocate" right after "TOT"
     const headers = [
-        "Year/Team", "TOT", "PTS", "REB", "AST", "STL", "BLK", "Meme", "TO", 
+        "Anno/Squadra", "TOT", "Partite Giocate", "PTS", "REB", "AST", "STL", "BLK", "Meme", "TO", 
         "OREB", "DREB", "2PM", "2PA", "2P%", "3PM", "3PA", "3P%", "FTM", "FTA", "FT%", "EXP", "TD3"
     ];
 
@@ -109,18 +110,21 @@ function renderPlayerHistoryTable(playerHistoryArray) {
         const ciabPoints = ciabVal * ciabWeight;
 
         const altriMemePoints = td3Stats[TD3_ALTRI_MEME] || 0;
-
         const calculatedTd3 = (record.td3 || 0) - ciabPoints - altriMemePoints;
 
+        // Fallback display if 'year' property isn't present
+        const yearDisplay = record.year ? `${record.year} - ${record.team}` : record.team;
+
         html += `<tr>`;
-        html += `<td><strong>${record.team}</strong></td>`;
-        html += `<td><strong>${(record.tot || 0).toFixed(0)}</strong></td>`; // Direct tot variable
+        html += `<td><strong>${yearDisplay}</strong></td>`;
+        html += `<td><strong>${(record.tot || 0).toFixed(0)}</strong></td>`;
+        html += `<td>${record.games_played ?? 0}</td>`; // Partite Giocate column
         html += `<td>${pts.toFixed(0)}</td>`;
         html += `<td>${reb.toFixed(0)}</td>`;
         html += `<td>${ast.toFixed(0)}</td>`;
         html += `<td>${stl.toFixed(0)}</td>`;
         html += `<td>${blk.toFixed(0)}</td>`;
-        html += `<td>${(record.meme_tot || 0).toFixed(0)}</td>`; // Direct meme_tot variable
+        html += `<td>${(record.meme_tot || 0).toFixed(0)}</td>`;
         html += `<td>${to.toFixed(0)}</td>`;
         html += `<td>${oreb.toFixed(0)}</td>`;
         html += `<td>${dreb.toFixed(0)}</td>`;
@@ -134,7 +138,7 @@ function renderPlayerHistoryTable(playerHistoryArray) {
         html += `<td>${fta.toFixed(0)}</td>`;
         html += `<td>${calculatePercentage(ft, fta)}</td>`;
         html += `<td>${exp.toFixed(0)}</td>`;
-        html += `<td>${calculatedTd3.toFixed(0)}</td>`; // TD3 minus meme deductions
+        html += `<td>${calculatedTd3.toFixed(0)}</td>`;
         html += `</tr>`;
     });
 
