@@ -1,4 +1,6 @@
-
+// questo prima fa un po di robe per generare la tendina coi player elencati per rione
+// poi genera le cards una per ogni partita con le stats non nulle (calcolando ogni contributo di stats)
+// se si cambiano array di stats è da cambiare anche questo codice
 
 
 import { groupedPlayersHistoricalData, 
@@ -35,7 +37,7 @@ import { groupedPlayersHistoricalData,
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260731_1929.js';
+} from '../data260731_1912.js';
 
 // Helper to safely calculate shooting percentages
 function calculatePercentage(numerator, denominator) {
@@ -138,4 +140,66 @@ function renderPlayerHistoryTable(playerHistoryArray) {
 
     html += '</tbody></table>';
     tableContainer.innerHTML = html;
-};
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const select = document.getElementById("playerHistorySelect");
+
+    const teams = ["WEST", "NORD", "EST", "SUD"];
+
+    // 1. Group the player arrays by their LATEST team and sort them by LATEST cost
+    const groupedByTeam = teams.map(team => {
+        const teamPlayers = groupedPlayersHistoricalData
+            .filter(historyArray => {
+                const latestRecord = historyArray[historyArray.length - 1];
+                return latestRecord && latestRecord.team === team;
+            })
+            .sort((a, b) => {
+                const costA = a[a.length - 1].cost || 0;
+                const costB = b[b.length - 1].cost || 0;
+                return costB - costA;
+            });
+
+        return {
+            team: team,
+            players: teamPlayers
+        };
+    });
+
+    // 2. Clear existing options
+    select.innerHTML = '';
+
+    // 3. Populate options using optgroup for team separators
+    groupedByTeam.forEach(group => {
+        if (group.players.length === 0) return;
+
+        const optGroup = document.createElement('optgroup');
+        optGroup.label = group.team;
+
+        group.players.forEach(playerHistory => {
+            const latestRecord = playerHistory[playerHistory.length - 1];
+            const opt = document.createElement('option');
+
+            const masterIndex = groupedPlayersHistoricalData.indexOf(playerHistory);
+            
+            opt.value = masterIndex; 
+            opt.textContent = latestRecord.name;
+
+            optGroup.appendChild(opt);
+        });
+
+        select.appendChild(optGroup);
+    });
+
+    select.addEventListener("change", function() {
+        const selectedIndex = parseInt(this.value, 10);
+        const selectedPlayerHistory = groupedPlayersHistoricalData[selectedIndex];
+        renderPlayerHistoryTable(selectedPlayerHistory);
+    });
+
+    // Trigger change event once on load to display initial player data automatically
+    if (select.options.length > 0) {
+        select.selectedIndex = 0;
+        select.dispatchEvent(new Event('change'));
+    }
+});
