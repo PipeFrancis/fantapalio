@@ -108,8 +108,8 @@ function renderPlayerHistoryChart(playerHistoryArray) {
     const memeData = playerHistoryArray.map(record => record.meme_tot || 0);
     const restData = playerHistoryArray.map(record => Math.max(0, (record.tot || 0) - (record.meme_tot || 0)));
 
-    const orangeColor = getCssVariable('--color-orange', '#ff8c00');
-    const grayColor = getCssVariable('--color-gray', '#888888');
+    const orangeColor = getCssVariable('--main-color3', 'rgb(255,109,10)');
+    const grayColor = getCssVariable('--main-color1', 'rgb(78, 78, 78)');
 
     chartInstance = new Chart(canvas, {
         type: 'bar',
