@@ -113,7 +113,7 @@ function renderPlayerHistoryTable(playerHistoryArray) {
         const calculatedTd3 = (record.td3 || 0) - ciabPoints - altriMemePoints;
 
         // Fallback display if 'year' property isn't present
-        const yearDisplay = record.year ? `${record.year} - ${record.team}` : record.team;
+        let yearDisplay = record.year ? `${record.year} - ${record.team}` : record.team;
         if (record.name == "Alessandro Sant" && yearDisplay == "2026 - WEST") {
             yearDisplay = "2026 - WEST 🐍"
         }
