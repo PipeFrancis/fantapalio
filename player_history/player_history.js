@@ -98,12 +98,12 @@ function renderPlayerHistoryChart(playerHistoryArray) {
     const canvas = document.getElementById("playerHistoryChart");
     if (!canvas || !playerHistoryArray || playerHistoryArray.length === 0) return;
 
-    // Extract years/teams for X-axis labels, and totals for data points
+    // X-axis labels (Team/Year per record)
     const labels = playerHistoryArray.map(record => record.team || "N/A");
     const totData = playerHistoryArray.map(record => record.tot || 0);
     const memeData = playerHistoryArray.map(record => record.meme_tot || 0);
 
-    // Destroy existing chart before creating a new one for the selected player
+    // Destroy existing chart instance before drawing new one
     if (historyChartInstance) {
         historyChartInstance.destroy();
     }
@@ -111,25 +111,23 @@ function renderPlayerHistoryChart(playerHistoryArray) {
     const ctx = canvas.getContext("2d");
 
     historyChartInstance = new Chart(ctx, {
-        type: 'line',
+        type: 'bar', // Restored bar chart type
         data: {
             labels: labels,
             datasets: [
                 {
                     label: 'TOT Points',
                     data: totData,
-                    borderColor: orangeColor,
-                    backgroundColor: orangeColor,
-                    borderWidth: 3,
-                    tension: 0.3
+                    backgroundColor: grayColor, // Gray for TOT
+                    borderColor: grayColor,
+                    borderWidth: 1
                 },
                 {
                     label: 'Meme Points',
                     data: memeData,
-                    borderColor: grayColor,
-                    backgroundColor: grayColor,
-                    borderWidth: 2,
-                    tension: 0.3
+                    backgroundColor: orangeColor, // Orange for Meme
+                    borderColor: orangeColor,
+                    borderWidth: 1
                 }
             ]
         },
@@ -142,7 +140,7 @@ function renderPlayerHistoryChart(playerHistoryArray) {
             plugins: {
                 legend: {
                     labels: {
-                        color: darkTextColor,
+                        color: darkTextColor, // Black/Dark text
                         font: { size: 13, weight: '600' }
                     }
                 },
