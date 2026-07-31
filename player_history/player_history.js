@@ -37,7 +37,7 @@ import { groupedPlayersHistoricalData,
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260731_1912.js';
+} from '../data260731_1925.js';
 
 // Helper to safely calculate shooting percentages
 function calculatePercentage(numerator, denominator) {
@@ -45,7 +45,7 @@ function calculatePercentage(numerator, denominator) {
     return ((numerator / denominator) * 100).toFixed(1) + "%";
 }
 
-// Helper to sum up a specific stat index across all stages for a single year record
+// Helper to sum up a specific stat index across all regular stages for a single year record
 function getStatSum(record, statIndex) {
     const stages = ['stats_g1', 'stats_g2', 'stats_g3', 'stats_semi', 'stats_final'];
     return stages.reduce((total, stage) => {
@@ -68,7 +68,7 @@ function renderPlayerHistoryTable(playerHistoryArray) {
 
     const headers = [
         "Year/Team", "TOT", "PTS", "REB", "AST", "STL", "BLK", "Meme", "TO", 
-        "OREB", "DREB", "2PM", "2PA", "2P%", "3PM", "3PA", "3P%", "FTM", "FTA", "FT%", "EXP"
+        "OREB", "DREB", "2PM", "2PA", "2P%", "3PM", "3PA", "3P%", "FTM", "FTA", "FT%", "EXP", "TD3"
     ];
 
     let html = `<table class="${tableClass}"><thead><tr>`;
@@ -77,16 +77,12 @@ function renderPlayerHistoryTable(playerHistoryArray) {
 
     // Loop through each year record for the selected player
     playerHistoryArray.forEach(record => {
-        // Compute total points across all stages
-        const totalPoints = (record.g1 || 0) + (record.g2 || 0) + (record.g3 || 0) + (record.semi || 0) + (record.final || 0);
-
-        // Calculate stat totals using getStatSum helper
+        // Stats calculations
         const pts = getStatSum(record, PTS);
         const reb = getStatSum(record, REB);
         const ast = getStatSum(record, AST);
         const stl = getStatSum(record, STL);
         const blk = getStatSum(record, BLK);
-        const meme = getStatSum(record, MEME);
         const to = getStatSum(record, TO);
         const oreb = getStatSum(record, OREB);
         const dreb = getStatSum(record, DREB);
@@ -106,15 +102,25 @@ function renderPlayerHistoryTable(playerHistoryArray) {
 
         const exp = getStatSum(record, EXP);
 
+        // TD3 calculation with meme point deductions
+        const td3Stats = record.stats_td3 || [];
+        const ciabVal = td3Stats[TD3_CIAB] || 0;
+        const ciabWeight = (typeof td3Weights !== 'undefined' && td3Weights[TD3_CIAB]) ? td3Weights[TD3_CIAB] : 1;
+        const ciabPoints = ciabVal * ciabWeight;
+
+        const altriMemePoints = td3Stats[TD3_ALTRI_MEME] || 0;
+
+        const calculatedTd3 = (record.td3 || 0) - ciabPoints - altriMemePoints;
+
         html += `<tr>`;
         html += `<td><strong>${record.team}</strong></td>`;
-        html += `<td><strong>${totalPoints.toFixed(0)}</strong></td>`;
+        html += `<td><strong>${(record.tot || 0).toFixed(0)}</strong></td>`; // Direct tot variable
         html += `<td>${pts.toFixed(0)}</td>`;
         html += `<td>${reb.toFixed(0)}</td>`;
         html += `<td>${ast.toFixed(0)}</td>`;
         html += `<td>${stl.toFixed(0)}</td>`;
         html += `<td>${blk.toFixed(0)}</td>`;
-        html += `<td>${meme.toFixed(0)}</td>`;
+        html += `<td>${(record.meme_tot || 0).toFixed(0)}</td>`; // Direct meme_tot variable
         html += `<td>${to.toFixed(0)}</td>`;
         html += `<td>${oreb.toFixed(0)}</td>`;
         html += `<td>${dreb.toFixed(0)}</td>`;
@@ -128,72 +134,10 @@ function renderPlayerHistoryTable(playerHistoryArray) {
         html += `<td>${fta.toFixed(0)}</td>`;
         html += `<td>${calculatePercentage(ft, fta)}</td>`;
         html += `<td>${exp.toFixed(0)}</td>`;
+        html += `<td>${calculatedTd3.toFixed(0)}</td>`; // TD3 minus meme deductions
         html += `</tr>`;
     });
 
-    // Fixed closing tag
     html += '</tbody></table>';
     tableContainer.innerHTML = html;
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-    const select = document.getElementById("playerHistorySelect");
-
-    const teams = ["WEST", "NORD", "EST", "SUD"];
-
-    // 1. Group the player arrays by their LATEST team and sort them by LATEST cost
-    const groupedByTeam = teams.map(team => {
-        const teamPlayers = groupedPlayersHistoricalData
-            .filter(historyArray => {
-                const latestRecord = historyArray[historyArray.length - 1];
-                return latestRecord && latestRecord.team === team;
-            })
-            .sort((a, b) => {
-                const costA = a[a.length - 1].cost || 0;
-                const costB = b[b.length - 1].cost || 0;
-                return costB - costA;
-            });
-
-        return {
-            team: team,
-            players: teamPlayers
-        };
-    });
-
-    // 2. Clear existing options
-    select.innerHTML = '';
-
-    // 3. Populate options using optgroup for team separators
-    groupedByTeam.forEach(group => {
-        if (group.players.length === 0) return;
-
-        const optGroup = document.createElement('optgroup');
-        optGroup.label = group.team;
-
-        group.players.forEach(playerHistory => {
-            const latestRecord = playerHistory[playerHistory.length - 1];
-            const opt = document.createElement('option');
-
-            const masterIndex = groupedPlayersHistoricalData.indexOf(playerHistory);
-            
-            opt.value = masterIndex; 
-            opt.textContent = latestRecord.name;
-
-            optGroup.appendChild(opt);
-        });
-
-        select.appendChild(optGroup);
-    });
-
-    select.addEventListener("change", function() {
-        const selectedIndex = parseInt(this.value, 10);
-        const selectedPlayerHistory = groupedPlayersHistoricalData[selectedIndex];
-        renderPlayerHistoryTable(selectedPlayerHistory);
-    });
-
-    // Trigger change event once on load to display initial player data automatically
-    if (select.options.length > 0) {
-        select.selectedIndex = 0;
-        select.dispatchEvent(new Event('change'));
-    }
-});
+};
