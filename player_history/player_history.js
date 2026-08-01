@@ -32,7 +32,7 @@ import { groupedPlayersHistoricalData,
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260801_0209.js';
+} from '../data260801_0211.js';
 
 // Global variable to keep track of the Chart instance
 // let chartInstance = null;
@@ -174,15 +174,23 @@ function renderPlayerHistoryChart(playerHistoryArray) {
                         color: '#333333'
                     },
                     grid: {
+                        // Make y=100 and y=200 dotted, keep other lines solid
+                        borderDash: (context) => {
+                            const val = context.tick ? context.tick.value : null;
+                            if (val === 100 || val === 200) {
+                                return [4, 4]; // Dotted line pattern [dash length, gap length]
+                            }
+                            return []; // Solid line for all other grid lines
+                        },
                         // Highlight 100 and 200 grid lines with a darker color
                         color: (context) => {
                             const val = context.tick ? context.tick.value : null;
                             if (val === 100 || val === 200) {
-                                return 'rgba(0, 0, 0, 0.6)'; // Dark line for 100 & 200
+                                return 'rgba(0, 0, 0, 0.7)'; // Darker color for 100 & 200
                             }
                             return 'rgba(0, 0, 0, 0.05)'; // Default faint line
                         },
-                        // Make 100 and 200 grid lines thicker
+                        // Line thickness
                         lineWidth: (context) => {
                             const val = context.tick ? context.tick.value : null;
                             if (val === 100 || val === 200) {
@@ -193,7 +201,6 @@ function renderPlayerHistoryChart(playerHistoryArray) {
                     },
                     ticks: {
                         color: '#333333',
-                        // Make font bold specifically for 100 and 200
                         font: (context) => {
                             const val = context.tick ? context.tick.value : null;
                             if (val === 100 || val === 200) {
