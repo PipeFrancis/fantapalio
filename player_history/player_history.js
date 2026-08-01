@@ -133,6 +133,7 @@ function renderPlayerHistoryChart(playerHistoryArray) {
     if (maxPlayerTot > 100) {
         // If higher than 100, step up to 200 (or expand dynamically in steps of 100 if > 200)
         maxY = Math.max(200, Math.ceil(maxPlayerTot / 100) * 100); 
+        if (maxY == 300) maxY = 250;
     } else if (maxPlayerTot > 50) {
         maxY = 100;
     }
