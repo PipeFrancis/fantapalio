@@ -32,7 +32,7 @@ import { groupedPlayersHistoricalData,
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260801_0209.js';
+} from '../data260801_1428.js';
 
 // Global variable to keep track of the Chart instance
 // let chartInstance = null;
