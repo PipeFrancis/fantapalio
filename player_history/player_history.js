@@ -32,7 +32,7 @@ import { groupedPlayersHistoricalData,
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260801_1428.js';
+} from '../data260801_1435.js';
 
 // Global variable to keep track of the Chart instance
 // let chartInstance = null;
@@ -299,8 +299,8 @@ function renderPlayerHistoryTable(playerHistoryArray) {
         const calculatedTd3 = (record.td3 || 0) - ciabPoints - altriMemePoints;
 
         let yearDisplay = record.year ? `${record.year}, ${record.team}` : record.team;
-        if (record.name == "Alessandro Sant" && yearDisplay == "2026 - WEST") {
-            yearDisplay = "2026 - WEST 🐍";
+        if (record.name == "Alessandro Sant" && yearDisplay == "2026, WEST") {
+            yearDisplay = "2026, WEST 🐍";
         }
 
         html += `<tr>`;
