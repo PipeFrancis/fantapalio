@@ -126,6 +126,17 @@ function renderPlayerHistoryChart(playerHistoryArray) {
     const orangeColor = getCssVariable('--main-color3', 'rgb(255,109,10)');
     const grayColor = getCssVariable('--main-color1', 'rgb(78, 78, 78)');
 
+    // 1. Find the maximum total points across all records for this player
+    const maxPlayerTot = Math.max(...playerHistoryArray.map(r => r.tot || 0), 0);
+    // 2. Determine scale step threshold based on highest bar
+    let maxY = 50; // Base ceiling for max <= 50
+    if (maxPlayerTot > 100) {
+        // If higher than 100, step up to 200 (or expand dynamically in steps of 100 if > 200)
+        maxY = Math.max(200, Math.ceil(maxPlayerTot / 100) * 100); 
+    } else if (maxPlayerTot > 50) {
+        maxY = 100;
+    }
+
     chartInstance = new Chart(canvas, {
         type: 'bar',
         data: {
@@ -168,21 +179,20 @@ function renderPlayerHistoryChart(playerHistoryArray) {
                 y: {
                     stacked: true,
                     beginAtZero: true,
+                    max: maxY, // Custom fixed step scale
                     title: {
                         display: true,
                         text: 'Punti Totali',
                         color: '#333333'
                     },
                     grid: {
-                        // Highlight 100 and 200 grid lines with a darker color
                         color: (context) => {
                             const val = context.tick ? context.tick.value : null;
                             if (val === 100 || val === 200) {
-                                return 'rgba(0, 0, 0, 0.6)'; // Dark line for 100 & 200
+                                return 'rgba(0, 0, 0, 0.6)';
                             }
-                            return 'rgba(0, 0, 0, 0.05)'; // Default faint line
+                            return 'rgba(0, 0, 0, 0.05)';
                         },
-                        // Make 100 and 200 grid lines thicker
                         lineWidth: (context) => {
                             const val = context.tick ? context.tick.value : null;
                             if (val === 100 || val === 200) {
@@ -193,7 +203,6 @@ function renderPlayerHistoryChart(playerHistoryArray) {
                     },
                     ticks: {
                         color: '#333333',
-                        // Make font bold specifically for 100 and 200
                         font: (context) => {
                             const val = context.tick ? context.tick.value : null;
                             if (val === 100 || val === 200) {
@@ -248,7 +257,7 @@ function renderPlayerHistoryTable(playerHistoryArray) {
     const tableClass = `boxscore-table${latestTeam}`;
 
     const headers = [
-        "Anno - Squadra", "TOT", "Meme", "TD3", "GP", "PTS", "REB", "AST", "STL", "BLK", "TO", 
+        "Anno, Rione", "TOT", "Meme", "TD3", "GP", "PTS", "REB", "AST", "STL", "BLK", "TO", 
         "OREB", "DREB", "2PM", "2PA", "2P%", "3PM", "3PA", "3P%", "FTM", "FTA", "FT%", "EXP"
     ];
 
@@ -288,7 +297,7 @@ function renderPlayerHistoryTable(playerHistoryArray) {
         const altriMemePoints = td3Stats[TD3_ALTRI_MEME] || 0;
         const calculatedTd3 = (record.td3 || 0) - ciabPoints - altriMemePoints;
 
-        let yearDisplay = record.year ? `${record.year} - ${record.team}` : record.team;
+        let yearDisplay = record.year ? `${record.year}, ${record.team}` : record.team;
         if (record.name == "Alessandro Sant" && yearDisplay == "2026 - WEST") {
             yearDisplay = "2026 - WEST 🐍";
         }
