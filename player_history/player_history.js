@@ -32,7 +32,7 @@ import { groupedPlayersHistoricalData,
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260801_1435.js';
+} from '../data260801_1440.js';
 
 // Global variable to keep track of the Chart instance
 // let chartInstance = null;
@@ -150,7 +150,8 @@ function renderPlayerHistoryChart(playerHistoryArray) {
                     stack: 'totalPoints',
                     // barPercentage: dynamicBarPct,       // <-- Applied dynamically here!
                     barPercentage: 0.4,      // bar thickness
-                    categoryPercentage: 0.8
+                    categoryPercentage: 0.8,
+                    maxBarThickness: 32
                 },
                 {
                     label: 'Meme',
@@ -159,7 +160,8 @@ function renderPlayerHistoryChart(playerHistoryArray) {
                     stack: 'totalPoints',
                     // barPercentage: dynamicBarPct,       // <-- Applied dynamically here!
                     barPercentage: 0.4,       // bar thickness
-                    categoryPercentage: 0.8
+                    categoryPercentage: 0.8,
+                    maxBarThickness: 32
                 }
             ]
         },
