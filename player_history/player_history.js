@@ -32,7 +32,7 @@ import { groupedPlayersHistoricalData,
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260801_0156.js';
+} from '../data260801_0202.js';
 
 // Global variable to keep track of the Chart instance
 // let chartInstance = null;
@@ -104,20 +104,20 @@ function renderPlayerHistoryChart(playerHistoryArray) {
 
     if (!playerHistoryArray || playerHistoryArray.length === 0) return;
 
-    // for having thicker bars for good players:
-    // 1. Find the highest single-year total score for this specific player
-    const maxScore = Math.max(...playerHistoryArray.map(r => r.tot || 0));
-    // 2. Set your min/max score thresholds for bar thickness scaling
-    const MIN_BENCHMARK = 20;  // Scores <= 20 get the thinnest bars
-    const MAX_BENCHMARK = 200; // Scores >= 200 get the thickest bars
-    // 3. Clamp the score within the benchmark range
-    const clampedScore = Math.min(Math.max(maxScore, MIN_BENCHMARK), MAX_BENCHMARK);
-    // 4. Calculate dynamic percentage between 0.25 (thin) and 0.85 (thick)
-    const minBarPct = 0.25;
-    const maxBarPct = 0.85;
-    const dynamicBarPct = minBarPct + (
-        (clampedScore - MIN_BENCHMARK) / (MAX_BENCHMARK - MIN_BENCHMARK)
-    ) * (maxBarPct - minBarPct);
+    // // for having thicker bars for good players:
+    // // 1. Find the highest single-year total score for this specific player
+    // const maxScore = Math.max(...playerHistoryArray.map(r => r.tot || 0));
+    // // 2. Set your min/max score thresholds for bar thickness scaling
+    // const MIN_BENCHMARK = 20;  // Scores <= 20 get the thinnest bars
+    // const MAX_BENCHMARK = 200; // Scores >= 200 get the thickest bars
+    // // 3. Clamp the score within the benchmark range
+    // const clampedScore = Math.min(Math.max(maxScore, MIN_BENCHMARK), MAX_BENCHMARK);
+    // // 4. Calculate dynamic percentage between 0.25 (thin) and 0.85 (thick)
+    // const minBarPct = 0.25;
+    // const maxBarPct = 0.85;
+    // const dynamicBarPct = minBarPct + (
+    //     (clampedScore - MIN_BENCHMARK) / (MAX_BENCHMARK - MIN_BENCHMARK)
+    // ) * (maxBarPct - minBarPct);
 
     const labels = playerHistoryArray.map(record => record.year || record.team);
     const memeData = playerHistoryArray.map(record => record.meme_tot || 0);
@@ -136,7 +136,8 @@ function renderPlayerHistoryChart(playerHistoryArray) {
                     data: restData,
                     backgroundColor: grayColor,
                     stack: 'totalPoints',
-                    barPercentage: dynamicBarPct,       // <-- Applied dynamically here!
+                    // barPercentage: dynamicBarPct,       // <-- Applied dynamically here!
+                    barPercentage: 0.6,      // bar thickness
                     categoryPercentage: 0.8
                 },
                 {
@@ -144,7 +145,8 @@ function renderPlayerHistoryChart(playerHistoryArray) {
                     data: memeData,
                     backgroundColor: orangeColor,
                     stack: 'totalPoints',
-                    barPercentage: dynamicBarPct,       // <-- Applied dynamically here!
+                    // barPercentage: dynamicBarPct,       // <-- Applied dynamically here!
+                    barPercentage: 0.6,       // bar thickness
                     categoryPercentage: 0.8
                 }
             ]
@@ -172,10 +174,39 @@ function renderPlayerHistoryChart(playerHistoryArray) {
                         color: '#333333'
                     },
                     grid: {
-                        color: 'rgba(0, 0, 0, 0.05)'
+                        // Highlight 100 and 200 grid lines with darker color
+                        color: (context) => {
+                            const val = context.tick.value;
+                            if (val === 100 || val === 200) {
+                                return 'rgba(0, 0, 0, 0.6)'; // Dark accent line for 100 & 200
+                            }
+                            return 'rgba(0, 0, 0, 0.05)'; // Default faint line for rest
+                        },
+                        // Make 100 and 200 grid lines thicker
+                        lineWidth: (context) => {
+                            const val = context.tick.value;
+                            if (val === 100 || val === 200) {
+                                return 2; // Thicker line width (in pixels)
+                            }
+                            return 1; // Default line width
+                        }
                     },
                     ticks: {
-                        color: '#333333'
+                        color: '#333333',
+                        // Make font bold specifically for 100 and 200
+                        font: (context) => {
+                            const val = context.tick.value;
+                            if (val === 100 || val === 200) {
+                                return {
+                                    weight: 'bold',
+                                    size: 13
+                                };
+                            }
+                            return {
+                                weight: 'normal',
+                                size: 12
+                            };
+                        }
                     }
                 }
             },
