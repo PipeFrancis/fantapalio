@@ -32,7 +32,7 @@ import { groupedPlayersHistoricalData,
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260801_0202.js';
+} from '../data260801_0205.js';
 
 // Global variable to keep track of the Chart instance
 // let chartInstance = null;
@@ -174,28 +174,28 @@ function renderPlayerHistoryChart(playerHistoryArray) {
                         color: '#333333'
                     },
                     grid: {
-                        // Highlight 100 and 200 grid lines with darker color
+                        // Highlight 100 and 200 grid lines with a darker color
                         color: (context) => {
-                            const val = context.tick.value;
+                            const val = context.tick ? context.tick.value : null;
                             if (val === 100 || val === 200) {
-                                return 'rgba(0, 0, 0, 0.6)'; // Dark accent line for 100 & 200
+                                return 'rgba(0, 0, 0, 0.6)'; // Dark line for 100 & 200
                             }
-                            return 'rgba(0, 0, 0, 0.05)'; // Default faint line for rest
+                            return 'rgba(0, 0, 0, 0.05)'; // Default faint line
                         },
                         // Make 100 and 200 grid lines thicker
                         lineWidth: (context) => {
-                            const val = context.tick.value;
+                            const val = context.tick ? context.tick.value : null;
                             if (val === 100 || val === 200) {
-                                return 2; // Thicker line width (in pixels)
+                                return 2;
                             }
-                            return 1; // Default line width
+                            return 1;
                         }
                     },
                     ticks: {
                         color: '#333333',
                         // Make font bold specifically for 100 and 200
                         font: (context) => {
-                            const val = context.tick.value;
+                            const val = context.tick ? context.tick.value : null;
                             if (val === 100 || val === 200) {
                                 return {
                                     weight: 'bold',
