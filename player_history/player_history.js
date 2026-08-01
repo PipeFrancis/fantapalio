@@ -32,7 +32,7 @@ import { groupedPlayersHistoricalData,
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260801_0208.js';
+} from '../data260801_0209.js';
 
 // Global variable to keep track of the Chart instance
 // let chartInstance = null;
@@ -137,7 +137,7 @@ function renderPlayerHistoryChart(playerHistoryArray) {
                     backgroundColor: grayColor,
                     stack: 'totalPoints',
                     // barPercentage: dynamicBarPct,       // <-- Applied dynamically here!
-                    barPercentage: 0.6,      // bar thickness
+                    barPercentage: 0.4,      // bar thickness
                     categoryPercentage: 0.8
                 },
                 {
@@ -146,7 +146,7 @@ function renderPlayerHistoryChart(playerHistoryArray) {
                     backgroundColor: orangeColor,
                     stack: 'totalPoints',
                     // barPercentage: dynamicBarPct,       // <-- Applied dynamically here!
-                    barPercentage: 0.6,       // bar thickness
+                    barPercentage: 0.4,       // bar thickness
                     categoryPercentage: 0.8
                 }
             ]
