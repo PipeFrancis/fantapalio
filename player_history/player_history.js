@@ -264,8 +264,12 @@ function renderPlayerHistoryTable(playerHistoryArray) {
     const tableClass = `boxscore-table${latestTeam}`;
 
     // Adjust table column header dynamically based on mode
+    // const headers = [
+    //     "Anno, Rione", "TOT", isAvg ? "Meme<br><span class='smaller-text'>(tot)</span>" : "Meme", "TD3", "GP", "PTS", "REB", "AST", "STL", "BLK", "TO", 
+    //     "OREB", "DREB", "2PM", "2PA", "2P%", "3PM", "3PA", "3P%", "FTM", "FTA", "FT%", "EXP"
+    // ];
     const headers = [
-        "Anno, Rione", "TOT", isAvg ? "Meme<br><span class='smaller-text'>(tot)</span>" : "Meme", "TD3", "GP", "PTS", "REB", "AST", "STL", "BLK", "TO", 
+        "Anno, Rione", "TOT", "Meme", "TD3", "GP", "PTS", "REB", "AST", "STL", "BLK", "TO", 
         "OREB", "DREB", "2PM", "2PA", "2P%", "3PM", "3PA", "3P%", "FTM", "FTA", "FT%", "EXP"
     ];
 
@@ -321,7 +325,7 @@ function renderPlayerHistoryTable(playerHistoryArray) {
         html += `<tr>`;
         html += `<td><strong>${yearDisplay}</strong></td>`;
         html += `<td><strong>${totScore}</strong></td>`;
-        html += `<td>${memeTot}</td>`;
+        html += `<td>${(memeTot / (factor+1)).toFixed(decimals)}</td>`;
         html += `<td>${calculatedTd3}</td>`;
         html += `<td>${gp}</td>`;
         html += `<td>${pts.toFixed(decimals)}</td>`;
