@@ -261,7 +261,7 @@ function renderPlayerHistoryTable(playerHistoryArray) {
 
     const latestRecord = playerHistoryArray[playerHistoryArray.length - 1];
     const latestTeam = latestRecord.team || "WEST"; 
-    const tableClass = `boxscore-table${latestTeam}`;
+    const tableClass = `boxscore-table${latestTeam} rounded-corner-table`;
 
     // Adjust table column header dynamically based on mode
     // const headers = [
