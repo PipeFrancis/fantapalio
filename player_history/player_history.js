@@ -32,7 +32,7 @@ import { groupedPlayersHistoricalData,
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260803_2239.js';
+} from '../data260803_2244.js';
 
 // Global variable to keep track of the Chart instance
 // let chartInstance = null;
@@ -261,7 +261,7 @@ function renderPlayerHistoryTable(playerHistoryArray) {
 
     const latestRecord = playerHistoryArray[playerHistoryArray.length - 1];
     const latestTeam = latestRecord.team || "WEST"; 
-    const tableClass = `boxscore-table${latestTeam} rounded-corner-table`;
+    const tableClass = `boxscore-table${latestTeam}`;
 
     // Adjust table column header dynamically based on mode
     // const headers = [
