@@ -1259,3 +1259,58 @@ td { /* tutto serve per sfondo immagine*/
 .orange_text_light{
     color: var(--main-color3light);
 }
+
+
+.stat-toggle-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+}
+
+.stat-toggle-wrapper {
+  position: relative;
+  display: inline-flex;
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  padding: 3px;
+  user-select: none;
+}
+
+.stat-toggle-wrapper input[type="radio"] {
+  display: none;
+}
+
+.stat-toggle-wrapper label {
+  position: relative;
+  z-index: 2;
+  padding: 6px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #555555;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+.toggle-slider {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: calc(50% - 3px);
+  height: calc(100% - 6px);
+  background-color: var(--main-color3, #ff6d0a); /* Matches your orange primary */
+  border-radius: 17px;
+  z-index: 1;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Active Text Color */
+#stat-mode-total:checked ~ label[for="stat-mode-total"],
+#stat-mode-avg:checked ~ label[for="stat-mode-avg"] {
+  color: #ffffff;
+}
+
+/* Move slider when 'Per Game' is checked */
+#stat-mode-avg:checked ~ .toggle-slider {
+  transform: translateX(100%);
+}

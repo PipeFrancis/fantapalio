@@ -32,7 +32,7 @@ import { groupedPlayersHistoricalData,
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260801_1440.js';
+} from '../data260803_2023.js';
 
 // Global variable to keep track of the Chart instance
 // let chartInstance = null;
@@ -185,7 +185,7 @@ function renderPlayerHistoryChart(playerHistoryArray) {
                     max: maxY, // Custom fixed step scale
                     title: {
                         display: true,
-                        text: 'Punti Totali',
+                        text: 'Fantapunti Totali',
                         color: '#333333'
                     },
                     grid: {
@@ -255,12 +255,17 @@ function renderPlayerHistoryTable(playerHistoryArray) {
         return;
     }
 
+    // Read the current toggle state
+    const selectedMode = document.querySelector('input[name="statMode"]:checked')?.value || 'total';
+    const isAvg = selectedMode === 'avg';
+
     const latestRecord = playerHistoryArray[playerHistoryArray.length - 1];
     const latestTeam = latestRecord.team || "WEST"; 
     const tableClass = `boxscore-table${latestTeam}`;
 
+    // Adjust table column header dynamically based on mode
     const headers = [
-        "Anno, Rione", "TOT", "Meme", "TD3", "GP", "PTS", "REB", "AST", "STL", "BLK", "TO", 
+        "Anno, Rione", "TOT", isAvg ? "Meme (tot)" : "Meme", isAvg ? "TD3 (tot)" : "TD3", "GP", "PTS", "REB", "AST", "STL", "BLK", "TO", 
         "OREB", "DREB", "2PM", "2PA", "2P%", "3PM", "3PA", "3P%", "FTM", "FTA", "FT%", "EXP"
     ];
 
@@ -269,14 +274,19 @@ function renderPlayerHistoryTable(playerHistoryArray) {
     html += '</tr></thead><tbody>';
 
     playerHistoryArray.forEach(record => {
-        const pts = getStatSum(record, PTS);
-        const reb = getStatSum(record, REB);
-        const ast = getStatSum(record, AST);
-        const stl = getStatSum(record, STL);
-        const blk = getStatSum(record, BLK);
-        const to = getStatSum(record, TO);
-        const oreb = getStatSum(record, OREB);
-        const dreb = getStatSum(record, DREB);
+        const gp = record.games_played || 0;
+        // Helper factor: divide by games_played if 'avg' mode, otherwise keep original total
+        const factor = (isAvg && gp > 0) ? gp : 1;
+        const decimals = isAvg ? 1 : 0; // Show 1 decimal place for averages
+
+        const pts = getStatSum(record, PTS) / factor;
+        const reb = getStatSum(record, REB) / factor;
+        const ast = getStatSum(record, AST) / factor;
+        const stl = getStatSum(record, STL) / factor;
+        const blk = getStatSum(record, BLK) / factor;
+        const to = getStatSum(record, TO) / factor;
+        const oreb = getStatSum(record, OREB) / factor;
+        const dreb = getStatSum(record, DREB) / factor;
 
         const t2p = getStatSum(record, T2P);
         const t2px = getStatSum(record, T2PX);
@@ -290,7 +300,7 @@ function renderPlayerHistoryTable(playerHistoryArray) {
         const ftx = getStatSum(record, FTX);
         const fta = ft + ftx;
 
-        const exp = getStatSum(record, EXP);
+        const exp = getStatSum(record, EXP) / factor;
 
         const td3Stats = record.stats_td3 || [];
         const ciabVal = td3Stats[TD3_CIAB] || 0;
@@ -298,7 +308,10 @@ function renderPlayerHistoryTable(playerHistoryArray) {
         const ciabPoints = ciabVal * ciabWeight;
 
         const altriMemePoints = td3Stats[TD3_ALTRI_MEME] || 0;
-        const calculatedTd3 = (record.td3 || 0) - ciabPoints - altriMemePoints;
+        const calculatedTd3 = ((record.td3 || 0) - ciabPoints - altriMemePoints); // no divide by factor
+        
+        const totScore = (record.tot || 0); // no divide by factor
+        const memeTot = (record.meme_tot || 0); // no divide by factor
 
         let yearDisplay = record.year ? `${record.year}, ${record.team}` : record.team;
         if (record.name == "Alessandro Sant" && yearDisplay == "2026, WEST") {
@@ -307,28 +320,28 @@ function renderPlayerHistoryTable(playerHistoryArray) {
 
         html += `<tr>`;
         html += `<td><strong>${yearDisplay}</strong></td>`;
-        html += `<td><strong>${(record.tot || 0).toFixed(0)}</strong></td>`;
-        html += `<td>${(record.meme_tot || 0).toFixed(0)}</td>`;
-        html += `<td>${calculatedTd3.toFixed(0)}</td>`;
-        html += `<td>${record.games_played ?? 0}</td>`;
-        html += `<td>${pts.toFixed(0)}</td>`;
-        html += `<td>${reb.toFixed(0)}</td>`;
-        html += `<td>${ast.toFixed(0)}</td>`;
-        html += `<td>${stl.toFixed(0)}</td>`;
-        html += `<td>${blk.toFixed(0)}</td>`;
-        html += `<td>${to.toFixed(0)}</td>`;
-        html += `<td>${oreb.toFixed(0)}</td>`;
-        html += `<td>${dreb.toFixed(0)}</td>`;
-        html += `<td>${t2p.toFixed(0)}</td>`;
-        html += `<td>${t2a.toFixed(0)}</td>`;
+        html += `<td><strong>${totScore.toFixed(decimals)}</strong></td>`;
+        html += `<td>${memeTot.toFixed(decimals)}</td>`;
+        html += `<td>${calculatedTd3.toFixed(decimals)}</td>`;
+        html += `<td>${gp}</td>`;
+        html += `<td>${pts.toFixed(decimals)}</td>`;
+        html += `<td>${reb.toFixed(decimals)}</td>`;
+        html += `<td>${ast.toFixed(decimals)}</td>`;
+        html += `<td>${stl.toFixed(decimals)}</td>`;
+        html += `<td>${blk.toFixed(decimals)}</td>`;
+        html += `<td>${to.toFixed(decimals)}</td>`;
+        html += `<td>${oreb.toFixed(decimals)}</td>`;
+        html += `<td>${dreb.toFixed(decimals)}</td>`;
+        html += `<td>${(t2p / factor).toFixed(decimals)}</td>`;
+        html += `<td>${(t2a / factor).toFixed(decimals)}</td>`;
         html += `<td>${calculatePercentage(t2p, t2a)}</td>`;
-        html += `<td>${t3p.toFixed(0)}</td>`;
-        html += `<td>${t3a.toFixed(0)}</td>`;
+        html += `<td>${(t3p / factor).toFixed(decimals)}</td>`;
+        html += `<td>${(t3a / factor).toFixed(decimals)}</td>`;
         html += `<td>${calculatePercentage(t3p, t3a)}</td>`;
-        html += `<td>${ft.toFixed(0)}</td>`;
-        html += `<td>${fta.toFixed(0)}</td>`;
+        html += `<td>${(ft / factor).toFixed(decimals)}</td>`;
+        html += `<td>${(fta / factor).toFixed(decimals)}</td>`;
         html += `<td>${calculatePercentage(ft, fta)}</td>`;
-        html += `<td>${exp.toFixed(0)}</td>`;
+        html += `<td>${exp.toFixed(decimals)}</td>`;
         html += `</tr>`;
     });
 
@@ -388,6 +401,23 @@ document.addEventListener("DOMContentLoaded", function() {
         const selectedIndex = parseInt(this.value, 10);
         const selectedPlayerHistory = groupedPlayersHistoricalData[selectedIndex];
         renderPlayerHistoryTable(selectedPlayerHistory);
+    });
+
+    // helper function to re-render using current selection
+    function updateDisplay() {
+        const selectedIndex = parseInt(select.value, 10);
+        if (!isNaN(selectedIndex)) {
+            const selectedPlayerHistory = groupedPlayersHistoricalData[selectedIndex];
+            renderPlayerHistoryTable(selectedPlayerHistory);
+        }
+    }
+
+    select.addEventListener("change", updateDisplay);
+
+    // Listen for toggle mode switches
+    const modeRadios = document.querySelectorAll('input[name="statMode"]');
+    modeRadios.forEach(radio => {
+        radio.addEventListener("change", updateDisplay);
     });
 
     if (select.options.length > 0) {

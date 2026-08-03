@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <link href="../style.css?v=260801_1440" rel="stylesheet">
+    <link href="../style.css?v=260803_2023" rel="stylesheet">
     <link rel="icon" href="../fantapalio_icon.png">
     <title>Storico Giocatori</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -32,6 +32,17 @@
                 <!-- Le schede verranno aggiunte dinamicamente con JavaScript -->
             </div>
         </div>
+        <div class="stat-toggle-container">
+            <div class="stat-toggle-wrapper">
+                <input type="radio" id="stat-mode-total" name="statMode" value="total" checked>
+                <label for="stat-mode-total">Totali</label>
+
+                <input type="radio" id="stat-mode-avg" name="statMode" value="avg">
+                <label for="stat-mode-avg">Per Game (AVG)</label>
+
+                <div class="toggle-slider"></div>
+            </div>
+        </div>
         <div class="chart-container">
             <canvas id="playerHistoryChart"></canvas>
         </div>
@@ -39,7 +50,7 @@
             <canvas id="playerHistoryChart"></canvas>
         </div> -->
     </main>
-    <script type="module" src="player_history.js?v=260801_1440"></script>
+    <script type="module" src="player_history.js?v=260803_2023"></script>
     </div>
 </body>
 </html>
