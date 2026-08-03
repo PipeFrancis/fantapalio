@@ -32,7 +32,7 @@ import { groupedPlayersHistoricalData,
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260803_2030.js';
+} from '../data260803_2034.js';
 
 // Global variable to keep track of the Chart instance
 // let chartInstance = null;
@@ -265,7 +265,7 @@ function renderPlayerHistoryTable(playerHistoryArray) {
 
     // Adjust table column header dynamically based on mode
     const headers = [
-        "Anno, Rione", "TOT", isAvg ? "Meme (tot)" : "Meme", isAvg ? "TD3 (tot)" : "TD3", "GP", "PTS", "REB", "AST", "STL", "BLK", "TO", 
+        "Anno, Rione", "TOT", isAvg ? "Meme (tot)" : "Meme", isAvg ? "TD3<br><span class='smaller-text'>(tot)</span>" : "TD3", "GP", "PTS", "REB", "AST", "STL", "BLK", "TO", 
         "OREB", "DREB", "2PM", "2PA", "2P%", "3PM", "3PA", "3P%", "FTM", "FTA", "FT%", "EXP"
     ];
 
