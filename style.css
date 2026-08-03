@@ -1263,7 +1263,8 @@ td { /* tutto serve per sfondo immagine*/
 
 .stat-toggle-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  margin-top: 12px;
   margin-bottom: 12px;
 }
 
