@@ -32,7 +32,7 @@ import { groupedPlayersHistoricalData,
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260803_2043.js';
+} from '../data260803_2038.js';
 
 // Global variable to keep track of the Chart instance
 // let chartInstance = null;
@@ -397,7 +397,13 @@ document.addEventListener("DOMContentLoaded", function() {
         select.appendChild(optGroup);
     });
 
-    // Helper function to re-render using current selection
+    select.addEventListener("change", function() {
+        const selectedIndex = parseInt(this.value, 10);
+        const selectedPlayerHistory = groupedPlayersHistoricalData[selectedIndex];
+        renderPlayerHistoryTable(selectedPlayerHistory);
+    });
+
+    // helper function to re-render using current selection
     function updateDisplay() {
         const selectedIndex = parseInt(select.value, 10);
         if (!isNaN(selectedIndex)) {
@@ -406,19 +412,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Single listener for dropdown changes
     select.addEventListener("change", updateDisplay);
 
-    // Listen for toggle mode switches (Total vs Avg)
+    // Listen for toggle mode switches
     const modeRadios = document.querySelectorAll('input[name="statMode"]');
     modeRadios.forEach(radio => {
         radio.addEventListener("change", updateDisplay);
     });
 
-    // --- INITIAL LOAD TRIGGER ---
-    // Force selection of the very first option and trigger immediate render
     if (select.options.length > 0) {
         select.selectedIndex = 0;
-        updateDisplay(); 
+        select.dispatchEvent(new Event('change'));
     }
 });
