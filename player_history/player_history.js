@@ -32,7 +32,7 @@ import { groupedPlayersHistoricalData,
         TD3_0SU10          ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260803_2023.js';
+} from '../data260803_2025.js';
 
 // Global variable to keep track of the Chart instance
 // let chartInstance = null;
@@ -321,7 +321,7 @@ function renderPlayerHistoryTable(playerHistoryArray) {
         html += `<tr>`;
         html += `<td><strong>${yearDisplay}</strong></td>`;
         html += `<td><strong>${totScore.toFixed(decimals)}</strong></td>`;
-        html += `<td>${memeTot.toFixed(decimals)}</td>`;
+        html += `<td>${memeTot}</td>`;
         html += `<td>${calculatedTd3.toFixed(decimals)}</td>`;
         html += `<td>${gp}</td>`;
         html += `<td>${pts.toFixed(decimals)}</td>`;
