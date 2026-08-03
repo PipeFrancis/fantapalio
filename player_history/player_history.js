@@ -315,7 +315,7 @@ function renderPlayerHistoryTable(playerHistoryArray) {
         const calculatedTd3 = ((record.td3 || 0) - ciabPoints - altriMemePoints); // no divide by factor
         
         const totScore = (record.tot || 0); // no divide by factor
-        const memeTot = (record.meme_tot || 0) / (factor + 1); // no divide by factor
+        const memeTot = isAvg ? (record.meme_tot || 0) / (factor + 1): (record.meme_tot || 0) ;
 
         let yearDisplay = record.year ? `${record.year}, ${record.team}` : record.team;
         if (record.name == "Alessandro Sant" && yearDisplay == "2026, WEST") {
