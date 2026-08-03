@@ -315,7 +315,7 @@ function renderPlayerHistoryTable(playerHistoryArray) {
         const calculatedTd3 = ((record.td3 || 0) - ciabPoints - altriMemePoints); // no divide by factor
         
         const totScore = (record.tot || 0); // no divide by factor
-        const memeTot = (record.meme_tot || 0); // no divide by factor
+        const memeTot = (record.meme_tot || 0) / (factor + 1); // no divide by factor
 
         let yearDisplay = record.year ? `${record.year}, ${record.team}` : record.team;
         if (record.name == "Alessandro Sant" && yearDisplay == "2026, WEST") {
@@ -325,7 +325,7 @@ function renderPlayerHistoryTable(playerHistoryArray) {
         html += `<tr>`;
         html += `<td><strong>${yearDisplay}</strong></td>`;
         html += `<td><strong>${totScore}</strong></td>`;
-        html += `<td>${(memeTot / (factor+1)).toFixed(decimals)}</td>`;
+        html += `<td>${(memeTot).toFixed(decimals)}</td>`;
         html += `<td>${calculatedTd3}</td>`;
         html += `<td>${gp}</td>`;
         html += `<td>${pts.toFixed(decimals)}</td>`;
