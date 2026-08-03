@@ -876,6 +876,10 @@ footer {
     overflow-x: auto;
 }
 
+.rounded-corner-table {
+    border-radius: 10px;
+}
+
 .chart-container {
     position: relative;
     width: 100%;
