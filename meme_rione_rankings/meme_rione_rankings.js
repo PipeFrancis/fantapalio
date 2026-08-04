@@ -8,7 +8,7 @@ import {
         MEME  ,
         TD3_CIAB           ,
         TD3_ALTRI_MEME     ,
-} from '../data260804_2000.js';
+} from '../data260804_2006.js';
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let cardHtml = ``
         if(index == 0){
             cardHtml = `
-                <h3><span class="big_emoji">🤡🤡🤡</span><br>${player.name}</h3>
+                <h3><span class="big_emoji">🤡🤡🤡</span><br>${Rione.name}</h3>
             `;
         }else{
             cardHtml = `
