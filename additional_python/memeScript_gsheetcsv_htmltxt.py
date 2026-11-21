@@ -1,4 +1,5 @@
 # Questo prende il csv dei meme downloaddato dal foglio apposito, ha dentro tutti i bonus meme (nome, descrizione, valore). Genera le linee js da mettere in data.js, genera html da copiare in updates_page, genera un txt da copiare su canva nella storia dei Meme. La versione senza _htmltxt non fa queste ultime 2 cose.
+# per anni successivi cambiare 26 in 27 ecc. Ctrl F e replace.
 
 
 import csv

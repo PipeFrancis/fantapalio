@@ -1,8 +1,9 @@
-import { fantateams , what_day_is_it, coachWeights} from './data260804_2016.js';
+import { fantateams , what_day_is_it, coachWeights} from './data261121_1238.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     const select = document.getElementById("teamDetails");
     const teamCardsContainer = document.getElementById("teamCardsContainer1");
+    const selectedTeamStorageKey = "fantapalio:selectedTeam:26";
 
     // Rimuovi eventuali opzioni esistenti
     select.innerHTML = '';
@@ -20,10 +21,34 @@ document.addEventListener("DOMContentLoaded", function() {
         select.appendChild(opt);
     });
 
+    // Ripristina l'ultima squadra selezionata su questo dispositivo.
+    // Se il dato non esiste più, lascia selezionata la prima opzione senza errori.
+    let savedTeamIndex = null;
+    try {
+        const savedValue = localStorage.getItem(selectedTeamStorageKey);
+        if (savedValue !== null) {
+            savedTeamIndex = parseInt(savedValue);
+        }
+    } catch (error) {
+        // localStorage può essere bloccato in navigazione privata o da browser policy.
+    }
+
+    if (savedTeamIndex !== null) {
+        const savedTeamExists = fantateams.some(team => team.team_index === savedTeamIndex);
+        if (savedTeamExists) {
+            select.value = String(savedTeamIndex);
+        }
+    }
+
     // Aggiungi un event listener per l'evento change sulla tendina
     select.addEventListener("change", function() {
         // Ottieni l'indice del team selezionato
         const teamIndex = parseInt(this.value);
+        try {
+            localStorage.setItem(selectedTeamStorageKey, String(teamIndex));
+        } catch (error) {
+            // Il sito resta utilizzabile anche quando la persistenza non è disponibile.
+        }
 
         // Trova il team corrispondente nell'array fantateams
         const selectedTeam = fantateams.find(team => team.team_index === teamIndex);
@@ -184,4 +209,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
         
     });
+
+    // Avvia subito il rendering con la squadra selezionata/ripristinata.
+    if (select.value) {
+        select.dispatchEvent(new Event("change"));
+    }
 });
