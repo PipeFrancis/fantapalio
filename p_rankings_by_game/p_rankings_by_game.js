@@ -32,11 +32,15 @@ import {
     TD3_0SU10          ,
     TD3_CIAB           ,
     TD3_ALTRI_MEME     ,
-} from '../data261122_1614.js';
+} from '../data261122_2242.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const playerCardsContainer = document.getElementById('playerCardsContainer');
     const sortSelect = document.getElementById('sortSelect');
+    const tonnoAudio = new Audio(new URL('../tonno_cut.mp3', import.meta.url));
+    tonnoAudio.preload = 'none';
+    const longPressDuration = 700;
+    let activePress = null;
 
     const valueToKeyMap = {
         'totale': 'tot',
@@ -58,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const createGameCard = (selectedPlayer, score, game_stats, index, memestats) => { // attenzione funzioni leggermente modificate rispetto che in player detail
             const card = document.createElement('div');
             card.classList.add('player-card', `cardclass${selectedPlayer.team}`);
+            card.dataset.playerName = selectedPlayer.name;
             let statsHtml = `
                 <h3>${index + 1}. ${selectedPlayer.name}</h3>
                 <p>#${selectedPlayer.number}</p>
@@ -98,6 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const createGameCard_td3 = (selectedPlayer, score, stats_td3, index, memestats_td3) => {
             const card = document.createElement('div');
             card.classList.add('player-card', `cardclass${selectedPlayer.team}`);
+            card.dataset.playerName = selectedPlayer.name;
             let statsHtml = `
                 <h3>${index + 1}. ${selectedPlayer.name}</h3>
                 <p>#${selectedPlayer.number}</p>
@@ -214,6 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }else if (sortKey == "tot"){ // creates card with all games totals only
                 const createdCard = document.createElement('div');
                 createdCard.classList.add('player-card',`cardclass${player.team}`);
+                createdCard.dataset.playerName = player.name;
                 // createdCard.innerHTML = `
                 //     <h3>${index + 1}. ${player.name}</h3>
                 //     <p>#${player.number}</p>
@@ -269,6 +276,62 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial render with 'totale'
     renderPlayers('tot');
 
+    document.addEventListener('pointerdown', (event) => {
+        if (!event.isPrimary || event.button !== 0) {
+            return;
+        }
+
+        const card = event.target.closest('.player-card[data-player-name="Giovanni Tonizzo"]');
+        if (card && playerCardsContainer.contains(card)) {
+            activePress = {
+                pointerId: event.pointerId,
+                startedAt: performance.now(),
+                startX: event.clientX,
+                startY: event.clientY
+            };
+        }
+    });
+
+    document.addEventListener('pointermove', (event) => {
+        if (!activePress || event.pointerId !== activePress.pointerId) {
+            return;
+        }
+
+        if (Math.hypot(event.clientX - activePress.startX, event.clientY - activePress.startY) > 10) {
+            activePress = null;
+        }
+    });
+
+    document.addEventListener('pointerup', (event) => {
+        if (!activePress || event.pointerId !== activePress.pointerId) {
+            return;
+        }
+
+        const shouldPlay = performance.now() - activePress.startedAt >= longPressDuration;
+        activePress = null;
+        if (!shouldPlay) {
+            return;
+        }
+
+        tonnoAudio.pause();
+        tonnoAudio.currentTime = 0;
+        tonnoAudio.play().catch((error) => {
+            console.warn('Could not play the Giovanni Tonizzo easter egg audio:', error);
+        });
+    });
+
+    document.addEventListener('pointercancel', (event) => {
+        if (activePress && event.pointerId === activePress.pointerId) {
+            activePress = null;
+        }
+    });
+
+    playerCardsContainer.addEventListener('contextmenu', (event) => {
+        if (event.target.closest('.player-card[data-player-name="Giovanni Tonizzo"]')) {
+            event.preventDefault();
+        }
+    });
+
     // Handle dropdown change
     sortSelect.addEventListener('change', (e) => {
         const selectedValue = e.target.value;
@@ -280,4 +343,3 @@ document.addEventListener('DOMContentLoaded', () => {
         renderPlayers(sortKey);
     });
 });
-
